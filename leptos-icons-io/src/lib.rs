@@ -2696,26 +2696,12 @@ pub enum IoIcon {
     IoWomanSharp,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: IoIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for IoIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "IoAccessibility")]
             IoIcon::IoAccessibility => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2732,7 +2718,7 @@ impl Data {
             }
             #[cfg(feature = "IoAccessibilityOutline")]
             IoIcon::IoAccessibilityOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2749,7 +2735,7 @@ impl Data {
             }
             #[cfg(feature = "IoAccessibilitySharp")]
             IoIcon::IoAccessibilitySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2766,7 +2752,7 @@ impl Data {
             }
             #[cfg(feature = "IoAdd")]
             IoIcon::IoAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2783,7 +2769,7 @@ impl Data {
             }
             #[cfg(feature = "IoAddCircle")]
             IoIcon::IoAddCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2800,7 +2786,7 @@ impl Data {
             }
             #[cfg(feature = "IoAddCircleOutline")]
             IoIcon::IoAddCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2817,7 +2803,7 @@ impl Data {
             }
             #[cfg(feature = "IoAddCircleSharp")]
             IoIcon::IoAddCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2834,7 +2820,7 @@ impl Data {
             }
             #[cfg(feature = "IoAddOutline")]
             IoIcon::IoAddOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2851,7 +2837,7 @@ impl Data {
             }
             #[cfg(feature = "IoAddSharp")]
             IoIcon::IoAddSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2868,7 +2854,7 @@ impl Data {
             }
             #[cfg(feature = "IoAirplane")]
             IoIcon::IoAirplane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2885,7 +2871,7 @@ impl Data {
             }
             #[cfg(feature = "IoAirplaneOutline")]
             IoIcon::IoAirplaneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2902,7 +2888,7 @@ impl Data {
             }
             #[cfg(feature = "IoAirplaneSharp")]
             IoIcon::IoAirplaneSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2919,7 +2905,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlarm")]
             IoIcon::IoAlarm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2936,7 +2922,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlarmOutline")]
             IoIcon::IoAlarmOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2953,7 +2939,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlarmSharp")]
             IoIcon::IoAlarmSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2970,7 +2956,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlbums")]
             IoIcon::IoAlbums => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2987,7 +2973,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlbumsOutline")]
             IoIcon::IoAlbumsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3004,7 +2990,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlbumsSharp")]
             IoIcon::IoAlbumsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3021,7 +3007,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlert")]
             IoIcon::IoAlert => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3038,7 +3024,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlertCircle")]
             IoIcon::IoAlertCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3055,7 +3041,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlertCircleOutline")]
             IoIcon::IoAlertCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3072,7 +3058,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlertCircleSharp")]
             IoIcon::IoAlertCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3089,7 +3075,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlertOutline")]
             IoIcon::IoAlertOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3106,7 +3092,7 @@ impl Data {
             }
             #[cfg(feature = "IoAlertSharp")]
             IoIcon::IoAlertSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3123,7 +3109,7 @@ impl Data {
             }
             #[cfg(feature = "IoAmericanFootball")]
             IoIcon::IoAmericanFootball => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3140,7 +3126,7 @@ impl Data {
             }
             #[cfg(feature = "IoAmericanFootballOutline")]
             IoIcon::IoAmericanFootballOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3157,7 +3143,7 @@ impl Data {
             }
             #[cfg(feature = "IoAmericanFootballSharp")]
             IoIcon::IoAmericanFootballSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3174,7 +3160,7 @@ impl Data {
             }
             #[cfg(feature = "IoAnalytics")]
             IoIcon::IoAnalytics => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3191,7 +3177,7 @@ impl Data {
             }
             #[cfg(feature = "IoAnalyticsOutline")]
             IoIcon::IoAnalyticsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3208,7 +3194,7 @@ impl Data {
             }
             #[cfg(feature = "IoAnalyticsSharp")]
             IoIcon::IoAnalyticsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3225,7 +3211,7 @@ impl Data {
             }
             #[cfg(feature = "IoAperture")]
             IoIcon::IoAperture => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3242,7 +3228,7 @@ impl Data {
             }
             #[cfg(feature = "IoApertureOutline")]
             IoIcon::IoApertureOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3259,7 +3245,7 @@ impl Data {
             }
             #[cfg(feature = "IoApertureSharp")]
             IoIcon::IoApertureSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3276,7 +3262,7 @@ impl Data {
             }
             #[cfg(feature = "IoApps")]
             IoIcon::IoApps => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3293,7 +3279,7 @@ impl Data {
             }
             #[cfg(feature = "IoAppsOutline")]
             IoIcon::IoAppsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3310,7 +3296,7 @@ impl Data {
             }
             #[cfg(feature = "IoAppsSharp")]
             IoIcon::IoAppsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3327,7 +3313,7 @@ impl Data {
             }
             #[cfg(feature = "IoArchive")]
             IoIcon::IoArchive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3344,7 +3330,7 @@ impl Data {
             }
             #[cfg(feature = "IoArchiveOutline")]
             IoIcon::IoArchiveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3361,7 +3347,7 @@ impl Data {
             }
             #[cfg(feature = "IoArchiveSharp")]
             IoIcon::IoArchiveSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3378,7 +3364,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowBack")]
             IoIcon::IoArrowBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3395,7 +3381,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowBackCircle")]
             IoIcon::IoArrowBackCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3412,7 +3398,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowBackCircleOutline")]
             IoIcon::IoArrowBackCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3429,7 +3415,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowBackCircleSharp")]
             IoIcon::IoArrowBackCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3446,7 +3432,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowBackOutline")]
             IoIcon::IoArrowBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3463,7 +3449,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowBackSharp")]
             IoIcon::IoArrowBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3480,7 +3466,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowDown")]
             IoIcon::IoArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3497,7 +3483,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowDownCircle")]
             IoIcon::IoArrowDownCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3514,7 +3500,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowDownCircleOutline")]
             IoIcon::IoArrowDownCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3531,7 +3517,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowDownCircleSharp")]
             IoIcon::IoArrowDownCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3548,7 +3534,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowDownOutline")]
             IoIcon::IoArrowDownOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3565,7 +3551,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowDownSharp")]
             IoIcon::IoArrowDownSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3582,7 +3568,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowForward")]
             IoIcon::IoArrowForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3599,7 +3585,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowForwardCircle")]
             IoIcon::IoArrowForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3616,7 +3602,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowForwardCircleOutline")]
             IoIcon::IoArrowForwardCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3633,7 +3619,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowForwardCircleSharp")]
             IoIcon::IoArrowForwardCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3650,7 +3636,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowForwardOutline")]
             IoIcon::IoArrowForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3667,7 +3653,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowForwardSharp")]
             IoIcon::IoArrowForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3684,7 +3670,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowRedo")]
             IoIcon::IoArrowRedo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3701,7 +3687,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowRedoCircle")]
             IoIcon::IoArrowRedoCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3718,7 +3704,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowRedoCircleOutline")]
             IoIcon::IoArrowRedoCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3735,7 +3721,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowRedoCircleSharp")]
             IoIcon::IoArrowRedoCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3752,7 +3738,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowRedoOutline")]
             IoIcon::IoArrowRedoOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3769,7 +3755,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowRedoSharp")]
             IoIcon::IoArrowRedoSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3786,7 +3772,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUndo")]
             IoIcon::IoArrowUndo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3803,7 +3789,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUndoCircle")]
             IoIcon::IoArrowUndoCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3820,7 +3806,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUndoCircleOutline")]
             IoIcon::IoArrowUndoCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3837,7 +3823,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUndoCircleSharp")]
             IoIcon::IoArrowUndoCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3854,7 +3840,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUndoOutline")]
             IoIcon::IoArrowUndoOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3871,7 +3857,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUndoSharp")]
             IoIcon::IoArrowUndoSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3888,7 +3874,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUp")]
             IoIcon::IoArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3905,7 +3891,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUpCircle")]
             IoIcon::IoArrowUpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3922,7 +3908,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUpCircleOutline")]
             IoIcon::IoArrowUpCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3939,7 +3925,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUpCircleSharp")]
             IoIcon::IoArrowUpCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3956,7 +3942,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUpOutline")]
             IoIcon::IoArrowUpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3973,7 +3959,7 @@ impl Data {
             }
             #[cfg(feature = "IoArrowUpSharp")]
             IoIcon::IoArrowUpSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3990,7 +3976,7 @@ impl Data {
             }
             #[cfg(feature = "IoAt")]
             IoIcon::IoAt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4007,7 +3993,7 @@ impl Data {
             }
             #[cfg(feature = "IoAtCircle")]
             IoIcon::IoAtCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4024,7 +4010,7 @@ impl Data {
             }
             #[cfg(feature = "IoAtCircleOutline")]
             IoIcon::IoAtCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4041,7 +4027,7 @@ impl Data {
             }
             #[cfg(feature = "IoAtCircleSharp")]
             IoIcon::IoAtCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4058,7 +4044,7 @@ impl Data {
             }
             #[cfg(feature = "IoAtOutline")]
             IoIcon::IoAtOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4075,7 +4061,7 @@ impl Data {
             }
             #[cfg(feature = "IoAtSharp")]
             IoIcon::IoAtSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4092,7 +4078,7 @@ impl Data {
             }
             #[cfg(feature = "IoAttach")]
             IoIcon::IoAttach => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4109,7 +4095,7 @@ impl Data {
             }
             #[cfg(feature = "IoAttachOutline")]
             IoIcon::IoAttachOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4126,7 +4112,7 @@ impl Data {
             }
             #[cfg(feature = "IoAttachSharp")]
             IoIcon::IoAttachSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4143,7 +4129,7 @@ impl Data {
             }
             #[cfg(feature = "IoBackspace")]
             IoIcon::IoBackspace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4160,7 +4146,7 @@ impl Data {
             }
             #[cfg(feature = "IoBackspaceOutline")]
             IoIcon::IoBackspaceOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4177,7 +4163,7 @@ impl Data {
             }
             #[cfg(feature = "IoBackspaceSharp")]
             IoIcon::IoBackspaceSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4194,7 +4180,7 @@ impl Data {
             }
             #[cfg(feature = "IoBag")]
             IoIcon::IoBag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4211,7 +4197,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagAdd")]
             IoIcon::IoBagAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4228,7 +4214,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagAddOutline")]
             IoIcon::IoBagAddOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4245,7 +4231,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagAddSharp")]
             IoIcon::IoBagAddSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4262,7 +4248,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagCheck")]
             IoIcon::IoBagCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4279,7 +4265,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagCheckOutline")]
             IoIcon::IoBagCheckOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4296,7 +4282,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagCheckSharp")]
             IoIcon::IoBagCheckSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4313,7 +4299,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagHandle")]
             IoIcon::IoBagHandle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4330,7 +4316,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagHandleOutline")]
             IoIcon::IoBagHandleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4347,7 +4333,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagHandleSharp")]
             IoIcon::IoBagHandleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4364,7 +4350,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagOutline")]
             IoIcon::IoBagOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4381,7 +4367,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagRemove")]
             IoIcon::IoBagRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4398,7 +4384,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagRemoveOutline")]
             IoIcon::IoBagRemoveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4415,7 +4401,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagRemoveSharp")]
             IoIcon::IoBagRemoveSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4432,7 +4418,7 @@ impl Data {
             }
             #[cfg(feature = "IoBagSharp")]
             IoIcon::IoBagSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4449,7 +4435,7 @@ impl Data {
             }
             #[cfg(feature = "IoBalloon")]
             IoIcon::IoBalloon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4466,7 +4452,7 @@ impl Data {
             }
             #[cfg(feature = "IoBalloonOutline")]
             IoIcon::IoBalloonOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4483,7 +4469,7 @@ impl Data {
             }
             #[cfg(feature = "IoBalloonSharp")]
             IoIcon::IoBalloonSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4500,7 +4486,7 @@ impl Data {
             }
             #[cfg(feature = "IoBan")]
             IoIcon::IoBan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4517,7 +4503,7 @@ impl Data {
             }
             #[cfg(feature = "IoBanOutline")]
             IoIcon::IoBanOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4534,7 +4520,7 @@ impl Data {
             }
             #[cfg(feature = "IoBanSharp")]
             IoIcon::IoBanSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4551,7 +4537,7 @@ impl Data {
             }
             #[cfg(feature = "IoBandage")]
             IoIcon::IoBandage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4568,7 +4554,7 @@ impl Data {
             }
             #[cfg(feature = "IoBandageOutline")]
             IoIcon::IoBandageOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4585,7 +4571,7 @@ impl Data {
             }
             #[cfg(feature = "IoBandageSharp")]
             IoIcon::IoBandageSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4602,7 +4588,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarChart")]
             IoIcon::IoBarChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4619,7 +4605,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarChartOutline")]
             IoIcon::IoBarChartOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4636,7 +4622,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarChartSharp")]
             IoIcon::IoBarChartSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4653,7 +4639,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarbell")]
             IoIcon::IoBarbell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4670,7 +4656,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarbellOutline")]
             IoIcon::IoBarbellOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4687,7 +4673,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarbellSharp")]
             IoIcon::IoBarbellSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4704,7 +4690,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarcode")]
             IoIcon::IoBarcode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4721,7 +4707,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarcodeOutline")]
             IoIcon::IoBarcodeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4738,7 +4724,7 @@ impl Data {
             }
             #[cfg(feature = "IoBarcodeSharp")]
             IoIcon::IoBarcodeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4755,7 +4741,7 @@ impl Data {
             }
             #[cfg(feature = "IoBaseball")]
             IoIcon::IoBaseball => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4772,7 +4758,7 @@ impl Data {
             }
             #[cfg(feature = "IoBaseballOutline")]
             IoIcon::IoBaseballOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4789,7 +4775,7 @@ impl Data {
             }
             #[cfg(feature = "IoBaseballSharp")]
             IoIcon::IoBaseballSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4806,7 +4792,7 @@ impl Data {
             }
             #[cfg(feature = "IoBasket")]
             IoIcon::IoBasket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4823,7 +4809,7 @@ impl Data {
             }
             #[cfg(feature = "IoBasketOutline")]
             IoIcon::IoBasketOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4840,7 +4826,7 @@ impl Data {
             }
             #[cfg(feature = "IoBasketSharp")]
             IoIcon::IoBasketSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4857,7 +4843,7 @@ impl Data {
             }
             #[cfg(feature = "IoBasketball")]
             IoIcon::IoBasketball => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4874,7 +4860,7 @@ impl Data {
             }
             #[cfg(feature = "IoBasketballOutline")]
             IoIcon::IoBasketballOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4891,7 +4877,7 @@ impl Data {
             }
             #[cfg(feature = "IoBasketballSharp")]
             IoIcon::IoBasketballSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4908,7 +4894,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryCharging")]
             IoIcon::IoBatteryCharging => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4925,7 +4911,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryChargingOutline")]
             IoIcon::IoBatteryChargingOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4942,7 +4928,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryChargingSharp")]
             IoIcon::IoBatteryChargingSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4959,7 +4945,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryDead")]
             IoIcon::IoBatteryDead => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4976,7 +4962,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryDeadOutline")]
             IoIcon::IoBatteryDeadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4993,7 +4979,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryDeadSharp")]
             IoIcon::IoBatteryDeadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5010,7 +4996,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryFull")]
             IoIcon::IoBatteryFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5027,7 +5013,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryFullOutline")]
             IoIcon::IoBatteryFullOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5044,7 +5030,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryFullSharp")]
             IoIcon::IoBatteryFullSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5061,7 +5047,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryHalf")]
             IoIcon::IoBatteryHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5078,7 +5064,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryHalfOutline")]
             IoIcon::IoBatteryHalfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5095,7 +5081,7 @@ impl Data {
             }
             #[cfg(feature = "IoBatteryHalfSharp")]
             IoIcon::IoBatteryHalfSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5112,7 +5098,7 @@ impl Data {
             }
             #[cfg(feature = "IoBeaker")]
             IoIcon::IoBeaker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5129,7 +5115,7 @@ impl Data {
             }
             #[cfg(feature = "IoBeakerOutline")]
             IoIcon::IoBeakerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5146,7 +5132,7 @@ impl Data {
             }
             #[cfg(feature = "IoBeakerSharp")]
             IoIcon::IoBeakerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5163,7 +5149,7 @@ impl Data {
             }
             #[cfg(feature = "IoBed")]
             IoIcon::IoBed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5180,7 +5166,7 @@ impl Data {
             }
             #[cfg(feature = "IoBedOutline")]
             IoIcon::IoBedOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5197,7 +5183,7 @@ impl Data {
             }
             #[cfg(feature = "IoBedSharp")]
             IoIcon::IoBedSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5214,7 +5200,7 @@ impl Data {
             }
             #[cfg(feature = "IoBeer")]
             IoIcon::IoBeer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5231,7 +5217,7 @@ impl Data {
             }
             #[cfg(feature = "IoBeerOutline")]
             IoIcon::IoBeerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5248,7 +5234,7 @@ impl Data {
             }
             #[cfg(feature = "IoBeerSharp")]
             IoIcon::IoBeerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5265,7 +5251,7 @@ impl Data {
             }
             #[cfg(feature = "IoBicycle")]
             IoIcon::IoBicycle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5282,7 +5268,7 @@ impl Data {
             }
             #[cfg(feature = "IoBicycleOutline")]
             IoIcon::IoBicycleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5299,7 +5285,7 @@ impl Data {
             }
             #[cfg(feature = "IoBicycleSharp")]
             IoIcon::IoBicycleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5316,7 +5302,7 @@ impl Data {
             }
             #[cfg(feature = "IoBluetooth")]
             IoIcon::IoBluetooth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5333,7 +5319,7 @@ impl Data {
             }
             #[cfg(feature = "IoBluetoothOutline")]
             IoIcon::IoBluetoothOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5350,7 +5336,7 @@ impl Data {
             }
             #[cfg(feature = "IoBluetoothSharp")]
             IoIcon::IoBluetoothSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5367,7 +5353,7 @@ impl Data {
             }
             #[cfg(feature = "IoBoat")]
             IoIcon::IoBoat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5384,7 +5370,7 @@ impl Data {
             }
             #[cfg(feature = "IoBoatOutline")]
             IoIcon::IoBoatOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5401,7 +5387,7 @@ impl Data {
             }
             #[cfg(feature = "IoBoatSharp")]
             IoIcon::IoBoatSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5418,7 +5404,7 @@ impl Data {
             }
             #[cfg(feature = "IoBody")]
             IoIcon::IoBody => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5435,7 +5421,7 @@ impl Data {
             }
             #[cfg(feature = "IoBodyOutline")]
             IoIcon::IoBodyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5452,7 +5438,7 @@ impl Data {
             }
             #[cfg(feature = "IoBodySharp")]
             IoIcon::IoBodySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5469,7 +5455,7 @@ impl Data {
             }
             #[cfg(feature = "IoBonfire")]
             IoIcon::IoBonfire => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5486,7 +5472,7 @@ impl Data {
             }
             #[cfg(feature = "IoBonfireOutline")]
             IoIcon::IoBonfireOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5503,7 +5489,7 @@ impl Data {
             }
             #[cfg(feature = "IoBonfireSharp")]
             IoIcon::IoBonfireSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5520,7 +5506,7 @@ impl Data {
             }
             #[cfg(feature = "IoBook")]
             IoIcon::IoBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5537,7 +5523,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookOutline")]
             IoIcon::IoBookOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5554,7 +5540,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookSharp")]
             IoIcon::IoBookSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5571,7 +5557,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookmark")]
             IoIcon::IoBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5588,7 +5574,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookmarkOutline")]
             IoIcon::IoBookmarkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5605,7 +5591,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookmarkSharp")]
             IoIcon::IoBookmarkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5622,7 +5608,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookmarks")]
             IoIcon::IoBookmarks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5639,7 +5625,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookmarksOutline")]
             IoIcon::IoBookmarksOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5656,7 +5642,7 @@ impl Data {
             }
             #[cfg(feature = "IoBookmarksSharp")]
             IoIcon::IoBookmarksSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5673,7 +5659,7 @@ impl Data {
             }
             #[cfg(feature = "IoBowlingBall")]
             IoIcon::IoBowlingBall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5690,7 +5676,7 @@ impl Data {
             }
             #[cfg(feature = "IoBowlingBallOutline")]
             IoIcon::IoBowlingBallOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5707,7 +5693,7 @@ impl Data {
             }
             #[cfg(feature = "IoBowlingBallSharp")]
             IoIcon::IoBowlingBallSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5724,7 +5710,7 @@ impl Data {
             }
             #[cfg(feature = "IoBriefcase")]
             IoIcon::IoBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5741,7 +5727,7 @@ impl Data {
             }
             #[cfg(feature = "IoBriefcaseOutline")]
             IoIcon::IoBriefcaseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5758,7 +5744,7 @@ impl Data {
             }
             #[cfg(feature = "IoBriefcaseSharp")]
             IoIcon::IoBriefcaseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5775,7 +5761,7 @@ impl Data {
             }
             #[cfg(feature = "IoBrowsers")]
             IoIcon::IoBrowsers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5792,7 +5778,7 @@ impl Data {
             }
             #[cfg(feature = "IoBrowsersOutline")]
             IoIcon::IoBrowsersOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5809,7 +5795,7 @@ impl Data {
             }
             #[cfg(feature = "IoBrowsersSharp")]
             IoIcon::IoBrowsersSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5826,7 +5812,7 @@ impl Data {
             }
             #[cfg(feature = "IoBrush")]
             IoIcon::IoBrush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5843,7 +5829,7 @@ impl Data {
             }
             #[cfg(feature = "IoBrushOutline")]
             IoIcon::IoBrushOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5860,7 +5846,7 @@ impl Data {
             }
             #[cfg(feature = "IoBrushSharp")]
             IoIcon::IoBrushSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5877,7 +5863,7 @@ impl Data {
             }
             #[cfg(feature = "IoBug")]
             IoIcon::IoBug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5894,7 +5880,7 @@ impl Data {
             }
             #[cfg(feature = "IoBugOutline")]
             IoIcon::IoBugOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5911,7 +5897,7 @@ impl Data {
             }
             #[cfg(feature = "IoBugSharp")]
             IoIcon::IoBugSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5928,7 +5914,7 @@ impl Data {
             }
             #[cfg(feature = "IoBuild")]
             IoIcon::IoBuild => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5945,7 +5931,7 @@ impl Data {
             }
             #[cfg(feature = "IoBuildOutline")]
             IoIcon::IoBuildOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5962,7 +5948,7 @@ impl Data {
             }
             #[cfg(feature = "IoBuildSharp")]
             IoIcon::IoBuildSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5979,7 +5965,7 @@ impl Data {
             }
             #[cfg(feature = "IoBulb")]
             IoIcon::IoBulb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5996,7 +5982,7 @@ impl Data {
             }
             #[cfg(feature = "IoBulbOutline")]
             IoIcon::IoBulbOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6013,7 +5999,7 @@ impl Data {
             }
             #[cfg(feature = "IoBulbSharp")]
             IoIcon::IoBulbSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6030,7 +6016,7 @@ impl Data {
             }
             #[cfg(feature = "IoBus")]
             IoIcon::IoBus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6047,7 +6033,7 @@ impl Data {
             }
             #[cfg(feature = "IoBusOutline")]
             IoIcon::IoBusOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6064,7 +6050,7 @@ impl Data {
             }
             #[cfg(feature = "IoBusSharp")]
             IoIcon::IoBusSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6081,7 +6067,7 @@ impl Data {
             }
             #[cfg(feature = "IoBusiness")]
             IoIcon::IoBusiness => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6098,7 +6084,7 @@ impl Data {
             }
             #[cfg(feature = "IoBusinessOutline")]
             IoIcon::IoBusinessOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6115,7 +6101,7 @@ impl Data {
             }
             #[cfg(feature = "IoBusinessSharp")]
             IoIcon::IoBusinessSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6132,7 +6118,7 @@ impl Data {
             }
             #[cfg(feature = "IoCafe")]
             IoIcon::IoCafe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6149,7 +6135,7 @@ impl Data {
             }
             #[cfg(feature = "IoCafeOutline")]
             IoIcon::IoCafeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6166,7 +6152,7 @@ impl Data {
             }
             #[cfg(feature = "IoCafeSharp")]
             IoIcon::IoCafeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6183,7 +6169,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalculator")]
             IoIcon::IoCalculator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6200,7 +6186,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalculatorOutline")]
             IoIcon::IoCalculatorOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6217,7 +6203,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalculatorSharp")]
             IoIcon::IoCalculatorSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6234,7 +6220,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendar")]
             IoIcon::IoCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6251,7 +6237,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarClear")]
             IoIcon::IoCalendarClear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6268,7 +6254,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarClearOutline")]
             IoIcon::IoCalendarClearOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6285,7 +6271,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarClearSharp")]
             IoIcon::IoCalendarClearSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6302,7 +6288,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarNumber")]
             IoIcon::IoCalendarNumber => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6319,7 +6305,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarNumberOutline")]
             IoIcon::IoCalendarNumberOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6336,7 +6322,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarNumberSharp")]
             IoIcon::IoCalendarNumberSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6353,7 +6339,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarOutline")]
             IoIcon::IoCalendarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6370,7 +6356,7 @@ impl Data {
             }
             #[cfg(feature = "IoCalendarSharp")]
             IoIcon::IoCalendarSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6387,7 +6373,7 @@ impl Data {
             }
             #[cfg(feature = "IoCall")]
             IoIcon::IoCall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6404,7 +6390,7 @@ impl Data {
             }
             #[cfg(feature = "IoCallOutline")]
             IoIcon::IoCallOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6421,7 +6407,7 @@ impl Data {
             }
             #[cfg(feature = "IoCallSharp")]
             IoIcon::IoCallSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6438,7 +6424,7 @@ impl Data {
             }
             #[cfg(feature = "IoCamera")]
             IoIcon::IoCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6455,7 +6441,7 @@ impl Data {
             }
             #[cfg(feature = "IoCameraOutline")]
             IoIcon::IoCameraOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6472,7 +6458,7 @@ impl Data {
             }
             #[cfg(feature = "IoCameraReverse")]
             IoIcon::IoCameraReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6489,7 +6475,7 @@ impl Data {
             }
             #[cfg(feature = "IoCameraReverseOutline")]
             IoIcon::IoCameraReverseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6506,7 +6492,7 @@ impl Data {
             }
             #[cfg(feature = "IoCameraReverseSharp")]
             IoIcon::IoCameraReverseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6523,7 +6509,7 @@ impl Data {
             }
             #[cfg(feature = "IoCameraSharp")]
             IoIcon::IoCameraSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6540,7 +6526,7 @@ impl Data {
             }
             #[cfg(feature = "IoCar")]
             IoIcon::IoCar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6557,7 +6543,7 @@ impl Data {
             }
             #[cfg(feature = "IoCarOutline")]
             IoIcon::IoCarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6574,7 +6560,7 @@ impl Data {
             }
             #[cfg(feature = "IoCarSharp")]
             IoIcon::IoCarSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6591,7 +6577,7 @@ impl Data {
             }
             #[cfg(feature = "IoCarSport")]
             IoIcon::IoCarSport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6608,7 +6594,7 @@ impl Data {
             }
             #[cfg(feature = "IoCarSportOutline")]
             IoIcon::IoCarSportOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6625,7 +6611,7 @@ impl Data {
             }
             #[cfg(feature = "IoCarSportSharp")]
             IoIcon::IoCarSportSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6642,7 +6628,7 @@ impl Data {
             }
             #[cfg(feature = "IoCard")]
             IoIcon::IoCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6659,7 +6645,7 @@ impl Data {
             }
             #[cfg(feature = "IoCardOutline")]
             IoIcon::IoCardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6676,7 +6662,7 @@ impl Data {
             }
             #[cfg(feature = "IoCardSharp")]
             IoIcon::IoCardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6693,7 +6679,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretBack")]
             IoIcon::IoCaretBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6710,7 +6696,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretBackCircle")]
             IoIcon::IoCaretBackCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6727,7 +6713,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretBackCircleOutline")]
             IoIcon::IoCaretBackCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6744,7 +6730,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretBackCircleSharp")]
             IoIcon::IoCaretBackCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6761,7 +6747,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretBackOutline")]
             IoIcon::IoCaretBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6778,7 +6764,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretBackSharp")]
             IoIcon::IoCaretBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6795,7 +6781,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretDown")]
             IoIcon::IoCaretDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6812,7 +6798,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretDownCircle")]
             IoIcon::IoCaretDownCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6829,7 +6815,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretDownCircleOutline")]
             IoIcon::IoCaretDownCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6846,7 +6832,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretDownCircleSharp")]
             IoIcon::IoCaretDownCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6863,7 +6849,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretDownOutline")]
             IoIcon::IoCaretDownOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6880,7 +6866,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretDownSharp")]
             IoIcon::IoCaretDownSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6897,7 +6883,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretForward")]
             IoIcon::IoCaretForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6914,7 +6900,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretForwardCircle")]
             IoIcon::IoCaretForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6931,7 +6917,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretForwardCircleOutline")]
             IoIcon::IoCaretForwardCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6948,7 +6934,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretForwardCircleSharp")]
             IoIcon::IoCaretForwardCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6965,7 +6951,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretForwardOutline")]
             IoIcon::IoCaretForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6982,7 +6968,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretForwardSharp")]
             IoIcon::IoCaretForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6999,7 +6985,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretUp")]
             IoIcon::IoCaretUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7016,7 +7002,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretUpCircle")]
             IoIcon::IoCaretUpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7033,7 +7019,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretUpCircleOutline")]
             IoIcon::IoCaretUpCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7050,7 +7036,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretUpCircleSharp")]
             IoIcon::IoCaretUpCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7067,7 +7053,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretUpOutline")]
             IoIcon::IoCaretUpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7084,7 +7070,7 @@ impl Data {
             }
             #[cfg(feature = "IoCaretUpSharp")]
             IoIcon::IoCaretUpSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7101,7 +7087,7 @@ impl Data {
             }
             #[cfg(feature = "IoCart")]
             IoIcon::IoCart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7118,7 +7104,7 @@ impl Data {
             }
             #[cfg(feature = "IoCartOutline")]
             IoIcon::IoCartOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7135,7 +7121,7 @@ impl Data {
             }
             #[cfg(feature = "IoCartSharp")]
             IoIcon::IoCartSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7152,7 +7138,7 @@ impl Data {
             }
             #[cfg(feature = "IoCash")]
             IoIcon::IoCash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7169,7 +7155,7 @@ impl Data {
             }
             #[cfg(feature = "IoCashOutline")]
             IoIcon::IoCashOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7186,7 +7172,7 @@ impl Data {
             }
             #[cfg(feature = "IoCashSharp")]
             IoIcon::IoCashSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7203,7 +7189,7 @@ impl Data {
             }
             #[cfg(feature = "IoCellular")]
             IoIcon::IoCellular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7220,7 +7206,7 @@ impl Data {
             }
             #[cfg(feature = "IoCellularOutline")]
             IoIcon::IoCellularOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7237,7 +7223,7 @@ impl Data {
             }
             #[cfg(feature = "IoCellularSharp")]
             IoIcon::IoCellularSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7254,7 +7240,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbox")]
             IoIcon::IoChatbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7271,7 +7257,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatboxEllipses")]
             IoIcon::IoChatboxEllipses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7288,7 +7274,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatboxEllipsesOutline")]
             IoIcon::IoChatboxEllipsesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7305,7 +7291,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatboxEllipsesSharp")]
             IoIcon::IoChatboxEllipsesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7322,7 +7308,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatboxOutline")]
             IoIcon::IoChatboxOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7339,7 +7325,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatboxSharp")]
             IoIcon::IoChatboxSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7356,7 +7342,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubble")]
             IoIcon::IoChatbubble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7373,7 +7359,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubbleEllipses")]
             IoIcon::IoChatbubbleEllipses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7390,7 +7376,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubbleEllipsesOutline")]
             IoIcon::IoChatbubbleEllipsesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7407,7 +7393,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubbleEllipsesSharp")]
             IoIcon::IoChatbubbleEllipsesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7424,7 +7410,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubbleOutline")]
             IoIcon::IoChatbubbleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7441,7 +7427,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubbleSharp")]
             IoIcon::IoChatbubbleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7458,7 +7444,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubbles")]
             IoIcon::IoChatbubbles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7475,7 +7461,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubblesOutline")]
             IoIcon::IoChatbubblesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7492,7 +7478,7 @@ impl Data {
             }
             #[cfg(feature = "IoChatbubblesSharp")]
             IoIcon::IoChatbubblesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7509,7 +7495,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckbox")]
             IoIcon::IoCheckbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7526,7 +7512,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckboxOutline")]
             IoIcon::IoCheckboxOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7543,7 +7529,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckboxSharp")]
             IoIcon::IoCheckboxSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7560,7 +7546,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmark")]
             IoIcon::IoCheckmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7577,7 +7563,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkCircle")]
             IoIcon::IoCheckmarkCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7594,7 +7580,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkCircleOutline")]
             IoIcon::IoCheckmarkCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7611,7 +7597,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkCircleSharp")]
             IoIcon::IoCheckmarkCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7628,7 +7614,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkDone")]
             IoIcon::IoCheckmarkDone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7645,7 +7631,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkDoneCircle")]
             IoIcon::IoCheckmarkDoneCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7662,7 +7648,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkDoneCircleOutline")]
             IoIcon::IoCheckmarkDoneCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7679,7 +7665,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkDoneCircleSharp")]
             IoIcon::IoCheckmarkDoneCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7696,7 +7682,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkDoneOutline")]
             IoIcon::IoCheckmarkDoneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7713,7 +7699,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkDoneSharp")]
             IoIcon::IoCheckmarkDoneSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7730,7 +7716,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkOutline")]
             IoIcon::IoCheckmarkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7747,7 +7733,7 @@ impl Data {
             }
             #[cfg(feature = "IoCheckmarkSharp")]
             IoIcon::IoCheckmarkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7764,7 +7750,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronBack")]
             IoIcon::IoChevronBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7781,7 +7767,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronBackCircle")]
             IoIcon::IoChevronBackCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7798,7 +7784,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronBackCircleOutline")]
             IoIcon::IoChevronBackCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7815,7 +7801,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronBackCircleSharp")]
             IoIcon::IoChevronBackCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7832,7 +7818,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronBackOutline")]
             IoIcon::IoChevronBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7849,7 +7835,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronBackSharp")]
             IoIcon::IoChevronBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7866,7 +7852,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronCollapse")]
             IoIcon::IoChevronCollapse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7883,7 +7869,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronCollapseOutline")]
             IoIcon::IoChevronCollapseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7900,7 +7886,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronCollapseSharp")]
             IoIcon::IoChevronCollapseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7917,7 +7903,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronDown")]
             IoIcon::IoChevronDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7934,7 +7920,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronDownCircle")]
             IoIcon::IoChevronDownCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7951,7 +7937,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronDownCircleOutline")]
             IoIcon::IoChevronDownCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7968,7 +7954,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronDownCircleSharp")]
             IoIcon::IoChevronDownCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7985,7 +7971,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronDownOutline")]
             IoIcon::IoChevronDownOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8002,7 +7988,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronDownSharp")]
             IoIcon::IoChevronDownSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8019,7 +8005,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronExpand")]
             IoIcon::IoChevronExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8036,7 +8022,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronExpandOutline")]
             IoIcon::IoChevronExpandOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8053,7 +8039,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronExpandSharp")]
             IoIcon::IoChevronExpandSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8070,7 +8056,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronForward")]
             IoIcon::IoChevronForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8087,7 +8073,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronForwardCircle")]
             IoIcon::IoChevronForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8104,7 +8090,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronForwardCircleOutline")]
             IoIcon::IoChevronForwardCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8121,7 +8107,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronForwardCircleSharp")]
             IoIcon::IoChevronForwardCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8138,7 +8124,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronForwardOutline")]
             IoIcon::IoChevronForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8155,7 +8141,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronForwardSharp")]
             IoIcon::IoChevronForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8172,7 +8158,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronUp")]
             IoIcon::IoChevronUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8189,7 +8175,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronUpCircle")]
             IoIcon::IoChevronUpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8206,7 +8192,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronUpCircleOutline")]
             IoIcon::IoChevronUpCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8223,7 +8209,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronUpCircleSharp")]
             IoIcon::IoChevronUpCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8240,7 +8226,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronUpOutline")]
             IoIcon::IoChevronUpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8257,7 +8243,7 @@ impl Data {
             }
             #[cfg(feature = "IoChevronUpSharp")]
             IoIcon::IoChevronUpSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8274,7 +8260,7 @@ impl Data {
             }
             #[cfg(feature = "IoClipboard")]
             IoIcon::IoClipboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8291,7 +8277,7 @@ impl Data {
             }
             #[cfg(feature = "IoClipboardOutline")]
             IoIcon::IoClipboardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8308,7 +8294,7 @@ impl Data {
             }
             #[cfg(feature = "IoClipboardSharp")]
             IoIcon::IoClipboardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8325,7 +8311,7 @@ impl Data {
             }
             #[cfg(feature = "IoClose")]
             IoIcon::IoClose => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8342,7 +8328,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloseCircle")]
             IoIcon::IoCloseCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8359,7 +8345,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloseCircleOutline")]
             IoIcon::IoCloseCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8376,7 +8362,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloseCircleSharp")]
             IoIcon::IoCloseCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8393,7 +8379,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloseOutline")]
             IoIcon::IoCloseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8410,7 +8396,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloseSharp")]
             IoIcon::IoCloseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8427,7 +8413,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloud")]
             IoIcon::IoCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8444,7 +8430,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudCircle")]
             IoIcon::IoCloudCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8461,7 +8447,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudCircleOutline")]
             IoIcon::IoCloudCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8478,7 +8464,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudCircleSharp")]
             IoIcon::IoCloudCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8495,7 +8481,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudDone")]
             IoIcon::IoCloudDone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8512,7 +8498,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudDoneOutline")]
             IoIcon::IoCloudDoneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8529,7 +8515,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudDoneSharp")]
             IoIcon::IoCloudDoneSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8546,7 +8532,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudDownload")]
             IoIcon::IoCloudDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8563,7 +8549,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudDownloadOutline")]
             IoIcon::IoCloudDownloadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8580,7 +8566,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudDownloadSharp")]
             IoIcon::IoCloudDownloadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8597,7 +8583,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudOffline")]
             IoIcon::IoCloudOffline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8614,7 +8600,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudOfflineOutline")]
             IoIcon::IoCloudOfflineOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8631,7 +8617,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudOfflineSharp")]
             IoIcon::IoCloudOfflineSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8648,7 +8634,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudOutline")]
             IoIcon::IoCloudOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8665,7 +8651,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudSharp")]
             IoIcon::IoCloudSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8682,7 +8668,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudUpload")]
             IoIcon::IoCloudUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8699,7 +8685,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudUploadOutline")]
             IoIcon::IoCloudUploadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8716,7 +8702,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudUploadSharp")]
             IoIcon::IoCloudUploadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8733,7 +8719,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudy")]
             IoIcon::IoCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8750,7 +8736,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudyNight")]
             IoIcon::IoCloudyNight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8767,7 +8753,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudyNightOutline")]
             IoIcon::IoCloudyNightOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8784,7 +8770,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudyNightSharp")]
             IoIcon::IoCloudyNightSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8801,7 +8787,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudyOutline")]
             IoIcon::IoCloudyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8818,7 +8804,7 @@ impl Data {
             }
             #[cfg(feature = "IoCloudySharp")]
             IoIcon::IoCloudySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8835,7 +8821,7 @@ impl Data {
             }
             #[cfg(feature = "IoCode")]
             IoIcon::IoCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8852,7 +8838,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeDownload")]
             IoIcon::IoCodeDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8869,7 +8855,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeDownloadOutline")]
             IoIcon::IoCodeDownloadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8886,7 +8872,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeDownloadSharp")]
             IoIcon::IoCodeDownloadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8903,7 +8889,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeOutline")]
             IoIcon::IoCodeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8920,7 +8906,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeSharp")]
             IoIcon::IoCodeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8937,7 +8923,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeSlash")]
             IoIcon::IoCodeSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8954,7 +8940,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeSlashOutline")]
             IoIcon::IoCodeSlashOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8971,7 +8957,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeSlashSharp")]
             IoIcon::IoCodeSlashSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8988,7 +8974,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeWorking")]
             IoIcon::IoCodeWorking => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9005,7 +8991,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeWorkingOutline")]
             IoIcon::IoCodeWorkingOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9022,7 +9008,7 @@ impl Data {
             }
             #[cfg(feature = "IoCodeWorkingSharp")]
             IoIcon::IoCodeWorkingSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9039,7 +9025,7 @@ impl Data {
             }
             #[cfg(feature = "IoCog")]
             IoIcon::IoCog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9056,7 +9042,7 @@ impl Data {
             }
             #[cfg(feature = "IoCogOutline")]
             IoIcon::IoCogOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9073,7 +9059,7 @@ impl Data {
             }
             #[cfg(feature = "IoCogSharp")]
             IoIcon::IoCogSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9090,7 +9076,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorFill")]
             IoIcon::IoColorFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9107,7 +9093,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorFillOutline")]
             IoIcon::IoColorFillOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9124,7 +9110,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorFillSharp")]
             IoIcon::IoColorFillSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9141,7 +9127,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorFilter")]
             IoIcon::IoColorFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9158,7 +9144,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorFilterOutline")]
             IoIcon::IoColorFilterOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9175,7 +9161,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorFilterSharp")]
             IoIcon::IoColorFilterSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9192,7 +9178,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorPalette")]
             IoIcon::IoColorPalette => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9209,7 +9195,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorPaletteOutline")]
             IoIcon::IoColorPaletteOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9226,7 +9212,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorPaletteSharp")]
             IoIcon::IoColorPaletteSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9243,7 +9229,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorWand")]
             IoIcon::IoColorWand => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 512 512;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -9260,7 +9246,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorWandOutline")]
             IoIcon::IoColorWandOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9277,7 +9263,7 @@ impl Data {
             }
             #[cfg(feature = "IoColorWandSharp")]
             IoIcon::IoColorWandSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9294,7 +9280,7 @@ impl Data {
             }
             #[cfg(feature = "IoCompass")]
             IoIcon::IoCompass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9311,7 +9297,7 @@ impl Data {
             }
             #[cfg(feature = "IoCompassOutline")]
             IoIcon::IoCompassOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9328,7 +9314,7 @@ impl Data {
             }
             #[cfg(feature = "IoCompassSharp")]
             IoIcon::IoCompassSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9345,7 +9331,7 @@ impl Data {
             }
             #[cfg(feature = "IoConstruct")]
             IoIcon::IoConstruct => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9362,7 +9348,7 @@ impl Data {
             }
             #[cfg(feature = "IoConstructOutline")]
             IoIcon::IoConstructOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9379,7 +9365,7 @@ impl Data {
             }
             #[cfg(feature = "IoConstructSharp")]
             IoIcon::IoConstructSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9396,7 +9382,7 @@ impl Data {
             }
             #[cfg(feature = "IoContract")]
             IoIcon::IoContract => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9413,7 +9399,7 @@ impl Data {
             }
             #[cfg(feature = "IoContractOutline")]
             IoIcon::IoContractOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9430,7 +9416,7 @@ impl Data {
             }
             #[cfg(feature = "IoContractSharp")]
             IoIcon::IoContractSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9447,7 +9433,7 @@ impl Data {
             }
             #[cfg(feature = "IoContrast")]
             IoIcon::IoContrast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9464,7 +9450,7 @@ impl Data {
             }
             #[cfg(feature = "IoContrastOutline")]
             IoIcon::IoContrastOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9481,7 +9467,7 @@ impl Data {
             }
             #[cfg(feature = "IoContrastSharp")]
             IoIcon::IoContrastSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9498,7 +9484,7 @@ impl Data {
             }
             #[cfg(feature = "IoCopy")]
             IoIcon::IoCopy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9515,7 +9501,7 @@ impl Data {
             }
             #[cfg(feature = "IoCopyOutline")]
             IoIcon::IoCopyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9532,7 +9518,7 @@ impl Data {
             }
             #[cfg(feature = "IoCopySharp")]
             IoIcon::IoCopySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9549,7 +9535,7 @@ impl Data {
             }
             #[cfg(feature = "IoCreate")]
             IoIcon::IoCreate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9566,7 +9552,7 @@ impl Data {
             }
             #[cfg(feature = "IoCreateOutline")]
             IoIcon::IoCreateOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9583,7 +9569,7 @@ impl Data {
             }
             #[cfg(feature = "IoCreateSharp")]
             IoIcon::IoCreateSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9600,7 +9586,7 @@ impl Data {
             }
             #[cfg(feature = "IoCrop")]
             IoIcon::IoCrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9617,7 +9603,7 @@ impl Data {
             }
             #[cfg(feature = "IoCropOutline")]
             IoIcon::IoCropOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9634,7 +9620,7 @@ impl Data {
             }
             #[cfg(feature = "IoCropSharp")]
             IoIcon::IoCropSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9651,7 +9637,7 @@ impl Data {
             }
             #[cfg(feature = "IoCube")]
             IoIcon::IoCube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9668,7 +9654,7 @@ impl Data {
             }
             #[cfg(feature = "IoCubeOutline")]
             IoIcon::IoCubeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9685,7 +9671,7 @@ impl Data {
             }
             #[cfg(feature = "IoCubeSharp")]
             IoIcon::IoCubeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9702,7 +9688,7 @@ impl Data {
             }
             #[cfg(feature = "IoCut")]
             IoIcon::IoCut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9719,7 +9705,7 @@ impl Data {
             }
             #[cfg(feature = "IoCutOutline")]
             IoIcon::IoCutOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9736,7 +9722,7 @@ impl Data {
             }
             #[cfg(feature = "IoCutSharp")]
             IoIcon::IoCutSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9753,7 +9739,7 @@ impl Data {
             }
             #[cfg(feature = "IoDesktop")]
             IoIcon::IoDesktop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9770,7 +9756,7 @@ impl Data {
             }
             #[cfg(feature = "IoDesktopOutline")]
             IoIcon::IoDesktopOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9787,7 +9773,7 @@ impl Data {
             }
             #[cfg(feature = "IoDesktopSharp")]
             IoIcon::IoDesktopSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9804,7 +9790,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiamond")]
             IoIcon::IoDiamond => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9821,7 +9807,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiamondOutline")]
             IoIcon::IoDiamondOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9838,7 +9824,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiamondSharp")]
             IoIcon::IoDiamondSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9855,7 +9841,7 @@ impl Data {
             }
             #[cfg(feature = "IoDice")]
             IoIcon::IoDice => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9872,7 +9858,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiceOutline")]
             IoIcon::IoDiceOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9889,7 +9875,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiceSharp")]
             IoIcon::IoDiceSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9906,7 +9892,7 @@ impl Data {
             }
             #[cfg(feature = "IoDisc")]
             IoIcon::IoDisc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9923,7 +9909,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiscOutline")]
             IoIcon::IoDiscOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9940,7 +9926,7 @@ impl Data {
             }
             #[cfg(feature = "IoDiscSharp")]
             IoIcon::IoDiscSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9957,7 +9943,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocument")]
             IoIcon::IoDocument => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9974,7 +9960,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentAttach")]
             IoIcon::IoDocumentAttach => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9991,7 +9977,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentAttachOutline")]
             IoIcon::IoDocumentAttachOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10008,7 +9994,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentAttachSharp")]
             IoIcon::IoDocumentAttachSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10025,7 +10011,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentLock")]
             IoIcon::IoDocumentLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10042,7 +10028,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentLockOutline")]
             IoIcon::IoDocumentLockOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10059,7 +10045,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentLockSharp")]
             IoIcon::IoDocumentLockSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10076,7 +10062,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentOutline")]
             IoIcon::IoDocumentOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10093,7 +10079,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentSharp")]
             IoIcon::IoDocumentSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10110,7 +10096,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentText")]
             IoIcon::IoDocumentText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10127,7 +10113,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentTextOutline")]
             IoIcon::IoDocumentTextOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10144,7 +10130,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentTextSharp")]
             IoIcon::IoDocumentTextSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10161,7 +10147,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocuments")]
             IoIcon::IoDocuments => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10178,7 +10164,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentsOutline")]
             IoIcon::IoDocumentsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10195,7 +10181,7 @@ impl Data {
             }
             #[cfg(feature = "IoDocumentsSharp")]
             IoIcon::IoDocumentsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10212,7 +10198,7 @@ impl Data {
             }
             #[cfg(feature = "IoDownload")]
             IoIcon::IoDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10229,7 +10215,7 @@ impl Data {
             }
             #[cfg(feature = "IoDownloadOutline")]
             IoIcon::IoDownloadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10246,7 +10232,7 @@ impl Data {
             }
             #[cfg(feature = "IoDownloadSharp")]
             IoIcon::IoDownloadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10263,7 +10249,7 @@ impl Data {
             }
             #[cfg(feature = "IoDuplicate")]
             IoIcon::IoDuplicate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10280,7 +10266,7 @@ impl Data {
             }
             #[cfg(feature = "IoDuplicateOutline")]
             IoIcon::IoDuplicateOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10297,7 +10283,7 @@ impl Data {
             }
             #[cfg(feature = "IoDuplicateSharp")]
             IoIcon::IoDuplicateSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10314,7 +10300,7 @@ impl Data {
             }
             #[cfg(feature = "IoEar")]
             IoIcon::IoEar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10331,7 +10317,7 @@ impl Data {
             }
             #[cfg(feature = "IoEarOutline")]
             IoIcon::IoEarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10348,7 +10334,7 @@ impl Data {
             }
             #[cfg(feature = "IoEarSharp")]
             IoIcon::IoEarSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10365,7 +10351,7 @@ impl Data {
             }
             #[cfg(feature = "IoEarth")]
             IoIcon::IoEarth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10382,7 +10368,7 @@ impl Data {
             }
             #[cfg(feature = "IoEarthOutline")]
             IoIcon::IoEarthOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10399,7 +10385,7 @@ impl Data {
             }
             #[cfg(feature = "IoEarthSharp")]
             IoIcon::IoEarthSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10416,7 +10402,7 @@ impl Data {
             }
             #[cfg(feature = "IoEasel")]
             IoIcon::IoEasel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10433,7 +10419,7 @@ impl Data {
             }
             #[cfg(feature = "IoEaselOutline")]
             IoIcon::IoEaselOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10450,7 +10436,7 @@ impl Data {
             }
             #[cfg(feature = "IoEaselSharp")]
             IoIcon::IoEaselSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10467,7 +10453,7 @@ impl Data {
             }
             #[cfg(feature = "IoEgg")]
             IoIcon::IoEgg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10484,7 +10470,7 @@ impl Data {
             }
             #[cfg(feature = "IoEggOutline")]
             IoIcon::IoEggOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10501,7 +10487,7 @@ impl Data {
             }
             #[cfg(feature = "IoEggSharp")]
             IoIcon::IoEggSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10518,7 +10504,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipse")]
             IoIcon::IoEllipse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10535,7 +10521,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipseOutline")]
             IoIcon::IoEllipseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10552,7 +10538,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipseSharp")]
             IoIcon::IoEllipseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10569,7 +10555,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisHorizontal")]
             IoIcon::IoEllipsisHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10586,7 +10572,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisHorizontalCircle")]
             IoIcon::IoEllipsisHorizontalCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10603,7 +10589,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisHorizontalCircleOutline")]
             IoIcon::IoEllipsisHorizontalCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10620,7 +10606,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisHorizontalCircleSharp")]
             IoIcon::IoEllipsisHorizontalCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10637,7 +10623,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisHorizontalOutline")]
             IoIcon::IoEllipsisHorizontalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10654,7 +10640,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisHorizontalSharp")]
             IoIcon::IoEllipsisHorizontalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10671,7 +10657,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisVertical")]
             IoIcon::IoEllipsisVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10688,7 +10674,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisVerticalCircle")]
             IoIcon::IoEllipsisVerticalCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10705,7 +10691,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisVerticalCircleOutline")]
             IoIcon::IoEllipsisVerticalCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10722,7 +10708,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisVerticalCircleSharp")]
             IoIcon::IoEllipsisVerticalCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10739,7 +10725,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisVerticalOutline")]
             IoIcon::IoEllipsisVerticalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10756,7 +10742,7 @@ impl Data {
             }
             #[cfg(feature = "IoEllipsisVerticalSharp")]
             IoIcon::IoEllipsisVerticalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10773,7 +10759,7 @@ impl Data {
             }
             #[cfg(feature = "IoEnter")]
             IoIcon::IoEnter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10790,7 +10776,7 @@ impl Data {
             }
             #[cfg(feature = "IoEnterOutline")]
             IoIcon::IoEnterOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10807,7 +10793,7 @@ impl Data {
             }
             #[cfg(feature = "IoEnterSharp")]
             IoIcon::IoEnterSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10824,7 +10810,7 @@ impl Data {
             }
             #[cfg(feature = "IoExit")]
             IoIcon::IoExit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10841,7 +10827,7 @@ impl Data {
             }
             #[cfg(feature = "IoExitOutline")]
             IoIcon::IoExitOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10858,7 +10844,7 @@ impl Data {
             }
             #[cfg(feature = "IoExitSharp")]
             IoIcon::IoExitSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10875,7 +10861,7 @@ impl Data {
             }
             #[cfg(feature = "IoExpand")]
             IoIcon::IoExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10892,7 +10878,7 @@ impl Data {
             }
             #[cfg(feature = "IoExpandOutline")]
             IoIcon::IoExpandOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10909,7 +10895,7 @@ impl Data {
             }
             #[cfg(feature = "IoExpandSharp")]
             IoIcon::IoExpandSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10926,7 +10912,7 @@ impl Data {
             }
             #[cfg(feature = "IoExtensionPuzzle")]
             IoIcon::IoExtensionPuzzle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10943,7 +10929,7 @@ impl Data {
             }
             #[cfg(feature = "IoExtensionPuzzleOutline")]
             IoIcon::IoExtensionPuzzleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10960,7 +10946,7 @@ impl Data {
             }
             #[cfg(feature = "IoExtensionPuzzleSharp")]
             IoIcon::IoExtensionPuzzleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10977,7 +10963,7 @@ impl Data {
             }
             #[cfg(feature = "IoEye")]
             IoIcon::IoEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10994,7 +10980,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyeOff")]
             IoIcon::IoEyeOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11011,7 +10997,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyeOffOutline")]
             IoIcon::IoEyeOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11028,7 +11014,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyeOffSharp")]
             IoIcon::IoEyeOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11045,7 +11031,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyeOutline")]
             IoIcon::IoEyeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11062,7 +11048,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyeSharp")]
             IoIcon::IoEyeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11079,7 +11065,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyedrop")]
             IoIcon::IoEyedrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11096,7 +11082,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyedropOutline")]
             IoIcon::IoEyedropOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11113,7 +11099,7 @@ impl Data {
             }
             #[cfg(feature = "IoEyedropSharp")]
             IoIcon::IoEyedropSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11130,7 +11116,7 @@ impl Data {
             }
             #[cfg(feature = "IoFastFood")]
             IoIcon::IoFastFood => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11147,7 +11133,7 @@ impl Data {
             }
             #[cfg(feature = "IoFastFoodOutline")]
             IoIcon::IoFastFoodOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11164,7 +11150,7 @@ impl Data {
             }
             #[cfg(feature = "IoFastFoodSharp")]
             IoIcon::IoFastFoodSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11181,7 +11167,7 @@ impl Data {
             }
             #[cfg(feature = "IoFemale")]
             IoIcon::IoFemale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11198,7 +11184,7 @@ impl Data {
             }
             #[cfg(feature = "IoFemaleOutline")]
             IoIcon::IoFemaleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11215,7 +11201,7 @@ impl Data {
             }
             #[cfg(feature = "IoFemaleSharp")]
             IoIcon::IoFemaleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11232,7 +11218,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTray")]
             IoIcon::IoFileTray => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11249,7 +11235,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayFull")]
             IoIcon::IoFileTrayFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11266,7 +11252,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayFullOutline")]
             IoIcon::IoFileTrayFullOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11283,7 +11269,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayFullSharp")]
             IoIcon::IoFileTrayFullSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11300,7 +11286,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayOutline")]
             IoIcon::IoFileTrayOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11317,7 +11303,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTraySharp")]
             IoIcon::IoFileTraySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11334,7 +11320,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayStacked")]
             IoIcon::IoFileTrayStacked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11351,7 +11337,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayStackedOutline")]
             IoIcon::IoFileTrayStackedOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11368,7 +11354,7 @@ impl Data {
             }
             #[cfg(feature = "IoFileTrayStackedSharp")]
             IoIcon::IoFileTrayStackedSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11385,7 +11371,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilm")]
             IoIcon::IoFilm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11402,7 +11388,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilmOutline")]
             IoIcon::IoFilmOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11419,7 +11405,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilmSharp")]
             IoIcon::IoFilmSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11436,7 +11422,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilter")]
             IoIcon::IoFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11453,7 +11439,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilterCircle")]
             IoIcon::IoFilterCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11470,7 +11456,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilterCircleOutline")]
             IoIcon::IoFilterCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11487,7 +11473,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilterCircleSharp")]
             IoIcon::IoFilterCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11504,7 +11490,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilterOutline")]
             IoIcon::IoFilterOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11521,7 +11507,7 @@ impl Data {
             }
             #[cfg(feature = "IoFilterSharp")]
             IoIcon::IoFilterSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11538,7 +11524,7 @@ impl Data {
             }
             #[cfg(feature = "IoFingerPrint")]
             IoIcon::IoFingerPrint => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11555,7 +11541,7 @@ impl Data {
             }
             #[cfg(feature = "IoFingerPrintOutline")]
             IoIcon::IoFingerPrintOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11572,7 +11558,7 @@ impl Data {
             }
             #[cfg(feature = "IoFingerPrintSharp")]
             IoIcon::IoFingerPrintSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11589,7 +11575,7 @@ impl Data {
             }
             #[cfg(feature = "IoFish")]
             IoIcon::IoFish => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11606,7 +11592,7 @@ impl Data {
             }
             #[cfg(feature = "IoFishOutline")]
             IoIcon::IoFishOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11623,7 +11609,7 @@ impl Data {
             }
             #[cfg(feature = "IoFishSharp")]
             IoIcon::IoFishSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11640,7 +11626,7 @@ impl Data {
             }
             #[cfg(feature = "IoFitness")]
             IoIcon::IoFitness => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11657,7 +11643,7 @@ impl Data {
             }
             #[cfg(feature = "IoFitnessOutline")]
             IoIcon::IoFitnessOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11674,7 +11660,7 @@ impl Data {
             }
             #[cfg(feature = "IoFitnessSharp")]
             IoIcon::IoFitnessSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11691,7 +11677,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlag")]
             IoIcon::IoFlag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11708,7 +11694,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlagOutline")]
             IoIcon::IoFlagOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11725,7 +11711,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlagSharp")]
             IoIcon::IoFlagSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11742,7 +11728,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlame")]
             IoIcon::IoFlame => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11759,7 +11745,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlameOutline")]
             IoIcon::IoFlameOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11776,7 +11762,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlameSharp")]
             IoIcon::IoFlameSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11793,7 +11779,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlash")]
             IoIcon::IoFlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11810,7 +11796,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashOff")]
             IoIcon::IoFlashOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11827,7 +11813,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashOffOutline")]
             IoIcon::IoFlashOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11844,7 +11830,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashOffSharp")]
             IoIcon::IoFlashOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11861,7 +11847,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashOutline")]
             IoIcon::IoFlashOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11878,7 +11864,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashSharp")]
             IoIcon::IoFlashSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11895,7 +11881,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashlight")]
             IoIcon::IoFlashlight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11912,7 +11898,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashlightOutline")]
             IoIcon::IoFlashlightOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11929,7 +11915,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlashlightSharp")]
             IoIcon::IoFlashlightSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11946,7 +11932,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlask")]
             IoIcon::IoFlask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11963,7 +11949,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlaskOutline")]
             IoIcon::IoFlaskOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11980,7 +11966,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlaskSharp")]
             IoIcon::IoFlaskSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11997,7 +11983,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlower")]
             IoIcon::IoFlower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12014,7 +12000,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlowerOutline")]
             IoIcon::IoFlowerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12031,7 +12017,7 @@ impl Data {
             }
             #[cfg(feature = "IoFlowerSharp")]
             IoIcon::IoFlowerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12048,7 +12034,7 @@ impl Data {
             }
             #[cfg(feature = "IoFolder")]
             IoIcon::IoFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12065,7 +12051,7 @@ impl Data {
             }
             #[cfg(feature = "IoFolderOpen")]
             IoIcon::IoFolderOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12082,7 +12068,7 @@ impl Data {
             }
             #[cfg(feature = "IoFolderOpenOutline")]
             IoIcon::IoFolderOpenOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12099,7 +12085,7 @@ impl Data {
             }
             #[cfg(feature = "IoFolderOpenSharp")]
             IoIcon::IoFolderOpenSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12116,7 +12102,7 @@ impl Data {
             }
             #[cfg(feature = "IoFolderOutline")]
             IoIcon::IoFolderOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12133,7 +12119,7 @@ impl Data {
             }
             #[cfg(feature = "IoFolderSharp")]
             IoIcon::IoFolderSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12150,7 +12136,7 @@ impl Data {
             }
             #[cfg(feature = "IoFootball")]
             IoIcon::IoFootball => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12167,7 +12153,7 @@ impl Data {
             }
             #[cfg(feature = "IoFootballOutline")]
             IoIcon::IoFootballOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12184,7 +12170,7 @@ impl Data {
             }
             #[cfg(feature = "IoFootballSharp")]
             IoIcon::IoFootballSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12201,7 +12187,7 @@ impl Data {
             }
             #[cfg(feature = "IoFootsteps")]
             IoIcon::IoFootsteps => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12218,7 +12204,7 @@ impl Data {
             }
             #[cfg(feature = "IoFootstepsOutline")]
             IoIcon::IoFootstepsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12235,7 +12221,7 @@ impl Data {
             }
             #[cfg(feature = "IoFootstepsSharp")]
             IoIcon::IoFootstepsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12252,7 +12238,7 @@ impl Data {
             }
             #[cfg(feature = "IoFunnel")]
             IoIcon::IoFunnel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12269,7 +12255,7 @@ impl Data {
             }
             #[cfg(feature = "IoFunnelOutline")]
             IoIcon::IoFunnelOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12286,7 +12272,7 @@ impl Data {
             }
             #[cfg(feature = "IoFunnelSharp")]
             IoIcon::IoFunnelSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12303,7 +12289,7 @@ impl Data {
             }
             #[cfg(feature = "IoGameController")]
             IoIcon::IoGameController => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12320,7 +12306,7 @@ impl Data {
             }
             #[cfg(feature = "IoGameControllerOutline")]
             IoIcon::IoGameControllerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12337,7 +12323,7 @@ impl Data {
             }
             #[cfg(feature = "IoGameControllerSharp")]
             IoIcon::IoGameControllerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12354,7 +12340,7 @@ impl Data {
             }
             #[cfg(feature = "IoGift")]
             IoIcon::IoGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12371,7 +12357,7 @@ impl Data {
             }
             #[cfg(feature = "IoGiftOutline")]
             IoIcon::IoGiftOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12388,7 +12374,7 @@ impl Data {
             }
             #[cfg(feature = "IoGiftSharp")]
             IoIcon::IoGiftSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12405,7 +12391,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitBranch")]
             IoIcon::IoGitBranch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12422,7 +12408,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitBranchOutline")]
             IoIcon::IoGitBranchOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12439,7 +12425,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitBranchSharp")]
             IoIcon::IoGitBranchSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12456,7 +12442,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitCommit")]
             IoIcon::IoGitCommit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12473,7 +12459,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitCommitOutline")]
             IoIcon::IoGitCommitOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12490,7 +12476,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitCommitSharp")]
             IoIcon::IoGitCommitSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12507,7 +12493,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitCompare")]
             IoIcon::IoGitCompare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12524,7 +12510,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitCompareOutline")]
             IoIcon::IoGitCompareOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12541,7 +12527,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitCompareSharp")]
             IoIcon::IoGitCompareSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12558,7 +12544,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitMerge")]
             IoIcon::IoGitMerge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12575,7 +12561,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitMergeOutline")]
             IoIcon::IoGitMergeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12592,7 +12578,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitMergeSharp")]
             IoIcon::IoGitMergeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12609,7 +12595,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitNetwork")]
             IoIcon::IoGitNetwork => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12626,7 +12612,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitNetworkOutline")]
             IoIcon::IoGitNetworkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12643,7 +12629,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitNetworkSharp")]
             IoIcon::IoGitNetworkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12660,7 +12646,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitPullRequest")]
             IoIcon::IoGitPullRequest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12677,7 +12663,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitPullRequestOutline")]
             IoIcon::IoGitPullRequestOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12694,7 +12680,7 @@ impl Data {
             }
             #[cfg(feature = "IoGitPullRequestSharp")]
             IoIcon::IoGitPullRequestSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12711,7 +12697,7 @@ impl Data {
             }
             #[cfg(feature = "IoGlasses")]
             IoIcon::IoGlasses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12728,7 +12714,7 @@ impl Data {
             }
             #[cfg(feature = "IoGlassesOutline")]
             IoIcon::IoGlassesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12745,7 +12731,7 @@ impl Data {
             }
             #[cfg(feature = "IoGlassesSharp")]
             IoIcon::IoGlassesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12762,7 +12748,7 @@ impl Data {
             }
             #[cfg(feature = "IoGlobe")]
             IoIcon::IoGlobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12779,7 +12765,7 @@ impl Data {
             }
             #[cfg(feature = "IoGlobeOutline")]
             IoIcon::IoGlobeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12796,7 +12782,7 @@ impl Data {
             }
             #[cfg(feature = "IoGlobeSharp")]
             IoIcon::IoGlobeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12813,7 +12799,7 @@ impl Data {
             }
             #[cfg(feature = "IoGolf")]
             IoIcon::IoGolf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12830,7 +12816,7 @@ impl Data {
             }
             #[cfg(feature = "IoGolfOutline")]
             IoIcon::IoGolfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12847,7 +12833,7 @@ impl Data {
             }
             #[cfg(feature = "IoGolfSharp")]
             IoIcon::IoGolfSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12864,7 +12850,7 @@ impl Data {
             }
             #[cfg(feature = "IoGrid")]
             IoIcon::IoGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12881,7 +12867,7 @@ impl Data {
             }
             #[cfg(feature = "IoGridOutline")]
             IoIcon::IoGridOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12898,7 +12884,7 @@ impl Data {
             }
             #[cfg(feature = "IoGridSharp")]
             IoIcon::IoGridSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12915,7 +12901,7 @@ impl Data {
             }
             #[cfg(feature = "IoHammer")]
             IoIcon::IoHammer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12932,7 +12918,7 @@ impl Data {
             }
             #[cfg(feature = "IoHammerOutline")]
             IoIcon::IoHammerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12949,7 +12935,7 @@ impl Data {
             }
             #[cfg(feature = "IoHammerSharp")]
             IoIcon::IoHammerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12966,7 +12952,7 @@ impl Data {
             }
             #[cfg(feature = "IoHandLeft")]
             IoIcon::IoHandLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12983,7 +12969,7 @@ impl Data {
             }
             #[cfg(feature = "IoHandLeftOutline")]
             IoIcon::IoHandLeftOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13000,7 +12986,7 @@ impl Data {
             }
             #[cfg(feature = "IoHandLeftSharp")]
             IoIcon::IoHandLeftSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13017,7 +13003,7 @@ impl Data {
             }
             #[cfg(feature = "IoHandRight")]
             IoIcon::IoHandRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13034,7 +13020,7 @@ impl Data {
             }
             #[cfg(feature = "IoHandRightOutline")]
             IoIcon::IoHandRightOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13051,7 +13037,7 @@ impl Data {
             }
             #[cfg(feature = "IoHandRightSharp")]
             IoIcon::IoHandRightSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13068,7 +13054,7 @@ impl Data {
             }
             #[cfg(feature = "IoHappy")]
             IoIcon::IoHappy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13085,7 +13071,7 @@ impl Data {
             }
             #[cfg(feature = "IoHappyOutline")]
             IoIcon::IoHappyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13102,7 +13088,7 @@ impl Data {
             }
             #[cfg(feature = "IoHappySharp")]
             IoIcon::IoHappySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13119,7 +13105,7 @@ impl Data {
             }
             #[cfg(feature = "IoHardwareChip")]
             IoIcon::IoHardwareChip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13136,7 +13122,7 @@ impl Data {
             }
             #[cfg(feature = "IoHardwareChipOutline")]
             IoIcon::IoHardwareChipOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13153,7 +13139,7 @@ impl Data {
             }
             #[cfg(feature = "IoHardwareChipSharp")]
             IoIcon::IoHardwareChipSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13170,7 +13156,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeadset")]
             IoIcon::IoHeadset => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13187,7 +13173,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeadsetOutline")]
             IoIcon::IoHeadsetOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13204,7 +13190,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeadsetSharp")]
             IoIcon::IoHeadsetSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13221,7 +13207,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeart")]
             IoIcon::IoHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13238,7 +13224,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartCircle")]
             IoIcon::IoHeartCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13255,7 +13241,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartCircleOutline")]
             IoIcon::IoHeartCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13272,7 +13258,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartCircleSharp")]
             IoIcon::IoHeartCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13289,7 +13275,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartDislike")]
             IoIcon::IoHeartDislike => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13306,7 +13292,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartDislikeCircle")]
             IoIcon::IoHeartDislikeCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13323,7 +13309,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartDislikeCircleOutline")]
             IoIcon::IoHeartDislikeCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13340,7 +13326,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartDislikeCircleSharp")]
             IoIcon::IoHeartDislikeCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13357,7 +13343,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartDislikeOutline")]
             IoIcon::IoHeartDislikeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13374,7 +13360,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartDislikeSharp")]
             IoIcon::IoHeartDislikeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13391,7 +13377,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartHalf")]
             IoIcon::IoHeartHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13408,7 +13394,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartHalfOutline")]
             IoIcon::IoHeartHalfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13425,7 +13411,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartHalfSharp")]
             IoIcon::IoHeartHalfSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13442,7 +13428,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartOutline")]
             IoIcon::IoHeartOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13459,7 +13445,7 @@ impl Data {
             }
             #[cfg(feature = "IoHeartSharp")]
             IoIcon::IoHeartSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13476,7 +13462,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelp")]
             IoIcon::IoHelp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13493,7 +13479,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpBuoy")]
             IoIcon::IoHelpBuoy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13510,7 +13496,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpBuoyOutline")]
             IoIcon::IoHelpBuoyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13527,7 +13513,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpBuoySharp")]
             IoIcon::IoHelpBuoySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13544,7 +13530,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpCircle")]
             IoIcon::IoHelpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13561,7 +13547,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpCircleOutline")]
             IoIcon::IoHelpCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13578,7 +13564,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpCircleSharp")]
             IoIcon::IoHelpCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13595,7 +13581,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpOutline")]
             IoIcon::IoHelpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13612,7 +13598,7 @@ impl Data {
             }
             #[cfg(feature = "IoHelpSharp")]
             IoIcon::IoHelpSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13629,7 +13615,7 @@ impl Data {
             }
             #[cfg(feature = "IoHome")]
             IoIcon::IoHome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13646,7 +13632,7 @@ impl Data {
             }
             #[cfg(feature = "IoHomeOutline")]
             IoIcon::IoHomeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13663,7 +13649,7 @@ impl Data {
             }
             #[cfg(feature = "IoHomeSharp")]
             IoIcon::IoHomeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13680,7 +13666,7 @@ impl Data {
             }
             #[cfg(feature = "IoHourglass")]
             IoIcon::IoHourglass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13697,7 +13683,7 @@ impl Data {
             }
             #[cfg(feature = "IoHourglassOutline")]
             IoIcon::IoHourglassOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13714,7 +13700,7 @@ impl Data {
             }
             #[cfg(feature = "IoHourglassSharp")]
             IoIcon::IoHourglassSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13731,7 +13717,7 @@ impl Data {
             }
             #[cfg(feature = "IoIceCream")]
             IoIcon::IoIceCream => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13748,7 +13734,7 @@ impl Data {
             }
             #[cfg(feature = "IoIceCreamOutline")]
             IoIcon::IoIceCreamOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13765,7 +13751,7 @@ impl Data {
             }
             #[cfg(feature = "IoIceCreamSharp")]
             IoIcon::IoIceCreamSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13782,7 +13768,7 @@ impl Data {
             }
             #[cfg(feature = "IoIdCard")]
             IoIcon::IoIdCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13799,7 +13785,7 @@ impl Data {
             }
             #[cfg(feature = "IoIdCardOutline")]
             IoIcon::IoIdCardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13816,7 +13802,7 @@ impl Data {
             }
             #[cfg(feature = "IoIdCardSharp")]
             IoIcon::IoIdCardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13833,7 +13819,7 @@ impl Data {
             }
             #[cfg(feature = "IoImage")]
             IoIcon::IoImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13850,7 +13836,7 @@ impl Data {
             }
             #[cfg(feature = "IoImageOutline")]
             IoIcon::IoImageOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13867,7 +13853,7 @@ impl Data {
             }
             #[cfg(feature = "IoImageSharp")]
             IoIcon::IoImageSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13884,7 +13870,7 @@ impl Data {
             }
             #[cfg(feature = "IoImages")]
             IoIcon::IoImages => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13901,7 +13887,7 @@ impl Data {
             }
             #[cfg(feature = "IoImagesOutline")]
             IoIcon::IoImagesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13918,7 +13904,7 @@ impl Data {
             }
             #[cfg(feature = "IoImagesSharp")]
             IoIcon::IoImagesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13935,7 +13921,7 @@ impl Data {
             }
             #[cfg(feature = "IoInfinite")]
             IoIcon::IoInfinite => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13952,7 +13938,7 @@ impl Data {
             }
             #[cfg(feature = "IoInfiniteOutline")]
             IoIcon::IoInfiniteOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13969,7 +13955,7 @@ impl Data {
             }
             #[cfg(feature = "IoInfiniteSharp")]
             IoIcon::IoInfiniteSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13986,7 +13972,7 @@ impl Data {
             }
             #[cfg(feature = "IoInformation")]
             IoIcon::IoInformation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14003,7 +13989,7 @@ impl Data {
             }
             #[cfg(feature = "IoInformationCircle")]
             IoIcon::IoInformationCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14020,7 +14006,7 @@ impl Data {
             }
             #[cfg(feature = "IoInformationCircleOutline")]
             IoIcon::IoInformationCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14037,7 +14023,7 @@ impl Data {
             }
             #[cfg(feature = "IoInformationCircleSharp")]
             IoIcon::IoInformationCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14054,7 +14040,7 @@ impl Data {
             }
             #[cfg(feature = "IoInformationOutline")]
             IoIcon::IoInformationOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14071,7 +14057,7 @@ impl Data {
             }
             #[cfg(feature = "IoInformationSharp")]
             IoIcon::IoInformationSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14088,7 +14074,7 @@ impl Data {
             }
             #[cfg(feature = "IoInvertMode")]
             IoIcon::IoInvertMode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14105,7 +14091,7 @@ impl Data {
             }
             #[cfg(feature = "IoInvertModeOutline")]
             IoIcon::IoInvertModeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14122,7 +14108,7 @@ impl Data {
             }
             #[cfg(feature = "IoInvertModeSharp")]
             IoIcon::IoInvertModeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14139,7 +14125,7 @@ impl Data {
             }
             #[cfg(feature = "IoJournal")]
             IoIcon::IoJournal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14156,7 +14142,7 @@ impl Data {
             }
             #[cfg(feature = "IoJournalOutline")]
             IoIcon::IoJournalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14173,7 +14159,7 @@ impl Data {
             }
             #[cfg(feature = "IoJournalSharp")]
             IoIcon::IoJournalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14190,7 +14176,7 @@ impl Data {
             }
             #[cfg(feature = "IoKey")]
             IoIcon::IoKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14207,7 +14193,7 @@ impl Data {
             }
             #[cfg(feature = "IoKeyOutline")]
             IoIcon::IoKeyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14224,7 +14210,7 @@ impl Data {
             }
             #[cfg(feature = "IoKeySharp")]
             IoIcon::IoKeySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14241,7 +14227,7 @@ impl Data {
             }
             #[cfg(feature = "IoKeypad")]
             IoIcon::IoKeypad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14258,7 +14244,7 @@ impl Data {
             }
             #[cfg(feature = "IoKeypadOutline")]
             IoIcon::IoKeypadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14275,7 +14261,7 @@ impl Data {
             }
             #[cfg(feature = "IoKeypadSharp")]
             IoIcon::IoKeypadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14292,7 +14278,7 @@ impl Data {
             }
             #[cfg(feature = "IoLanguage")]
             IoIcon::IoLanguage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14309,7 +14295,7 @@ impl Data {
             }
             #[cfg(feature = "IoLanguageOutline")]
             IoIcon::IoLanguageOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14326,7 +14312,7 @@ impl Data {
             }
             #[cfg(feature = "IoLanguageSharp")]
             IoIcon::IoLanguageSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14343,7 +14329,7 @@ impl Data {
             }
             #[cfg(feature = "IoLaptop")]
             IoIcon::IoLaptop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14360,7 +14346,7 @@ impl Data {
             }
             #[cfg(feature = "IoLaptopOutline")]
             IoIcon::IoLaptopOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14377,7 +14363,7 @@ impl Data {
             }
             #[cfg(feature = "IoLaptopSharp")]
             IoIcon::IoLaptopSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14394,7 +14380,7 @@ impl Data {
             }
             #[cfg(feature = "IoLayers")]
             IoIcon::IoLayers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14411,7 +14397,7 @@ impl Data {
             }
             #[cfg(feature = "IoLayersOutline")]
             IoIcon::IoLayersOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14428,7 +14414,7 @@ impl Data {
             }
             #[cfg(feature = "IoLayersSharp")]
             IoIcon::IoLayersSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14445,7 +14431,7 @@ impl Data {
             }
             #[cfg(feature = "IoLeaf")]
             IoIcon::IoLeaf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14462,7 +14448,7 @@ impl Data {
             }
             #[cfg(feature = "IoLeafOutline")]
             IoIcon::IoLeafOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14479,7 +14465,7 @@ impl Data {
             }
             #[cfg(feature = "IoLeafSharp")]
             IoIcon::IoLeafSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14496,7 +14482,7 @@ impl Data {
             }
             #[cfg(feature = "IoLibrary")]
             IoIcon::IoLibrary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14513,7 +14499,7 @@ impl Data {
             }
             #[cfg(feature = "IoLibraryOutline")]
             IoIcon::IoLibraryOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14530,7 +14516,7 @@ impl Data {
             }
             #[cfg(feature = "IoLibrarySharp")]
             IoIcon::IoLibrarySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14547,7 +14533,7 @@ impl Data {
             }
             #[cfg(feature = "IoLink")]
             IoIcon::IoLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14564,7 +14550,7 @@ impl Data {
             }
             #[cfg(feature = "IoLinkOutline")]
             IoIcon::IoLinkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14581,7 +14567,7 @@ impl Data {
             }
             #[cfg(feature = "IoLinkSharp")]
             IoIcon::IoLinkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14598,7 +14584,7 @@ impl Data {
             }
             #[cfg(feature = "IoList")]
             IoIcon::IoList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14615,7 +14601,7 @@ impl Data {
             }
             #[cfg(feature = "IoListCircle")]
             IoIcon::IoListCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14632,7 +14618,7 @@ impl Data {
             }
             #[cfg(feature = "IoListCircleOutline")]
             IoIcon::IoListCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14649,7 +14635,7 @@ impl Data {
             }
             #[cfg(feature = "IoListCircleSharp")]
             IoIcon::IoListCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14666,7 +14652,7 @@ impl Data {
             }
             #[cfg(feature = "IoListOutline")]
             IoIcon::IoListOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14683,7 +14669,7 @@ impl Data {
             }
             #[cfg(feature = "IoListSharp")]
             IoIcon::IoListSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14700,7 +14686,7 @@ impl Data {
             }
             #[cfg(feature = "IoLocate")]
             IoIcon::IoLocate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14717,7 +14703,7 @@ impl Data {
             }
             #[cfg(feature = "IoLocateOutline")]
             IoIcon::IoLocateOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14734,7 +14720,7 @@ impl Data {
             }
             #[cfg(feature = "IoLocateSharp")]
             IoIcon::IoLocateSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14751,7 +14737,7 @@ impl Data {
             }
             #[cfg(feature = "IoLocation")]
             IoIcon::IoLocation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14768,7 +14754,7 @@ impl Data {
             }
             #[cfg(feature = "IoLocationOutline")]
             IoIcon::IoLocationOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14785,7 +14771,7 @@ impl Data {
             }
             #[cfg(feature = "IoLocationSharp")]
             IoIcon::IoLocationSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14802,7 +14788,7 @@ impl Data {
             }
             #[cfg(feature = "IoLockClosed")]
             IoIcon::IoLockClosed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14819,7 +14805,7 @@ impl Data {
             }
             #[cfg(feature = "IoLockClosedOutline")]
             IoIcon::IoLockClosedOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14836,7 +14822,7 @@ impl Data {
             }
             #[cfg(feature = "IoLockClosedSharp")]
             IoIcon::IoLockClosedSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14853,7 +14839,7 @@ impl Data {
             }
             #[cfg(feature = "IoLockOpen")]
             IoIcon::IoLockOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14870,7 +14856,7 @@ impl Data {
             }
             #[cfg(feature = "IoLockOpenOutline")]
             IoIcon::IoLockOpenOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14887,7 +14873,7 @@ impl Data {
             }
             #[cfg(feature = "IoLockOpenSharp")]
             IoIcon::IoLockOpenSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14904,7 +14890,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogIn")]
             IoIcon::IoLogIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14921,7 +14907,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogInOutline")]
             IoIcon::IoLogInOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14938,7 +14924,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogInSharp")]
             IoIcon::IoLogInSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14955,7 +14941,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogOut")]
             IoIcon::IoLogOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14972,7 +14958,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogOutOutline")]
             IoIcon::IoLogOutOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14989,7 +14975,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogOutSharp")]
             IoIcon::IoLogOutSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15006,7 +14992,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAlipay")]
             IoIcon::IoLogoAlipay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15023,7 +15009,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAmazon")]
             IoIcon::IoLogoAmazon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15040,7 +15026,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAmplify")]
             IoIcon::IoLogoAmplify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15057,7 +15043,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAndroid")]
             IoIcon::IoLogoAndroid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15074,7 +15060,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAngular")]
             IoIcon::IoLogoAngular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15091,7 +15077,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoApple")]
             IoIcon::IoLogoApple => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15108,7 +15094,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAppleAppstore")]
             IoIcon::IoLogoAppleAppstore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15125,7 +15111,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoAppleAr")]
             IoIcon::IoLogoAppleAr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15142,7 +15128,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoBehance")]
             IoIcon::IoLogoBehance => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15159,7 +15145,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoBitbucket")]
             IoIcon::IoLogoBitbucket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15176,7 +15162,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoBitcoin")]
             IoIcon::IoLogoBitcoin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15193,7 +15179,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoBuffer")]
             IoIcon::IoLogoBuffer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15210,7 +15196,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoCapacitor")]
             IoIcon::IoLogoCapacitor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15227,7 +15213,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoChrome")]
             IoIcon::IoLogoChrome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15244,7 +15230,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoClosedCaptioning")]
             IoIcon::IoLogoClosedCaptioning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15261,7 +15247,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoCodepen")]
             IoIcon::IoLogoCodepen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15278,7 +15264,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoCss3")]
             IoIcon::IoLogoCss3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15295,7 +15281,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoDesignernews")]
             IoIcon::IoLogoDesignernews => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15312,7 +15298,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoDeviantart")]
             IoIcon::IoLogoDeviantart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15329,7 +15315,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoDiscord")]
             IoIcon::IoLogoDiscord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15346,7 +15332,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoDocker")]
             IoIcon::IoLogoDocker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15363,7 +15349,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoDribbble")]
             IoIcon::IoLogoDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15380,7 +15366,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoDropbox")]
             IoIcon::IoLogoDropbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15397,7 +15383,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoEdge")]
             IoIcon::IoLogoEdge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15414,7 +15400,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoElectron")]
             IoIcon::IoLogoElectron => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15431,7 +15417,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoEuro")]
             IoIcon::IoLogoEuro => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15448,7 +15434,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoFacebook")]
             IoIcon::IoLogoFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15465,7 +15451,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoFigma")]
             IoIcon::IoLogoFigma => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15482,7 +15468,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoFirebase")]
             IoIcon::IoLogoFirebase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15499,7 +15485,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoFirefox")]
             IoIcon::IoLogoFirefox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15516,7 +15502,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoFlickr")]
             IoIcon::IoLogoFlickr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15533,7 +15519,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoFoursquare")]
             IoIcon::IoLogoFoursquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15550,7 +15536,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoGithub")]
             IoIcon::IoLogoGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15567,7 +15553,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoGitlab")]
             IoIcon::IoLogoGitlab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15584,7 +15570,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoGoogle")]
             IoIcon::IoLogoGoogle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15601,7 +15587,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoGooglePlaystore")]
             IoIcon::IoLogoGooglePlaystore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15618,7 +15604,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoHackernews")]
             IoIcon::IoLogoHackernews => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15635,7 +15621,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoHtml5")]
             IoIcon::IoLogoHtml5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15652,7 +15638,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoInstagram")]
             IoIcon::IoLogoInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15669,7 +15655,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoIonic")]
             IoIcon::IoLogoIonic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15686,7 +15672,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoIonitron")]
             IoIcon::IoLogoIonitron => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15703,7 +15689,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoJavascript")]
             IoIcon::IoLogoJavascript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15720,7 +15706,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoLaravel")]
             IoIcon::IoLogoLaravel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15737,7 +15723,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoLinkedin")]
             IoIcon::IoLogoLinkedin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15754,7 +15740,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoMarkdown")]
             IoIcon::IoLogoMarkdown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15771,7 +15757,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoMastodon")]
             IoIcon::IoLogoMastodon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15788,7 +15774,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoMedium")]
             IoIcon::IoLogoMedium => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 512 512;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -15805,7 +15791,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoMicrosoft")]
             IoIcon::IoLogoMicrosoft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15822,7 +15808,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoNoSmoking")]
             IoIcon::IoLogoNoSmoking => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15839,7 +15825,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoNodejs")]
             IoIcon::IoLogoNodejs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15856,7 +15842,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoNpm")]
             IoIcon::IoLogoNpm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15873,7 +15859,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoOctocat")]
             IoIcon::IoLogoOctocat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15890,7 +15876,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoPaypal")]
             IoIcon::IoLogoPaypal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15907,7 +15893,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoPinterest")]
             IoIcon::IoLogoPinterest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15924,7 +15910,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoPlaystation")]
             IoIcon::IoLogoPlaystation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15941,7 +15927,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoPwa")]
             IoIcon::IoLogoPwa => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15958,7 +15944,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoPython")]
             IoIcon::IoLogoPython => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15975,7 +15961,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoReact")]
             IoIcon::IoLogoReact => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15992,7 +15978,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoReddit")]
             IoIcon::IoLogoReddit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16009,7 +15995,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoRss")]
             IoIcon::IoLogoRss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16026,7 +16012,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoSass")]
             IoIcon::IoLogoSass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16043,7 +16029,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoSkype")]
             IoIcon::IoLogoSkype => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16060,7 +16046,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoSlack")]
             IoIcon::IoLogoSlack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16077,7 +16063,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoSnapchat")]
             IoIcon::IoLogoSnapchat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16094,7 +16080,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoSoundcloud")]
             IoIcon::IoLogoSoundcloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16111,7 +16097,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoStackoverflow")]
             IoIcon::IoLogoStackoverflow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16128,7 +16114,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoSteam")]
             IoIcon::IoLogoSteam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16145,7 +16131,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoStencil")]
             IoIcon::IoLogoStencil => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16162,7 +16148,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoTableau")]
             IoIcon::IoLogoTableau => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16179,7 +16165,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoTiktok")]
             IoIcon::IoLogoTiktok => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16196,7 +16182,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoTumblr")]
             IoIcon::IoLogoTumblr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16213,7 +16199,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoTux")]
             IoIcon::IoLogoTux => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16230,7 +16216,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoTwitch")]
             IoIcon::IoLogoTwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16247,7 +16233,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoTwitter")]
             IoIcon::IoLogoTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16264,7 +16250,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoUsd")]
             IoIcon::IoLogoUsd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16281,7 +16267,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoVenmo")]
             IoIcon::IoLogoVenmo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16298,7 +16284,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoVercel")]
             IoIcon::IoLogoVercel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16315,7 +16301,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoVimeo")]
             IoIcon::IoLogoVimeo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16332,7 +16318,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoVk")]
             IoIcon::IoLogoVk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16349,7 +16335,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoVue")]
             IoIcon::IoLogoVue => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16366,7 +16352,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoWebComponent")]
             IoIcon::IoLogoWebComponent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16383,7 +16369,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoWechat")]
             IoIcon::IoLogoWechat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16400,7 +16386,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoWhatsapp")]
             IoIcon::IoLogoWhatsapp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16417,7 +16403,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoWindows")]
             IoIcon::IoLogoWindows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16434,7 +16420,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoWordpress")]
             IoIcon::IoLogoWordpress => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16451,7 +16437,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoXbox")]
             IoIcon::IoLogoXbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16468,7 +16454,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoXing")]
             IoIcon::IoLogoXing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16485,7 +16471,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoYahoo")]
             IoIcon::IoLogoYahoo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16502,7 +16488,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoYen")]
             IoIcon::IoLogoYen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16519,7 +16505,7 @@ impl Data {
             }
             #[cfg(feature = "IoLogoYoutube")]
             IoIcon::IoLogoYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16536,7 +16522,7 @@ impl Data {
             }
             #[cfg(feature = "IoMagnet")]
             IoIcon::IoMagnet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16553,7 +16539,7 @@ impl Data {
             }
             #[cfg(feature = "IoMagnetOutline")]
             IoIcon::IoMagnetOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16570,7 +16556,7 @@ impl Data {
             }
             #[cfg(feature = "IoMagnetSharp")]
             IoIcon::IoMagnetSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16587,7 +16573,7 @@ impl Data {
             }
             #[cfg(feature = "IoMail")]
             IoIcon::IoMail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16604,7 +16590,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailOpen")]
             IoIcon::IoMailOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16621,7 +16607,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailOpenOutline")]
             IoIcon::IoMailOpenOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16638,7 +16624,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailOpenSharp")]
             IoIcon::IoMailOpenSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16655,7 +16641,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailOutline")]
             IoIcon::IoMailOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16672,7 +16658,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailSharp")]
             IoIcon::IoMailSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16689,7 +16675,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailUnread")]
             IoIcon::IoMailUnread => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16706,7 +16692,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailUnreadOutline")]
             IoIcon::IoMailUnreadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16723,7 +16709,7 @@ impl Data {
             }
             #[cfg(feature = "IoMailUnreadSharp")]
             IoIcon::IoMailUnreadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16740,7 +16726,7 @@ impl Data {
             }
             #[cfg(feature = "IoMale")]
             IoIcon::IoMale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16757,7 +16743,7 @@ impl Data {
             }
             #[cfg(feature = "IoMaleFemale")]
             IoIcon::IoMaleFemale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16774,7 +16760,7 @@ impl Data {
             }
             #[cfg(feature = "IoMaleFemaleOutline")]
             IoIcon::IoMaleFemaleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16791,7 +16777,7 @@ impl Data {
             }
             #[cfg(feature = "IoMaleFemaleSharp")]
             IoIcon::IoMaleFemaleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16808,7 +16794,7 @@ impl Data {
             }
             #[cfg(feature = "IoMaleOutline")]
             IoIcon::IoMaleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16825,7 +16811,7 @@ impl Data {
             }
             #[cfg(feature = "IoMaleSharp")]
             IoIcon::IoMaleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16842,7 +16828,7 @@ impl Data {
             }
             #[cfg(feature = "IoMan")]
             IoIcon::IoMan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16859,7 +16845,7 @@ impl Data {
             }
             #[cfg(feature = "IoManOutline")]
             IoIcon::IoManOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16876,7 +16862,7 @@ impl Data {
             }
             #[cfg(feature = "IoManSharp")]
             IoIcon::IoManSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16893,7 +16879,7 @@ impl Data {
             }
             #[cfg(feature = "IoMap")]
             IoIcon::IoMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16910,7 +16896,7 @@ impl Data {
             }
             #[cfg(feature = "IoMapOutline")]
             IoIcon::IoMapOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16927,7 +16913,7 @@ impl Data {
             }
             #[cfg(feature = "IoMapSharp")]
             IoIcon::IoMapSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16944,7 +16930,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedal")]
             IoIcon::IoMedal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16961,7 +16947,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedalOutline")]
             IoIcon::IoMedalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16978,7 +16964,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedalSharp")]
             IoIcon::IoMedalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16995,7 +16981,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedical")]
             IoIcon::IoMedical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17012,7 +16998,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedicalOutline")]
             IoIcon::IoMedicalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17029,7 +17015,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedicalSharp")]
             IoIcon::IoMedicalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17046,7 +17032,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedkit")]
             IoIcon::IoMedkit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17063,7 +17049,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedkitOutline")]
             IoIcon::IoMedkitOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17080,7 +17066,7 @@ impl Data {
             }
             #[cfg(feature = "IoMedkitSharp")]
             IoIcon::IoMedkitSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17097,7 +17083,7 @@ impl Data {
             }
             #[cfg(feature = "IoMegaphone")]
             IoIcon::IoMegaphone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17114,7 +17100,7 @@ impl Data {
             }
             #[cfg(feature = "IoMegaphoneOutline")]
             IoIcon::IoMegaphoneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17131,7 +17117,7 @@ impl Data {
             }
             #[cfg(feature = "IoMegaphoneSharp")]
             IoIcon::IoMegaphoneSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17148,7 +17134,7 @@ impl Data {
             }
             #[cfg(feature = "IoMenu")]
             IoIcon::IoMenu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17165,7 +17151,7 @@ impl Data {
             }
             #[cfg(feature = "IoMenuOutline")]
             IoIcon::IoMenuOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17182,7 +17168,7 @@ impl Data {
             }
             #[cfg(feature = "IoMenuSharp")]
             IoIcon::IoMenuSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17199,7 +17185,7 @@ impl Data {
             }
             #[cfg(feature = "IoMic")]
             IoIcon::IoMic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17216,7 +17202,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicCircle")]
             IoIcon::IoMicCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17233,7 +17219,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicCircleOutline")]
             IoIcon::IoMicCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17250,7 +17236,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicCircleSharp")]
             IoIcon::IoMicCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17267,7 +17253,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOff")]
             IoIcon::IoMicOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17284,7 +17270,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOffCircle")]
             IoIcon::IoMicOffCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17301,7 +17287,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOffCircleOutline")]
             IoIcon::IoMicOffCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17318,7 +17304,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOffCircleSharp")]
             IoIcon::IoMicOffCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17335,7 +17321,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOffOutline")]
             IoIcon::IoMicOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17352,7 +17338,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOffSharp")]
             IoIcon::IoMicOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17369,7 +17355,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicOutline")]
             IoIcon::IoMicOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17386,7 +17372,7 @@ impl Data {
             }
             #[cfg(feature = "IoMicSharp")]
             IoIcon::IoMicSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17403,7 +17389,7 @@ impl Data {
             }
             #[cfg(feature = "IoMoon")]
             IoIcon::IoMoon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17420,7 +17406,7 @@ impl Data {
             }
             #[cfg(feature = "IoMoonOutline")]
             IoIcon::IoMoonOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17437,7 +17423,7 @@ impl Data {
             }
             #[cfg(feature = "IoMoonSharp")]
             IoIcon::IoMoonSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17454,7 +17440,7 @@ impl Data {
             }
             #[cfg(feature = "IoMove")]
             IoIcon::IoMove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17471,7 +17457,7 @@ impl Data {
             }
             #[cfg(feature = "IoMoveOutline")]
             IoIcon::IoMoveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17488,7 +17474,7 @@ impl Data {
             }
             #[cfg(feature = "IoMoveSharp")]
             IoIcon::IoMoveSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17505,7 +17491,7 @@ impl Data {
             }
             #[cfg(feature = "IoMusicalNote")]
             IoIcon::IoMusicalNote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17522,7 +17508,7 @@ impl Data {
             }
             #[cfg(feature = "IoMusicalNoteOutline")]
             IoIcon::IoMusicalNoteOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17539,7 +17525,7 @@ impl Data {
             }
             #[cfg(feature = "IoMusicalNoteSharp")]
             IoIcon::IoMusicalNoteSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17556,7 +17542,7 @@ impl Data {
             }
             #[cfg(feature = "IoMusicalNotes")]
             IoIcon::IoMusicalNotes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17573,7 +17559,7 @@ impl Data {
             }
             #[cfg(feature = "IoMusicalNotesOutline")]
             IoIcon::IoMusicalNotesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17590,7 +17576,7 @@ impl Data {
             }
             #[cfg(feature = "IoMusicalNotesSharp")]
             IoIcon::IoMusicalNotesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17607,7 +17593,7 @@ impl Data {
             }
             #[cfg(feature = "IoNavigate")]
             IoIcon::IoNavigate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17624,7 +17610,7 @@ impl Data {
             }
             #[cfg(feature = "IoNavigateCircle")]
             IoIcon::IoNavigateCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17641,7 +17627,7 @@ impl Data {
             }
             #[cfg(feature = "IoNavigateCircleOutline")]
             IoIcon::IoNavigateCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17658,7 +17644,7 @@ impl Data {
             }
             #[cfg(feature = "IoNavigateCircleSharp")]
             IoIcon::IoNavigateCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17675,7 +17661,7 @@ impl Data {
             }
             #[cfg(feature = "IoNavigateOutline")]
             IoIcon::IoNavigateOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17692,7 +17678,7 @@ impl Data {
             }
             #[cfg(feature = "IoNavigateSharp")]
             IoIcon::IoNavigateSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17709,7 +17695,7 @@ impl Data {
             }
             #[cfg(feature = "IoNewspaper")]
             IoIcon::IoNewspaper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17726,7 +17712,7 @@ impl Data {
             }
             #[cfg(feature = "IoNewspaperOutline")]
             IoIcon::IoNewspaperOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17743,7 +17729,7 @@ impl Data {
             }
             #[cfg(feature = "IoNewspaperSharp")]
             IoIcon::IoNewspaperSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17760,7 +17746,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotifications")]
             IoIcon::IoNotifications => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17777,7 +17763,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsCircle")]
             IoIcon::IoNotificationsCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17794,7 +17780,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsCircleOutline")]
             IoIcon::IoNotificationsCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17811,7 +17797,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsCircleSharp")]
             IoIcon::IoNotificationsCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17828,7 +17814,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOff")]
             IoIcon::IoNotificationsOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17845,7 +17831,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOffCircle")]
             IoIcon::IoNotificationsOffCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17862,7 +17848,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOffCircleOutline")]
             IoIcon::IoNotificationsOffCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17879,7 +17865,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOffCircleSharp")]
             IoIcon::IoNotificationsOffCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17896,7 +17882,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOffOutline")]
             IoIcon::IoNotificationsOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17913,7 +17899,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOffSharp")]
             IoIcon::IoNotificationsOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17930,7 +17916,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsOutline")]
             IoIcon::IoNotificationsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17947,7 +17933,7 @@ impl Data {
             }
             #[cfg(feature = "IoNotificationsSharp")]
             IoIcon::IoNotificationsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17964,7 +17950,7 @@ impl Data {
             }
             #[cfg(feature = "IoNuclear")]
             IoIcon::IoNuclear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17981,7 +17967,7 @@ impl Data {
             }
             #[cfg(feature = "IoNuclearOutline")]
             IoIcon::IoNuclearOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17998,7 +17984,7 @@ impl Data {
             }
             #[cfg(feature = "IoNuclearSharp")]
             IoIcon::IoNuclearSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18015,7 +18001,7 @@ impl Data {
             }
             #[cfg(feature = "IoNutrition")]
             IoIcon::IoNutrition => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18032,7 +18018,7 @@ impl Data {
             }
             #[cfg(feature = "IoNutritionOutline")]
             IoIcon::IoNutritionOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18049,7 +18035,7 @@ impl Data {
             }
             #[cfg(feature = "IoNutritionSharp")]
             IoIcon::IoNutritionSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18066,7 +18052,7 @@ impl Data {
             }
             #[cfg(feature = "IoOpen")]
             IoIcon::IoOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18083,7 +18069,7 @@ impl Data {
             }
             #[cfg(feature = "IoOpenOutline")]
             IoIcon::IoOpenOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18100,7 +18086,7 @@ impl Data {
             }
             #[cfg(feature = "IoOpenSharp")]
             IoIcon::IoOpenSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18117,7 +18103,7 @@ impl Data {
             }
             #[cfg(feature = "IoOptions")]
             IoIcon::IoOptions => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18134,7 +18120,7 @@ impl Data {
             }
             #[cfg(feature = "IoOptionsOutline")]
             IoIcon::IoOptionsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18151,7 +18137,7 @@ impl Data {
             }
             #[cfg(feature = "IoOptionsSharp")]
             IoIcon::IoOptionsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18168,7 +18154,7 @@ impl Data {
             }
             #[cfg(feature = "IoPaperPlane")]
             IoIcon::IoPaperPlane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18185,7 +18171,7 @@ impl Data {
             }
             #[cfg(feature = "IoPaperPlaneOutline")]
             IoIcon::IoPaperPlaneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18202,7 +18188,7 @@ impl Data {
             }
             #[cfg(feature = "IoPaperPlaneSharp")]
             IoIcon::IoPaperPlaneSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18219,7 +18205,7 @@ impl Data {
             }
             #[cfg(feature = "IoPartlySunny")]
             IoIcon::IoPartlySunny => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18236,7 +18222,7 @@ impl Data {
             }
             #[cfg(feature = "IoPartlySunnyOutline")]
             IoIcon::IoPartlySunnyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18253,7 +18239,7 @@ impl Data {
             }
             #[cfg(feature = "IoPartlySunnySharp")]
             IoIcon::IoPartlySunnySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18270,7 +18256,7 @@ impl Data {
             }
             #[cfg(feature = "IoPause")]
             IoIcon::IoPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18287,7 +18273,7 @@ impl Data {
             }
             #[cfg(feature = "IoPauseCircle")]
             IoIcon::IoPauseCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18304,7 +18290,7 @@ impl Data {
             }
             #[cfg(feature = "IoPauseCircleOutline")]
             IoIcon::IoPauseCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18321,7 +18307,7 @@ impl Data {
             }
             #[cfg(feature = "IoPauseCircleSharp")]
             IoIcon::IoPauseCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18338,7 +18324,7 @@ impl Data {
             }
             #[cfg(feature = "IoPauseOutline")]
             IoIcon::IoPauseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18355,7 +18341,7 @@ impl Data {
             }
             #[cfg(feature = "IoPauseSharp")]
             IoIcon::IoPauseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18372,7 +18358,7 @@ impl Data {
             }
             #[cfg(feature = "IoPaw")]
             IoIcon::IoPaw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18389,7 +18375,7 @@ impl Data {
             }
             #[cfg(feature = "IoPawOutline")]
             IoIcon::IoPawOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18406,7 +18392,7 @@ impl Data {
             }
             #[cfg(feature = "IoPawSharp")]
             IoIcon::IoPawSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18423,7 +18409,7 @@ impl Data {
             }
             #[cfg(feature = "IoPencil")]
             IoIcon::IoPencil => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18440,7 +18426,7 @@ impl Data {
             }
             #[cfg(feature = "IoPencilOutline")]
             IoIcon::IoPencilOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18457,7 +18443,7 @@ impl Data {
             }
             #[cfg(feature = "IoPencilSharp")]
             IoIcon::IoPencilSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18474,7 +18460,7 @@ impl Data {
             }
             #[cfg(feature = "IoPeople")]
             IoIcon::IoPeople => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18491,7 +18477,7 @@ impl Data {
             }
             #[cfg(feature = "IoPeopleCircle")]
             IoIcon::IoPeopleCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18508,7 +18494,7 @@ impl Data {
             }
             #[cfg(feature = "IoPeopleCircleOutline")]
             IoIcon::IoPeopleCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18525,7 +18511,7 @@ impl Data {
             }
             #[cfg(feature = "IoPeopleCircleSharp")]
             IoIcon::IoPeopleCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18542,7 +18528,7 @@ impl Data {
             }
             #[cfg(feature = "IoPeopleOutline")]
             IoIcon::IoPeopleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18559,7 +18545,7 @@ impl Data {
             }
             #[cfg(feature = "IoPeopleSharp")]
             IoIcon::IoPeopleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18576,7 +18562,7 @@ impl Data {
             }
             #[cfg(feature = "IoPerson")]
             IoIcon::IoPerson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18593,7 +18579,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonAdd")]
             IoIcon::IoPersonAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18610,7 +18596,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonAddOutline")]
             IoIcon::IoPersonAddOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18627,7 +18613,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonAddSharp")]
             IoIcon::IoPersonAddSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18644,7 +18630,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonCircle")]
             IoIcon::IoPersonCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18661,7 +18647,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonCircleOutline")]
             IoIcon::IoPersonCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18678,7 +18664,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonCircleSharp")]
             IoIcon::IoPersonCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18695,7 +18681,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonOutline")]
             IoIcon::IoPersonOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18712,7 +18698,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonRemove")]
             IoIcon::IoPersonRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18729,7 +18715,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonRemoveOutline")]
             IoIcon::IoPersonRemoveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18746,7 +18732,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonRemoveSharp")]
             IoIcon::IoPersonRemoveSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18763,7 +18749,7 @@ impl Data {
             }
             #[cfg(feature = "IoPersonSharp")]
             IoIcon::IoPersonSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18780,7 +18766,7 @@ impl Data {
             }
             #[cfg(feature = "IoPhoneLandscape")]
             IoIcon::IoPhoneLandscape => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18797,7 +18783,7 @@ impl Data {
             }
             #[cfg(feature = "IoPhoneLandscapeOutline")]
             IoIcon::IoPhoneLandscapeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18814,7 +18800,7 @@ impl Data {
             }
             #[cfg(feature = "IoPhoneLandscapeSharp")]
             IoIcon::IoPhoneLandscapeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18831,7 +18817,7 @@ impl Data {
             }
             #[cfg(feature = "IoPhonePortrait")]
             IoIcon::IoPhonePortrait => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18848,7 +18834,7 @@ impl Data {
             }
             #[cfg(feature = "IoPhonePortraitOutline")]
             IoIcon::IoPhonePortraitOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18865,7 +18851,7 @@ impl Data {
             }
             #[cfg(feature = "IoPhonePortraitSharp")]
             IoIcon::IoPhonePortraitSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18882,7 +18868,7 @@ impl Data {
             }
             #[cfg(feature = "IoPieChart")]
             IoIcon::IoPieChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18899,7 +18885,7 @@ impl Data {
             }
             #[cfg(feature = "IoPieChartOutline")]
             IoIcon::IoPieChartOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18916,7 +18902,7 @@ impl Data {
             }
             #[cfg(feature = "IoPieChartSharp")]
             IoIcon::IoPieChartSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18933,7 +18919,7 @@ impl Data {
             }
             #[cfg(feature = "IoPin")]
             IoIcon::IoPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18950,7 +18936,7 @@ impl Data {
             }
             #[cfg(feature = "IoPinOutline")]
             IoIcon::IoPinOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18967,7 +18953,7 @@ impl Data {
             }
             #[cfg(feature = "IoPinSharp")]
             IoIcon::IoPinSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18984,7 +18970,7 @@ impl Data {
             }
             #[cfg(feature = "IoPint")]
             IoIcon::IoPint => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19001,7 +18987,7 @@ impl Data {
             }
             #[cfg(feature = "IoPintOutline")]
             IoIcon::IoPintOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19018,7 +19004,7 @@ impl Data {
             }
             #[cfg(feature = "IoPintSharp")]
             IoIcon::IoPintSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19035,7 +19021,7 @@ impl Data {
             }
             #[cfg(feature = "IoPizza")]
             IoIcon::IoPizza => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19052,7 +19038,7 @@ impl Data {
             }
             #[cfg(feature = "IoPizzaOutline")]
             IoIcon::IoPizzaOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19069,7 +19055,7 @@ impl Data {
             }
             #[cfg(feature = "IoPizzaSharp")]
             IoIcon::IoPizzaSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19086,7 +19072,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlanet")]
             IoIcon::IoPlanet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19103,7 +19089,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlanetOutline")]
             IoIcon::IoPlanetOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19120,7 +19106,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlanetSharp")]
             IoIcon::IoPlanetSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19137,7 +19123,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlay")]
             IoIcon::IoPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19154,7 +19140,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayBack")]
             IoIcon::IoPlayBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19171,7 +19157,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayBackCircle")]
             IoIcon::IoPlayBackCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19188,7 +19174,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayBackCircleOutline")]
             IoIcon::IoPlayBackCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19205,7 +19191,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayBackCircleSharp")]
             IoIcon::IoPlayBackCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19222,7 +19208,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayBackOutline")]
             IoIcon::IoPlayBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19239,7 +19225,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayBackSharp")]
             IoIcon::IoPlayBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19256,7 +19242,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayCircle")]
             IoIcon::IoPlayCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19273,7 +19259,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayCircleOutline")]
             IoIcon::IoPlayCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19290,7 +19276,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayCircleSharp")]
             IoIcon::IoPlayCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19307,7 +19293,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayForward")]
             IoIcon::IoPlayForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19324,7 +19310,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayForwardCircle")]
             IoIcon::IoPlayForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19341,7 +19327,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayForwardCircleOutline")]
             IoIcon::IoPlayForwardCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19358,7 +19344,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayForwardCircleSharp")]
             IoIcon::IoPlayForwardCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19375,7 +19361,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayForwardOutline")]
             IoIcon::IoPlayForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19392,7 +19378,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayForwardSharp")]
             IoIcon::IoPlayForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19409,7 +19395,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlayOutline")]
             IoIcon::IoPlayOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19426,7 +19412,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySharp")]
             IoIcon::IoPlaySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19443,7 +19429,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipBack")]
             IoIcon::IoPlaySkipBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19460,7 +19446,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipBackCircle")]
             IoIcon::IoPlaySkipBackCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19477,7 +19463,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipBackCircleOutline")]
             IoIcon::IoPlaySkipBackCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19494,7 +19480,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipBackCircleSharp")]
             IoIcon::IoPlaySkipBackCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19511,7 +19497,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipBackOutline")]
             IoIcon::IoPlaySkipBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19528,7 +19514,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipBackSharp")]
             IoIcon::IoPlaySkipBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19545,7 +19531,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipForward")]
             IoIcon::IoPlaySkipForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19562,7 +19548,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipForwardCircle")]
             IoIcon::IoPlaySkipForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19579,7 +19565,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipForwardCircleOutline")]
             IoIcon::IoPlaySkipForwardCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19596,7 +19582,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipForwardCircleSharp")]
             IoIcon::IoPlaySkipForwardCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19613,7 +19599,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipForwardOutline")]
             IoIcon::IoPlaySkipForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19630,7 +19616,7 @@ impl Data {
             }
             #[cfg(feature = "IoPlaySkipForwardSharp")]
             IoIcon::IoPlaySkipForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19647,7 +19633,7 @@ impl Data {
             }
             #[cfg(feature = "IoPodium")]
             IoIcon::IoPodium => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19664,7 +19650,7 @@ impl Data {
             }
             #[cfg(feature = "IoPodiumOutline")]
             IoIcon::IoPodiumOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19681,7 +19667,7 @@ impl Data {
             }
             #[cfg(feature = "IoPodiumSharp")]
             IoIcon::IoPodiumSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19698,7 +19684,7 @@ impl Data {
             }
             #[cfg(feature = "IoPower")]
             IoIcon::IoPower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19715,7 +19701,7 @@ impl Data {
             }
             #[cfg(feature = "IoPowerOutline")]
             IoIcon::IoPowerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19732,7 +19718,7 @@ impl Data {
             }
             #[cfg(feature = "IoPowerSharp")]
             IoIcon::IoPowerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19749,7 +19735,7 @@ impl Data {
             }
             #[cfg(feature = "IoPricetag")]
             IoIcon::IoPricetag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19766,7 +19752,7 @@ impl Data {
             }
             #[cfg(feature = "IoPricetagOutline")]
             IoIcon::IoPricetagOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19783,7 +19769,7 @@ impl Data {
             }
             #[cfg(feature = "IoPricetagSharp")]
             IoIcon::IoPricetagSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19800,7 +19786,7 @@ impl Data {
             }
             #[cfg(feature = "IoPricetags")]
             IoIcon::IoPricetags => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19817,7 +19803,7 @@ impl Data {
             }
             #[cfg(feature = "IoPricetagsOutline")]
             IoIcon::IoPricetagsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19834,7 +19820,7 @@ impl Data {
             }
             #[cfg(feature = "IoPricetagsSharp")]
             IoIcon::IoPricetagsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19851,7 +19837,7 @@ impl Data {
             }
             #[cfg(feature = "IoPrint")]
             IoIcon::IoPrint => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19868,7 +19854,7 @@ impl Data {
             }
             #[cfg(feature = "IoPrintOutline")]
             IoIcon::IoPrintOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19885,7 +19871,7 @@ impl Data {
             }
             #[cfg(feature = "IoPrintSharp")]
             IoIcon::IoPrintSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19902,7 +19888,7 @@ impl Data {
             }
             #[cfg(feature = "IoPrism")]
             IoIcon::IoPrism => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19919,7 +19905,7 @@ impl Data {
             }
             #[cfg(feature = "IoPrismOutline")]
             IoIcon::IoPrismOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19936,7 +19922,7 @@ impl Data {
             }
             #[cfg(feature = "IoPrismSharp")]
             IoIcon::IoPrismSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19953,7 +19939,7 @@ impl Data {
             }
             #[cfg(feature = "IoPulse")]
             IoIcon::IoPulse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19970,7 +19956,7 @@ impl Data {
             }
             #[cfg(feature = "IoPulseOutline")]
             IoIcon::IoPulseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19987,7 +19973,7 @@ impl Data {
             }
             #[cfg(feature = "IoPulseSharp")]
             IoIcon::IoPulseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20004,7 +19990,7 @@ impl Data {
             }
             #[cfg(feature = "IoPush")]
             IoIcon::IoPush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20021,7 +20007,7 @@ impl Data {
             }
             #[cfg(feature = "IoPushOutline")]
             IoIcon::IoPushOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20038,7 +20024,7 @@ impl Data {
             }
             #[cfg(feature = "IoPushSharp")]
             IoIcon::IoPushSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20055,7 +20041,7 @@ impl Data {
             }
             #[cfg(feature = "IoQrCode")]
             IoIcon::IoQrCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20072,7 +20058,7 @@ impl Data {
             }
             #[cfg(feature = "IoQrCodeOutline")]
             IoIcon::IoQrCodeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20089,7 +20075,7 @@ impl Data {
             }
             #[cfg(feature = "IoQrCodeSharp")]
             IoIcon::IoQrCodeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20106,7 +20092,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadio")]
             IoIcon::IoRadio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20123,7 +20109,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioButtonOff")]
             IoIcon::IoRadioButtonOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20140,7 +20126,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioButtonOffOutline")]
             IoIcon::IoRadioButtonOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20157,7 +20143,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioButtonOffSharp")]
             IoIcon::IoRadioButtonOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20174,7 +20160,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioButtonOn")]
             IoIcon::IoRadioButtonOn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20191,7 +20177,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioButtonOnOutline")]
             IoIcon::IoRadioButtonOnOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20208,7 +20194,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioButtonOnSharp")]
             IoIcon::IoRadioButtonOnSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20225,7 +20211,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioOutline")]
             IoIcon::IoRadioOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20242,7 +20228,7 @@ impl Data {
             }
             #[cfg(feature = "IoRadioSharp")]
             IoIcon::IoRadioSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20259,7 +20245,7 @@ impl Data {
             }
             #[cfg(feature = "IoRainy")]
             IoIcon::IoRainy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20276,7 +20262,7 @@ impl Data {
             }
             #[cfg(feature = "IoRainyOutline")]
             IoIcon::IoRainyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20293,7 +20279,7 @@ impl Data {
             }
             #[cfg(feature = "IoRainySharp")]
             IoIcon::IoRainySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20310,7 +20296,7 @@ impl Data {
             }
             #[cfg(feature = "IoReader")]
             IoIcon::IoReader => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20327,7 +20313,7 @@ impl Data {
             }
             #[cfg(feature = "IoReaderOutline")]
             IoIcon::IoReaderOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20344,7 +20330,7 @@ impl Data {
             }
             #[cfg(feature = "IoReaderSharp")]
             IoIcon::IoReaderSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20361,7 +20347,7 @@ impl Data {
             }
             #[cfg(feature = "IoReceipt")]
             IoIcon::IoReceipt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20378,7 +20364,7 @@ impl Data {
             }
             #[cfg(feature = "IoReceiptOutline")]
             IoIcon::IoReceiptOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20395,7 +20381,7 @@ impl Data {
             }
             #[cfg(feature = "IoReceiptSharp")]
             IoIcon::IoReceiptSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20412,7 +20398,7 @@ impl Data {
             }
             #[cfg(feature = "IoRecording")]
             IoIcon::IoRecording => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20429,7 +20415,7 @@ impl Data {
             }
             #[cfg(feature = "IoRecordingOutline")]
             IoIcon::IoRecordingOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20446,7 +20432,7 @@ impl Data {
             }
             #[cfg(feature = "IoRecordingSharp")]
             IoIcon::IoRecordingSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20463,7 +20449,7 @@ impl Data {
             }
             #[cfg(feature = "IoRefresh")]
             IoIcon::IoRefresh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20480,7 +20466,7 @@ impl Data {
             }
             #[cfg(feature = "IoRefreshCircle")]
             IoIcon::IoRefreshCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20497,7 +20483,7 @@ impl Data {
             }
             #[cfg(feature = "IoRefreshCircleOutline")]
             IoIcon::IoRefreshCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20514,7 +20500,7 @@ impl Data {
             }
             #[cfg(feature = "IoRefreshCircleSharp")]
             IoIcon::IoRefreshCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20531,7 +20517,7 @@ impl Data {
             }
             #[cfg(feature = "IoRefreshOutline")]
             IoIcon::IoRefreshOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20548,7 +20534,7 @@ impl Data {
             }
             #[cfg(feature = "IoRefreshSharp")]
             IoIcon::IoRefreshSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20565,7 +20551,7 @@ impl Data {
             }
             #[cfg(feature = "IoReload")]
             IoIcon::IoReload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20582,7 +20568,7 @@ impl Data {
             }
             #[cfg(feature = "IoReloadCircle")]
             IoIcon::IoReloadCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20599,7 +20585,7 @@ impl Data {
             }
             #[cfg(feature = "IoReloadCircleOutline")]
             IoIcon::IoReloadCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20616,7 +20602,7 @@ impl Data {
             }
             #[cfg(feature = "IoReloadCircleSharp")]
             IoIcon::IoReloadCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20633,7 +20619,7 @@ impl Data {
             }
             #[cfg(feature = "IoReloadOutline")]
             IoIcon::IoReloadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20650,7 +20636,7 @@ impl Data {
             }
             #[cfg(feature = "IoReloadSharp")]
             IoIcon::IoReloadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20667,7 +20653,7 @@ impl Data {
             }
             #[cfg(feature = "IoRemove")]
             IoIcon::IoRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20684,7 +20670,7 @@ impl Data {
             }
             #[cfg(feature = "IoRemoveCircle")]
             IoIcon::IoRemoveCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20701,7 +20687,7 @@ impl Data {
             }
             #[cfg(feature = "IoRemoveCircleOutline")]
             IoIcon::IoRemoveCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20718,7 +20704,7 @@ impl Data {
             }
             #[cfg(feature = "IoRemoveCircleSharp")]
             IoIcon::IoRemoveCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20735,7 +20721,7 @@ impl Data {
             }
             #[cfg(feature = "IoRemoveOutline")]
             IoIcon::IoRemoveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20752,7 +20738,7 @@ impl Data {
             }
             #[cfg(feature = "IoRemoveSharp")]
             IoIcon::IoRemoveSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20769,7 +20755,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderFour")]
             IoIcon::IoReorderFour => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20786,7 +20772,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderFourOutline")]
             IoIcon::IoReorderFourOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20803,7 +20789,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderFourSharp")]
             IoIcon::IoReorderFourSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20820,7 +20806,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderThree")]
             IoIcon::IoReorderThree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20837,7 +20823,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderThreeOutline")]
             IoIcon::IoReorderThreeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20854,7 +20840,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderThreeSharp")]
             IoIcon::IoReorderThreeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20871,7 +20857,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderTwo")]
             IoIcon::IoReorderTwo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20888,7 +20874,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderTwoOutline")]
             IoIcon::IoReorderTwoOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20905,7 +20891,7 @@ impl Data {
             }
             #[cfg(feature = "IoReorderTwoSharp")]
             IoIcon::IoReorderTwoSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20922,7 +20908,7 @@ impl Data {
             }
             #[cfg(feature = "IoRepeat")]
             IoIcon::IoRepeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20939,7 +20925,7 @@ impl Data {
             }
             #[cfg(feature = "IoRepeatOutline")]
             IoIcon::IoRepeatOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20956,7 +20942,7 @@ impl Data {
             }
             #[cfg(feature = "IoRepeatSharp")]
             IoIcon::IoRepeatSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20973,7 +20959,7 @@ impl Data {
             }
             #[cfg(feature = "IoResize")]
             IoIcon::IoResize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20990,7 +20976,7 @@ impl Data {
             }
             #[cfg(feature = "IoResizeOutline")]
             IoIcon::IoResizeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21007,7 +20993,7 @@ impl Data {
             }
             #[cfg(feature = "IoResizeSharp")]
             IoIcon::IoResizeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21024,7 +21010,7 @@ impl Data {
             }
             #[cfg(feature = "IoRestaurant")]
             IoIcon::IoRestaurant => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21041,7 +21027,7 @@ impl Data {
             }
             #[cfg(feature = "IoRestaurantOutline")]
             IoIcon::IoRestaurantOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21058,7 +21044,7 @@ impl Data {
             }
             #[cfg(feature = "IoRestaurantSharp")]
             IoIcon::IoRestaurantSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21075,7 +21061,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnDownBack")]
             IoIcon::IoReturnDownBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21092,7 +21078,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnDownBackOutline")]
             IoIcon::IoReturnDownBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21109,7 +21095,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnDownBackSharp")]
             IoIcon::IoReturnDownBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21126,7 +21112,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnDownForward")]
             IoIcon::IoReturnDownForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21143,7 +21129,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnDownForwardOutline")]
             IoIcon::IoReturnDownForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21160,7 +21146,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnDownForwardSharp")]
             IoIcon::IoReturnDownForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21177,7 +21163,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnUpBack")]
             IoIcon::IoReturnUpBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21194,7 +21180,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnUpBackOutline")]
             IoIcon::IoReturnUpBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21211,7 +21197,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnUpBackSharp")]
             IoIcon::IoReturnUpBackSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21228,7 +21214,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnUpForward")]
             IoIcon::IoReturnUpForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21245,7 +21231,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnUpForwardOutline")]
             IoIcon::IoReturnUpForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21262,7 +21248,7 @@ impl Data {
             }
             #[cfg(feature = "IoReturnUpForwardSharp")]
             IoIcon::IoReturnUpForwardSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21279,7 +21265,7 @@ impl Data {
             }
             #[cfg(feature = "IoRibbon")]
             IoIcon::IoRibbon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21296,7 +21282,7 @@ impl Data {
             }
             #[cfg(feature = "IoRibbonOutline")]
             IoIcon::IoRibbonOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21313,7 +21299,7 @@ impl Data {
             }
             #[cfg(feature = "IoRibbonSharp")]
             IoIcon::IoRibbonSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21330,7 +21316,7 @@ impl Data {
             }
             #[cfg(feature = "IoRocket")]
             IoIcon::IoRocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21347,7 +21333,7 @@ impl Data {
             }
             #[cfg(feature = "IoRocketOutline")]
             IoIcon::IoRocketOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21364,7 +21350,7 @@ impl Data {
             }
             #[cfg(feature = "IoRocketSharp")]
             IoIcon::IoRocketSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21381,7 +21367,7 @@ impl Data {
             }
             #[cfg(feature = "IoRose")]
             IoIcon::IoRose => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21398,7 +21384,7 @@ impl Data {
             }
             #[cfg(feature = "IoRoseOutline")]
             IoIcon::IoRoseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21415,7 +21401,7 @@ impl Data {
             }
             #[cfg(feature = "IoRoseSharp")]
             IoIcon::IoRoseSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21432,7 +21418,7 @@ impl Data {
             }
             #[cfg(feature = "IoSad")]
             IoIcon::IoSad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21449,7 +21435,7 @@ impl Data {
             }
             #[cfg(feature = "IoSadOutline")]
             IoIcon::IoSadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21466,7 +21452,7 @@ impl Data {
             }
             #[cfg(feature = "IoSadSharp")]
             IoIcon::IoSadSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21483,7 +21469,7 @@ impl Data {
             }
             #[cfg(feature = "IoSave")]
             IoIcon::IoSave => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21500,7 +21486,7 @@ impl Data {
             }
             #[cfg(feature = "IoSaveOutline")]
             IoIcon::IoSaveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21517,7 +21503,7 @@ impl Data {
             }
             #[cfg(feature = "IoSaveSharp")]
             IoIcon::IoSaveSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21534,7 +21520,7 @@ impl Data {
             }
             #[cfg(feature = "IoScale")]
             IoIcon::IoScale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21551,7 +21537,7 @@ impl Data {
             }
             #[cfg(feature = "IoScaleOutline")]
             IoIcon::IoScaleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21568,7 +21554,7 @@ impl Data {
             }
             #[cfg(feature = "IoScaleSharp")]
             IoIcon::IoScaleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21585,7 +21571,7 @@ impl Data {
             }
             #[cfg(feature = "IoScan")]
             IoIcon::IoScan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21602,7 +21588,7 @@ impl Data {
             }
             #[cfg(feature = "IoScanCircle")]
             IoIcon::IoScanCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21619,7 +21605,7 @@ impl Data {
             }
             #[cfg(feature = "IoScanCircleOutline")]
             IoIcon::IoScanCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21636,7 +21622,7 @@ impl Data {
             }
             #[cfg(feature = "IoScanCircleSharp")]
             IoIcon::IoScanCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21653,7 +21639,7 @@ impl Data {
             }
             #[cfg(feature = "IoScanOutline")]
             IoIcon::IoScanOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21670,7 +21656,7 @@ impl Data {
             }
             #[cfg(feature = "IoScanSharp")]
             IoIcon::IoScanSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21687,7 +21673,7 @@ impl Data {
             }
             #[cfg(feature = "IoSchool")]
             IoIcon::IoSchool => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21704,7 +21690,7 @@ impl Data {
             }
             #[cfg(feature = "IoSchoolOutline")]
             IoIcon::IoSchoolOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21721,7 +21707,7 @@ impl Data {
             }
             #[cfg(feature = "IoSchoolSharp")]
             IoIcon::IoSchoolSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21738,7 +21724,7 @@ impl Data {
             }
             #[cfg(feature = "IoSearch")]
             IoIcon::IoSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21755,7 +21741,7 @@ impl Data {
             }
             #[cfg(feature = "IoSearchCircle")]
             IoIcon::IoSearchCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21772,7 +21758,7 @@ impl Data {
             }
             #[cfg(feature = "IoSearchCircleOutline")]
             IoIcon::IoSearchCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21789,7 +21775,7 @@ impl Data {
             }
             #[cfg(feature = "IoSearchCircleSharp")]
             IoIcon::IoSearchCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21806,7 +21792,7 @@ impl Data {
             }
             #[cfg(feature = "IoSearchOutline")]
             IoIcon::IoSearchOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21823,7 +21809,7 @@ impl Data {
             }
             #[cfg(feature = "IoSearchSharp")]
             IoIcon::IoSearchSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21840,7 +21826,7 @@ impl Data {
             }
             #[cfg(feature = "IoSend")]
             IoIcon::IoSend => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21857,7 +21843,7 @@ impl Data {
             }
             #[cfg(feature = "IoSendOutline")]
             IoIcon::IoSendOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21874,7 +21860,7 @@ impl Data {
             }
             #[cfg(feature = "IoSendSharp")]
             IoIcon::IoSendSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21891,7 +21877,7 @@ impl Data {
             }
             #[cfg(feature = "IoServer")]
             IoIcon::IoServer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21908,7 +21894,7 @@ impl Data {
             }
             #[cfg(feature = "IoServerOutline")]
             IoIcon::IoServerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21925,7 +21911,7 @@ impl Data {
             }
             #[cfg(feature = "IoServerSharp")]
             IoIcon::IoServerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21942,7 +21928,7 @@ impl Data {
             }
             #[cfg(feature = "IoSettings")]
             IoIcon::IoSettings => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21959,7 +21945,7 @@ impl Data {
             }
             #[cfg(feature = "IoSettingsOutline")]
             IoIcon::IoSettingsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21976,7 +21962,7 @@ impl Data {
             }
             #[cfg(feature = "IoSettingsSharp")]
             IoIcon::IoSettingsSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21993,7 +21979,7 @@ impl Data {
             }
             #[cfg(feature = "IoShapes")]
             IoIcon::IoShapes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22010,7 +21996,7 @@ impl Data {
             }
             #[cfg(feature = "IoShapesOutline")]
             IoIcon::IoShapesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22027,7 +22013,7 @@ impl Data {
             }
             #[cfg(feature = "IoShapesSharp")]
             IoIcon::IoShapesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22044,7 +22030,7 @@ impl Data {
             }
             #[cfg(feature = "IoShare")]
             IoIcon::IoShare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22061,7 +22047,7 @@ impl Data {
             }
             #[cfg(feature = "IoShareOutline")]
             IoIcon::IoShareOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22078,7 +22064,7 @@ impl Data {
             }
             #[cfg(feature = "IoShareSharp")]
             IoIcon::IoShareSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22095,7 +22081,7 @@ impl Data {
             }
             #[cfg(feature = "IoShareSocial")]
             IoIcon::IoShareSocial => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22112,7 +22098,7 @@ impl Data {
             }
             #[cfg(feature = "IoShareSocialOutline")]
             IoIcon::IoShareSocialOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22129,7 +22115,7 @@ impl Data {
             }
             #[cfg(feature = "IoShareSocialSharp")]
             IoIcon::IoShareSocialSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22146,7 +22132,7 @@ impl Data {
             }
             #[cfg(feature = "IoShield")]
             IoIcon::IoShield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22163,7 +22149,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldCheckmark")]
             IoIcon::IoShieldCheckmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22180,7 +22166,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldCheckmarkOutline")]
             IoIcon::IoShieldCheckmarkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22197,7 +22183,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldCheckmarkSharp")]
             IoIcon::IoShieldCheckmarkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22214,7 +22200,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldHalf")]
             IoIcon::IoShieldHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22231,7 +22217,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldHalfOutline")]
             IoIcon::IoShieldHalfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22248,7 +22234,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldHalfSharp")]
             IoIcon::IoShieldHalfSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22265,7 +22251,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldOutline")]
             IoIcon::IoShieldOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22282,7 +22268,7 @@ impl Data {
             }
             #[cfg(feature = "IoShieldSharp")]
             IoIcon::IoShieldSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22299,7 +22285,7 @@ impl Data {
             }
             #[cfg(feature = "IoShirt")]
             IoIcon::IoShirt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22316,7 +22302,7 @@ impl Data {
             }
             #[cfg(feature = "IoShirtOutline")]
             IoIcon::IoShirtOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22333,7 +22319,7 @@ impl Data {
             }
             #[cfg(feature = "IoShirtSharp")]
             IoIcon::IoShirtSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22350,7 +22336,7 @@ impl Data {
             }
             #[cfg(feature = "IoShuffle")]
             IoIcon::IoShuffle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22367,7 +22353,7 @@ impl Data {
             }
             #[cfg(feature = "IoShuffleOutline")]
             IoIcon::IoShuffleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22384,7 +22370,7 @@ impl Data {
             }
             #[cfg(feature = "IoShuffleSharp")]
             IoIcon::IoShuffleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22401,7 +22387,7 @@ impl Data {
             }
             #[cfg(feature = "IoSkull")]
             IoIcon::IoSkull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22418,7 +22404,7 @@ impl Data {
             }
             #[cfg(feature = "IoSkullOutline")]
             IoIcon::IoSkullOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22435,7 +22421,7 @@ impl Data {
             }
             #[cfg(feature = "IoSkullSharp")]
             IoIcon::IoSkullSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22452,7 +22438,7 @@ impl Data {
             }
             #[cfg(feature = "IoSnow")]
             IoIcon::IoSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22469,7 +22455,7 @@ impl Data {
             }
             #[cfg(feature = "IoSnowOutline")]
             IoIcon::IoSnowOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22486,7 +22472,7 @@ impl Data {
             }
             #[cfg(feature = "IoSnowSharp")]
             IoIcon::IoSnowSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22503,7 +22489,7 @@ impl Data {
             }
             #[cfg(feature = "IoSparkles")]
             IoIcon::IoSparkles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22520,7 +22506,7 @@ impl Data {
             }
             #[cfg(feature = "IoSparklesOutline")]
             IoIcon::IoSparklesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22537,7 +22523,7 @@ impl Data {
             }
             #[cfg(feature = "IoSparklesSharp")]
             IoIcon::IoSparklesSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22554,7 +22540,7 @@ impl Data {
             }
             #[cfg(feature = "IoSpeedometer")]
             IoIcon::IoSpeedometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22571,7 +22557,7 @@ impl Data {
             }
             #[cfg(feature = "IoSpeedometerOutline")]
             IoIcon::IoSpeedometerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22588,7 +22574,7 @@ impl Data {
             }
             #[cfg(feature = "IoSpeedometerSharp")]
             IoIcon::IoSpeedometerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22605,7 +22591,7 @@ impl Data {
             }
             #[cfg(feature = "IoSquare")]
             IoIcon::IoSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22622,7 +22608,7 @@ impl Data {
             }
             #[cfg(feature = "IoSquareOutline")]
             IoIcon::IoSquareOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22639,7 +22625,7 @@ impl Data {
             }
             #[cfg(feature = "IoSquareSharp")]
             IoIcon::IoSquareSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22656,7 +22642,7 @@ impl Data {
             }
             #[cfg(feature = "IoStar")]
             IoIcon::IoStar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22673,7 +22659,7 @@ impl Data {
             }
             #[cfg(feature = "IoStarHalf")]
             IoIcon::IoStarHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22690,7 +22676,7 @@ impl Data {
             }
             #[cfg(feature = "IoStarHalfOutline")]
             IoIcon::IoStarHalfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22707,7 +22693,7 @@ impl Data {
             }
             #[cfg(feature = "IoStarHalfSharp")]
             IoIcon::IoStarHalfSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22724,7 +22710,7 @@ impl Data {
             }
             #[cfg(feature = "IoStarOutline")]
             IoIcon::IoStarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22741,7 +22727,7 @@ impl Data {
             }
             #[cfg(feature = "IoStarSharp")]
             IoIcon::IoStarSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22758,7 +22744,7 @@ impl Data {
             }
             #[cfg(feature = "IoStatsChart")]
             IoIcon::IoStatsChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22775,7 +22761,7 @@ impl Data {
             }
             #[cfg(feature = "IoStatsChartOutline")]
             IoIcon::IoStatsChartOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22792,7 +22778,7 @@ impl Data {
             }
             #[cfg(feature = "IoStatsChartSharp")]
             IoIcon::IoStatsChartSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22809,7 +22795,7 @@ impl Data {
             }
             #[cfg(feature = "IoStop")]
             IoIcon::IoStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22826,7 +22812,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopCircle")]
             IoIcon::IoStopCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22843,7 +22829,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopCircleOutline")]
             IoIcon::IoStopCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22860,7 +22846,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopCircleSharp")]
             IoIcon::IoStopCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22877,7 +22863,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopOutline")]
             IoIcon::IoStopOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22894,7 +22880,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopSharp")]
             IoIcon::IoStopSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22911,7 +22897,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopwatch")]
             IoIcon::IoStopwatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22928,7 +22914,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopwatchOutline")]
             IoIcon::IoStopwatchOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22945,7 +22931,7 @@ impl Data {
             }
             #[cfg(feature = "IoStopwatchSharp")]
             IoIcon::IoStopwatchSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22962,7 +22948,7 @@ impl Data {
             }
             #[cfg(feature = "IoStorefront")]
             IoIcon::IoStorefront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22979,7 +22965,7 @@ impl Data {
             }
             #[cfg(feature = "IoStorefrontOutline")]
             IoIcon::IoStorefrontOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22996,7 +22982,7 @@ impl Data {
             }
             #[cfg(feature = "IoStorefrontSharp")]
             IoIcon::IoStorefrontSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23013,7 +22999,7 @@ impl Data {
             }
             #[cfg(feature = "IoSubway")]
             IoIcon::IoSubway => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23030,7 +23016,7 @@ impl Data {
             }
             #[cfg(feature = "IoSubwayOutline")]
             IoIcon::IoSubwayOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23047,7 +23033,7 @@ impl Data {
             }
             #[cfg(feature = "IoSubwaySharp")]
             IoIcon::IoSubwaySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23064,7 +23050,7 @@ impl Data {
             }
             #[cfg(feature = "IoSunny")]
             IoIcon::IoSunny => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23081,7 +23067,7 @@ impl Data {
             }
             #[cfg(feature = "IoSunnyOutline")]
             IoIcon::IoSunnyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23098,7 +23084,7 @@ impl Data {
             }
             #[cfg(feature = "IoSunnySharp")]
             IoIcon::IoSunnySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23115,7 +23101,7 @@ impl Data {
             }
             #[cfg(feature = "IoSwapHorizontal")]
             IoIcon::IoSwapHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23132,7 +23118,7 @@ impl Data {
             }
             #[cfg(feature = "IoSwapHorizontalOutline")]
             IoIcon::IoSwapHorizontalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23149,7 +23135,7 @@ impl Data {
             }
             #[cfg(feature = "IoSwapHorizontalSharp")]
             IoIcon::IoSwapHorizontalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23166,7 +23152,7 @@ impl Data {
             }
             #[cfg(feature = "IoSwapVertical")]
             IoIcon::IoSwapVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23183,7 +23169,7 @@ impl Data {
             }
             #[cfg(feature = "IoSwapVerticalOutline")]
             IoIcon::IoSwapVerticalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23200,7 +23186,7 @@ impl Data {
             }
             #[cfg(feature = "IoSwapVerticalSharp")]
             IoIcon::IoSwapVerticalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23217,7 +23203,7 @@ impl Data {
             }
             #[cfg(feature = "IoSync")]
             IoIcon::IoSync => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23234,7 +23220,7 @@ impl Data {
             }
             #[cfg(feature = "IoSyncCircle")]
             IoIcon::IoSyncCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23251,7 +23237,7 @@ impl Data {
             }
             #[cfg(feature = "IoSyncCircleOutline")]
             IoIcon::IoSyncCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23268,7 +23254,7 @@ impl Data {
             }
             #[cfg(feature = "IoSyncCircleSharp")]
             IoIcon::IoSyncCircleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23285,7 +23271,7 @@ impl Data {
             }
             #[cfg(feature = "IoSyncOutline")]
             IoIcon::IoSyncOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23302,7 +23288,7 @@ impl Data {
             }
             #[cfg(feature = "IoSyncSharp")]
             IoIcon::IoSyncSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23319,7 +23305,7 @@ impl Data {
             }
             #[cfg(feature = "IoTabletLandscape")]
             IoIcon::IoTabletLandscape => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23336,7 +23322,7 @@ impl Data {
             }
             #[cfg(feature = "IoTabletLandscapeOutline")]
             IoIcon::IoTabletLandscapeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23353,7 +23339,7 @@ impl Data {
             }
             #[cfg(feature = "IoTabletLandscapeSharp")]
             IoIcon::IoTabletLandscapeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23370,7 +23356,7 @@ impl Data {
             }
             #[cfg(feature = "IoTabletPortrait")]
             IoIcon::IoTabletPortrait => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23387,7 +23373,7 @@ impl Data {
             }
             #[cfg(feature = "IoTabletPortraitOutline")]
             IoIcon::IoTabletPortraitOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23404,7 +23390,7 @@ impl Data {
             }
             #[cfg(feature = "IoTabletPortraitSharp")]
             IoIcon::IoTabletPortraitSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23421,7 +23407,7 @@ impl Data {
             }
             #[cfg(feature = "IoTelescope")]
             IoIcon::IoTelescope => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23438,7 +23424,7 @@ impl Data {
             }
             #[cfg(feature = "IoTelescopeOutline")]
             IoIcon::IoTelescopeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23455,7 +23441,7 @@ impl Data {
             }
             #[cfg(feature = "IoTelescopeSharp")]
             IoIcon::IoTelescopeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23472,7 +23458,7 @@ impl Data {
             }
             #[cfg(feature = "IoTennisball")]
             IoIcon::IoTennisball => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23489,7 +23475,7 @@ impl Data {
             }
             #[cfg(feature = "IoTennisballOutline")]
             IoIcon::IoTennisballOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23506,7 +23492,7 @@ impl Data {
             }
             #[cfg(feature = "IoTennisballSharp")]
             IoIcon::IoTennisballSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23523,7 +23509,7 @@ impl Data {
             }
             #[cfg(feature = "IoTerminal")]
             IoIcon::IoTerminal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23540,7 +23526,7 @@ impl Data {
             }
             #[cfg(feature = "IoTerminalOutline")]
             IoIcon::IoTerminalOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23557,7 +23543,7 @@ impl Data {
             }
             #[cfg(feature = "IoTerminalSharp")]
             IoIcon::IoTerminalSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23574,7 +23560,7 @@ impl Data {
             }
             #[cfg(feature = "IoText")]
             IoIcon::IoText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23591,7 +23577,7 @@ impl Data {
             }
             #[cfg(feature = "IoTextOutline")]
             IoIcon::IoTextOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23608,7 +23594,7 @@ impl Data {
             }
             #[cfg(feature = "IoTextSharp")]
             IoIcon::IoTextSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23625,7 +23611,7 @@ impl Data {
             }
             #[cfg(feature = "IoThermometer")]
             IoIcon::IoThermometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23642,7 +23628,7 @@ impl Data {
             }
             #[cfg(feature = "IoThermometerOutline")]
             IoIcon::IoThermometerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23659,7 +23645,7 @@ impl Data {
             }
             #[cfg(feature = "IoThermometerSharp")]
             IoIcon::IoThermometerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23676,7 +23662,7 @@ impl Data {
             }
             #[cfg(feature = "IoThumbsDown")]
             IoIcon::IoThumbsDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23693,7 +23679,7 @@ impl Data {
             }
             #[cfg(feature = "IoThumbsDownOutline")]
             IoIcon::IoThumbsDownOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23710,7 +23696,7 @@ impl Data {
             }
             #[cfg(feature = "IoThumbsDownSharp")]
             IoIcon::IoThumbsDownSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23727,7 +23713,7 @@ impl Data {
             }
             #[cfg(feature = "IoThumbsUp")]
             IoIcon::IoThumbsUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23744,7 +23730,7 @@ impl Data {
             }
             #[cfg(feature = "IoThumbsUpOutline")]
             IoIcon::IoThumbsUpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23761,7 +23747,7 @@ impl Data {
             }
             #[cfg(feature = "IoThumbsUpSharp")]
             IoIcon::IoThumbsUpSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23778,7 +23764,7 @@ impl Data {
             }
             #[cfg(feature = "IoThunderstorm")]
             IoIcon::IoThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23795,7 +23781,7 @@ impl Data {
             }
             #[cfg(feature = "IoThunderstormOutline")]
             IoIcon::IoThunderstormOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23812,7 +23798,7 @@ impl Data {
             }
             #[cfg(feature = "IoThunderstormSharp")]
             IoIcon::IoThunderstormSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23829,7 +23815,7 @@ impl Data {
             }
             #[cfg(feature = "IoTicket")]
             IoIcon::IoTicket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23846,7 +23832,7 @@ impl Data {
             }
             #[cfg(feature = "IoTicketOutline")]
             IoIcon::IoTicketOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23863,7 +23849,7 @@ impl Data {
             }
             #[cfg(feature = "IoTicketSharp")]
             IoIcon::IoTicketSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23880,7 +23866,7 @@ impl Data {
             }
             #[cfg(feature = "IoTime")]
             IoIcon::IoTime => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23897,7 +23883,7 @@ impl Data {
             }
             #[cfg(feature = "IoTimeOutline")]
             IoIcon::IoTimeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23914,7 +23900,7 @@ impl Data {
             }
             #[cfg(feature = "IoTimeSharp")]
             IoIcon::IoTimeSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23931,7 +23917,7 @@ impl Data {
             }
             #[cfg(feature = "IoTimer")]
             IoIcon::IoTimer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23948,7 +23934,7 @@ impl Data {
             }
             #[cfg(feature = "IoTimerOutline")]
             IoIcon::IoTimerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23965,7 +23951,7 @@ impl Data {
             }
             #[cfg(feature = "IoTimerSharp")]
             IoIcon::IoTimerSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23982,7 +23968,7 @@ impl Data {
             }
             #[cfg(feature = "IoToday")]
             IoIcon::IoToday => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23999,7 +23985,7 @@ impl Data {
             }
             #[cfg(feature = "IoTodayOutline")]
             IoIcon::IoTodayOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24016,7 +24002,7 @@ impl Data {
             }
             #[cfg(feature = "IoTodaySharp")]
             IoIcon::IoTodaySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24033,7 +24019,7 @@ impl Data {
             }
             #[cfg(feature = "IoToggle")]
             IoIcon::IoToggle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24050,7 +24036,7 @@ impl Data {
             }
             #[cfg(feature = "IoToggleOutline")]
             IoIcon::IoToggleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24067,7 +24053,7 @@ impl Data {
             }
             #[cfg(feature = "IoToggleSharp")]
             IoIcon::IoToggleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24084,7 +24070,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrailSign")]
             IoIcon::IoTrailSign => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24101,7 +24087,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrailSignOutline")]
             IoIcon::IoTrailSignOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24118,7 +24104,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrailSignSharp")]
             IoIcon::IoTrailSignSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24135,7 +24121,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrain")]
             IoIcon::IoTrain => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24152,7 +24138,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrainOutline")]
             IoIcon::IoTrainOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24169,7 +24155,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrainSharp")]
             IoIcon::IoTrainSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24186,7 +24172,7 @@ impl Data {
             }
             #[cfg(feature = "IoTransgender")]
             IoIcon::IoTransgender => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24203,7 +24189,7 @@ impl Data {
             }
             #[cfg(feature = "IoTransgenderOutline")]
             IoIcon::IoTransgenderOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24220,7 +24206,7 @@ impl Data {
             }
             #[cfg(feature = "IoTransgenderSharp")]
             IoIcon::IoTransgenderSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24237,7 +24223,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrash")]
             IoIcon::IoTrash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24254,7 +24240,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrashBin")]
             IoIcon::IoTrashBin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24271,7 +24257,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrashBinOutline")]
             IoIcon::IoTrashBinOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24288,7 +24274,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrashBinSharp")]
             IoIcon::IoTrashBinSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24305,7 +24291,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrashOutline")]
             IoIcon::IoTrashOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24322,7 +24308,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrashSharp")]
             IoIcon::IoTrashSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24339,7 +24325,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrendingDown")]
             IoIcon::IoTrendingDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24356,7 +24342,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrendingDownOutline")]
             IoIcon::IoTrendingDownOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24373,7 +24359,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrendingDownSharp")]
             IoIcon::IoTrendingDownSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24390,7 +24376,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrendingUp")]
             IoIcon::IoTrendingUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24407,7 +24393,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrendingUpOutline")]
             IoIcon::IoTrendingUpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24424,7 +24410,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrendingUpSharp")]
             IoIcon::IoTrendingUpSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24441,7 +24427,7 @@ impl Data {
             }
             #[cfg(feature = "IoTriangle")]
             IoIcon::IoTriangle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24458,7 +24444,7 @@ impl Data {
             }
             #[cfg(feature = "IoTriangleOutline")]
             IoIcon::IoTriangleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24475,7 +24461,7 @@ impl Data {
             }
             #[cfg(feature = "IoTriangleSharp")]
             IoIcon::IoTriangleSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24492,7 +24478,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrophy")]
             IoIcon::IoTrophy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24509,7 +24495,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrophyOutline")]
             IoIcon::IoTrophyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24526,7 +24512,7 @@ impl Data {
             }
             #[cfg(feature = "IoTrophySharp")]
             IoIcon::IoTrophySharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24543,7 +24529,7 @@ impl Data {
             }
             #[cfg(feature = "IoTv")]
             IoIcon::IoTv => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24560,7 +24546,7 @@ impl Data {
             }
             #[cfg(feature = "IoTvOutline")]
             IoIcon::IoTvOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24577,7 +24563,7 @@ impl Data {
             }
             #[cfg(feature = "IoTvSharp")]
             IoIcon::IoTvSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24594,7 +24580,7 @@ impl Data {
             }
             #[cfg(feature = "IoUmbrella")]
             IoIcon::IoUmbrella => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24611,7 +24597,7 @@ impl Data {
             }
             #[cfg(feature = "IoUmbrellaOutline")]
             IoIcon::IoUmbrellaOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24628,7 +24614,7 @@ impl Data {
             }
             #[cfg(feature = "IoUmbrellaSharp")]
             IoIcon::IoUmbrellaSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24645,7 +24631,7 @@ impl Data {
             }
             #[cfg(feature = "IoUnlink")]
             IoIcon::IoUnlink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24662,7 +24648,7 @@ impl Data {
             }
             #[cfg(feature = "IoUnlinkOutline")]
             IoIcon::IoUnlinkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24679,7 +24665,7 @@ impl Data {
             }
             #[cfg(feature = "IoUnlinkSharp")]
             IoIcon::IoUnlinkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24696,7 +24682,7 @@ impl Data {
             }
             #[cfg(feature = "IoVideocam")]
             IoIcon::IoVideocam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24713,7 +24699,7 @@ impl Data {
             }
             #[cfg(feature = "IoVideocamOff")]
             IoIcon::IoVideocamOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24730,7 +24716,7 @@ impl Data {
             }
             #[cfg(feature = "IoVideocamOffOutline")]
             IoIcon::IoVideocamOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24747,7 +24733,7 @@ impl Data {
             }
             #[cfg(feature = "IoVideocamOffSharp")]
             IoIcon::IoVideocamOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24764,7 +24750,7 @@ impl Data {
             }
             #[cfg(feature = "IoVideocamOutline")]
             IoIcon::IoVideocamOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24781,7 +24767,7 @@ impl Data {
             }
             #[cfg(feature = "IoVideocamSharp")]
             IoIcon::IoVideocamSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24798,7 +24784,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeHigh")]
             IoIcon::IoVolumeHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24815,7 +24801,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeHighOutline")]
             IoIcon::IoVolumeHighOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24832,7 +24818,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeHighSharp")]
             IoIcon::IoVolumeHighSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24849,7 +24835,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeLow")]
             IoIcon::IoVolumeLow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24866,7 +24852,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeLowOutline")]
             IoIcon::IoVolumeLowOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24883,7 +24869,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeLowSharp")]
             IoIcon::IoVolumeLowSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24900,7 +24886,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeMedium")]
             IoIcon::IoVolumeMedium => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24917,7 +24903,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeMediumOutline")]
             IoIcon::IoVolumeMediumOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24934,7 +24920,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeMediumSharp")]
             IoIcon::IoVolumeMediumSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24951,7 +24937,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeMute")]
             IoIcon::IoVolumeMute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24968,7 +24954,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeMuteOutline")]
             IoIcon::IoVolumeMuteOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24985,7 +24971,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeMuteSharp")]
             IoIcon::IoVolumeMuteSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25002,7 +24988,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeOff")]
             IoIcon::IoVolumeOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25019,7 +25005,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeOffOutline")]
             IoIcon::IoVolumeOffOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25036,7 +25022,7 @@ impl Data {
             }
             #[cfg(feature = "IoVolumeOffSharp")]
             IoIcon::IoVolumeOffSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25053,7 +25039,7 @@ impl Data {
             }
             #[cfg(feature = "IoWalk")]
             IoIcon::IoWalk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25070,7 +25056,7 @@ impl Data {
             }
             #[cfg(feature = "IoWalkOutline")]
             IoIcon::IoWalkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25087,7 +25073,7 @@ impl Data {
             }
             #[cfg(feature = "IoWalkSharp")]
             IoIcon::IoWalkSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25104,7 +25090,7 @@ impl Data {
             }
             #[cfg(feature = "IoWallet")]
             IoIcon::IoWallet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25121,7 +25107,7 @@ impl Data {
             }
             #[cfg(feature = "IoWalletOutline")]
             IoIcon::IoWalletOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25138,7 +25124,7 @@ impl Data {
             }
             #[cfg(feature = "IoWalletSharp")]
             IoIcon::IoWalletSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25155,7 +25141,7 @@ impl Data {
             }
             #[cfg(feature = "IoWarning")]
             IoIcon::IoWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25172,7 +25158,7 @@ impl Data {
             }
             #[cfg(feature = "IoWarningOutline")]
             IoIcon::IoWarningOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25189,7 +25175,7 @@ impl Data {
             }
             #[cfg(feature = "IoWarningSharp")]
             IoIcon::IoWarningSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25206,7 +25192,7 @@ impl Data {
             }
             #[cfg(feature = "IoWatch")]
             IoIcon::IoWatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25223,7 +25209,7 @@ impl Data {
             }
             #[cfg(feature = "IoWatchOutline")]
             IoIcon::IoWatchOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25240,7 +25226,7 @@ impl Data {
             }
             #[cfg(feature = "IoWatchSharp")]
             IoIcon::IoWatchSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25257,7 +25243,7 @@ impl Data {
             }
             #[cfg(feature = "IoWater")]
             IoIcon::IoWater => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25274,7 +25260,7 @@ impl Data {
             }
             #[cfg(feature = "IoWaterOutline")]
             IoIcon::IoWaterOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25291,7 +25277,7 @@ impl Data {
             }
             #[cfg(feature = "IoWaterSharp")]
             IoIcon::IoWaterSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25308,7 +25294,7 @@ impl Data {
             }
             #[cfg(feature = "IoWifi")]
             IoIcon::IoWifi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25325,7 +25311,7 @@ impl Data {
             }
             #[cfg(feature = "IoWifiOutline")]
             IoIcon::IoWifiOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25342,7 +25328,7 @@ impl Data {
             }
             #[cfg(feature = "IoWifiSharp")]
             IoIcon::IoWifiSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25359,7 +25345,7 @@ impl Data {
             }
             #[cfg(feature = "IoWine")]
             IoIcon::IoWine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25376,7 +25362,7 @@ impl Data {
             }
             #[cfg(feature = "IoWineOutline")]
             IoIcon::IoWineOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25393,7 +25379,7 @@ impl Data {
             }
             #[cfg(feature = "IoWineSharp")]
             IoIcon::IoWineSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25410,7 +25396,7 @@ impl Data {
             }
             #[cfg(feature = "IoWoman")]
             IoIcon::IoWoman => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25427,7 +25413,7 @@ impl Data {
             }
             #[cfg(feature = "IoWomanOutline")]
             IoIcon::IoWomanOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25444,7 +25430,7 @@ impl Data {
             }
             #[cfg(feature = "IoWomanSharp")]
             IoIcon::IoWomanSharp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25461,62 +25447,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosIoIcon(
-    cx: leptos::Scope,
-    icon: IoIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

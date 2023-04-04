@@ -25,6 +25,7 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 
     [dependencies]
     leptos = { version = "0.2.5", default-features = false }
+    leptos-icons-core = { path = "../leptos-icons-core" }
     serde = { version = "1", features = ["derive"], optional = true }
 
     [features]

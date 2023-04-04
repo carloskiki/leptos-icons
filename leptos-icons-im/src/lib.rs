@@ -1002,26 +1002,12 @@ pub enum ImIcon {
     ImZoomOut,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: ImIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for ImIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "Im500px")]
             ImIcon::Im500px => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1038,7 +1024,7 @@ impl Data {
             }
             #[cfg(feature = "ImAccessibility")]
             ImIcon::ImAccessibility => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1055,7 +1041,7 @@ impl Data {
             }
             #[cfg(feature = "ImAddressBook")]
             ImIcon::ImAddressBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1072,7 +1058,7 @@ impl Data {
             }
             #[cfg(feature = "ImAidKit")]
             ImIcon::ImAidKit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1089,7 +1075,7 @@ impl Data {
             }
             #[cfg(feature = "ImAirplane")]
             ImIcon::ImAirplane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1106,7 +1092,7 @@ impl Data {
             }
             #[cfg(feature = "ImAlarm")]
             ImIcon::ImAlarm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1123,7 +1109,7 @@ impl Data {
             }
             #[cfg(feature = "ImAmazon")]
             ImIcon::ImAmazon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1140,7 +1126,7 @@ impl Data {
             }
             #[cfg(feature = "ImAndroid")]
             ImIcon::ImAndroid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1157,7 +1143,7 @@ impl Data {
             }
             #[cfg(feature = "ImAngry")]
             ImIcon::ImAngry => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1174,7 +1160,7 @@ impl Data {
             }
             #[cfg(feature = "ImAngry2")]
             ImIcon::ImAngry2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1191,7 +1177,7 @@ impl Data {
             }
             #[cfg(feature = "ImAppleinc")]
             ImIcon::ImAppleinc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1208,7 +1194,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowDown")]
             ImIcon::ImArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1225,7 +1211,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowDown2")]
             ImIcon::ImArrowDown2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1242,7 +1228,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowDownLeft")]
             ImIcon::ImArrowDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1259,7 +1245,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowDownLeft2")]
             ImIcon::ImArrowDownLeft2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1276,7 +1262,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowDownRight")]
             ImIcon::ImArrowDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1293,7 +1279,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowDownRight2")]
             ImIcon::ImArrowDownRight2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1310,7 +1296,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowLeft")]
             ImIcon::ImArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1327,7 +1313,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowLeft2")]
             ImIcon::ImArrowLeft2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1344,7 +1330,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowRight")]
             ImIcon::ImArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1361,7 +1347,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowRight2")]
             ImIcon::ImArrowRight2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1378,7 +1364,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowUp")]
             ImIcon::ImArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1395,7 +1381,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowUp2")]
             ImIcon::ImArrowUp2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1412,7 +1398,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowUpLeft")]
             ImIcon::ImArrowUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1429,7 +1415,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowUpLeft2")]
             ImIcon::ImArrowUpLeft2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1446,7 +1432,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowUpRight")]
             ImIcon::ImArrowUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1463,7 +1449,7 @@ impl Data {
             }
             #[cfg(feature = "ImArrowUpRight2")]
             ImIcon::ImArrowUpRight2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1480,7 +1466,7 @@ impl Data {
             }
             #[cfg(feature = "ImAttachment")]
             ImIcon::ImAttachment => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1497,7 +1483,7 @@ impl Data {
             }
             #[cfg(feature = "ImBackward")]
             ImIcon::ImBackward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1514,7 +1500,7 @@ impl Data {
             }
             #[cfg(feature = "ImBackward2")]
             ImIcon::ImBackward2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1531,7 +1517,7 @@ impl Data {
             }
             #[cfg(feature = "ImBaffled")]
             ImIcon::ImBaffled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1548,7 +1534,7 @@ impl Data {
             }
             #[cfg(feature = "ImBaffled2")]
             ImIcon::ImBaffled2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1565,7 +1551,7 @@ impl Data {
             }
             #[cfg(feature = "ImBarcode")]
             ImIcon::ImBarcode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1582,7 +1568,7 @@ impl Data {
             }
             #[cfg(feature = "ImBasecamp")]
             ImIcon::ImBasecamp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1599,7 +1585,7 @@ impl Data {
             }
             #[cfg(feature = "ImBehance")]
             ImIcon::ImBehance => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1616,7 +1602,7 @@ impl Data {
             }
             #[cfg(feature = "ImBehance2")]
             ImIcon::ImBehance2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1633,7 +1619,7 @@ impl Data {
             }
             #[cfg(feature = "ImBell")]
             ImIcon::ImBell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1650,7 +1636,7 @@ impl Data {
             }
             #[cfg(feature = "ImBin")]
             ImIcon::ImBin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1667,7 +1653,7 @@ impl Data {
             }
             #[cfg(feature = "ImBin2")]
             ImIcon::ImBin2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1684,7 +1670,7 @@ impl Data {
             }
             #[cfg(feature = "ImBinoculars")]
             ImIcon::ImBinoculars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1701,7 +1687,7 @@ impl Data {
             }
             #[cfg(feature = "ImBlocked")]
             ImIcon::ImBlocked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1718,7 +1704,7 @@ impl Data {
             }
             #[cfg(feature = "ImBlog")]
             ImIcon::ImBlog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1735,7 +1721,7 @@ impl Data {
             }
             #[cfg(feature = "ImBlogger")]
             ImIcon::ImBlogger => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1752,7 +1738,7 @@ impl Data {
             }
             #[cfg(feature = "ImBlogger2")]
             ImIcon::ImBlogger2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1769,7 +1755,7 @@ impl Data {
             }
             #[cfg(feature = "ImBold")]
             ImIcon::ImBold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1786,7 +1772,7 @@ impl Data {
             }
             #[cfg(feature = "ImBook")]
             ImIcon::ImBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1803,7 +1789,7 @@ impl Data {
             }
             #[cfg(feature = "ImBookmark")]
             ImIcon::ImBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1820,7 +1806,7 @@ impl Data {
             }
             #[cfg(feature = "ImBookmarks")]
             ImIcon::ImBookmarks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1837,7 +1823,7 @@ impl Data {
             }
             #[cfg(feature = "ImBooks")]
             ImIcon::ImBooks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1854,7 +1840,7 @@ impl Data {
             }
             #[cfg(feature = "ImBoxAdd")]
             ImIcon::ImBoxAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1871,7 +1857,7 @@ impl Data {
             }
             #[cfg(feature = "ImBoxRemove")]
             ImIcon::ImBoxRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1888,7 +1874,7 @@ impl Data {
             }
             #[cfg(feature = "ImBriefcase")]
             ImIcon::ImBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1905,7 +1891,7 @@ impl Data {
             }
             #[cfg(feature = "ImBrightnessContrast")]
             ImIcon::ImBrightnessContrast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1922,7 +1908,7 @@ impl Data {
             }
             #[cfg(feature = "ImBubble")]
             ImIcon::ImBubble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1939,7 +1925,7 @@ impl Data {
             }
             #[cfg(feature = "ImBubble2")]
             ImIcon::ImBubble2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1956,7 +1942,7 @@ impl Data {
             }
             #[cfg(feature = "ImBubbles")]
             ImIcon::ImBubbles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1973,7 +1959,7 @@ impl Data {
             }
             #[cfg(feature = "ImBubbles2")]
             ImIcon::ImBubbles2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1990,7 +1976,7 @@ impl Data {
             }
             #[cfg(feature = "ImBubbles3")]
             ImIcon::ImBubbles3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2007,7 +1993,7 @@ impl Data {
             }
             #[cfg(feature = "ImBubbles4")]
             ImIcon::ImBubbles4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2024,7 +2010,7 @@ impl Data {
             }
             #[cfg(feature = "ImBug")]
             ImIcon::ImBug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2041,7 +2027,7 @@ impl Data {
             }
             #[cfg(feature = "ImBullhorn")]
             ImIcon::ImBullhorn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2058,7 +2044,7 @@ impl Data {
             }
             #[cfg(feature = "ImCalculator")]
             ImIcon::ImCalculator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2075,7 +2061,7 @@ impl Data {
             }
             #[cfg(feature = "ImCalendar")]
             ImIcon::ImCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2092,7 +2078,7 @@ impl Data {
             }
             #[cfg(feature = "ImCamera")]
             ImIcon::ImCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2109,7 +2095,7 @@ impl Data {
             }
             #[cfg(feature = "ImCancelCircle")]
             ImIcon::ImCancelCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2126,7 +2112,7 @@ impl Data {
             }
             #[cfg(feature = "ImCart")]
             ImIcon::ImCart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2143,7 +2129,7 @@ impl Data {
             }
             #[cfg(feature = "ImCheckboxChecked")]
             ImIcon::ImCheckboxChecked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2160,7 +2146,7 @@ impl Data {
             }
             #[cfg(feature = "ImCheckboxUnchecked")]
             ImIcon::ImCheckboxUnchecked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2177,7 +2163,7 @@ impl Data {
             }
             #[cfg(feature = "ImCheckmark")]
             ImIcon::ImCheckmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2194,7 +2180,7 @@ impl Data {
             }
             #[cfg(feature = "ImCheckmark2")]
             ImIcon::ImCheckmark2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2211,7 +2197,7 @@ impl Data {
             }
             #[cfg(feature = "ImChrome")]
             ImIcon::ImChrome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2228,7 +2214,7 @@ impl Data {
             }
             #[cfg(feature = "ImCircleDown")]
             ImIcon::ImCircleDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2245,7 +2231,7 @@ impl Data {
             }
             #[cfg(feature = "ImCircleLeft")]
             ImIcon::ImCircleLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2262,7 +2248,7 @@ impl Data {
             }
             #[cfg(feature = "ImCircleRight")]
             ImIcon::ImCircleRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2279,7 +2265,7 @@ impl Data {
             }
             #[cfg(feature = "ImCircleUp")]
             ImIcon::ImCircleUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2296,7 +2282,7 @@ impl Data {
             }
             #[cfg(feature = "ImClearFormatting")]
             ImIcon::ImClearFormatting => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2313,7 +2299,7 @@ impl Data {
             }
             #[cfg(feature = "ImClipboard")]
             ImIcon::ImClipboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2330,7 +2316,7 @@ impl Data {
             }
             #[cfg(feature = "ImClock")]
             ImIcon::ImClock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2347,7 +2333,7 @@ impl Data {
             }
             #[cfg(feature = "ImClock2")]
             ImIcon::ImClock2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2364,7 +2350,7 @@ impl Data {
             }
             #[cfg(feature = "ImCloud")]
             ImIcon::ImCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2381,7 +2367,7 @@ impl Data {
             }
             #[cfg(feature = "ImCloudCheck")]
             ImIcon::ImCloudCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2398,7 +2384,7 @@ impl Data {
             }
             #[cfg(feature = "ImCloudDownload")]
             ImIcon::ImCloudDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2415,7 +2401,7 @@ impl Data {
             }
             #[cfg(feature = "ImCloudUpload")]
             ImIcon::ImCloudUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2432,7 +2418,7 @@ impl Data {
             }
             #[cfg(feature = "ImClubs")]
             ImIcon::ImClubs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2449,7 +2435,7 @@ impl Data {
             }
             #[cfg(feature = "ImCodepen")]
             ImIcon::ImCodepen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2466,7 +2452,7 @@ impl Data {
             }
             #[cfg(feature = "ImCog")]
             ImIcon::ImCog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2483,7 +2469,7 @@ impl Data {
             }
             #[cfg(feature = "ImCogs")]
             ImIcon::ImCogs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2500,7 +2486,7 @@ impl Data {
             }
             #[cfg(feature = "ImCoinDollar")]
             ImIcon::ImCoinDollar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2517,7 +2503,7 @@ impl Data {
             }
             #[cfg(feature = "ImCoinEuro")]
             ImIcon::ImCoinEuro => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2534,7 +2520,7 @@ impl Data {
             }
             #[cfg(feature = "ImCoinPound")]
             ImIcon::ImCoinPound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2551,7 +2537,7 @@ impl Data {
             }
             #[cfg(feature = "ImCoinYen")]
             ImIcon::ImCoinYen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2568,7 +2554,7 @@ impl Data {
             }
             #[cfg(feature = "ImCommand")]
             ImIcon::ImCommand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2585,7 +2571,7 @@ impl Data {
             }
             #[cfg(feature = "ImCompass")]
             ImIcon::ImCompass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2602,7 +2588,7 @@ impl Data {
             }
             #[cfg(feature = "ImCompass2")]
             ImIcon::ImCompass2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2619,7 +2605,7 @@ impl Data {
             }
             #[cfg(feature = "ImConfused")]
             ImIcon::ImConfused => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2636,7 +2622,7 @@ impl Data {
             }
             #[cfg(feature = "ImConfused2")]
             ImIcon::ImConfused2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2653,7 +2639,7 @@ impl Data {
             }
             #[cfg(feature = "ImConnection")]
             ImIcon::ImConnection => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2670,7 +2656,7 @@ impl Data {
             }
             #[cfg(feature = "ImContrast")]
             ImIcon::ImContrast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2687,7 +2673,7 @@ impl Data {
             }
             #[cfg(feature = "ImCool")]
             ImIcon::ImCool => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2704,7 +2690,7 @@ impl Data {
             }
             #[cfg(feature = "ImCool2")]
             ImIcon::ImCool2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2721,7 +2707,7 @@ impl Data {
             }
             #[cfg(feature = "ImCopy")]
             ImIcon::ImCopy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2738,7 +2724,7 @@ impl Data {
             }
             #[cfg(feature = "ImCreditCard")]
             ImIcon::ImCreditCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2755,7 +2741,7 @@ impl Data {
             }
             #[cfg(feature = "ImCrop")]
             ImIcon::ImCrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2772,7 +2758,7 @@ impl Data {
             }
             #[cfg(feature = "ImCross")]
             ImIcon::ImCross => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2789,7 +2775,7 @@ impl Data {
             }
             #[cfg(feature = "ImCrying")]
             ImIcon::ImCrying => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2806,7 +2792,7 @@ impl Data {
             }
             #[cfg(feature = "ImCrying2")]
             ImIcon::ImCrying2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2823,7 +2809,7 @@ impl Data {
             }
             #[cfg(feature = "ImCss3")]
             ImIcon::ImCss3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2840,7 +2826,7 @@ impl Data {
             }
             #[cfg(feature = "ImCtrl")]
             ImIcon::ImCtrl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2857,7 +2843,7 @@ impl Data {
             }
             #[cfg(feature = "ImDatabase")]
             ImIcon::ImDatabase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2874,7 +2860,7 @@ impl Data {
             }
             #[cfg(feature = "ImDelicious")]
             ImIcon::ImDelicious => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2891,7 +2877,7 @@ impl Data {
             }
             #[cfg(feature = "ImDeviantart")]
             ImIcon::ImDeviantart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2908,7 +2894,7 @@ impl Data {
             }
             #[cfg(feature = "ImDiamonds")]
             ImIcon::ImDiamonds => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2925,7 +2911,7 @@ impl Data {
             }
             #[cfg(feature = "ImDice")]
             ImIcon::ImDice => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2942,7 +2928,7 @@ impl Data {
             }
             #[cfg(feature = "ImDisplay")]
             ImIcon::ImDisplay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2959,7 +2945,7 @@ impl Data {
             }
             #[cfg(feature = "ImDownload")]
             ImIcon::ImDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2976,7 +2962,7 @@ impl Data {
             }
             #[cfg(feature = "ImDownload2")]
             ImIcon::ImDownload2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2993,7 +2979,7 @@ impl Data {
             }
             #[cfg(feature = "ImDownload3")]
             ImIcon::ImDownload3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3010,7 +2996,7 @@ impl Data {
             }
             #[cfg(feature = "ImDrawer")]
             ImIcon::ImDrawer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3027,7 +3013,7 @@ impl Data {
             }
             #[cfg(feature = "ImDrawer2")]
             ImIcon::ImDrawer2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3044,7 +3030,7 @@ impl Data {
             }
             #[cfg(feature = "ImDribbble")]
             ImIcon::ImDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3061,7 +3047,7 @@ impl Data {
             }
             #[cfg(feature = "ImDrive")]
             ImIcon::ImDrive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3078,7 +3064,7 @@ impl Data {
             }
             #[cfg(feature = "ImDropbox")]
             ImIcon::ImDropbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3095,7 +3081,7 @@ impl Data {
             }
             #[cfg(feature = "ImDroplet")]
             ImIcon::ImDroplet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3112,7 +3098,7 @@ impl Data {
             }
             #[cfg(feature = "ImEarth")]
             ImIcon::ImEarth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3129,7 +3115,7 @@ impl Data {
             }
             #[cfg(feature = "ImEdge")]
             ImIcon::ImEdge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3146,7 +3132,7 @@ impl Data {
             }
             #[cfg(feature = "ImEject")]
             ImIcon::ImEject => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3163,7 +3149,7 @@ impl Data {
             }
             #[cfg(feature = "ImEllo")]
             ImIcon::ImEllo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3180,7 +3166,7 @@ impl Data {
             }
             #[cfg(feature = "ImEmbed")]
             ImIcon::ImEmbed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3197,7 +3183,7 @@ impl Data {
             }
             #[cfg(feature = "ImEmbed2")]
             ImIcon::ImEmbed2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3214,7 +3200,7 @@ impl Data {
             }
             #[cfg(feature = "ImEnlarge")]
             ImIcon::ImEnlarge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3231,7 +3217,7 @@ impl Data {
             }
             #[cfg(feature = "ImEnlarge2")]
             ImIcon::ImEnlarge2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3248,7 +3234,7 @@ impl Data {
             }
             #[cfg(feature = "ImEnter")]
             ImIcon::ImEnter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3265,7 +3251,7 @@ impl Data {
             }
             #[cfg(feature = "ImEnvelop")]
             ImIcon::ImEnvelop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3282,7 +3268,7 @@ impl Data {
             }
             #[cfg(feature = "ImEqualizer")]
             ImIcon::ImEqualizer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3299,7 +3285,7 @@ impl Data {
             }
             #[cfg(feature = "ImEqualizer2")]
             ImIcon::ImEqualizer2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3316,7 +3302,7 @@ impl Data {
             }
             #[cfg(feature = "ImEvil")]
             ImIcon::ImEvil => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3333,7 +3319,7 @@ impl Data {
             }
             #[cfg(feature = "ImEvil2")]
             ImIcon::ImEvil2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3350,7 +3336,7 @@ impl Data {
             }
             #[cfg(feature = "ImExit")]
             ImIcon::ImExit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3367,7 +3353,7 @@ impl Data {
             }
             #[cfg(feature = "ImEye")]
             ImIcon::ImEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3384,7 +3370,7 @@ impl Data {
             }
             #[cfg(feature = "ImEyeBlocked")]
             ImIcon::ImEyeBlocked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3401,7 +3387,7 @@ impl Data {
             }
             #[cfg(feature = "ImEyeMinus")]
             ImIcon::ImEyeMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3418,7 +3404,7 @@ impl Data {
             }
             #[cfg(feature = "ImEyePlus")]
             ImIcon::ImEyePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3435,7 +3421,7 @@ impl Data {
             }
             #[cfg(feature = "ImEyedropper")]
             ImIcon::ImEyedropper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3452,7 +3438,7 @@ impl Data {
             }
             #[cfg(feature = "ImFacebook")]
             ImIcon::ImFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3469,7 +3455,7 @@ impl Data {
             }
             #[cfg(feature = "ImFacebook2")]
             ImIcon::ImFacebook2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3486,7 +3472,7 @@ impl Data {
             }
             #[cfg(feature = "ImFeed")]
             ImIcon::ImFeed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3503,7 +3489,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileEmpty")]
             ImIcon::ImFileEmpty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3520,7 +3506,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileExcel")]
             ImIcon::ImFileExcel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3537,7 +3523,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileMusic")]
             ImIcon::ImFileMusic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3554,7 +3540,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileOpenoffice")]
             ImIcon::ImFileOpenoffice => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3571,7 +3557,7 @@ impl Data {
             }
             #[cfg(feature = "ImFilePdf")]
             ImIcon::ImFilePdf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3588,7 +3574,7 @@ impl Data {
             }
             #[cfg(feature = "ImFilePicture")]
             ImIcon::ImFilePicture => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3605,7 +3591,7 @@ impl Data {
             }
             #[cfg(feature = "ImFilePlay")]
             ImIcon::ImFilePlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3622,7 +3608,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileText")]
             ImIcon::ImFileText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3639,7 +3625,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileText2")]
             ImIcon::ImFileText2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3656,7 +3642,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileVideo")]
             ImIcon::ImFileVideo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3673,7 +3659,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileWord")]
             ImIcon::ImFileWord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3690,7 +3676,7 @@ impl Data {
             }
             #[cfg(feature = "ImFileZip")]
             ImIcon::ImFileZip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3707,7 +3693,7 @@ impl Data {
             }
             #[cfg(feature = "ImFilesEmpty")]
             ImIcon::ImFilesEmpty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3724,7 +3710,7 @@ impl Data {
             }
             #[cfg(feature = "ImFilm")]
             ImIcon::ImFilm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3741,7 +3727,7 @@ impl Data {
             }
             #[cfg(feature = "ImFilter")]
             ImIcon::ImFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3758,7 +3744,7 @@ impl Data {
             }
             #[cfg(feature = "ImFinder")]
             ImIcon::ImFinder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3775,7 +3761,7 @@ impl Data {
             }
             #[cfg(feature = "ImFire")]
             ImIcon::ImFire => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3792,7 +3778,7 @@ impl Data {
             }
             #[cfg(feature = "ImFirefox")]
             ImIcon::ImFirefox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3809,7 +3795,7 @@ impl Data {
             }
             #[cfg(feature = "ImFirst")]
             ImIcon::ImFirst => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3826,7 +3812,7 @@ impl Data {
             }
             #[cfg(feature = "ImFlag")]
             ImIcon::ImFlag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3843,7 +3829,7 @@ impl Data {
             }
             #[cfg(feature = "ImFlattr")]
             ImIcon::ImFlattr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3860,7 +3846,7 @@ impl Data {
             }
             #[cfg(feature = "ImFlickr")]
             ImIcon::ImFlickr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3877,7 +3863,7 @@ impl Data {
             }
             #[cfg(feature = "ImFlickr2")]
             ImIcon::ImFlickr2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3894,7 +3880,7 @@ impl Data {
             }
             #[cfg(feature = "ImFlickr3")]
             ImIcon::ImFlickr3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3911,7 +3897,7 @@ impl Data {
             }
             #[cfg(feature = "ImFlickr4")]
             ImIcon::ImFlickr4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3928,7 +3914,7 @@ impl Data {
             }
             #[cfg(feature = "ImFloppyDisk")]
             ImIcon::ImFloppyDisk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3945,7 +3931,7 @@ impl Data {
             }
             #[cfg(feature = "ImFolder")]
             ImIcon::ImFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3962,7 +3948,7 @@ impl Data {
             }
             #[cfg(feature = "ImFolderDownload")]
             ImIcon::ImFolderDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3979,7 +3965,7 @@ impl Data {
             }
             #[cfg(feature = "ImFolderMinus")]
             ImIcon::ImFolderMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3996,7 +3982,7 @@ impl Data {
             }
             #[cfg(feature = "ImFolderOpen")]
             ImIcon::ImFolderOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4013,7 +3999,7 @@ impl Data {
             }
             #[cfg(feature = "ImFolderPlus")]
             ImIcon::ImFolderPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4030,7 +4016,7 @@ impl Data {
             }
             #[cfg(feature = "ImFolderUpload")]
             ImIcon::ImFolderUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4047,7 +4033,7 @@ impl Data {
             }
             #[cfg(feature = "ImFont")]
             ImIcon::ImFont => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4064,7 +4050,7 @@ impl Data {
             }
             #[cfg(feature = "ImFontSize")]
             ImIcon::ImFontSize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4081,7 +4067,7 @@ impl Data {
             }
             #[cfg(feature = "ImForward")]
             ImIcon::ImForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4098,7 +4084,7 @@ impl Data {
             }
             #[cfg(feature = "ImForward2")]
             ImIcon::ImForward2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4115,7 +4101,7 @@ impl Data {
             }
             #[cfg(feature = "ImForward3")]
             ImIcon::ImForward3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4132,7 +4118,7 @@ impl Data {
             }
             #[cfg(feature = "ImFoursquare")]
             ImIcon::ImFoursquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4149,7 +4135,7 @@ impl Data {
             }
             #[cfg(feature = "ImFrustrated")]
             ImIcon::ImFrustrated => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4166,7 +4152,7 @@ impl Data {
             }
             #[cfg(feature = "ImFrustrated2")]
             ImIcon::ImFrustrated2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4183,7 +4169,7 @@ impl Data {
             }
             #[cfg(feature = "ImGift")]
             ImIcon::ImGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4200,7 +4186,7 @@ impl Data {
             }
             #[cfg(feature = "ImGit")]
             ImIcon::ImGit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4217,7 +4203,7 @@ impl Data {
             }
             #[cfg(feature = "ImGithub")]
             ImIcon::ImGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4234,7 +4220,7 @@ impl Data {
             }
             #[cfg(feature = "ImGlass")]
             ImIcon::ImGlass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4251,7 +4237,7 @@ impl Data {
             }
             #[cfg(feature = "ImGlass2")]
             ImIcon::ImGlass2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4268,7 +4254,7 @@ impl Data {
             }
             #[cfg(feature = "ImGoogle")]
             ImIcon::ImGoogle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4285,7 +4271,7 @@ impl Data {
             }
             #[cfg(feature = "ImGoogle2")]
             ImIcon::ImGoogle2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4302,7 +4288,7 @@ impl Data {
             }
             #[cfg(feature = "ImGoogle3")]
             ImIcon::ImGoogle3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4319,7 +4305,7 @@ impl Data {
             }
             #[cfg(feature = "ImGoogleDrive")]
             ImIcon::ImGoogleDrive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4336,7 +4322,7 @@ impl Data {
             }
             #[cfg(feature = "ImGooglePlus")]
             ImIcon::ImGooglePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4353,7 +4339,7 @@ impl Data {
             }
             #[cfg(feature = "ImGooglePlus2")]
             ImIcon::ImGooglePlus2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4370,7 +4356,7 @@ impl Data {
             }
             #[cfg(feature = "ImGooglePlus3")]
             ImIcon::ImGooglePlus3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4387,7 +4373,7 @@ impl Data {
             }
             #[cfg(feature = "ImGrin")]
             ImIcon::ImGrin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4404,7 +4390,7 @@ impl Data {
             }
             #[cfg(feature = "ImGrin2")]
             ImIcon::ImGrin2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4421,7 +4407,7 @@ impl Data {
             }
             #[cfg(feature = "ImHackernews")]
             ImIcon::ImHackernews => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4438,7 +4424,7 @@ impl Data {
             }
             #[cfg(feature = "ImHammer")]
             ImIcon::ImHammer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4455,7 +4441,7 @@ impl Data {
             }
             #[cfg(feature = "ImHammer2")]
             ImIcon::ImHammer2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4472,7 +4458,7 @@ impl Data {
             }
             #[cfg(feature = "ImHangouts")]
             ImIcon::ImHangouts => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4489,7 +4475,7 @@ impl Data {
             }
             #[cfg(feature = "ImHappy")]
             ImIcon::ImHappy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4506,7 +4492,7 @@ impl Data {
             }
             #[cfg(feature = "ImHappy2")]
             ImIcon::ImHappy2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4523,7 +4509,7 @@ impl Data {
             }
             #[cfg(feature = "ImHeadphones")]
             ImIcon::ImHeadphones => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4540,7 +4526,7 @@ impl Data {
             }
             #[cfg(feature = "ImHeart")]
             ImIcon::ImHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4557,7 +4543,7 @@ impl Data {
             }
             #[cfg(feature = "ImHeartBroken")]
             ImIcon::ImHeartBroken => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4574,7 +4560,7 @@ impl Data {
             }
             #[cfg(feature = "ImHipster")]
             ImIcon::ImHipster => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4591,7 +4577,7 @@ impl Data {
             }
             #[cfg(feature = "ImHipster2")]
             ImIcon::ImHipster2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4608,7 +4594,7 @@ impl Data {
             }
             #[cfg(feature = "ImHistory")]
             ImIcon::ImHistory => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4625,7 +4611,7 @@ impl Data {
             }
             #[cfg(feature = "ImHome")]
             ImIcon::ImHome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4642,7 +4628,7 @@ impl Data {
             }
             #[cfg(feature = "ImHome2")]
             ImIcon::ImHome2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4659,7 +4645,7 @@ impl Data {
             }
             #[cfg(feature = "ImHome3")]
             ImIcon::ImHome3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4676,7 +4662,7 @@ impl Data {
             }
             #[cfg(feature = "ImHourGlass")]
             ImIcon::ImHourGlass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4693,7 +4679,7 @@ impl Data {
             }
             #[cfg(feature = "ImHtmlFive")]
             ImIcon::ImHtmlFive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4710,7 +4696,7 @@ impl Data {
             }
             #[cfg(feature = "ImHtmlFive2")]
             ImIcon::ImHtmlFive2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4727,7 +4713,7 @@ impl Data {
             }
             #[cfg(feature = "ImIcoMoon")]
             ImIcon::ImIcoMoon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4744,7 +4730,7 @@ impl Data {
             }
             #[cfg(feature = "ImIe")]
             ImIcon::ImIe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4761,7 +4747,7 @@ impl Data {
             }
             #[cfg(feature = "ImImage")]
             ImIcon::ImImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4778,7 +4764,7 @@ impl Data {
             }
             #[cfg(feature = "ImImages")]
             ImIcon::ImImages => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4795,7 +4781,7 @@ impl Data {
             }
             #[cfg(feature = "ImIndentDecrease")]
             ImIcon::ImIndentDecrease => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4812,7 +4798,7 @@ impl Data {
             }
             #[cfg(feature = "ImIndentIncrease")]
             ImIcon::ImIndentIncrease => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4829,7 +4815,7 @@ impl Data {
             }
             #[cfg(feature = "ImInfinite")]
             ImIcon::ImInfinite => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4846,7 +4832,7 @@ impl Data {
             }
             #[cfg(feature = "ImInfo")]
             ImIcon::ImInfo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4863,7 +4849,7 @@ impl Data {
             }
             #[cfg(feature = "ImInsertTemplate")]
             ImIcon::ImInsertTemplate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4880,7 +4866,7 @@ impl Data {
             }
             #[cfg(feature = "ImInstagram")]
             ImIcon::ImInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4897,7 +4883,7 @@ impl Data {
             }
             #[cfg(feature = "ImItalic")]
             ImIcon::ImItalic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4914,7 +4900,7 @@ impl Data {
             }
             #[cfg(feature = "ImJoomla")]
             ImIcon::ImJoomla => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4931,7 +4917,7 @@ impl Data {
             }
             #[cfg(feature = "ImKey")]
             ImIcon::ImKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4948,7 +4934,7 @@ impl Data {
             }
             #[cfg(feature = "ImKey2")]
             ImIcon::ImKey2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4965,7 +4951,7 @@ impl Data {
             }
             #[cfg(feature = "ImKeyboard")]
             ImIcon::ImKeyboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4982,7 +4968,7 @@ impl Data {
             }
             #[cfg(feature = "ImLab")]
             ImIcon::ImLab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4999,7 +4985,7 @@ impl Data {
             }
             #[cfg(feature = "ImLanyrd")]
             ImIcon::ImLanyrd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5016,7 +5002,7 @@ impl Data {
             }
             #[cfg(feature = "ImLaptop")]
             ImIcon::ImLaptop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5033,7 +5019,7 @@ impl Data {
             }
             #[cfg(feature = "ImLast")]
             ImIcon::ImLast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5050,7 +5036,7 @@ impl Data {
             }
             #[cfg(feature = "ImLastfm")]
             ImIcon::ImLastfm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5067,7 +5053,7 @@ impl Data {
             }
             #[cfg(feature = "ImLastfm2")]
             ImIcon::ImLastfm2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5084,7 +5070,7 @@ impl Data {
             }
             #[cfg(feature = "ImLeaf")]
             ImIcon::ImLeaf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5101,7 +5087,7 @@ impl Data {
             }
             #[cfg(feature = "ImLibrary")]
             ImIcon::ImLibrary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5118,7 +5104,7 @@ impl Data {
             }
             #[cfg(feature = "ImLibreoffice")]
             ImIcon::ImLibreoffice => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5135,7 +5121,7 @@ impl Data {
             }
             #[cfg(feature = "ImLifebuoy")]
             ImIcon::ImLifebuoy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5152,7 +5138,7 @@ impl Data {
             }
             #[cfg(feature = "ImLigature")]
             ImIcon::ImLigature => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5169,7 +5155,7 @@ impl Data {
             }
             #[cfg(feature = "ImLigature2")]
             ImIcon::ImLigature2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5186,7 +5172,7 @@ impl Data {
             }
             #[cfg(feature = "ImLink")]
             ImIcon::ImLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5203,7 +5189,7 @@ impl Data {
             }
             #[cfg(feature = "ImLinkedin")]
             ImIcon::ImLinkedin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5220,7 +5206,7 @@ impl Data {
             }
             #[cfg(feature = "ImLinkedin2")]
             ImIcon::ImLinkedin2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5237,7 +5223,7 @@ impl Data {
             }
             #[cfg(feature = "ImList")]
             ImIcon::ImList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5254,7 +5240,7 @@ impl Data {
             }
             #[cfg(feature = "ImList2")]
             ImIcon::ImList2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5271,7 +5257,7 @@ impl Data {
             }
             #[cfg(feature = "ImListNumbered")]
             ImIcon::ImListNumbered => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5288,7 +5274,7 @@ impl Data {
             }
             #[cfg(feature = "ImLocation")]
             ImIcon::ImLocation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5305,7 +5291,7 @@ impl Data {
             }
             #[cfg(feature = "ImLocation2")]
             ImIcon::ImLocation2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5322,7 +5308,7 @@ impl Data {
             }
             #[cfg(feature = "ImLock")]
             ImIcon::ImLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5339,7 +5325,7 @@ impl Data {
             }
             #[cfg(feature = "ImLoop")]
             ImIcon::ImLoop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5356,7 +5342,7 @@ impl Data {
             }
             #[cfg(feature = "ImLoop2")]
             ImIcon::ImLoop2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5373,7 +5359,7 @@ impl Data {
             }
             #[cfg(feature = "ImLtr")]
             ImIcon::ImLtr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5390,7 +5376,7 @@ impl Data {
             }
             #[cfg(feature = "ImMagicWand")]
             ImIcon::ImMagicWand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5407,7 +5393,7 @@ impl Data {
             }
             #[cfg(feature = "ImMagnet")]
             ImIcon::ImMagnet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5424,7 +5410,7 @@ impl Data {
             }
             #[cfg(feature = "ImMail")]
             ImIcon::ImMail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5441,7 +5427,7 @@ impl Data {
             }
             #[cfg(feature = "ImMail2")]
             ImIcon::ImMail2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5458,7 +5444,7 @@ impl Data {
             }
             #[cfg(feature = "ImMail3")]
             ImIcon::ImMail3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5475,7 +5461,7 @@ impl Data {
             }
             #[cfg(feature = "ImMail4")]
             ImIcon::ImMail4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5492,7 +5478,7 @@ impl Data {
             }
             #[cfg(feature = "ImMakeGroup")]
             ImIcon::ImMakeGroup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5509,7 +5495,7 @@ impl Data {
             }
             #[cfg(feature = "ImMan")]
             ImIcon::ImMan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5526,7 +5512,7 @@ impl Data {
             }
             #[cfg(feature = "ImManWoman")]
             ImIcon::ImManWoman => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5543,7 +5529,7 @@ impl Data {
             }
             #[cfg(feature = "ImMap")]
             ImIcon::ImMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5560,7 +5546,7 @@ impl Data {
             }
             #[cfg(feature = "ImMap2")]
             ImIcon::ImMap2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5577,7 +5563,7 @@ impl Data {
             }
             #[cfg(feature = "ImMenu")]
             ImIcon::ImMenu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5594,7 +5580,7 @@ impl Data {
             }
             #[cfg(feature = "ImMenu2")]
             ImIcon::ImMenu2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5611,7 +5597,7 @@ impl Data {
             }
             #[cfg(feature = "ImMenu3")]
             ImIcon::ImMenu3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5628,7 +5614,7 @@ impl Data {
             }
             #[cfg(feature = "ImMenu4")]
             ImIcon::ImMenu4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5645,7 +5631,7 @@ impl Data {
             }
             #[cfg(feature = "ImMeter")]
             ImIcon::ImMeter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5662,7 +5648,7 @@ impl Data {
             }
             #[cfg(feature = "ImMeter2")]
             ImIcon::ImMeter2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5679,7 +5665,7 @@ impl Data {
             }
             #[cfg(feature = "ImMic")]
             ImIcon::ImMic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5696,7 +5682,7 @@ impl Data {
             }
             #[cfg(feature = "ImMinus")]
             ImIcon::ImMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5713,7 +5699,7 @@ impl Data {
             }
             #[cfg(feature = "ImMobile")]
             ImIcon::ImMobile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5730,7 +5716,7 @@ impl Data {
             }
             #[cfg(feature = "ImMobile2")]
             ImIcon::ImMobile2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5747,7 +5733,7 @@ impl Data {
             }
             #[cfg(feature = "ImMoveDown")]
             ImIcon::ImMoveDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5764,7 +5750,7 @@ impl Data {
             }
             #[cfg(feature = "ImMoveUp")]
             ImIcon::ImMoveUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5781,7 +5767,7 @@ impl Data {
             }
             #[cfg(feature = "ImMug")]
             ImIcon::ImMug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5798,7 +5784,7 @@ impl Data {
             }
             #[cfg(feature = "ImMusic")]
             ImIcon::ImMusic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5815,7 +5801,7 @@ impl Data {
             }
             #[cfg(feature = "ImNeutral")]
             ImIcon::ImNeutral => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5832,7 +5818,7 @@ impl Data {
             }
             #[cfg(feature = "ImNeutral2")]
             ImIcon::ImNeutral2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5849,7 +5835,7 @@ impl Data {
             }
             #[cfg(feature = "ImNewTab")]
             ImIcon::ImNewTab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5866,7 +5852,7 @@ impl Data {
             }
             #[cfg(feature = "ImNewspaper")]
             ImIcon::ImNewspaper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5883,7 +5869,7 @@ impl Data {
             }
             #[cfg(feature = "ImNext")]
             ImIcon::ImNext => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5900,7 +5886,7 @@ impl Data {
             }
             #[cfg(feature = "ImNext2")]
             ImIcon::ImNext2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5917,7 +5903,7 @@ impl Data {
             }
             #[cfg(feature = "ImNotification")]
             ImIcon::ImNotification => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5934,7 +5920,7 @@ impl Data {
             }
             #[cfg(feature = "ImNpm")]
             ImIcon::ImNpm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5951,7 +5937,7 @@ impl Data {
             }
             #[cfg(feature = "ImOffice")]
             ImIcon::ImOffice => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5968,7 +5954,7 @@ impl Data {
             }
             #[cfg(feature = "ImOmega")]
             ImIcon::ImOmega => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5985,7 +5971,7 @@ impl Data {
             }
             #[cfg(feature = "ImOnedrive")]
             ImIcon::ImOnedrive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6002,7 +5988,7 @@ impl Data {
             }
             #[cfg(feature = "ImOpera")]
             ImIcon::ImOpera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6019,7 +6005,7 @@ impl Data {
             }
             #[cfg(feature = "ImOpt")]
             ImIcon::ImOpt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6036,7 +6022,7 @@ impl Data {
             }
             #[cfg(feature = "ImPacman")]
             ImIcon::ImPacman => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6053,7 +6039,7 @@ impl Data {
             }
             #[cfg(feature = "ImPageBreak")]
             ImIcon::ImPageBreak => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6070,7 +6056,7 @@ impl Data {
             }
             #[cfg(feature = "ImPagebreak")]
             ImIcon::ImPagebreak => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6087,7 +6073,7 @@ impl Data {
             }
             #[cfg(feature = "ImPaintFormat")]
             ImIcon::ImPaintFormat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6104,7 +6090,7 @@ impl Data {
             }
             #[cfg(feature = "ImParagraphCenter")]
             ImIcon::ImParagraphCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6121,7 +6107,7 @@ impl Data {
             }
             #[cfg(feature = "ImParagraphJustify")]
             ImIcon::ImParagraphJustify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6138,7 +6124,7 @@ impl Data {
             }
             #[cfg(feature = "ImParagraphLeft")]
             ImIcon::ImParagraphLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6155,7 +6141,7 @@ impl Data {
             }
             #[cfg(feature = "ImParagraphRight")]
             ImIcon::ImParagraphRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6172,7 +6158,7 @@ impl Data {
             }
             #[cfg(feature = "ImPaste")]
             ImIcon::ImPaste => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6189,7 +6175,7 @@ impl Data {
             }
             #[cfg(feature = "ImPause")]
             ImIcon::ImPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6206,7 +6192,7 @@ impl Data {
             }
             #[cfg(feature = "ImPause2")]
             ImIcon::ImPause2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6223,7 +6209,7 @@ impl Data {
             }
             #[cfg(feature = "ImPaypal")]
             ImIcon::ImPaypal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6240,7 +6226,7 @@ impl Data {
             }
             #[cfg(feature = "ImPen")]
             ImIcon::ImPen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6257,7 +6243,7 @@ impl Data {
             }
             #[cfg(feature = "ImPencil")]
             ImIcon::ImPencil => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6274,7 +6260,7 @@ impl Data {
             }
             #[cfg(feature = "ImPencil2")]
             ImIcon::ImPencil2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6291,7 +6277,7 @@ impl Data {
             }
             #[cfg(feature = "ImPhone")]
             ImIcon::ImPhone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6308,7 +6294,7 @@ impl Data {
             }
             #[cfg(feature = "ImPhoneHangUp")]
             ImIcon::ImPhoneHangUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6325,7 +6311,7 @@ impl Data {
             }
             #[cfg(feature = "ImPieChart")]
             ImIcon::ImPieChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6342,7 +6328,7 @@ impl Data {
             }
             #[cfg(feature = "ImPilcrow")]
             ImIcon::ImPilcrow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6359,7 +6345,7 @@ impl Data {
             }
             #[cfg(feature = "ImPinterest")]
             ImIcon::ImPinterest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6376,7 +6362,7 @@ impl Data {
             }
             #[cfg(feature = "ImPinterest2")]
             ImIcon::ImPinterest2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6393,7 +6379,7 @@ impl Data {
             }
             #[cfg(feature = "ImPlay")]
             ImIcon::ImPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6410,7 +6396,7 @@ impl Data {
             }
             #[cfg(feature = "ImPlay2")]
             ImIcon::ImPlay2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6427,7 +6413,7 @@ impl Data {
             }
             #[cfg(feature = "ImPlay3")]
             ImIcon::ImPlay3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6444,7 +6430,7 @@ impl Data {
             }
             #[cfg(feature = "ImPlus")]
             ImIcon::ImPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6461,7 +6447,7 @@ impl Data {
             }
             #[cfg(feature = "ImPodcast")]
             ImIcon::ImPodcast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6478,7 +6464,7 @@ impl Data {
             }
             #[cfg(feature = "ImPointDown")]
             ImIcon::ImPointDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6495,7 +6481,7 @@ impl Data {
             }
             #[cfg(feature = "ImPointLeft")]
             ImIcon::ImPointLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6512,7 +6498,7 @@ impl Data {
             }
             #[cfg(feature = "ImPointRight")]
             ImIcon::ImPointRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6529,7 +6515,7 @@ impl Data {
             }
             #[cfg(feature = "ImPointUp")]
             ImIcon::ImPointUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6546,7 +6532,7 @@ impl Data {
             }
             #[cfg(feature = "ImPower")]
             ImIcon::ImPower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6563,7 +6549,7 @@ impl Data {
             }
             #[cfg(feature = "ImPowerCord")]
             ImIcon::ImPowerCord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6580,7 +6566,7 @@ impl Data {
             }
             #[cfg(feature = "ImPrevious")]
             ImIcon::ImPrevious => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6597,7 +6583,7 @@ impl Data {
             }
             #[cfg(feature = "ImPrevious2")]
             ImIcon::ImPrevious2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6614,7 +6600,7 @@ impl Data {
             }
             #[cfg(feature = "ImPriceTag")]
             ImIcon::ImPriceTag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6631,7 +6617,7 @@ impl Data {
             }
             #[cfg(feature = "ImPriceTags")]
             ImIcon::ImPriceTags => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6648,7 +6634,7 @@ impl Data {
             }
             #[cfg(feature = "ImPrinter")]
             ImIcon::ImPrinter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6665,7 +6651,7 @@ impl Data {
             }
             #[cfg(feature = "ImProfile")]
             ImIcon::ImProfile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6682,7 +6668,7 @@ impl Data {
             }
             #[cfg(feature = "ImPushpin")]
             ImIcon::ImPushpin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6699,7 +6685,7 @@ impl Data {
             }
             #[cfg(feature = "ImQrcode")]
             ImIcon::ImQrcode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6716,7 +6702,7 @@ impl Data {
             }
             #[cfg(feature = "ImQuestion")]
             ImIcon::ImQuestion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6733,7 +6719,7 @@ impl Data {
             }
             #[cfg(feature = "ImQuill")]
             ImIcon::ImQuill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6750,7 +6736,7 @@ impl Data {
             }
             #[cfg(feature = "ImQuotesLeft")]
             ImIcon::ImQuotesLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6767,7 +6753,7 @@ impl Data {
             }
             #[cfg(feature = "ImQuotesRight")]
             ImIcon::ImQuotesRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6784,7 +6770,7 @@ impl Data {
             }
             #[cfg(feature = "ImRadioChecked")]
             ImIcon::ImRadioChecked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6801,7 +6787,7 @@ impl Data {
             }
             #[cfg(feature = "ImRadioChecked2")]
             ImIcon::ImRadioChecked2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6818,7 +6804,7 @@ impl Data {
             }
             #[cfg(feature = "ImRadioUnchecked")]
             ImIcon::ImRadioUnchecked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6835,7 +6821,7 @@ impl Data {
             }
             #[cfg(feature = "ImReddit")]
             ImIcon::ImReddit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6852,7 +6838,7 @@ impl Data {
             }
             #[cfg(feature = "ImRedo")]
             ImIcon::ImRedo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6869,7 +6855,7 @@ impl Data {
             }
             #[cfg(feature = "ImRedo2")]
             ImIcon::ImRedo2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6886,7 +6872,7 @@ impl Data {
             }
             #[cfg(feature = "ImRenren")]
             ImIcon::ImRenren => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6903,7 +6889,7 @@ impl Data {
             }
             #[cfg(feature = "ImReply")]
             ImIcon::ImReply => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6920,7 +6906,7 @@ impl Data {
             }
             #[cfg(feature = "ImRoad")]
             ImIcon::ImRoad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6937,7 +6923,7 @@ impl Data {
             }
             #[cfg(feature = "ImRocket")]
             ImIcon::ImRocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6954,7 +6940,7 @@ impl Data {
             }
             #[cfg(feature = "ImRss")]
             ImIcon::ImRss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6971,7 +6957,7 @@ impl Data {
             }
             #[cfg(feature = "ImRss2")]
             ImIcon::ImRss2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6988,7 +6974,7 @@ impl Data {
             }
             #[cfg(feature = "ImRtl")]
             ImIcon::ImRtl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7005,7 +6991,7 @@ impl Data {
             }
             #[cfg(feature = "ImSad")]
             ImIcon::ImSad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7022,7 +7008,7 @@ impl Data {
             }
             #[cfg(feature = "ImSad2")]
             ImIcon::ImSad2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7039,7 +7025,7 @@ impl Data {
             }
             #[cfg(feature = "ImSafari")]
             ImIcon::ImSafari => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7056,7 +7042,7 @@ impl Data {
             }
             #[cfg(feature = "ImScissors")]
             ImIcon::ImScissors => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7073,7 +7059,7 @@ impl Data {
             }
             #[cfg(feature = "ImSearch")]
             ImIcon::ImSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7090,7 +7076,7 @@ impl Data {
             }
             #[cfg(feature = "ImSection")]
             ImIcon::ImSection => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7107,7 +7093,7 @@ impl Data {
             }
             #[cfg(feature = "ImShare")]
             ImIcon::ImShare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7124,7 +7110,7 @@ impl Data {
             }
             #[cfg(feature = "ImShare2")]
             ImIcon::ImShare2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7141,7 +7127,7 @@ impl Data {
             }
             #[cfg(feature = "ImShield")]
             ImIcon::ImShield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7158,7 +7144,7 @@ impl Data {
             }
             #[cfg(feature = "ImShift")]
             ImIcon::ImShift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7175,7 +7161,7 @@ impl Data {
             }
             #[cfg(feature = "ImShocked")]
             ImIcon::ImShocked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7192,7 +7178,7 @@ impl Data {
             }
             #[cfg(feature = "ImShocked2")]
             ImIcon::ImShocked2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7209,7 +7195,7 @@ impl Data {
             }
             #[cfg(feature = "ImShrink")]
             ImIcon::ImShrink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7226,7 +7212,7 @@ impl Data {
             }
             #[cfg(feature = "ImShrink2")]
             ImIcon::ImShrink2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7243,7 +7229,7 @@ impl Data {
             }
             #[cfg(feature = "ImShuffle")]
             ImIcon::ImShuffle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7260,7 +7246,7 @@ impl Data {
             }
             #[cfg(feature = "ImSigma")]
             ImIcon::ImSigma => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7277,7 +7263,7 @@ impl Data {
             }
             #[cfg(feature = "ImSinaWeibo")]
             ImIcon::ImSinaWeibo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7294,7 +7280,7 @@ impl Data {
             }
             #[cfg(feature = "ImSkype")]
             ImIcon::ImSkype => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7311,7 +7297,7 @@ impl Data {
             }
             #[cfg(feature = "ImSleepy")]
             ImIcon::ImSleepy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7328,7 +7314,7 @@ impl Data {
             }
             #[cfg(feature = "ImSleepy2")]
             ImIcon::ImSleepy2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7345,7 +7331,7 @@ impl Data {
             }
             #[cfg(feature = "ImSmile")]
             ImIcon::ImSmile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7362,7 +7348,7 @@ impl Data {
             }
             #[cfg(feature = "ImSmile2")]
             ImIcon::ImSmile2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7379,7 +7365,7 @@ impl Data {
             }
             #[cfg(feature = "ImSortAlphaAsc")]
             ImIcon::ImSortAlphaAsc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7396,7 +7382,7 @@ impl Data {
             }
             #[cfg(feature = "ImSortAlphaDesc")]
             ImIcon::ImSortAlphaDesc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7413,7 +7399,7 @@ impl Data {
             }
             #[cfg(feature = "ImSortAmountAsc")]
             ImIcon::ImSortAmountAsc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7430,7 +7416,7 @@ impl Data {
             }
             #[cfg(feature = "ImSortAmountDesc")]
             ImIcon::ImSortAmountDesc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7447,7 +7433,7 @@ impl Data {
             }
             #[cfg(feature = "ImSortNumbericDesc")]
             ImIcon::ImSortNumbericDesc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7464,7 +7450,7 @@ impl Data {
             }
             #[cfg(feature = "ImSortNumericAsc")]
             ImIcon::ImSortNumericAsc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7481,7 +7467,7 @@ impl Data {
             }
             #[cfg(feature = "ImSoundcloud")]
             ImIcon::ImSoundcloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7498,7 +7484,7 @@ impl Data {
             }
             #[cfg(feature = "ImSoundcloud2")]
             ImIcon::ImSoundcloud2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7515,7 +7501,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpades")]
             ImIcon::ImSpades => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7532,7 +7518,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpellCheck")]
             ImIcon::ImSpellCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7549,7 +7535,7 @@ impl Data {
             }
             #[cfg(feature = "ImSphere")]
             ImIcon::ImSphere => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7566,7 +7552,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner")]
             ImIcon::ImSpinner => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7583,7 +7569,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner10")]
             ImIcon::ImSpinner10 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7600,7 +7586,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner11")]
             ImIcon::ImSpinner11 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7617,7 +7603,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner2")]
             ImIcon::ImSpinner2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7634,7 +7620,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner3")]
             ImIcon::ImSpinner3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7651,7 +7637,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner4")]
             ImIcon::ImSpinner4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7668,7 +7654,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner5")]
             ImIcon::ImSpinner5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7685,7 +7671,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner6")]
             ImIcon::ImSpinner6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7702,7 +7688,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner7")]
             ImIcon::ImSpinner7 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7719,7 +7705,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner8")]
             ImIcon::ImSpinner8 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7736,7 +7722,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpinner9")]
             ImIcon::ImSpinner9 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7753,7 +7739,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpoonKnife")]
             ImIcon::ImSpoonKnife => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7770,7 +7756,7 @@ impl Data {
             }
             #[cfg(feature = "ImSpotify")]
             ImIcon::ImSpotify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7787,7 +7773,7 @@ impl Data {
             }
             #[cfg(feature = "ImStack")]
             ImIcon::ImStack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7804,7 +7790,7 @@ impl Data {
             }
             #[cfg(feature = "ImStackoverflow")]
             ImIcon::ImStackoverflow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7821,7 +7807,7 @@ impl Data {
             }
             #[cfg(feature = "ImStarEmpty")]
             ImIcon::ImStarEmpty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7838,7 +7824,7 @@ impl Data {
             }
             #[cfg(feature = "ImStarFull")]
             ImIcon::ImStarFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7855,7 +7841,7 @@ impl Data {
             }
             #[cfg(feature = "ImStarHalf")]
             ImIcon::ImStarHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7872,7 +7858,7 @@ impl Data {
             }
             #[cfg(feature = "ImStatsBars")]
             ImIcon::ImStatsBars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7889,7 +7875,7 @@ impl Data {
             }
             #[cfg(feature = "ImStatsBars2")]
             ImIcon::ImStatsBars2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7906,7 +7892,7 @@ impl Data {
             }
             #[cfg(feature = "ImStatsDots")]
             ImIcon::ImStatsDots => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7923,7 +7909,7 @@ impl Data {
             }
             #[cfg(feature = "ImSteam")]
             ImIcon::ImSteam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7940,7 +7926,7 @@ impl Data {
             }
             #[cfg(feature = "ImSteam2")]
             ImIcon::ImSteam2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7957,7 +7943,7 @@ impl Data {
             }
             #[cfg(feature = "ImStop")]
             ImIcon::ImStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7974,7 +7960,7 @@ impl Data {
             }
             #[cfg(feature = "ImStop2")]
             ImIcon::ImStop2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7991,7 +7977,7 @@ impl Data {
             }
             #[cfg(feature = "ImStopwatch")]
             ImIcon::ImStopwatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8008,7 +7994,7 @@ impl Data {
             }
             #[cfg(feature = "ImStrikethrough")]
             ImIcon::ImStrikethrough => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8025,7 +8011,7 @@ impl Data {
             }
             #[cfg(feature = "ImStumbleupon")]
             ImIcon::ImStumbleupon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8042,7 +8028,7 @@ impl Data {
             }
             #[cfg(feature = "ImStumbleupon2")]
             ImIcon::ImStumbleupon2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8059,7 +8045,7 @@ impl Data {
             }
             #[cfg(feature = "ImSubscript")]
             ImIcon::ImSubscript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8076,7 +8062,7 @@ impl Data {
             }
             #[cfg(feature = "ImSubscript2")]
             ImIcon::ImSubscript2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8093,7 +8079,7 @@ impl Data {
             }
             #[cfg(feature = "ImSun")]
             ImIcon::ImSun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8110,7 +8096,7 @@ impl Data {
             }
             #[cfg(feature = "ImSuperscript")]
             ImIcon::ImSuperscript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8127,7 +8113,7 @@ impl Data {
             }
             #[cfg(feature = "ImSuperscript2")]
             ImIcon::ImSuperscript2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8144,7 +8130,7 @@ impl Data {
             }
             #[cfg(feature = "ImSvg")]
             ImIcon::ImSvg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8161,7 +8147,7 @@ impl Data {
             }
             #[cfg(feature = "ImSwitch")]
             ImIcon::ImSwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8178,7 +8164,7 @@ impl Data {
             }
             #[cfg(feature = "ImTab")]
             ImIcon::ImTab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8195,7 +8181,7 @@ impl Data {
             }
             #[cfg(feature = "ImTable")]
             ImIcon::ImTable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8212,7 +8198,7 @@ impl Data {
             }
             #[cfg(feature = "ImTable2")]
             ImIcon::ImTable2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8229,7 +8215,7 @@ impl Data {
             }
             #[cfg(feature = "ImTablet")]
             ImIcon::ImTablet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8246,7 +8232,7 @@ impl Data {
             }
             #[cfg(feature = "ImTarget")]
             ImIcon::ImTarget => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8263,7 +8249,7 @@ impl Data {
             }
             #[cfg(feature = "ImTelegram")]
             ImIcon::ImTelegram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8280,7 +8266,7 @@ impl Data {
             }
             #[cfg(feature = "ImTerminal")]
             ImIcon::ImTerminal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8297,7 +8283,7 @@ impl Data {
             }
             #[cfg(feature = "ImTextColor")]
             ImIcon::ImTextColor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8314,7 +8300,7 @@ impl Data {
             }
             #[cfg(feature = "ImTextHeight")]
             ImIcon::ImTextHeight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8331,7 +8317,7 @@ impl Data {
             }
             #[cfg(feature = "ImTextWidth")]
             ImIcon::ImTextWidth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8348,7 +8334,7 @@ impl Data {
             }
             #[cfg(feature = "ImTicket")]
             ImIcon::ImTicket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8365,7 +8351,7 @@ impl Data {
             }
             #[cfg(feature = "ImTongue")]
             ImIcon::ImTongue => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8382,7 +8368,7 @@ impl Data {
             }
             #[cfg(feature = "ImTongue2")]
             ImIcon::ImTongue2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8399,7 +8385,7 @@ impl Data {
             }
             #[cfg(feature = "ImTree")]
             ImIcon::ImTree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8416,7 +8402,7 @@ impl Data {
             }
             #[cfg(feature = "ImTrello")]
             ImIcon::ImTrello => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8433,7 +8419,7 @@ impl Data {
             }
             #[cfg(feature = "ImTrophy")]
             ImIcon::ImTrophy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8450,7 +8436,7 @@ impl Data {
             }
             #[cfg(feature = "ImTruck")]
             ImIcon::ImTruck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8467,7 +8453,7 @@ impl Data {
             }
             #[cfg(feature = "ImTumblr")]
             ImIcon::ImTumblr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8484,7 +8470,7 @@ impl Data {
             }
             #[cfg(feature = "ImTumblr2")]
             ImIcon::ImTumblr2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8501,7 +8487,7 @@ impl Data {
             }
             #[cfg(feature = "ImTux")]
             ImIcon::ImTux => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8518,7 +8504,7 @@ impl Data {
             }
             #[cfg(feature = "ImTv")]
             ImIcon::ImTv => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8535,7 +8521,7 @@ impl Data {
             }
             #[cfg(feature = "ImTwitch")]
             ImIcon::ImTwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8552,7 +8538,7 @@ impl Data {
             }
             #[cfg(feature = "ImTwitter")]
             ImIcon::ImTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8569,7 +8555,7 @@ impl Data {
             }
             #[cfg(feature = "ImUnderline")]
             ImIcon::ImUnderline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8586,7 +8572,7 @@ impl Data {
             }
             #[cfg(feature = "ImUndo")]
             ImIcon::ImUndo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8603,7 +8589,7 @@ impl Data {
             }
             #[cfg(feature = "ImUndo2")]
             ImIcon::ImUndo2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8620,7 +8606,7 @@ impl Data {
             }
             #[cfg(feature = "ImUngroup")]
             ImIcon::ImUngroup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8637,7 +8623,7 @@ impl Data {
             }
             #[cfg(feature = "ImUnlocked")]
             ImIcon::ImUnlocked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8654,7 +8640,7 @@ impl Data {
             }
             #[cfg(feature = "ImUpload")]
             ImIcon::ImUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8671,7 +8657,7 @@ impl Data {
             }
             #[cfg(feature = "ImUpload2")]
             ImIcon::ImUpload2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8688,7 +8674,7 @@ impl Data {
             }
             #[cfg(feature = "ImUpload3")]
             ImIcon::ImUpload3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8705,7 +8691,7 @@ impl Data {
             }
             #[cfg(feature = "ImUser")]
             ImIcon::ImUser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8722,7 +8708,7 @@ impl Data {
             }
             #[cfg(feature = "ImUserCheck")]
             ImIcon::ImUserCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8739,7 +8725,7 @@ impl Data {
             }
             #[cfg(feature = "ImUserMinus")]
             ImIcon::ImUserMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8756,7 +8742,7 @@ impl Data {
             }
             #[cfg(feature = "ImUserPlus")]
             ImIcon::ImUserPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8773,7 +8759,7 @@ impl Data {
             }
             #[cfg(feature = "ImUserTie")]
             ImIcon::ImUserTie => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8790,7 +8776,7 @@ impl Data {
             }
             #[cfg(feature = "ImUsers")]
             ImIcon::ImUsers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8807,7 +8793,7 @@ impl Data {
             }
             #[cfg(feature = "ImVideoCamera")]
             ImIcon::ImVideoCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8824,7 +8810,7 @@ impl Data {
             }
             #[cfg(feature = "ImVimeo")]
             ImIcon::ImVimeo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8841,7 +8827,7 @@ impl Data {
             }
             #[cfg(feature = "ImVimeo2")]
             ImIcon::ImVimeo2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8858,7 +8844,7 @@ impl Data {
             }
             #[cfg(feature = "ImVine")]
             ImIcon::ImVine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8875,7 +8861,7 @@ impl Data {
             }
             #[cfg(feature = "ImVk")]
             ImIcon::ImVk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8892,7 +8878,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeDecrease")]
             ImIcon::ImVolumeDecrease => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8909,7 +8895,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeHigh")]
             ImIcon::ImVolumeHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8926,7 +8912,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeIncrease")]
             ImIcon::ImVolumeIncrease => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8943,7 +8929,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeLow")]
             ImIcon::ImVolumeLow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8960,7 +8946,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeMedium")]
             ImIcon::ImVolumeMedium => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8977,7 +8963,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeMute")]
             ImIcon::ImVolumeMute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8994,7 +8980,7 @@ impl Data {
             }
             #[cfg(feature = "ImVolumeMute2")]
             ImIcon::ImVolumeMute2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9011,7 +8997,7 @@ impl Data {
             }
             #[cfg(feature = "ImWarning")]
             ImIcon::ImWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9028,7 +9014,7 @@ impl Data {
             }
             #[cfg(feature = "ImWhatsapp")]
             ImIcon::ImWhatsapp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9045,7 +9031,7 @@ impl Data {
             }
             #[cfg(feature = "ImWikipedia")]
             ImIcon::ImWikipedia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9062,7 +9048,7 @@ impl Data {
             }
             #[cfg(feature = "ImWindows")]
             ImIcon::ImWindows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9079,7 +9065,7 @@ impl Data {
             }
             #[cfg(feature = "ImWindows8")]
             ImIcon::ImWindows8 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9096,7 +9082,7 @@ impl Data {
             }
             #[cfg(feature = "ImWink")]
             ImIcon::ImWink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9113,7 +9099,7 @@ impl Data {
             }
             #[cfg(feature = "ImWink2")]
             ImIcon::ImWink2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9130,7 +9116,7 @@ impl Data {
             }
             #[cfg(feature = "ImWoman")]
             ImIcon::ImWoman => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9147,7 +9133,7 @@ impl Data {
             }
             #[cfg(feature = "ImWondering")]
             ImIcon::ImWondering => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9164,7 +9150,7 @@ impl Data {
             }
             #[cfg(feature = "ImWondering2")]
             ImIcon::ImWondering2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9181,7 +9167,7 @@ impl Data {
             }
             #[cfg(feature = "ImWordpress")]
             ImIcon::ImWordpress => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9198,7 +9184,7 @@ impl Data {
             }
             #[cfg(feature = "ImWrench")]
             ImIcon::ImWrench => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9215,7 +9201,7 @@ impl Data {
             }
             #[cfg(feature = "ImXing")]
             ImIcon::ImXing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9232,7 +9218,7 @@ impl Data {
             }
             #[cfg(feature = "ImXing2")]
             ImIcon::ImXing2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9249,7 +9235,7 @@ impl Data {
             }
             #[cfg(feature = "ImYahoo")]
             ImIcon::ImYahoo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9266,7 +9252,7 @@ impl Data {
             }
             #[cfg(feature = "ImYahoo2")]
             ImIcon::ImYahoo2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9283,7 +9269,7 @@ impl Data {
             }
             #[cfg(feature = "ImYelp")]
             ImIcon::ImYelp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9300,7 +9286,7 @@ impl Data {
             }
             #[cfg(feature = "ImYoutube")]
             ImIcon::ImYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9317,7 +9303,7 @@ impl Data {
             }
             #[cfg(feature = "ImYoutube2")]
             ImIcon::ImYoutube2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9334,7 +9320,7 @@ impl Data {
             }
             #[cfg(feature = "ImZoomIn")]
             ImIcon::ImZoomIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9351,7 +9337,7 @@ impl Data {
             }
             #[cfg(feature = "ImZoomOut")]
             ImIcon::ImZoomOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9368,62 +9354,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosImIcon(
-    cx: leptos::Scope,
-    icon: ImIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

@@ -862,26 +862,12 @@ pub enum VsIcon {
     VsZoomOut,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: VsIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for VsIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "VsAccount")]
             VsIcon::VsAccount => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -898,7 +884,7 @@ impl Data {
             }
             #[cfg(feature = "VsActivateBreakpoints")]
             VsIcon::VsActivateBreakpoints => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -915,7 +901,7 @@ impl Data {
             }
             #[cfg(feature = "VsAdd")]
             VsIcon::VsAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -932,7 +918,7 @@ impl Data {
             }
             #[cfg(feature = "VsArchive")]
             VsIcon::VsArchive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -949,7 +935,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowBoth")]
             VsIcon::VsArrowBoth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -966,7 +952,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowCircleDown")]
             VsIcon::VsArrowCircleDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -983,7 +969,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowCircleLeft")]
             VsIcon::VsArrowCircleLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1000,7 +986,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowCircleRight")]
             VsIcon::VsArrowCircleRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1017,7 +1003,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowCircleUp")]
             VsIcon::VsArrowCircleUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1034,7 +1020,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowDown")]
             VsIcon::VsArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1051,7 +1037,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowLeft")]
             VsIcon::VsArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1068,7 +1054,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowRight")]
             VsIcon::VsArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1085,7 +1071,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowSmallDown")]
             VsIcon::VsArrowSmallDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1102,7 +1088,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowSmallLeft")]
             VsIcon::VsArrowSmallLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1119,7 +1105,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowSmallRight")]
             VsIcon::VsArrowSmallRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1136,7 +1122,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowSmallUp")]
             VsIcon::VsArrowSmallUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1153,7 +1139,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowSwap")]
             VsIcon::VsArrowSwap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1170,7 +1156,7 @@ impl Data {
             }
             #[cfg(feature = "VsArrowUp")]
             VsIcon::VsArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1187,7 +1173,7 @@ impl Data {
             }
             #[cfg(feature = "VsAzure")]
             VsIcon::VsAzure => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1204,7 +1190,7 @@ impl Data {
             }
             #[cfg(feature = "VsAzureDevops")]
             VsIcon::VsAzureDevops => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1221,7 +1207,7 @@ impl Data {
             }
             #[cfg(feature = "VsBeaker")]
             VsIcon::VsBeaker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1238,7 +1224,7 @@ impl Data {
             }
             #[cfg(feature = "VsBeakerStop")]
             VsIcon::VsBeakerStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1255,7 +1241,7 @@ impl Data {
             }
             #[cfg(feature = "VsBell")]
             VsIcon::VsBell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1272,7 +1258,7 @@ impl Data {
             }
             #[cfg(feature = "VsBellDot")]
             VsIcon::VsBellDot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1289,7 +1275,7 @@ impl Data {
             }
             #[cfg(feature = "VsBellSlash")]
             VsIcon::VsBellSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1306,7 +1292,7 @@ impl Data {
             }
             #[cfg(feature = "VsBellSlashDot")]
             VsIcon::VsBellSlashDot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1323,7 +1309,7 @@ impl Data {
             }
             #[cfg(feature = "VsBlank")]
             VsIcon::VsBlank => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1340,7 +1326,7 @@ impl Data {
             }
             #[cfg(feature = "VsBold")]
             VsIcon::VsBold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1357,7 +1343,7 @@ impl Data {
             }
             #[cfg(feature = "VsBook")]
             VsIcon::VsBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1374,7 +1360,7 @@ impl Data {
             }
             #[cfg(feature = "VsBookmark")]
             VsIcon::VsBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1391,7 +1377,7 @@ impl Data {
             }
             #[cfg(feature = "VsBracketDot")]
             VsIcon::VsBracketDot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1408,7 +1394,7 @@ impl Data {
             }
             #[cfg(feature = "VsBracketError")]
             VsIcon::VsBracketError => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1425,7 +1411,7 @@ impl Data {
             }
             #[cfg(feature = "VsBriefcase")]
             VsIcon::VsBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1442,7 +1428,7 @@ impl Data {
             }
             #[cfg(feature = "VsBroadcast")]
             VsIcon::VsBroadcast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1459,7 +1445,7 @@ impl Data {
             }
             #[cfg(feature = "VsBrowser")]
             VsIcon::VsBrowser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1476,7 +1462,7 @@ impl Data {
             }
             #[cfg(feature = "VsBug")]
             VsIcon::VsBug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1493,7 +1479,7 @@ impl Data {
             }
             #[cfg(feature = "VsCalendar")]
             VsIcon::VsCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1510,7 +1496,7 @@ impl Data {
             }
             #[cfg(feature = "VsCallIncoming")]
             VsIcon::VsCallIncoming => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1527,7 +1513,7 @@ impl Data {
             }
             #[cfg(feature = "VsCallOutgoing")]
             VsIcon::VsCallOutgoing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1544,7 +1530,7 @@ impl Data {
             }
             #[cfg(feature = "VsCaseSensitive")]
             VsIcon::VsCaseSensitive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1561,7 +1547,7 @@ impl Data {
             }
             #[cfg(feature = "VsCheck")]
             VsIcon::VsCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1578,7 +1564,7 @@ impl Data {
             }
             #[cfg(feature = "VsCheckAll")]
             VsIcon::VsCheckAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1595,7 +1581,7 @@ impl Data {
             }
             #[cfg(feature = "VsChecklist")]
             VsIcon::VsChecklist => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1612,7 +1598,7 @@ impl Data {
             }
             #[cfg(feature = "VsChevronDown")]
             VsIcon::VsChevronDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1629,7 +1615,7 @@ impl Data {
             }
             #[cfg(feature = "VsChevronLeft")]
             VsIcon::VsChevronLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1646,7 +1632,7 @@ impl Data {
             }
             #[cfg(feature = "VsChevronRight")]
             VsIcon::VsChevronRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1663,7 +1649,7 @@ impl Data {
             }
             #[cfg(feature = "VsChevronUp")]
             VsIcon::VsChevronUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1680,7 +1666,7 @@ impl Data {
             }
             #[cfg(feature = "VsChromeClose")]
             VsIcon::VsChromeClose => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1697,7 +1683,7 @@ impl Data {
             }
             #[cfg(feature = "VsChromeMaximize")]
             VsIcon::VsChromeMaximize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1714,7 +1700,7 @@ impl Data {
             }
             #[cfg(feature = "VsChromeMinimize")]
             VsIcon::VsChromeMinimize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1731,7 +1717,7 @@ impl Data {
             }
             #[cfg(feature = "VsChromeRestore")]
             VsIcon::VsChromeRestore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1748,7 +1734,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleFilled")]
             VsIcon::VsCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1765,7 +1751,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleLargeFilled")]
             VsIcon::VsCircleLargeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1782,7 +1768,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleLargeOutline")]
             VsIcon::VsCircleLargeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1799,7 +1785,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleOutline")]
             VsIcon::VsCircleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1816,7 +1802,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleSlash")]
             VsIcon::VsCircleSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1833,7 +1819,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleSmall")]
             VsIcon::VsCircleSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1850,7 +1836,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircleSmallFilled")]
             VsIcon::VsCircleSmallFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1867,7 +1853,7 @@ impl Data {
             }
             #[cfg(feature = "VsCircuitBoard")]
             VsIcon::VsCircuitBoard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1884,7 +1870,7 @@ impl Data {
             }
             #[cfg(feature = "VsClearAll")]
             VsIcon::VsClearAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1901,7 +1887,7 @@ impl Data {
             }
             #[cfg(feature = "VsClippy")]
             VsIcon::VsClippy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1918,7 +1904,7 @@ impl Data {
             }
             #[cfg(feature = "VsClose")]
             VsIcon::VsClose => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1935,7 +1921,7 @@ impl Data {
             }
             #[cfg(feature = "VsCloseAll")]
             VsIcon::VsCloseAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1952,7 +1938,7 @@ impl Data {
             }
             #[cfg(feature = "VsCloud")]
             VsIcon::VsCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1969,7 +1955,7 @@ impl Data {
             }
             #[cfg(feature = "VsCloudDownload")]
             VsIcon::VsCloudDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1986,7 +1972,7 @@ impl Data {
             }
             #[cfg(feature = "VsCloudUpload")]
             VsIcon::VsCloudUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2003,7 +1989,7 @@ impl Data {
             }
             #[cfg(feature = "VsCode")]
             VsIcon::VsCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2020,7 +2006,7 @@ impl Data {
             }
             #[cfg(feature = "VsCollapseAll")]
             VsIcon::VsCollapseAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2037,7 +2023,7 @@ impl Data {
             }
             #[cfg(feature = "VsColorMode")]
             VsIcon::VsColorMode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2054,7 +2040,7 @@ impl Data {
             }
             #[cfg(feature = "VsCombine")]
             VsIcon::VsCombine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2071,7 +2057,7 @@ impl Data {
             }
             #[cfg(feature = "VsComment")]
             VsIcon::VsComment => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2088,7 +2074,7 @@ impl Data {
             }
             #[cfg(feature = "VsCommentDiscussion")]
             VsIcon::VsCommentDiscussion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2105,7 +2091,7 @@ impl Data {
             }
             #[cfg(feature = "VsCommentUnresolved")]
             VsIcon::VsCommentUnresolved => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2122,7 +2108,7 @@ impl Data {
             }
             #[cfg(feature = "VsCompass")]
             VsIcon::VsCompass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2139,7 +2125,7 @@ impl Data {
             }
             #[cfg(feature = "VsCompassActive")]
             VsIcon::VsCompassActive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2156,7 +2142,7 @@ impl Data {
             }
             #[cfg(feature = "VsCompassDot")]
             VsIcon::VsCompassDot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2173,7 +2159,7 @@ impl Data {
             }
             #[cfg(feature = "VsCopy")]
             VsIcon::VsCopy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2190,7 +2176,7 @@ impl Data {
             }
             #[cfg(feature = "VsCreditCard")]
             VsIcon::VsCreditCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2207,7 +2193,7 @@ impl Data {
             }
             #[cfg(feature = "VsDash")]
             VsIcon::VsDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2224,7 +2210,7 @@ impl Data {
             }
             #[cfg(feature = "VsDashboard")]
             VsIcon::VsDashboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2241,7 +2227,7 @@ impl Data {
             }
             #[cfg(feature = "VsDatabase")]
             VsIcon::VsDatabase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2258,7 +2244,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebug")]
             VsIcon::VsDebug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2275,7 +2261,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugAll")]
             VsIcon::VsDebugAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2292,7 +2278,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugAlt")]
             VsIcon::VsDebugAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2309,7 +2295,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugAltSmall")]
             VsIcon::VsDebugAltSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2326,7 +2312,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointConditional")]
             VsIcon::VsDebugBreakpointConditional => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2343,7 +2329,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointConditionalUnverified")]
             VsIcon::VsDebugBreakpointConditionalUnverified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2360,7 +2346,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointData")]
             VsIcon::VsDebugBreakpointData => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2377,7 +2363,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointDataUnverified")]
             VsIcon::VsDebugBreakpointDataUnverified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2394,7 +2380,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointFunction")]
             VsIcon::VsDebugBreakpointFunction => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2411,7 +2397,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointFunctionUnverified")]
             VsIcon::VsDebugBreakpointFunctionUnverified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2428,7 +2414,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointLog")]
             VsIcon::VsDebugBreakpointLog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2445,7 +2431,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointLogUnverified")]
             VsIcon::VsDebugBreakpointLogUnverified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2462,7 +2448,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugBreakpointUnsupported")]
             VsIcon::VsDebugBreakpointUnsupported => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2479,7 +2465,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugConsole")]
             VsIcon::VsDebugConsole => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2496,7 +2482,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugContinue")]
             VsIcon::VsDebugContinue => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2513,7 +2499,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugContinueSmall")]
             VsIcon::VsDebugContinueSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2530,7 +2516,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugCoverage")]
             VsIcon::VsDebugCoverage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2547,7 +2533,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugDisconnect")]
             VsIcon::VsDebugDisconnect => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2564,7 +2550,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugLineByLine")]
             VsIcon::VsDebugLineByLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2581,7 +2567,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugPause")]
             VsIcon::VsDebugPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2598,7 +2584,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugRerun")]
             VsIcon::VsDebugRerun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2615,7 +2601,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugRestart")]
             VsIcon::VsDebugRestart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2632,7 +2618,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugRestartFrame")]
             VsIcon::VsDebugRestartFrame => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2649,7 +2635,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugReverseContinue")]
             VsIcon::VsDebugReverseContinue => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2666,7 +2652,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStackframe")]
             VsIcon::VsDebugStackframe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2683,7 +2669,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStackframeActive")]
             VsIcon::VsDebugStackframeActive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2700,7 +2686,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStart")]
             VsIcon::VsDebugStart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2717,7 +2703,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStepBack")]
             VsIcon::VsDebugStepBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2734,7 +2720,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStepInto")]
             VsIcon::VsDebugStepInto => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2751,7 +2737,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStepOut")]
             VsIcon::VsDebugStepOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2768,7 +2754,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStepOver")]
             VsIcon::VsDebugStepOver => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2785,7 +2771,7 @@ impl Data {
             }
             #[cfg(feature = "VsDebugStop")]
             VsIcon::VsDebugStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2802,7 +2788,7 @@ impl Data {
             }
             #[cfg(feature = "VsDesktopDownload")]
             VsIcon::VsDesktopDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2819,7 +2805,7 @@ impl Data {
             }
             #[cfg(feature = "VsDeviceCamera")]
             VsIcon::VsDeviceCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2836,7 +2822,7 @@ impl Data {
             }
             #[cfg(feature = "VsDeviceCameraVideo")]
             VsIcon::VsDeviceCameraVideo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2853,7 +2839,7 @@ impl Data {
             }
             #[cfg(feature = "VsDeviceMobile")]
             VsIcon::VsDeviceMobile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2870,7 +2856,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiff")]
             VsIcon::VsDiff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2887,7 +2873,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiffAdded")]
             VsIcon::VsDiffAdded => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2904,7 +2890,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiffIgnored")]
             VsIcon::VsDiffIgnored => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2921,7 +2907,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiffModified")]
             VsIcon::VsDiffModified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2938,7 +2924,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiffRemoved")]
             VsIcon::VsDiffRemoved => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2955,7 +2941,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiffRenamed")]
             VsIcon::VsDiffRenamed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2972,7 +2958,7 @@ impl Data {
             }
             #[cfg(feature = "VsDiscard")]
             VsIcon::VsDiscard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2989,7 +2975,7 @@ impl Data {
             }
             #[cfg(feature = "VsEdit")]
             VsIcon::VsEdit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3006,7 +2992,7 @@ impl Data {
             }
             #[cfg(feature = "VsEditorLayout")]
             VsIcon::VsEditorLayout => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3023,7 +3009,7 @@ impl Data {
             }
             #[cfg(feature = "VsEllipsis")]
             VsIcon::VsEllipsis => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3040,7 +3026,7 @@ impl Data {
             }
             #[cfg(feature = "VsEmptyWindow")]
             VsIcon::VsEmptyWindow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3057,7 +3043,7 @@ impl Data {
             }
             #[cfg(feature = "VsError")]
             VsIcon::VsError => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3074,7 +3060,7 @@ impl Data {
             }
             #[cfg(feature = "VsErrorSmall")]
             VsIcon::VsErrorSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3091,7 +3077,7 @@ impl Data {
             }
             #[cfg(feature = "VsExclude")]
             VsIcon::VsExclude => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3108,7 +3094,7 @@ impl Data {
             }
             #[cfg(feature = "VsExpandAll")]
             VsIcon::VsExpandAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3125,7 +3111,7 @@ impl Data {
             }
             #[cfg(feature = "VsExport")]
             VsIcon::VsExport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3142,7 +3128,7 @@ impl Data {
             }
             #[cfg(feature = "VsExtensions")]
             VsIcon::VsExtensions => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3159,7 +3145,7 @@ impl Data {
             }
             #[cfg(feature = "VsEye")]
             VsIcon::VsEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3176,7 +3162,7 @@ impl Data {
             }
             #[cfg(feature = "VsEyeClosed")]
             VsIcon::VsEyeClosed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3193,7 +3179,7 @@ impl Data {
             }
             #[cfg(feature = "VsFeedback")]
             VsIcon::VsFeedback => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3210,7 +3196,7 @@ impl Data {
             }
             #[cfg(feature = "VsFile")]
             VsIcon::VsFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3227,7 +3213,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileBinary")]
             VsIcon::VsFileBinary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3244,7 +3230,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileCode")]
             VsIcon::VsFileCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3261,7 +3247,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileMedia")]
             VsIcon::VsFileMedia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3278,7 +3264,7 @@ impl Data {
             }
             #[cfg(feature = "VsFilePdf")]
             VsIcon::VsFilePdf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3295,7 +3281,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileSubmodule")]
             VsIcon::VsFileSubmodule => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3312,7 +3298,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileSymlinkDirectory")]
             VsIcon::VsFileSymlinkDirectory => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3329,7 +3315,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileSymlinkFile")]
             VsIcon::VsFileSymlinkFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3346,7 +3332,7 @@ impl Data {
             }
             #[cfg(feature = "VsFileZip")]
             VsIcon::VsFileZip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3363,7 +3349,7 @@ impl Data {
             }
             #[cfg(feature = "VsFiles")]
             VsIcon::VsFiles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3380,7 +3366,7 @@ impl Data {
             }
             #[cfg(feature = "VsFilter")]
             VsIcon::VsFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3397,7 +3383,7 @@ impl Data {
             }
             #[cfg(feature = "VsFilterFilled")]
             VsIcon::VsFilterFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3414,7 +3400,7 @@ impl Data {
             }
             #[cfg(feature = "VsFlame")]
             VsIcon::VsFlame => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3431,7 +3417,7 @@ impl Data {
             }
             #[cfg(feature = "VsFold")]
             VsIcon::VsFold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3448,7 +3434,7 @@ impl Data {
             }
             #[cfg(feature = "VsFoldDown")]
             VsIcon::VsFoldDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3465,7 +3451,7 @@ impl Data {
             }
             #[cfg(feature = "VsFoldUp")]
             VsIcon::VsFoldUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3482,7 +3468,7 @@ impl Data {
             }
             #[cfg(feature = "VsFolder")]
             VsIcon::VsFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3499,7 +3485,7 @@ impl Data {
             }
             #[cfg(feature = "VsFolderActive")]
             VsIcon::VsFolderActive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3516,7 +3502,7 @@ impl Data {
             }
             #[cfg(feature = "VsFolderLibrary")]
             VsIcon::VsFolderLibrary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3533,7 +3519,7 @@ impl Data {
             }
             #[cfg(feature = "VsFolderOpened")]
             VsIcon::VsFolderOpened => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3550,7 +3536,7 @@ impl Data {
             }
             #[cfg(feature = "VsGear")]
             VsIcon::VsGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3567,7 +3553,7 @@ impl Data {
             }
             #[cfg(feature = "VsGift")]
             VsIcon::VsGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3584,7 +3570,7 @@ impl Data {
             }
             #[cfg(feature = "VsGist")]
             VsIcon::VsGist => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3601,7 +3587,7 @@ impl Data {
             }
             #[cfg(feature = "VsGistSecret")]
             VsIcon::VsGistSecret => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3618,7 +3604,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitCommit")]
             VsIcon::VsGitCommit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3635,7 +3621,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitCompare")]
             VsIcon::VsGitCompare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3652,7 +3638,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitMerge")]
             VsIcon::VsGitMerge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3669,7 +3655,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitPullRequest")]
             VsIcon::VsGitPullRequest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3686,7 +3672,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitPullRequestClosed")]
             VsIcon::VsGitPullRequestClosed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3703,7 +3689,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitPullRequestCreate")]
             VsIcon::VsGitPullRequestCreate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3720,7 +3706,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitPullRequestDraft")]
             VsIcon::VsGitPullRequestDraft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3737,7 +3723,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitPullRequestGoToChanges")]
             VsIcon::VsGitPullRequestGoToChanges => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3754,7 +3740,7 @@ impl Data {
             }
             #[cfg(feature = "VsGitPullRequestNewChanges")]
             VsIcon::VsGitPullRequestNewChanges => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3771,7 +3757,7 @@ impl Data {
             }
             #[cfg(feature = "VsGithub")]
             VsIcon::VsGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3788,7 +3774,7 @@ impl Data {
             }
             #[cfg(feature = "VsGithubAction")]
             VsIcon::VsGithubAction => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3805,7 +3791,7 @@ impl Data {
             }
             #[cfg(feature = "VsGithubAlt")]
             VsIcon::VsGithubAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3822,7 +3808,7 @@ impl Data {
             }
             #[cfg(feature = "VsGithubInverted")]
             VsIcon::VsGithubInverted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3839,7 +3825,7 @@ impl Data {
             }
             #[cfg(feature = "VsGlobe")]
             VsIcon::VsGlobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3856,7 +3842,7 @@ impl Data {
             }
             #[cfg(feature = "VsGoToFile")]
             VsIcon::VsGoToFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3873,7 +3859,7 @@ impl Data {
             }
             #[cfg(feature = "VsGrabber")]
             VsIcon::VsGrabber => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3890,7 +3876,7 @@ impl Data {
             }
             #[cfg(feature = "VsGraph")]
             VsIcon::VsGraph => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3907,7 +3893,7 @@ impl Data {
             }
             #[cfg(feature = "VsGraphLeft")]
             VsIcon::VsGraphLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3924,7 +3910,7 @@ impl Data {
             }
             #[cfg(feature = "VsGraphLine")]
             VsIcon::VsGraphLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3941,7 +3927,7 @@ impl Data {
             }
             #[cfg(feature = "VsGraphScatter")]
             VsIcon::VsGraphScatter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3958,7 +3944,7 @@ impl Data {
             }
             #[cfg(feature = "VsGripper")]
             VsIcon::VsGripper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3975,7 +3961,7 @@ impl Data {
             }
             #[cfg(feature = "VsGroupByRefType")]
             VsIcon::VsGroupByRefType => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3992,7 +3978,7 @@ impl Data {
             }
             #[cfg(feature = "VsHeart")]
             VsIcon::VsHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4009,7 +3995,7 @@ impl Data {
             }
             #[cfg(feature = "VsHeartFilled")]
             VsIcon::VsHeartFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4026,7 +4012,7 @@ impl Data {
             }
             #[cfg(feature = "VsHistory")]
             VsIcon::VsHistory => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4043,7 +4029,7 @@ impl Data {
             }
             #[cfg(feature = "VsHome")]
             VsIcon::VsHome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4060,7 +4046,7 @@ impl Data {
             }
             #[cfg(feature = "VsHorizontalRule")]
             VsIcon::VsHorizontalRule => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4077,7 +4063,7 @@ impl Data {
             }
             #[cfg(feature = "VsHubot")]
             VsIcon::VsHubot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4094,7 +4080,7 @@ impl Data {
             }
             #[cfg(feature = "VsInbox")]
             VsIcon::VsInbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4111,7 +4097,7 @@ impl Data {
             }
             #[cfg(feature = "VsIndent")]
             VsIcon::VsIndent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4128,7 +4114,7 @@ impl Data {
             }
             #[cfg(feature = "VsInfo")]
             VsIcon::VsInfo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4145,7 +4131,7 @@ impl Data {
             }
             #[cfg(feature = "VsInspect")]
             VsIcon::VsInspect => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4162,7 +4148,7 @@ impl Data {
             }
             #[cfg(feature = "VsIssueDraft")]
             VsIcon::VsIssueDraft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4179,7 +4165,7 @@ impl Data {
             }
             #[cfg(feature = "VsIssueReopened")]
             VsIcon::VsIssueReopened => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4196,7 +4182,7 @@ impl Data {
             }
             #[cfg(feature = "VsIssues")]
             VsIcon::VsIssues => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4213,7 +4199,7 @@ impl Data {
             }
             #[cfg(feature = "VsItalic")]
             VsIcon::VsItalic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4230,7 +4216,7 @@ impl Data {
             }
             #[cfg(feature = "VsJersey")]
             VsIcon::VsJersey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4247,7 +4233,7 @@ impl Data {
             }
             #[cfg(feature = "VsJson")]
             VsIcon::VsJson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4264,7 +4250,7 @@ impl Data {
             }
             #[cfg(feature = "VsKebabVertical")]
             VsIcon::VsKebabVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4281,7 +4267,7 @@ impl Data {
             }
             #[cfg(feature = "VsKey")]
             VsIcon::VsKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4298,7 +4284,7 @@ impl Data {
             }
             #[cfg(feature = "VsLaw")]
             VsIcon::VsLaw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4315,7 +4301,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayers")]
             VsIcon::VsLayers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4332,7 +4318,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayersActive")]
             VsIcon::VsLayersActive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4349,7 +4335,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayersDot")]
             VsIcon::VsLayersDot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4366,7 +4352,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayout")]
             VsIcon::VsLayout => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4383,7 +4369,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutActivitybarLeft")]
             VsIcon::VsLayoutActivitybarLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4400,7 +4386,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutActivitybarRight")]
             VsIcon::VsLayoutActivitybarRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4417,7 +4403,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutCentered")]
             VsIcon::VsLayoutCentered => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4434,7 +4420,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutMenubar")]
             VsIcon::VsLayoutMenubar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4451,7 +4437,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutPanel")]
             VsIcon::VsLayoutPanel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4468,7 +4454,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutPanelCenter")]
             VsIcon::VsLayoutPanelCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4485,7 +4471,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutPanelJustify")]
             VsIcon::VsLayoutPanelJustify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4502,7 +4488,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutPanelLeft")]
             VsIcon::VsLayoutPanelLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4519,7 +4505,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutPanelOff")]
             VsIcon::VsLayoutPanelOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4536,7 +4522,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutPanelRight")]
             VsIcon::VsLayoutPanelRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4553,7 +4539,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutSidebarLeft")]
             VsIcon::VsLayoutSidebarLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4570,7 +4556,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutSidebarLeftOff")]
             VsIcon::VsLayoutSidebarLeftOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4587,7 +4573,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutSidebarRight")]
             VsIcon::VsLayoutSidebarRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4604,7 +4590,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutSidebarRightOff")]
             VsIcon::VsLayoutSidebarRightOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4621,7 +4607,7 @@ impl Data {
             }
             #[cfg(feature = "VsLayoutStatusbar")]
             VsIcon::VsLayoutStatusbar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4638,7 +4624,7 @@ impl Data {
             }
             #[cfg(feature = "VsLibrary")]
             VsIcon::VsLibrary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4655,7 +4641,7 @@ impl Data {
             }
             #[cfg(feature = "VsLightbulb")]
             VsIcon::VsLightbulb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4672,7 +4658,7 @@ impl Data {
             }
             #[cfg(feature = "VsLightbulbAutofix")]
             VsIcon::VsLightbulbAutofix => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4689,7 +4675,7 @@ impl Data {
             }
             #[cfg(feature = "VsLink")]
             VsIcon::VsLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4706,7 +4692,7 @@ impl Data {
             }
             #[cfg(feature = "VsLinkExternal")]
             VsIcon::VsLinkExternal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4723,7 +4709,7 @@ impl Data {
             }
             #[cfg(feature = "VsListFilter")]
             VsIcon::VsListFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4740,7 +4726,7 @@ impl Data {
             }
             #[cfg(feature = "VsListFlat")]
             VsIcon::VsListFlat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4757,7 +4743,7 @@ impl Data {
             }
             #[cfg(feature = "VsListOrdered")]
             VsIcon::VsListOrdered => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4774,7 +4760,7 @@ impl Data {
             }
             #[cfg(feature = "VsListSelection")]
             VsIcon::VsListSelection => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4791,7 +4777,7 @@ impl Data {
             }
             #[cfg(feature = "VsListTree")]
             VsIcon::VsListTree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4808,7 +4794,7 @@ impl Data {
             }
             #[cfg(feature = "VsListUnordered")]
             VsIcon::VsListUnordered => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4825,7 +4811,7 @@ impl Data {
             }
             #[cfg(feature = "VsLiveShare")]
             VsIcon::VsLiveShare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4842,7 +4828,7 @@ impl Data {
             }
             #[cfg(feature = "VsLoading")]
             VsIcon::VsLoading => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4859,7 +4845,7 @@ impl Data {
             }
             #[cfg(feature = "VsLocation")]
             VsIcon::VsLocation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4876,7 +4862,7 @@ impl Data {
             }
             #[cfg(feature = "VsLock")]
             VsIcon::VsLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4893,7 +4879,7 @@ impl Data {
             }
             #[cfg(feature = "VsLockSmall")]
             VsIcon::VsLockSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4910,7 +4896,7 @@ impl Data {
             }
             #[cfg(feature = "VsMagnet")]
             VsIcon::VsMagnet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4927,7 +4913,7 @@ impl Data {
             }
             #[cfg(feature = "VsMail")]
             VsIcon::VsMail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4944,7 +4930,7 @@ impl Data {
             }
             #[cfg(feature = "VsMailRead")]
             VsIcon::VsMailRead => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4961,7 +4947,7 @@ impl Data {
             }
             #[cfg(feature = "VsMap")]
             VsIcon::VsMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4978,7 +4964,7 @@ impl Data {
             }
             #[cfg(feature = "VsMapFilled")]
             VsIcon::VsMapFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4995,7 +4981,7 @@ impl Data {
             }
             #[cfg(feature = "VsMarkdown")]
             VsIcon::VsMarkdown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5012,7 +4998,7 @@ impl Data {
             }
             #[cfg(feature = "VsMegaphone")]
             VsIcon::VsMegaphone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5029,7 +5015,7 @@ impl Data {
             }
             #[cfg(feature = "VsMention")]
             VsIcon::VsMention => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5046,7 +5032,7 @@ impl Data {
             }
             #[cfg(feature = "VsMenu")]
             VsIcon::VsMenu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5063,7 +5049,7 @@ impl Data {
             }
             #[cfg(feature = "VsMerge")]
             VsIcon::VsMerge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5080,7 +5066,7 @@ impl Data {
             }
             #[cfg(feature = "VsMilestone")]
             VsIcon::VsMilestone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5097,7 +5083,7 @@ impl Data {
             }
             #[cfg(feature = "VsMirror")]
             VsIcon::VsMirror => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5114,7 +5100,7 @@ impl Data {
             }
             #[cfg(feature = "VsMortarBoard")]
             VsIcon::VsMortarBoard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5131,7 +5117,7 @@ impl Data {
             }
             #[cfg(feature = "VsMove")]
             VsIcon::VsMove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5148,7 +5134,7 @@ impl Data {
             }
             #[cfg(feature = "VsMultipleWindows")]
             VsIcon::VsMultipleWindows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5165,7 +5151,7 @@ impl Data {
             }
             #[cfg(feature = "VsMute")]
             VsIcon::VsMute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5182,7 +5168,7 @@ impl Data {
             }
             #[cfg(feature = "VsNewFile")]
             VsIcon::VsNewFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5199,7 +5185,7 @@ impl Data {
             }
             #[cfg(feature = "VsNewFolder")]
             VsIcon::VsNewFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5216,7 +5202,7 @@ impl Data {
             }
             #[cfg(feature = "VsNewline")]
             VsIcon::VsNewline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5233,7 +5219,7 @@ impl Data {
             }
             #[cfg(feature = "VsNoNewline")]
             VsIcon::VsNoNewline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5250,7 +5236,7 @@ impl Data {
             }
             #[cfg(feature = "VsNote")]
             VsIcon::VsNote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5267,7 +5253,7 @@ impl Data {
             }
             #[cfg(feature = "VsNotebook")]
             VsIcon::VsNotebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5284,7 +5270,7 @@ impl Data {
             }
             #[cfg(feature = "VsNotebookTemplate")]
             VsIcon::VsNotebookTemplate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5301,7 +5287,7 @@ impl Data {
             }
             #[cfg(feature = "VsOctoface")]
             VsIcon::VsOctoface => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5318,7 +5304,7 @@ impl Data {
             }
             #[cfg(feature = "VsOpenPreview")]
             VsIcon::VsOpenPreview => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5335,7 +5321,7 @@ impl Data {
             }
             #[cfg(feature = "VsOrganization")]
             VsIcon::VsOrganization => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5352,7 +5338,7 @@ impl Data {
             }
             #[cfg(feature = "VsOutput")]
             VsIcon::VsOutput => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5369,7 +5355,7 @@ impl Data {
             }
             #[cfg(feature = "VsPackage")]
             VsIcon::VsPackage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5386,7 +5372,7 @@ impl Data {
             }
             #[cfg(feature = "VsPaintcan")]
             VsIcon::VsPaintcan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5403,7 +5389,7 @@ impl Data {
             }
             #[cfg(feature = "VsPass")]
             VsIcon::VsPass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5420,7 +5406,7 @@ impl Data {
             }
             #[cfg(feature = "VsPassFilled")]
             VsIcon::VsPassFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5437,7 +5423,7 @@ impl Data {
             }
             #[cfg(feature = "VsPerson")]
             VsIcon::VsPerson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5454,7 +5440,7 @@ impl Data {
             }
             #[cfg(feature = "VsPersonAdd")]
             VsIcon::VsPersonAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5471,7 +5457,7 @@ impl Data {
             }
             #[cfg(feature = "VsPieChart")]
             VsIcon::VsPieChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5488,7 +5474,7 @@ impl Data {
             }
             #[cfg(feature = "VsPin")]
             VsIcon::VsPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5505,7 +5491,7 @@ impl Data {
             }
             #[cfg(feature = "VsPinned")]
             VsIcon::VsPinned => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5522,7 +5508,7 @@ impl Data {
             }
             #[cfg(feature = "VsPinnedDirty")]
             VsIcon::VsPinnedDirty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5539,7 +5525,7 @@ impl Data {
             }
             #[cfg(feature = "VsPlay")]
             VsIcon::VsPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5556,7 +5542,7 @@ impl Data {
             }
             #[cfg(feature = "VsPlayCircle")]
             VsIcon::VsPlayCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5573,7 +5559,7 @@ impl Data {
             }
             #[cfg(feature = "VsPlug")]
             VsIcon::VsPlug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5590,7 +5576,7 @@ impl Data {
             }
             #[cfg(feature = "VsPreserveCase")]
             VsIcon::VsPreserveCase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5607,7 +5593,7 @@ impl Data {
             }
             #[cfg(feature = "VsPreview")]
             VsIcon::VsPreview => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5624,7 +5610,7 @@ impl Data {
             }
             #[cfg(feature = "VsPrimitiveSquare")]
             VsIcon::VsPrimitiveSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5641,7 +5627,7 @@ impl Data {
             }
             #[cfg(feature = "VsProject")]
             VsIcon::VsProject => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5658,7 +5644,7 @@ impl Data {
             }
             #[cfg(feature = "VsPulse")]
             VsIcon::VsPulse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5675,7 +5661,7 @@ impl Data {
             }
             #[cfg(feature = "VsQuestion")]
             VsIcon::VsQuestion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5692,7 +5678,7 @@ impl Data {
             }
             #[cfg(feature = "VsQuote")]
             VsIcon::VsQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5709,7 +5695,7 @@ impl Data {
             }
             #[cfg(feature = "VsRadioTower")]
             VsIcon::VsRadioTower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5726,7 +5712,7 @@ impl Data {
             }
             #[cfg(feature = "VsReactions")]
             VsIcon::VsReactions => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5743,7 +5729,7 @@ impl Data {
             }
             #[cfg(feature = "VsRecord")]
             VsIcon::VsRecord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5760,7 +5746,7 @@ impl Data {
             }
             #[cfg(feature = "VsRecordKeys")]
             VsIcon::VsRecordKeys => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5777,7 +5763,7 @@ impl Data {
             }
             #[cfg(feature = "VsRecordSmall")]
             VsIcon::VsRecordSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5794,7 +5780,7 @@ impl Data {
             }
             #[cfg(feature = "VsRedo")]
             VsIcon::VsRedo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5811,7 +5797,7 @@ impl Data {
             }
             #[cfg(feature = "VsReferences")]
             VsIcon::VsReferences => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5828,7 +5814,7 @@ impl Data {
             }
             #[cfg(feature = "VsRefresh")]
             VsIcon::VsRefresh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5845,7 +5831,7 @@ impl Data {
             }
             #[cfg(feature = "VsRegex")]
             VsIcon::VsRegex => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5862,7 +5848,7 @@ impl Data {
             }
             #[cfg(feature = "VsRemote")]
             VsIcon::VsRemote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5879,7 +5865,7 @@ impl Data {
             }
             #[cfg(feature = "VsRemoteExplorer")]
             VsIcon::VsRemoteExplorer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5896,7 +5882,7 @@ impl Data {
             }
             #[cfg(feature = "VsRemove")]
             VsIcon::VsRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5913,7 +5899,7 @@ impl Data {
             }
             #[cfg(feature = "VsReplace")]
             VsIcon::VsReplace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5930,7 +5916,7 @@ impl Data {
             }
             #[cfg(feature = "VsReplaceAll")]
             VsIcon::VsReplaceAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5947,7 +5933,7 @@ impl Data {
             }
             #[cfg(feature = "VsReply")]
             VsIcon::VsReply => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5964,7 +5950,7 @@ impl Data {
             }
             #[cfg(feature = "VsRepo")]
             VsIcon::VsRepo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5981,7 +5967,7 @@ impl Data {
             }
             #[cfg(feature = "VsRepoClone")]
             VsIcon::VsRepoClone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5998,7 +5984,7 @@ impl Data {
             }
             #[cfg(feature = "VsRepoForcePush")]
             VsIcon::VsRepoForcePush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6015,7 +6001,7 @@ impl Data {
             }
             #[cfg(feature = "VsRepoForked")]
             VsIcon::VsRepoForked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6032,7 +6018,7 @@ impl Data {
             }
             #[cfg(feature = "VsRepoPull")]
             VsIcon::VsRepoPull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6049,7 +6035,7 @@ impl Data {
             }
             #[cfg(feature = "VsRepoPush")]
             VsIcon::VsRepoPush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6066,7 +6052,7 @@ impl Data {
             }
             #[cfg(feature = "VsReport")]
             VsIcon::VsReport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6083,7 +6069,7 @@ impl Data {
             }
             #[cfg(feature = "VsRequestChanges")]
             VsIcon::VsRequestChanges => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6100,7 +6086,7 @@ impl Data {
             }
             #[cfg(feature = "VsRocket")]
             VsIcon::VsRocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6117,7 +6103,7 @@ impl Data {
             }
             #[cfg(feature = "VsRootFolder")]
             VsIcon::VsRootFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6134,7 +6120,7 @@ impl Data {
             }
             #[cfg(feature = "VsRootFolderOpened")]
             VsIcon::VsRootFolderOpened => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6151,7 +6137,7 @@ impl Data {
             }
             #[cfg(feature = "VsRss")]
             VsIcon::VsRss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6168,7 +6154,7 @@ impl Data {
             }
             #[cfg(feature = "VsRuby")]
             VsIcon::VsRuby => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6185,7 +6171,7 @@ impl Data {
             }
             #[cfg(feature = "VsRunAbove")]
             VsIcon::VsRunAbove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6202,7 +6188,7 @@ impl Data {
             }
             #[cfg(feature = "VsRunAll")]
             VsIcon::VsRunAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6219,7 +6205,7 @@ impl Data {
             }
             #[cfg(feature = "VsRunBelow")]
             VsIcon::VsRunBelow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6236,7 +6222,7 @@ impl Data {
             }
             #[cfg(feature = "VsRunErrors")]
             VsIcon::VsRunErrors => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6253,7 +6239,7 @@ impl Data {
             }
             #[cfg(feature = "VsSave")]
             VsIcon::VsSave => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6270,7 +6256,7 @@ impl Data {
             }
             #[cfg(feature = "VsSaveAll")]
             VsIcon::VsSaveAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6287,7 +6273,7 @@ impl Data {
             }
             #[cfg(feature = "VsSaveAs")]
             VsIcon::VsSaveAs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6304,7 +6290,7 @@ impl Data {
             }
             #[cfg(feature = "VsScreenFull")]
             VsIcon::VsScreenFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6321,7 +6307,7 @@ impl Data {
             }
             #[cfg(feature = "VsScreenNormal")]
             VsIcon::VsScreenNormal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6338,7 +6324,7 @@ impl Data {
             }
             #[cfg(feature = "VsSearch")]
             VsIcon::VsSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6355,7 +6341,7 @@ impl Data {
             }
             #[cfg(feature = "VsSearchStop")]
             VsIcon::VsSearchStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6372,7 +6358,7 @@ impl Data {
             }
             #[cfg(feature = "VsServer")]
             VsIcon::VsServer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6389,7 +6375,7 @@ impl Data {
             }
             #[cfg(feature = "VsServerEnvironment")]
             VsIcon::VsServerEnvironment => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6406,7 +6392,7 @@ impl Data {
             }
             #[cfg(feature = "VsServerProcess")]
             VsIcon::VsServerProcess => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6423,7 +6409,7 @@ impl Data {
             }
             #[cfg(feature = "VsSettings")]
             VsIcon::VsSettings => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6440,7 +6426,7 @@ impl Data {
             }
             #[cfg(feature = "VsSettingsGear")]
             VsIcon::VsSettingsGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6457,7 +6443,7 @@ impl Data {
             }
             #[cfg(feature = "VsShield")]
             VsIcon::VsShield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6474,7 +6460,7 @@ impl Data {
             }
             #[cfg(feature = "VsSignIn")]
             VsIcon::VsSignIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6491,7 +6477,7 @@ impl Data {
             }
             #[cfg(feature = "VsSignOut")]
             VsIcon::VsSignOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6508,7 +6494,7 @@ impl Data {
             }
             #[cfg(feature = "VsSmiley")]
             VsIcon::VsSmiley => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6525,7 +6511,7 @@ impl Data {
             }
             #[cfg(feature = "VsSortPrecedence")]
             VsIcon::VsSortPrecedence => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6542,7 +6528,7 @@ impl Data {
             }
             #[cfg(feature = "VsSourceControl")]
             VsIcon::VsSourceControl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6559,7 +6545,7 @@ impl Data {
             }
             #[cfg(feature = "VsSplitHorizontal")]
             VsIcon::VsSplitHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6576,7 +6562,7 @@ impl Data {
             }
             #[cfg(feature = "VsSplitVertical")]
             VsIcon::VsSplitVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6593,7 +6579,7 @@ impl Data {
             }
             #[cfg(feature = "VsSquirrel")]
             VsIcon::VsSquirrel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6610,7 +6596,7 @@ impl Data {
             }
             #[cfg(feature = "VsStarEmpty")]
             VsIcon::VsStarEmpty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6627,7 +6613,7 @@ impl Data {
             }
             #[cfg(feature = "VsStarFull")]
             VsIcon::VsStarFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6644,7 +6630,7 @@ impl Data {
             }
             #[cfg(feature = "VsStarHalf")]
             VsIcon::VsStarHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6661,7 +6647,7 @@ impl Data {
             }
             #[cfg(feature = "VsStopCircle")]
             VsIcon::VsStopCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6678,7 +6664,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolArray")]
             VsIcon::VsSymbolArray => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6695,7 +6681,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolBoolean")]
             VsIcon::VsSymbolBoolean => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6712,7 +6698,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolClass")]
             VsIcon::VsSymbolClass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6729,7 +6715,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolColor")]
             VsIcon::VsSymbolColor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6746,7 +6732,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolConstant")]
             VsIcon::VsSymbolConstant => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6763,7 +6749,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolEnum")]
             VsIcon::VsSymbolEnum => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6780,7 +6766,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolEnumMember")]
             VsIcon::VsSymbolEnumMember => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6797,7 +6783,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolEvent")]
             VsIcon::VsSymbolEvent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6814,7 +6800,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolField")]
             VsIcon::VsSymbolField => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6831,7 +6817,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolFile")]
             VsIcon::VsSymbolFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6848,7 +6834,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolInterface")]
             VsIcon::VsSymbolInterface => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6865,7 +6851,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolKey")]
             VsIcon::VsSymbolKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6882,7 +6868,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolKeyword")]
             VsIcon::VsSymbolKeyword => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6899,7 +6885,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolMethod")]
             VsIcon::VsSymbolMethod => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6916,7 +6902,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolMisc")]
             VsIcon::VsSymbolMisc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6933,7 +6919,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolNamespace")]
             VsIcon::VsSymbolNamespace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6950,7 +6936,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolNumeric")]
             VsIcon::VsSymbolNumeric => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6967,7 +6953,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolOperator")]
             VsIcon::VsSymbolOperator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6984,7 +6970,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolParameter")]
             VsIcon::VsSymbolParameter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7001,7 +6987,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolProperty")]
             VsIcon::VsSymbolProperty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7018,7 +7004,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolRuler")]
             VsIcon::VsSymbolRuler => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7035,7 +7021,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolSnippet")]
             VsIcon::VsSymbolSnippet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7052,7 +7038,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolString")]
             VsIcon::VsSymbolString => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7069,7 +7055,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolStructure")]
             VsIcon::VsSymbolStructure => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7086,7 +7072,7 @@ impl Data {
             }
             #[cfg(feature = "VsSymbolVariable")]
             VsIcon::VsSymbolVariable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7103,7 +7089,7 @@ impl Data {
             }
             #[cfg(feature = "VsSync")]
             VsIcon::VsSync => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7120,7 +7106,7 @@ impl Data {
             }
             #[cfg(feature = "VsSyncIgnored")]
             VsIcon::VsSyncIgnored => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7137,7 +7123,7 @@ impl Data {
             }
             #[cfg(feature = "VsTable")]
             VsIcon::VsTable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7154,7 +7140,7 @@ impl Data {
             }
             #[cfg(feature = "VsTag")]
             VsIcon::VsTag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7171,7 +7157,7 @@ impl Data {
             }
             #[cfg(feature = "VsTarget")]
             VsIcon::VsTarget => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7188,7 +7174,7 @@ impl Data {
             }
             #[cfg(feature = "VsTasklist")]
             VsIcon::VsTasklist => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7205,7 +7191,7 @@ impl Data {
             }
             #[cfg(feature = "VsTelescope")]
             VsIcon::VsTelescope => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7222,7 +7208,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminal")]
             VsIcon::VsTerminal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7239,7 +7225,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalBash")]
             VsIcon::VsTerminalBash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7256,7 +7242,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalCmd")]
             VsIcon::VsTerminalCmd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7273,7 +7259,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalDebian")]
             VsIcon::VsTerminalDebian => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7290,7 +7276,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalLinux")]
             VsIcon::VsTerminalLinux => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7307,7 +7293,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalPowershell")]
             VsIcon::VsTerminalPowershell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7324,7 +7310,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalTmux")]
             VsIcon::VsTerminalTmux => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7341,7 +7327,7 @@ impl Data {
             }
             #[cfg(feature = "VsTerminalUbuntu")]
             VsIcon::VsTerminalUbuntu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7358,7 +7344,7 @@ impl Data {
             }
             #[cfg(feature = "VsTextSize")]
             VsIcon::VsTextSize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7375,7 +7361,7 @@ impl Data {
             }
             #[cfg(feature = "VsThreeBars")]
             VsIcon::VsThreeBars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7392,7 +7378,7 @@ impl Data {
             }
             #[cfg(feature = "VsThumbsdown")]
             VsIcon::VsThumbsdown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7409,7 +7395,7 @@ impl Data {
             }
             #[cfg(feature = "VsThumbsup")]
             VsIcon::VsThumbsup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7426,7 +7412,7 @@ impl Data {
             }
             #[cfg(feature = "VsTools")]
             VsIcon::VsTools => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7443,7 +7429,7 @@ impl Data {
             }
             #[cfg(feature = "VsTrash")]
             VsIcon::VsTrash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7460,7 +7446,7 @@ impl Data {
             }
             #[cfg(feature = "VsTriangleDown")]
             VsIcon::VsTriangleDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7477,7 +7463,7 @@ impl Data {
             }
             #[cfg(feature = "VsTriangleLeft")]
             VsIcon::VsTriangleLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7494,7 +7480,7 @@ impl Data {
             }
             #[cfg(feature = "VsTriangleRight")]
             VsIcon::VsTriangleRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7511,7 +7497,7 @@ impl Data {
             }
             #[cfg(feature = "VsTriangleUp")]
             VsIcon::VsTriangleUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7528,7 +7514,7 @@ impl Data {
             }
             #[cfg(feature = "VsTwitter")]
             VsIcon::VsTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7545,7 +7531,7 @@ impl Data {
             }
             #[cfg(feature = "VsTypeHierarchy")]
             VsIcon::VsTypeHierarchy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7562,7 +7548,7 @@ impl Data {
             }
             #[cfg(feature = "VsTypeHierarchySub")]
             VsIcon::VsTypeHierarchySub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7579,7 +7565,7 @@ impl Data {
             }
             #[cfg(feature = "VsTypeHierarchySuper")]
             VsIcon::VsTypeHierarchySuper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7596,7 +7582,7 @@ impl Data {
             }
             #[cfg(feature = "VsUnfold")]
             VsIcon::VsUnfold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7613,7 +7599,7 @@ impl Data {
             }
             #[cfg(feature = "VsUngroupByRefType")]
             VsIcon::VsUngroupByRefType => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7630,7 +7616,7 @@ impl Data {
             }
             #[cfg(feature = "VsUnlock")]
             VsIcon::VsUnlock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7647,7 +7633,7 @@ impl Data {
             }
             #[cfg(feature = "VsUnmute")]
             VsIcon::VsUnmute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7664,7 +7650,7 @@ impl Data {
             }
             #[cfg(feature = "VsUnverified")]
             VsIcon::VsUnverified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7681,7 +7667,7 @@ impl Data {
             }
             #[cfg(feature = "VsVariableGroup")]
             VsIcon::VsVariableGroup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7698,7 +7684,7 @@ impl Data {
             }
             #[cfg(feature = "VsVerified")]
             VsIcon::VsVerified => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7715,7 +7701,7 @@ impl Data {
             }
             #[cfg(feature = "VsVerifiedFilled")]
             VsIcon::VsVerifiedFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7732,7 +7718,7 @@ impl Data {
             }
             #[cfg(feature = "VsVersions")]
             VsIcon::VsVersions => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7749,7 +7735,7 @@ impl Data {
             }
             #[cfg(feature = "VsVm")]
             VsIcon::VsVm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7766,7 +7752,7 @@ impl Data {
             }
             #[cfg(feature = "VsVmActive")]
             VsIcon::VsVmActive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7783,7 +7769,7 @@ impl Data {
             }
             #[cfg(feature = "VsVmConnect")]
             VsIcon::VsVmConnect => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7800,7 +7786,7 @@ impl Data {
             }
             #[cfg(feature = "VsVmOutline")]
             VsIcon::VsVmOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7817,7 +7803,7 @@ impl Data {
             }
             #[cfg(feature = "VsVmRunning")]
             VsIcon::VsVmRunning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7834,7 +7820,7 @@ impl Data {
             }
             #[cfg(feature = "VsWand")]
             VsIcon::VsWand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7851,7 +7837,7 @@ impl Data {
             }
             #[cfg(feature = "VsWarning")]
             VsIcon::VsWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7868,7 +7854,7 @@ impl Data {
             }
             #[cfg(feature = "VsWatch")]
             VsIcon::VsWatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7885,7 +7871,7 @@ impl Data {
             }
             #[cfg(feature = "VsWhitespace")]
             VsIcon::VsWhitespace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7902,7 +7888,7 @@ impl Data {
             }
             #[cfg(feature = "VsWholeWord")]
             VsIcon::VsWholeWord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7919,7 +7905,7 @@ impl Data {
             }
             #[cfg(feature = "VsWindow")]
             VsIcon::VsWindow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7936,7 +7922,7 @@ impl Data {
             }
             #[cfg(feature = "VsWordWrap")]
             VsIcon::VsWordWrap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7953,7 +7939,7 @@ impl Data {
             }
             #[cfg(feature = "VsWorkspaceTrusted")]
             VsIcon::VsWorkspaceTrusted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7970,7 +7956,7 @@ impl Data {
             }
             #[cfg(feature = "VsWorkspaceUnknown")]
             VsIcon::VsWorkspaceUnknown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7987,7 +7973,7 @@ impl Data {
             }
             #[cfg(feature = "VsWorkspaceUntrusted")]
             VsIcon::VsWorkspaceUntrusted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8004,7 +7990,7 @@ impl Data {
             }
             #[cfg(feature = "VsZoomIn")]
             VsIcon::VsZoomIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8021,7 +8007,7 @@ impl Data {
             }
             #[cfg(feature = "VsZoomOut")]
             VsIcon::VsZoomOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8038,62 +8024,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosVsIcon(
-    cx: leptos::Scope,
-    icon: VsIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

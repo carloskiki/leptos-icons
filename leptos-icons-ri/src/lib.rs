@@ -4562,26 +4562,12 @@ pub enum RiIcon {
     RiZzzHealthLine,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: RiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for RiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "Ri24HoursFinanceFill")]
             RiIcon::Ri24HoursFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4598,7 +4584,7 @@ impl Data {
             }
             #[cfg(feature = "Ri24HoursFinanceLine")]
             RiIcon::Ri24HoursFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4615,7 +4601,7 @@ impl Data {
             }
             #[cfg(feature = "Ri4kMediaFill")]
             RiIcon::Ri4kMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4632,7 +4618,7 @@ impl Data {
             }
             #[cfg(feature = "Ri4kMediaLine")]
             RiIcon::Ri4kMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4649,7 +4635,7 @@ impl Data {
             }
             #[cfg(feature = "RiABEditor")]
             RiIcon::RiABEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4666,7 +4652,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountBoxUserFill")]
             RiIcon::RiAccountBoxUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4683,7 +4669,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountBoxUserLine")]
             RiIcon::RiAccountBoxUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4700,7 +4686,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountCircleUserFill")]
             RiIcon::RiAccountCircleUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4717,7 +4703,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountCircleUserLine")]
             RiIcon::RiAccountCircleUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4734,7 +4720,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountPinBoxUserFill")]
             RiIcon::RiAccountPinBoxUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4751,7 +4737,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountPinBoxUserLine")]
             RiIcon::RiAccountPinBoxUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4768,7 +4754,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountPinCircleUserFill")]
             RiIcon::RiAccountPinCircleUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4785,7 +4771,7 @@ impl Data {
             }
             #[cfg(feature = "RiAccountPinCircleUserLine")]
             RiIcon::RiAccountPinCircleUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4802,7 +4788,7 @@ impl Data {
             }
             #[cfg(feature = "RiAddBoxSystemFill")]
             RiIcon::RiAddBoxSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4819,7 +4805,7 @@ impl Data {
             }
             #[cfg(feature = "RiAddBoxSystemLine")]
             RiIcon::RiAddBoxSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4836,7 +4822,7 @@ impl Data {
             }
             #[cfg(feature = "RiAddCircleSystemFill")]
             RiIcon::RiAddCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4853,7 +4839,7 @@ impl Data {
             }
             #[cfg(feature = "RiAddCircleSystemLine")]
             RiIcon::RiAddCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4870,7 +4856,7 @@ impl Data {
             }
             #[cfg(feature = "RiAddSystemFill")]
             RiIcon::RiAddSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4887,7 +4873,7 @@ impl Data {
             }
             #[cfg(feature = "RiAddSystemLine")]
             RiIcon::RiAddSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4904,7 +4890,7 @@ impl Data {
             }
             #[cfg(feature = "RiAdminUserFill")]
             RiIcon::RiAdminUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4921,7 +4907,7 @@ impl Data {
             }
             #[cfg(feature = "RiAdminUserLine")]
             RiIcon::RiAdminUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4938,7 +4924,7 @@ impl Data {
             }
             #[cfg(feature = "RiAdvertisementBusinessFill")]
             RiIcon::RiAdvertisementBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4955,7 +4941,7 @@ impl Data {
             }
             #[cfg(feature = "RiAdvertisementBusinessLine")]
             RiIcon::RiAdvertisementBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4972,7 +4958,7 @@ impl Data {
             }
             #[cfg(feature = "RiAirplayDeviceFill")]
             RiIcon::RiAirplayDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4989,7 +4975,7 @@ impl Data {
             }
             #[cfg(feature = "RiAirplayDeviceLine")]
             RiIcon::RiAirplayDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5006,7 +4992,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlarmSystemFill")]
             RiIcon::RiAlarmSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5023,7 +5009,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlarmSystemLine")]
             RiIcon::RiAlarmSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5040,7 +5026,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlarmWarningSystemFill")]
             RiIcon::RiAlarmWarningSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5057,7 +5043,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlarmWarningSystemLine")]
             RiIcon::RiAlarmWarningSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5074,7 +5060,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlbumMediaFill")]
             RiIcon::RiAlbumMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5091,7 +5077,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlbumMediaLine")]
             RiIcon::RiAlbumMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5108,7 +5094,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlertSystemFill")]
             RiIcon::RiAlertSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5125,7 +5111,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlertSystemLine")]
             RiIcon::RiAlertSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5142,7 +5128,7 @@ impl Data {
             }
             #[cfg(feature = "RiAliensUserFill")]
             RiIcon::RiAliensUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5159,7 +5145,7 @@ impl Data {
             }
             #[cfg(feature = "RiAliensUserLine")]
             RiIcon::RiAliensUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5176,7 +5162,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignBottomEditor")]
             RiIcon::RiAlignBottomEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5193,7 +5179,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignCenterEditor")]
             RiIcon::RiAlignCenterEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5210,7 +5196,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignJustifyEditor")]
             RiIcon::RiAlignJustifyEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5227,7 +5213,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignLeftEditor")]
             RiIcon::RiAlignLeftEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5244,7 +5230,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignRightEditor")]
             RiIcon::RiAlignRightEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5261,7 +5247,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignTopEditor")]
             RiIcon::RiAlignTopEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5278,7 +5264,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlignVerticallyEditor")]
             RiIcon::RiAlignVerticallyEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5295,7 +5281,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlipayLogosFill")]
             RiIcon::RiAlipayLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5312,7 +5298,7 @@ impl Data {
             }
             #[cfg(feature = "RiAlipayLogosLine")]
             RiIcon::RiAlipayLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5329,7 +5315,7 @@ impl Data {
             }
             #[cfg(feature = "RiAmazonLogosFill")]
             RiIcon::RiAmazonLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5346,7 +5332,7 @@ impl Data {
             }
             #[cfg(feature = "RiAmazonLogosLine")]
             RiIcon::RiAmazonLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5363,7 +5349,7 @@ impl Data {
             }
             #[cfg(feature = "RiAnchorMapFill")]
             RiIcon::RiAnchorMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5380,7 +5366,7 @@ impl Data {
             }
             #[cfg(feature = "RiAnchorMapLine")]
             RiIcon::RiAnchorMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5397,7 +5383,7 @@ impl Data {
             }
             #[cfg(feature = "RiAncientGateBuildingsFill")]
             RiIcon::RiAncientGateBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5414,7 +5400,7 @@ impl Data {
             }
             #[cfg(feature = "RiAncientGateBuildingsLine")]
             RiIcon::RiAncientGateBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5431,7 +5417,7 @@ impl Data {
             }
             #[cfg(feature = "RiAncientPavilionBuildingsFill")]
             RiIcon::RiAncientPavilionBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5448,7 +5434,7 @@ impl Data {
             }
             #[cfg(feature = "RiAncientPavilionBuildingsLine")]
             RiIcon::RiAncientPavilionBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5465,7 +5451,7 @@ impl Data {
             }
             #[cfg(feature = "RiAndroidLogosFill")]
             RiIcon::RiAndroidLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5482,7 +5468,7 @@ impl Data {
             }
             #[cfg(feature = "RiAndroidLogosLine")]
             RiIcon::RiAndroidLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5499,7 +5485,7 @@ impl Data {
             }
             #[cfg(feature = "RiAngularjsLogosFill")]
             RiIcon::RiAngularjsLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5516,7 +5502,7 @@ impl Data {
             }
             #[cfg(feature = "RiAngularjsLogosLine")]
             RiIcon::RiAngularjsLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5533,7 +5519,7 @@ impl Data {
             }
             #[cfg(feature = "RiAnticlockwise2DesignFill")]
             RiIcon::RiAnticlockwise2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5550,7 +5536,7 @@ impl Data {
             }
             #[cfg(feature = "RiAnticlockwise2DesignLine")]
             RiIcon::RiAnticlockwise2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5567,7 +5553,7 @@ impl Data {
             }
             #[cfg(feature = "RiAnticlockwiseDesignFill")]
             RiIcon::RiAnticlockwiseDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5584,7 +5570,7 @@ impl Data {
             }
             #[cfg(feature = "RiAnticlockwiseDesignLine")]
             RiIcon::RiAnticlockwiseDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5601,7 +5587,7 @@ impl Data {
             }
             #[cfg(feature = "RiAppStoreLogosFill")]
             RiIcon::RiAppStoreLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5618,7 +5604,7 @@ impl Data {
             }
             #[cfg(feature = "RiAppStoreLogosLine")]
             RiIcon::RiAppStoreLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5635,7 +5621,7 @@ impl Data {
             }
             #[cfg(feature = "RiAppleLogosFill")]
             RiIcon::RiAppleLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5652,7 +5638,7 @@ impl Data {
             }
             #[cfg(feature = "RiAppleLogosLine")]
             RiIcon::RiAppleLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5669,7 +5655,7 @@ impl Data {
             }
             #[cfg(feature = "RiApps2SystemFill")]
             RiIcon::RiApps2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5686,7 +5672,7 @@ impl Data {
             }
             #[cfg(feature = "RiApps2SystemLine")]
             RiIcon::RiApps2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5703,7 +5689,7 @@ impl Data {
             }
             #[cfg(feature = "RiAppsSystemFill")]
             RiIcon::RiAppsSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5720,7 +5706,7 @@ impl Data {
             }
             #[cfg(feature = "RiAppsSystemLine")]
             RiIcon::RiAppsSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5737,7 +5723,7 @@ impl Data {
             }
             #[cfg(feature = "RiArchiveBusinessFill")]
             RiIcon::RiArchiveBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5754,7 +5740,7 @@ impl Data {
             }
             #[cfg(feature = "RiArchiveBusinessLine")]
             RiIcon::RiArchiveBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5771,7 +5757,7 @@ impl Data {
             }
             #[cfg(feature = "RiArchiveDrawerBusinessFill")]
             RiIcon::RiArchiveDrawerBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5788,7 +5774,7 @@ impl Data {
             }
             #[cfg(feature = "RiArchiveDrawerBusinessLine")]
             RiIcon::RiArchiveDrawerBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5805,7 +5791,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDownCircleSystemFill")]
             RiIcon::RiArrowDownCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5822,7 +5808,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDownCircleSystemLine")]
             RiIcon::RiArrowDownCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5839,7 +5825,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDownSSystemFill")]
             RiIcon::RiArrowDownSSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5856,7 +5842,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDownSSystemLine")]
             RiIcon::RiArrowDownSSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5873,7 +5859,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDownSystemFill")]
             RiIcon::RiArrowDownSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5890,7 +5876,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDownSystemLine")]
             RiIcon::RiArrowDownSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5907,7 +5893,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropDownSystemFill")]
             RiIcon::RiArrowDropDownSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5924,7 +5910,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropDownSystemLine")]
             RiIcon::RiArrowDropDownSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5941,7 +5927,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropLeftSystemFill")]
             RiIcon::RiArrowDropLeftSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5958,7 +5944,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropLeftSystemLine")]
             RiIcon::RiArrowDropLeftSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5975,7 +5961,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropRightSystemFill")]
             RiIcon::RiArrowDropRightSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5992,7 +5978,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropRightSystemLine")]
             RiIcon::RiArrowDropRightSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6009,7 +5995,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropUpSystemFill")]
             RiIcon::RiArrowDropUpSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6026,7 +6012,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowDropUpSystemLine")]
             RiIcon::RiArrowDropUpSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6043,7 +6029,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowGoBackSystemFill")]
             RiIcon::RiArrowGoBackSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6060,7 +6046,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowGoBackSystemLine")]
             RiIcon::RiArrowGoBackSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6077,7 +6063,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowGoForwardSystemFill")]
             RiIcon::RiArrowGoForwardSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6094,7 +6080,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowGoForwardSystemLine")]
             RiIcon::RiArrowGoForwardSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6111,7 +6097,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftCircleSystemFill")]
             RiIcon::RiArrowLeftCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6128,7 +6114,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftCircleSystemLine")]
             RiIcon::RiArrowLeftCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6145,7 +6131,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftDownSystemFill")]
             RiIcon::RiArrowLeftDownSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6162,7 +6148,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftDownSystemLine")]
             RiIcon::RiArrowLeftDownSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6179,7 +6165,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftRightSystemFill")]
             RiIcon::RiArrowLeftRightSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6196,7 +6182,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftRightSystemLine")]
             RiIcon::RiArrowLeftRightSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6213,7 +6199,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftSSystemFill")]
             RiIcon::RiArrowLeftSSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6230,7 +6216,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftSSystemLine")]
             RiIcon::RiArrowLeftSSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6247,7 +6233,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftSystemFill")]
             RiIcon::RiArrowLeftSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6264,7 +6250,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftSystemLine")]
             RiIcon::RiArrowLeftSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6281,7 +6267,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftUpSystemFill")]
             RiIcon::RiArrowLeftUpSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6298,7 +6284,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowLeftUpSystemLine")]
             RiIcon::RiArrowLeftUpSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6315,7 +6301,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightCircleSystemFill")]
             RiIcon::RiArrowRightCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6332,7 +6318,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightCircleSystemLine")]
             RiIcon::RiArrowRightCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6349,7 +6335,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightDownSystemFill")]
             RiIcon::RiArrowRightDownSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6366,7 +6352,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightDownSystemLine")]
             RiIcon::RiArrowRightDownSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6383,7 +6369,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightSSystemFill")]
             RiIcon::RiArrowRightSSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6400,7 +6386,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightSSystemLine")]
             RiIcon::RiArrowRightSSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6417,7 +6403,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightSystemFill")]
             RiIcon::RiArrowRightSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6434,7 +6420,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightSystemLine")]
             RiIcon::RiArrowRightSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6451,7 +6437,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightUpSystemFill")]
             RiIcon::RiArrowRightUpSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6468,7 +6454,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowRightUpSystemLine")]
             RiIcon::RiArrowRightUpSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6485,7 +6471,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpCircleSystemFill")]
             RiIcon::RiArrowUpCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6502,7 +6488,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpCircleSystemLine")]
             RiIcon::RiArrowUpCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6519,7 +6505,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpDownSystemFill")]
             RiIcon::RiArrowUpDownSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6536,7 +6522,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpDownSystemLine")]
             RiIcon::RiArrowUpDownSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6553,7 +6539,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpSSystemFill")]
             RiIcon::RiArrowUpSSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6570,7 +6556,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpSSystemLine")]
             RiIcon::RiArrowUpSSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6587,7 +6573,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpSystemFill")]
             RiIcon::RiArrowUpSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6604,7 +6590,7 @@ impl Data {
             }
             #[cfg(feature = "RiArrowUpSystemLine")]
             RiIcon::RiArrowUpSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6621,7 +6607,7 @@ impl Data {
             }
             #[cfg(feature = "RiArtboard2DesignFill")]
             RiIcon::RiArtboard2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6638,7 +6624,7 @@ impl Data {
             }
             #[cfg(feature = "RiArtboard2DesignLine")]
             RiIcon::RiArtboard2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6655,7 +6641,7 @@ impl Data {
             }
             #[cfg(feature = "RiArtboardDesignFill")]
             RiIcon::RiArtboardDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6672,7 +6658,7 @@ impl Data {
             }
             #[cfg(feature = "RiArtboardDesignLine")]
             RiIcon::RiArtboardDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6689,7 +6675,7 @@ impl Data {
             }
             #[cfg(feature = "RiArticleDocumentFill")]
             RiIcon::RiArticleDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6706,7 +6692,7 @@ impl Data {
             }
             #[cfg(feature = "RiArticleDocumentLine")]
             RiIcon::RiArticleDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6723,7 +6709,7 @@ impl Data {
             }
             #[cfg(feature = "RiAspectRatioMediaFill")]
             RiIcon::RiAspectRatioMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6740,7 +6726,7 @@ impl Data {
             }
             #[cfg(feature = "RiAspectRatioMediaLine")]
             RiIcon::RiAspectRatioMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6757,7 +6743,7 @@ impl Data {
             }
             #[cfg(feature = "RiAsteriskEditor")]
             RiIcon::RiAsteriskEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6774,7 +6760,7 @@ impl Data {
             }
             #[cfg(feature = "RiAtBusinessFill")]
             RiIcon::RiAtBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6791,7 +6777,7 @@ impl Data {
             }
             #[cfg(feature = "RiAtBusinessLine")]
             RiIcon::RiAtBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6808,7 +6794,7 @@ impl Data {
             }
             #[cfg(feature = "RiAttachment2Editor")]
             RiIcon::RiAttachment2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6825,7 +6811,7 @@ impl Data {
             }
             #[cfg(feature = "RiAttachmentBusinessFill")]
             RiIcon::RiAttachmentBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6842,7 +6828,7 @@ impl Data {
             }
             #[cfg(feature = "RiAttachmentBusinessLine")]
             RiIcon::RiAttachmentBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6859,7 +6845,7 @@ impl Data {
             }
             #[cfg(feature = "RiAuctionFinanceFill")]
             RiIcon::RiAuctionFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6876,7 +6862,7 @@ impl Data {
             }
             #[cfg(feature = "RiAuctionFinanceLine")]
             RiIcon::RiAuctionFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6893,7 +6879,7 @@ impl Data {
             }
             #[cfg(feature = "RiAwardBusinessFill")]
             RiIcon::RiAwardBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6910,7 +6896,7 @@ impl Data {
             }
             #[cfg(feature = "RiAwardBusinessLine")]
             RiIcon::RiAwardBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6927,7 +6913,7 @@ impl Data {
             }
             #[cfg(feature = "RiBaiduLogosFill")]
             RiIcon::RiBaiduLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6944,7 +6930,7 @@ impl Data {
             }
             #[cfg(feature = "RiBaiduLogosLine")]
             RiIcon::RiBaiduLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6961,7 +6947,7 @@ impl Data {
             }
             #[cfg(feature = "RiBallPenDesignFill")]
             RiIcon::RiBallPenDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6978,7 +6964,7 @@ impl Data {
             }
             #[cfg(feature = "RiBallPenDesignLine")]
             RiIcon::RiBallPenDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6995,7 +6981,7 @@ impl Data {
             }
             #[cfg(feature = "RiBankBuildingsFill")]
             RiIcon::RiBankBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7012,7 +6998,7 @@ impl Data {
             }
             #[cfg(feature = "RiBankBuildingsLine")]
             RiIcon::RiBankBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7029,7 +7015,7 @@ impl Data {
             }
             #[cfg(feature = "RiBankCard2FinanceFill")]
             RiIcon::RiBankCard2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7046,7 +7032,7 @@ impl Data {
             }
             #[cfg(feature = "RiBankCard2FinanceLine")]
             RiIcon::RiBankCard2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7063,7 +7049,7 @@ impl Data {
             }
             #[cfg(feature = "RiBankCardFinanceFill")]
             RiIcon::RiBankCardFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7080,7 +7066,7 @@ impl Data {
             }
             #[cfg(feature = "RiBankCardFinanceLine")]
             RiIcon::RiBankCardFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7097,7 +7083,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChart2BusinessFill")]
             RiIcon::RiBarChart2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7114,7 +7100,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChart2BusinessLine")]
             RiIcon::RiBarChart2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7131,7 +7117,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartBoxBusinessFill")]
             RiIcon::RiBarChartBoxBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7148,7 +7134,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartBoxBusinessLine")]
             RiIcon::RiBarChartBoxBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7165,7 +7151,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartBusinessFill")]
             RiIcon::RiBarChartBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7182,7 +7168,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartBusinessLine")]
             RiIcon::RiBarChartBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7199,7 +7185,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartGroupedBusinessFill")]
             RiIcon::RiBarChartGroupedBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7216,7 +7202,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartGroupedBusinessLine")]
             RiIcon::RiBarChartGroupedBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7233,7 +7219,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartHorizontalBusinessFill")]
             RiIcon::RiBarChartHorizontalBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7250,7 +7236,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarChartHorizontalBusinessLine")]
             RiIcon::RiBarChartHorizontalBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7267,7 +7253,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarcodeBoxDeviceFill")]
             RiIcon::RiBarcodeBoxDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7284,7 +7270,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarcodeBoxDeviceLine")]
             RiIcon::RiBarcodeBoxDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7301,7 +7287,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarcodeDeviceFill")]
             RiIcon::RiBarcodeDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7318,7 +7304,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarcodeDeviceLine")]
             RiIcon::RiBarcodeDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7335,7 +7321,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarricadeMapFill")]
             RiIcon::RiBarricadeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7352,7 +7338,7 @@ impl Data {
             }
             #[cfg(feature = "RiBarricadeMapLine")]
             RiIcon::RiBarricadeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7369,7 +7355,7 @@ impl Data {
             }
             #[cfg(feature = "RiBaseStationDeviceFill")]
             RiIcon::RiBaseStationDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7386,7 +7372,7 @@ impl Data {
             }
             #[cfg(feature = "RiBaseStationDeviceLine")]
             RiIcon::RiBaseStationDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7403,7 +7389,7 @@ impl Data {
             }
             #[cfg(feature = "RiBasketballOthersFill")]
             RiIcon::RiBasketballOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7420,7 +7406,7 @@ impl Data {
             }
             #[cfg(feature = "RiBasketballOthersLine")]
             RiIcon::RiBasketballOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7437,7 +7423,7 @@ impl Data {
             }
             #[cfg(feature = "RiBattery2ChargeDeviceFill")]
             RiIcon::RiBattery2ChargeDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7454,7 +7440,7 @@ impl Data {
             }
             #[cfg(feature = "RiBattery2ChargeDeviceLine")]
             RiIcon::RiBattery2ChargeDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7471,7 +7457,7 @@ impl Data {
             }
             #[cfg(feature = "RiBattery2DeviceFill")]
             RiIcon::RiBattery2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7488,7 +7474,7 @@ impl Data {
             }
             #[cfg(feature = "RiBattery2DeviceLine")]
             RiIcon::RiBattery2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7505,7 +7491,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryChargeDeviceFill")]
             RiIcon::RiBatteryChargeDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7522,7 +7508,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryChargeDeviceLine")]
             RiIcon::RiBatteryChargeDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7539,7 +7525,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryDeviceFill")]
             RiIcon::RiBatteryDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7556,7 +7542,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryDeviceLine")]
             RiIcon::RiBatteryDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7573,7 +7559,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryLowDeviceFill")]
             RiIcon::RiBatteryLowDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7590,7 +7576,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryLowDeviceLine")]
             RiIcon::RiBatteryLowDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7607,7 +7593,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatterySaverDeviceFill")]
             RiIcon::RiBatterySaverDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7624,7 +7610,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatterySaverDeviceLine")]
             RiIcon::RiBatterySaverDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7641,7 +7627,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryShareDeviceFill")]
             RiIcon::RiBatteryShareDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7658,7 +7644,7 @@ impl Data {
             }
             #[cfg(feature = "RiBatteryShareDeviceLine")]
             RiIcon::RiBatteryShareDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7675,7 +7661,7 @@ impl Data {
             }
             #[cfg(feature = "RiBearSmileUserFill")]
             RiIcon::RiBearSmileUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7692,7 +7678,7 @@ impl Data {
             }
             #[cfg(feature = "RiBearSmileUserLine")]
             RiIcon::RiBearSmileUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7709,7 +7695,7 @@ impl Data {
             }
             #[cfg(feature = "RiBehanceLogosFill")]
             RiIcon::RiBehanceLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7726,7 +7712,7 @@ impl Data {
             }
             #[cfg(feature = "RiBehanceLogosLine")]
             RiIcon::RiBehanceLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7743,7 +7729,7 @@ impl Data {
             }
             #[cfg(feature = "RiBellOthersFill")]
             RiIcon::RiBellOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7760,7 +7746,7 @@ impl Data {
             }
             #[cfg(feature = "RiBellOthersLine")]
             RiIcon::RiBellOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7777,7 +7763,7 @@ impl Data {
             }
             #[cfg(feature = "RiBikeMapFill")]
             RiIcon::RiBikeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7794,7 +7780,7 @@ impl Data {
             }
             #[cfg(feature = "RiBikeMapLine")]
             RiIcon::RiBikeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7811,7 +7797,7 @@ impl Data {
             }
             #[cfg(feature = "RiBilibiliLogosFill")]
             RiIcon::RiBilibiliLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7828,7 +7814,7 @@ impl Data {
             }
             #[cfg(feature = "RiBilibiliLogosLine")]
             RiIcon::RiBilibiliLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7845,7 +7831,7 @@ impl Data {
             }
             #[cfg(feature = "RiBillDocumentFill")]
             RiIcon::RiBillDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7862,7 +7848,7 @@ impl Data {
             }
             #[cfg(feature = "RiBillDocumentLine")]
             RiIcon::RiBillDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7879,7 +7865,7 @@ impl Data {
             }
             #[cfg(feature = "RiBilliardsOthersFill")]
             RiIcon::RiBilliardsOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7896,7 +7882,7 @@ impl Data {
             }
             #[cfg(feature = "RiBilliardsOthersLine")]
             RiIcon::RiBilliardsOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7913,7 +7899,7 @@ impl Data {
             }
             #[cfg(feature = "RiBitCoinFinanceFill")]
             RiIcon::RiBitCoinFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7930,7 +7916,7 @@ impl Data {
             }
             #[cfg(feature = "RiBitCoinFinanceLine")]
             RiIcon::RiBitCoinFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7947,7 +7933,7 @@ impl Data {
             }
             #[cfg(feature = "RiBlazeWeatherFill")]
             RiIcon::RiBlazeWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7964,7 +7950,7 @@ impl Data {
             }
             #[cfg(feature = "RiBlazeWeatherLine")]
             RiIcon::RiBlazeWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7981,7 +7967,7 @@ impl Data {
             }
             #[cfg(feature = "RiBluetoothConnectDeviceFill")]
             RiIcon::RiBluetoothConnectDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7998,7 +7984,7 @@ impl Data {
             }
             #[cfg(feature = "RiBluetoothConnectDeviceLine")]
             RiIcon::RiBluetoothConnectDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8015,7 +8001,7 @@ impl Data {
             }
             #[cfg(feature = "RiBluetoothDeviceFill")]
             RiIcon::RiBluetoothDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8032,7 +8018,7 @@ impl Data {
             }
             #[cfg(feature = "RiBluetoothDeviceLine")]
             RiIcon::RiBluetoothDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8049,7 +8035,7 @@ impl Data {
             }
             #[cfg(feature = "RiBlurOffDesignFill")]
             RiIcon::RiBlurOffDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8066,7 +8052,7 @@ impl Data {
             }
             #[cfg(feature = "RiBlurOffDesignLine")]
             RiIcon::RiBlurOffDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8083,7 +8069,7 @@ impl Data {
             }
             #[cfg(feature = "RiBodyScanUserFill")]
             RiIcon::RiBodyScanUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8100,7 +8086,7 @@ impl Data {
             }
             #[cfg(feature = "RiBodyScanUserLine")]
             RiIcon::RiBodyScanUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8117,7 +8103,7 @@ impl Data {
             }
             #[cfg(feature = "RiBoldEditor")]
             RiIcon::RiBoldEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8134,7 +8120,7 @@ impl Data {
             }
             #[cfg(feature = "RiBook2DocumentFill")]
             RiIcon::RiBook2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8151,7 +8137,7 @@ impl Data {
             }
             #[cfg(feature = "RiBook2DocumentLine")]
             RiIcon::RiBook2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8168,7 +8154,7 @@ impl Data {
             }
             #[cfg(feature = "RiBook3DocumentFill")]
             RiIcon::RiBook3DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8185,7 +8171,7 @@ impl Data {
             }
             #[cfg(feature = "RiBook3DocumentLine")]
             RiIcon::RiBook3DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8202,7 +8188,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookDocumentFill")]
             RiIcon::RiBookDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8219,7 +8205,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookDocumentLine")]
             RiIcon::RiBookDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8236,7 +8222,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookMarkDocumentFill")]
             RiIcon::RiBookMarkDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8253,7 +8239,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookMarkDocumentLine")]
             RiIcon::RiBookMarkDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8270,7 +8256,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookOpenDocumentFill")]
             RiIcon::RiBookOpenDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8287,7 +8273,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookOpenDocumentLine")]
             RiIcon::RiBookOpenDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8304,7 +8290,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookReadDocumentFill")]
             RiIcon::RiBookReadDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8321,7 +8307,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookReadDocumentLine")]
             RiIcon::RiBookReadDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8338,7 +8324,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookletDocumentFill")]
             RiIcon::RiBookletDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8355,7 +8341,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookletDocumentLine")]
             RiIcon::RiBookletDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8372,7 +8358,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookmark2BusinessFill")]
             RiIcon::RiBookmark2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8389,7 +8375,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookmark2BusinessLine")]
             RiIcon::RiBookmark2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8406,7 +8392,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookmark3BusinessFill")]
             RiIcon::RiBookmark3BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8423,7 +8409,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookmark3BusinessLine")]
             RiIcon::RiBookmark3BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8440,7 +8426,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookmarkBusinessFill")]
             RiIcon::RiBookmarkBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8457,7 +8443,7 @@ impl Data {
             }
             #[cfg(feature = "RiBookmarkBusinessLine")]
             RiIcon::RiBookmarkBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8474,7 +8460,7 @@ impl Data {
             }
             #[cfg(feature = "RiBoxingOthersFill")]
             RiIcon::RiBoxingOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8491,7 +8477,7 @@ impl Data {
             }
             #[cfg(feature = "RiBoxingOthersLine")]
             RiIcon::RiBoxingOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8508,7 +8494,7 @@ impl Data {
             }
             #[cfg(feature = "RiBracesDevelopmentFill")]
             RiIcon::RiBracesDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8525,7 +8511,7 @@ impl Data {
             }
             #[cfg(feature = "RiBracesDevelopmentLine")]
             RiIcon::RiBracesDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8542,7 +8528,7 @@ impl Data {
             }
             #[cfg(feature = "RiBracketsDevelopmentFill")]
             RiIcon::RiBracketsDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8559,7 +8545,7 @@ impl Data {
             }
             #[cfg(feature = "RiBracketsDevelopmentLine")]
             RiIcon::RiBracketsDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8576,7 +8562,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase2BusinessFill")]
             RiIcon::RiBriefcase2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8593,7 +8579,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase2BusinessLine")]
             RiIcon::RiBriefcase2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8610,7 +8596,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase3BusinessFill")]
             RiIcon::RiBriefcase3BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8627,7 +8613,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase3BusinessLine")]
             RiIcon::RiBriefcase3BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8644,7 +8630,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase4BusinessFill")]
             RiIcon::RiBriefcase4BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8661,7 +8647,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase4BusinessLine")]
             RiIcon::RiBriefcase4BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8678,7 +8664,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase5BusinessFill")]
             RiIcon::RiBriefcase5BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8695,7 +8681,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcase5BusinessLine")]
             RiIcon::RiBriefcase5BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8712,7 +8698,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcaseBusinessFill")]
             RiIcon::RiBriefcaseBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8729,7 +8715,7 @@ impl Data {
             }
             #[cfg(feature = "RiBriefcaseBusinessLine")]
             RiIcon::RiBriefcaseBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8746,7 +8732,7 @@ impl Data {
             }
             #[cfg(feature = "RiBringForwardEditor")]
             RiIcon::RiBringForwardEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8763,7 +8749,7 @@ impl Data {
             }
             #[cfg(feature = "RiBringToFrontEditor")]
             RiIcon::RiBringToFrontEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8780,7 +8766,7 @@ impl Data {
             }
             #[cfg(feature = "RiBroadcastMediaFill")]
             RiIcon::RiBroadcastMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8797,7 +8783,7 @@ impl Data {
             }
             #[cfg(feature = "RiBroadcastMediaLine")]
             RiIcon::RiBroadcastMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8814,7 +8800,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrush2DesignFill")]
             RiIcon::RiBrush2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8831,7 +8817,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrush2DesignLine")]
             RiIcon::RiBrush2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8848,7 +8834,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrush3DesignFill")]
             RiIcon::RiBrush3DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8865,7 +8851,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrush3DesignLine")]
             RiIcon::RiBrush3DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8882,7 +8868,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrush4DesignFill")]
             RiIcon::RiBrush4DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8899,7 +8885,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrush4DesignLine")]
             RiIcon::RiBrush4DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8916,7 +8902,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrushDesignFill")]
             RiIcon::RiBrushDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8933,7 +8919,7 @@ impl Data {
             }
             #[cfg(feature = "RiBrushDesignLine")]
             RiIcon::RiBrushDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8950,7 +8936,7 @@ impl Data {
             }
             #[cfg(feature = "RiBubbleChartBusinessFill")]
             RiIcon::RiBubbleChartBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8967,7 +8953,7 @@ impl Data {
             }
             #[cfg(feature = "RiBubbleChartBusinessLine")]
             RiIcon::RiBubbleChartBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8984,7 +8970,7 @@ impl Data {
             }
             #[cfg(feature = "RiBug2DevelopmentFill")]
             RiIcon::RiBug2DevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9001,7 +8987,7 @@ impl Data {
             }
             #[cfg(feature = "RiBug2DevelopmentLine")]
             RiIcon::RiBug2DevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9018,7 +9004,7 @@ impl Data {
             }
             #[cfg(feature = "RiBugDevelopmentFill")]
             RiIcon::RiBugDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9035,7 +9021,7 @@ impl Data {
             }
             #[cfg(feature = "RiBugDevelopmentLine")]
             RiIcon::RiBugDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9052,7 +9038,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuilding2BuildingsFill")]
             RiIcon::RiBuilding2BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9069,7 +9055,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuilding2BuildingsLine")]
             RiIcon::RiBuilding2BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9086,7 +9072,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuilding3BuildingsFill")]
             RiIcon::RiBuilding3BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9103,7 +9089,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuilding3BuildingsLine")]
             RiIcon::RiBuilding3BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9120,7 +9106,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuilding4BuildingsFill")]
             RiIcon::RiBuilding4BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9137,7 +9123,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuilding4BuildingsLine")]
             RiIcon::RiBuilding4BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9154,7 +9140,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuildingBuildingsFill")]
             RiIcon::RiBuildingBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9171,7 +9157,7 @@ impl Data {
             }
             #[cfg(feature = "RiBuildingBuildingsLine")]
             RiIcon::RiBuildingBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9188,7 +9174,7 @@ impl Data {
             }
             #[cfg(feature = "RiBus2MapFill")]
             RiIcon::RiBus2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9205,7 +9191,7 @@ impl Data {
             }
             #[cfg(feature = "RiBus2MapLine")]
             RiIcon::RiBus2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9222,7 +9208,7 @@ impl Data {
             }
             #[cfg(feature = "RiBusMapFill")]
             RiIcon::RiBusMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9239,7 +9225,7 @@ impl Data {
             }
             #[cfg(feature = "RiBusMapLine")]
             RiIcon::RiBusMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9256,7 +9242,7 @@ impl Data {
             }
             #[cfg(feature = "RiBusWifiMapFill")]
             RiIcon::RiBusWifiMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9273,7 +9259,7 @@ impl Data {
             }
             #[cfg(feature = "RiBusWifiMapLine")]
             RiIcon::RiBusWifiMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9290,7 +9276,7 @@ impl Data {
             }
             #[cfg(feature = "RiCactusOthersFill")]
             RiIcon::RiCactusOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9307,7 +9293,7 @@ impl Data {
             }
             #[cfg(feature = "RiCactusOthersLine")]
             RiIcon::RiCactusOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9324,7 +9310,7 @@ impl Data {
             }
             #[cfg(feature = "RiCake2OthersFill")]
             RiIcon::RiCake2OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9341,7 +9327,7 @@ impl Data {
             }
             #[cfg(feature = "RiCake2OthersLine")]
             RiIcon::RiCake2OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9358,7 +9344,7 @@ impl Data {
             }
             #[cfg(feature = "RiCake3OthersFill")]
             RiIcon::RiCake3OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9375,7 +9361,7 @@ impl Data {
             }
             #[cfg(feature = "RiCake3OthersLine")]
             RiIcon::RiCake3OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9392,7 +9378,7 @@ impl Data {
             }
             #[cfg(feature = "RiCakeOthersFill")]
             RiIcon::RiCakeOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9409,7 +9395,7 @@ impl Data {
             }
             #[cfg(feature = "RiCakeOthersLine")]
             RiIcon::RiCakeOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9426,7 +9412,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalculatorBusinessFill")]
             RiIcon::RiCalculatorBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9443,7 +9429,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalculatorBusinessLine")]
             RiIcon::RiCalculatorBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9460,7 +9446,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendar2BusinessFill")]
             RiIcon::RiCalendar2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9477,7 +9463,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendar2BusinessLine")]
             RiIcon::RiCalendar2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9494,7 +9480,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarBusinessFill")]
             RiIcon::RiCalendarBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9511,7 +9497,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarBusinessLine")]
             RiIcon::RiCalendarBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9528,7 +9514,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarCheckBusinessFill")]
             RiIcon::RiCalendarCheckBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9545,7 +9531,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarCheckBusinessLine")]
             RiIcon::RiCalendarCheckBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9562,7 +9548,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarEventBusinessFill")]
             RiIcon::RiCalendarEventBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9579,7 +9565,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarEventBusinessLine")]
             RiIcon::RiCalendarEventBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9596,7 +9582,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarTodoBusinessFill")]
             RiIcon::RiCalendarTodoBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9613,7 +9599,7 @@ impl Data {
             }
             #[cfg(feature = "RiCalendarTodoBusinessLine")]
             RiIcon::RiCalendarTodoBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9630,7 +9616,7 @@ impl Data {
             }
             #[cfg(feature = "RiCamera2MediaFill")]
             RiIcon::RiCamera2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9647,7 +9633,7 @@ impl Data {
             }
             #[cfg(feature = "RiCamera2MediaLine")]
             RiIcon::RiCamera2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9664,7 +9650,7 @@ impl Data {
             }
             #[cfg(feature = "RiCamera3MediaFill")]
             RiIcon::RiCamera3MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9681,7 +9667,7 @@ impl Data {
             }
             #[cfg(feature = "RiCamera3MediaLine")]
             RiIcon::RiCamera3MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9698,7 +9684,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraLensMediaFill")]
             RiIcon::RiCameraLensMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9715,7 +9701,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraLensMediaLine")]
             RiIcon::RiCameraLensMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9732,7 +9718,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraMediaFill")]
             RiIcon::RiCameraMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9749,7 +9735,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraMediaLine")]
             RiIcon::RiCameraMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9766,7 +9752,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraOffMediaFill")]
             RiIcon::RiCameraOffMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9783,7 +9769,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraOffMediaLine")]
             RiIcon::RiCameraOffMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9800,7 +9786,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraSwitchMediaFill")]
             RiIcon::RiCameraSwitchMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9817,7 +9803,7 @@ impl Data {
             }
             #[cfg(feature = "RiCameraSwitchMediaLine")]
             RiIcon::RiCameraSwitchMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9834,7 +9820,7 @@ impl Data {
             }
             #[cfg(feature = "RiCapsuleHealthFill")]
             RiIcon::RiCapsuleHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9851,7 +9837,7 @@ impl Data {
             }
             #[cfg(feature = "RiCapsuleHealthLine")]
             RiIcon::RiCapsuleHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9868,7 +9854,7 @@ impl Data {
             }
             #[cfg(feature = "RiCarMapFill")]
             RiIcon::RiCarMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9885,7 +9871,7 @@ impl Data {
             }
             #[cfg(feature = "RiCarMapLine")]
             RiIcon::RiCarMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9902,7 +9888,7 @@ impl Data {
             }
             #[cfg(feature = "RiCarWashingMapFill")]
             RiIcon::RiCarWashingMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9919,7 +9905,7 @@ impl Data {
             }
             #[cfg(feature = "RiCarWashingMapLine")]
             RiIcon::RiCarWashingMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9936,7 +9922,7 @@ impl Data {
             }
             #[cfg(feature = "RiCaravanMapFill")]
             RiIcon::RiCaravanMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9953,7 +9939,7 @@ impl Data {
             }
             #[cfg(feature = "RiCaravanMapLine")]
             RiIcon::RiCaravanMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9970,7 +9956,7 @@ impl Data {
             }
             #[cfg(feature = "RiCastDeviceFill")]
             RiIcon::RiCastDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9987,7 +9973,7 @@ impl Data {
             }
             #[cfg(feature = "RiCastDeviceLine")]
             RiIcon::RiCastDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10004,7 +9990,7 @@ impl Data {
             }
             #[cfg(feature = "RiCellphoneDeviceFill")]
             RiIcon::RiCellphoneDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10021,7 +10007,7 @@ impl Data {
             }
             #[cfg(feature = "RiCellphoneDeviceLine")]
             RiIcon::RiCellphoneDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10038,7 +10024,7 @@ impl Data {
             }
             #[cfg(feature = "RiCelsiusWeatherFill")]
             RiIcon::RiCelsiusWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10055,7 +10041,7 @@ impl Data {
             }
             #[cfg(feature = "RiCelsiusWeatherLine")]
             RiIcon::RiCelsiusWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10072,7 +10058,7 @@ impl Data {
             }
             #[cfg(feature = "RiCentosLogosFill")]
             RiIcon::RiCentosLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10089,7 +10075,7 @@ impl Data {
             }
             #[cfg(feature = "RiCentosLogosLine")]
             RiIcon::RiCentosLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10106,7 +10092,7 @@ impl Data {
             }
             #[cfg(feature = "RiCharacterRecognitionOthersFill")]
             RiIcon::RiCharacterRecognitionOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10123,7 +10109,7 @@ impl Data {
             }
             #[cfg(feature = "RiCharacterRecognitionOthersLine")]
             RiIcon::RiCharacterRecognitionOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10140,7 +10126,7 @@ impl Data {
             }
             #[cfg(feature = "RiChargingPile2MapFill")]
             RiIcon::RiChargingPile2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10157,7 +10143,7 @@ impl Data {
             }
             #[cfg(feature = "RiChargingPile2MapLine")]
             RiIcon::RiChargingPile2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10174,7 +10160,7 @@ impl Data {
             }
             #[cfg(feature = "RiChargingPileMapFill")]
             RiIcon::RiChargingPileMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10191,7 +10177,7 @@ impl Data {
             }
             #[cfg(feature = "RiChargingPileMapLine")]
             RiIcon::RiChargingPileMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10208,7 +10194,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat1CommunicationFill")]
             RiIcon::RiChat1CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10225,7 +10211,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat1CommunicationLine")]
             RiIcon::RiChat1CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10242,7 +10228,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat2CommunicationFill")]
             RiIcon::RiChat2CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10259,7 +10245,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat2CommunicationLine")]
             RiIcon::RiChat2CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10276,7 +10262,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat3CommunicationFill")]
             RiIcon::RiChat3CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10293,7 +10279,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat3CommunicationLine")]
             RiIcon::RiChat3CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10310,7 +10296,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat4CommunicationFill")]
             RiIcon::RiChat4CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10327,7 +10313,7 @@ impl Data {
             }
             #[cfg(feature = "RiChat4CommunicationLine")]
             RiIcon::RiChat4CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10344,7 +10330,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatCheckCommunicationFill")]
             RiIcon::RiChatCheckCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10361,7 +10347,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatCheckCommunicationLine")]
             RiIcon::RiChatCheckCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10378,7 +10364,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatDeleteCommunicationFill")]
             RiIcon::RiChatDeleteCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10395,7 +10381,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatDeleteCommunicationLine")]
             RiIcon::RiChatDeleteCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10412,7 +10398,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatDownloadCommunicationFill")]
             RiIcon::RiChatDownloadCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10429,7 +10415,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatDownloadCommunicationLine")]
             RiIcon::RiChatDownloadCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10446,7 +10432,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatFollowUpCommunicationFill")]
             RiIcon::RiChatFollowUpCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10463,7 +10449,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatFollowUpCommunicationLine")]
             RiIcon::RiChatFollowUpCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10480,7 +10466,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatForwardCommunicationFill")]
             RiIcon::RiChatForwardCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10497,7 +10483,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatForwardCommunicationLine")]
             RiIcon::RiChatForwardCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10514,7 +10500,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatHeartCommunicationFill")]
             RiIcon::RiChatHeartCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10531,7 +10517,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatHeartCommunicationLine")]
             RiIcon::RiChatHeartCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10548,7 +10534,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatHistoryCommunicationFill")]
             RiIcon::RiChatHistoryCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10565,7 +10551,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatHistoryCommunicationLine")]
             RiIcon::RiChatHistoryCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10582,7 +10568,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatNewCommunicationFill")]
             RiIcon::RiChatNewCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10599,7 +10585,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatNewCommunicationLine")]
             RiIcon::RiChatNewCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10616,7 +10602,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatOffCommunicationFill")]
             RiIcon::RiChatOffCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10633,7 +10619,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatOffCommunicationLine")]
             RiIcon::RiChatOffCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10650,7 +10636,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatPollCommunicationFill")]
             RiIcon::RiChatPollCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10667,7 +10653,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatPollCommunicationLine")]
             RiIcon::RiChatPollCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10684,7 +10670,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatPrivateCommunicationFill")]
             RiIcon::RiChatPrivateCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10701,7 +10687,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatPrivateCommunicationLine")]
             RiIcon::RiChatPrivateCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10718,7 +10704,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatQuoteCommunicationFill")]
             RiIcon::RiChatQuoteCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10735,7 +10721,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatQuoteCommunicationLine")]
             RiIcon::RiChatQuoteCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10752,7 +10738,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSettingsCommunicationFill")]
             RiIcon::RiChatSettingsCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10769,7 +10755,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSettingsCommunicationLine")]
             RiIcon::RiChatSettingsCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10786,7 +10772,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSmile2CommunicationFill")]
             RiIcon::RiChatSmile2CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10803,7 +10789,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSmile2CommunicationLine")]
             RiIcon::RiChatSmile2CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10820,7 +10806,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSmile3CommunicationFill")]
             RiIcon::RiChatSmile3CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10837,7 +10823,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSmile3CommunicationLine")]
             RiIcon::RiChatSmile3CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10854,7 +10840,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSmileCommunicationFill")]
             RiIcon::RiChatSmileCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10871,7 +10857,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatSmileCommunicationLine")]
             RiIcon::RiChatSmileCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10888,7 +10874,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatUploadCommunicationFill")]
             RiIcon::RiChatUploadCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10905,7 +10891,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatUploadCommunicationLine")]
             RiIcon::RiChatUploadCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10922,7 +10908,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatVoiceCommunicationFill")]
             RiIcon::RiChatVoiceCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10939,7 +10925,7 @@ impl Data {
             }
             #[cfg(feature = "RiChatVoiceCommunicationLine")]
             RiIcon::RiChatVoiceCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10956,7 +10942,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckDoubleSystemFill")]
             RiIcon::RiCheckDoubleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10973,7 +10959,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckDoubleSystemLine")]
             RiIcon::RiCheckDoubleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10990,7 +10976,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckSystemFill")]
             RiIcon::RiCheckSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11007,7 +10993,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckSystemLine")]
             RiIcon::RiCheckSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11024,7 +11010,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxBlankCircleSystemFill")]
             RiIcon::RiCheckboxBlankCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11041,7 +11027,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxBlankCircleSystemLine")]
             RiIcon::RiCheckboxBlankCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11058,7 +11044,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxBlankSystemFill")]
             RiIcon::RiCheckboxBlankSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11075,7 +11061,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxBlankSystemLine")]
             RiIcon::RiCheckboxBlankSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11092,7 +11078,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxCircleSystemFill")]
             RiIcon::RiCheckboxCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11109,7 +11095,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxCircleSystemLine")]
             RiIcon::RiCheckboxCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11126,7 +11112,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxIndeterminateSystemFill")]
             RiIcon::RiCheckboxIndeterminateSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11143,7 +11129,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxIndeterminateSystemLine")]
             RiIcon::RiCheckboxIndeterminateSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11160,7 +11146,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxMultipleBlankSystemFill")]
             RiIcon::RiCheckboxMultipleBlankSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11177,7 +11163,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxMultipleBlankSystemLine")]
             RiIcon::RiCheckboxMultipleBlankSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11194,7 +11180,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxMultipleSystemFill")]
             RiIcon::RiCheckboxMultipleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11211,7 +11197,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxMultipleSystemLine")]
             RiIcon::RiCheckboxMultipleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11228,7 +11214,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxSystemFill")]
             RiIcon::RiCheckboxSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11245,7 +11231,7 @@ impl Data {
             }
             #[cfg(feature = "RiCheckboxSystemLine")]
             RiIcon::RiCheckboxSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11262,7 +11248,7 @@ impl Data {
             }
             #[cfg(feature = "RiChinaRailwayMapFill")]
             RiIcon::RiChinaRailwayMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11279,7 +11265,7 @@ impl Data {
             }
             #[cfg(feature = "RiChinaRailwayMapLine")]
             RiIcon::RiChinaRailwayMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11296,7 +11282,7 @@ impl Data {
             }
             #[cfg(feature = "RiChromeLogosFill")]
             RiIcon::RiChromeLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11313,7 +11299,7 @@ impl Data {
             }
             #[cfg(feature = "RiChromeLogosLine")]
             RiIcon::RiChromeLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11330,7 +11316,7 @@ impl Data {
             }
             #[cfg(feature = "RiClapperboardMediaFill")]
             RiIcon::RiClapperboardMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11347,7 +11333,7 @@ impl Data {
             }
             #[cfg(feature = "RiClapperboardMediaLine")]
             RiIcon::RiClapperboardMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11364,7 +11350,7 @@ impl Data {
             }
             #[cfg(feature = "RiClipboardDocumentFill")]
             RiIcon::RiClipboardDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11381,7 +11367,7 @@ impl Data {
             }
             #[cfg(feature = "RiClipboardDocumentLine")]
             RiIcon::RiClipboardDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11398,7 +11384,7 @@ impl Data {
             }
             #[cfg(feature = "RiClockwise2DesignFill")]
             RiIcon::RiClockwise2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11415,7 +11401,7 @@ impl Data {
             }
             #[cfg(feature = "RiClockwise2DesignLine")]
             RiIcon::RiClockwise2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11432,7 +11418,7 @@ impl Data {
             }
             #[cfg(feature = "RiClockwiseDesignFill")]
             RiIcon::RiClockwiseDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11449,7 +11435,7 @@ impl Data {
             }
             #[cfg(feature = "RiClockwiseDesignLine")]
             RiIcon::RiClockwiseDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11466,7 +11452,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloseCircleSystemFill")]
             RiIcon::RiCloseCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11483,7 +11469,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloseCircleSystemLine")]
             RiIcon::RiCloseCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11500,7 +11486,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloseSystemFill")]
             RiIcon::RiCloseSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11517,7 +11503,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloseSystemLine")]
             RiIcon::RiCloseSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11534,7 +11520,7 @@ impl Data {
             }
             #[cfg(feature = "RiClosedCaptioningMediaFill")]
             RiIcon::RiClosedCaptioningMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11551,7 +11537,7 @@ impl Data {
             }
             #[cfg(feature = "RiClosedCaptioningMediaLine")]
             RiIcon::RiClosedCaptioningMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11568,7 +11554,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudBusinessFill")]
             RiIcon::RiCloudBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11585,7 +11571,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudBusinessLine")]
             RiIcon::RiCloudBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11602,7 +11588,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudOffBusinessFill")]
             RiIcon::RiCloudOffBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11619,7 +11605,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudOffBusinessLine")]
             RiIcon::RiCloudOffBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11636,7 +11622,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudWindyWeatherFill")]
             RiIcon::RiCloudWindyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11653,7 +11639,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudWindyWeatherLine")]
             RiIcon::RiCloudWindyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11670,7 +11656,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudy2WeatherFill")]
             RiIcon::RiCloudy2WeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11687,7 +11673,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudy2WeatherLine")]
             RiIcon::RiCloudy2WeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11704,7 +11690,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudyWeatherFill")]
             RiIcon::RiCloudyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11721,7 +11707,7 @@ impl Data {
             }
             #[cfg(feature = "RiCloudyWeatherLine")]
             RiIcon::RiCloudyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11738,7 +11724,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeBoxDevelopmentFill")]
             RiIcon::RiCodeBoxDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11755,7 +11741,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeBoxDevelopmentLine")]
             RiIcon::RiCodeBoxDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11772,7 +11758,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeDevelopmentFill")]
             RiIcon::RiCodeDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11789,7 +11775,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeDevelopmentLine")]
             RiIcon::RiCodeDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11806,7 +11792,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeSDevelopmentFill")]
             RiIcon::RiCodeSDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11823,7 +11809,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeSDevelopmentLine")]
             RiIcon::RiCodeSDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11840,7 +11826,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeSSlashDevelopmentFill")]
             RiIcon::RiCodeSSlashDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11857,7 +11843,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeSSlashDevelopmentLine")]
             RiIcon::RiCodeSSlashDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11874,7 +11860,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodeViewEditor")]
             RiIcon::RiCodeViewEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11891,7 +11877,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodepenLogosFill")]
             RiIcon::RiCodepenLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11908,7 +11894,7 @@ impl Data {
             }
             #[cfg(feature = "RiCodepenLogosLine")]
             RiIcon::RiCodepenLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11925,7 +11911,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoinFinanceFill")]
             RiIcon::RiCoinFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11942,7 +11928,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoinFinanceLine")]
             RiIcon::RiCoinFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11959,7 +11945,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoinsFinanceFill")]
             RiIcon::RiCoinsFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11976,7 +11962,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoinsFinanceLine")]
             RiIcon::RiCoinsFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11993,7 +11979,7 @@ impl Data {
             }
             #[cfg(feature = "RiCollageDesignFill")]
             RiIcon::RiCollageDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12010,7 +11996,7 @@ impl Data {
             }
             #[cfg(feature = "RiCollageDesignLine")]
             RiIcon::RiCollageDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12027,7 +12013,7 @@ impl Data {
             }
             #[cfg(feature = "RiCommandDevelopmentFill")]
             RiIcon::RiCommandDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12044,7 +12030,7 @@ impl Data {
             }
             #[cfg(feature = "RiCommandDevelopmentLine")]
             RiIcon::RiCommandDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12061,7 +12047,7 @@ impl Data {
             }
             #[cfg(feature = "RiCommunityBuildingsFill")]
             RiIcon::RiCommunityBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12078,7 +12064,7 @@ impl Data {
             }
             #[cfg(feature = "RiCommunityBuildingsLine")]
             RiIcon::RiCommunityBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12095,7 +12081,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompass2MapFill")]
             RiIcon::RiCompass2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12112,7 +12098,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompass2MapLine")]
             RiIcon::RiCompass2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12129,7 +12115,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompass3MapFill")]
             RiIcon::RiCompass3MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12146,7 +12132,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompass3MapLine")]
             RiIcon::RiCompass3MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12163,7 +12149,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompass4MapFill")]
             RiIcon::RiCompass4MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12180,7 +12166,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompass4MapLine")]
             RiIcon::RiCompass4MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12197,7 +12183,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompassDiscoverMapFill")]
             RiIcon::RiCompassDiscoverMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12214,7 +12200,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompassDiscoverMapLine")]
             RiIcon::RiCompassDiscoverMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12231,7 +12217,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompassMapFill")]
             RiIcon::RiCompassMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12248,7 +12234,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompassMapLine")]
             RiIcon::RiCompassMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12265,7 +12251,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompasses2DesignFill")]
             RiIcon::RiCompasses2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12282,7 +12268,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompasses2DesignLine")]
             RiIcon::RiCompasses2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12299,7 +12285,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompassesDesignFill")]
             RiIcon::RiCompassesDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12316,7 +12302,7 @@ impl Data {
             }
             #[cfg(feature = "RiCompassesDesignLine")]
             RiIcon::RiCompassesDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12333,7 +12319,7 @@ impl Data {
             }
             #[cfg(feature = "RiComputerDeviceFill")]
             RiIcon::RiComputerDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12350,7 +12336,7 @@ impl Data {
             }
             #[cfg(feature = "RiComputerDeviceLine")]
             RiIcon::RiComputerDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12367,7 +12353,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsBook2DocumentFill")]
             RiIcon::RiContactsBook2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12384,7 +12370,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsBook2DocumentLine")]
             RiIcon::RiContactsBook2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12401,7 +12387,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsBookDocumentFill")]
             RiIcon::RiContactsBookDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12418,7 +12404,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsBookDocumentLine")]
             RiIcon::RiContactsBookDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12435,7 +12421,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsBookUploadDocumentFill")]
             RiIcon::RiContactsBookUploadDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12452,7 +12438,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsBookUploadDocumentLine")]
             RiIcon::RiContactsBookUploadDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12469,7 +12455,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsUserFill")]
             RiIcon::RiContactsUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12486,7 +12472,7 @@ impl Data {
             }
             #[cfg(feature = "RiContactsUserLine")]
             RiIcon::RiContactsUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12503,7 +12489,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrast2DesignFill")]
             RiIcon::RiContrast2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12520,7 +12506,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrast2DesignLine")]
             RiIcon::RiContrast2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12537,7 +12523,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrastDesignFill")]
             RiIcon::RiContrastDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12554,7 +12540,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrastDesignLine")]
             RiIcon::RiContrastDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12571,7 +12557,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrastDrop2DesignFill")]
             RiIcon::RiContrastDrop2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12588,7 +12574,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrastDrop2DesignLine")]
             RiIcon::RiContrastDrop2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12605,7 +12591,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrastDropDesignFill")]
             RiIcon::RiContrastDropDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12622,7 +12608,7 @@ impl Data {
             }
             #[cfg(feature = "RiContrastDropDesignLine")]
             RiIcon::RiContrastDropDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12639,7 +12625,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopperCoinFinanceFill")]
             RiIcon::RiCopperCoinFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12656,7 +12642,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopperCoinFinanceLine")]
             RiIcon::RiCopperCoinFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12673,7 +12659,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopperDiamondFinanceFill")]
             RiIcon::RiCopperDiamondFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12690,7 +12676,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopperDiamondFinanceLine")]
             RiIcon::RiCopperDiamondFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12707,7 +12693,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopyleftBusinessFill")]
             RiIcon::RiCopyleftBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12724,7 +12710,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopyleftBusinessLine")]
             RiIcon::RiCopyleftBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12741,7 +12727,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopyrightBusinessFill")]
             RiIcon::RiCopyrightBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12758,7 +12744,7 @@ impl Data {
             }
             #[cfg(feature = "RiCopyrightBusinessLine")]
             RiIcon::RiCopyrightBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12775,7 +12761,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoreosLogosFill")]
             RiIcon::RiCoreosLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12792,7 +12778,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoreosLogosLine")]
             RiIcon::RiCoreosLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12809,7 +12795,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon2FinanceFill")]
             RiIcon::RiCoupon2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12826,7 +12812,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon2FinanceLine")]
             RiIcon::RiCoupon2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12843,7 +12829,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon3FinanceFill")]
             RiIcon::RiCoupon3FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12860,7 +12846,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon3FinanceLine")]
             RiIcon::RiCoupon3FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12877,7 +12863,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon4FinanceFill")]
             RiIcon::RiCoupon4FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12894,7 +12880,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon4FinanceLine")]
             RiIcon::RiCoupon4FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12911,7 +12897,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon5FinanceFill")]
             RiIcon::RiCoupon5FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12928,7 +12914,7 @@ impl Data {
             }
             #[cfg(feature = "RiCoupon5FinanceLine")]
             RiIcon::RiCoupon5FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12945,7 +12931,7 @@ impl Data {
             }
             #[cfg(feature = "RiCouponFinanceFill")]
             RiIcon::RiCouponFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12962,7 +12948,7 @@ impl Data {
             }
             #[cfg(feature = "RiCouponFinanceLine")]
             RiIcon::RiCouponFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12979,7 +12965,7 @@ impl Data {
             }
             #[cfg(feature = "RiCpuDeviceFill")]
             RiIcon::RiCpuDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12996,7 +12982,7 @@ impl Data {
             }
             #[cfg(feature = "RiCpuDeviceLine")]
             RiIcon::RiCpuDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13013,7 +12999,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsBusinessFill")]
             RiIcon::RiCreativeCommonsBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13030,7 +13016,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsBusinessLine")]
             RiIcon::RiCreativeCommonsBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13047,7 +13033,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsByBusinessFill")]
             RiIcon::RiCreativeCommonsByBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13064,7 +13050,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsByBusinessLine")]
             RiIcon::RiCreativeCommonsByBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13081,7 +13067,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsNcBusinessFill")]
             RiIcon::RiCreativeCommonsNcBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13098,7 +13084,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsNcBusinessLine")]
             RiIcon::RiCreativeCommonsNcBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13115,7 +13101,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsNdBusinessFill")]
             RiIcon::RiCreativeCommonsNdBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13132,7 +13118,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsNdBusinessLine")]
             RiIcon::RiCreativeCommonsNdBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13149,7 +13135,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsSaBusinessFill")]
             RiIcon::RiCreativeCommonsSaBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13166,7 +13152,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsSaBusinessLine")]
             RiIcon::RiCreativeCommonsSaBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13183,7 +13169,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsZeroBusinessFill")]
             RiIcon::RiCreativeCommonsZeroBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13200,7 +13186,7 @@ impl Data {
             }
             #[cfg(feature = "RiCreativeCommonsZeroBusinessLine")]
             RiIcon::RiCreativeCommonsZeroBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13217,7 +13203,7 @@ impl Data {
             }
             #[cfg(feature = "RiCriminalUserFill")]
             RiIcon::RiCriminalUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13234,7 +13220,7 @@ impl Data {
             }
             #[cfg(feature = "RiCriminalUserLine")]
             RiIcon::RiCriminalUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13251,7 +13237,7 @@ impl Data {
             }
             #[cfg(feature = "RiCrop2DesignFill")]
             RiIcon::RiCrop2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13268,7 +13254,7 @@ impl Data {
             }
             #[cfg(feature = "RiCrop2DesignLine")]
             RiIcon::RiCrop2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13285,7 +13271,7 @@ impl Data {
             }
             #[cfg(feature = "RiCropDesignFill")]
             RiIcon::RiCropDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13302,7 +13288,7 @@ impl Data {
             }
             #[cfg(feature = "RiCropDesignLine")]
             RiIcon::RiCropDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13319,7 +13305,7 @@ impl Data {
             }
             #[cfg(feature = "RiCss3DevelopmentFill")]
             RiIcon::RiCss3DevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13336,7 +13322,7 @@ impl Data {
             }
             #[cfg(feature = "RiCss3DevelopmentLine")]
             RiIcon::RiCss3DevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13353,7 +13339,7 @@ impl Data {
             }
             #[cfg(feature = "RiCupMapFill")]
             RiIcon::RiCupMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13370,7 +13356,7 @@ impl Data {
             }
             #[cfg(feature = "RiCupMapLine")]
             RiIcon::RiCupMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13387,7 +13373,7 @@ impl Data {
             }
             #[cfg(feature = "RiCurrencyFinanceFill")]
             RiIcon::RiCurrencyFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13404,7 +13390,7 @@ impl Data {
             }
             #[cfg(feature = "RiCurrencyFinanceLine")]
             RiIcon::RiCurrencyFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13421,7 +13407,7 @@ impl Data {
             }
             #[cfg(feature = "RiCursorDevelopmentFill")]
             RiIcon::RiCursorDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13438,7 +13424,7 @@ impl Data {
             }
             #[cfg(feature = "RiCursorDevelopmentLine")]
             RiIcon::RiCursorDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13455,7 +13441,7 @@ impl Data {
             }
             #[cfg(feature = "RiCustomerService2BusinessFill")]
             RiIcon::RiCustomerService2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13472,7 +13458,7 @@ impl Data {
             }
             #[cfg(feature = "RiCustomerService2BusinessLine")]
             RiIcon::RiCustomerService2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13489,7 +13475,7 @@ impl Data {
             }
             #[cfg(feature = "RiCustomerServiceBusinessFill")]
             RiIcon::RiCustomerServiceBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13506,7 +13492,7 @@ impl Data {
             }
             #[cfg(feature = "RiCustomerServiceBusinessLine")]
             RiIcon::RiCustomerServiceBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13523,7 +13509,7 @@ impl Data {
             }
             #[cfg(feature = "RiDashboard2DeviceFill")]
             RiIcon::RiDashboard2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13540,7 +13526,7 @@ impl Data {
             }
             #[cfg(feature = "RiDashboard2DeviceLine")]
             RiIcon::RiDashboard2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13557,7 +13543,7 @@ impl Data {
             }
             #[cfg(feature = "RiDashboard3DeviceFill")]
             RiIcon::RiDashboard3DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13574,7 +13560,7 @@ impl Data {
             }
             #[cfg(feature = "RiDashboard3DeviceLine")]
             RiIcon::RiDashboard3DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13591,7 +13577,7 @@ impl Data {
             }
             #[cfg(feature = "RiDashboardSystemFill")]
             RiIcon::RiDashboardSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13608,7 +13594,7 @@ impl Data {
             }
             #[cfg(feature = "RiDashboardSystemLine")]
             RiIcon::RiDashboardSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13625,7 +13611,7 @@ impl Data {
             }
             #[cfg(feature = "RiDatabase2DeviceFill")]
             RiIcon::RiDatabase2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13642,7 +13628,7 @@ impl Data {
             }
             #[cfg(feature = "RiDatabase2DeviceLine")]
             RiIcon::RiDatabase2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13659,7 +13645,7 @@ impl Data {
             }
             #[cfg(feature = "RiDatabaseDeviceFill")]
             RiIcon::RiDatabaseDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13676,7 +13662,7 @@ impl Data {
             }
             #[cfg(feature = "RiDatabaseDeviceLine")]
             RiIcon::RiDatabaseDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13693,7 +13679,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBack2SystemFill")]
             RiIcon::RiDeleteBack2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13710,7 +13696,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBack2SystemLine")]
             RiIcon::RiDeleteBack2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13727,7 +13713,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBackSystemFill")]
             RiIcon::RiDeleteBackSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13744,7 +13730,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBackSystemLine")]
             RiIcon::RiDeleteBackSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13761,7 +13747,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin2SystemFill")]
             RiIcon::RiDeleteBin2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13778,7 +13764,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin2SystemLine")]
             RiIcon::RiDeleteBin2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13795,7 +13781,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin3SystemFill")]
             RiIcon::RiDeleteBin3SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13812,7 +13798,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin3SystemLine")]
             RiIcon::RiDeleteBin3SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13829,7 +13815,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin4SystemFill")]
             RiIcon::RiDeleteBin4SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13846,7 +13832,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin4SystemLine")]
             RiIcon::RiDeleteBin4SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13863,7 +13849,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin5SystemFill")]
             RiIcon::RiDeleteBin5SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13880,7 +13866,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin5SystemLine")]
             RiIcon::RiDeleteBin5SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13897,7 +13883,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin6SystemFill")]
             RiIcon::RiDeleteBin6SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13914,7 +13900,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin6SystemLine")]
             RiIcon::RiDeleteBin6SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13931,7 +13917,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin7SystemFill")]
             RiIcon::RiDeleteBin7SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13948,7 +13934,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBin7SystemLine")]
             RiIcon::RiDeleteBin7SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13965,7 +13951,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBinSystemFill")]
             RiIcon::RiDeleteBinSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13982,7 +13968,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteBinSystemLine")]
             RiIcon::RiDeleteBinSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13999,7 +13985,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteColumnEditor")]
             RiIcon::RiDeleteColumnEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14016,7 +14002,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeleteRowEditor")]
             RiIcon::RiDeleteRowEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14033,7 +14019,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeviceDeviceFill")]
             RiIcon::RiDeviceDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14050,7 +14036,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeviceDeviceLine")]
             RiIcon::RiDeviceDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14067,7 +14053,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeviceRecoverDeviceFill")]
             RiIcon::RiDeviceRecoverDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14084,7 +14070,7 @@ impl Data {
             }
             #[cfg(feature = "RiDeviceRecoverDeviceLine")]
             RiIcon::RiDeviceRecoverDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14101,7 +14087,7 @@ impl Data {
             }
             #[cfg(feature = "RiDingdingLogosFill")]
             RiIcon::RiDingdingLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14118,7 +14104,7 @@ impl Data {
             }
             #[cfg(feature = "RiDingdingLogosLine")]
             RiIcon::RiDingdingLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14135,7 +14121,7 @@ impl Data {
             }
             #[cfg(feature = "RiDirectionMapFill")]
             RiIcon::RiDirectionMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14152,7 +14138,7 @@ impl Data {
             }
             #[cfg(feature = "RiDirectionMapLine")]
             RiIcon::RiDirectionMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14169,7 +14155,7 @@ impl Data {
             }
             #[cfg(feature = "RiDiscMediaFill")]
             RiIcon::RiDiscMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14186,7 +14172,7 @@ impl Data {
             }
             #[cfg(feature = "RiDiscMediaLine")]
             RiIcon::RiDiscMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14203,7 +14189,7 @@ impl Data {
             }
             #[cfg(feature = "RiDiscordLogosFill")]
             RiIcon::RiDiscordLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14220,7 +14206,7 @@ impl Data {
             }
             #[cfg(feature = "RiDiscordLogosLine")]
             RiIcon::RiDiscordLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14237,7 +14223,7 @@ impl Data {
             }
             #[cfg(feature = "RiDiscussCommunicationFill")]
             RiIcon::RiDiscussCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14254,7 +14240,7 @@ impl Data {
             }
             #[cfg(feature = "RiDiscussCommunicationLine")]
             RiIcon::RiDiscussCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14271,7 +14257,7 @@ impl Data {
             }
             #[cfg(feature = "RiDislikeHealthFill")]
             RiIcon::RiDislikeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14288,7 +14274,7 @@ impl Data {
             }
             #[cfg(feature = "RiDislikeHealthLine")]
             RiIcon::RiDislikeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14305,7 +14291,7 @@ impl Data {
             }
             #[cfg(feature = "RiDisqusLogosFill")]
             RiIcon::RiDisqusLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14322,7 +14308,7 @@ impl Data {
             }
             #[cfg(feature = "RiDisqusLogosLine")]
             RiIcon::RiDisqusLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14339,7 +14325,7 @@ impl Data {
             }
             #[cfg(feature = "RiDivideSystemFill")]
             RiIcon::RiDivideSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14356,7 +14342,7 @@ impl Data {
             }
             #[cfg(feature = "RiDivideSystemLine")]
             RiIcon::RiDivideSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14373,7 +14359,7 @@ impl Data {
             }
             #[cfg(feature = "RiDonutChartBusinessFill")]
             RiIcon::RiDonutChartBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14390,7 +14376,7 @@ impl Data {
             }
             #[cfg(feature = "RiDonutChartBusinessLine")]
             RiIcon::RiDonutChartBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14407,7 +14393,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorClosedOthersFill")]
             RiIcon::RiDoorClosedOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14424,7 +14410,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorClosedOthersLine")]
             RiIcon::RiDoorClosedOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14441,7 +14427,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorLockBoxOthersFill")]
             RiIcon::RiDoorLockBoxOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14458,7 +14444,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorLockBoxOthersLine")]
             RiIcon::RiDoorLockBoxOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14475,7 +14461,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorLockOthersFill")]
             RiIcon::RiDoorLockOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14492,7 +14478,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorLockOthersLine")]
             RiIcon::RiDoorLockOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14509,7 +14495,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorOpenOthersFill")]
             RiIcon::RiDoorOpenOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14526,7 +14512,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorOpenOthersLine")]
             RiIcon::RiDoorOpenOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14543,7 +14529,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorOthersFill")]
             RiIcon::RiDoorOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14560,7 +14546,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoorOthersLine")]
             RiIcon::RiDoorOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14577,7 +14563,7 @@ impl Data {
             }
             #[cfg(feature = "RiDossierHealthFill")]
             RiIcon::RiDossierHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14594,7 +14580,7 @@ impl Data {
             }
             #[cfg(feature = "RiDossierHealthLine")]
             RiIcon::RiDossierHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14611,7 +14597,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoubanLogosFill")]
             RiIcon::RiDoubanLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14628,7 +14614,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoubanLogosLine")]
             RiIcon::RiDoubanLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14645,7 +14631,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoubleQuotesLEditor")]
             RiIcon::RiDoubleQuotesLEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14662,7 +14648,7 @@ impl Data {
             }
             #[cfg(feature = "RiDoubleQuotesREditor")]
             RiIcon::RiDoubleQuotesREditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14679,7 +14665,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownload2SystemFill")]
             RiIcon::RiDownload2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14696,7 +14682,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownload2SystemLine")]
             RiIcon::RiDownload2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14713,7 +14699,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownloadCloud2SystemFill")]
             RiIcon::RiDownloadCloud2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14730,7 +14716,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownloadCloud2SystemLine")]
             RiIcon::RiDownloadCloud2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14747,7 +14733,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownloadCloudSystemFill")]
             RiIcon::RiDownloadCloudSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14764,7 +14750,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownloadCloudSystemLine")]
             RiIcon::RiDownloadCloudSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14781,7 +14767,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownloadSystemFill")]
             RiIcon::RiDownloadSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14798,7 +14784,7 @@ impl Data {
             }
             #[cfg(feature = "RiDownloadSystemLine")]
             RiIcon::RiDownloadSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14815,7 +14801,7 @@ impl Data {
             }
             #[cfg(feature = "RiDraftDocumentFill")]
             RiIcon::RiDraftDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14832,7 +14818,7 @@ impl Data {
             }
             #[cfg(feature = "RiDraftDocumentLine")]
             RiIcon::RiDraftDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14849,7 +14835,7 @@ impl Data {
             }
             #[cfg(feature = "RiDragDropDesignFill")]
             RiIcon::RiDragDropDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14866,7 +14852,7 @@ impl Data {
             }
             #[cfg(feature = "RiDragDropDesignLine")]
             RiIcon::RiDragDropDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14883,7 +14869,7 @@ impl Data {
             }
             #[cfg(feature = "RiDragMove2DesignFill")]
             RiIcon::RiDragMove2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14900,7 +14886,7 @@ impl Data {
             }
             #[cfg(feature = "RiDragMove2DesignLine")]
             RiIcon::RiDragMove2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14917,7 +14903,7 @@ impl Data {
             }
             #[cfg(feature = "RiDragMoveDesignFill")]
             RiIcon::RiDragMoveDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14934,7 +14920,7 @@ impl Data {
             }
             #[cfg(feature = "RiDragMoveDesignLine")]
             RiIcon::RiDragMoveDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14951,7 +14937,7 @@ impl Data {
             }
             #[cfg(feature = "RiDribbbleLogosFill")]
             RiIcon::RiDribbbleLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14968,7 +14954,7 @@ impl Data {
             }
             #[cfg(feature = "RiDribbbleLogosLine")]
             RiIcon::RiDribbbleLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14985,7 +14971,7 @@ impl Data {
             }
             #[cfg(feature = "RiDriveLogosFill")]
             RiIcon::RiDriveLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15002,7 +14988,7 @@ impl Data {
             }
             #[cfg(feature = "RiDriveLogosLine")]
             RiIcon::RiDriveLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15019,7 +15005,7 @@ impl Data {
             }
             #[cfg(feature = "RiDrizzleWeatherFill")]
             RiIcon::RiDrizzleWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15036,7 +15022,7 @@ impl Data {
             }
             #[cfg(feature = "RiDrizzleWeatherLine")]
             RiIcon::RiDrizzleWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15053,7 +15039,7 @@ impl Data {
             }
             #[cfg(feature = "RiDropDesignFill")]
             RiIcon::RiDropDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15070,7 +15056,7 @@ impl Data {
             }
             #[cfg(feature = "RiDropDesignLine")]
             RiIcon::RiDropDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15087,7 +15073,7 @@ impl Data {
             }
             #[cfg(feature = "RiDropboxLogosFill")]
             RiIcon::RiDropboxLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15104,7 +15090,7 @@ impl Data {
             }
             #[cfg(feature = "RiDropboxLogosLine")]
             RiIcon::RiDropboxLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15121,7 +15107,7 @@ impl Data {
             }
             #[cfg(feature = "RiDualSim1DeviceFill")]
             RiIcon::RiDualSim1DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15138,7 +15124,7 @@ impl Data {
             }
             #[cfg(feature = "RiDualSim1DeviceLine")]
             RiIcon::RiDualSim1DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15155,7 +15141,7 @@ impl Data {
             }
             #[cfg(feature = "RiDualSim2DeviceFill")]
             RiIcon::RiDualSim2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15172,7 +15158,7 @@ impl Data {
             }
             #[cfg(feature = "RiDualSim2DeviceLine")]
             RiIcon::RiDualSim2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15189,7 +15175,7 @@ impl Data {
             }
             #[cfg(feature = "RiDvMediaFill")]
             RiIcon::RiDvMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15206,7 +15192,7 @@ impl Data {
             }
             #[cfg(feature = "RiDvMediaLine")]
             RiIcon::RiDvMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15223,7 +15209,7 @@ impl Data {
             }
             #[cfg(feature = "RiDvdMediaFill")]
             RiIcon::RiDvdMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15240,7 +15226,7 @@ impl Data {
             }
             #[cfg(feature = "RiDvdMediaLine")]
             RiIcon::RiDvdMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15257,7 +15243,7 @@ impl Data {
             }
             #[cfg(feature = "RiEBike2MapFill")]
             RiIcon::RiEBike2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15274,7 +15260,7 @@ impl Data {
             }
             #[cfg(feature = "RiEBike2MapLine")]
             RiIcon::RiEBike2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15291,7 +15277,7 @@ impl Data {
             }
             #[cfg(feature = "RiEBikeMapFill")]
             RiIcon::RiEBikeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15308,7 +15294,7 @@ impl Data {
             }
             #[cfg(feature = "RiEBikeMapLine")]
             RiIcon::RiEBikeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15325,7 +15311,7 @@ impl Data {
             }
             #[cfg(feature = "RiEarthMapFill")]
             RiIcon::RiEarthMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15342,7 +15328,7 @@ impl Data {
             }
             #[cfg(feature = "RiEarthMapLine")]
             RiIcon::RiEarthMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15359,7 +15345,7 @@ impl Data {
             }
             #[cfg(feature = "RiEarthquakeWeatherFill")]
             RiIcon::RiEarthquakeWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15376,7 +15362,7 @@ impl Data {
             }
             #[cfg(feature = "RiEarthquakeWeatherLine")]
             RiIcon::RiEarthquakeWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15393,7 +15379,7 @@ impl Data {
             }
             #[cfg(feature = "RiEdgeLogosFill")]
             RiIcon::RiEdgeLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15410,7 +15396,7 @@ impl Data {
             }
             #[cfg(feature = "RiEdgeLogosLine")]
             RiIcon::RiEdgeLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15427,7 +15413,7 @@ impl Data {
             }
             #[cfg(feature = "RiEdit2DesignFill")]
             RiIcon::RiEdit2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15444,7 +15430,7 @@ impl Data {
             }
             #[cfg(feature = "RiEdit2DesignLine")]
             RiIcon::RiEdit2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15461,7 +15447,7 @@ impl Data {
             }
             #[cfg(feature = "RiEditBoxDesignFill")]
             RiIcon::RiEditBoxDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15478,7 +15464,7 @@ impl Data {
             }
             #[cfg(feature = "RiEditBoxDesignLine")]
             RiIcon::RiEditBoxDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15495,7 +15481,7 @@ impl Data {
             }
             #[cfg(feature = "RiEditCircleDesignFill")]
             RiIcon::RiEditCircleDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15512,7 +15498,7 @@ impl Data {
             }
             #[cfg(feature = "RiEditCircleDesignLine")]
             RiIcon::RiEditCircleDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15529,7 +15515,7 @@ impl Data {
             }
             #[cfg(feature = "RiEditDesignFill")]
             RiIcon::RiEditDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15546,7 +15532,7 @@ impl Data {
             }
             #[cfg(feature = "RiEditDesignLine")]
             RiIcon::RiEditDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15563,7 +15549,7 @@ impl Data {
             }
             #[cfg(feature = "RiEjectMediaFill")]
             RiIcon::RiEjectMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15580,7 +15566,7 @@ impl Data {
             }
             #[cfg(feature = "RiEjectMediaLine")]
             RiIcon::RiEjectMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15597,7 +15583,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotion2UserFill")]
             RiIcon::RiEmotion2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15614,7 +15600,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotion2UserLine")]
             RiIcon::RiEmotion2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15631,7 +15617,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionHappyUserFill")]
             RiIcon::RiEmotionHappyUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15648,7 +15634,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionHappyUserLine")]
             RiIcon::RiEmotionHappyUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15665,7 +15651,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionLaughUserFill")]
             RiIcon::RiEmotionLaughUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15682,7 +15668,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionLaughUserLine")]
             RiIcon::RiEmotionLaughUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15699,7 +15685,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionNormalUserFill")]
             RiIcon::RiEmotionNormalUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15716,7 +15702,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionNormalUserLine")]
             RiIcon::RiEmotionNormalUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15733,7 +15719,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionSadUserFill")]
             RiIcon::RiEmotionSadUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15750,7 +15736,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionSadUserLine")]
             RiIcon::RiEmotionSadUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15767,7 +15753,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionUnhappyUserFill")]
             RiIcon::RiEmotionUnhappyUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15784,7 +15770,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionUnhappyUserLine")]
             RiIcon::RiEmotionUnhappyUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15801,7 +15787,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionUserFill")]
             RiIcon::RiEmotionUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15818,7 +15804,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmotionUserLine")]
             RiIcon::RiEmotionUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15835,7 +15821,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmpathizeHealthFill")]
             RiIcon::RiEmpathizeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15852,7 +15838,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmpathizeHealthLine")]
             RiIcon::RiEmpathizeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15869,7 +15855,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmphasisCnEditor")]
             RiIcon::RiEmphasisCnEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15886,7 +15872,7 @@ impl Data {
             }
             #[cfg(feature = "RiEmphasisEditor")]
             RiIcon::RiEmphasisEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15903,7 +15889,7 @@ impl Data {
             }
             #[cfg(feature = "RiEnglishInputEditor")]
             RiIcon::RiEnglishInputEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15920,7 +15906,7 @@ impl Data {
             }
             #[cfg(feature = "RiEqualizerMediaFill")]
             RiIcon::RiEqualizerMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15937,7 +15923,7 @@ impl Data {
             }
             #[cfg(feature = "RiEqualizerMediaLine")]
             RiIcon::RiEqualizerMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15954,7 +15940,7 @@ impl Data {
             }
             #[cfg(feature = "RiEraserDesignFill")]
             RiIcon::RiEraserDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15971,7 +15957,7 @@ impl Data {
             }
             #[cfg(feature = "RiEraserDesignLine")]
             RiIcon::RiEraserDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15988,7 +15974,7 @@ impl Data {
             }
             #[cfg(feature = "RiErrorWarningSystemFill")]
             RiIcon::RiErrorWarningSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16005,7 +15991,7 @@ impl Data {
             }
             #[cfg(feature = "RiErrorWarningSystemLine")]
             RiIcon::RiErrorWarningSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16022,7 +16008,7 @@ impl Data {
             }
             #[cfg(feature = "RiEvernoteLogosFill")]
             RiIcon::RiEvernoteLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16039,7 +16025,7 @@ impl Data {
             }
             #[cfg(feature = "RiEvernoteLogosLine")]
             RiIcon::RiEvernoteLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16056,7 +16042,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeBoxFinanceFill")]
             RiIcon::RiExchangeBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16073,7 +16059,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeBoxFinanceLine")]
             RiIcon::RiExchangeBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16090,7 +16076,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeCnyFinanceFill")]
             RiIcon::RiExchangeCnyFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16107,7 +16093,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeCnyFinanceLine")]
             RiIcon::RiExchangeCnyFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16124,7 +16110,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeDollarFinanceFill")]
             RiIcon::RiExchangeDollarFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16141,7 +16127,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeDollarFinanceLine")]
             RiIcon::RiExchangeDollarFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16158,7 +16144,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeFinanceFill")]
             RiIcon::RiExchangeFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16175,7 +16161,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeFinanceLine")]
             RiIcon::RiExchangeFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16192,7 +16178,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeFundsFinanceFill")]
             RiIcon::RiExchangeFundsFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16209,7 +16195,7 @@ impl Data {
             }
             #[cfg(feature = "RiExchangeFundsFinanceLine")]
             RiIcon::RiExchangeFundsFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16226,7 +16212,7 @@ impl Data {
             }
             #[cfg(feature = "RiExternalLinkSystemFill")]
             RiIcon::RiExternalLinkSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16243,7 +16229,7 @@ impl Data {
             }
             #[cfg(feature = "RiExternalLinkSystemLine")]
             RiIcon::RiExternalLinkSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16260,7 +16246,7 @@ impl Data {
             }
             #[cfg(feature = "RiEye2SystemFill")]
             RiIcon::RiEye2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16277,7 +16263,7 @@ impl Data {
             }
             #[cfg(feature = "RiEye2SystemLine")]
             RiIcon::RiEye2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16294,7 +16280,7 @@ impl Data {
             }
             #[cfg(feature = "RiEyeCloseSystemFill")]
             RiIcon::RiEyeCloseSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16311,7 +16297,7 @@ impl Data {
             }
             #[cfg(feature = "RiEyeCloseSystemLine")]
             RiIcon::RiEyeCloseSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16328,7 +16314,7 @@ impl Data {
             }
             #[cfg(feature = "RiEyeOffSystemFill")]
             RiIcon::RiEyeOffSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16345,7 +16331,7 @@ impl Data {
             }
             #[cfg(feature = "RiEyeOffSystemLine")]
             RiIcon::RiEyeOffSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16362,7 +16348,7 @@ impl Data {
             }
             #[cfg(feature = "RiEyeSystemFill")]
             RiIcon::RiEyeSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16379,7 +16365,7 @@ impl Data {
             }
             #[cfg(feature = "RiEyeSystemLine")]
             RiIcon::RiEyeSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16396,7 +16382,7 @@ impl Data {
             }
             #[cfg(feature = "RiFacebookBoxLogosFill")]
             RiIcon::RiFacebookBoxLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16413,7 +16399,7 @@ impl Data {
             }
             #[cfg(feature = "RiFacebookBoxLogosLine")]
             RiIcon::RiFacebookBoxLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16430,7 +16416,7 @@ impl Data {
             }
             #[cfg(feature = "RiFacebookCircleLogosFill")]
             RiIcon::RiFacebookCircleLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16447,7 +16433,7 @@ impl Data {
             }
             #[cfg(feature = "RiFacebookCircleLogosLine")]
             RiIcon::RiFacebookCircleLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16464,7 +16450,7 @@ impl Data {
             }
             #[cfg(feature = "RiFacebookLogosFill")]
             RiIcon::RiFacebookLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16481,7 +16467,7 @@ impl Data {
             }
             #[cfg(feature = "RiFacebookLogosLine")]
             RiIcon::RiFacebookLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16498,7 +16484,7 @@ impl Data {
             }
             #[cfg(feature = "RiFahrenheitWeatherFill")]
             RiIcon::RiFahrenheitWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16515,7 +16501,7 @@ impl Data {
             }
             #[cfg(feature = "RiFahrenheitWeatherLine")]
             RiIcon::RiFahrenheitWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16532,7 +16518,7 @@ impl Data {
             }
             #[cfg(feature = "RiFeedbackCommunicationFill")]
             RiIcon::RiFeedbackCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16549,7 +16535,7 @@ impl Data {
             }
             #[cfg(feature = "RiFeedbackCommunicationLine")]
             RiIcon::RiFeedbackCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16566,7 +16552,7 @@ impl Data {
             }
             #[cfg(feature = "RiFile2DocumentFill")]
             RiIcon::RiFile2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16583,7 +16569,7 @@ impl Data {
             }
             #[cfg(feature = "RiFile2DocumentLine")]
             RiIcon::RiFile2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16600,7 +16586,7 @@ impl Data {
             }
             #[cfg(feature = "RiFile3DocumentFill")]
             RiIcon::RiFile3DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16617,7 +16603,7 @@ impl Data {
             }
             #[cfg(feature = "RiFile3DocumentLine")]
             RiIcon::RiFile3DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16634,7 +16620,7 @@ impl Data {
             }
             #[cfg(feature = "RiFile4DocumentFill")]
             RiIcon::RiFile4DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16651,7 +16637,7 @@ impl Data {
             }
             #[cfg(feature = "RiFile4DocumentLine")]
             RiIcon::RiFile4DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16668,7 +16654,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileAddDocumentFill")]
             RiIcon::RiFileAddDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16685,7 +16671,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileAddDocumentLine")]
             RiIcon::RiFileAddDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16702,7 +16688,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileChart2DocumentFill")]
             RiIcon::RiFileChart2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16719,7 +16705,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileChart2DocumentLine")]
             RiIcon::RiFileChart2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16736,7 +16722,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileChartDocumentFill")]
             RiIcon::RiFileChartDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16753,7 +16739,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileChartDocumentLine")]
             RiIcon::RiFileChartDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16770,7 +16756,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCloudDocumentFill")]
             RiIcon::RiFileCloudDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16787,7 +16773,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCloudDocumentLine")]
             RiIcon::RiFileCloudDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16804,7 +16790,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCodeDocumentFill")]
             RiIcon::RiFileCodeDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16821,7 +16807,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCodeDocumentLine")]
             RiIcon::RiFileCodeDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16838,7 +16824,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCopy2DocumentFill")]
             RiIcon::RiFileCopy2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16855,7 +16841,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCopy2DocumentLine")]
             RiIcon::RiFileCopy2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16872,7 +16858,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCopyDocumentFill")]
             RiIcon::RiFileCopyDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16889,7 +16875,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileCopyDocumentLine")]
             RiIcon::RiFileCopyDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16906,7 +16892,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileDamageDocumentFill")]
             RiIcon::RiFileDamageDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16923,7 +16909,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileDamageDocumentLine")]
             RiIcon::RiFileDamageDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16940,7 +16926,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileDocumentFill")]
             RiIcon::RiFileDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16957,7 +16943,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileDocumentLine")]
             RiIcon::RiFileDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16974,7 +16960,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileDownloadDocumentFill")]
             RiIcon::RiFileDownloadDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16991,7 +16977,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileDownloadDocumentLine")]
             RiIcon::RiFileDownloadDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17008,7 +16994,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileEditDocumentFill")]
             RiIcon::RiFileEditDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17025,7 +17011,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileEditDocumentLine")]
             RiIcon::RiFileEditDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17042,7 +17028,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileExcel2DocumentFill")]
             RiIcon::RiFileExcel2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17059,7 +17045,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileExcel2DocumentLine")]
             RiIcon::RiFileExcel2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17076,7 +17062,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileExcelDocumentFill")]
             RiIcon::RiFileExcelDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17093,7 +17079,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileExcelDocumentLine")]
             RiIcon::RiFileExcelDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17110,7 +17096,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileForbidDocumentFill")]
             RiIcon::RiFileForbidDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17127,7 +17113,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileForbidDocumentLine")]
             RiIcon::RiFileForbidDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17144,7 +17130,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileGifDocumentFill")]
             RiIcon::RiFileGifDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17161,7 +17147,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileGifDocumentLine")]
             RiIcon::RiFileGifDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17178,7 +17164,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileHistoryDocumentFill")]
             RiIcon::RiFileHistoryDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17195,7 +17181,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileHistoryDocumentLine")]
             RiIcon::RiFileHistoryDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17212,7 +17198,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileHwpDocumentFill")]
             RiIcon::RiFileHwpDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17229,7 +17215,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileHwpDocumentLine")]
             RiIcon::RiFileHwpDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17246,7 +17232,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileInfoDocumentFill")]
             RiIcon::RiFileInfoDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17263,7 +17249,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileInfoDocumentLine")]
             RiIcon::RiFileInfoDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17280,7 +17266,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileList2DocumentFill")]
             RiIcon::RiFileList2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17297,7 +17283,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileList2DocumentLine")]
             RiIcon::RiFileList2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17314,7 +17300,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileList3DocumentFill")]
             RiIcon::RiFileList3DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17331,7 +17317,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileList3DocumentLine")]
             RiIcon::RiFileList3DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17348,7 +17334,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileListDocumentFill")]
             RiIcon::RiFileListDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17365,7 +17351,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileListDocumentLine")]
             RiIcon::RiFileListDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17382,7 +17368,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileLockDocumentFill")]
             RiIcon::RiFileLockDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17399,7 +17385,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileLockDocumentLine")]
             RiIcon::RiFileLockDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17416,7 +17402,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileMarkDocumentFill")]
             RiIcon::RiFileMarkDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17433,7 +17419,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileMarkDocumentLine")]
             RiIcon::RiFileMarkDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17450,7 +17436,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileMusicDocumentFill")]
             RiIcon::RiFileMusicDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17467,7 +17453,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileMusicDocumentLine")]
             RiIcon::RiFileMusicDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17484,7 +17470,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePaper2DocumentFill")]
             RiIcon::RiFilePaper2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17501,7 +17487,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePaper2DocumentLine")]
             RiIcon::RiFilePaper2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17518,7 +17504,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePaperDocumentFill")]
             RiIcon::RiFilePaperDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17535,7 +17521,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePaperDocumentLine")]
             RiIcon::RiFilePaperDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17552,7 +17538,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePdfDocumentFill")]
             RiIcon::RiFilePdfDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17569,7 +17555,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePdfDocumentLine")]
             RiIcon::RiFilePdfDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17586,7 +17572,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePpt2DocumentFill")]
             RiIcon::RiFilePpt2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17603,7 +17589,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePpt2DocumentLine")]
             RiIcon::RiFilePpt2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17620,7 +17606,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePptDocumentFill")]
             RiIcon::RiFilePptDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17637,7 +17623,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilePptDocumentLine")]
             RiIcon::RiFilePptDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17654,7 +17640,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileReduceDocumentFill")]
             RiIcon::RiFileReduceDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17671,7 +17657,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileReduceDocumentLine")]
             RiIcon::RiFileReduceDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17688,7 +17674,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileSearchDocumentFill")]
             RiIcon::RiFileSearchDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17705,7 +17691,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileSearchDocumentLine")]
             RiIcon::RiFileSearchDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17722,7 +17708,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileSettingsDocumentFill")]
             RiIcon::RiFileSettingsDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17739,7 +17725,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileSettingsDocumentLine")]
             RiIcon::RiFileSettingsDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17756,7 +17742,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileShield2DocumentFill")]
             RiIcon::RiFileShield2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17773,7 +17759,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileShield2DocumentLine")]
             RiIcon::RiFileShield2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17790,7 +17776,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileShieldDocumentFill")]
             RiIcon::RiFileShieldDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17807,7 +17793,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileShieldDocumentLine")]
             RiIcon::RiFileShieldDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17824,7 +17810,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileShredDocumentFill")]
             RiIcon::RiFileShredDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17841,7 +17827,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileShredDocumentLine")]
             RiIcon::RiFileShredDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17858,7 +17844,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileTextDocumentFill")]
             RiIcon::RiFileTextDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17875,7 +17861,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileTextDocumentLine")]
             RiIcon::RiFileTextDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17892,7 +17878,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileTransferDocumentFill")]
             RiIcon::RiFileTransferDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17909,7 +17895,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileTransferDocumentLine")]
             RiIcon::RiFileTransferDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17926,7 +17912,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileUnknowDocumentFill")]
             RiIcon::RiFileUnknowDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17943,7 +17929,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileUnknowDocumentLine")]
             RiIcon::RiFileUnknowDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17960,7 +17946,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileUploadDocumentFill")]
             RiIcon::RiFileUploadDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17977,7 +17963,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileUploadDocumentLine")]
             RiIcon::RiFileUploadDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17994,7 +17980,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileUserDocumentFill")]
             RiIcon::RiFileUserDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18011,7 +17997,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileUserDocumentLine")]
             RiIcon::RiFileUserDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18028,7 +18014,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileWarningDocumentFill")]
             RiIcon::RiFileWarningDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18045,7 +18031,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileWarningDocumentLine")]
             RiIcon::RiFileWarningDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18062,7 +18048,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileWord2DocumentFill")]
             RiIcon::RiFileWord2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18079,7 +18065,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileWord2DocumentLine")]
             RiIcon::RiFileWord2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18096,7 +18082,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileWordDocumentFill")]
             RiIcon::RiFileWordDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18113,7 +18099,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileWordDocumentLine")]
             RiIcon::RiFileWordDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18130,7 +18116,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileZipDocumentFill")]
             RiIcon::RiFileZipDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18147,7 +18133,7 @@ impl Data {
             }
             #[cfg(feature = "RiFileZipDocumentLine")]
             RiIcon::RiFileZipDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18164,7 +18150,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilmMediaFill")]
             RiIcon::RiFilmMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18181,7 +18167,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilmMediaLine")]
             RiIcon::RiFilmMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18198,7 +18184,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilter2SystemFill")]
             RiIcon::RiFilter2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18215,7 +18201,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilter2SystemLine")]
             RiIcon::RiFilter2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18232,7 +18218,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilter3SystemFill")]
             RiIcon::RiFilter3SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18249,7 +18235,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilter3SystemLine")]
             RiIcon::RiFilter3SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18266,7 +18252,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilterOffSystemFill")]
             RiIcon::RiFilterOffSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18283,7 +18269,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilterOffSystemLine")]
             RiIcon::RiFilterOffSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18300,7 +18286,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilterSystemFill")]
             RiIcon::RiFilterSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18317,7 +18303,7 @@ impl Data {
             }
             #[cfg(feature = "RiFilterSystemLine")]
             RiIcon::RiFilterSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18334,7 +18320,7 @@ impl Data {
             }
             #[cfg(feature = "RiFindReplaceSystemFill")]
             RiIcon::RiFindReplaceSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18351,7 +18337,7 @@ impl Data {
             }
             #[cfg(feature = "RiFindReplaceSystemLine")]
             RiIcon::RiFindReplaceSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18368,7 +18354,7 @@ impl Data {
             }
             #[cfg(feature = "RiFinderLogosFill")]
             RiIcon::RiFinderLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18385,7 +18371,7 @@ impl Data {
             }
             #[cfg(feature = "RiFinderLogosLine")]
             RiIcon::RiFinderLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18402,7 +18388,7 @@ impl Data {
             }
             #[cfg(feature = "RiFingerprint2DeviceFill")]
             RiIcon::RiFingerprint2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18419,7 +18405,7 @@ impl Data {
             }
             #[cfg(feature = "RiFingerprint2DeviceLine")]
             RiIcon::RiFingerprint2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18436,7 +18422,7 @@ impl Data {
             }
             #[cfg(feature = "RiFingerprintDeviceFill")]
             RiIcon::RiFingerprintDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18453,7 +18439,7 @@ impl Data {
             }
             #[cfg(feature = "RiFingerprintDeviceLine")]
             RiIcon::RiFingerprintDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18470,7 +18456,7 @@ impl Data {
             }
             #[cfg(feature = "RiFireWeatherFill")]
             RiIcon::RiFireWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18487,7 +18473,7 @@ impl Data {
             }
             #[cfg(feature = "RiFireWeatherLine")]
             RiIcon::RiFireWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18504,7 +18490,7 @@ impl Data {
             }
             #[cfg(feature = "RiFirefoxLogosFill")]
             RiIcon::RiFirefoxLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18521,7 +18507,7 @@ impl Data {
             }
             #[cfg(feature = "RiFirefoxLogosLine")]
             RiIcon::RiFirefoxLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18538,7 +18524,7 @@ impl Data {
             }
             #[cfg(feature = "RiFirstAidKitHealthFill")]
             RiIcon::RiFirstAidKitHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18555,7 +18541,7 @@ impl Data {
             }
             #[cfg(feature = "RiFirstAidKitHealthLine")]
             RiIcon::RiFirstAidKitHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18572,7 +18558,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlag2BusinessFill")]
             RiIcon::RiFlag2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18589,7 +18575,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlag2BusinessLine")]
             RiIcon::RiFlag2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18606,7 +18592,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlagBusinessFill")]
             RiIcon::RiFlagBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18623,7 +18609,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlagBusinessLine")]
             RiIcon::RiFlagBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18640,7 +18626,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlashlightWeatherFill")]
             RiIcon::RiFlashlightWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18657,7 +18643,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlashlightWeatherLine")]
             RiIcon::RiFlashlightWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18674,7 +18660,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlaskHealthFill")]
             RiIcon::RiFlaskHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18691,7 +18677,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlaskHealthLine")]
             RiIcon::RiFlaskHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18708,7 +18694,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlightLandMapFill")]
             RiIcon::RiFlightLandMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18725,7 +18711,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlightLandMapLine")]
             RiIcon::RiFlightLandMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18742,7 +18728,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlightTakeoffMapFill")]
             RiIcon::RiFlightTakeoffMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18759,7 +18745,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlightTakeoffMapLine")]
             RiIcon::RiFlightTakeoffMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18776,7 +18762,7 @@ impl Data {
             }
             #[cfg(feature = "RiFloodWeatherFill")]
             RiIcon::RiFloodWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18793,7 +18779,7 @@ impl Data {
             }
             #[cfg(feature = "RiFloodWeatherLine")]
             RiIcon::RiFloodWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18810,7 +18796,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlowChartEditor")]
             RiIcon::RiFlowChartEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18827,7 +18813,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlutterLogosFill")]
             RiIcon::RiFlutterLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18844,7 +18830,7 @@ impl Data {
             }
             #[cfg(feature = "RiFlutterLogosLine")]
             RiIcon::RiFlutterLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18861,7 +18847,7 @@ impl Data {
             }
             #[cfg(feature = "RiFocus2DesignFill")]
             RiIcon::RiFocus2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18878,7 +18864,7 @@ impl Data {
             }
             #[cfg(feature = "RiFocus2DesignLine")]
             RiIcon::RiFocus2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18895,7 +18881,7 @@ impl Data {
             }
             #[cfg(feature = "RiFocus3DesignFill")]
             RiIcon::RiFocus3DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18912,7 +18898,7 @@ impl Data {
             }
             #[cfg(feature = "RiFocus3DesignLine")]
             RiIcon::RiFocus3DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18929,7 +18915,7 @@ impl Data {
             }
             #[cfg(feature = "RiFocusDesignFill")]
             RiIcon::RiFocusDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18946,7 +18932,7 @@ impl Data {
             }
             #[cfg(feature = "RiFocusDesignLine")]
             RiIcon::RiFocusDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18963,7 +18949,7 @@ impl Data {
             }
             #[cfg(feature = "RiFoggyWeatherFill")]
             RiIcon::RiFoggyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18980,7 +18966,7 @@ impl Data {
             }
             #[cfg(feature = "RiFoggyWeatherLine")]
             RiIcon::RiFoggyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18997,7 +18983,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder2DocumentFill")]
             RiIcon::RiFolder2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19014,7 +19000,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder2DocumentLine")]
             RiIcon::RiFolder2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19031,7 +19017,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder3DocumentFill")]
             RiIcon::RiFolder3DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19048,7 +19034,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder3DocumentLine")]
             RiIcon::RiFolder3DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19065,7 +19051,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder4DocumentFill")]
             RiIcon::RiFolder4DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19082,7 +19068,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder4DocumentLine")]
             RiIcon::RiFolder4DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19099,7 +19085,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder5DocumentFill")]
             RiIcon::RiFolder5DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19116,7 +19102,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolder5DocumentLine")]
             RiIcon::RiFolder5DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19133,7 +19119,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderAddDocumentFill")]
             RiIcon::RiFolderAddDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19150,7 +19136,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderAddDocumentLine")]
             RiIcon::RiFolderAddDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19167,7 +19153,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderChart2DocumentFill")]
             RiIcon::RiFolderChart2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19184,7 +19170,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderChart2DocumentLine")]
             RiIcon::RiFolderChart2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19201,7 +19187,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderChartDocumentFill")]
             RiIcon::RiFolderChartDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19218,7 +19204,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderChartDocumentLine")]
             RiIcon::RiFolderChartDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19235,7 +19221,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderDocumentFill")]
             RiIcon::RiFolderDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19252,7 +19238,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderDocumentLine")]
             RiIcon::RiFolderDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19269,7 +19255,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderDownloadDocumentFill")]
             RiIcon::RiFolderDownloadDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19286,7 +19272,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderDownloadDocumentLine")]
             RiIcon::RiFolderDownloadDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19303,7 +19289,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderForbidDocumentFill")]
             RiIcon::RiFolderForbidDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19320,7 +19306,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderForbidDocumentLine")]
             RiIcon::RiFolderForbidDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19337,7 +19323,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderHistoryDocumentFill")]
             RiIcon::RiFolderHistoryDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19354,7 +19340,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderHistoryDocumentLine")]
             RiIcon::RiFolderHistoryDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19371,7 +19357,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderInfoDocumentFill")]
             RiIcon::RiFolderInfoDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19388,7 +19374,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderInfoDocumentLine")]
             RiIcon::RiFolderInfoDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19405,7 +19391,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderKeyholeDocumentFill")]
             RiIcon::RiFolderKeyholeDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19422,7 +19408,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderKeyholeDocumentLine")]
             RiIcon::RiFolderKeyholeDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19439,7 +19425,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderLockDocumentFill")]
             RiIcon::RiFolderLockDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19456,7 +19442,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderLockDocumentLine")]
             RiIcon::RiFolderLockDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19473,7 +19459,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderMusicDocumentFill")]
             RiIcon::RiFolderMusicDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19490,7 +19476,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderMusicDocumentLine")]
             RiIcon::RiFolderMusicDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19507,7 +19493,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderOpenDocumentFill")]
             RiIcon::RiFolderOpenDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19524,7 +19510,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderOpenDocumentLine")]
             RiIcon::RiFolderOpenDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19541,7 +19527,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderReceivedDocumentFill")]
             RiIcon::RiFolderReceivedDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19558,7 +19544,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderReceivedDocumentLine")]
             RiIcon::RiFolderReceivedDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19575,7 +19561,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderReduceDocumentFill")]
             RiIcon::RiFolderReduceDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19592,7 +19578,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderReduceDocumentLine")]
             RiIcon::RiFolderReduceDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19609,7 +19595,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderSettingsDocumentFill")]
             RiIcon::RiFolderSettingsDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19626,7 +19612,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderSettingsDocumentLine")]
             RiIcon::RiFolderSettingsDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19643,7 +19629,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderSharedDocumentFill")]
             RiIcon::RiFolderSharedDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19660,7 +19646,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderSharedDocumentLine")]
             RiIcon::RiFolderSharedDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19677,7 +19663,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderShield2DocumentFill")]
             RiIcon::RiFolderShield2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19694,7 +19680,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderShield2DocumentLine")]
             RiIcon::RiFolderShield2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19711,7 +19697,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderShieldDocumentFill")]
             RiIcon::RiFolderShieldDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19728,7 +19714,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderShieldDocumentLine")]
             RiIcon::RiFolderShieldDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19745,7 +19731,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderTransferDocumentFill")]
             RiIcon::RiFolderTransferDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19762,7 +19748,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderTransferDocumentLine")]
             RiIcon::RiFolderTransferDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19779,7 +19765,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderUnknowDocumentFill")]
             RiIcon::RiFolderUnknowDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19796,7 +19782,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderUnknowDocumentLine")]
             RiIcon::RiFolderUnknowDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19813,7 +19799,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderUploadDocumentFill")]
             RiIcon::RiFolderUploadDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19830,7 +19816,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderUploadDocumentLine")]
             RiIcon::RiFolderUploadDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19847,7 +19833,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderUserDocumentFill")]
             RiIcon::RiFolderUserDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19864,7 +19850,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderUserDocumentLine")]
             RiIcon::RiFolderUserDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19881,7 +19867,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderWarningDocumentFill")]
             RiIcon::RiFolderWarningDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19898,7 +19884,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderWarningDocumentLine")]
             RiIcon::RiFolderWarningDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19915,7 +19901,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderZipDocumentFill")]
             RiIcon::RiFolderZipDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19932,7 +19918,7 @@ impl Data {
             }
             #[cfg(feature = "RiFolderZipDocumentLine")]
             RiIcon::RiFolderZipDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19949,7 +19935,7 @@ impl Data {
             }
             #[cfg(feature = "RiFoldersDocumentFill")]
             RiIcon::RiFoldersDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19966,7 +19952,7 @@ impl Data {
             }
             #[cfg(feature = "RiFoldersDocumentLine")]
             RiIcon::RiFoldersDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19983,7 +19969,7 @@ impl Data {
             }
             #[cfg(feature = "RiFontColorEditor")]
             RiIcon::RiFontColorEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20000,7 +19986,7 @@ impl Data {
             }
             #[cfg(feature = "RiFontSize2Editor")]
             RiIcon::RiFontSize2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20017,7 +20003,7 @@ impl Data {
             }
             #[cfg(feature = "RiFontSizeEditor")]
             RiIcon::RiFontSizeEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20034,7 +20020,7 @@ impl Data {
             }
             #[cfg(feature = "RiFootballOthersFill")]
             RiIcon::RiFootballOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20051,7 +20037,7 @@ impl Data {
             }
             #[cfg(feature = "RiFootballOthersLine")]
             RiIcon::RiFootballOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20068,7 +20054,7 @@ impl Data {
             }
             #[cfg(feature = "RiFootprintMapFill")]
             RiIcon::RiFootprintMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20085,7 +20071,7 @@ impl Data {
             }
             #[cfg(feature = "RiFootprintMapLine")]
             RiIcon::RiFootprintMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20102,7 +20088,7 @@ impl Data {
             }
             #[cfg(feature = "RiForbid2SystemFill")]
             RiIcon::RiForbid2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20119,7 +20105,7 @@ impl Data {
             }
             #[cfg(feature = "RiForbid2SystemLine")]
             RiIcon::RiForbid2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20136,7 +20122,7 @@ impl Data {
             }
             #[cfg(feature = "RiForbidSystemFill")]
             RiIcon::RiForbidSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20153,7 +20139,7 @@ impl Data {
             }
             #[cfg(feature = "RiForbidSystemLine")]
             RiIcon::RiForbidSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20170,7 +20156,7 @@ impl Data {
             }
             #[cfg(feature = "RiFormatClearEditor")]
             RiIcon::RiFormatClearEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20187,7 +20173,7 @@ impl Data {
             }
             #[cfg(feature = "RiFridgeOthersFill")]
             RiIcon::RiFridgeOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20204,7 +20190,7 @@ impl Data {
             }
             #[cfg(feature = "RiFridgeOthersLine")]
             RiIcon::RiFridgeOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20221,7 +20207,7 @@ impl Data {
             }
             #[cfg(feature = "RiFullscreenExitMediaFill")]
             RiIcon::RiFullscreenExitMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20238,7 +20224,7 @@ impl Data {
             }
             #[cfg(feature = "RiFullscreenExitMediaLine")]
             RiIcon::RiFullscreenExitMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20255,7 +20241,7 @@ impl Data {
             }
             #[cfg(feature = "RiFullscreenMediaFill")]
             RiIcon::RiFullscreenMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20272,7 +20258,7 @@ impl Data {
             }
             #[cfg(feature = "RiFullscreenMediaLine")]
             RiIcon::RiFullscreenMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20289,7 +20275,7 @@ impl Data {
             }
             #[cfg(feature = "RiFunctionSystemFill")]
             RiIcon::RiFunctionSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20306,7 +20292,7 @@ impl Data {
             }
             #[cfg(feature = "RiFunctionSystemLine")]
             RiIcon::RiFunctionSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20323,7 +20309,7 @@ impl Data {
             }
             #[cfg(feature = "RiFunctionsEditor")]
             RiIcon::RiFunctionsEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20340,7 +20326,7 @@ impl Data {
             }
             #[cfg(feature = "RiFundsBoxFinanceFill")]
             RiIcon::RiFundsBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20357,7 +20343,7 @@ impl Data {
             }
             #[cfg(feature = "RiFundsBoxFinanceLine")]
             RiIcon::RiFundsBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20374,7 +20360,7 @@ impl Data {
             }
             #[cfg(feature = "RiFundsFinanceFill")]
             RiIcon::RiFundsFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20391,7 +20377,7 @@ impl Data {
             }
             #[cfg(feature = "RiFundsFinanceLine")]
             RiIcon::RiFundsFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20408,7 +20394,7 @@ impl Data {
             }
             #[cfg(feature = "RiGalleryMediaFill")]
             RiIcon::RiGalleryMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20425,7 +20411,7 @@ impl Data {
             }
             #[cfg(feature = "RiGalleryMediaLine")]
             RiIcon::RiGalleryMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20442,7 +20428,7 @@ impl Data {
             }
             #[cfg(feature = "RiGalleryUploadMediaFill")]
             RiIcon::RiGalleryUploadMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20459,7 +20445,7 @@ impl Data {
             }
             #[cfg(feature = "RiGalleryUploadMediaLine")]
             RiIcon::RiGalleryUploadMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20476,7 +20462,7 @@ impl Data {
             }
             #[cfg(feature = "RiGameOthersFill")]
             RiIcon::RiGameOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20493,7 +20479,7 @@ impl Data {
             }
             #[cfg(feature = "RiGameOthersLine")]
             RiIcon::RiGameOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20510,7 +20496,7 @@ impl Data {
             }
             #[cfg(feature = "RiGamepadDeviceFill")]
             RiIcon::RiGamepadDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20527,7 +20513,7 @@ impl Data {
             }
             #[cfg(feature = "RiGamepadDeviceLine")]
             RiIcon::RiGamepadDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20544,7 +20530,7 @@ impl Data {
             }
             #[cfg(feature = "RiGasStationMapFill")]
             RiIcon::RiGasStationMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20561,7 +20547,7 @@ impl Data {
             }
             #[cfg(feature = "RiGasStationMapLine")]
             RiIcon::RiGasStationMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20578,7 +20564,7 @@ impl Data {
             }
             #[cfg(feature = "RiGatsbyLogosFill")]
             RiIcon::RiGatsbyLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20595,7 +20581,7 @@ impl Data {
             }
             #[cfg(feature = "RiGatsbyLogosLine")]
             RiIcon::RiGatsbyLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20612,7 +20598,7 @@ impl Data {
             }
             #[cfg(feature = "RiGenderlessUserFill")]
             RiIcon::RiGenderlessUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20629,7 +20615,7 @@ impl Data {
             }
             #[cfg(feature = "RiGenderlessUserLine")]
             RiIcon::RiGenderlessUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20646,7 +20632,7 @@ impl Data {
             }
             #[cfg(feature = "RiGhost2UserFill")]
             RiIcon::RiGhost2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20663,7 +20649,7 @@ impl Data {
             }
             #[cfg(feature = "RiGhost2UserLine")]
             RiIcon::RiGhost2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20680,7 +20666,7 @@ impl Data {
             }
             #[cfg(feature = "RiGhostSmileUserFill")]
             RiIcon::RiGhostSmileUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20697,7 +20683,7 @@ impl Data {
             }
             #[cfg(feature = "RiGhostSmileUserLine")]
             RiIcon::RiGhostSmileUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20714,7 +20700,7 @@ impl Data {
             }
             #[cfg(feature = "RiGhostUserFill")]
             RiIcon::RiGhostUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20731,7 +20717,7 @@ impl Data {
             }
             #[cfg(feature = "RiGhostUserLine")]
             RiIcon::RiGhostUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20748,7 +20734,7 @@ impl Data {
             }
             #[cfg(feature = "RiGift2FinanceFill")]
             RiIcon::RiGift2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20765,7 +20751,7 @@ impl Data {
             }
             #[cfg(feature = "RiGift2FinanceLine")]
             RiIcon::RiGift2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20782,7 +20768,7 @@ impl Data {
             }
             #[cfg(feature = "RiGiftFinanceFill")]
             RiIcon::RiGiftFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20799,7 +20785,7 @@ impl Data {
             }
             #[cfg(feature = "RiGiftFinanceLine")]
             RiIcon::RiGiftFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20816,7 +20802,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitBranchDevelopmentFill")]
             RiIcon::RiGitBranchDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20833,7 +20819,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitBranchDevelopmentLine")]
             RiIcon::RiGitBranchDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20850,7 +20836,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitCommitDevelopmentFill")]
             RiIcon::RiGitCommitDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20867,7 +20853,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitCommitDevelopmentLine")]
             RiIcon::RiGitCommitDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20884,7 +20870,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitMergeDevelopmentFill")]
             RiIcon::RiGitMergeDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20901,7 +20887,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitMergeDevelopmentLine")]
             RiIcon::RiGitMergeDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20918,7 +20904,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitPullRequestDevelopmentFill")]
             RiIcon::RiGitPullRequestDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20935,7 +20921,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitPullRequestDevelopmentLine")]
             RiIcon::RiGitPullRequestDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20952,7 +20938,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitRepositoryCommitsDevelopmentFill")]
             RiIcon::RiGitRepositoryCommitsDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20969,7 +20955,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitRepositoryCommitsDevelopmentLine")]
             RiIcon::RiGitRepositoryCommitsDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20986,7 +20972,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitRepositoryDevelopmentFill")]
             RiIcon::RiGitRepositoryDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21003,7 +20989,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitRepositoryDevelopmentLine")]
             RiIcon::RiGitRepositoryDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21020,7 +21006,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitRepositoryPrivateDevelopmentFill")]
             RiIcon::RiGitRepositoryPrivateDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21037,7 +21023,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitRepositoryPrivateDevelopmentLine")]
             RiIcon::RiGitRepositoryPrivateDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21054,7 +21040,7 @@ impl Data {
             }
             #[cfg(feature = "RiGithubLogosFill")]
             RiIcon::RiGithubLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21071,7 +21057,7 @@ impl Data {
             }
             #[cfg(feature = "RiGithubLogosLine")]
             RiIcon::RiGithubLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21088,7 +21074,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitlabLogosFill")]
             RiIcon::RiGitlabLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21105,7 +21091,7 @@ impl Data {
             }
             #[cfg(feature = "RiGitlabLogosLine")]
             RiIcon::RiGitlabLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21122,7 +21108,7 @@ impl Data {
             }
             #[cfg(feature = "RiGlobalBusinessFill")]
             RiIcon::RiGlobalBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21139,7 +21125,7 @@ impl Data {
             }
             #[cfg(feature = "RiGlobalBusinessLine")]
             RiIcon::RiGlobalBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21156,7 +21142,7 @@ impl Data {
             }
             #[cfg(feature = "RiGlobeMapFill")]
             RiIcon::RiGlobeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21173,7 +21159,7 @@ impl Data {
             }
             #[cfg(feature = "RiGlobeMapLine")]
             RiIcon::RiGlobeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21190,7 +21176,7 @@ impl Data {
             }
             #[cfg(feature = "RiGobletMapFill")]
             RiIcon::RiGobletMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21207,7 +21193,7 @@ impl Data {
             }
             #[cfg(feature = "RiGobletMapLine")]
             RiIcon::RiGobletMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21224,7 +21210,7 @@ impl Data {
             }
             #[cfg(feature = "RiGoogleLogosFill")]
             RiIcon::RiGoogleLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21241,7 +21227,7 @@ impl Data {
             }
             #[cfg(feature = "RiGoogleLogosLine")]
             RiIcon::RiGoogleLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21258,7 +21244,7 @@ impl Data {
             }
             #[cfg(feature = "RiGooglePlayLogosFill")]
             RiIcon::RiGooglePlayLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21275,7 +21261,7 @@ impl Data {
             }
             #[cfg(feature = "RiGooglePlayLogosLine")]
             RiIcon::RiGooglePlayLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21292,7 +21278,7 @@ impl Data {
             }
             #[cfg(feature = "RiGovernmentBuildingsFill")]
             RiIcon::RiGovernmentBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21309,7 +21295,7 @@ impl Data {
             }
             #[cfg(feature = "RiGovernmentBuildingsLine")]
             RiIcon::RiGovernmentBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21326,7 +21312,7 @@ impl Data {
             }
             #[cfg(feature = "RiGpsDeviceFill")]
             RiIcon::RiGpsDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21343,7 +21329,7 @@ impl Data {
             }
             #[cfg(feature = "RiGpsDeviceLine")]
             RiIcon::RiGpsDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21360,7 +21346,7 @@ impl Data {
             }
             #[cfg(feature = "RiGradienterDeviceFill")]
             RiIcon::RiGradienterDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21377,7 +21363,7 @@ impl Data {
             }
             #[cfg(feature = "RiGradienterDeviceLine")]
             RiIcon::RiGradienterDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21394,7 +21380,7 @@ impl Data {
             }
             #[cfg(feature = "RiGridDesignFill")]
             RiIcon::RiGridDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21411,7 +21397,7 @@ impl Data {
             }
             #[cfg(feature = "RiGridDesignLine")]
             RiIcon::RiGridDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21428,7 +21414,7 @@ impl Data {
             }
             #[cfg(feature = "RiGroup2UserFill")]
             RiIcon::RiGroup2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21445,7 +21431,7 @@ impl Data {
             }
             #[cfg(feature = "RiGroup2UserLine")]
             RiIcon::RiGroup2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21462,7 +21448,7 @@ impl Data {
             }
             #[cfg(feature = "RiGroupUserFill")]
             RiIcon::RiGroupUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21479,7 +21465,7 @@ impl Data {
             }
             #[cfg(feature = "RiGroupUserLine")]
             RiIcon::RiGroupUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21496,7 +21482,7 @@ impl Data {
             }
             #[cfg(feature = "RiGuideMapFill")]
             RiIcon::RiGuideMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21513,7 +21499,7 @@ impl Data {
             }
             #[cfg(feature = "RiGuideMapLine")]
             RiIcon::RiGuideMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21530,7 +21516,7 @@ impl Data {
             }
             #[cfg(feature = "RiH1Editor")]
             RiIcon::RiH1Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21547,7 +21533,7 @@ impl Data {
             }
             #[cfg(feature = "RiH2Editor")]
             RiIcon::RiH2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21564,7 +21550,7 @@ impl Data {
             }
             #[cfg(feature = "RiH3Editor")]
             RiIcon::RiH3Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21581,7 +21567,7 @@ impl Data {
             }
             #[cfg(feature = "RiH4Editor")]
             RiIcon::RiH4Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21598,7 +21584,7 @@ impl Data {
             }
             #[cfg(feature = "RiH5Editor")]
             RiIcon::RiH5Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21615,7 +21601,7 @@ impl Data {
             }
             #[cfg(feature = "RiH6Editor")]
             RiIcon::RiH6Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21632,7 +21618,7 @@ impl Data {
             }
             #[cfg(feature = "RiHailWeatherFill")]
             RiIcon::RiHailWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21649,7 +21635,7 @@ impl Data {
             }
             #[cfg(feature = "RiHailWeatherLine")]
             RiIcon::RiHailWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21666,7 +21652,7 @@ impl Data {
             }
             #[cfg(feature = "RiHammerDesignFill")]
             RiIcon::RiHammerDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21683,7 +21669,7 @@ impl Data {
             }
             #[cfg(feature = "RiHammerDesignLine")]
             RiIcon::RiHammerDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21700,7 +21686,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandCoinFinanceFill")]
             RiIcon::RiHandCoinFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21717,7 +21703,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandCoinFinanceLine")]
             RiIcon::RiHandCoinFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21734,7 +21720,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandHeartFinanceFill")]
             RiIcon::RiHandHeartFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21751,7 +21737,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandHeartFinanceLine")]
             RiIcon::RiHandHeartFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21768,7 +21754,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandSanitizerHealthFill")]
             RiIcon::RiHandSanitizerHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21785,7 +21771,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandSanitizerHealthLine")]
             RiIcon::RiHandSanitizerHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21802,7 +21788,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandbagOthersFill")]
             RiIcon::RiHandbagOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21819,7 +21805,7 @@ impl Data {
             }
             #[cfg(feature = "RiHandbagOthersLine")]
             RiIcon::RiHandbagOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21836,7 +21822,7 @@ impl Data {
             }
             #[cfg(feature = "RiHardDrive2DeviceFill")]
             RiIcon::RiHardDrive2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21853,7 +21839,7 @@ impl Data {
             }
             #[cfg(feature = "RiHardDrive2DeviceLine")]
             RiIcon::RiHardDrive2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21870,7 +21856,7 @@ impl Data {
             }
             #[cfg(feature = "RiHardDriveDeviceFill")]
             RiIcon::RiHardDriveDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21887,7 +21873,7 @@ impl Data {
             }
             #[cfg(feature = "RiHardDriveDeviceLine")]
             RiIcon::RiHardDriveDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21904,7 +21890,7 @@ impl Data {
             }
             #[cfg(feature = "RiHashtagEditor")]
             RiIcon::RiHashtagEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21921,7 +21907,7 @@ impl Data {
             }
             #[cfg(feature = "RiHaze2WeatherFill")]
             RiIcon::RiHaze2WeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21938,7 +21924,7 @@ impl Data {
             }
             #[cfg(feature = "RiHaze2WeatherLine")]
             RiIcon::RiHaze2WeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21955,7 +21941,7 @@ impl Data {
             }
             #[cfg(feature = "RiHazeWeatherFill")]
             RiIcon::RiHazeWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21972,7 +21958,7 @@ impl Data {
             }
             #[cfg(feature = "RiHazeWeatherLine")]
             RiIcon::RiHazeWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21989,7 +21975,7 @@ impl Data {
             }
             #[cfg(feature = "RiHdMediaFill")]
             RiIcon::RiHdMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22006,7 +21992,7 @@ impl Data {
             }
             #[cfg(feature = "RiHdMediaLine")]
             RiIcon::RiHdMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22023,7 +22009,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeadingEditor")]
             RiIcon::RiHeadingEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22040,7 +22026,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeadphoneMediaFill")]
             RiIcon::RiHeadphoneMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22057,7 +22043,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeadphoneMediaLine")]
             RiIcon::RiHeadphoneMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22074,7 +22060,7 @@ impl Data {
             }
             #[cfg(feature = "RiHealthBookHealthFill")]
             RiIcon::RiHealthBookHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22091,7 +22077,7 @@ impl Data {
             }
             #[cfg(feature = "RiHealthBookHealthLine")]
             RiIcon::RiHealthBookHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22108,7 +22094,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeart2HealthFill")]
             RiIcon::RiHeart2HealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22125,7 +22111,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeart2HealthLine")]
             RiIcon::RiHeart2HealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22142,7 +22128,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeart3HealthFill")]
             RiIcon::RiHeart3HealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22159,7 +22145,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeart3HealthLine")]
             RiIcon::RiHeart3HealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22176,7 +22162,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartAddHealthFill")]
             RiIcon::RiHeartAddHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22193,7 +22179,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartAddHealthLine")]
             RiIcon::RiHeartAddHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22210,7 +22196,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartHealthFill")]
             RiIcon::RiHeartHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22227,7 +22213,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartHealthLine")]
             RiIcon::RiHeartHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22244,7 +22230,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartPulseHealthFill")]
             RiIcon::RiHeartPulseHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22261,7 +22247,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartPulseHealthLine")]
             RiIcon::RiHeartPulseHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22278,7 +22264,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartsHealthFill")]
             RiIcon::RiHeartsHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22295,7 +22281,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeartsHealthLine")]
             RiIcon::RiHeartsHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22312,7 +22298,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeavyShowersWeatherFill")]
             RiIcon::RiHeavyShowersWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22329,7 +22315,7 @@ impl Data {
             }
             #[cfg(feature = "RiHeavyShowersWeatherLine")]
             RiIcon::RiHeavyShowersWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22346,7 +22332,7 @@ impl Data {
             }
             #[cfg(feature = "RiHistorySystemFill")]
             RiIcon::RiHistorySystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22363,7 +22349,7 @@ impl Data {
             }
             #[cfg(feature = "RiHistorySystemLine")]
             RiIcon::RiHistorySystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22380,7 +22366,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome2BuildingsFill")]
             RiIcon::RiHome2BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22397,7 +22383,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome2BuildingsLine")]
             RiIcon::RiHome2BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22414,7 +22400,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome3BuildingsFill")]
             RiIcon::RiHome3BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22431,7 +22417,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome3BuildingsLine")]
             RiIcon::RiHome3BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22448,7 +22434,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome4BuildingsFill")]
             RiIcon::RiHome4BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22465,7 +22451,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome4BuildingsLine")]
             RiIcon::RiHome4BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22482,7 +22468,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome5BuildingsFill")]
             RiIcon::RiHome5BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22499,7 +22485,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome5BuildingsLine")]
             RiIcon::RiHome5BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22516,7 +22502,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome6BuildingsFill")]
             RiIcon::RiHome6BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22533,7 +22519,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome6BuildingsLine")]
             RiIcon::RiHome6BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22550,7 +22536,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome7BuildingsFill")]
             RiIcon::RiHome7BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22567,7 +22553,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome7BuildingsLine")]
             RiIcon::RiHome7BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22584,7 +22570,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome8BuildingsFill")]
             RiIcon::RiHome8BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22601,7 +22587,7 @@ impl Data {
             }
             #[cfg(feature = "RiHome8BuildingsLine")]
             RiIcon::RiHome8BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22618,7 +22604,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeBuildingsFill")]
             RiIcon::RiHomeBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22635,7 +22621,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeBuildingsLine")]
             RiIcon::RiHomeBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22652,7 +22638,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeGearBuildingsFill")]
             RiIcon::RiHomeGearBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22669,7 +22655,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeGearBuildingsLine")]
             RiIcon::RiHomeGearBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22686,7 +22672,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeHeartBuildingsFill")]
             RiIcon::RiHomeHeartBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22703,7 +22689,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeHeartBuildingsLine")]
             RiIcon::RiHomeHeartBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22720,7 +22706,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeSmile2BuildingsFill")]
             RiIcon::RiHomeSmile2BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22737,7 +22723,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeSmile2BuildingsLine")]
             RiIcon::RiHomeSmile2BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22754,7 +22740,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeSmileBuildingsFill")]
             RiIcon::RiHomeSmileBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22771,7 +22757,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeSmileBuildingsLine")]
             RiIcon::RiHomeSmileBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22788,7 +22774,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeWifiBuildingsFill")]
             RiIcon::RiHomeWifiBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22805,7 +22791,7 @@ impl Data {
             }
             #[cfg(feature = "RiHomeWifiBuildingsLine")]
             RiIcon::RiHomeWifiBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22822,7 +22808,7 @@ impl Data {
             }
             #[cfg(feature = "RiHonorOfKingsLogosFill")]
             RiIcon::RiHonorOfKingsLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22839,7 +22825,7 @@ impl Data {
             }
             #[cfg(feature = "RiHonorOfKingsLogosLine")]
             RiIcon::RiHonorOfKingsLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22856,7 +22842,7 @@ impl Data {
             }
             #[cfg(feature = "RiHonourBusinessFill")]
             RiIcon::RiHonourBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22873,7 +22859,7 @@ impl Data {
             }
             #[cfg(feature = "RiHonourBusinessLine")]
             RiIcon::RiHonourBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22890,7 +22876,7 @@ impl Data {
             }
             #[cfg(feature = "RiHospitalBuildingsFill")]
             RiIcon::RiHospitalBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22907,7 +22893,7 @@ impl Data {
             }
             #[cfg(feature = "RiHospitalBuildingsLine")]
             RiIcon::RiHospitalBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22924,7 +22910,7 @@ impl Data {
             }
             #[cfg(feature = "RiHotelBedMapFill")]
             RiIcon::RiHotelBedMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22941,7 +22927,7 @@ impl Data {
             }
             #[cfg(feature = "RiHotelBedMapLine")]
             RiIcon::RiHotelBedMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22958,7 +22944,7 @@ impl Data {
             }
             #[cfg(feature = "RiHotelBuildingsFill")]
             RiIcon::RiHotelBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22975,7 +22961,7 @@ impl Data {
             }
             #[cfg(feature = "RiHotelBuildingsLine")]
             RiIcon::RiHotelBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22992,7 +22978,7 @@ impl Data {
             }
             #[cfg(feature = "RiHotspotDeviceFill")]
             RiIcon::RiHotspotDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23009,7 +22995,7 @@ impl Data {
             }
             #[cfg(feature = "RiHotspotDeviceLine")]
             RiIcon::RiHotspotDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23026,7 +23012,7 @@ impl Data {
             }
             #[cfg(feature = "RiHqMediaFill")]
             RiIcon::RiHqMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23043,7 +23029,7 @@ impl Data {
             }
             #[cfg(feature = "RiHqMediaLine")]
             RiIcon::RiHqMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23060,7 +23046,7 @@ impl Data {
             }
             #[cfg(feature = "RiHtml5DevelopmentFill")]
             RiIcon::RiHtml5DevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23077,7 +23063,7 @@ impl Data {
             }
             #[cfg(feature = "RiHtml5DevelopmentLine")]
             RiIcon::RiHtml5DevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23094,7 +23080,7 @@ impl Data {
             }
             #[cfg(feature = "RiIeLogosFill")]
             RiIcon::RiIeLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23111,7 +23097,7 @@ impl Data {
             }
             #[cfg(feature = "RiIeLogosLine")]
             RiIcon::RiIeLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23128,7 +23114,7 @@ impl Data {
             }
             #[cfg(feature = "RiImage2MediaFill")]
             RiIcon::RiImage2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23145,7 +23131,7 @@ impl Data {
             }
             #[cfg(feature = "RiImage2MediaLine")]
             RiIcon::RiImage2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23162,7 +23148,7 @@ impl Data {
             }
             #[cfg(feature = "RiImageAddMediaFill")]
             RiIcon::RiImageAddMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23179,7 +23165,7 @@ impl Data {
             }
             #[cfg(feature = "RiImageAddMediaLine")]
             RiIcon::RiImageAddMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23196,7 +23182,7 @@ impl Data {
             }
             #[cfg(feature = "RiImageEditMediaFill")]
             RiIcon::RiImageEditMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23213,7 +23199,7 @@ impl Data {
             }
             #[cfg(feature = "RiImageEditMediaLine")]
             RiIcon::RiImageEditMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23230,7 +23216,7 @@ impl Data {
             }
             #[cfg(feature = "RiImageMediaFill")]
             RiIcon::RiImageMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23247,7 +23233,7 @@ impl Data {
             }
             #[cfg(feature = "RiImageMediaLine")]
             RiIcon::RiImageMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23264,7 +23250,7 @@ impl Data {
             }
             #[cfg(feature = "RiInboxArchiveBusinessFill")]
             RiIcon::RiInboxArchiveBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23281,7 +23267,7 @@ impl Data {
             }
             #[cfg(feature = "RiInboxArchiveBusinessLine")]
             RiIcon::RiInboxArchiveBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23298,7 +23284,7 @@ impl Data {
             }
             #[cfg(feature = "RiInboxBusinessFill")]
             RiIcon::RiInboxBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23315,7 +23301,7 @@ impl Data {
             }
             #[cfg(feature = "RiInboxBusinessLine")]
             RiIcon::RiInboxBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23332,7 +23318,7 @@ impl Data {
             }
             #[cfg(feature = "RiInboxUnarchiveBusinessFill")]
             RiIcon::RiInboxUnarchiveBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23349,7 +23335,7 @@ impl Data {
             }
             #[cfg(feature = "RiInboxUnarchiveBusinessLine")]
             RiIcon::RiInboxUnarchiveBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23366,7 +23352,7 @@ impl Data {
             }
             #[cfg(feature = "RiIncreaseDecreaseFinanceFill")]
             RiIcon::RiIncreaseDecreaseFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23383,7 +23369,7 @@ impl Data {
             }
             #[cfg(feature = "RiIncreaseDecreaseFinanceLine")]
             RiIcon::RiIncreaseDecreaseFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23400,7 +23386,7 @@ impl Data {
             }
             #[cfg(feature = "RiIndentDecreaseEditor")]
             RiIcon::RiIndentDecreaseEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23417,7 +23403,7 @@ impl Data {
             }
             #[cfg(feature = "RiIndentIncreaseEditor")]
             RiIcon::RiIndentIncreaseEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23434,7 +23420,7 @@ impl Data {
             }
             #[cfg(feature = "RiIndeterminateCircleSystemFill")]
             RiIcon::RiIndeterminateCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23451,7 +23437,7 @@ impl Data {
             }
             #[cfg(feature = "RiIndeterminateCircleSystemLine")]
             RiIcon::RiIndeterminateCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23468,7 +23454,7 @@ impl Data {
             }
             #[cfg(feature = "RiInformationSystemFill")]
             RiIcon::RiInformationSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23485,7 +23471,7 @@ impl Data {
             }
             #[cfg(feature = "RiInformationSystemLine")]
             RiIcon::RiInformationSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23502,7 +23488,7 @@ impl Data {
             }
             #[cfg(feature = "RiInfraredThermometerHealthFill")]
             RiIcon::RiInfraredThermometerHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23519,7 +23505,7 @@ impl Data {
             }
             #[cfg(feature = "RiInfraredThermometerHealthLine")]
             RiIcon::RiInfraredThermometerHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23536,7 +23522,7 @@ impl Data {
             }
             #[cfg(feature = "RiInkBottleDesignFill")]
             RiIcon::RiInkBottleDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23553,7 +23539,7 @@ impl Data {
             }
             #[cfg(feature = "RiInkBottleDesignLine")]
             RiIcon::RiInkBottleDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23570,7 +23556,7 @@ impl Data {
             }
             #[cfg(feature = "RiInputCursorMoveEditor")]
             RiIcon::RiInputCursorMoveEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23587,7 +23573,7 @@ impl Data {
             }
             #[cfg(feature = "RiInputMethodDesignFill")]
             RiIcon::RiInputMethodDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23604,7 +23590,7 @@ impl Data {
             }
             #[cfg(feature = "RiInputMethodDesignLine")]
             RiIcon::RiInputMethodDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23621,7 +23607,7 @@ impl Data {
             }
             #[cfg(feature = "RiInsertColumnLeftEditor")]
             RiIcon::RiInsertColumnLeftEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23638,7 +23624,7 @@ impl Data {
             }
             #[cfg(feature = "RiInsertColumnRightEditor")]
             RiIcon::RiInsertColumnRightEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23655,7 +23641,7 @@ impl Data {
             }
             #[cfg(feature = "RiInsertRowBottomEditor")]
             RiIcon::RiInsertRowBottomEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23672,7 +23658,7 @@ impl Data {
             }
             #[cfg(feature = "RiInsertRowTopEditor")]
             RiIcon::RiInsertRowTopEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23689,7 +23675,7 @@ impl Data {
             }
             #[cfg(feature = "RiInstagramLogosFill")]
             RiIcon::RiInstagramLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23706,7 +23692,7 @@ impl Data {
             }
             #[cfg(feature = "RiInstagramLogosLine")]
             RiIcon::RiInstagramLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23723,7 +23709,7 @@ impl Data {
             }
             #[cfg(feature = "RiInstallDeviceFill")]
             RiIcon::RiInstallDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23740,7 +23726,7 @@ impl Data {
             }
             #[cfg(feature = "RiInstallDeviceLine")]
             RiIcon::RiInstallDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23757,7 +23743,7 @@ impl Data {
             }
             #[cfg(feature = "RiInvisionLogosFill")]
             RiIcon::RiInvisionLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23774,7 +23760,7 @@ impl Data {
             }
             #[cfg(feature = "RiInvisionLogosLine")]
             RiIcon::RiInvisionLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23791,7 +23777,7 @@ impl Data {
             }
             #[cfg(feature = "RiItalicEditor")]
             RiIcon::RiItalicEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23808,7 +23794,7 @@ impl Data {
             }
             #[cfg(feature = "RiKakaoTalkLogosFill")]
             RiIcon::RiKakaoTalkLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23825,7 +23811,7 @@ impl Data {
             }
             #[cfg(feature = "RiKakaoTalkLogosLine")]
             RiIcon::RiKakaoTalkLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23842,7 +23828,7 @@ impl Data {
             }
             #[cfg(feature = "RiKey2OthersFill")]
             RiIcon::RiKey2OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23859,7 +23845,7 @@ impl Data {
             }
             #[cfg(feature = "RiKey2OthersLine")]
             RiIcon::RiKey2OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23876,7 +23862,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeyOthersFill")]
             RiIcon::RiKeyOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23893,7 +23879,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeyOthersLine")]
             RiIcon::RiKeyOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23910,7 +23896,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeyboardBoxDeviceFill")]
             RiIcon::RiKeyboardBoxDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23927,7 +23913,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeyboardBoxDeviceLine")]
             RiIcon::RiKeyboardBoxDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23944,7 +23930,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeyboardDeviceFill")]
             RiIcon::RiKeyboardDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23961,7 +23947,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeyboardDeviceLine")]
             RiIcon::RiKeyboardDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23978,7 +23964,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeynoteDocumentFill")]
             RiIcon::RiKeynoteDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23995,7 +23981,7 @@ impl Data {
             }
             #[cfg(feature = "RiKeynoteDocumentLine")]
             RiIcon::RiKeynoteDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24012,7 +23998,7 @@ impl Data {
             }
             #[cfg(feature = "RiKnifeBloodOthersFill")]
             RiIcon::RiKnifeBloodOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24029,7 +24015,7 @@ impl Data {
             }
             #[cfg(feature = "RiKnifeBloodOthersLine")]
             RiIcon::RiKnifeBloodOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24046,7 +24032,7 @@ impl Data {
             }
             #[cfg(feature = "RiKnifeOthersFill")]
             RiIcon::RiKnifeOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24063,7 +24049,7 @@ impl Data {
             }
             #[cfg(feature = "RiKnifeOthersLine")]
             RiIcon::RiKnifeOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24080,7 +24066,7 @@ impl Data {
             }
             #[cfg(feature = "RiLandscapeMediaFill")]
             RiIcon::RiLandscapeMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24097,7 +24083,7 @@ impl Data {
             }
             #[cfg(feature = "RiLandscapeMediaLine")]
             RiIcon::RiLandscapeMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24114,7 +24100,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout2DesignFill")]
             RiIcon::RiLayout2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24131,7 +24117,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout2DesignLine")]
             RiIcon::RiLayout2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24148,7 +24134,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout3DesignFill")]
             RiIcon::RiLayout3DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24165,7 +24151,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout3DesignLine")]
             RiIcon::RiLayout3DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24182,7 +24168,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout4DesignFill")]
             RiIcon::RiLayout4DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24199,7 +24185,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout4DesignLine")]
             RiIcon::RiLayout4DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24216,7 +24202,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout5DesignFill")]
             RiIcon::RiLayout5DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24233,7 +24219,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout5DesignLine")]
             RiIcon::RiLayout5DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24250,7 +24236,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout6DesignFill")]
             RiIcon::RiLayout6DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24267,7 +24253,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayout6DesignLine")]
             RiIcon::RiLayout6DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24284,7 +24270,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutBottom2DesignFill")]
             RiIcon::RiLayoutBottom2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24301,7 +24287,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutBottom2DesignLine")]
             RiIcon::RiLayoutBottom2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24318,7 +24304,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutBottomDesignFill")]
             RiIcon::RiLayoutBottomDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24335,7 +24321,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutBottomDesignLine")]
             RiIcon::RiLayoutBottomDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24352,7 +24338,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutColumnDesignFill")]
             RiIcon::RiLayoutColumnDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24369,7 +24355,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutColumnDesignLine")]
             RiIcon::RiLayoutColumnDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24386,7 +24372,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutDesignFill")]
             RiIcon::RiLayoutDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24403,7 +24389,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutDesignLine")]
             RiIcon::RiLayoutDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24420,7 +24406,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutGridDesignFill")]
             RiIcon::RiLayoutGridDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24437,7 +24423,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutGridDesignLine")]
             RiIcon::RiLayoutGridDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24454,7 +24440,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutLeft2DesignFill")]
             RiIcon::RiLayoutLeft2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24471,7 +24457,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutLeft2DesignLine")]
             RiIcon::RiLayoutLeft2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24488,7 +24474,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutLeftDesignFill")]
             RiIcon::RiLayoutLeftDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24505,7 +24491,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutLeftDesignLine")]
             RiIcon::RiLayoutLeftDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24522,7 +24508,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutMasonryDesignFill")]
             RiIcon::RiLayoutMasonryDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24539,7 +24525,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutMasonryDesignLine")]
             RiIcon::RiLayoutMasonryDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24556,7 +24542,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutRight2DesignFill")]
             RiIcon::RiLayoutRight2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24573,7 +24559,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutRight2DesignLine")]
             RiIcon::RiLayoutRight2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24590,7 +24576,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutRightDesignFill")]
             RiIcon::RiLayoutRightDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24607,7 +24593,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutRightDesignLine")]
             RiIcon::RiLayoutRightDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24624,7 +24610,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutRowDesignFill")]
             RiIcon::RiLayoutRowDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24641,7 +24627,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutRowDesignLine")]
             RiIcon::RiLayoutRowDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24658,7 +24644,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutTop2DesignFill")]
             RiIcon::RiLayoutTop2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24675,7 +24661,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutTop2DesignLine")]
             RiIcon::RiLayoutTop2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24692,7 +24678,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutTopDesignFill")]
             RiIcon::RiLayoutTopDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24709,7 +24695,7 @@ impl Data {
             }
             #[cfg(feature = "RiLayoutTopDesignLine")]
             RiIcon::RiLayoutTopDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24726,7 +24712,7 @@ impl Data {
             }
             #[cfg(feature = "RiLeafOthersFill")]
             RiIcon::RiLeafOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24743,7 +24729,7 @@ impl Data {
             }
             #[cfg(feature = "RiLeafOthersLine")]
             RiIcon::RiLeafOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24760,7 +24746,7 @@ impl Data {
             }
             #[cfg(feature = "RiLifebuoyMapFill")]
             RiIcon::RiLifebuoyMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24777,7 +24763,7 @@ impl Data {
             }
             #[cfg(feature = "RiLifebuoyMapLine")]
             RiIcon::RiLifebuoyMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24794,7 +24780,7 @@ impl Data {
             }
             #[cfg(feature = "RiLightbulbFlashOthersFill")]
             RiIcon::RiLightbulbFlashOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24811,7 +24797,7 @@ impl Data {
             }
             #[cfg(feature = "RiLightbulbFlashOthersLine")]
             RiIcon::RiLightbulbFlashOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24828,7 +24814,7 @@ impl Data {
             }
             #[cfg(feature = "RiLightbulbOthersFill")]
             RiIcon::RiLightbulbOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24845,7 +24831,7 @@ impl Data {
             }
             #[cfg(feature = "RiLightbulbOthersLine")]
             RiIcon::RiLightbulbOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24862,7 +24848,7 @@ impl Data {
             }
             #[cfg(feature = "RiLineChartBusinessFill")]
             RiIcon::RiLineChartBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24879,7 +24865,7 @@ impl Data {
             }
             #[cfg(feature = "RiLineChartBusinessLine")]
             RiIcon::RiLineChartBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24896,7 +24882,7 @@ impl Data {
             }
             #[cfg(feature = "RiLineHeightEditor")]
             RiIcon::RiLineHeightEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24913,7 +24899,7 @@ impl Data {
             }
             #[cfg(feature = "RiLineLogosFill")]
             RiIcon::RiLineLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24930,7 +24916,7 @@ impl Data {
             }
             #[cfg(feature = "RiLineLogosLine")]
             RiIcon::RiLineLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24947,7 +24933,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkEditor")]
             RiIcon::RiLinkEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24964,7 +24950,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkMEditor")]
             RiIcon::RiLinkMEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24981,7 +24967,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkUnlinkEditor")]
             RiIcon::RiLinkUnlinkEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24998,7 +24984,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkUnlinkMEditor")]
             RiIcon::RiLinkUnlinkMEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25015,7 +25001,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkedinBoxLogosFill")]
             RiIcon::RiLinkedinBoxLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25032,7 +25018,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkedinBoxLogosLine")]
             RiIcon::RiLinkedinBoxLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25049,7 +25035,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkedinLogosFill")]
             RiIcon::RiLinkedinLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25066,7 +25052,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinkedinLogosLine")]
             RiIcon::RiLinkedinLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25083,7 +25069,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinksBusinessFill")]
             RiIcon::RiLinksBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25100,7 +25086,7 @@ impl Data {
             }
             #[cfg(feature = "RiLinksBusinessLine")]
             RiIcon::RiLinksBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25117,7 +25103,7 @@ impl Data {
             }
             #[cfg(feature = "RiListCheck2Editor")]
             RiIcon::RiListCheck2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25134,7 +25120,7 @@ impl Data {
             }
             #[cfg(feature = "RiListCheckEditor")]
             RiIcon::RiListCheckEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25151,7 +25137,7 @@ impl Data {
             }
             #[cfg(feature = "RiListOrderedEditor")]
             RiIcon::RiListOrderedEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25168,7 +25154,7 @@ impl Data {
             }
             #[cfg(feature = "RiListSettingsSystemFill")]
             RiIcon::RiListSettingsSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25185,7 +25171,7 @@ impl Data {
             }
             #[cfg(feature = "RiListSettingsSystemLine")]
             RiIcon::RiListSettingsSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25202,7 +25188,7 @@ impl Data {
             }
             #[cfg(feature = "RiListUnorderedEditor")]
             RiIcon::RiListUnorderedEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25219,7 +25205,7 @@ impl Data {
             }
             #[cfg(feature = "RiLiveMediaFill")]
             RiIcon::RiLiveMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25236,7 +25222,7 @@ impl Data {
             }
             #[cfg(feature = "RiLiveMediaLine")]
             RiIcon::RiLiveMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25253,7 +25239,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader2SystemFill")]
             RiIcon::RiLoader2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25270,7 +25256,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader2SystemLine")]
             RiIcon::RiLoader2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25287,7 +25273,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader3SystemFill")]
             RiIcon::RiLoader3SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25304,7 +25290,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader3SystemLine")]
             RiIcon::RiLoader3SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25321,7 +25307,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader4SystemFill")]
             RiIcon::RiLoader4SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25338,7 +25324,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader4SystemLine")]
             RiIcon::RiLoader4SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25355,7 +25341,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader5SystemFill")]
             RiIcon::RiLoader5SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25372,7 +25358,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoader5SystemLine")]
             RiIcon::RiLoader5SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25389,7 +25375,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoaderSystemFill")]
             RiIcon::RiLoaderSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25406,7 +25392,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoaderSystemLine")]
             RiIcon::RiLoaderSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25423,7 +25409,7 @@ impl Data {
             }
             #[cfg(feature = "RiLock2SystemFill")]
             RiIcon::RiLock2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25440,7 +25426,7 @@ impl Data {
             }
             #[cfg(feature = "RiLock2SystemLine")]
             RiIcon::RiLock2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25457,7 +25443,7 @@ impl Data {
             }
             #[cfg(feature = "RiLockPasswordSystemFill")]
             RiIcon::RiLockPasswordSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25474,7 +25460,7 @@ impl Data {
             }
             #[cfg(feature = "RiLockPasswordSystemLine")]
             RiIcon::RiLockPasswordSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25491,7 +25477,7 @@ impl Data {
             }
             #[cfg(feature = "RiLockSystemFill")]
             RiIcon::RiLockSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25508,7 +25494,7 @@ impl Data {
             }
             #[cfg(feature = "RiLockSystemLine")]
             RiIcon::RiLockSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25525,7 +25511,7 @@ impl Data {
             }
             #[cfg(feature = "RiLockUnlockSystemFill")]
             RiIcon::RiLockUnlockSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25542,7 +25528,7 @@ impl Data {
             }
             #[cfg(feature = "RiLockUnlockSystemLine")]
             RiIcon::RiLockUnlockSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25559,7 +25545,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoginBoxSystemFill")]
             RiIcon::RiLoginBoxSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25576,7 +25562,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoginBoxSystemLine")]
             RiIcon::RiLoginBoxSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25593,7 +25579,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoginCircleSystemFill")]
             RiIcon::RiLoginCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25610,7 +25596,7 @@ impl Data {
             }
             #[cfg(feature = "RiLoginCircleSystemLine")]
             RiIcon::RiLoginCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25627,7 +25613,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutBoxRSystemFill")]
             RiIcon::RiLogoutBoxRSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25644,7 +25630,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutBoxRSystemLine")]
             RiIcon::RiLogoutBoxRSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25661,7 +25647,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutBoxSystemFill")]
             RiIcon::RiLogoutBoxSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25678,7 +25664,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutBoxSystemLine")]
             RiIcon::RiLogoutBoxSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25695,7 +25681,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutCircleRSystemFill")]
             RiIcon::RiLogoutCircleRSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25712,7 +25698,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutCircleRSystemLine")]
             RiIcon::RiLogoutCircleRSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25729,7 +25715,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutCircleSystemFill")]
             RiIcon::RiLogoutCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25746,7 +25732,7 @@ impl Data {
             }
             #[cfg(feature = "RiLogoutCircleSystemLine")]
             RiIcon::RiLogoutCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25763,7 +25749,7 @@ impl Data {
             }
             #[cfg(feature = "RiLuggageCartMapFill")]
             RiIcon::RiLuggageCartMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25780,7 +25766,7 @@ impl Data {
             }
             #[cfg(feature = "RiLuggageCartMapLine")]
             RiIcon::RiLuggageCartMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25797,7 +25783,7 @@ impl Data {
             }
             #[cfg(feature = "RiLuggageDepositMapFill")]
             RiIcon::RiLuggageDepositMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25814,7 +25800,7 @@ impl Data {
             }
             #[cfg(feature = "RiLuggageDepositMapLine")]
             RiIcon::RiLuggageDepositMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25831,7 +25817,7 @@ impl Data {
             }
             #[cfg(feature = "RiLungsHealthFill")]
             RiIcon::RiLungsHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25848,7 +25834,7 @@ impl Data {
             }
             #[cfg(feature = "RiLungsHealthLine")]
             RiIcon::RiLungsHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25865,7 +25851,7 @@ impl Data {
             }
             #[cfg(feature = "RiMacDeviceFill")]
             RiIcon::RiMacDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25882,7 +25868,7 @@ impl Data {
             }
             #[cfg(feature = "RiMacDeviceLine")]
             RiIcon::RiMacDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25899,7 +25885,7 @@ impl Data {
             }
             #[cfg(feature = "RiMacbookDeviceFill")]
             RiIcon::RiMacbookDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25916,7 +25902,7 @@ impl Data {
             }
             #[cfg(feature = "RiMacbookDeviceLine")]
             RiIcon::RiMacbookDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25933,7 +25919,7 @@ impl Data {
             }
             #[cfg(feature = "RiMagicDesignFill")]
             RiIcon::RiMagicDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25950,7 +25936,7 @@ impl Data {
             }
             #[cfg(feature = "RiMagicDesignLine")]
             RiIcon::RiMagicDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25967,7 +25953,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailAddBusinessFill")]
             RiIcon::RiMailAddBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25984,7 +25970,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailAddBusinessLine")]
             RiIcon::RiMailAddBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26001,7 +25987,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailBusinessFill")]
             RiIcon::RiMailBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26018,7 +26004,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailBusinessLine")]
             RiIcon::RiMailBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26035,7 +26021,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailCheckBusinessFill")]
             RiIcon::RiMailCheckBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26052,7 +26038,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailCheckBusinessLine")]
             RiIcon::RiMailCheckBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26069,7 +26055,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailCloseBusinessFill")]
             RiIcon::RiMailCloseBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26086,7 +26072,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailCloseBusinessLine")]
             RiIcon::RiMailCloseBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26103,7 +26089,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailDownloadBusinessFill")]
             RiIcon::RiMailDownloadBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26120,7 +26106,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailDownloadBusinessLine")]
             RiIcon::RiMailDownloadBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26137,7 +26123,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailForbidBusinessFill")]
             RiIcon::RiMailForbidBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26154,7 +26140,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailForbidBusinessLine")]
             RiIcon::RiMailForbidBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26171,7 +26157,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailLockBusinessFill")]
             RiIcon::RiMailLockBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26188,7 +26174,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailLockBusinessLine")]
             RiIcon::RiMailLockBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26205,7 +26191,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailOpenBusinessFill")]
             RiIcon::RiMailOpenBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26222,7 +26208,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailOpenBusinessLine")]
             RiIcon::RiMailOpenBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26239,7 +26225,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailSendBusinessFill")]
             RiIcon::RiMailSendBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26256,7 +26242,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailSendBusinessLine")]
             RiIcon::RiMailSendBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26273,7 +26259,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailSettingsBusinessFill")]
             RiIcon::RiMailSettingsBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26290,7 +26276,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailSettingsBusinessLine")]
             RiIcon::RiMailSettingsBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26307,7 +26293,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailStarBusinessFill")]
             RiIcon::RiMailStarBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26324,7 +26310,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailStarBusinessLine")]
             RiIcon::RiMailStarBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26341,7 +26327,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailUnreadBusinessFill")]
             RiIcon::RiMailUnreadBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26358,7 +26344,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailUnreadBusinessLine")]
             RiIcon::RiMailUnreadBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26375,7 +26361,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailVolumeBusinessFill")]
             RiIcon::RiMailVolumeBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26392,7 +26378,7 @@ impl Data {
             }
             #[cfg(feature = "RiMailVolumeBusinessLine")]
             RiIcon::RiMailVolumeBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26409,7 +26395,7 @@ impl Data {
             }
             #[cfg(feature = "RiMap2MapFill")]
             RiIcon::RiMap2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26426,7 +26412,7 @@ impl Data {
             }
             #[cfg(feature = "RiMap2MapLine")]
             RiIcon::RiMap2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26443,7 +26429,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapMapFill")]
             RiIcon::RiMapMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26460,7 +26446,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapMapLine")]
             RiIcon::RiMapMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26477,7 +26463,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin2MapFill")]
             RiIcon::RiMapPin2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26494,7 +26480,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin2MapLine")]
             RiIcon::RiMapPin2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26511,7 +26497,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin3MapFill")]
             RiIcon::RiMapPin3MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26528,7 +26514,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin3MapLine")]
             RiIcon::RiMapPin3MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26545,7 +26531,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin4MapFill")]
             RiIcon::RiMapPin4MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26562,7 +26548,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin4MapLine")]
             RiIcon::RiMapPin4MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26579,7 +26565,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin5MapFill")]
             RiIcon::RiMapPin5MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26596,7 +26582,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPin5MapLine")]
             RiIcon::RiMapPin5MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26613,7 +26599,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinAddMapFill")]
             RiIcon::RiMapPinAddMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26630,7 +26616,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinAddMapLine")]
             RiIcon::RiMapPinAddMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26647,7 +26633,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinMapFill")]
             RiIcon::RiMapPinMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26664,7 +26650,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinMapLine")]
             RiIcon::RiMapPinMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26681,7 +26667,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinRangeMapFill")]
             RiIcon::RiMapPinRangeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26698,7 +26684,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinRangeMapLine")]
             RiIcon::RiMapPinRangeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26715,7 +26701,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinTimeMapFill")]
             RiIcon::RiMapPinTimeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26732,7 +26718,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinTimeMapLine")]
             RiIcon::RiMapPinTimeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26749,7 +26735,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinUserMapFill")]
             RiIcon::RiMapPinUserMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26766,7 +26752,7 @@ impl Data {
             }
             #[cfg(feature = "RiMapPinUserMapLine")]
             RiIcon::RiMapPinUserMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26783,7 +26769,7 @@ impl Data {
             }
             #[cfg(feature = "RiMarkPenDesignFill")]
             RiIcon::RiMarkPenDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26800,7 +26786,7 @@ impl Data {
             }
             #[cfg(feature = "RiMarkPenDesignLine")]
             RiIcon::RiMarkPenDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26817,7 +26803,7 @@ impl Data {
             }
             #[cfg(feature = "RiMarkdownDocumentFill")]
             RiIcon::RiMarkdownDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26834,7 +26820,7 @@ impl Data {
             }
             #[cfg(feature = "RiMarkdownDocumentLine")]
             RiIcon::RiMarkdownDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26851,7 +26837,7 @@ impl Data {
             }
             #[cfg(feature = "RiMarkupDesignFill")]
             RiIcon::RiMarkupDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26868,7 +26854,7 @@ impl Data {
             }
             #[cfg(feature = "RiMarkupDesignLine")]
             RiIcon::RiMarkupDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26885,7 +26871,7 @@ impl Data {
             }
             #[cfg(feature = "RiMastercardLogosFill")]
             RiIcon::RiMastercardLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26902,7 +26888,7 @@ impl Data {
             }
             #[cfg(feature = "RiMastercardLogosLine")]
             RiIcon::RiMastercardLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26919,7 +26905,7 @@ impl Data {
             }
             #[cfg(feature = "RiMastodonLogosFill")]
             RiIcon::RiMastodonLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26936,7 +26922,7 @@ impl Data {
             }
             #[cfg(feature = "RiMastodonLogosLine")]
             RiIcon::RiMastodonLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26953,7 +26939,7 @@ impl Data {
             }
             #[cfg(feature = "RiMedal2BusinessFill")]
             RiIcon::RiMedal2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26970,7 +26956,7 @@ impl Data {
             }
             #[cfg(feature = "RiMedal2BusinessLine")]
             RiIcon::RiMedal2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26987,7 +26973,7 @@ impl Data {
             }
             #[cfg(feature = "RiMedalBusinessFill")]
             RiIcon::RiMedalBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27004,7 +26990,7 @@ impl Data {
             }
             #[cfg(feature = "RiMedalBusinessLine")]
             RiIcon::RiMedalBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27021,7 +27007,7 @@ impl Data {
             }
             #[cfg(feature = "RiMedicineBottleHealthFill")]
             RiIcon::RiMedicineBottleHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27038,7 +27024,7 @@ impl Data {
             }
             #[cfg(feature = "RiMedicineBottleHealthLine")]
             RiIcon::RiMedicineBottleHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27055,7 +27041,7 @@ impl Data {
             }
             #[cfg(feature = "RiMediumLogosFill")]
             RiIcon::RiMediumLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27072,7 +27058,7 @@ impl Data {
             }
             #[cfg(feature = "RiMediumLogosLine")]
             RiIcon::RiMediumLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27089,7 +27075,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenUserFill")]
             RiIcon::RiMenUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27106,7 +27092,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenUserLine")]
             RiIcon::RiMenUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27123,7 +27109,7 @@ impl Data {
             }
             #[cfg(feature = "RiMentalHealthHealthFill")]
             RiIcon::RiMentalHealthHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27140,7 +27126,7 @@ impl Data {
             }
             #[cfg(feature = "RiMentalHealthHealthLine")]
             RiIcon::RiMentalHealthHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27157,7 +27143,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu2SystemFill")]
             RiIcon::RiMenu2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27174,7 +27160,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu2SystemLine")]
             RiIcon::RiMenu2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27191,7 +27177,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu3SystemFill")]
             RiIcon::RiMenu3SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27208,7 +27194,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu3SystemLine")]
             RiIcon::RiMenu3SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27225,7 +27211,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu4SystemFill")]
             RiIcon::RiMenu4SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27242,7 +27228,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu4SystemLine")]
             RiIcon::RiMenu4SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27259,7 +27245,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu5SystemFill")]
             RiIcon::RiMenu5SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27276,7 +27262,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenu5SystemLine")]
             RiIcon::RiMenu5SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27293,7 +27279,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuAddSystemFill")]
             RiIcon::RiMenuAddSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27310,7 +27296,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuAddSystemLine")]
             RiIcon::RiMenuAddSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27327,7 +27313,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuFoldSystemFill")]
             RiIcon::RiMenuFoldSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27344,7 +27330,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuFoldSystemLine")]
             RiIcon::RiMenuFoldSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27361,7 +27347,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuSystemFill")]
             RiIcon::RiMenuSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27378,7 +27364,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuSystemLine")]
             RiIcon::RiMenuSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27395,7 +27381,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuUnfoldSystemFill")]
             RiIcon::RiMenuUnfoldSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27412,7 +27398,7 @@ impl Data {
             }
             #[cfg(feature = "RiMenuUnfoldSystemLine")]
             RiIcon::RiMenuUnfoldSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27429,7 +27415,7 @@ impl Data {
             }
             #[cfg(feature = "RiMergeCellsHorizontalEditor")]
             RiIcon::RiMergeCellsHorizontalEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27446,7 +27432,7 @@ impl Data {
             }
             #[cfg(feature = "RiMergeCellsVerticalEditor")]
             RiIcon::RiMergeCellsVerticalEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27463,7 +27449,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessage2CommunicationFill")]
             RiIcon::RiMessage2CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27480,7 +27466,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessage2CommunicationLine")]
             RiIcon::RiMessage2CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27497,7 +27483,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessage3CommunicationFill")]
             RiIcon::RiMessage3CommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27514,7 +27500,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessage3CommunicationLine")]
             RiIcon::RiMessage3CommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27531,7 +27517,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessageCommunicationFill")]
             RiIcon::RiMessageCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27548,7 +27534,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessageCommunicationLine")]
             RiIcon::RiMessageCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27565,7 +27551,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessengerLogosFill")]
             RiIcon::RiMessengerLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27582,7 +27568,7 @@ impl Data {
             }
             #[cfg(feature = "RiMessengerLogosLine")]
             RiIcon::RiMessengerLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27599,7 +27585,7 @@ impl Data {
             }
             #[cfg(feature = "RiMeteorWeatherFill")]
             RiIcon::RiMeteorWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27616,7 +27602,7 @@ impl Data {
             }
             #[cfg(feature = "RiMeteorWeatherLine")]
             RiIcon::RiMeteorWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27633,7 +27619,7 @@ impl Data {
             }
             #[cfg(feature = "RiMic2MediaFill")]
             RiIcon::RiMic2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27650,7 +27636,7 @@ impl Data {
             }
             #[cfg(feature = "RiMic2MediaLine")]
             RiIcon::RiMic2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27667,7 +27653,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicMediaFill")]
             RiIcon::RiMicMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27684,7 +27670,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicMediaLine")]
             RiIcon::RiMicMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27701,7 +27687,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicOffMediaFill")]
             RiIcon::RiMicOffMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27718,7 +27704,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicOffMediaLine")]
             RiIcon::RiMicOffMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27735,7 +27721,7 @@ impl Data {
             }
             #[cfg(feature = "RiMickeyUserFill")]
             RiIcon::RiMickeyUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27752,7 +27738,7 @@ impl Data {
             }
             #[cfg(feature = "RiMickeyUserLine")]
             RiIcon::RiMickeyUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27769,7 +27755,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicroscopeHealthFill")]
             RiIcon::RiMicroscopeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27786,7 +27772,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicroscopeHealthLine")]
             RiIcon::RiMicroscopeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27803,7 +27789,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicrosoftLogosFill")]
             RiIcon::RiMicrosoftLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27820,7 +27806,7 @@ impl Data {
             }
             #[cfg(feature = "RiMicrosoftLogosLine")]
             RiIcon::RiMicrosoftLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27837,7 +27823,7 @@ impl Data {
             }
             #[cfg(feature = "RiMindMapEditor")]
             RiIcon::RiMindMapEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27854,7 +27840,7 @@ impl Data {
             }
             #[cfg(feature = "RiMiniProgramLogosFill")]
             RiIcon::RiMiniProgramLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27871,7 +27857,7 @@ impl Data {
             }
             #[cfg(feature = "RiMiniProgramLogosLine")]
             RiIcon::RiMiniProgramLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27888,7 +27874,7 @@ impl Data {
             }
             #[cfg(feature = "RiMistWeatherFill")]
             RiIcon::RiMistWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27905,7 +27891,7 @@ impl Data {
             }
             #[cfg(feature = "RiMistWeatherLine")]
             RiIcon::RiMistWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27922,7 +27908,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyCnyBoxFinanceFill")]
             RiIcon::RiMoneyCnyBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27939,7 +27925,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyCnyBoxFinanceLine")]
             RiIcon::RiMoneyCnyBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27956,7 +27942,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyCnyCircleFinanceFill")]
             RiIcon::RiMoneyCnyCircleFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27973,7 +27959,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyCnyCircleFinanceLine")]
             RiIcon::RiMoneyCnyCircleFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27990,7 +27976,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyDollarBoxFinanceFill")]
             RiIcon::RiMoneyDollarBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28007,7 +27993,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyDollarBoxFinanceLine")]
             RiIcon::RiMoneyDollarBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28024,7 +28010,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyDollarCircleFinanceFill")]
             RiIcon::RiMoneyDollarCircleFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28041,7 +28027,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyDollarCircleFinanceLine")]
             RiIcon::RiMoneyDollarCircleFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28058,7 +28044,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyEuroBoxFinanceFill")]
             RiIcon::RiMoneyEuroBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28075,7 +28061,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyEuroBoxFinanceLine")]
             RiIcon::RiMoneyEuroBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28092,7 +28078,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyEuroCircleFinanceFill")]
             RiIcon::RiMoneyEuroCircleFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28109,7 +28095,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyEuroCircleFinanceLine")]
             RiIcon::RiMoneyEuroCircleFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28126,7 +28112,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyPoundBoxFinanceFill")]
             RiIcon::RiMoneyPoundBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28143,7 +28129,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyPoundBoxFinanceLine")]
             RiIcon::RiMoneyPoundBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28160,7 +28146,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyPoundCircleFinanceFill")]
             RiIcon::RiMoneyPoundCircleFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28177,7 +28163,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoneyPoundCircleFinanceLine")]
             RiIcon::RiMoneyPoundCircleFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28194,7 +28180,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonClearWeatherFill")]
             RiIcon::RiMoonClearWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28211,7 +28197,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonClearWeatherLine")]
             RiIcon::RiMoonClearWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28228,7 +28214,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonCloudyWeatherFill")]
             RiIcon::RiMoonCloudyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28245,7 +28231,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonCloudyWeatherLine")]
             RiIcon::RiMoonCloudyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28262,7 +28248,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonFoggyWeatherFill")]
             RiIcon::RiMoonFoggyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28279,7 +28265,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonFoggyWeatherLine")]
             RiIcon::RiMoonFoggyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28296,7 +28282,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonWeatherFill")]
             RiIcon::RiMoonWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28313,7 +28299,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoonWeatherLine")]
             RiIcon::RiMoonWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28330,7 +28316,7 @@ impl Data {
             }
             #[cfg(feature = "RiMore2SystemFill")]
             RiIcon::RiMore2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28347,7 +28333,7 @@ impl Data {
             }
             #[cfg(feature = "RiMore2SystemLine")]
             RiIcon::RiMore2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28364,7 +28350,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoreSystemFill")]
             RiIcon::RiMoreSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28381,7 +28367,7 @@ impl Data {
             }
             #[cfg(feature = "RiMoreSystemLine")]
             RiIcon::RiMoreSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28398,7 +28384,7 @@ impl Data {
             }
             #[cfg(feature = "RiMotorbikeMapFill")]
             RiIcon::RiMotorbikeMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28415,7 +28401,7 @@ impl Data {
             }
             #[cfg(feature = "RiMotorbikeMapLine")]
             RiIcon::RiMotorbikeMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28432,7 +28418,7 @@ impl Data {
             }
             #[cfg(feature = "RiMouseDeviceFill")]
             RiIcon::RiMouseDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28449,7 +28435,7 @@ impl Data {
             }
             #[cfg(feature = "RiMouseDeviceLine")]
             RiIcon::RiMouseDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28466,7 +28452,7 @@ impl Data {
             }
             #[cfg(feature = "RiMovie2MediaFill")]
             RiIcon::RiMovie2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28483,7 +28469,7 @@ impl Data {
             }
             #[cfg(feature = "RiMovie2MediaLine")]
             RiIcon::RiMovie2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28500,7 +28486,7 @@ impl Data {
             }
             #[cfg(feature = "RiMovieMediaFill")]
             RiIcon::RiMovieMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28517,7 +28503,7 @@ impl Data {
             }
             #[cfg(feature = "RiMovieMediaLine")]
             RiIcon::RiMovieMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28534,7 +28520,7 @@ impl Data {
             }
             #[cfg(feature = "RiMusic2MediaFill")]
             RiIcon::RiMusic2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28551,7 +28537,7 @@ impl Data {
             }
             #[cfg(feature = "RiMusic2MediaLine")]
             RiIcon::RiMusic2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28568,7 +28554,7 @@ impl Data {
             }
             #[cfg(feature = "RiMusicMediaFill")]
             RiIcon::RiMusicMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28585,7 +28571,7 @@ impl Data {
             }
             #[cfg(feature = "RiMusicMediaLine")]
             RiIcon::RiMusicMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28602,7 +28588,7 @@ impl Data {
             }
             #[cfg(feature = "RiMvMediaFill")]
             RiIcon::RiMvMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28619,7 +28605,7 @@ impl Data {
             }
             #[cfg(feature = "RiMvMediaLine")]
             RiIcon::RiMvMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28636,7 +28622,7 @@ impl Data {
             }
             #[cfg(feature = "RiNavigationMapFill")]
             RiIcon::RiNavigationMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28653,7 +28639,7 @@ impl Data {
             }
             #[cfg(feature = "RiNavigationMapLine")]
             RiIcon::RiNavigationMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28670,7 +28656,7 @@ impl Data {
             }
             #[cfg(feature = "RiNeteaseCloudMusicLogosFill")]
             RiIcon::RiNeteaseCloudMusicLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28687,7 +28673,7 @@ impl Data {
             }
             #[cfg(feature = "RiNeteaseCloudMusicLogosLine")]
             RiIcon::RiNeteaseCloudMusicLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28704,7 +28690,7 @@ impl Data {
             }
             #[cfg(feature = "RiNetflixLogosFill")]
             RiIcon::RiNetflixLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28721,7 +28707,7 @@ impl Data {
             }
             #[cfg(feature = "RiNetflixLogosLine")]
             RiIcon::RiNetflixLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28738,7 +28724,7 @@ impl Data {
             }
             #[cfg(feature = "RiNewspaperDocumentFill")]
             RiIcon::RiNewspaperDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28755,7 +28741,7 @@ impl Data {
             }
             #[cfg(feature = "RiNewspaperDocumentLine")]
             RiIcon::RiNewspaperDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28772,7 +28758,7 @@ impl Data {
             }
             #[cfg(feature = "RiNodeTreeEditor")]
             RiIcon::RiNodeTreeEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28789,7 +28775,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotification2MediaFill")]
             RiIcon::RiNotification2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28806,7 +28792,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotification2MediaLine")]
             RiIcon::RiNotification2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28823,7 +28809,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotification3MediaFill")]
             RiIcon::RiNotification3MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28840,7 +28826,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotification3MediaLine")]
             RiIcon::RiNotification3MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28857,7 +28843,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotification4MediaFill")]
             RiIcon::RiNotification4MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28874,7 +28860,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotification4MediaLine")]
             RiIcon::RiNotification4MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28891,7 +28877,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotificationBadgeSystemFill")]
             RiIcon::RiNotificationBadgeSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28908,7 +28894,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotificationBadgeSystemLine")]
             RiIcon::RiNotificationBadgeSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28925,7 +28911,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotificationMediaFill")]
             RiIcon::RiNotificationMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28942,7 +28928,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotificationMediaLine")]
             RiIcon::RiNotificationMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28959,7 +28945,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotificationOffMediaFill")]
             RiIcon::RiNotificationOffMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28976,7 +28962,7 @@ impl Data {
             }
             #[cfg(feature = "RiNotificationOffMediaLine")]
             RiIcon::RiNotificationOffMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28993,7 +28979,7 @@ impl Data {
             }
             #[cfg(feature = "RiNpmjsLogosFill")]
             RiIcon::RiNpmjsLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29010,7 +28996,7 @@ impl Data {
             }
             #[cfg(feature = "RiNpmjsLogosLine")]
             RiIcon::RiNpmjsLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29027,7 +29013,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber0Editor")]
             RiIcon::RiNumber0Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29044,7 +29030,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber1Editor")]
             RiIcon::RiNumber1Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29061,7 +29047,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber2Editor")]
             RiIcon::RiNumber2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29078,7 +29064,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber3Editor")]
             RiIcon::RiNumber3Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29095,7 +29081,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber4Editor")]
             RiIcon::RiNumber4Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29112,7 +29098,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber5Editor")]
             RiIcon::RiNumber5Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29129,7 +29115,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber6Editor")]
             RiIcon::RiNumber6Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29146,7 +29132,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber7Editor")]
             RiIcon::RiNumber7Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29163,7 +29149,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber8Editor")]
             RiIcon::RiNumber8Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29180,7 +29166,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumber9Editor")]
             RiIcon::RiNumber9Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29197,7 +29183,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumbersDocumentFill")]
             RiIcon::RiNumbersDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29214,7 +29200,7 @@ impl Data {
             }
             #[cfg(feature = "RiNumbersDocumentLine")]
             RiIcon::RiNumbersDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29231,7 +29217,7 @@ impl Data {
             }
             #[cfg(feature = "RiNurseHealthFill")]
             RiIcon::RiNurseHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29248,7 +29234,7 @@ impl Data {
             }
             #[cfg(feature = "RiNurseHealthLine")]
             RiIcon::RiNurseHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29265,7 +29251,7 @@ impl Data {
             }
             #[cfg(feature = "RiOilMapFill")]
             RiIcon::RiOilMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29282,7 +29268,7 @@ impl Data {
             }
             #[cfg(feature = "RiOilMapLine")]
             RiIcon::RiOilMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29299,7 +29285,7 @@ impl Data {
             }
             #[cfg(feature = "RiOmegaEditor")]
             RiIcon::RiOmegaEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29316,7 +29302,7 @@ impl Data {
             }
             #[cfg(feature = "RiOpenArmUserFill")]
             RiIcon::RiOpenArmUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29333,7 +29319,7 @@ impl Data {
             }
             #[cfg(feature = "RiOpenArmUserLine")]
             RiIcon::RiOpenArmUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29350,7 +29336,7 @@ impl Data {
             }
             #[cfg(feature = "RiOpenSourceLogosFill")]
             RiIcon::RiOpenSourceLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29367,7 +29353,7 @@ impl Data {
             }
             #[cfg(feature = "RiOpenSourceLogosLine")]
             RiIcon::RiOpenSourceLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29384,7 +29370,7 @@ impl Data {
             }
             #[cfg(feature = "RiOperaLogosFill")]
             RiIcon::RiOperaLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29401,7 +29387,7 @@ impl Data {
             }
             #[cfg(feature = "RiOperaLogosLine")]
             RiIcon::RiOperaLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29418,7 +29404,7 @@ impl Data {
             }
             #[cfg(feature = "RiOrderPlayMediaFill")]
             RiIcon::RiOrderPlayMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29435,7 +29421,7 @@ impl Data {
             }
             #[cfg(feature = "RiOrderPlayMediaLine")]
             RiIcon::RiOrderPlayMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29452,7 +29438,7 @@ impl Data {
             }
             #[cfg(feature = "RiOrganizationChartEditor")]
             RiIcon::RiOrganizationChartEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29469,7 +29455,7 @@ impl Data {
             }
             #[cfg(feature = "RiOutlet2OthersFill")]
             RiIcon::RiOutlet2OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29486,7 +29472,7 @@ impl Data {
             }
             #[cfg(feature = "RiOutlet2OthersLine")]
             RiIcon::RiOutlet2OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29503,7 +29489,7 @@ impl Data {
             }
             #[cfg(feature = "RiOutletOthersFill")]
             RiIcon::RiOutletOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29520,7 +29506,7 @@ impl Data {
             }
             #[cfg(feature = "RiOutletOthersLine")]
             RiIcon::RiOutletOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29537,7 +29523,7 @@ impl Data {
             }
             #[cfg(feature = "RiPageSeparatorEditor")]
             RiIcon::RiPageSeparatorEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29554,7 +29540,7 @@ impl Data {
             }
             #[cfg(feature = "RiPagesDocumentFill")]
             RiIcon::RiPagesDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29571,7 +29557,7 @@ impl Data {
             }
             #[cfg(feature = "RiPagesDocumentLine")]
             RiIcon::RiPagesDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29588,7 +29574,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaintBrushDesignFill")]
             RiIcon::RiPaintBrushDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29605,7 +29591,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaintBrushDesignLine")]
             RiIcon::RiPaintBrushDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29622,7 +29608,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaintDesignFill")]
             RiIcon::RiPaintDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29639,7 +29625,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaintDesignLine")]
             RiIcon::RiPaintDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29656,7 +29642,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaletteDesignFill")]
             RiIcon::RiPaletteDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29673,7 +29659,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaletteDesignLine")]
             RiIcon::RiPaletteDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29690,7 +29676,7 @@ impl Data {
             }
             #[cfg(feature = "RiPantoneDesignFill")]
             RiIcon::RiPantoneDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29707,7 +29693,7 @@ impl Data {
             }
             #[cfg(feature = "RiPantoneDesignLine")]
             RiIcon::RiPantoneDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29724,7 +29710,7 @@ impl Data {
             }
             #[cfg(feature = "RiParagraphEditor")]
             RiIcon::RiParagraphEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29741,7 +29727,7 @@ impl Data {
             }
             #[cfg(feature = "RiParentUserFill")]
             RiIcon::RiParentUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29758,7 +29744,7 @@ impl Data {
             }
             #[cfg(feature = "RiParentUserLine")]
             RiIcon::RiParentUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29775,7 +29761,7 @@ impl Data {
             }
             #[cfg(feature = "RiParenthesesDevelopmentFill")]
             RiIcon::RiParenthesesDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29792,7 +29778,7 @@ impl Data {
             }
             #[cfg(feature = "RiParenthesesDevelopmentLine")]
             RiIcon::RiParenthesesDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29809,7 +29795,7 @@ impl Data {
             }
             #[cfg(feature = "RiParkingBoxMapFill")]
             RiIcon::RiParkingBoxMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29826,7 +29812,7 @@ impl Data {
             }
             #[cfg(feature = "RiParkingBoxMapLine")]
             RiIcon::RiParkingBoxMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29843,7 +29829,7 @@ impl Data {
             }
             #[cfg(feature = "RiParkingMapFill")]
             RiIcon::RiParkingMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29860,7 +29846,7 @@ impl Data {
             }
             #[cfg(feature = "RiParkingMapLine")]
             RiIcon::RiParkingMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29877,7 +29863,7 @@ impl Data {
             }
             #[cfg(feature = "RiPassportMapFill")]
             RiIcon::RiPassportMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29894,7 +29880,7 @@ impl Data {
             }
             #[cfg(feature = "RiPassportMapLine")]
             RiIcon::RiPassportMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29911,7 +29897,7 @@ impl Data {
             }
             #[cfg(feature = "RiPatreonLogosFill")]
             RiIcon::RiPatreonLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29928,7 +29914,7 @@ impl Data {
             }
             #[cfg(feature = "RiPatreonLogosLine")]
             RiIcon::RiPatreonLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29945,7 +29931,7 @@ impl Data {
             }
             #[cfg(feature = "RiPauseCircleMediaFill")]
             RiIcon::RiPauseCircleMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29962,7 +29948,7 @@ impl Data {
             }
             #[cfg(feature = "RiPauseCircleMediaLine")]
             RiIcon::RiPauseCircleMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29979,7 +29965,7 @@ impl Data {
             }
             #[cfg(feature = "RiPauseMediaFill")]
             RiIcon::RiPauseMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29996,7 +29982,7 @@ impl Data {
             }
             #[cfg(feature = "RiPauseMediaLine")]
             RiIcon::RiPauseMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30013,7 +29999,7 @@ impl Data {
             }
             #[cfg(feature = "RiPauseMiniMediaFill")]
             RiIcon::RiPauseMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30030,7 +30016,7 @@ impl Data {
             }
             #[cfg(feature = "RiPauseMiniMediaLine")]
             RiIcon::RiPauseMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30047,7 +30033,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaypalLogosFill")]
             RiIcon::RiPaypalLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30064,7 +30050,7 @@ impl Data {
             }
             #[cfg(feature = "RiPaypalLogosLine")]
             RiIcon::RiPaypalLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30081,7 +30067,7 @@ impl Data {
             }
             #[cfg(feature = "RiPenNibDesignFill")]
             RiIcon::RiPenNibDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30098,7 +30084,7 @@ impl Data {
             }
             #[cfg(feature = "RiPenNibDesignLine")]
             RiIcon::RiPenNibDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30115,7 +30101,7 @@ impl Data {
             }
             #[cfg(feature = "RiPencilDesignFill")]
             RiIcon::RiPencilDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30132,7 +30118,7 @@ impl Data {
             }
             #[cfg(feature = "RiPencilDesignLine")]
             RiIcon::RiPencilDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30149,7 +30135,7 @@ impl Data {
             }
             #[cfg(feature = "RiPencilRuler2DesignFill")]
             RiIcon::RiPencilRuler2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30166,7 +30152,7 @@ impl Data {
             }
             #[cfg(feature = "RiPencilRuler2DesignLine")]
             RiIcon::RiPencilRuler2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30183,7 +30169,7 @@ impl Data {
             }
             #[cfg(feature = "RiPencilRulerDesignFill")]
             RiIcon::RiPencilRulerDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30200,7 +30186,7 @@ impl Data {
             }
             #[cfg(feature = "RiPencilRulerDesignLine")]
             RiIcon::RiPencilRulerDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30217,7 +30203,7 @@ impl Data {
             }
             #[cfg(feature = "RiPercentFinanceFill")]
             RiIcon::RiPercentFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30234,7 +30220,7 @@ impl Data {
             }
             #[cfg(feature = "RiPercentFinanceLine")]
             RiIcon::RiPercentFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30251,7 +30237,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneCameraMediaFill")]
             RiIcon::RiPhoneCameraMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30268,7 +30254,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneCameraMediaLine")]
             RiIcon::RiPhoneCameraMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30285,7 +30271,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneDeviceFill")]
             RiIcon::RiPhoneDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30302,7 +30288,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneDeviceLine")]
             RiIcon::RiPhoneDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30319,7 +30305,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneFindDeviceFill")]
             RiIcon::RiPhoneFindDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30336,7 +30322,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneFindDeviceLine")]
             RiIcon::RiPhoneFindDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30353,7 +30339,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneLockDeviceFill")]
             RiIcon::RiPhoneLockDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30370,7 +30356,7 @@ impl Data {
             }
             #[cfg(feature = "RiPhoneLockDeviceLine")]
             RiIcon::RiPhoneLockDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30387,7 +30373,7 @@ impl Data {
             }
             #[cfg(feature = "RiPictureInPicture2MediaFill")]
             RiIcon::RiPictureInPicture2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30404,7 +30390,7 @@ impl Data {
             }
             #[cfg(feature = "RiPictureInPicture2MediaLine")]
             RiIcon::RiPictureInPicture2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30421,7 +30407,7 @@ impl Data {
             }
             #[cfg(feature = "RiPictureInPictureExitMediaFill")]
             RiIcon::RiPictureInPictureExitMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30438,7 +30424,7 @@ impl Data {
             }
             #[cfg(feature = "RiPictureInPictureExitMediaLine")]
             RiIcon::RiPictureInPictureExitMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30455,7 +30441,7 @@ impl Data {
             }
             #[cfg(feature = "RiPictureInPictureMediaFill")]
             RiIcon::RiPictureInPictureMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30472,7 +30458,7 @@ impl Data {
             }
             #[cfg(feature = "RiPictureInPictureMediaLine")]
             RiIcon::RiPictureInPictureMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30489,7 +30475,7 @@ impl Data {
             }
             #[cfg(feature = "RiPieChart2BusinessFill")]
             RiIcon::RiPieChart2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30506,7 +30492,7 @@ impl Data {
             }
             #[cfg(feature = "RiPieChart2BusinessLine")]
             RiIcon::RiPieChart2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30523,7 +30509,7 @@ impl Data {
             }
             #[cfg(feature = "RiPieChartBoxBusinessFill")]
             RiIcon::RiPieChartBoxBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30540,7 +30526,7 @@ impl Data {
             }
             #[cfg(feature = "RiPieChartBoxBusinessLine")]
             RiIcon::RiPieChartBoxBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30557,7 +30543,7 @@ impl Data {
             }
             #[cfg(feature = "RiPieChartBusinessFill")]
             RiIcon::RiPieChartBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30574,7 +30560,7 @@ impl Data {
             }
             #[cfg(feature = "RiPieChartBusinessLine")]
             RiIcon::RiPieChartBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30591,7 +30577,7 @@ impl Data {
             }
             #[cfg(feature = "RiPinDistanceMapFill")]
             RiIcon::RiPinDistanceMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30608,7 +30594,7 @@ impl Data {
             }
             #[cfg(feature = "RiPinDistanceMapLine")]
             RiIcon::RiPinDistanceMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30625,7 +30611,7 @@ impl Data {
             }
             #[cfg(feature = "RiPingPongOthersFill")]
             RiIcon::RiPingPongOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30642,7 +30628,7 @@ impl Data {
             }
             #[cfg(feature = "RiPingPongOthersLine")]
             RiIcon::RiPingPongOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30659,7 +30645,7 @@ impl Data {
             }
             #[cfg(feature = "RiPinterestLogosFill")]
             RiIcon::RiPinterestLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30676,7 +30662,7 @@ impl Data {
             }
             #[cfg(feature = "RiPinterestLogosLine")]
             RiIcon::RiPinterestLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30693,7 +30679,7 @@ impl Data {
             }
             #[cfg(feature = "RiPinyinInputEditor")]
             RiIcon::RiPinyinInputEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30710,7 +30696,7 @@ impl Data {
             }
             #[cfg(feature = "RiPixelfedLogosFill")]
             RiIcon::RiPixelfedLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30727,7 +30713,7 @@ impl Data {
             }
             #[cfg(feature = "RiPixelfedLogosLine")]
             RiIcon::RiPixelfedLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30744,7 +30730,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlaneMapFill")]
             RiIcon::RiPlaneMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30761,7 +30747,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlaneMapLine")]
             RiIcon::RiPlaneMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30778,7 +30764,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlantOthersFill")]
             RiIcon::RiPlantOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30795,7 +30781,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlantOthersLine")]
             RiIcon::RiPlantOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30812,7 +30798,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayCircleMediaFill")]
             RiIcon::RiPlayCircleMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30829,7 +30815,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayCircleMediaLine")]
             RiIcon::RiPlayCircleMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30846,7 +30832,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayList2MediaFill")]
             RiIcon::RiPlayList2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30863,7 +30849,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayList2MediaLine")]
             RiIcon::RiPlayList2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30880,7 +30866,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayListAddMediaFill")]
             RiIcon::RiPlayListAddMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30897,7 +30883,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayListAddMediaLine")]
             RiIcon::RiPlayListAddMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30914,7 +30900,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayListMediaFill")]
             RiIcon::RiPlayListMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30931,7 +30917,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayListMediaLine")]
             RiIcon::RiPlayListMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30948,7 +30934,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayMediaFill")]
             RiIcon::RiPlayMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30965,7 +30951,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayMediaLine")]
             RiIcon::RiPlayMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30982,7 +30968,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayMiniMediaFill")]
             RiIcon::RiPlayMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30999,7 +30985,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlayMiniMediaLine")]
             RiIcon::RiPlayMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31016,7 +31002,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlaystationLogosFill")]
             RiIcon::RiPlaystationLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31033,7 +31019,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlaystationLogosLine")]
             RiIcon::RiPlaystationLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31050,7 +31036,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlug2OthersFill")]
             RiIcon::RiPlug2OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31067,7 +31053,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlug2OthersLine")]
             RiIcon::RiPlug2OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31084,7 +31070,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlugOthersFill")]
             RiIcon::RiPlugOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31101,7 +31087,7 @@ impl Data {
             }
             #[cfg(feature = "RiPlugOthersLine")]
             RiIcon::RiPlugOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31118,7 +31104,7 @@ impl Data {
             }
             #[cfg(feature = "RiPolaroid2MediaFill")]
             RiIcon::RiPolaroid2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31135,7 +31121,7 @@ impl Data {
             }
             #[cfg(feature = "RiPolaroid2MediaLine")]
             RiIcon::RiPolaroid2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31152,7 +31138,7 @@ impl Data {
             }
             #[cfg(feature = "RiPolaroidMediaFill")]
             RiIcon::RiPolaroidMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31169,7 +31155,7 @@ impl Data {
             }
             #[cfg(feature = "RiPolaroidMediaLine")]
             RiIcon::RiPolaroidMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31186,7 +31172,7 @@ impl Data {
             }
             #[cfg(feature = "RiPoliceCarMapFill")]
             RiIcon::RiPoliceCarMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31203,7 +31189,7 @@ impl Data {
             }
             #[cfg(feature = "RiPoliceCarMapLine")]
             RiIcon::RiPoliceCarMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31220,7 +31206,7 @@ impl Data {
             }
             #[cfg(feature = "RiPriceTag2FinanceFill")]
             RiIcon::RiPriceTag2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31237,7 +31223,7 @@ impl Data {
             }
             #[cfg(feature = "RiPriceTag2FinanceLine")]
             RiIcon::RiPriceTag2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31254,7 +31240,7 @@ impl Data {
             }
             #[cfg(feature = "RiPriceTag3FinanceFill")]
             RiIcon::RiPriceTag3FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31271,7 +31257,7 @@ impl Data {
             }
             #[cfg(feature = "RiPriceTag3FinanceLine")]
             RiIcon::RiPriceTag3FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31288,7 +31274,7 @@ impl Data {
             }
             #[cfg(feature = "RiPriceTagFinanceFill")]
             RiIcon::RiPriceTagFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31305,7 +31291,7 @@ impl Data {
             }
             #[cfg(feature = "RiPriceTagFinanceLine")]
             RiIcon::RiPriceTagFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31322,7 +31308,7 @@ impl Data {
             }
             #[cfg(feature = "RiPrinterBusinessFill")]
             RiIcon::RiPrinterBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31339,7 +31325,7 @@ impl Data {
             }
             #[cfg(feature = "RiPrinterBusinessLine")]
             RiIcon::RiPrinterBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31356,7 +31342,7 @@ impl Data {
             }
             #[cfg(feature = "RiPrinterCloudBusinessFill")]
             RiIcon::RiPrinterCloudBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31373,7 +31359,7 @@ impl Data {
             }
             #[cfg(feature = "RiPrinterCloudBusinessLine")]
             RiIcon::RiPrinterCloudBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31390,7 +31376,7 @@ impl Data {
             }
             #[cfg(feature = "RiProductHuntLogosFill")]
             RiIcon::RiProductHuntLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31407,7 +31393,7 @@ impl Data {
             }
             #[cfg(feature = "RiProductHuntLogosLine")]
             RiIcon::RiProductHuntLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31424,7 +31410,7 @@ impl Data {
             }
             #[cfg(feature = "RiProfileBusinessFill")]
             RiIcon::RiProfileBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31441,7 +31427,7 @@ impl Data {
             }
             #[cfg(feature = "RiProfileBusinessLine")]
             RiIcon::RiProfileBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31458,7 +31444,7 @@ impl Data {
             }
             #[cfg(feature = "RiProjector2BusinessFill")]
             RiIcon::RiProjector2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31475,7 +31461,7 @@ impl Data {
             }
             #[cfg(feature = "RiProjector2BusinessLine")]
             RiIcon::RiProjector2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31492,7 +31478,7 @@ impl Data {
             }
             #[cfg(feature = "RiProjectorBusinessFill")]
             RiIcon::RiProjectorBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31509,7 +31495,7 @@ impl Data {
             }
             #[cfg(feature = "RiProjectorBusinessLine")]
             RiIcon::RiProjectorBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31526,7 +31512,7 @@ impl Data {
             }
             #[cfg(feature = "RiPsychotherapyHealthFill")]
             RiIcon::RiPsychotherapyHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31543,7 +31529,7 @@ impl Data {
             }
             #[cfg(feature = "RiPsychotherapyHealthLine")]
             RiIcon::RiPsychotherapyHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31560,7 +31546,7 @@ impl Data {
             }
             #[cfg(feature = "RiPulseHealthFill")]
             RiIcon::RiPulseHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31577,7 +31563,7 @@ impl Data {
             }
             #[cfg(feature = "RiPulseHealthLine")]
             RiIcon::RiPulseHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31594,7 +31580,7 @@ impl Data {
             }
             #[cfg(feature = "RiPushpin2MapFill")]
             RiIcon::RiPushpin2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31611,7 +31597,7 @@ impl Data {
             }
             #[cfg(feature = "RiPushpin2MapLine")]
             RiIcon::RiPushpin2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31628,7 +31614,7 @@ impl Data {
             }
             #[cfg(feature = "RiPushpinMapFill")]
             RiIcon::RiPushpinMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31645,7 +31631,7 @@ impl Data {
             }
             #[cfg(feature = "RiPushpinMapLine")]
             RiIcon::RiPushpinMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31662,7 +31648,7 @@ impl Data {
             }
             #[cfg(feature = "RiQqLogosFill")]
             RiIcon::RiQqLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31679,7 +31665,7 @@ impl Data {
             }
             #[cfg(feature = "RiQqLogosLine")]
             RiIcon::RiQqLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31696,7 +31682,7 @@ impl Data {
             }
             #[cfg(feature = "RiQrCodeDeviceFill")]
             RiIcon::RiQrCodeDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31713,7 +31699,7 @@ impl Data {
             }
             #[cfg(feature = "RiQrCodeDeviceLine")]
             RiIcon::RiQrCodeDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31730,7 +31716,7 @@ impl Data {
             }
             #[cfg(feature = "RiQrScan2DeviceFill")]
             RiIcon::RiQrScan2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31747,7 +31733,7 @@ impl Data {
             }
             #[cfg(feature = "RiQrScan2DeviceLine")]
             RiIcon::RiQrScan2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31764,7 +31750,7 @@ impl Data {
             }
             #[cfg(feature = "RiQrScanDeviceFill")]
             RiIcon::RiQrScanDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31781,7 +31767,7 @@ impl Data {
             }
             #[cfg(feature = "RiQrScanDeviceLine")]
             RiIcon::RiQrScanDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31798,7 +31784,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionAnswerCommunicationFill")]
             RiIcon::RiQuestionAnswerCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31815,7 +31801,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionAnswerCommunicationLine")]
             RiIcon::RiQuestionAnswerCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31832,7 +31818,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionMarkEditor")]
             RiIcon::RiQuestionMarkEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31849,7 +31835,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionSystemFill")]
             RiIcon::RiQuestionSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31866,7 +31852,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionSystemLine")]
             RiIcon::RiQuestionSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31883,7 +31869,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionnaireCommunicationFill")]
             RiIcon::RiQuestionnaireCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31900,7 +31886,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuestionnaireCommunicationLine")]
             RiIcon::RiQuestionnaireCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31917,7 +31903,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuillPenDesignFill")]
             RiIcon::RiQuillPenDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31934,7 +31920,7 @@ impl Data {
             }
             #[cfg(feature = "RiQuillPenDesignLine")]
             RiIcon::RiQuillPenDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31951,7 +31937,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadarDeviceFill")]
             RiIcon::RiRadarDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31968,7 +31954,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadarDeviceLine")]
             RiIcon::RiRadarDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31985,7 +31971,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadio2MediaFill")]
             RiIcon::RiRadio2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32002,7 +31988,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadio2MediaLine")]
             RiIcon::RiRadio2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32019,7 +32005,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadioButtonSystemFill")]
             RiIcon::RiRadioButtonSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32036,7 +32022,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadioButtonSystemLine")]
             RiIcon::RiRadioButtonSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32053,7 +32039,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadioMediaFill")]
             RiIcon::RiRadioMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32070,7 +32056,7 @@ impl Data {
             }
             #[cfg(feature = "RiRadioMediaLine")]
             RiIcon::RiRadioMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32087,7 +32073,7 @@ impl Data {
             }
             #[cfg(feature = "RiRainbowWeatherFill")]
             RiIcon::RiRainbowWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32104,7 +32090,7 @@ impl Data {
             }
             #[cfg(feature = "RiRainbowWeatherLine")]
             RiIcon::RiRainbowWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32121,7 +32107,7 @@ impl Data {
             }
             #[cfg(feature = "RiRainyWeatherFill")]
             RiIcon::RiRainyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32138,7 +32124,7 @@ impl Data {
             }
             #[cfg(feature = "RiRainyWeatherLine")]
             RiIcon::RiRainyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32155,7 +32141,7 @@ impl Data {
             }
             #[cfg(feature = "RiReactjsLogosFill")]
             RiIcon::RiReactjsLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32172,7 +32158,7 @@ impl Data {
             }
             #[cfg(feature = "RiReactjsLogosLine")]
             RiIcon::RiReactjsLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32189,7 +32175,7 @@ impl Data {
             }
             #[cfg(feature = "RiRecordCircleMediaFill")]
             RiIcon::RiRecordCircleMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32206,7 +32192,7 @@ impl Data {
             }
             #[cfg(feature = "RiRecordCircleMediaLine")]
             RiIcon::RiRecordCircleMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32223,7 +32209,7 @@ impl Data {
             }
             #[cfg(feature = "RiRecordMailBusinessFill")]
             RiIcon::RiRecordMailBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32240,7 +32226,7 @@ impl Data {
             }
             #[cfg(feature = "RiRecordMailBusinessLine")]
             RiIcon::RiRecordMailBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32257,7 +32243,7 @@ impl Data {
             }
             #[cfg(feature = "RiRecycleOthersFill")]
             RiIcon::RiRecycleOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32274,7 +32260,7 @@ impl Data {
             }
             #[cfg(feature = "RiRecycleOthersLine")]
             RiIcon::RiRecycleOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32291,7 +32277,7 @@ impl Data {
             }
             #[cfg(feature = "RiRedPacketFinanceFill")]
             RiIcon::RiRedPacketFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32308,7 +32294,7 @@ impl Data {
             }
             #[cfg(feature = "RiRedPacketFinanceLine")]
             RiIcon::RiRedPacketFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32325,7 +32311,7 @@ impl Data {
             }
             #[cfg(feature = "RiRedditLogosFill")]
             RiIcon::RiRedditLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32342,7 +32328,7 @@ impl Data {
             }
             #[cfg(feature = "RiRedditLogosLine")]
             RiIcon::RiRedditLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32359,7 +32345,7 @@ impl Data {
             }
             #[cfg(feature = "RiRefreshSystemFill")]
             RiIcon::RiRefreshSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32376,7 +32362,7 @@ impl Data {
             }
             #[cfg(feature = "RiRefreshSystemLine")]
             RiIcon::RiRefreshSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32393,7 +32379,7 @@ impl Data {
             }
             #[cfg(feature = "RiRefund2FinanceFill")]
             RiIcon::RiRefund2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32410,7 +32396,7 @@ impl Data {
             }
             #[cfg(feature = "RiRefund2FinanceLine")]
             RiIcon::RiRefund2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32427,7 +32413,7 @@ impl Data {
             }
             #[cfg(feature = "RiRefundFinanceFill")]
             RiIcon::RiRefundFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32444,7 +32430,7 @@ impl Data {
             }
             #[cfg(feature = "RiRefundFinanceLine")]
             RiIcon::RiRefundFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32461,7 +32447,7 @@ impl Data {
             }
             #[cfg(feature = "RiRegisteredBusinessFill")]
             RiIcon::RiRegisteredBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32478,7 +32464,7 @@ impl Data {
             }
             #[cfg(feature = "RiRegisteredBusinessLine")]
             RiIcon::RiRegisteredBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32495,7 +32481,7 @@ impl Data {
             }
             #[cfg(feature = "RiRemixiconLogosFill")]
             RiIcon::RiRemixiconLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32512,7 +32498,7 @@ impl Data {
             }
             #[cfg(feature = "RiRemixiconLogosLine")]
             RiIcon::RiRemixiconLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32529,7 +32515,7 @@ impl Data {
             }
             #[cfg(feature = "RiRemoteControl2DeviceFill")]
             RiIcon::RiRemoteControl2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32546,7 +32532,7 @@ impl Data {
             }
             #[cfg(feature = "RiRemoteControl2DeviceLine")]
             RiIcon::RiRemoteControl2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32563,7 +32549,7 @@ impl Data {
             }
             #[cfg(feature = "RiRemoteControlDeviceFill")]
             RiIcon::RiRemoteControlDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32580,7 +32566,7 @@ impl Data {
             }
             #[cfg(feature = "RiRemoteControlDeviceLine")]
             RiIcon::RiRemoteControlDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32597,7 +32583,7 @@ impl Data {
             }
             #[cfg(feature = "RiRepeat2MediaFill")]
             RiIcon::RiRepeat2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32614,7 +32600,7 @@ impl Data {
             }
             #[cfg(feature = "RiRepeat2MediaLine")]
             RiIcon::RiRepeat2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32631,7 +32617,7 @@ impl Data {
             }
             #[cfg(feature = "RiRepeatMediaFill")]
             RiIcon::RiRepeatMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32648,7 +32634,7 @@ impl Data {
             }
             #[cfg(feature = "RiRepeatMediaLine")]
             RiIcon::RiRepeatMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32665,7 +32651,7 @@ impl Data {
             }
             #[cfg(feature = "RiRepeatOneMediaFill")]
             RiIcon::RiRepeatOneMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32682,7 +32668,7 @@ impl Data {
             }
             #[cfg(feature = "RiRepeatOneMediaLine")]
             RiIcon::RiRepeatOneMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32699,7 +32685,7 @@ impl Data {
             }
             #[cfg(feature = "RiReplyAllBusinessFill")]
             RiIcon::RiReplyAllBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32716,7 +32702,7 @@ impl Data {
             }
             #[cfg(feature = "RiReplyAllBusinessLine")]
             RiIcon::RiReplyAllBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32733,7 +32719,7 @@ impl Data {
             }
             #[cfg(feature = "RiReplyBusinessFill")]
             RiIcon::RiReplyBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32750,7 +32736,7 @@ impl Data {
             }
             #[cfg(feature = "RiReplyBusinessLine")]
             RiIcon::RiReplyBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32767,7 +32753,7 @@ impl Data {
             }
             #[cfg(feature = "RiReservedOthersFill")]
             RiIcon::RiReservedOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32784,7 +32770,7 @@ impl Data {
             }
             #[cfg(feature = "RiReservedOthersLine")]
             RiIcon::RiReservedOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32801,7 +32787,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestTimeHealthFill")]
             RiIcon::RiRestTimeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32818,7 +32804,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestTimeHealthLine")]
             RiIcon::RiRestTimeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32835,7 +32821,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestartDeviceFill")]
             RiIcon::RiRestartDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32852,7 +32838,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestartDeviceLine")]
             RiIcon::RiRestartDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32869,7 +32855,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestaurant2MapFill")]
             RiIcon::RiRestaurant2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32886,7 +32872,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestaurant2MapLine")]
             RiIcon::RiRestaurant2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32903,7 +32889,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestaurantMapFill")]
             RiIcon::RiRestaurantMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32920,7 +32906,7 @@ impl Data {
             }
             #[cfg(feature = "RiRestaurantMapLine")]
             RiIcon::RiRestaurantMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32937,7 +32923,7 @@ impl Data {
             }
             #[cfg(feature = "RiRewindMediaFill")]
             RiIcon::RiRewindMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32954,7 +32940,7 @@ impl Data {
             }
             #[cfg(feature = "RiRewindMediaLine")]
             RiIcon::RiRewindMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32971,7 +32957,7 @@ impl Data {
             }
             #[cfg(feature = "RiRewindMiniMediaFill")]
             RiIcon::RiRewindMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32988,7 +32974,7 @@ impl Data {
             }
             #[cfg(feature = "RiRewindMiniMediaLine")]
             RiIcon::RiRewindMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33005,7 +32991,7 @@ impl Data {
             }
             #[cfg(feature = "RiRhythmMediaFill")]
             RiIcon::RiRhythmMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33022,7 +33008,7 @@ impl Data {
             }
             #[cfg(feature = "RiRhythmMediaLine")]
             RiIcon::RiRhythmMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33039,7 +33025,7 @@ impl Data {
             }
             #[cfg(feature = "RiRidingMapFill")]
             RiIcon::RiRidingMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33056,7 +33042,7 @@ impl Data {
             }
             #[cfg(feature = "RiRidingMapLine")]
             RiIcon::RiRidingMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33073,7 +33059,7 @@ impl Data {
             }
             #[cfg(feature = "RiRoadMapMapFill")]
             RiIcon::RiRoadMapMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33090,7 +33076,7 @@ impl Data {
             }
             #[cfg(feature = "RiRoadMapMapLine")]
             RiIcon::RiRoadMapMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33107,7 +33093,7 @@ impl Data {
             }
             #[cfg(feature = "RiRoadsterMapFill")]
             RiIcon::RiRoadsterMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33124,7 +33110,7 @@ impl Data {
             }
             #[cfg(feature = "RiRoadsterMapLine")]
             RiIcon::RiRoadsterMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33141,7 +33127,7 @@ impl Data {
             }
             #[cfg(feature = "RiRobotUserFill")]
             RiIcon::RiRobotUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33158,7 +33144,7 @@ impl Data {
             }
             #[cfg(feature = "RiRobotUserLine")]
             RiIcon::RiRobotUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33175,7 +33161,7 @@ impl Data {
             }
             #[cfg(feature = "RiRocket2MapFill")]
             RiIcon::RiRocket2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33192,7 +33178,7 @@ impl Data {
             }
             #[cfg(feature = "RiRocket2MapLine")]
             RiIcon::RiRocket2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33209,7 +33195,7 @@ impl Data {
             }
             #[cfg(feature = "RiRocketMapFill")]
             RiIcon::RiRocketMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33226,7 +33212,7 @@ impl Data {
             }
             #[cfg(feature = "RiRocketMapLine")]
             RiIcon::RiRocketMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33243,7 +33229,7 @@ impl Data {
             }
             #[cfg(feature = "RiRotateLockDeviceFill")]
             RiIcon::RiRotateLockDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33260,7 +33246,7 @@ impl Data {
             }
             #[cfg(feature = "RiRotateLockDeviceLine")]
             RiIcon::RiRotateLockDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33277,7 +33263,7 @@ impl Data {
             }
             #[cfg(feature = "RiRoundedCornerEditor")]
             RiIcon::RiRoundedCornerEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33294,7 +33280,7 @@ impl Data {
             }
             #[cfg(feature = "RiRouteMapFill")]
             RiIcon::RiRouteMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33311,7 +33297,7 @@ impl Data {
             }
             #[cfg(feature = "RiRouteMapLine")]
             RiIcon::RiRouteMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33328,7 +33314,7 @@ impl Data {
             }
             #[cfg(feature = "RiRouterDeviceFill")]
             RiIcon::RiRouterDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33345,7 +33331,7 @@ impl Data {
             }
             #[cfg(feature = "RiRouterDeviceLine")]
             RiIcon::RiRouterDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33362,7 +33348,7 @@ impl Data {
             }
             #[cfg(feature = "RiRssDeviceFill")]
             RiIcon::RiRssDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33379,7 +33365,7 @@ impl Data {
             }
             #[cfg(feature = "RiRssDeviceLine")]
             RiIcon::RiRssDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33396,7 +33382,7 @@ impl Data {
             }
             #[cfg(feature = "RiRuler2DesignFill")]
             RiIcon::RiRuler2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33413,7 +33399,7 @@ impl Data {
             }
             #[cfg(feature = "RiRuler2DesignLine")]
             RiIcon::RiRuler2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33430,7 +33416,7 @@ impl Data {
             }
             #[cfg(feature = "RiRulerDesignFill")]
             RiIcon::RiRulerDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33447,7 +33433,7 @@ impl Data {
             }
             #[cfg(feature = "RiRulerDesignLine")]
             RiIcon::RiRulerDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33464,7 +33450,7 @@ impl Data {
             }
             #[cfg(feature = "RiRunMapFill")]
             RiIcon::RiRunMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33481,7 +33467,7 @@ impl Data {
             }
             #[cfg(feature = "RiRunMapLine")]
             RiIcon::RiRunMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33498,7 +33484,7 @@ impl Data {
             }
             #[cfg(feature = "RiSafariLogosFill")]
             RiIcon::RiSafariLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33515,7 +33501,7 @@ impl Data {
             }
             #[cfg(feature = "RiSafariLogosLine")]
             RiIcon::RiSafariLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33532,7 +33518,7 @@ impl Data {
             }
             #[cfg(feature = "RiSafe2FinanceFill")]
             RiIcon::RiSafe2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33549,7 +33535,7 @@ impl Data {
             }
             #[cfg(feature = "RiSafe2FinanceLine")]
             RiIcon::RiSafe2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33566,7 +33552,7 @@ impl Data {
             }
             #[cfg(feature = "RiSafeFinanceFill")]
             RiIcon::RiSafeFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33583,7 +33569,7 @@ impl Data {
             }
             #[cfg(feature = "RiSafeFinanceLine")]
             RiIcon::RiSafeFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33600,7 +33586,7 @@ impl Data {
             }
             #[cfg(feature = "RiSailboatMapFill")]
             RiIcon::RiSailboatMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33617,7 +33603,7 @@ impl Data {
             }
             #[cfg(feature = "RiSailboatMapLine")]
             RiIcon::RiSailboatMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33634,7 +33620,7 @@ impl Data {
             }
             #[cfg(feature = "RiSave2DeviceFill")]
             RiIcon::RiSave2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33651,7 +33637,7 @@ impl Data {
             }
             #[cfg(feature = "RiSave2DeviceLine")]
             RiIcon::RiSave2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33668,7 +33654,7 @@ impl Data {
             }
             #[cfg(feature = "RiSave3DeviceFill")]
             RiIcon::RiSave3DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33685,7 +33671,7 @@ impl Data {
             }
             #[cfg(feature = "RiSave3DeviceLine")]
             RiIcon::RiSave3DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33702,7 +33688,7 @@ impl Data {
             }
             #[cfg(feature = "RiSaveDeviceFill")]
             RiIcon::RiSaveDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33719,7 +33705,7 @@ impl Data {
             }
             #[cfg(feature = "RiSaveDeviceLine")]
             RiIcon::RiSaveDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33736,7 +33722,7 @@ impl Data {
             }
             #[cfg(feature = "RiScales2OthersFill")]
             RiIcon::RiScales2OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33753,7 +33739,7 @@ impl Data {
             }
             #[cfg(feature = "RiScales2OthersLine")]
             RiIcon::RiScales2OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33770,7 +33756,7 @@ impl Data {
             }
             #[cfg(feature = "RiScales3OthersFill")]
             RiIcon::RiScales3OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33787,7 +33773,7 @@ impl Data {
             }
             #[cfg(feature = "RiScales3OthersLine")]
             RiIcon::RiScales3OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33804,7 +33790,7 @@ impl Data {
             }
             #[cfg(feature = "RiScalesOthersFill")]
             RiIcon::RiScalesOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33821,7 +33807,7 @@ impl Data {
             }
             #[cfg(feature = "RiScalesOthersLine")]
             RiIcon::RiScalesOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33838,7 +33824,7 @@ impl Data {
             }
             #[cfg(feature = "RiScan2DeviceFill")]
             RiIcon::RiScan2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33855,7 +33841,7 @@ impl Data {
             }
             #[cfg(feature = "RiScan2DeviceLine")]
             RiIcon::RiScan2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33872,7 +33858,7 @@ impl Data {
             }
             #[cfg(feature = "RiScanDeviceFill")]
             RiIcon::RiScanDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33889,7 +33875,7 @@ impl Data {
             }
             #[cfg(feature = "RiScanDeviceLine")]
             RiIcon::RiScanDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33906,7 +33892,7 @@ impl Data {
             }
             #[cfg(feature = "RiScissors2DesignFill")]
             RiIcon::RiScissors2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33923,7 +33909,7 @@ impl Data {
             }
             #[cfg(feature = "RiScissors2DesignLine")]
             RiIcon::RiScissors2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33940,7 +33926,7 @@ impl Data {
             }
             #[cfg(feature = "RiScissorsCutDesignFill")]
             RiIcon::RiScissorsCutDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33957,7 +33943,7 @@ impl Data {
             }
             #[cfg(feature = "RiScissorsCutDesignLine")]
             RiIcon::RiScissorsCutDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33974,7 +33960,7 @@ impl Data {
             }
             #[cfg(feature = "RiScissorsDesignFill")]
             RiIcon::RiScissorsDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33991,7 +33977,7 @@ impl Data {
             }
             #[cfg(feature = "RiScissorsDesignLine")]
             RiIcon::RiScissorsDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34008,7 +33994,7 @@ impl Data {
             }
             #[cfg(feature = "RiScreenshot2DesignFill")]
             RiIcon::RiScreenshot2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34025,7 +34011,7 @@ impl Data {
             }
             #[cfg(feature = "RiScreenshot2DesignLine")]
             RiIcon::RiScreenshot2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34042,7 +34028,7 @@ impl Data {
             }
             #[cfg(feature = "RiScreenshotDesignFill")]
             RiIcon::RiScreenshotDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34059,7 +34045,7 @@ impl Data {
             }
             #[cfg(feature = "RiScreenshotDesignLine")]
             RiIcon::RiScreenshotDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34076,7 +34062,7 @@ impl Data {
             }
             #[cfg(feature = "RiSdCardDeviceFill")]
             RiIcon::RiSdCardDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34093,7 +34079,7 @@ impl Data {
             }
             #[cfg(feature = "RiSdCardDeviceLine")]
             RiIcon::RiSdCardDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34110,7 +34096,7 @@ impl Data {
             }
             #[cfg(feature = "RiSdCardMiniDeviceFill")]
             RiIcon::RiSdCardMiniDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34127,7 +34113,7 @@ impl Data {
             }
             #[cfg(feature = "RiSdCardMiniDeviceLine")]
             RiIcon::RiSdCardMiniDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34144,7 +34130,7 @@ impl Data {
             }
             #[cfg(feature = "RiSearch2SystemFill")]
             RiIcon::RiSearch2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34161,7 +34147,7 @@ impl Data {
             }
             #[cfg(feature = "RiSearch2SystemLine")]
             RiIcon::RiSearch2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34178,7 +34164,7 @@ impl Data {
             }
             #[cfg(feature = "RiSearchEyeSystemFill")]
             RiIcon::RiSearchEyeSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34195,7 +34181,7 @@ impl Data {
             }
             #[cfg(feature = "RiSearchEyeSystemLine")]
             RiIcon::RiSearchEyeSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34212,7 +34198,7 @@ impl Data {
             }
             #[cfg(feature = "RiSearchSystemFill")]
             RiIcon::RiSearchSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34229,7 +34215,7 @@ impl Data {
             }
             #[cfg(feature = "RiSearchSystemLine")]
             RiIcon::RiSearchSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34246,7 +34232,7 @@ impl Data {
             }
             #[cfg(feature = "RiSecurePaymentFinanceFill")]
             RiIcon::RiSecurePaymentFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34263,7 +34249,7 @@ impl Data {
             }
             #[cfg(feature = "RiSecurePaymentFinanceLine")]
             RiIcon::RiSecurePaymentFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34280,7 +34266,7 @@ impl Data {
             }
             #[cfg(feature = "RiSeedlingOthersFill")]
             RiIcon::RiSeedlingOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34297,7 +34283,7 @@ impl Data {
             }
             #[cfg(feature = "RiSeedlingOthersLine")]
             RiIcon::RiSeedlingOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34314,7 +34300,7 @@ impl Data {
             }
             #[cfg(feature = "RiSendBackwardEditor")]
             RiIcon::RiSendBackwardEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34331,7 +34317,7 @@ impl Data {
             }
             #[cfg(feature = "RiSendPlane2BusinessFill")]
             RiIcon::RiSendPlane2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34348,7 +34334,7 @@ impl Data {
             }
             #[cfg(feature = "RiSendPlane2BusinessLine")]
             RiIcon::RiSendPlane2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34365,7 +34351,7 @@ impl Data {
             }
             #[cfg(feature = "RiSendPlaneBusinessFill")]
             RiIcon::RiSendPlaneBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34382,7 +34368,7 @@ impl Data {
             }
             #[cfg(feature = "RiSendPlaneBusinessLine")]
             RiIcon::RiSendPlaneBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34399,7 +34385,7 @@ impl Data {
             }
             #[cfg(feature = "RiSendToBackEditor")]
             RiIcon::RiSendToBackEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34416,7 +34402,7 @@ impl Data {
             }
             #[cfg(feature = "RiSensorDeviceFill")]
             RiIcon::RiSensorDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34433,7 +34419,7 @@ impl Data {
             }
             #[cfg(feature = "RiSensorDeviceLine")]
             RiIcon::RiSensorDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34450,7 +34436,7 @@ impl Data {
             }
             #[cfg(feature = "RiSeparatorEditor")]
             RiIcon::RiSeparatorEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34467,7 +34453,7 @@ impl Data {
             }
             #[cfg(feature = "RiServerDeviceFill")]
             RiIcon::RiServerDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34484,7 +34470,7 @@ impl Data {
             }
             #[cfg(feature = "RiServerDeviceLine")]
             RiIcon::RiServerDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34501,7 +34487,7 @@ impl Data {
             }
             #[cfg(feature = "RiServiceBusinessFill")]
             RiIcon::RiServiceBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34518,7 +34504,7 @@ impl Data {
             }
             #[cfg(feature = "RiServiceBusinessLine")]
             RiIcon::RiServiceBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34535,7 +34521,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings2SystemFill")]
             RiIcon::RiSettings2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34552,7 +34538,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings2SystemLine")]
             RiIcon::RiSettings2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34569,7 +34555,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings3SystemFill")]
             RiIcon::RiSettings3SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34586,7 +34572,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings3SystemLine")]
             RiIcon::RiSettings3SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34603,7 +34589,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings4SystemFill")]
             RiIcon::RiSettings4SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34620,7 +34606,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings4SystemLine")]
             RiIcon::RiSettings4SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34637,7 +34623,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings5SystemFill")]
             RiIcon::RiSettings5SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34654,7 +34640,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings5SystemLine")]
             RiIcon::RiSettings5SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34671,7 +34657,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings6SystemFill")]
             RiIcon::RiSettings6SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34688,7 +34674,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettings6SystemLine")]
             RiIcon::RiSettings6SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34705,7 +34691,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettingsSystemFill")]
             RiIcon::RiSettingsSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34722,7 +34708,7 @@ impl Data {
             }
             #[cfg(feature = "RiSettingsSystemLine")]
             RiIcon::RiSettingsSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34739,7 +34725,7 @@ impl Data {
             }
             #[cfg(feature = "RiShape2DesignFill")]
             RiIcon::RiShape2DesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34756,7 +34742,7 @@ impl Data {
             }
             #[cfg(feature = "RiShape2DesignLine")]
             RiIcon::RiShape2DesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34773,7 +34759,7 @@ impl Data {
             }
             #[cfg(feature = "RiShapeDesignFill")]
             RiIcon::RiShapeDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34790,7 +34776,7 @@ impl Data {
             }
             #[cfg(feature = "RiShapeDesignLine")]
             RiIcon::RiShapeDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34807,7 +34793,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareBoxSystemFill")]
             RiIcon::RiShareBoxSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34824,7 +34810,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareBoxSystemLine")]
             RiIcon::RiShareBoxSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34841,7 +34827,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareCircleSystemFill")]
             RiIcon::RiShareCircleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34858,7 +34844,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareCircleSystemLine")]
             RiIcon::RiShareCircleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34875,7 +34861,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareForward2SystemFill")]
             RiIcon::RiShareForward2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34892,7 +34878,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareForward2SystemLine")]
             RiIcon::RiShareForward2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34909,7 +34895,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareForwardBoxSystemFill")]
             RiIcon::RiShareForwardBoxSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34926,7 +34912,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareForwardBoxSystemLine")]
             RiIcon::RiShareForwardBoxSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34943,7 +34929,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareForwardSystemFill")]
             RiIcon::RiShareForwardSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34960,7 +34946,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareForwardSystemLine")]
             RiIcon::RiShareForwardSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34977,7 +34963,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareSystemFill")]
             RiIcon::RiShareSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34994,7 +34980,7 @@ impl Data {
             }
             #[cfg(feature = "RiShareSystemLine")]
             RiIcon::RiShareSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35011,7 +34997,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldCheckSystemFill")]
             RiIcon::RiShieldCheckSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35028,7 +35014,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldCheckSystemLine")]
             RiIcon::RiShieldCheckSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35045,7 +35031,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldCrossSystemFill")]
             RiIcon::RiShieldCrossSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35062,7 +35048,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldCrossSystemLine")]
             RiIcon::RiShieldCrossSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35079,7 +35065,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldFlashSystemFill")]
             RiIcon::RiShieldFlashSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35096,7 +35082,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldFlashSystemLine")]
             RiIcon::RiShieldFlashSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35113,7 +35099,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldKeyholeSystemFill")]
             RiIcon::RiShieldKeyholeSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35130,7 +35116,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldKeyholeSystemLine")]
             RiIcon::RiShieldKeyholeSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35147,7 +35133,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldStarSystemFill")]
             RiIcon::RiShieldStarSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35164,7 +35150,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldStarSystemLine")]
             RiIcon::RiShieldStarSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35181,7 +35167,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldSystemFill")]
             RiIcon::RiShieldSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35198,7 +35184,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldSystemLine")]
             RiIcon::RiShieldSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35215,7 +35201,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldUserSystemFill")]
             RiIcon::RiShieldUserSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35232,7 +35218,7 @@ impl Data {
             }
             #[cfg(feature = "RiShieldUserSystemLine")]
             RiIcon::RiShieldUserSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35249,7 +35235,7 @@ impl Data {
             }
             #[cfg(feature = "RiShip2MapFill")]
             RiIcon::RiShip2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35266,7 +35252,7 @@ impl Data {
             }
             #[cfg(feature = "RiShip2MapLine")]
             RiIcon::RiShip2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35283,7 +35269,7 @@ impl Data {
             }
             #[cfg(feature = "RiShipMapFill")]
             RiIcon::RiShipMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35300,7 +35286,7 @@ impl Data {
             }
             #[cfg(feature = "RiShipMapLine")]
             RiIcon::RiShipMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35317,7 +35303,7 @@ impl Data {
             }
             #[cfg(feature = "RiShirtOthersFill")]
             RiIcon::RiShirtOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35334,7 +35320,7 @@ impl Data {
             }
             #[cfg(feature = "RiShirtOthersLine")]
             RiIcon::RiShirtOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35351,7 +35337,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBag2FinanceFill")]
             RiIcon::RiShoppingBag2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35368,7 +35354,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBag2FinanceLine")]
             RiIcon::RiShoppingBag2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35385,7 +35371,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBag3FinanceFill")]
             RiIcon::RiShoppingBag3FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35402,7 +35388,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBag3FinanceLine")]
             RiIcon::RiShoppingBag3FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35419,7 +35405,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBagFinanceFill")]
             RiIcon::RiShoppingBagFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35436,7 +35422,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBagFinanceLine")]
             RiIcon::RiShoppingBagFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35453,7 +35439,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBasket2FinanceFill")]
             RiIcon::RiShoppingBasket2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35470,7 +35456,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBasket2FinanceLine")]
             RiIcon::RiShoppingBasket2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35487,7 +35473,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBasketFinanceFill")]
             RiIcon::RiShoppingBasketFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35504,7 +35490,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingBasketFinanceLine")]
             RiIcon::RiShoppingBasketFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35521,7 +35507,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingCart2FinanceFill")]
             RiIcon::RiShoppingCart2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35538,7 +35524,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingCart2FinanceLine")]
             RiIcon::RiShoppingCart2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35555,7 +35541,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingCartFinanceFill")]
             RiIcon::RiShoppingCartFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35572,7 +35558,7 @@ impl Data {
             }
             #[cfg(feature = "RiShoppingCartFinanceLine")]
             RiIcon::RiShoppingCartFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35589,7 +35575,7 @@ impl Data {
             }
             #[cfg(feature = "RiShowersWeatherFill")]
             RiIcon::RiShowersWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35606,7 +35592,7 @@ impl Data {
             }
             #[cfg(feature = "RiShowersWeatherLine")]
             RiIcon::RiShowersWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35623,7 +35609,7 @@ impl Data {
             }
             #[cfg(feature = "RiShuffleMediaFill")]
             RiIcon::RiShuffleMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35640,7 +35626,7 @@ impl Data {
             }
             #[cfg(feature = "RiShuffleMediaLine")]
             RiIcon::RiShuffleMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35657,7 +35643,7 @@ impl Data {
             }
             #[cfg(feature = "RiShutDownDeviceFill")]
             RiIcon::RiShutDownDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35674,7 +35660,7 @@ impl Data {
             }
             #[cfg(feature = "RiShutDownDeviceLine")]
             RiIcon::RiShutDownDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35691,7 +35677,7 @@ impl Data {
             }
             #[cfg(feature = "RiSideBarSystemFill")]
             RiIcon::RiSideBarSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35708,7 +35694,7 @@ impl Data {
             }
             #[cfg(feature = "RiSideBarSystemLine")]
             RiIcon::RiSideBarSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35725,7 +35711,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalTowerMapFill")]
             RiIcon::RiSignalTowerMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35742,7 +35728,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalTowerMapLine")]
             RiIcon::RiSignalTowerMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35759,7 +35745,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifi1DeviceFill")]
             RiIcon::RiSignalWifi1DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35776,7 +35762,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifi1DeviceLine")]
             RiIcon::RiSignalWifi1DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35793,7 +35779,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifi2DeviceFill")]
             RiIcon::RiSignalWifi2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35810,7 +35796,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifi2DeviceLine")]
             RiIcon::RiSignalWifi2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35827,7 +35813,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifi3DeviceFill")]
             RiIcon::RiSignalWifi3DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35844,7 +35830,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifi3DeviceLine")]
             RiIcon::RiSignalWifi3DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35861,7 +35847,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifiDeviceFill")]
             RiIcon::RiSignalWifiDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35878,7 +35864,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifiDeviceLine")]
             RiIcon::RiSignalWifiDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35895,7 +35881,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifiErrorDeviceFill")]
             RiIcon::RiSignalWifiErrorDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35912,7 +35898,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifiErrorDeviceLine")]
             RiIcon::RiSignalWifiErrorDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35929,7 +35915,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifiOffDeviceFill")]
             RiIcon::RiSignalWifiOffDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35946,7 +35932,7 @@ impl Data {
             }
             #[cfg(feature = "RiSignalWifiOffDeviceLine")]
             RiIcon::RiSignalWifiOffDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35963,7 +35949,7 @@ impl Data {
             }
             #[cfg(feature = "RiSimCard2DeviceFill")]
             RiIcon::RiSimCard2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35980,7 +35966,7 @@ impl Data {
             }
             #[cfg(feature = "RiSimCard2DeviceLine")]
             RiIcon::RiSimCard2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35997,7 +35983,7 @@ impl Data {
             }
             #[cfg(feature = "RiSimCardDeviceFill")]
             RiIcon::RiSimCardDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36014,7 +36000,7 @@ impl Data {
             }
             #[cfg(feature = "RiSimCardDeviceLine")]
             RiIcon::RiSimCardDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36031,7 +36017,7 @@ impl Data {
             }
             #[cfg(feature = "RiSingleQuotesLEditor")]
             RiIcon::RiSingleQuotesLEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36048,7 +36034,7 @@ impl Data {
             }
             #[cfg(feature = "RiSingleQuotesREditor")]
             RiIcon::RiSingleQuotesREditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36065,7 +36051,7 @@ impl Data {
             }
             #[cfg(feature = "RiSipDesignFill")]
             RiIcon::RiSipDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36082,7 +36068,7 @@ impl Data {
             }
             #[cfg(feature = "RiSipDesignLine")]
             RiIcon::RiSipDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36099,7 +36085,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipBackMediaFill")]
             RiIcon::RiSkipBackMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36116,7 +36102,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipBackMediaLine")]
             RiIcon::RiSkipBackMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36133,7 +36119,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipBackMiniMediaFill")]
             RiIcon::RiSkipBackMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36150,7 +36136,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipBackMiniMediaLine")]
             RiIcon::RiSkipBackMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36167,7 +36153,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipForwardMediaFill")]
             RiIcon::RiSkipForwardMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36184,7 +36170,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipForwardMediaLine")]
             RiIcon::RiSkipForwardMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36201,7 +36187,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipForwardMiniMediaFill")]
             RiIcon::RiSkipForwardMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36218,7 +36204,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkipForwardMiniMediaLine")]
             RiIcon::RiSkipForwardMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36235,7 +36221,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkull2UserFill")]
             RiIcon::RiSkull2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36252,7 +36238,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkull2UserLine")]
             RiIcon::RiSkull2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36269,7 +36255,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkullUserFill")]
             RiIcon::RiSkullUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36286,7 +36272,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkullUserLine")]
             RiIcon::RiSkullUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36303,7 +36289,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkypeLogosFill")]
             RiIcon::RiSkypeLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36320,7 +36306,7 @@ impl Data {
             }
             #[cfg(feature = "RiSkypeLogosLine")]
             RiIcon::RiSkypeLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36337,7 +36323,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlackLogosFill")]
             RiIcon::RiSlackLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36354,7 +36340,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlackLogosLine")]
             RiIcon::RiSlackLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36371,7 +36357,7 @@ impl Data {
             }
             #[cfg(feature = "RiSliceDesignFill")]
             RiIcon::RiSliceDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36388,7 +36374,7 @@ impl Data {
             }
             #[cfg(feature = "RiSliceDesignLine")]
             RiIcon::RiSliceDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36405,7 +36391,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshow2BusinessFill")]
             RiIcon::RiSlideshow2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36422,7 +36408,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshow2BusinessLine")]
             RiIcon::RiSlideshow2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36439,7 +36425,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshow3BusinessFill")]
             RiIcon::RiSlideshow3BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36456,7 +36442,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshow3BusinessLine")]
             RiIcon::RiSlideshow3BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36473,7 +36459,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshow4BusinessFill")]
             RiIcon::RiSlideshow4BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36490,7 +36476,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshow4BusinessLine")]
             RiIcon::RiSlideshow4BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36507,7 +36493,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshowBusinessFill")]
             RiIcon::RiSlideshowBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36524,7 +36510,7 @@ impl Data {
             }
             #[cfg(feature = "RiSlideshowBusinessLine")]
             RiIcon::RiSlideshowBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36541,7 +36527,7 @@ impl Data {
             }
             #[cfg(feature = "RiSmartphoneDeviceFill")]
             RiIcon::RiSmartphoneDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36558,7 +36544,7 @@ impl Data {
             }
             #[cfg(feature = "RiSmartphoneDeviceLine")]
             RiIcon::RiSmartphoneDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36575,7 +36561,7 @@ impl Data {
             }
             #[cfg(feature = "RiSnapchatLogosFill")]
             RiIcon::RiSnapchatLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36592,7 +36578,7 @@ impl Data {
             }
             #[cfg(feature = "RiSnapchatLogosLine")]
             RiIcon::RiSnapchatLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36609,7 +36595,7 @@ impl Data {
             }
             #[cfg(feature = "RiSnowyWeatherFill")]
             RiIcon::RiSnowyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36626,7 +36612,7 @@ impl Data {
             }
             #[cfg(feature = "RiSnowyWeatherLine")]
             RiIcon::RiSnowyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36643,7 +36629,7 @@ impl Data {
             }
             #[cfg(feature = "RiSortAscEditor")]
             RiIcon::RiSortAscEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36660,7 +36646,7 @@ impl Data {
             }
             #[cfg(feature = "RiSortDescEditor")]
             RiIcon::RiSortDescEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36677,7 +36663,7 @@ impl Data {
             }
             #[cfg(feature = "RiSoundModuleMediaFill")]
             RiIcon::RiSoundModuleMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36694,7 +36680,7 @@ impl Data {
             }
             #[cfg(feature = "RiSoundModuleMediaLine")]
             RiIcon::RiSoundModuleMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36711,7 +36697,7 @@ impl Data {
             }
             #[cfg(feature = "RiSoundcloudLogosFill")]
             RiIcon::RiSoundcloudLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36728,7 +36714,7 @@ impl Data {
             }
             #[cfg(feature = "RiSoundcloudLogosLine")]
             RiIcon::RiSoundcloudLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36745,7 +36731,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpaceEditor")]
             RiIcon::RiSpaceEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36762,7 +36748,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpaceShipMapFill")]
             RiIcon::RiSpaceShipMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36779,7 +36765,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpaceShipMapLine")]
             RiIcon::RiSpaceShipMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36796,7 +36782,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpam2SystemFill")]
             RiIcon::RiSpam2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36813,7 +36799,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpam2SystemLine")]
             RiIcon::RiSpam2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36830,7 +36816,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpam3SystemFill")]
             RiIcon::RiSpam3SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36847,7 +36833,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpam3SystemLine")]
             RiIcon::RiSpam3SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36864,7 +36850,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpamSystemFill")]
             RiIcon::RiSpamSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36881,7 +36867,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpamSystemLine")]
             RiIcon::RiSpamSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36898,7 +36884,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeaker2MediaFill")]
             RiIcon::RiSpeaker2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36915,7 +36901,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeaker2MediaLine")]
             RiIcon::RiSpeaker2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36932,7 +36918,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeaker3MediaFill")]
             RiIcon::RiSpeaker3MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36949,7 +36935,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeaker3MediaLine")]
             RiIcon::RiSpeaker3MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36966,7 +36952,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeakerMediaFill")]
             RiIcon::RiSpeakerMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36983,7 +36969,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeakerMediaLine")]
             RiIcon::RiSpeakerMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37000,7 +36986,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpectrumLogosFill")]
             RiIcon::RiSpectrumLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37017,7 +37003,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpectrumLogosLine")]
             RiIcon::RiSpectrumLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37034,7 +37020,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeedMediaFill")]
             RiIcon::RiSpeedMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37051,7 +37037,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeedMediaLine")]
             RiIcon::RiSpeedMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37068,7 +37054,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeedMiniMediaFill")]
             RiIcon::RiSpeedMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37085,7 +37071,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpeedMiniMediaLine")]
             RiIcon::RiSpeedMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37102,7 +37088,7 @@ impl Data {
             }
             #[cfg(feature = "RiSplitCellsHorizontalEditor")]
             RiIcon::RiSplitCellsHorizontalEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37119,7 +37105,7 @@ impl Data {
             }
             #[cfg(feature = "RiSplitCellsVerticalEditor")]
             RiIcon::RiSplitCellsVerticalEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37136,7 +37122,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpotifyLogosFill")]
             RiIcon::RiSpotifyLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37153,7 +37139,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpotifyLogosLine")]
             RiIcon::RiSpotifyLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37170,7 +37156,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpyUserFill")]
             RiIcon::RiSpyUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37187,7 +37173,7 @@ impl Data {
             }
             #[cfg(feature = "RiSpyUserLine")]
             RiIcon::RiSpyUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37204,7 +37190,7 @@ impl Data {
             }
             #[cfg(feature = "RiStackBusinessFill")]
             RiIcon::RiStackBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37221,7 +37207,7 @@ impl Data {
             }
             #[cfg(feature = "RiStackBusinessLine")]
             RiIcon::RiStackBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37238,7 +37224,7 @@ impl Data {
             }
             #[cfg(feature = "RiStackOverflowLogosFill")]
             RiIcon::RiStackOverflowLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37255,7 +37241,7 @@ impl Data {
             }
             #[cfg(feature = "RiStackOverflowLogosLine")]
             RiIcon::RiStackOverflowLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37272,7 +37258,7 @@ impl Data {
             }
             #[cfg(feature = "RiStackshareLogosFill")]
             RiIcon::RiStackshareLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37289,7 +37275,7 @@ impl Data {
             }
             #[cfg(feature = "RiStackshareLogosLine")]
             RiIcon::RiStackshareLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37306,7 +37292,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarHalfSSystemFill")]
             RiIcon::RiStarHalfSSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37323,7 +37309,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarHalfSSystemLine")]
             RiIcon::RiStarHalfSSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37340,7 +37326,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarHalfSystemFill")]
             RiIcon::RiStarHalfSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37357,7 +37343,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarHalfSystemLine")]
             RiIcon::RiStarHalfSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37374,7 +37360,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarSSystemFill")]
             RiIcon::RiStarSSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37391,7 +37377,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarSSystemLine")]
             RiIcon::RiStarSSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37408,7 +37394,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarSmileUserFill")]
             RiIcon::RiStarSmileUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37425,7 +37411,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarSmileUserLine")]
             RiIcon::RiStarSmileUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37442,7 +37428,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarSystemFill")]
             RiIcon::RiStarSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37459,7 +37445,7 @@ impl Data {
             }
             #[cfg(feature = "RiStarSystemLine")]
             RiIcon::RiStarSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37476,7 +37462,7 @@ impl Data {
             }
             #[cfg(feature = "RiSteamLogosFill")]
             RiIcon::RiSteamLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37493,7 +37479,7 @@ impl Data {
             }
             #[cfg(feature = "RiSteamLogosLine")]
             RiIcon::RiSteamLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37510,7 +37496,7 @@ impl Data {
             }
             #[cfg(feature = "RiSteering2MapFill")]
             RiIcon::RiSteering2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37527,7 +37513,7 @@ impl Data {
             }
             #[cfg(feature = "RiSteering2MapLine")]
             RiIcon::RiSteering2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37544,7 +37530,7 @@ impl Data {
             }
             #[cfg(feature = "RiSteeringMapFill")]
             RiIcon::RiSteeringMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37561,7 +37547,7 @@ impl Data {
             }
             #[cfg(feature = "RiSteeringMapLine")]
             RiIcon::RiSteeringMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37578,7 +37564,7 @@ impl Data {
             }
             #[cfg(feature = "RiStethoscopeHealthFill")]
             RiIcon::RiStethoscopeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37595,7 +37581,7 @@ impl Data {
             }
             #[cfg(feature = "RiStethoscopeHealthLine")]
             RiIcon::RiStethoscopeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37612,7 +37598,7 @@ impl Data {
             }
             #[cfg(feature = "RiStickyNote2DocumentFill")]
             RiIcon::RiStickyNote2DocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37629,7 +37615,7 @@ impl Data {
             }
             #[cfg(feature = "RiStickyNote2DocumentLine")]
             RiIcon::RiStickyNote2DocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37646,7 +37632,7 @@ impl Data {
             }
             #[cfg(feature = "RiStickyNoteDocumentFill")]
             RiIcon::RiStickyNoteDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37663,7 +37649,7 @@ impl Data {
             }
             #[cfg(feature = "RiStickyNoteDocumentLine")]
             RiIcon::RiStickyNoteDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37680,7 +37666,7 @@ impl Data {
             }
             #[cfg(feature = "RiStockFinanceFill")]
             RiIcon::RiStockFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37697,7 +37683,7 @@ impl Data {
             }
             #[cfg(feature = "RiStockFinanceLine")]
             RiIcon::RiStockFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37714,7 +37700,7 @@ impl Data {
             }
             #[cfg(feature = "RiStopCircleMediaFill")]
             RiIcon::RiStopCircleMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37731,7 +37717,7 @@ impl Data {
             }
             #[cfg(feature = "RiStopCircleMediaLine")]
             RiIcon::RiStopCircleMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37748,7 +37734,7 @@ impl Data {
             }
             #[cfg(feature = "RiStopMediaFill")]
             RiIcon::RiStopMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37765,7 +37751,7 @@ impl Data {
             }
             #[cfg(feature = "RiStopMediaLine")]
             RiIcon::RiStopMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37782,7 +37768,7 @@ impl Data {
             }
             #[cfg(feature = "RiStopMiniMediaFill")]
             RiIcon::RiStopMiniMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37799,7 +37785,7 @@ impl Data {
             }
             #[cfg(feature = "RiStopMiniMediaLine")]
             RiIcon::RiStopMiniMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37816,7 +37802,7 @@ impl Data {
             }
             #[cfg(feature = "RiStore2BuildingsFill")]
             RiIcon::RiStore2BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37833,7 +37819,7 @@ impl Data {
             }
             #[cfg(feature = "RiStore2BuildingsLine")]
             RiIcon::RiStore2BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37850,7 +37836,7 @@ impl Data {
             }
             #[cfg(feature = "RiStore3BuildingsFill")]
             RiIcon::RiStore3BuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37867,7 +37853,7 @@ impl Data {
             }
             #[cfg(feature = "RiStore3BuildingsLine")]
             RiIcon::RiStore3BuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37884,7 +37870,7 @@ impl Data {
             }
             #[cfg(feature = "RiStoreBuildingsFill")]
             RiIcon::RiStoreBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37901,7 +37887,7 @@ impl Data {
             }
             #[cfg(feature = "RiStoreBuildingsLine")]
             RiIcon::RiStoreBuildingsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37918,7 +37904,7 @@ impl Data {
             }
             #[cfg(feature = "RiStrikethrough2Editor")]
             RiIcon::RiStrikethrough2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37935,7 +37921,7 @@ impl Data {
             }
             #[cfg(feature = "RiStrikethroughEditor")]
             RiIcon::RiStrikethroughEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37952,7 +37938,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubscript2Editor")]
             RiIcon::RiSubscript2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37969,7 +37955,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubscriptEditor")]
             RiIcon::RiSubscriptEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37986,7 +37972,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubtractSystemFill")]
             RiIcon::RiSubtractSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38003,7 +37989,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubtractSystemLine")]
             RiIcon::RiSubtractSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38020,7 +38006,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubwayMapFill")]
             RiIcon::RiSubwayMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38037,7 +38023,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubwayMapLine")]
             RiIcon::RiSubwayMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38054,7 +38040,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubwayWifiMapFill")]
             RiIcon::RiSubwayWifiMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38071,7 +38057,7 @@ impl Data {
             }
             #[cfg(feature = "RiSubwayWifiMapLine")]
             RiIcon::RiSubwayWifiMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38088,7 +38074,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuitcase2MapFill")]
             RiIcon::RiSuitcase2MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38105,7 +38091,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuitcase2MapLine")]
             RiIcon::RiSuitcase2MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38122,7 +38108,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuitcase3MapFill")]
             RiIcon::RiSuitcase3MapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38139,7 +38125,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuitcase3MapLine")]
             RiIcon::RiSuitcase3MapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38156,7 +38142,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuitcaseMapFill")]
             RiIcon::RiSuitcaseMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38173,7 +38159,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuitcaseMapLine")]
             RiIcon::RiSuitcaseMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38190,7 +38176,7 @@ impl Data {
             }
             #[cfg(feature = "RiSunCloudyWeatherFill")]
             RiIcon::RiSunCloudyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38207,7 +38193,7 @@ impl Data {
             }
             #[cfg(feature = "RiSunCloudyWeatherLine")]
             RiIcon::RiSunCloudyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38224,7 +38210,7 @@ impl Data {
             }
             #[cfg(feature = "RiSunFoggyWeatherFill")]
             RiIcon::RiSunFoggyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38241,7 +38227,7 @@ impl Data {
             }
             #[cfg(feature = "RiSunFoggyWeatherLine")]
             RiIcon::RiSunFoggyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38258,7 +38244,7 @@ impl Data {
             }
             #[cfg(feature = "RiSunWeatherFill")]
             RiIcon::RiSunWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38275,7 +38261,7 @@ impl Data {
             }
             #[cfg(feature = "RiSunWeatherLine")]
             RiIcon::RiSunWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38292,7 +38278,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuperscript2Editor")]
             RiIcon::RiSuperscript2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38309,7 +38295,7 @@ impl Data {
             }
             #[cfg(feature = "RiSuperscriptEditor")]
             RiIcon::RiSuperscriptEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38326,7 +38312,7 @@ impl Data {
             }
             #[cfg(feature = "RiSurgicalMaskHealthFill")]
             RiIcon::RiSurgicalMaskHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38343,7 +38329,7 @@ impl Data {
             }
             #[cfg(feature = "RiSurgicalMaskHealthLine")]
             RiIcon::RiSurgicalMaskHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38360,7 +38346,7 @@ impl Data {
             }
             #[cfg(feature = "RiSurroundSoundMediaFill")]
             RiIcon::RiSurroundSoundMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38377,7 +38363,7 @@ impl Data {
             }
             #[cfg(feature = "RiSurroundSoundMediaLine")]
             RiIcon::RiSurroundSoundMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38394,7 +38380,7 @@ impl Data {
             }
             #[cfg(feature = "RiSurveyDocumentFill")]
             RiIcon::RiSurveyDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38411,7 +38397,7 @@ impl Data {
             }
             #[cfg(feature = "RiSurveyDocumentLine")]
             RiIcon::RiSurveyDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38428,7 +38414,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwapBoxFinanceFill")]
             RiIcon::RiSwapBoxFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38445,7 +38431,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwapBoxFinanceLine")]
             RiIcon::RiSwapBoxFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38462,7 +38448,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwapFinanceFill")]
             RiIcon::RiSwapFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38479,7 +38465,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwapFinanceLine")]
             RiIcon::RiSwapFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38496,7 +38482,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwitchLogosFill")]
             RiIcon::RiSwitchLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38513,7 +38499,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwitchLogosLine")]
             RiIcon::RiSwitchLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38530,7 +38516,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwordOthersFill")]
             RiIcon::RiSwordOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38547,7 +38533,7 @@ impl Data {
             }
             #[cfg(feature = "RiSwordOthersLine")]
             RiIcon::RiSwordOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38564,7 +38550,7 @@ impl Data {
             }
             #[cfg(feature = "RiSyringeHealthFill")]
             RiIcon::RiSyringeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38581,7 +38567,7 @@ impl Data {
             }
             #[cfg(feature = "RiSyringeHealthLine")]
             RiIcon::RiSyringeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38598,7 +38584,7 @@ impl Data {
             }
             #[cfg(feature = "RiTBoxDesignFill")]
             RiIcon::RiTBoxDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38615,7 +38601,7 @@ impl Data {
             }
             #[cfg(feature = "RiTBoxDesignLine")]
             RiIcon::RiTBoxDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38632,7 +38618,7 @@ impl Data {
             }
             #[cfg(feature = "RiTShirt2OthersFill")]
             RiIcon::RiTShirt2OthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38649,7 +38635,7 @@ impl Data {
             }
             #[cfg(feature = "RiTShirt2OthersLine")]
             RiIcon::RiTShirt2OthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38666,7 +38652,7 @@ impl Data {
             }
             #[cfg(feature = "RiTShirtAirOthersFill")]
             RiIcon::RiTShirtAirOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38683,7 +38669,7 @@ impl Data {
             }
             #[cfg(feature = "RiTShirtAirOthersLine")]
             RiIcon::RiTShirtAirOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38700,7 +38686,7 @@ impl Data {
             }
             #[cfg(feature = "RiTShirtOthersFill")]
             RiIcon::RiTShirtOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38717,7 +38703,7 @@ impl Data {
             }
             #[cfg(feature = "RiTShirtOthersLine")]
             RiIcon::RiTShirtOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38734,7 +38720,7 @@ impl Data {
             }
             #[cfg(feature = "RiTable2Editor")]
             RiIcon::RiTable2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38751,7 +38737,7 @@ impl Data {
             }
             #[cfg(feature = "RiTableAltDesignFill")]
             RiIcon::RiTableAltDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38768,7 +38754,7 @@ impl Data {
             }
             #[cfg(feature = "RiTableAltDesignLine")]
             RiIcon::RiTableAltDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38785,7 +38771,7 @@ impl Data {
             }
             #[cfg(feature = "RiTableDesignFill")]
             RiIcon::RiTableDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38802,7 +38788,7 @@ impl Data {
             }
             #[cfg(feature = "RiTableDesignLine")]
             RiIcon::RiTableDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38819,7 +38805,7 @@ impl Data {
             }
             #[cfg(feature = "RiTabletDeviceFill")]
             RiIcon::RiTabletDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38836,7 +38822,7 @@ impl Data {
             }
             #[cfg(feature = "RiTabletDeviceLine")]
             RiIcon::RiTabletDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38853,7 +38839,7 @@ impl Data {
             }
             #[cfg(feature = "RiTakeawayMapFill")]
             RiIcon::RiTakeawayMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38870,7 +38856,7 @@ impl Data {
             }
             #[cfg(feature = "RiTakeawayMapLine")]
             RiIcon::RiTakeawayMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38887,7 +38873,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaobaoLogosFill")]
             RiIcon::RiTaobaoLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38904,7 +38890,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaobaoLogosLine")]
             RiIcon::RiTaobaoLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38921,7 +38907,7 @@ impl Data {
             }
             #[cfg(feature = "RiTapeMediaFill")]
             RiIcon::RiTapeMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38938,7 +38924,7 @@ impl Data {
             }
             #[cfg(feature = "RiTapeMediaLine")]
             RiIcon::RiTapeMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38955,7 +38941,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaskDocumentFill")]
             RiIcon::RiTaskDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38972,7 +38958,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaskDocumentLine")]
             RiIcon::RiTaskDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38989,7 +38975,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaxiMapFill")]
             RiIcon::RiTaxiMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39006,7 +38992,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaxiMapLine")]
             RiIcon::RiTaxiMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39023,7 +39009,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaxiWifiMapFill")]
             RiIcon::RiTaxiWifiMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39040,7 +39026,7 @@ impl Data {
             }
             #[cfg(feature = "RiTaxiWifiMapLine")]
             RiIcon::RiTaxiWifiMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39057,7 +39043,7 @@ impl Data {
             }
             #[cfg(feature = "RiTeamUserFill")]
             RiIcon::RiTeamUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39074,7 +39060,7 @@ impl Data {
             }
             #[cfg(feature = "RiTeamUserLine")]
             RiIcon::RiTeamUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39091,7 +39077,7 @@ impl Data {
             }
             #[cfg(feature = "RiTelegramLogosFill")]
             RiIcon::RiTelegramLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39108,7 +39094,7 @@ impl Data {
             }
             #[cfg(feature = "RiTelegramLogosLine")]
             RiIcon::RiTelegramLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39125,7 +39111,7 @@ impl Data {
             }
             #[cfg(feature = "RiTempColdWeatherFill")]
             RiIcon::RiTempColdWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39142,7 +39128,7 @@ impl Data {
             }
             #[cfg(feature = "RiTempColdWeatherLine")]
             RiIcon::RiTempColdWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39159,7 +39145,7 @@ impl Data {
             }
             #[cfg(feature = "RiTempHotWeatherFill")]
             RiIcon::RiTempHotWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39176,7 +39162,7 @@ impl Data {
             }
             #[cfg(feature = "RiTempHotWeatherLine")]
             RiIcon::RiTempHotWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39193,7 +39179,7 @@ impl Data {
             }
             #[cfg(feature = "RiTerminalBoxDevelopmentFill")]
             RiIcon::RiTerminalBoxDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39210,7 +39196,7 @@ impl Data {
             }
             #[cfg(feature = "RiTerminalBoxDevelopmentLine")]
             RiIcon::RiTerminalBoxDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39227,7 +39213,7 @@ impl Data {
             }
             #[cfg(feature = "RiTerminalDevelopmentFill")]
             RiIcon::RiTerminalDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39244,7 +39230,7 @@ impl Data {
             }
             #[cfg(feature = "RiTerminalDevelopmentLine")]
             RiIcon::RiTerminalDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39261,7 +39247,7 @@ impl Data {
             }
             #[cfg(feature = "RiTerminalWindowDevelopmentFill")]
             RiIcon::RiTerminalWindowDevelopmentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39278,7 +39264,7 @@ impl Data {
             }
             #[cfg(feature = "RiTerminalWindowDevelopmentLine")]
             RiIcon::RiTerminalWindowDevelopmentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39295,7 +39281,7 @@ impl Data {
             }
             #[cfg(feature = "RiTestTubeHealthFill")]
             RiIcon::RiTestTubeHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39312,7 +39298,7 @@ impl Data {
             }
             #[cfg(feature = "RiTestTubeHealthLine")]
             RiIcon::RiTestTubeHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39329,7 +39315,7 @@ impl Data {
             }
             #[cfg(feature = "RiTextDirectionLEditor")]
             RiIcon::RiTextDirectionLEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39346,7 +39332,7 @@ impl Data {
             }
             #[cfg(feature = "RiTextDirectionREditor")]
             RiIcon::RiTextDirectionREditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39363,7 +39349,7 @@ impl Data {
             }
             #[cfg(feature = "RiTextEditor")]
             RiIcon::RiTextEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39380,7 +39366,7 @@ impl Data {
             }
             #[cfg(feature = "RiTextSpacingEditor")]
             RiIcon::RiTextSpacingEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39397,7 +39383,7 @@ impl Data {
             }
             #[cfg(feature = "RiTextWrapEditor")]
             RiIcon::RiTextWrapEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39414,7 +39400,7 @@ impl Data {
             }
             #[cfg(feature = "RiThermometerHealthFill")]
             RiIcon::RiThermometerHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39431,7 +39417,7 @@ impl Data {
             }
             #[cfg(feature = "RiThermometerHealthLine")]
             RiIcon::RiThermometerHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39448,7 +39434,7 @@ impl Data {
             }
             #[cfg(feature = "RiThumbDownSystemFill")]
             RiIcon::RiThumbDownSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39465,7 +39451,7 @@ impl Data {
             }
             #[cfg(feature = "RiThumbDownSystemLine")]
             RiIcon::RiThumbDownSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39482,7 +39468,7 @@ impl Data {
             }
             #[cfg(feature = "RiThumbUpSystemFill")]
             RiIcon::RiThumbUpSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39499,7 +39485,7 @@ impl Data {
             }
             #[cfg(feature = "RiThumbUpSystemLine")]
             RiIcon::RiThumbUpSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39516,7 +39502,7 @@ impl Data {
             }
             #[cfg(feature = "RiThunderstormsWeatherFill")]
             RiIcon::RiThunderstormsWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39533,7 +39519,7 @@ impl Data {
             }
             #[cfg(feature = "RiThunderstormsWeatherLine")]
             RiIcon::RiThunderstormsWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39550,7 +39536,7 @@ impl Data {
             }
             #[cfg(feature = "RiTicket2FinanceFill")]
             RiIcon::RiTicket2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39567,7 +39553,7 @@ impl Data {
             }
             #[cfg(feature = "RiTicket2FinanceLine")]
             RiIcon::RiTicket2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39584,7 +39570,7 @@ impl Data {
             }
             #[cfg(feature = "RiTicketFinanceFill")]
             RiIcon::RiTicketFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39601,7 +39587,7 @@ impl Data {
             }
             #[cfg(feature = "RiTicketFinanceLine")]
             RiIcon::RiTicketFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39618,7 +39604,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimeSystemFill")]
             RiIcon::RiTimeSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39635,7 +39621,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimeSystemLine")]
             RiIcon::RiTimeSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39652,7 +39638,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimer2SystemFill")]
             RiIcon::RiTimer2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39669,7 +39655,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimer2SystemLine")]
             RiIcon::RiTimer2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39686,7 +39672,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimerFlashSystemFill")]
             RiIcon::RiTimerFlashSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39703,7 +39689,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimerFlashSystemLine")]
             RiIcon::RiTimerFlashSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39720,7 +39706,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimerSystemFill")]
             RiIcon::RiTimerSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39737,7 +39723,7 @@ impl Data {
             }
             #[cfg(feature = "RiTimerSystemLine")]
             RiIcon::RiTimerSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39754,7 +39740,7 @@ impl Data {
             }
             #[cfg(feature = "RiTodoDocumentFill")]
             RiIcon::RiTodoDocumentFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39771,7 +39757,7 @@ impl Data {
             }
             #[cfg(feature = "RiTodoDocumentLine")]
             RiIcon::RiTodoDocumentLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39788,7 +39774,7 @@ impl Data {
             }
             #[cfg(feature = "RiToggleSystemFill")]
             RiIcon::RiToggleSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39805,7 +39791,7 @@ impl Data {
             }
             #[cfg(feature = "RiToggleSystemLine")]
             RiIcon::RiToggleSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39822,7 +39808,7 @@ impl Data {
             }
             #[cfg(feature = "RiToolsDesignFill")]
             RiIcon::RiToolsDesignFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39839,7 +39825,7 @@ impl Data {
             }
             #[cfg(feature = "RiToolsDesignLine")]
             RiIcon::RiToolsDesignLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39856,7 +39842,7 @@ impl Data {
             }
             #[cfg(feature = "RiTornadoWeatherFill")]
             RiIcon::RiTornadoWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39873,7 +39859,7 @@ impl Data {
             }
             #[cfg(feature = "RiTornadoWeatherLine")]
             RiIcon::RiTornadoWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39890,7 +39876,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrademarkBusinessFill")]
             RiIcon::RiTrademarkBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39907,7 +39893,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrademarkBusinessLine")]
             RiIcon::RiTrademarkBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39924,7 +39910,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrafficLightMapFill")]
             RiIcon::RiTrafficLightMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39941,7 +39927,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrafficLightMapLine")]
             RiIcon::RiTrafficLightMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39958,7 +39944,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrainMapFill")]
             RiIcon::RiTrainMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39975,7 +39961,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrainMapLine")]
             RiIcon::RiTrainMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -39992,7 +39978,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrainWifiMapFill")]
             RiIcon::RiTrainWifiMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40009,7 +39995,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrainWifiMapLine")]
             RiIcon::RiTrainWifiMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40026,7 +40012,7 @@ impl Data {
             }
             #[cfg(feature = "RiTranslate2Editor")]
             RiIcon::RiTranslate2Editor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40043,7 +40029,7 @@ impl Data {
             }
             #[cfg(feature = "RiTranslateEditor")]
             RiIcon::RiTranslateEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40060,7 +40046,7 @@ impl Data {
             }
             #[cfg(feature = "RiTravestiUserFill")]
             RiIcon::RiTravestiUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40077,7 +40063,7 @@ impl Data {
             }
             #[cfg(feature = "RiTravestiUserLine")]
             RiIcon::RiTravestiUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40094,7 +40080,7 @@ impl Data {
             }
             #[cfg(feature = "RiTreasureMapMapFill")]
             RiIcon::RiTreasureMapMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40111,7 +40097,7 @@ impl Data {
             }
             #[cfg(feature = "RiTreasureMapMapLine")]
             RiIcon::RiTreasureMapMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40128,7 +40114,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrelloLogosFill")]
             RiIcon::RiTrelloLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40145,7 +40131,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrelloLogosLine")]
             RiIcon::RiTrelloLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40162,7 +40148,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrophyFinanceFill")]
             RiIcon::RiTrophyFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40179,7 +40165,7 @@ impl Data {
             }
             #[cfg(feature = "RiTrophyFinanceLine")]
             RiIcon::RiTrophyFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40196,7 +40182,7 @@ impl Data {
             }
             #[cfg(feature = "RiTruckMapFill")]
             RiIcon::RiTruckMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40213,7 +40199,7 @@ impl Data {
             }
             #[cfg(feature = "RiTruckMapLine")]
             RiIcon::RiTruckMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40230,7 +40216,7 @@ impl Data {
             }
             #[cfg(feature = "RiTumblrLogosFill")]
             RiIcon::RiTumblrLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40247,7 +40233,7 @@ impl Data {
             }
             #[cfg(feature = "RiTumblrLogosLine")]
             RiIcon::RiTumblrLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40264,7 +40250,7 @@ impl Data {
             }
             #[cfg(feature = "RiTv2DeviceFill")]
             RiIcon::RiTv2DeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40281,7 +40267,7 @@ impl Data {
             }
             #[cfg(feature = "RiTv2DeviceLine")]
             RiIcon::RiTv2DeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40298,7 +40284,7 @@ impl Data {
             }
             #[cfg(feature = "RiTvDeviceFill")]
             RiIcon::RiTvDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40315,7 +40301,7 @@ impl Data {
             }
             #[cfg(feature = "RiTvDeviceLine")]
             RiIcon::RiTvDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40332,7 +40318,7 @@ impl Data {
             }
             #[cfg(feature = "RiTwitchLogosFill")]
             RiIcon::RiTwitchLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40349,7 +40335,7 @@ impl Data {
             }
             #[cfg(feature = "RiTwitchLogosLine")]
             RiIcon::RiTwitchLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40366,7 +40352,7 @@ impl Data {
             }
             #[cfg(feature = "RiTwitterLogosFill")]
             RiIcon::RiTwitterLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40383,7 +40369,7 @@ impl Data {
             }
             #[cfg(feature = "RiTwitterLogosLine")]
             RiIcon::RiTwitterLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40400,7 +40386,7 @@ impl Data {
             }
             #[cfg(feature = "RiTyphoonWeatherFill")]
             RiIcon::RiTyphoonWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40417,7 +40403,7 @@ impl Data {
             }
             #[cfg(feature = "RiTyphoonWeatherLine")]
             RiIcon::RiTyphoonWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40434,7 +40420,7 @@ impl Data {
             }
             #[cfg(feature = "RiUDiskDeviceFill")]
             RiIcon::RiUDiskDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40451,7 +40437,7 @@ impl Data {
             }
             #[cfg(feature = "RiUDiskDeviceLine")]
             RiIcon::RiUDiskDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40468,7 +40454,7 @@ impl Data {
             }
             #[cfg(feature = "RiUbuntuLogosFill")]
             RiIcon::RiUbuntuLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40485,7 +40471,7 @@ impl Data {
             }
             #[cfg(feature = "RiUbuntuLogosLine")]
             RiIcon::RiUbuntuLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40502,7 +40488,7 @@ impl Data {
             }
             #[cfg(feature = "RiUmbrellaOthersFill")]
             RiIcon::RiUmbrellaOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40519,7 +40505,7 @@ impl Data {
             }
             #[cfg(feature = "RiUmbrellaOthersLine")]
             RiIcon::RiUmbrellaOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40536,7 +40522,7 @@ impl Data {
             }
             #[cfg(feature = "RiUnderlineEditor")]
             RiIcon::RiUnderlineEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40553,7 +40539,7 @@ impl Data {
             }
             #[cfg(feature = "RiUninstallDeviceFill")]
             RiIcon::RiUninstallDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40570,7 +40556,7 @@ impl Data {
             }
             #[cfg(feature = "RiUninstallDeviceLine")]
             RiIcon::RiUninstallDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40587,7 +40573,7 @@ impl Data {
             }
             #[cfg(feature = "RiUnsplashLogosFill")]
             RiIcon::RiUnsplashLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40604,7 +40590,7 @@ impl Data {
             }
             #[cfg(feature = "RiUnsplashLogosLine")]
             RiIcon::RiUnsplashLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40621,7 +40607,7 @@ impl Data {
             }
             #[cfg(feature = "RiUpload2SystemFill")]
             RiIcon::RiUpload2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40638,7 +40624,7 @@ impl Data {
             }
             #[cfg(feature = "RiUpload2SystemLine")]
             RiIcon::RiUpload2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40655,7 +40641,7 @@ impl Data {
             }
             #[cfg(feature = "RiUploadCloud2SystemFill")]
             RiIcon::RiUploadCloud2SystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40672,7 +40658,7 @@ impl Data {
             }
             #[cfg(feature = "RiUploadCloud2SystemLine")]
             RiIcon::RiUploadCloud2SystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40689,7 +40675,7 @@ impl Data {
             }
             #[cfg(feature = "RiUploadCloudSystemFill")]
             RiIcon::RiUploadCloudSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40706,7 +40692,7 @@ impl Data {
             }
             #[cfg(feature = "RiUploadCloudSystemLine")]
             RiIcon::RiUploadCloudSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40723,7 +40709,7 @@ impl Data {
             }
             #[cfg(feature = "RiUploadSystemFill")]
             RiIcon::RiUploadSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40740,7 +40726,7 @@ impl Data {
             }
             #[cfg(feature = "RiUploadSystemLine")]
             RiIcon::RiUploadSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40757,7 +40743,7 @@ impl Data {
             }
             #[cfg(feature = "RiUsbDeviceFill")]
             RiIcon::RiUsbDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40774,7 +40760,7 @@ impl Data {
             }
             #[cfg(feature = "RiUsbDeviceLine")]
             RiIcon::RiUsbDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40791,7 +40777,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser2UserFill")]
             RiIcon::RiUser2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40808,7 +40794,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser2UserLine")]
             RiIcon::RiUser2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40825,7 +40811,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser3UserFill")]
             RiIcon::RiUser3UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40842,7 +40828,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser3UserLine")]
             RiIcon::RiUser3UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40859,7 +40845,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser4UserFill")]
             RiIcon::RiUser4UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40876,7 +40862,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser4UserLine")]
             RiIcon::RiUser4UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40893,7 +40879,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser5UserFill")]
             RiIcon::RiUser5UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40910,7 +40896,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser5UserLine")]
             RiIcon::RiUser5UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40927,7 +40913,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser6UserFill")]
             RiIcon::RiUser6UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40944,7 +40930,7 @@ impl Data {
             }
             #[cfg(feature = "RiUser6UserLine")]
             RiIcon::RiUser6UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40961,7 +40947,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserAddUserFill")]
             RiIcon::RiUserAddUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40978,7 +40964,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserAddUserLine")]
             RiIcon::RiUserAddUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -40995,7 +40981,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserFollowUserFill")]
             RiIcon::RiUserFollowUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41012,7 +40998,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserFollowUserLine")]
             RiIcon::RiUserFollowUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41029,7 +41015,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserHeartUserFill")]
             RiIcon::RiUserHeartUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41046,7 +41032,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserHeartUserLine")]
             RiIcon::RiUserHeartUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41063,7 +41049,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserLocationUserFill")]
             RiIcon::RiUserLocationUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41080,7 +41066,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserLocationUserLine")]
             RiIcon::RiUserLocationUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41097,7 +41083,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserReceived2UserFill")]
             RiIcon::RiUserReceived2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41114,7 +41100,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserReceived2UserLine")]
             RiIcon::RiUserReceived2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41131,7 +41117,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserReceivedUserFill")]
             RiIcon::RiUserReceivedUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41148,7 +41134,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserReceivedUserLine")]
             RiIcon::RiUserReceivedUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41165,7 +41151,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSearchUserFill")]
             RiIcon::RiUserSearchUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41182,7 +41168,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSearchUserLine")]
             RiIcon::RiUserSearchUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41199,7 +41185,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSettingsUserFill")]
             RiIcon::RiUserSettingsUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41216,7 +41202,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSettingsUserLine")]
             RiIcon::RiUserSettingsUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41233,7 +41219,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserShared2UserFill")]
             RiIcon::RiUserShared2UserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41250,7 +41236,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserShared2UserLine")]
             RiIcon::RiUserShared2UserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41267,7 +41253,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSharedUserFill")]
             RiIcon::RiUserSharedUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41284,7 +41270,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSharedUserLine")]
             RiIcon::RiUserSharedUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41301,7 +41287,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSmileUserFill")]
             RiIcon::RiUserSmileUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41318,7 +41304,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserSmileUserLine")]
             RiIcon::RiUserSmileUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41335,7 +41321,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserStarUserFill")]
             RiIcon::RiUserStarUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41352,7 +41338,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserStarUserLine")]
             RiIcon::RiUserStarUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41369,7 +41355,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserUnfollowUserFill")]
             RiIcon::RiUserUnfollowUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41386,7 +41372,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserUnfollowUserLine")]
             RiIcon::RiUserUnfollowUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41403,7 +41389,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserUserFill")]
             RiIcon::RiUserUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41420,7 +41406,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserUserLine")]
             RiIcon::RiUserUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41437,7 +41423,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserVoiceUserFill")]
             RiIcon::RiUserVoiceUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41454,7 +41440,7 @@ impl Data {
             }
             #[cfg(feature = "RiUserVoiceUserLine")]
             RiIcon::RiUserVoiceUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41471,7 +41457,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoAddMediaFill")]
             RiIcon::RiVideoAddMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41488,7 +41474,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoAddMediaLine")]
             RiIcon::RiVideoAddMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41505,7 +41491,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoChatCommunicationFill")]
             RiIcon::RiVideoChatCommunicationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41522,7 +41508,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoChatCommunicationLine")]
             RiIcon::RiVideoChatCommunicationLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41539,7 +41525,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoDownloadMediaFill")]
             RiIcon::RiVideoDownloadMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41556,7 +41542,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoDownloadMediaLine")]
             RiIcon::RiVideoDownloadMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41573,7 +41559,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoMediaFill")]
             RiIcon::RiVideoMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41590,7 +41576,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoMediaLine")]
             RiIcon::RiVideoMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41607,7 +41593,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoUploadMediaFill")]
             RiIcon::RiVideoUploadMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41624,7 +41610,7 @@ impl Data {
             }
             #[cfg(feature = "RiVideoUploadMediaLine")]
             RiIcon::RiVideoUploadMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41641,7 +41627,7 @@ impl Data {
             }
             #[cfg(feature = "RiVidicon2MediaFill")]
             RiIcon::RiVidicon2MediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41658,7 +41644,7 @@ impl Data {
             }
             #[cfg(feature = "RiVidicon2MediaLine")]
             RiIcon::RiVidicon2MediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41675,7 +41661,7 @@ impl Data {
             }
             #[cfg(feature = "RiVidiconMediaFill")]
             RiIcon::RiVidiconMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41692,7 +41678,7 @@ impl Data {
             }
             #[cfg(feature = "RiVidiconMediaLine")]
             RiIcon::RiVidiconMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41709,7 +41695,7 @@ impl Data {
             }
             #[cfg(feature = "RiVimeoLogosFill")]
             RiIcon::RiVimeoLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41726,7 +41712,7 @@ impl Data {
             }
             #[cfg(feature = "RiVimeoLogosLine")]
             RiIcon::RiVimeoLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41743,7 +41729,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipCrown2FinanceFill")]
             RiIcon::RiVipCrown2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41760,7 +41746,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipCrown2FinanceLine")]
             RiIcon::RiVipCrown2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41777,7 +41763,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipCrownFinanceFill")]
             RiIcon::RiVipCrownFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41794,7 +41780,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipCrownFinanceLine")]
             RiIcon::RiVipCrownFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41811,7 +41797,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipDiamondFinanceFill")]
             RiIcon::RiVipDiamondFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41828,7 +41814,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipDiamondFinanceLine")]
             RiIcon::RiVipDiamondFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41845,7 +41831,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipFinanceFill")]
             RiIcon::RiVipFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41862,7 +41848,7 @@ impl Data {
             }
             #[cfg(feature = "RiVipFinanceLine")]
             RiIcon::RiVipFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41879,7 +41865,7 @@ impl Data {
             }
             #[cfg(feature = "RiVirusHealthFill")]
             RiIcon::RiVirusHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41896,7 +41882,7 @@ impl Data {
             }
             #[cfg(feature = "RiVirusHealthLine")]
             RiIcon::RiVirusHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41913,7 +41899,7 @@ impl Data {
             }
             #[cfg(feature = "RiVisaLogosFill")]
             RiIcon::RiVisaLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41930,7 +41916,7 @@ impl Data {
             }
             #[cfg(feature = "RiVisaLogosLine")]
             RiIcon::RiVisaLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41947,7 +41933,7 @@ impl Data {
             }
             #[cfg(feature = "RiVoiceRecognitionOthersFill")]
             RiIcon::RiVoiceRecognitionOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41964,7 +41950,7 @@ impl Data {
             }
             #[cfg(feature = "RiVoiceRecognitionOthersLine")]
             RiIcon::RiVoiceRecognitionOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41981,7 +41967,7 @@ impl Data {
             }
             #[cfg(feature = "RiVoiceprintMediaFill")]
             RiIcon::RiVoiceprintMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -41998,7 +41984,7 @@ impl Data {
             }
             #[cfg(feature = "RiVoiceprintMediaLine")]
             RiIcon::RiVoiceprintMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42015,7 +42001,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeDownMediaFill")]
             RiIcon::RiVolumeDownMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42032,7 +42018,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeDownMediaLine")]
             RiIcon::RiVolumeDownMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42049,7 +42035,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeMuteMediaFill")]
             RiIcon::RiVolumeMuteMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42066,7 +42052,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeMuteMediaLine")]
             RiIcon::RiVolumeMuteMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42083,7 +42069,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeOffVibrateMediaFill")]
             RiIcon::RiVolumeOffVibrateMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42100,7 +42086,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeOffVibrateMediaLine")]
             RiIcon::RiVolumeOffVibrateMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42117,7 +42103,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeUpMediaFill")]
             RiIcon::RiVolumeUpMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42134,7 +42120,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeUpMediaLine")]
             RiIcon::RiVolumeUpMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42151,7 +42137,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeVibrateMediaFill")]
             RiIcon::RiVolumeVibrateMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42168,7 +42154,7 @@ impl Data {
             }
             #[cfg(feature = "RiVolumeVibrateMediaLine")]
             RiIcon::RiVolumeVibrateMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42185,7 +42171,7 @@ impl Data {
             }
             #[cfg(feature = "RiVuejsLogosFill")]
             RiIcon::RiVuejsLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42202,7 +42188,7 @@ impl Data {
             }
             #[cfg(feature = "RiVuejsLogosLine")]
             RiIcon::RiVuejsLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42219,7 +42205,7 @@ impl Data {
             }
             #[cfg(feature = "RiWalkMapFill")]
             RiIcon::RiWalkMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42236,7 +42222,7 @@ impl Data {
             }
             #[cfg(feature = "RiWalkMapLine")]
             RiIcon::RiWalkMapLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42253,7 +42239,7 @@ impl Data {
             }
             #[cfg(feature = "RiWallet2FinanceFill")]
             RiIcon::RiWallet2FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42270,7 +42256,7 @@ impl Data {
             }
             #[cfg(feature = "RiWallet2FinanceLine")]
             RiIcon::RiWallet2FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42287,7 +42273,7 @@ impl Data {
             }
             #[cfg(feature = "RiWallet3FinanceFill")]
             RiIcon::RiWallet3FinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42304,7 +42290,7 @@ impl Data {
             }
             #[cfg(feature = "RiWallet3FinanceLine")]
             RiIcon::RiWallet3FinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42321,7 +42307,7 @@ impl Data {
             }
             #[cfg(feature = "RiWalletFinanceFill")]
             RiIcon::RiWalletFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42338,7 +42324,7 @@ impl Data {
             }
             #[cfg(feature = "RiWalletFinanceLine")]
             RiIcon::RiWalletFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42355,7 +42341,7 @@ impl Data {
             }
             #[cfg(feature = "RiWaterFlashFinanceFill")]
             RiIcon::RiWaterFlashFinanceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42372,7 +42358,7 @@ impl Data {
             }
             #[cfg(feature = "RiWaterFlashFinanceLine")]
             RiIcon::RiWaterFlashFinanceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42389,7 +42375,7 @@ impl Data {
             }
             #[cfg(feature = "RiWebcamMediaFill")]
             RiIcon::RiWebcamMediaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42406,7 +42392,7 @@ impl Data {
             }
             #[cfg(feature = "RiWebcamMediaLine")]
             RiIcon::RiWebcamMediaLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42423,7 +42409,7 @@ impl Data {
             }
             #[cfg(feature = "RiWechat2LogosFill")]
             RiIcon::RiWechat2LogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42440,7 +42426,7 @@ impl Data {
             }
             #[cfg(feature = "RiWechat2LogosLine")]
             RiIcon::RiWechat2LogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42457,7 +42443,7 @@ impl Data {
             }
             #[cfg(feature = "RiWechatLogosFill")]
             RiIcon::RiWechatLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42474,7 +42460,7 @@ impl Data {
             }
             #[cfg(feature = "RiWechatLogosLine")]
             RiIcon::RiWechatLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42491,7 +42477,7 @@ impl Data {
             }
             #[cfg(feature = "RiWechatPayLogosFill")]
             RiIcon::RiWechatPayLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42508,7 +42494,7 @@ impl Data {
             }
             #[cfg(feature = "RiWechatPayLogosLine")]
             RiIcon::RiWechatPayLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42525,7 +42511,7 @@ impl Data {
             }
             #[cfg(feature = "RiWeiboLogosFill")]
             RiIcon::RiWeiboLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42542,7 +42528,7 @@ impl Data {
             }
             #[cfg(feature = "RiWeiboLogosLine")]
             RiIcon::RiWeiboLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42559,7 +42545,7 @@ impl Data {
             }
             #[cfg(feature = "RiWhatsappLogosFill")]
             RiIcon::RiWhatsappLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42576,7 +42562,7 @@ impl Data {
             }
             #[cfg(feature = "RiWhatsappLogosLine")]
             RiIcon::RiWhatsappLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42593,7 +42579,7 @@ impl Data {
             }
             #[cfg(feature = "RiWheelchairOthersFill")]
             RiIcon::RiWheelchairOthersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42610,7 +42596,7 @@ impl Data {
             }
             #[cfg(feature = "RiWheelchairOthersLine")]
             RiIcon::RiWheelchairOthersLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42627,7 +42613,7 @@ impl Data {
             }
             #[cfg(feature = "RiWifiDeviceFill")]
             RiIcon::RiWifiDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42644,7 +42630,7 @@ impl Data {
             }
             #[cfg(feature = "RiWifiDeviceLine")]
             RiIcon::RiWifiDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42661,7 +42647,7 @@ impl Data {
             }
             #[cfg(feature = "RiWifiOffDeviceFill")]
             RiIcon::RiWifiOffDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42678,7 +42664,7 @@ impl Data {
             }
             #[cfg(feature = "RiWifiOffDeviceLine")]
             RiIcon::RiWifiOffDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42695,7 +42681,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindow2BusinessFill")]
             RiIcon::RiWindow2BusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42712,7 +42698,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindow2BusinessLine")]
             RiIcon::RiWindow2BusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42729,7 +42715,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindowBusinessFill")]
             RiIcon::RiWindowBusinessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42746,7 +42732,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindowBusinessLine")]
             RiIcon::RiWindowBusinessLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42763,7 +42749,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindowsLogosFill")]
             RiIcon::RiWindowsLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42780,7 +42766,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindowsLogosLine")]
             RiIcon::RiWindowsLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42797,7 +42783,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindyWeatherFill")]
             RiIcon::RiWindyWeatherFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42814,7 +42800,7 @@ impl Data {
             }
             #[cfg(feature = "RiWindyWeatherLine")]
             RiIcon::RiWindyWeatherLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42831,7 +42817,7 @@ impl Data {
             }
             #[cfg(feature = "RiWirelessChargingDeviceFill")]
             RiIcon::RiWirelessChargingDeviceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42848,7 +42834,7 @@ impl Data {
             }
             #[cfg(feature = "RiWirelessChargingDeviceLine")]
             RiIcon::RiWirelessChargingDeviceLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42865,7 +42851,7 @@ impl Data {
             }
             #[cfg(feature = "RiWomenUserFill")]
             RiIcon::RiWomenUserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42882,7 +42868,7 @@ impl Data {
             }
             #[cfg(feature = "RiWomenUserLine")]
             RiIcon::RiWomenUserLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42899,7 +42885,7 @@ impl Data {
             }
             #[cfg(feature = "RiWubiInputEditor")]
             RiIcon::RiWubiInputEditor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42916,7 +42902,7 @@ impl Data {
             }
             #[cfg(feature = "RiXboxLogosFill")]
             RiIcon::RiXboxLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42933,7 +42919,7 @@ impl Data {
             }
             #[cfg(feature = "RiXboxLogosLine")]
             RiIcon::RiXboxLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42950,7 +42936,7 @@ impl Data {
             }
             #[cfg(feature = "RiXingLogosFill")]
             RiIcon::RiXingLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42967,7 +42953,7 @@ impl Data {
             }
             #[cfg(feature = "RiXingLogosLine")]
             RiIcon::RiXingLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -42984,7 +42970,7 @@ impl Data {
             }
             #[cfg(feature = "RiYoutubeLogosFill")]
             RiIcon::RiYoutubeLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43001,7 +42987,7 @@ impl Data {
             }
             #[cfg(feature = "RiYoutubeLogosLine")]
             RiIcon::RiYoutubeLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43018,7 +43004,7 @@ impl Data {
             }
             #[cfg(feature = "RiZcoolLogosFill")]
             RiIcon::RiZcoolLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43035,7 +43021,7 @@ impl Data {
             }
             #[cfg(feature = "RiZcoolLogosLine")]
             RiIcon::RiZcoolLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43052,7 +43038,7 @@ impl Data {
             }
             #[cfg(feature = "RiZhihuLogosFill")]
             RiIcon::RiZhihuLogosFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43069,7 +43055,7 @@ impl Data {
             }
             #[cfg(feature = "RiZhihuLogosLine")]
             RiIcon::RiZhihuLogosLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43086,7 +43072,7 @@ impl Data {
             }
             #[cfg(feature = "RiZoomInSystemFill")]
             RiIcon::RiZoomInSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43103,7 +43089,7 @@ impl Data {
             }
             #[cfg(feature = "RiZoomInSystemLine")]
             RiIcon::RiZoomInSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43120,7 +43106,7 @@ impl Data {
             }
             #[cfg(feature = "RiZoomOutSystemFill")]
             RiIcon::RiZoomOutSystemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43137,7 +43123,7 @@ impl Data {
             }
             #[cfg(feature = "RiZoomOutSystemLine")]
             RiIcon::RiZoomOutSystemLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43154,7 +43140,7 @@ impl Data {
             }
             #[cfg(feature = "RiZzzHealthFill")]
             RiIcon::RiZzzHealthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43171,7 +43157,7 @@ impl Data {
             }
             #[cfg(feature = "RiZzzHealthLine")]
             RiIcon::RiZzzHealthLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -43188,62 +43174,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosRiIcon(
-    cx: leptos::Scope,
-    icon: RiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

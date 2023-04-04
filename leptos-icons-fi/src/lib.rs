@@ -594,26 +594,12 @@ pub enum FiIcon {
     FiZoomOut,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: FiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for FiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "FiActivity")]
             FiIcon::FiActivity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -630,7 +616,7 @@ impl Data {
             }
             #[cfg(feature = "FiAirplay")]
             FiIcon::FiAirplay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -647,7 +633,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlertCircle")]
             FiIcon::FiAlertCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -664,7 +650,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlertOctagon")]
             FiIcon::FiAlertOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -681,7 +667,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlertTriangle")]
             FiIcon::FiAlertTriangle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -698,7 +684,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlignCenter")]
             FiIcon::FiAlignCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -715,7 +701,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlignJustify")]
             FiIcon::FiAlignJustify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -732,7 +718,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlignLeft")]
             FiIcon::FiAlignLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -749,7 +735,7 @@ impl Data {
             }
             #[cfg(feature = "FiAlignRight")]
             FiIcon::FiAlignRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -766,7 +752,7 @@ impl Data {
             }
             #[cfg(feature = "FiAnchor")]
             FiIcon::FiAnchor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -783,7 +769,7 @@ impl Data {
             }
             #[cfg(feature = "FiAperture")]
             FiIcon::FiAperture => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -800,7 +786,7 @@ impl Data {
             }
             #[cfg(feature = "FiArchive")]
             FiIcon::FiArchive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -817,7 +803,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowDown")]
             FiIcon::FiArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -834,7 +820,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowDownCircle")]
             FiIcon::FiArrowDownCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -851,7 +837,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowDownLeft")]
             FiIcon::FiArrowDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -868,7 +854,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowDownRight")]
             FiIcon::FiArrowDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -885,7 +871,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowLeft")]
             FiIcon::FiArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -902,7 +888,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowLeftCircle")]
             FiIcon::FiArrowLeftCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -919,7 +905,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowRight")]
             FiIcon::FiArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -936,7 +922,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowRightCircle")]
             FiIcon::FiArrowRightCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -953,7 +939,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowUp")]
             FiIcon::FiArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -970,7 +956,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowUpCircle")]
             FiIcon::FiArrowUpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -987,7 +973,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowUpLeft")]
             FiIcon::FiArrowUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1004,7 +990,7 @@ impl Data {
             }
             #[cfg(feature = "FiArrowUpRight")]
             FiIcon::FiArrowUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1021,7 +1007,7 @@ impl Data {
             }
             #[cfg(feature = "FiAtSign")]
             FiIcon::FiAtSign => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1038,7 +1024,7 @@ impl Data {
             }
             #[cfg(feature = "FiAward")]
             FiIcon::FiAward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1055,7 +1041,7 @@ impl Data {
             }
             #[cfg(feature = "FiBarChart")]
             FiIcon::FiBarChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1072,7 +1058,7 @@ impl Data {
             }
             #[cfg(feature = "FiBarChart2")]
             FiIcon::FiBarChart2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1089,7 +1075,7 @@ impl Data {
             }
             #[cfg(feature = "FiBattery")]
             FiIcon::FiBattery => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1106,7 +1092,7 @@ impl Data {
             }
             #[cfg(feature = "FiBatteryCharging")]
             FiIcon::FiBatteryCharging => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1123,7 +1109,7 @@ impl Data {
             }
             #[cfg(feature = "FiBell")]
             FiIcon::FiBell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1140,7 +1126,7 @@ impl Data {
             }
             #[cfg(feature = "FiBellOff")]
             FiIcon::FiBellOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1157,7 +1143,7 @@ impl Data {
             }
             #[cfg(feature = "FiBluetooth")]
             FiIcon::FiBluetooth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1174,7 +1160,7 @@ impl Data {
             }
             #[cfg(feature = "FiBold")]
             FiIcon::FiBold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1191,7 +1177,7 @@ impl Data {
             }
             #[cfg(feature = "FiBook")]
             FiIcon::FiBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1208,7 +1194,7 @@ impl Data {
             }
             #[cfg(feature = "FiBookOpen")]
             FiIcon::FiBookOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1225,7 +1211,7 @@ impl Data {
             }
             #[cfg(feature = "FiBookmark")]
             FiIcon::FiBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1242,7 +1228,7 @@ impl Data {
             }
             #[cfg(feature = "FiBox")]
             FiIcon::FiBox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1259,7 +1245,7 @@ impl Data {
             }
             #[cfg(feature = "FiBriefcase")]
             FiIcon::FiBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1276,7 +1262,7 @@ impl Data {
             }
             #[cfg(feature = "FiCalendar")]
             FiIcon::FiCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1293,7 +1279,7 @@ impl Data {
             }
             #[cfg(feature = "FiCamera")]
             FiIcon::FiCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1310,7 +1296,7 @@ impl Data {
             }
             #[cfg(feature = "FiCameraOff")]
             FiIcon::FiCameraOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1327,7 +1313,7 @@ impl Data {
             }
             #[cfg(feature = "FiCast")]
             FiIcon::FiCast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1344,7 +1330,7 @@ impl Data {
             }
             #[cfg(feature = "FiCheck")]
             FiIcon::FiCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1361,7 +1347,7 @@ impl Data {
             }
             #[cfg(feature = "FiCheckCircle")]
             FiIcon::FiCheckCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1378,7 +1364,7 @@ impl Data {
             }
             #[cfg(feature = "FiCheckSquare")]
             FiIcon::FiCheckSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1395,7 +1381,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronDown")]
             FiIcon::FiChevronDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1412,7 +1398,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronLeft")]
             FiIcon::FiChevronLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1429,7 +1415,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronRight")]
             FiIcon::FiChevronRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1446,7 +1432,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronUp")]
             FiIcon::FiChevronUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1463,7 +1449,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronsDown")]
             FiIcon::FiChevronsDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1480,7 +1466,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronsLeft")]
             FiIcon::FiChevronsLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1497,7 +1483,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronsRight")]
             FiIcon::FiChevronsRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1514,7 +1500,7 @@ impl Data {
             }
             #[cfg(feature = "FiChevronsUp")]
             FiIcon::FiChevronsUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1531,7 +1517,7 @@ impl Data {
             }
             #[cfg(feature = "FiChrome")]
             FiIcon::FiChrome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1548,7 +1534,7 @@ impl Data {
             }
             #[cfg(feature = "FiCircle")]
             FiIcon::FiCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1565,7 +1551,7 @@ impl Data {
             }
             #[cfg(feature = "FiClipboard")]
             FiIcon::FiClipboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1582,7 +1568,7 @@ impl Data {
             }
             #[cfg(feature = "FiClock")]
             FiIcon::FiClock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1599,7 +1585,7 @@ impl Data {
             }
             #[cfg(feature = "FiCloud")]
             FiIcon::FiCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1616,7 +1602,7 @@ impl Data {
             }
             #[cfg(feature = "FiCloudDrizzle")]
             FiIcon::FiCloudDrizzle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1633,7 +1619,7 @@ impl Data {
             }
             #[cfg(feature = "FiCloudLightning")]
             FiIcon::FiCloudLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1650,7 +1636,7 @@ impl Data {
             }
             #[cfg(feature = "FiCloudOff")]
             FiIcon::FiCloudOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1667,7 +1653,7 @@ impl Data {
             }
             #[cfg(feature = "FiCloudRain")]
             FiIcon::FiCloudRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1684,7 +1670,7 @@ impl Data {
             }
             #[cfg(feature = "FiCloudSnow")]
             FiIcon::FiCloudSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1701,7 +1687,7 @@ impl Data {
             }
             #[cfg(feature = "FiCode")]
             FiIcon::FiCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1718,7 +1704,7 @@ impl Data {
             }
             #[cfg(feature = "FiCodepen")]
             FiIcon::FiCodepen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1735,7 +1721,7 @@ impl Data {
             }
             #[cfg(feature = "FiCodesandbox")]
             FiIcon::FiCodesandbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1752,7 +1738,7 @@ impl Data {
             }
             #[cfg(feature = "FiCoffee")]
             FiIcon::FiCoffee => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1769,7 +1755,7 @@ impl Data {
             }
             #[cfg(feature = "FiColumns")]
             FiIcon::FiColumns => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1786,7 +1772,7 @@ impl Data {
             }
             #[cfg(feature = "FiCommand")]
             FiIcon::FiCommand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1803,7 +1789,7 @@ impl Data {
             }
             #[cfg(feature = "FiCompass")]
             FiIcon::FiCompass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1820,7 +1806,7 @@ impl Data {
             }
             #[cfg(feature = "FiCopy")]
             FiIcon::FiCopy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1837,7 +1823,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerDownLeft")]
             FiIcon::FiCornerDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1854,7 +1840,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerDownRight")]
             FiIcon::FiCornerDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1871,7 +1857,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerLeftDown")]
             FiIcon::FiCornerLeftDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1888,7 +1874,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerLeftUp")]
             FiIcon::FiCornerLeftUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1905,7 +1891,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerRightDown")]
             FiIcon::FiCornerRightDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1922,7 +1908,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerRightUp")]
             FiIcon::FiCornerRightUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1939,7 +1925,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerUpLeft")]
             FiIcon::FiCornerUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1956,7 +1942,7 @@ impl Data {
             }
             #[cfg(feature = "FiCornerUpRight")]
             FiIcon::FiCornerUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1973,7 +1959,7 @@ impl Data {
             }
             #[cfg(feature = "FiCpu")]
             FiIcon::FiCpu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1990,7 +1976,7 @@ impl Data {
             }
             #[cfg(feature = "FiCreditCard")]
             FiIcon::FiCreditCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2007,7 +1993,7 @@ impl Data {
             }
             #[cfg(feature = "FiCrop")]
             FiIcon::FiCrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2024,7 +2010,7 @@ impl Data {
             }
             #[cfg(feature = "FiCrosshair")]
             FiIcon::FiCrosshair => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2041,7 +2027,7 @@ impl Data {
             }
             #[cfg(feature = "FiDatabase")]
             FiIcon::FiDatabase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2058,7 +2044,7 @@ impl Data {
             }
             #[cfg(feature = "FiDelete")]
             FiIcon::FiDelete => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2075,7 +2061,7 @@ impl Data {
             }
             #[cfg(feature = "FiDisc")]
             FiIcon::FiDisc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2092,7 +2078,7 @@ impl Data {
             }
             #[cfg(feature = "FiDivide")]
             FiIcon::FiDivide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2109,7 +2095,7 @@ impl Data {
             }
             #[cfg(feature = "FiDivideCircle")]
             FiIcon::FiDivideCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2126,7 +2112,7 @@ impl Data {
             }
             #[cfg(feature = "FiDivideSquare")]
             FiIcon::FiDivideSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2143,7 +2129,7 @@ impl Data {
             }
             #[cfg(feature = "FiDollarSign")]
             FiIcon::FiDollarSign => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2160,7 +2146,7 @@ impl Data {
             }
             #[cfg(feature = "FiDownload")]
             FiIcon::FiDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2177,7 +2163,7 @@ impl Data {
             }
             #[cfg(feature = "FiDownloadCloud")]
             FiIcon::FiDownloadCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2194,7 +2180,7 @@ impl Data {
             }
             #[cfg(feature = "FiDribbble")]
             FiIcon::FiDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2211,7 +2197,7 @@ impl Data {
             }
             #[cfg(feature = "FiDroplet")]
             FiIcon::FiDroplet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2228,7 +2214,7 @@ impl Data {
             }
             #[cfg(feature = "FiEdit")]
             FiIcon::FiEdit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2245,7 +2231,7 @@ impl Data {
             }
             #[cfg(feature = "FiEdit2")]
             FiIcon::FiEdit2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2262,7 +2248,7 @@ impl Data {
             }
             #[cfg(feature = "FiEdit3")]
             FiIcon::FiEdit3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2279,7 +2265,7 @@ impl Data {
             }
             #[cfg(feature = "FiExternalLink")]
             FiIcon::FiExternalLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2296,7 +2282,7 @@ impl Data {
             }
             #[cfg(feature = "FiEye")]
             FiIcon::FiEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2313,7 +2299,7 @@ impl Data {
             }
             #[cfg(feature = "FiEyeOff")]
             FiIcon::FiEyeOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2330,7 +2316,7 @@ impl Data {
             }
             #[cfg(feature = "FiFacebook")]
             FiIcon::FiFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2347,7 +2333,7 @@ impl Data {
             }
             #[cfg(feature = "FiFastForward")]
             FiIcon::FiFastForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2364,7 +2350,7 @@ impl Data {
             }
             #[cfg(feature = "FiFeather")]
             FiIcon::FiFeather => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2381,7 +2367,7 @@ impl Data {
             }
             #[cfg(feature = "FiFigma")]
             FiIcon::FiFigma => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2398,7 +2384,7 @@ impl Data {
             }
             #[cfg(feature = "FiFile")]
             FiIcon::FiFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2415,7 +2401,7 @@ impl Data {
             }
             #[cfg(feature = "FiFileMinus")]
             FiIcon::FiFileMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2432,7 +2418,7 @@ impl Data {
             }
             #[cfg(feature = "FiFilePlus")]
             FiIcon::FiFilePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2449,7 +2435,7 @@ impl Data {
             }
             #[cfg(feature = "FiFileText")]
             FiIcon::FiFileText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2466,7 +2452,7 @@ impl Data {
             }
             #[cfg(feature = "FiFilm")]
             FiIcon::FiFilm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2483,7 +2469,7 @@ impl Data {
             }
             #[cfg(feature = "FiFilter")]
             FiIcon::FiFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2500,7 +2486,7 @@ impl Data {
             }
             #[cfg(feature = "FiFlag")]
             FiIcon::FiFlag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2517,7 +2503,7 @@ impl Data {
             }
             #[cfg(feature = "FiFolder")]
             FiIcon::FiFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2534,7 +2520,7 @@ impl Data {
             }
             #[cfg(feature = "FiFolderMinus")]
             FiIcon::FiFolderMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2551,7 +2537,7 @@ impl Data {
             }
             #[cfg(feature = "FiFolderPlus")]
             FiIcon::FiFolderPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2568,7 +2554,7 @@ impl Data {
             }
             #[cfg(feature = "FiFramer")]
             FiIcon::FiFramer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2585,7 +2571,7 @@ impl Data {
             }
             #[cfg(feature = "FiFrown")]
             FiIcon::FiFrown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2602,7 +2588,7 @@ impl Data {
             }
             #[cfg(feature = "FiGift")]
             FiIcon::FiGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2619,7 +2605,7 @@ impl Data {
             }
             #[cfg(feature = "FiGitBranch")]
             FiIcon::FiGitBranch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2636,7 +2622,7 @@ impl Data {
             }
             #[cfg(feature = "FiGitCommit")]
             FiIcon::FiGitCommit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2653,7 +2639,7 @@ impl Data {
             }
             #[cfg(feature = "FiGitMerge")]
             FiIcon::FiGitMerge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2670,7 +2656,7 @@ impl Data {
             }
             #[cfg(feature = "FiGitPullRequest")]
             FiIcon::FiGitPullRequest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2687,7 +2673,7 @@ impl Data {
             }
             #[cfg(feature = "FiGithub")]
             FiIcon::FiGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2704,7 +2690,7 @@ impl Data {
             }
             #[cfg(feature = "FiGitlab")]
             FiIcon::FiGitlab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2721,7 +2707,7 @@ impl Data {
             }
             #[cfg(feature = "FiGlobe")]
             FiIcon::FiGlobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2738,7 +2724,7 @@ impl Data {
             }
             #[cfg(feature = "FiGrid")]
             FiIcon::FiGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2755,7 +2741,7 @@ impl Data {
             }
             #[cfg(feature = "FiHardDrive")]
             FiIcon::FiHardDrive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2772,7 +2758,7 @@ impl Data {
             }
             #[cfg(feature = "FiHash")]
             FiIcon::FiHash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2789,7 +2775,7 @@ impl Data {
             }
             #[cfg(feature = "FiHeadphones")]
             FiIcon::FiHeadphones => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2806,7 +2792,7 @@ impl Data {
             }
             #[cfg(feature = "FiHeart")]
             FiIcon::FiHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2823,7 +2809,7 @@ impl Data {
             }
             #[cfg(feature = "FiHelpCircle")]
             FiIcon::FiHelpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2840,7 +2826,7 @@ impl Data {
             }
             #[cfg(feature = "FiHexagon")]
             FiIcon::FiHexagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2857,7 +2843,7 @@ impl Data {
             }
             #[cfg(feature = "FiHome")]
             FiIcon::FiHome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2874,7 +2860,7 @@ impl Data {
             }
             #[cfg(feature = "FiImage")]
             FiIcon::FiImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2891,7 +2877,7 @@ impl Data {
             }
             #[cfg(feature = "FiInbox")]
             FiIcon::FiInbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2908,7 +2894,7 @@ impl Data {
             }
             #[cfg(feature = "FiInfo")]
             FiIcon::FiInfo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2925,7 +2911,7 @@ impl Data {
             }
             #[cfg(feature = "FiInstagram")]
             FiIcon::FiInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2942,7 +2928,7 @@ impl Data {
             }
             #[cfg(feature = "FiItalic")]
             FiIcon::FiItalic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2959,7 +2945,7 @@ impl Data {
             }
             #[cfg(feature = "FiKey")]
             FiIcon::FiKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2976,7 +2962,7 @@ impl Data {
             }
             #[cfg(feature = "FiLayers")]
             FiIcon::FiLayers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2993,7 +2979,7 @@ impl Data {
             }
             #[cfg(feature = "FiLayout")]
             FiIcon::FiLayout => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3010,7 +2996,7 @@ impl Data {
             }
             #[cfg(feature = "FiLifeBuoy")]
             FiIcon::FiLifeBuoy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3027,7 +3013,7 @@ impl Data {
             }
             #[cfg(feature = "FiLink")]
             FiIcon::FiLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3044,7 +3030,7 @@ impl Data {
             }
             #[cfg(feature = "FiLink2")]
             FiIcon::FiLink2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3061,7 +3047,7 @@ impl Data {
             }
             #[cfg(feature = "FiLinkedin")]
             FiIcon::FiLinkedin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3078,7 +3064,7 @@ impl Data {
             }
             #[cfg(feature = "FiList")]
             FiIcon::FiList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3095,7 +3081,7 @@ impl Data {
             }
             #[cfg(feature = "FiLoader")]
             FiIcon::FiLoader => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3112,7 +3098,7 @@ impl Data {
             }
             #[cfg(feature = "FiLock")]
             FiIcon::FiLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3129,7 +3115,7 @@ impl Data {
             }
             #[cfg(feature = "FiLogIn")]
             FiIcon::FiLogIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3146,7 +3132,7 @@ impl Data {
             }
             #[cfg(feature = "FiLogOut")]
             FiIcon::FiLogOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3163,7 +3149,7 @@ impl Data {
             }
             #[cfg(feature = "FiMail")]
             FiIcon::FiMail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3180,7 +3166,7 @@ impl Data {
             }
             #[cfg(feature = "FiMap")]
             FiIcon::FiMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3197,7 +3183,7 @@ impl Data {
             }
             #[cfg(feature = "FiMapPin")]
             FiIcon::FiMapPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3214,7 +3200,7 @@ impl Data {
             }
             #[cfg(feature = "FiMaximize")]
             FiIcon::FiMaximize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3231,7 +3217,7 @@ impl Data {
             }
             #[cfg(feature = "FiMaximize2")]
             FiIcon::FiMaximize2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3248,7 +3234,7 @@ impl Data {
             }
             #[cfg(feature = "FiMeh")]
             FiIcon::FiMeh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3265,7 +3251,7 @@ impl Data {
             }
             #[cfg(feature = "FiMenu")]
             FiIcon::FiMenu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3282,7 +3268,7 @@ impl Data {
             }
             #[cfg(feature = "FiMessageCircle")]
             FiIcon::FiMessageCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3299,7 +3285,7 @@ impl Data {
             }
             #[cfg(feature = "FiMessageSquare")]
             FiIcon::FiMessageSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3316,7 +3302,7 @@ impl Data {
             }
             #[cfg(feature = "FiMic")]
             FiIcon::FiMic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3333,7 +3319,7 @@ impl Data {
             }
             #[cfg(feature = "FiMicOff")]
             FiIcon::FiMicOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3350,7 +3336,7 @@ impl Data {
             }
             #[cfg(feature = "FiMinimize")]
             FiIcon::FiMinimize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3367,7 +3353,7 @@ impl Data {
             }
             #[cfg(feature = "FiMinimize2")]
             FiIcon::FiMinimize2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3384,7 +3370,7 @@ impl Data {
             }
             #[cfg(feature = "FiMinus")]
             FiIcon::FiMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3401,7 +3387,7 @@ impl Data {
             }
             #[cfg(feature = "FiMinusCircle")]
             FiIcon::FiMinusCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3418,7 +3404,7 @@ impl Data {
             }
             #[cfg(feature = "FiMinusSquare")]
             FiIcon::FiMinusSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3435,7 +3421,7 @@ impl Data {
             }
             #[cfg(feature = "FiMonitor")]
             FiIcon::FiMonitor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3452,7 +3438,7 @@ impl Data {
             }
             #[cfg(feature = "FiMoon")]
             FiIcon::FiMoon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3469,7 +3455,7 @@ impl Data {
             }
             #[cfg(feature = "FiMoreHorizontal")]
             FiIcon::FiMoreHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3486,7 +3472,7 @@ impl Data {
             }
             #[cfg(feature = "FiMoreVertical")]
             FiIcon::FiMoreVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3503,7 +3489,7 @@ impl Data {
             }
             #[cfg(feature = "FiMousePointer")]
             FiIcon::FiMousePointer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3520,7 +3506,7 @@ impl Data {
             }
             #[cfg(feature = "FiMove")]
             FiIcon::FiMove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3537,7 +3523,7 @@ impl Data {
             }
             #[cfg(feature = "FiMusic")]
             FiIcon::FiMusic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3554,7 +3540,7 @@ impl Data {
             }
             #[cfg(feature = "FiNavigation")]
             FiIcon::FiNavigation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3571,7 +3557,7 @@ impl Data {
             }
             #[cfg(feature = "FiNavigation2")]
             FiIcon::FiNavigation2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3588,7 +3574,7 @@ impl Data {
             }
             #[cfg(feature = "FiOctagon")]
             FiIcon::FiOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3605,7 +3591,7 @@ impl Data {
             }
             #[cfg(feature = "FiPackage")]
             FiIcon::FiPackage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3622,7 +3608,7 @@ impl Data {
             }
             #[cfg(feature = "FiPaperclip")]
             FiIcon::FiPaperclip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3639,7 +3625,7 @@ impl Data {
             }
             #[cfg(feature = "FiPause")]
             FiIcon::FiPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3656,7 +3642,7 @@ impl Data {
             }
             #[cfg(feature = "FiPauseCircle")]
             FiIcon::FiPauseCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3673,7 +3659,7 @@ impl Data {
             }
             #[cfg(feature = "FiPenTool")]
             FiIcon::FiPenTool => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3690,7 +3676,7 @@ impl Data {
             }
             #[cfg(feature = "FiPercent")]
             FiIcon::FiPercent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3707,7 +3693,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhone")]
             FiIcon::FiPhone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3724,7 +3710,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhoneCall")]
             FiIcon::FiPhoneCall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3741,7 +3727,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhoneForwarded")]
             FiIcon::FiPhoneForwarded => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3758,7 +3744,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhoneIncoming")]
             FiIcon::FiPhoneIncoming => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3775,7 +3761,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhoneMissed")]
             FiIcon::FiPhoneMissed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3792,7 +3778,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhoneOff")]
             FiIcon::FiPhoneOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3809,7 +3795,7 @@ impl Data {
             }
             #[cfg(feature = "FiPhoneOutgoing")]
             FiIcon::FiPhoneOutgoing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3826,7 +3812,7 @@ impl Data {
             }
             #[cfg(feature = "FiPieChart")]
             FiIcon::FiPieChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3843,7 +3829,7 @@ impl Data {
             }
             #[cfg(feature = "FiPlay")]
             FiIcon::FiPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3860,7 +3846,7 @@ impl Data {
             }
             #[cfg(feature = "FiPlayCircle")]
             FiIcon::FiPlayCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3877,7 +3863,7 @@ impl Data {
             }
             #[cfg(feature = "FiPlus")]
             FiIcon::FiPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3894,7 +3880,7 @@ impl Data {
             }
             #[cfg(feature = "FiPlusCircle")]
             FiIcon::FiPlusCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3911,7 +3897,7 @@ impl Data {
             }
             #[cfg(feature = "FiPlusSquare")]
             FiIcon::FiPlusSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3928,7 +3914,7 @@ impl Data {
             }
             #[cfg(feature = "FiPocket")]
             FiIcon::FiPocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3945,7 +3931,7 @@ impl Data {
             }
             #[cfg(feature = "FiPower")]
             FiIcon::FiPower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3962,7 +3948,7 @@ impl Data {
             }
             #[cfg(feature = "FiPrinter")]
             FiIcon::FiPrinter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3979,7 +3965,7 @@ impl Data {
             }
             #[cfg(feature = "FiRadio")]
             FiIcon::FiRadio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3996,7 +3982,7 @@ impl Data {
             }
             #[cfg(feature = "FiRefreshCcw")]
             FiIcon::FiRefreshCcw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4013,7 +3999,7 @@ impl Data {
             }
             #[cfg(feature = "FiRefreshCw")]
             FiIcon::FiRefreshCw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4030,7 +4016,7 @@ impl Data {
             }
             #[cfg(feature = "FiRepeat")]
             FiIcon::FiRepeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4047,7 +4033,7 @@ impl Data {
             }
             #[cfg(feature = "FiRewind")]
             FiIcon::FiRewind => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4064,7 +4050,7 @@ impl Data {
             }
             #[cfg(feature = "FiRotateCcw")]
             FiIcon::FiRotateCcw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4081,7 +4067,7 @@ impl Data {
             }
             #[cfg(feature = "FiRotateCw")]
             FiIcon::FiRotateCw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4098,7 +4084,7 @@ impl Data {
             }
             #[cfg(feature = "FiRss")]
             FiIcon::FiRss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4115,7 +4101,7 @@ impl Data {
             }
             #[cfg(feature = "FiSave")]
             FiIcon::FiSave => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4132,7 +4118,7 @@ impl Data {
             }
             #[cfg(feature = "FiScissors")]
             FiIcon::FiScissors => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4149,7 +4135,7 @@ impl Data {
             }
             #[cfg(feature = "FiSearch")]
             FiIcon::FiSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4166,7 +4152,7 @@ impl Data {
             }
             #[cfg(feature = "FiSend")]
             FiIcon::FiSend => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4183,7 +4169,7 @@ impl Data {
             }
             #[cfg(feature = "FiServer")]
             FiIcon::FiServer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4200,7 +4186,7 @@ impl Data {
             }
             #[cfg(feature = "FiSettings")]
             FiIcon::FiSettings => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4217,7 +4203,7 @@ impl Data {
             }
             #[cfg(feature = "FiShare")]
             FiIcon::FiShare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4234,7 +4220,7 @@ impl Data {
             }
             #[cfg(feature = "FiShare2")]
             FiIcon::FiShare2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4251,7 +4237,7 @@ impl Data {
             }
             #[cfg(feature = "FiShield")]
             FiIcon::FiShield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4268,7 +4254,7 @@ impl Data {
             }
             #[cfg(feature = "FiShieldOff")]
             FiIcon::FiShieldOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4285,7 +4271,7 @@ impl Data {
             }
             #[cfg(feature = "FiShoppingBag")]
             FiIcon::FiShoppingBag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4302,7 +4288,7 @@ impl Data {
             }
             #[cfg(feature = "FiShoppingCart")]
             FiIcon::FiShoppingCart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4319,7 +4305,7 @@ impl Data {
             }
             #[cfg(feature = "FiShuffle")]
             FiIcon::FiShuffle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4336,7 +4322,7 @@ impl Data {
             }
             #[cfg(feature = "FiSidebar")]
             FiIcon::FiSidebar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4353,7 +4339,7 @@ impl Data {
             }
             #[cfg(feature = "FiSkipBack")]
             FiIcon::FiSkipBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4370,7 +4356,7 @@ impl Data {
             }
             #[cfg(feature = "FiSkipForward")]
             FiIcon::FiSkipForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4387,7 +4373,7 @@ impl Data {
             }
             #[cfg(feature = "FiSlack")]
             FiIcon::FiSlack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4404,7 +4390,7 @@ impl Data {
             }
             #[cfg(feature = "FiSlash")]
             FiIcon::FiSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4421,7 +4407,7 @@ impl Data {
             }
             #[cfg(feature = "FiSliders")]
             FiIcon::FiSliders => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4438,7 +4424,7 @@ impl Data {
             }
             #[cfg(feature = "FiSmartphone")]
             FiIcon::FiSmartphone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4455,7 +4441,7 @@ impl Data {
             }
             #[cfg(feature = "FiSmile")]
             FiIcon::FiSmile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4472,7 +4458,7 @@ impl Data {
             }
             #[cfg(feature = "FiSpeaker")]
             FiIcon::FiSpeaker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4489,7 +4475,7 @@ impl Data {
             }
             #[cfg(feature = "FiSquare")]
             FiIcon::FiSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4506,7 +4492,7 @@ impl Data {
             }
             #[cfg(feature = "FiStar")]
             FiIcon::FiStar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4523,7 +4509,7 @@ impl Data {
             }
             #[cfg(feature = "FiStopCircle")]
             FiIcon::FiStopCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4540,7 +4526,7 @@ impl Data {
             }
             #[cfg(feature = "FiSun")]
             FiIcon::FiSun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4557,7 +4543,7 @@ impl Data {
             }
             #[cfg(feature = "FiSunrise")]
             FiIcon::FiSunrise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4574,7 +4560,7 @@ impl Data {
             }
             #[cfg(feature = "FiSunset")]
             FiIcon::FiSunset => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4591,7 +4577,7 @@ impl Data {
             }
             #[cfg(feature = "FiTable")]
             FiIcon::FiTable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4608,7 +4594,7 @@ impl Data {
             }
             #[cfg(feature = "FiTablet")]
             FiIcon::FiTablet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4625,7 +4611,7 @@ impl Data {
             }
             #[cfg(feature = "FiTag")]
             FiIcon::FiTag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4642,7 +4628,7 @@ impl Data {
             }
             #[cfg(feature = "FiTarget")]
             FiIcon::FiTarget => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4659,7 +4645,7 @@ impl Data {
             }
             #[cfg(feature = "FiTerminal")]
             FiIcon::FiTerminal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4676,7 +4662,7 @@ impl Data {
             }
             #[cfg(feature = "FiThermometer")]
             FiIcon::FiThermometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4693,7 +4679,7 @@ impl Data {
             }
             #[cfg(feature = "FiThumbsDown")]
             FiIcon::FiThumbsDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4710,7 +4696,7 @@ impl Data {
             }
             #[cfg(feature = "FiThumbsUp")]
             FiIcon::FiThumbsUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4727,7 +4713,7 @@ impl Data {
             }
             #[cfg(feature = "FiToggleLeft")]
             FiIcon::FiToggleLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4744,7 +4730,7 @@ impl Data {
             }
             #[cfg(feature = "FiToggleRight")]
             FiIcon::FiToggleRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4761,7 +4747,7 @@ impl Data {
             }
             #[cfg(feature = "FiTool")]
             FiIcon::FiTool => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4778,7 +4764,7 @@ impl Data {
             }
             #[cfg(feature = "FiTrash")]
             FiIcon::FiTrash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4795,7 +4781,7 @@ impl Data {
             }
             #[cfg(feature = "FiTrash2")]
             FiIcon::FiTrash2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4812,7 +4798,7 @@ impl Data {
             }
             #[cfg(feature = "FiTrello")]
             FiIcon::FiTrello => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4829,7 +4815,7 @@ impl Data {
             }
             #[cfg(feature = "FiTrendingDown")]
             FiIcon::FiTrendingDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4846,7 +4832,7 @@ impl Data {
             }
             #[cfg(feature = "FiTrendingUp")]
             FiIcon::FiTrendingUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4863,7 +4849,7 @@ impl Data {
             }
             #[cfg(feature = "FiTriangle")]
             FiIcon::FiTriangle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4880,7 +4866,7 @@ impl Data {
             }
             #[cfg(feature = "FiTruck")]
             FiIcon::FiTruck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4897,7 +4883,7 @@ impl Data {
             }
             #[cfg(feature = "FiTv")]
             FiIcon::FiTv => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4914,7 +4900,7 @@ impl Data {
             }
             #[cfg(feature = "FiTwitch")]
             FiIcon::FiTwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4931,7 +4917,7 @@ impl Data {
             }
             #[cfg(feature = "FiTwitter")]
             FiIcon::FiTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4948,7 +4934,7 @@ impl Data {
             }
             #[cfg(feature = "FiType")]
             FiIcon::FiType => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4965,7 +4951,7 @@ impl Data {
             }
             #[cfg(feature = "FiUmbrella")]
             FiIcon::FiUmbrella => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4982,7 +4968,7 @@ impl Data {
             }
             #[cfg(feature = "FiUnderline")]
             FiIcon::FiUnderline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4999,7 +4985,7 @@ impl Data {
             }
             #[cfg(feature = "FiUnlock")]
             FiIcon::FiUnlock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5016,7 +5002,7 @@ impl Data {
             }
             #[cfg(feature = "FiUpload")]
             FiIcon::FiUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5033,7 +5019,7 @@ impl Data {
             }
             #[cfg(feature = "FiUploadCloud")]
             FiIcon::FiUploadCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5050,7 +5036,7 @@ impl Data {
             }
             #[cfg(feature = "FiUser")]
             FiIcon::FiUser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5067,7 +5053,7 @@ impl Data {
             }
             #[cfg(feature = "FiUserCheck")]
             FiIcon::FiUserCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5084,7 +5070,7 @@ impl Data {
             }
             #[cfg(feature = "FiUserMinus")]
             FiIcon::FiUserMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5101,7 +5087,7 @@ impl Data {
             }
             #[cfg(feature = "FiUserPlus")]
             FiIcon::FiUserPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5118,7 +5104,7 @@ impl Data {
             }
             #[cfg(feature = "FiUserX")]
             FiIcon::FiUserX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5135,7 +5121,7 @@ impl Data {
             }
             #[cfg(feature = "FiUsers")]
             FiIcon::FiUsers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5152,7 +5138,7 @@ impl Data {
             }
             #[cfg(feature = "FiVideo")]
             FiIcon::FiVideo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5169,7 +5155,7 @@ impl Data {
             }
             #[cfg(feature = "FiVideoOff")]
             FiIcon::FiVideoOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5186,7 +5172,7 @@ impl Data {
             }
             #[cfg(feature = "FiVoicemail")]
             FiIcon::FiVoicemail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5203,7 +5189,7 @@ impl Data {
             }
             #[cfg(feature = "FiVolume")]
             FiIcon::FiVolume => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5220,7 +5206,7 @@ impl Data {
             }
             #[cfg(feature = "FiVolume1")]
             FiIcon::FiVolume1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5237,7 +5223,7 @@ impl Data {
             }
             #[cfg(feature = "FiVolume2")]
             FiIcon::FiVolume2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5254,7 +5240,7 @@ impl Data {
             }
             #[cfg(feature = "FiVolumeX")]
             FiIcon::FiVolumeX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5271,7 +5257,7 @@ impl Data {
             }
             #[cfg(feature = "FiWatch")]
             FiIcon::FiWatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5288,7 +5274,7 @@ impl Data {
             }
             #[cfg(feature = "FiWifi")]
             FiIcon::FiWifi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5305,7 +5291,7 @@ impl Data {
             }
             #[cfg(feature = "FiWifiOff")]
             FiIcon::FiWifiOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5322,7 +5308,7 @@ impl Data {
             }
             #[cfg(feature = "FiWind")]
             FiIcon::FiWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5339,7 +5325,7 @@ impl Data {
             }
             #[cfg(feature = "FiX")]
             FiIcon::FiX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5356,7 +5342,7 @@ impl Data {
             }
             #[cfg(feature = "FiXCircle")]
             FiIcon::FiXCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5373,7 +5359,7 @@ impl Data {
             }
             #[cfg(feature = "FiXOctagon")]
             FiIcon::FiXOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5390,7 +5376,7 @@ impl Data {
             }
             #[cfg(feature = "FiXSquare")]
             FiIcon::FiXSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5407,7 +5393,7 @@ impl Data {
             }
             #[cfg(feature = "FiYoutube")]
             FiIcon::FiYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5424,7 +5410,7 @@ impl Data {
             }
             #[cfg(feature = "FiZap")]
             FiIcon::FiZap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5441,7 +5427,7 @@ impl Data {
             }
             #[cfg(feature = "FiZapOff")]
             FiIcon::FiZapOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5458,7 +5444,7 @@ impl Data {
             }
             #[cfg(feature = "FiZoomIn")]
             FiIcon::FiZoomIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5475,7 +5461,7 @@ impl Data {
             }
             #[cfg(feature = "FiZoomOut")]
             FiIcon::FiZoomOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5492,62 +5478,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosFiIcon(
-    cx: leptos::Scope,
-    icon: FiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

@@ -3926,26 +3926,12 @@ pub enum BsIcon {
     BsZoomOut,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: BsIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for BsIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "Bs0Circle")]
             BsIcon::Bs0Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3962,7 +3948,7 @@ impl Data {
             }
             #[cfg(feature = "Bs0CircleFill")]
             BsIcon::Bs0CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3979,7 +3965,7 @@ impl Data {
             }
             #[cfg(feature = "Bs0Square")]
             BsIcon::Bs0Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3996,7 +3982,7 @@ impl Data {
             }
             #[cfg(feature = "Bs0SquareFill")]
             BsIcon::Bs0SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4013,7 +3999,7 @@ impl Data {
             }
             #[cfg(feature = "Bs123")]
             BsIcon::Bs123 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4030,7 +4016,7 @@ impl Data {
             }
             #[cfg(feature = "Bs1Circle")]
             BsIcon::Bs1Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4047,7 +4033,7 @@ impl Data {
             }
             #[cfg(feature = "Bs1CircleFill")]
             BsIcon::Bs1CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4064,7 +4050,7 @@ impl Data {
             }
             #[cfg(feature = "Bs1Square")]
             BsIcon::Bs1Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4081,7 +4067,7 @@ impl Data {
             }
             #[cfg(feature = "Bs1SquareFill")]
             BsIcon::Bs1SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4098,7 +4084,7 @@ impl Data {
             }
             #[cfg(feature = "Bs2Circle")]
             BsIcon::Bs2Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4115,7 +4101,7 @@ impl Data {
             }
             #[cfg(feature = "Bs2CircleFill")]
             BsIcon::Bs2CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4132,7 +4118,7 @@ impl Data {
             }
             #[cfg(feature = "Bs2Square")]
             BsIcon::Bs2Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4149,7 +4135,7 @@ impl Data {
             }
             #[cfg(feature = "Bs2SquareFill")]
             BsIcon::Bs2SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4166,7 +4152,7 @@ impl Data {
             }
             #[cfg(feature = "Bs3Circle")]
             BsIcon::Bs3Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4183,7 +4169,7 @@ impl Data {
             }
             #[cfg(feature = "Bs3CircleFill")]
             BsIcon::Bs3CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4200,7 +4186,7 @@ impl Data {
             }
             #[cfg(feature = "Bs3Square")]
             BsIcon::Bs3Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4217,7 +4203,7 @@ impl Data {
             }
             #[cfg(feature = "Bs3SquareFill")]
             BsIcon::Bs3SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4234,7 +4220,7 @@ impl Data {
             }
             #[cfg(feature = "Bs4Circle")]
             BsIcon::Bs4Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4251,7 +4237,7 @@ impl Data {
             }
             #[cfg(feature = "Bs4CircleFill")]
             BsIcon::Bs4CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4268,7 +4254,7 @@ impl Data {
             }
             #[cfg(feature = "Bs4Square")]
             BsIcon::Bs4Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4285,7 +4271,7 @@ impl Data {
             }
             #[cfg(feature = "Bs4SquareFill")]
             BsIcon::Bs4SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4302,7 +4288,7 @@ impl Data {
             }
             #[cfg(feature = "Bs5Circle")]
             BsIcon::Bs5Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4319,7 +4305,7 @@ impl Data {
             }
             #[cfg(feature = "Bs5CircleFill")]
             BsIcon::Bs5CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4336,7 +4322,7 @@ impl Data {
             }
             #[cfg(feature = "Bs5Square")]
             BsIcon::Bs5Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4353,7 +4339,7 @@ impl Data {
             }
             #[cfg(feature = "Bs5SquareFill")]
             BsIcon::Bs5SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4370,7 +4356,7 @@ impl Data {
             }
             #[cfg(feature = "Bs6Circle")]
             BsIcon::Bs6Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4387,7 +4373,7 @@ impl Data {
             }
             #[cfg(feature = "Bs6CircleFill")]
             BsIcon::Bs6CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4404,7 +4390,7 @@ impl Data {
             }
             #[cfg(feature = "Bs6Square")]
             BsIcon::Bs6Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4421,7 +4407,7 @@ impl Data {
             }
             #[cfg(feature = "Bs6SquareFill")]
             BsIcon::Bs6SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4438,7 +4424,7 @@ impl Data {
             }
             #[cfg(feature = "Bs7Circle")]
             BsIcon::Bs7Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4455,7 +4441,7 @@ impl Data {
             }
             #[cfg(feature = "Bs7CircleFill")]
             BsIcon::Bs7CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4472,7 +4458,7 @@ impl Data {
             }
             #[cfg(feature = "Bs7Square")]
             BsIcon::Bs7Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4489,7 +4475,7 @@ impl Data {
             }
             #[cfg(feature = "Bs7SquareFill")]
             BsIcon::Bs7SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4506,7 +4492,7 @@ impl Data {
             }
             #[cfg(feature = "Bs8Circle")]
             BsIcon::Bs8Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4523,7 +4509,7 @@ impl Data {
             }
             #[cfg(feature = "Bs8CircleFill")]
             BsIcon::Bs8CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4540,7 +4526,7 @@ impl Data {
             }
             #[cfg(feature = "Bs8Square")]
             BsIcon::Bs8Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4557,7 +4543,7 @@ impl Data {
             }
             #[cfg(feature = "Bs8SquareFill")]
             BsIcon::Bs8SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4574,7 +4560,7 @@ impl Data {
             }
             #[cfg(feature = "Bs9Circle")]
             BsIcon::Bs9Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4591,7 +4577,7 @@ impl Data {
             }
             #[cfg(feature = "Bs9CircleFill")]
             BsIcon::Bs9CircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4608,7 +4594,7 @@ impl Data {
             }
             #[cfg(feature = "Bs9Square")]
             BsIcon::Bs9Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4625,7 +4611,7 @@ impl Data {
             }
             #[cfg(feature = "Bs9SquareFill")]
             BsIcon::Bs9SquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4642,7 +4628,7 @@ impl Data {
             }
             #[cfg(feature = "BsActivity")]
             BsIcon::BsActivity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4659,7 +4645,7 @@ impl Data {
             }
             #[cfg(feature = "BsAirplane")]
             BsIcon::BsAirplane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4676,7 +4662,7 @@ impl Data {
             }
             #[cfg(feature = "BsAirplaneEngines")]
             BsIcon::BsAirplaneEngines => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4693,7 +4679,7 @@ impl Data {
             }
             #[cfg(feature = "BsAirplaneEnginesFill")]
             BsIcon::BsAirplaneEnginesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4710,7 +4696,7 @@ impl Data {
             }
             #[cfg(feature = "BsAirplaneFill")]
             BsIcon::BsAirplaneFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4727,7 +4713,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlarm")]
             BsIcon::BsAlarm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4744,7 +4730,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlarmFill")]
             BsIcon::BsAlarmFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4761,7 +4747,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlexa")]
             BsIcon::BsAlexa => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4778,7 +4764,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlignBottom")]
             BsIcon::BsAlignBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4795,7 +4781,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlignCenter")]
             BsIcon::BsAlignCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4812,7 +4798,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlignEnd")]
             BsIcon::BsAlignEnd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4829,7 +4815,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlignMiddle")]
             BsIcon::BsAlignMiddle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4846,7 +4832,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlignStart")]
             BsIcon::BsAlignStart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4863,7 +4849,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlignTop")]
             BsIcon::BsAlignTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4880,7 +4866,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlipay")]
             BsIcon::BsAlipay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4897,7 +4883,7 @@ impl Data {
             }
             #[cfg(feature = "BsAlt")]
             BsIcon::BsAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4914,7 +4900,7 @@ impl Data {
             }
             #[cfg(feature = "BsAmd")]
             BsIcon::BsAmd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4931,7 +4917,7 @@ impl Data {
             }
             #[cfg(feature = "BsAndroid")]
             BsIcon::BsAndroid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4948,7 +4934,7 @@ impl Data {
             }
             #[cfg(feature = "BsAndroid2")]
             BsIcon::BsAndroid2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4965,7 +4951,7 @@ impl Data {
             }
             #[cfg(feature = "BsApp")]
             BsIcon::BsApp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4982,7 +4968,7 @@ impl Data {
             }
             #[cfg(feature = "BsAppIndicator")]
             BsIcon::BsAppIndicator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4999,7 +4985,7 @@ impl Data {
             }
             #[cfg(feature = "BsApple")]
             BsIcon::BsApple => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5016,7 +5002,7 @@ impl Data {
             }
             #[cfg(feature = "BsArchive")]
             BsIcon::BsArchive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5033,7 +5019,7 @@ impl Data {
             }
             #[cfg(feature = "BsArchiveFill")]
             BsIcon::BsArchiveFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5050,7 +5036,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrow90degDown")]
             BsIcon::BsArrow90degDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5067,7 +5053,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrow90degLeft")]
             BsIcon::BsArrow90degLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5084,7 +5070,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrow90degRight")]
             BsIcon::BsArrow90degRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5101,7 +5087,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrow90degUp")]
             BsIcon::BsArrow90degUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5118,7 +5104,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowBarDown")]
             BsIcon::BsArrowBarDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5135,7 +5121,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowBarLeft")]
             BsIcon::BsArrowBarLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5152,7 +5138,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowBarRight")]
             BsIcon::BsArrowBarRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5169,7 +5155,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowBarUp")]
             BsIcon::BsArrowBarUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5186,7 +5172,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowClockwise")]
             BsIcon::BsArrowClockwise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5203,7 +5189,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowCounterclockwise")]
             BsIcon::BsArrowCounterclockwise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5220,7 +5206,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDown")]
             BsIcon::BsArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5237,7 +5223,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownCircle")]
             BsIcon::BsArrowDownCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5254,7 +5240,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownCircleFill")]
             BsIcon::BsArrowDownCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5271,7 +5257,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownLeft")]
             BsIcon::BsArrowDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5288,7 +5274,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownLeftCircle")]
             BsIcon::BsArrowDownLeftCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5305,7 +5291,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownLeftCircleFill")]
             BsIcon::BsArrowDownLeftCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5322,7 +5308,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownLeftSquare")]
             BsIcon::BsArrowDownLeftSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5339,7 +5325,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownLeftSquareFill")]
             BsIcon::BsArrowDownLeftSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5356,7 +5342,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownRight")]
             BsIcon::BsArrowDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5373,7 +5359,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownRightCircle")]
             BsIcon::BsArrowDownRightCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5390,7 +5376,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownRightCircleFill")]
             BsIcon::BsArrowDownRightCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5407,7 +5393,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownRightSquare")]
             BsIcon::BsArrowDownRightSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5424,7 +5410,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownRightSquareFill")]
             BsIcon::BsArrowDownRightSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5441,7 +5427,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownShort")]
             BsIcon::BsArrowDownShort => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5458,7 +5444,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownSquare")]
             BsIcon::BsArrowDownSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5475,7 +5461,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownSquareFill")]
             BsIcon::BsArrowDownSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5492,7 +5478,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowDownUp")]
             BsIcon::BsArrowDownUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5509,7 +5495,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeft")]
             BsIcon::BsArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5526,7 +5512,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeftCircle")]
             BsIcon::BsArrowLeftCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5543,7 +5529,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeftCircleFill")]
             BsIcon::BsArrowLeftCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5560,7 +5546,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeftRight")]
             BsIcon::BsArrowLeftRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5577,7 +5563,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeftShort")]
             BsIcon::BsArrowLeftShort => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5594,7 +5580,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeftSquare")]
             BsIcon::BsArrowLeftSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5611,7 +5597,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowLeftSquareFill")]
             BsIcon::BsArrowLeftSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5628,7 +5614,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRepeat")]
             BsIcon::BsArrowRepeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5645,7 +5631,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowReturnLeft")]
             BsIcon::BsArrowReturnLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5662,7 +5648,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowReturnRight")]
             BsIcon::BsArrowReturnRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5679,7 +5665,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRight")]
             BsIcon::BsArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5696,7 +5682,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRightCircle")]
             BsIcon::BsArrowRightCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5713,7 +5699,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRightCircleFill")]
             BsIcon::BsArrowRightCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5730,7 +5716,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRightShort")]
             BsIcon::BsArrowRightShort => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5747,7 +5733,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRightSquare")]
             BsIcon::BsArrowRightSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5764,7 +5750,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowRightSquareFill")]
             BsIcon::BsArrowRightSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5781,7 +5767,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowThroughHeart")]
             BsIcon::BsArrowThroughHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5798,7 +5784,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowThroughHeartFill")]
             BsIcon::BsArrowThroughHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5815,7 +5801,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUp")]
             BsIcon::BsArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5832,7 +5818,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpCircle")]
             BsIcon::BsArrowUpCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5849,7 +5835,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpCircleFill")]
             BsIcon::BsArrowUpCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5866,7 +5852,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpLeft")]
             BsIcon::BsArrowUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5883,7 +5869,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpLeftCircle")]
             BsIcon::BsArrowUpLeftCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5900,7 +5886,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpLeftCircleFill")]
             BsIcon::BsArrowUpLeftCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5917,7 +5903,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpLeftSquare")]
             BsIcon::BsArrowUpLeftSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5934,7 +5920,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpLeftSquareFill")]
             BsIcon::BsArrowUpLeftSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5951,7 +5937,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpRight")]
             BsIcon::BsArrowUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5968,7 +5954,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpRightCircle")]
             BsIcon::BsArrowUpRightCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5985,7 +5971,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpRightCircleFill")]
             BsIcon::BsArrowUpRightCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6002,7 +5988,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpRightSquare")]
             BsIcon::BsArrowUpRightSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6019,7 +6005,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpRightSquareFill")]
             BsIcon::BsArrowUpRightSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6036,7 +6022,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpShort")]
             BsIcon::BsArrowUpShort => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6053,7 +6039,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpSquare")]
             BsIcon::BsArrowUpSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6070,7 +6056,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowUpSquareFill")]
             BsIcon::BsArrowUpSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6087,7 +6073,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowsAngleContract")]
             BsIcon::BsArrowsAngleContract => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6104,7 +6090,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowsAngleExpand")]
             BsIcon::BsArrowsAngleExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6121,7 +6107,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowsCollapse")]
             BsIcon::BsArrowsCollapse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6138,7 +6124,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowsExpand")]
             BsIcon::BsArrowsExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6155,7 +6141,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowsFullscreen")]
             BsIcon::BsArrowsFullscreen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6172,7 +6158,7 @@ impl Data {
             }
             #[cfg(feature = "BsArrowsMove")]
             BsIcon::BsArrowsMove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6189,7 +6175,7 @@ impl Data {
             }
             #[cfg(feature = "BsAspectRatio")]
             BsIcon::BsAspectRatio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6206,7 +6192,7 @@ impl Data {
             }
             #[cfg(feature = "BsAspectRatioFill")]
             BsIcon::BsAspectRatioFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6223,7 +6209,7 @@ impl Data {
             }
             #[cfg(feature = "BsAsterisk")]
             BsIcon::BsAsterisk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6240,7 +6226,7 @@ impl Data {
             }
             #[cfg(feature = "BsAt")]
             BsIcon::BsAt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6257,7 +6243,7 @@ impl Data {
             }
             #[cfg(feature = "BsAward")]
             BsIcon::BsAward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6274,7 +6260,7 @@ impl Data {
             }
             #[cfg(feature = "BsAwardFill")]
             BsIcon::BsAwardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6291,7 +6277,7 @@ impl Data {
             }
             #[cfg(feature = "BsBack")]
             BsIcon::BsBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6308,7 +6294,7 @@ impl Data {
             }
             #[cfg(feature = "BsBackspace")]
             BsIcon::BsBackspace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6325,7 +6311,7 @@ impl Data {
             }
             #[cfg(feature = "BsBackspaceFill")]
             BsIcon::BsBackspaceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6342,7 +6328,7 @@ impl Data {
             }
             #[cfg(feature = "BsBackspaceReverse")]
             BsIcon::BsBackspaceReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6359,7 +6345,7 @@ impl Data {
             }
             #[cfg(feature = "BsBackspaceReverseFill")]
             BsIcon::BsBackspaceReverseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6376,7 +6362,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadge3d")]
             BsIcon::BsBadge3d => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6393,7 +6379,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadge3dFill")]
             BsIcon::BsBadge3dFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6410,7 +6396,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadge4k")]
             BsIcon::BsBadge4k => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6427,7 +6413,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadge4kFill")]
             BsIcon::BsBadge4kFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6444,7 +6430,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadge8k")]
             BsIcon::BsBadge8k => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6461,7 +6447,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadge8kFill")]
             BsIcon::BsBadge8kFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6478,7 +6464,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeAd")]
             BsIcon::BsBadgeAd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6495,7 +6481,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeAdFill")]
             BsIcon::BsBadgeAdFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6512,7 +6498,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeAr")]
             BsIcon::BsBadgeAr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6529,7 +6515,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeArFill")]
             BsIcon::BsBadgeArFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6546,7 +6532,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeCc")]
             BsIcon::BsBadgeCc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6563,7 +6549,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeCcFill")]
             BsIcon::BsBadgeCcFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6580,7 +6566,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeHd")]
             BsIcon::BsBadgeHd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6597,7 +6583,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeHdFill")]
             BsIcon::BsBadgeHdFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6614,7 +6600,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeSd")]
             BsIcon::BsBadgeSd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6631,7 +6617,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeSdFill")]
             BsIcon::BsBadgeSdFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6648,7 +6634,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeTm")]
             BsIcon::BsBadgeTm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6665,7 +6651,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeTmFill")]
             BsIcon::BsBadgeTmFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6682,7 +6668,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeVo")]
             BsIcon::BsBadgeVo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6699,7 +6685,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeVoFill")]
             BsIcon::BsBadgeVoFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6716,7 +6702,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeVr")]
             BsIcon::BsBadgeVr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6733,7 +6719,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeVrFill")]
             BsIcon::BsBadgeVrFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6750,7 +6736,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeWc")]
             BsIcon::BsBadgeWc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6767,7 +6753,7 @@ impl Data {
             }
             #[cfg(feature = "BsBadgeWcFill")]
             BsIcon::BsBadgeWcFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6784,7 +6770,7 @@ impl Data {
             }
             #[cfg(feature = "BsBag")]
             BsIcon::BsBag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6801,7 +6787,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagCheck")]
             BsIcon::BsBagCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6818,7 +6804,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagCheckFill")]
             BsIcon::BsBagCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6835,7 +6821,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagDash")]
             BsIcon::BsBagDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6852,7 +6838,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagDashFill")]
             BsIcon::BsBagDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6869,7 +6855,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagFill")]
             BsIcon::BsBagFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6886,7 +6872,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagHeart")]
             BsIcon::BsBagHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6903,7 +6889,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagHeartFill")]
             BsIcon::BsBagHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6920,7 +6906,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagPlus")]
             BsIcon::BsBagPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6937,7 +6923,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagPlusFill")]
             BsIcon::BsBagPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6954,7 +6940,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagX")]
             BsIcon::BsBagX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6971,7 +6957,7 @@ impl Data {
             }
             #[cfg(feature = "BsBagXFill")]
             BsIcon::BsBagXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6988,7 +6974,7 @@ impl Data {
             }
             #[cfg(feature = "BsBalloon")]
             BsIcon::BsBalloon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7005,7 +6991,7 @@ impl Data {
             }
             #[cfg(feature = "BsBalloonFill")]
             BsIcon::BsBalloonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7022,7 +7008,7 @@ impl Data {
             }
             #[cfg(feature = "BsBalloonHeart")]
             BsIcon::BsBalloonHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7039,7 +7025,7 @@ impl Data {
             }
             #[cfg(feature = "BsBalloonHeartFill")]
             BsIcon::BsBalloonHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7056,7 +7042,7 @@ impl Data {
             }
             #[cfg(feature = "BsBandaid")]
             BsIcon::BsBandaid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7073,7 +7059,7 @@ impl Data {
             }
             #[cfg(feature = "BsBandaidFill")]
             BsIcon::BsBandaidFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7090,7 +7076,7 @@ impl Data {
             }
             #[cfg(feature = "BsBank")]
             BsIcon::BsBank => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7107,7 +7093,7 @@ impl Data {
             }
             #[cfg(feature = "BsBank2")]
             BsIcon::BsBank2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7124,7 +7110,7 @@ impl Data {
             }
             #[cfg(feature = "BsBarChart")]
             BsIcon::BsBarChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7141,7 +7127,7 @@ impl Data {
             }
             #[cfg(feature = "BsBarChartFill")]
             BsIcon::BsBarChartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7158,7 +7144,7 @@ impl Data {
             }
             #[cfg(feature = "BsBarChartLine")]
             BsIcon::BsBarChartLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7175,7 +7161,7 @@ impl Data {
             }
             #[cfg(feature = "BsBarChartLineFill")]
             BsIcon::BsBarChartLineFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7192,7 +7178,7 @@ impl Data {
             }
             #[cfg(feature = "BsBarChartSteps")]
             BsIcon::BsBarChartSteps => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7209,7 +7195,7 @@ impl Data {
             }
             #[cfg(feature = "BsBasket")]
             BsIcon::BsBasket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7226,7 +7212,7 @@ impl Data {
             }
             #[cfg(feature = "BsBasket2")]
             BsIcon::BsBasket2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7243,7 +7229,7 @@ impl Data {
             }
             #[cfg(feature = "BsBasket2Fill")]
             BsIcon::BsBasket2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7260,7 +7246,7 @@ impl Data {
             }
             #[cfg(feature = "BsBasket3")]
             BsIcon::BsBasket3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7277,7 +7263,7 @@ impl Data {
             }
             #[cfg(feature = "BsBasket3Fill")]
             BsIcon::BsBasket3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7294,7 +7280,7 @@ impl Data {
             }
             #[cfg(feature = "BsBasketFill")]
             BsIcon::BsBasketFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7311,7 +7297,7 @@ impl Data {
             }
             #[cfg(feature = "BsBattery")]
             BsIcon::BsBattery => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7328,7 +7314,7 @@ impl Data {
             }
             #[cfg(feature = "BsBatteryCharging")]
             BsIcon::BsBatteryCharging => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7345,7 +7331,7 @@ impl Data {
             }
             #[cfg(feature = "BsBatteryFull")]
             BsIcon::BsBatteryFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7362,7 +7348,7 @@ impl Data {
             }
             #[cfg(feature = "BsBatteryHalf")]
             BsIcon::BsBatteryHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7379,7 +7365,7 @@ impl Data {
             }
             #[cfg(feature = "BsBehance")]
             BsIcon::BsBehance => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7396,7 +7382,7 @@ impl Data {
             }
             #[cfg(feature = "BsBell")]
             BsIcon::BsBell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7413,7 +7399,7 @@ impl Data {
             }
             #[cfg(feature = "BsBellFill")]
             BsIcon::BsBellFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7430,7 +7416,7 @@ impl Data {
             }
             #[cfg(feature = "BsBellSlash")]
             BsIcon::BsBellSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7447,7 +7433,7 @@ impl Data {
             }
             #[cfg(feature = "BsBellSlashFill")]
             BsIcon::BsBellSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7464,7 +7450,7 @@ impl Data {
             }
             #[cfg(feature = "BsBezier")]
             BsIcon::BsBezier => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7481,7 +7467,7 @@ impl Data {
             }
             #[cfg(feature = "BsBezier2")]
             BsIcon::BsBezier2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7498,7 +7484,7 @@ impl Data {
             }
             #[cfg(feature = "BsBicycle")]
             BsIcon::BsBicycle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7515,7 +7501,7 @@ impl Data {
             }
             #[cfg(feature = "BsBinoculars")]
             BsIcon::BsBinoculars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7532,7 +7518,7 @@ impl Data {
             }
             #[cfg(feature = "BsBinocularsFill")]
             BsIcon::BsBinocularsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7549,7 +7535,7 @@ impl Data {
             }
             #[cfg(feature = "BsBlockquoteLeft")]
             BsIcon::BsBlockquoteLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7566,7 +7552,7 @@ impl Data {
             }
             #[cfg(feature = "BsBlockquoteRight")]
             BsIcon::BsBlockquoteRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7583,7 +7569,7 @@ impl Data {
             }
             #[cfg(feature = "BsBluetooth")]
             BsIcon::BsBluetooth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7600,7 +7586,7 @@ impl Data {
             }
             #[cfg(feature = "BsBodyText")]
             BsIcon::BsBodyText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7617,7 +7603,7 @@ impl Data {
             }
             #[cfg(feature = "BsBook")]
             BsIcon::BsBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7634,7 +7620,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookFill")]
             BsIcon::BsBookFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7651,7 +7637,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookHalf")]
             BsIcon::BsBookHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7668,7 +7654,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmark")]
             BsIcon::BsBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7685,7 +7671,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkCheck")]
             BsIcon::BsBookmarkCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7702,7 +7688,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkCheckFill")]
             BsIcon::BsBookmarkCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7719,7 +7705,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkDash")]
             BsIcon::BsBookmarkDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7736,7 +7722,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkDashFill")]
             BsIcon::BsBookmarkDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7753,7 +7739,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkFill")]
             BsIcon::BsBookmarkFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7770,7 +7756,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkHeart")]
             BsIcon::BsBookmarkHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7787,7 +7773,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkHeartFill")]
             BsIcon::BsBookmarkHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7804,7 +7790,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkPlus")]
             BsIcon::BsBookmarkPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7821,7 +7807,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkPlusFill")]
             BsIcon::BsBookmarkPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7838,7 +7824,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkStar")]
             BsIcon::BsBookmarkStar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7855,7 +7841,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkStarFill")]
             BsIcon::BsBookmarkStarFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7872,7 +7858,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkX")]
             BsIcon::BsBookmarkX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7889,7 +7875,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarkXFill")]
             BsIcon::BsBookmarkXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7906,7 +7892,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarks")]
             BsIcon::BsBookmarks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7923,7 +7909,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookmarksFill")]
             BsIcon::BsBookmarksFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7940,7 +7926,7 @@ impl Data {
             }
             #[cfg(feature = "BsBookshelf")]
             BsIcon::BsBookshelf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7957,7 +7943,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoombox")]
             BsIcon::BsBoombox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7974,7 +7960,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoomboxFill")]
             BsIcon::BsBoomboxFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7991,7 +7977,7 @@ impl Data {
             }
             #[cfg(feature = "BsBootstrap")]
             BsIcon::BsBootstrap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8008,7 +7994,7 @@ impl Data {
             }
             #[cfg(feature = "BsBootstrapFill")]
             BsIcon::BsBootstrapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8025,7 +8011,7 @@ impl Data {
             }
             #[cfg(feature = "BsBootstrapReboot")]
             BsIcon::BsBootstrapReboot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8042,7 +8028,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorder")]
             BsIcon::BsBorder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8059,7 +8045,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderAll")]
             BsIcon::BsBorderAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8076,7 +8062,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderBottom")]
             BsIcon::BsBorderBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8093,7 +8079,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderCenter")]
             BsIcon::BsBorderCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8110,7 +8096,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderInner")]
             BsIcon::BsBorderInner => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8127,7 +8113,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderLeft")]
             BsIcon::BsBorderLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8144,7 +8130,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderMiddle")]
             BsIcon::BsBorderMiddle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8161,7 +8147,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderOuter")]
             BsIcon::BsBorderOuter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8178,7 +8164,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderRight")]
             BsIcon::BsBorderRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8195,7 +8181,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderStyle")]
             BsIcon::BsBorderStyle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8212,7 +8198,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderTop")]
             BsIcon::BsBorderTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8229,7 +8215,7 @@ impl Data {
             }
             #[cfg(feature = "BsBorderWidth")]
             BsIcon::BsBorderWidth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8246,7 +8232,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoundingBox")]
             BsIcon::BsBoundingBox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8263,7 +8249,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoundingBoxCircles")]
             BsIcon::BsBoundingBoxCircles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8280,7 +8266,7 @@ impl Data {
             }
             #[cfg(feature = "BsBox")]
             BsIcon::BsBox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8297,7 +8283,7 @@ impl Data {
             }
             #[cfg(feature = "BsBox2")]
             BsIcon::BsBox2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8314,7 +8300,7 @@ impl Data {
             }
             #[cfg(feature = "BsBox2Fill")]
             BsIcon::BsBox2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8331,7 +8317,7 @@ impl Data {
             }
             #[cfg(feature = "BsBox2Heart")]
             BsIcon::BsBox2Heart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8348,7 +8334,7 @@ impl Data {
             }
             #[cfg(feature = "BsBox2HeartFill")]
             BsIcon::BsBox2HeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8365,7 +8351,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowDown")]
             BsIcon::BsBoxArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8382,7 +8368,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowDownLeft")]
             BsIcon::BsBoxArrowDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8399,7 +8385,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowDownRight")]
             BsIcon::BsBoxArrowDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8416,7 +8402,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInDown")]
             BsIcon::BsBoxArrowInDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8433,7 +8419,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInDownLeft")]
             BsIcon::BsBoxArrowInDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8450,7 +8436,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInDownRight")]
             BsIcon::BsBoxArrowInDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8467,7 +8453,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInLeft")]
             BsIcon::BsBoxArrowInLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8484,7 +8470,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInRight")]
             BsIcon::BsBoxArrowInRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8501,7 +8487,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInUp")]
             BsIcon::BsBoxArrowInUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8518,7 +8504,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInUpLeft")]
             BsIcon::BsBoxArrowInUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8535,7 +8521,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowInUpRight")]
             BsIcon::BsBoxArrowInUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8552,7 +8538,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowLeft")]
             BsIcon::BsBoxArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8569,7 +8555,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowRight")]
             BsIcon::BsBoxArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8586,7 +8572,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowUp")]
             BsIcon::BsBoxArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8603,7 +8589,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowUpLeft")]
             BsIcon::BsBoxArrowUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8620,7 +8606,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxArrowUpRight")]
             BsIcon::BsBoxArrowUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8637,7 +8623,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxFill")]
             BsIcon::BsBoxFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8654,7 +8640,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxSeam")]
             BsIcon::BsBoxSeam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8671,7 +8657,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxSeamFill")]
             BsIcon::BsBoxSeamFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8688,7 +8674,7 @@ impl Data {
             }
             #[cfg(feature = "BsBoxes")]
             BsIcon::BsBoxes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8705,7 +8691,7 @@ impl Data {
             }
             #[cfg(feature = "BsBraces")]
             BsIcon::BsBraces => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8722,7 +8708,7 @@ impl Data {
             }
             #[cfg(feature = "BsBracesAsterisk")]
             BsIcon::BsBracesAsterisk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8739,7 +8725,7 @@ impl Data {
             }
             #[cfg(feature = "BsBricks")]
             BsIcon::BsBricks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8756,7 +8742,7 @@ impl Data {
             }
             #[cfg(feature = "BsBriefcase")]
             BsIcon::BsBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8773,7 +8759,7 @@ impl Data {
             }
             #[cfg(feature = "BsBriefcaseFill")]
             BsIcon::BsBriefcaseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8790,7 +8776,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessAltHigh")]
             BsIcon::BsBrightnessAltHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8807,7 +8793,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessAltHighFill")]
             BsIcon::BsBrightnessAltHighFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8824,7 +8810,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessAltLow")]
             BsIcon::BsBrightnessAltLow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8841,7 +8827,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessAltLowFill")]
             BsIcon::BsBrightnessAltLowFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8858,7 +8844,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessHigh")]
             BsIcon::BsBrightnessHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8875,7 +8861,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessHighFill")]
             BsIcon::BsBrightnessHighFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8892,7 +8878,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessLow")]
             BsIcon::BsBrightnessLow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8909,7 +8895,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrightnessLowFill")]
             BsIcon::BsBrightnessLowFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8926,7 +8912,7 @@ impl Data {
             }
             #[cfg(feature = "BsBroadcast")]
             BsIcon::BsBroadcast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8943,7 +8929,7 @@ impl Data {
             }
             #[cfg(feature = "BsBroadcastPin")]
             BsIcon::BsBroadcastPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8960,7 +8946,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrowserChrome")]
             BsIcon::BsBrowserChrome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8977,7 +8963,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrowserEdge")]
             BsIcon::BsBrowserEdge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8994,7 +8980,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrowserFirefox")]
             BsIcon::BsBrowserFirefox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9011,7 +8997,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrowserSafari")]
             BsIcon::BsBrowserSafari => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9028,7 +9014,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrush")]
             BsIcon::BsBrush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9045,7 +9031,7 @@ impl Data {
             }
             #[cfg(feature = "BsBrushFill")]
             BsIcon::BsBrushFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9062,7 +9048,7 @@ impl Data {
             }
             #[cfg(feature = "BsBucket")]
             BsIcon::BsBucket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9079,7 +9065,7 @@ impl Data {
             }
             #[cfg(feature = "BsBucketFill")]
             BsIcon::BsBucketFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9096,7 +9082,7 @@ impl Data {
             }
             #[cfg(feature = "BsBug")]
             BsIcon::BsBug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9113,7 +9099,7 @@ impl Data {
             }
             #[cfg(feature = "BsBugFill")]
             BsIcon::BsBugFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9130,7 +9116,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuilding")]
             BsIcon::BsBuilding => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9147,7 +9133,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingAdd")]
             BsIcon::BsBuildingAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9164,7 +9150,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingCheck")]
             BsIcon::BsBuildingCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9181,7 +9167,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingDash")]
             BsIcon::BsBuildingDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9198,7 +9184,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingDown")]
             BsIcon::BsBuildingDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9215,7 +9201,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingExclamation")]
             BsIcon::BsBuildingExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9232,7 +9218,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFill")]
             BsIcon::BsBuildingFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9249,7 +9235,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillAdd")]
             BsIcon::BsBuildingFillAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9266,7 +9252,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillCheck")]
             BsIcon::BsBuildingFillCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9283,7 +9269,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillDash")]
             BsIcon::BsBuildingFillDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9300,7 +9286,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillDown")]
             BsIcon::BsBuildingFillDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9317,7 +9303,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillExclamation")]
             BsIcon::BsBuildingFillExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9334,7 +9320,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillGear")]
             BsIcon::BsBuildingFillGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9351,7 +9337,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillLock")]
             BsIcon::BsBuildingFillLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9368,7 +9354,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillSlash")]
             BsIcon::BsBuildingFillSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9385,7 +9371,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillUp")]
             BsIcon::BsBuildingFillUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9402,7 +9388,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingFillX")]
             BsIcon::BsBuildingFillX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9419,7 +9405,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingGear")]
             BsIcon::BsBuildingGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9436,7 +9422,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingLock")]
             BsIcon::BsBuildingLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9453,7 +9439,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingSlash")]
             BsIcon::BsBuildingSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9470,7 +9456,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingUp")]
             BsIcon::BsBuildingUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9487,7 +9473,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingX")]
             BsIcon::BsBuildingX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9504,7 +9490,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildings")]
             BsIcon::BsBuildings => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9521,7 +9507,7 @@ impl Data {
             }
             #[cfg(feature = "BsBuildingsFill")]
             BsIcon::BsBuildingsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9538,7 +9524,7 @@ impl Data {
             }
             #[cfg(feature = "BsBullseye")]
             BsIcon::BsBullseye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9555,7 +9541,7 @@ impl Data {
             }
             #[cfg(feature = "BsBusFront")]
             BsIcon::BsBusFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9572,7 +9558,7 @@ impl Data {
             }
             #[cfg(feature = "BsBusFrontFill")]
             BsIcon::BsBusFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9589,7 +9575,7 @@ impl Data {
             }
             #[cfg(feature = "BsCCircle")]
             BsIcon::BsCCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9606,7 +9592,7 @@ impl Data {
             }
             #[cfg(feature = "BsCCircleFill")]
             BsIcon::BsCCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9623,7 +9609,7 @@ impl Data {
             }
             #[cfg(feature = "BsCSquare")]
             BsIcon::BsCSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9640,7 +9626,7 @@ impl Data {
             }
             #[cfg(feature = "BsCSquareFill")]
             BsIcon::BsCSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9657,7 +9643,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalculator")]
             BsIcon::BsCalculator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9674,7 +9660,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalculatorFill")]
             BsIcon::BsCalculatorFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9691,7 +9677,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar")]
             BsIcon::BsCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9708,7 +9694,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2")]
             BsIcon::BsCalendar2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9725,7 +9711,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Check")]
             BsIcon::BsCalendar2Check => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9742,7 +9728,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2CheckFill")]
             BsIcon::BsCalendar2CheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9759,7 +9745,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Date")]
             BsIcon::BsCalendar2Date => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9776,7 +9762,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2DateFill")]
             BsIcon::BsCalendar2DateFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9793,7 +9779,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Day")]
             BsIcon::BsCalendar2Day => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9810,7 +9796,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2DayFill")]
             BsIcon::BsCalendar2DayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9827,7 +9813,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Event")]
             BsIcon::BsCalendar2Event => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9844,7 +9830,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2EventFill")]
             BsIcon::BsCalendar2EventFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9861,7 +9847,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Fill")]
             BsIcon::BsCalendar2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9878,7 +9864,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Heart")]
             BsIcon::BsCalendar2Heart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9895,7 +9881,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2HeartFill")]
             BsIcon::BsCalendar2HeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9912,7 +9898,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Minus")]
             BsIcon::BsCalendar2Minus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9929,7 +9915,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2MinusFill")]
             BsIcon::BsCalendar2MinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9946,7 +9932,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Month")]
             BsIcon::BsCalendar2Month => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9963,7 +9949,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2MonthFill")]
             BsIcon::BsCalendar2MonthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9980,7 +9966,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Plus")]
             BsIcon::BsCalendar2Plus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9997,7 +9983,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2PlusFill")]
             BsIcon::BsCalendar2PlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10014,7 +10000,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Range")]
             BsIcon::BsCalendar2Range => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10031,7 +10017,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2RangeFill")]
             BsIcon::BsCalendar2RangeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10048,7 +10034,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2Week")]
             BsIcon::BsCalendar2Week => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10065,7 +10051,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2WeekFill")]
             BsIcon::BsCalendar2WeekFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10082,7 +10068,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2X")]
             BsIcon::BsCalendar2X => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10099,7 +10085,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar2XFill")]
             BsIcon::BsCalendar2XFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10116,7 +10102,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3")]
             BsIcon::BsCalendar3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10133,7 +10119,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3Event")]
             BsIcon::BsCalendar3Event => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10150,7 +10136,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3EventFill")]
             BsIcon::BsCalendar3EventFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10167,7 +10153,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3Fill")]
             BsIcon::BsCalendar3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10184,7 +10170,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3Range")]
             BsIcon::BsCalendar3Range => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10201,7 +10187,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3RangeFill")]
             BsIcon::BsCalendar3RangeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10218,7 +10204,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3Week")]
             BsIcon::BsCalendar3Week => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10235,7 +10221,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar3WeekFill")]
             BsIcon::BsCalendar3WeekFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10252,7 +10238,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar4")]
             BsIcon::BsCalendar4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10269,7 +10255,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar4Event")]
             BsIcon::BsCalendar4Event => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10286,7 +10272,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar4Range")]
             BsIcon::BsCalendar4Range => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10303,7 +10289,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendar4Week")]
             BsIcon::BsCalendar4Week => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10320,7 +10306,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarCheck")]
             BsIcon::BsCalendarCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10337,7 +10323,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarCheckFill")]
             BsIcon::BsCalendarCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10354,7 +10340,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarDate")]
             BsIcon::BsCalendarDate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10371,7 +10357,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarDateFill")]
             BsIcon::BsCalendarDateFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10388,7 +10374,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarDay")]
             BsIcon::BsCalendarDay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10405,7 +10391,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarDayFill")]
             BsIcon::BsCalendarDayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10422,7 +10408,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarEvent")]
             BsIcon::BsCalendarEvent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10439,7 +10425,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarEventFill")]
             BsIcon::BsCalendarEventFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10456,7 +10442,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarFill")]
             BsIcon::BsCalendarFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10473,7 +10459,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarHeart")]
             BsIcon::BsCalendarHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10490,7 +10476,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarHeartFill")]
             BsIcon::BsCalendarHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10507,7 +10493,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarMinus")]
             BsIcon::BsCalendarMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10524,7 +10510,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarMinusFill")]
             BsIcon::BsCalendarMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10541,7 +10527,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarMonth")]
             BsIcon::BsCalendarMonth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10558,7 +10544,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarMonthFill")]
             BsIcon::BsCalendarMonthFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10575,7 +10561,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarPlus")]
             BsIcon::BsCalendarPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10592,7 +10578,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarPlusFill")]
             BsIcon::BsCalendarPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10609,7 +10595,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarRange")]
             BsIcon::BsCalendarRange => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10626,7 +10612,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarRangeFill")]
             BsIcon::BsCalendarRangeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10643,7 +10629,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarWeek")]
             BsIcon::BsCalendarWeek => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10660,7 +10646,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarWeekFill")]
             BsIcon::BsCalendarWeekFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10677,7 +10663,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarX")]
             BsIcon::BsCalendarX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10694,7 +10680,7 @@ impl Data {
             }
             #[cfg(feature = "BsCalendarXFill")]
             BsIcon::BsCalendarXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10711,7 +10697,7 @@ impl Data {
             }
             #[cfg(feature = "BsCamera")]
             BsIcon::BsCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10728,7 +10714,7 @@ impl Data {
             }
             #[cfg(feature = "BsCamera2")]
             BsIcon::BsCamera2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10745,7 +10731,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraFill")]
             BsIcon::BsCameraFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10762,7 +10748,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraReels")]
             BsIcon::BsCameraReels => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10779,7 +10765,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraReelsFill")]
             BsIcon::BsCameraReelsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10796,7 +10782,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraVideo")]
             BsIcon::BsCameraVideo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10813,7 +10799,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraVideoFill")]
             BsIcon::BsCameraVideoFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10830,7 +10816,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraVideoOff")]
             BsIcon::BsCameraVideoOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10847,7 +10833,7 @@ impl Data {
             }
             #[cfg(feature = "BsCameraVideoOffFill")]
             BsIcon::BsCameraVideoOffFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10864,7 +10850,7 @@ impl Data {
             }
             #[cfg(feature = "BsCapslock")]
             BsIcon::BsCapslock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10881,7 +10867,7 @@ impl Data {
             }
             #[cfg(feature = "BsCapslockFill")]
             BsIcon::BsCapslockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10898,7 +10884,7 @@ impl Data {
             }
             #[cfg(feature = "BsCapsule")]
             BsIcon::BsCapsule => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10915,7 +10901,7 @@ impl Data {
             }
             #[cfg(feature = "BsCapsulePill")]
             BsIcon::BsCapsulePill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10932,7 +10918,7 @@ impl Data {
             }
             #[cfg(feature = "BsCarFront")]
             BsIcon::BsCarFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10949,7 +10935,7 @@ impl Data {
             }
             #[cfg(feature = "BsCarFrontFill")]
             BsIcon::BsCarFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10966,7 +10952,7 @@ impl Data {
             }
             #[cfg(feature = "BsCardChecklist")]
             BsIcon::BsCardChecklist => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10983,7 +10969,7 @@ impl Data {
             }
             #[cfg(feature = "BsCardHeading")]
             BsIcon::BsCardHeading => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11000,7 +10986,7 @@ impl Data {
             }
             #[cfg(feature = "BsCardImage")]
             BsIcon::BsCardImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11017,7 +11003,7 @@ impl Data {
             }
             #[cfg(feature = "BsCardList")]
             BsIcon::BsCardList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11034,7 +11020,7 @@ impl Data {
             }
             #[cfg(feature = "BsCardText")]
             BsIcon::BsCardText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11051,7 +11037,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretDown")]
             BsIcon::BsCaretDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11068,7 +11054,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretDownFill")]
             BsIcon::BsCaretDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11085,7 +11071,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretDownSquare")]
             BsIcon::BsCaretDownSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11102,7 +11088,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretDownSquareFill")]
             BsIcon::BsCaretDownSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11119,7 +11105,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretLeft")]
             BsIcon::BsCaretLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11136,7 +11122,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretLeftFill")]
             BsIcon::BsCaretLeftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11153,7 +11139,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretLeftSquare")]
             BsIcon::BsCaretLeftSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11170,7 +11156,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretLeftSquareFill")]
             BsIcon::BsCaretLeftSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11187,7 +11173,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretRight")]
             BsIcon::BsCaretRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11204,7 +11190,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretRightFill")]
             BsIcon::BsCaretRightFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11221,7 +11207,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretRightSquare")]
             BsIcon::BsCaretRightSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11238,7 +11224,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretRightSquareFill")]
             BsIcon::BsCaretRightSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11255,7 +11241,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretUp")]
             BsIcon::BsCaretUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11272,7 +11258,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretUpFill")]
             BsIcon::BsCaretUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11289,7 +11275,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretUpSquare")]
             BsIcon::BsCaretUpSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11306,7 +11292,7 @@ impl Data {
             }
             #[cfg(feature = "BsCaretUpSquareFill")]
             BsIcon::BsCaretUpSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11323,7 +11309,7 @@ impl Data {
             }
             #[cfg(feature = "BsCart")]
             BsIcon::BsCart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11340,7 +11326,7 @@ impl Data {
             }
             #[cfg(feature = "BsCart2")]
             BsIcon::BsCart2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11357,7 +11343,7 @@ impl Data {
             }
             #[cfg(feature = "BsCart3")]
             BsIcon::BsCart3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11374,7 +11360,7 @@ impl Data {
             }
             #[cfg(feature = "BsCart4")]
             BsIcon::BsCart4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11391,7 +11377,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartCheck")]
             BsIcon::BsCartCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11408,7 +11394,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartCheckFill")]
             BsIcon::BsCartCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11425,7 +11411,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartDash")]
             BsIcon::BsCartDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11442,7 +11428,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartDashFill")]
             BsIcon::BsCartDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11459,7 +11445,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartFill")]
             BsIcon::BsCartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11476,7 +11462,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartPlus")]
             BsIcon::BsCartPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11493,7 +11479,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartPlusFill")]
             BsIcon::BsCartPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11510,7 +11496,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartX")]
             BsIcon::BsCartX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11527,7 +11513,7 @@ impl Data {
             }
             #[cfg(feature = "BsCartXFill")]
             BsIcon::BsCartXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11544,7 +11530,7 @@ impl Data {
             }
             #[cfg(feature = "BsCash")]
             BsIcon::BsCash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11561,7 +11547,7 @@ impl Data {
             }
             #[cfg(feature = "BsCashCoin")]
             BsIcon::BsCashCoin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11578,7 +11564,7 @@ impl Data {
             }
             #[cfg(feature = "BsCashStack")]
             BsIcon::BsCashStack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11595,7 +11581,7 @@ impl Data {
             }
             #[cfg(feature = "BsCassette")]
             BsIcon::BsCassette => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11612,7 +11598,7 @@ impl Data {
             }
             #[cfg(feature = "BsCassetteFill")]
             BsIcon::BsCassetteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11629,7 +11615,7 @@ impl Data {
             }
             #[cfg(feature = "BsCast")]
             BsIcon::BsCast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11646,7 +11632,7 @@ impl Data {
             }
             #[cfg(feature = "BsCcCircle")]
             BsIcon::BsCcCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11663,7 +11649,7 @@ impl Data {
             }
             #[cfg(feature = "BsCcCircleFill")]
             BsIcon::BsCcCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11680,7 +11666,7 @@ impl Data {
             }
             #[cfg(feature = "BsCcSquare")]
             BsIcon::BsCcSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11697,7 +11683,7 @@ impl Data {
             }
             #[cfg(feature = "BsCcSquareFill")]
             BsIcon::BsCcSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11714,7 +11700,7 @@ impl Data {
             }
             #[cfg(feature = "BsChat")]
             BsIcon::BsChat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11731,7 +11717,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatDots")]
             BsIcon::BsChatDots => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11748,7 +11734,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatDotsFill")]
             BsIcon::BsChatDotsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11765,7 +11751,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatFill")]
             BsIcon::BsChatFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11782,7 +11768,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatHeart")]
             BsIcon::BsChatHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11799,7 +11785,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatHeartFill")]
             BsIcon::BsChatHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11816,7 +11802,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeft")]
             BsIcon::BsChatLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11833,7 +11819,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftDots")]
             BsIcon::BsChatLeftDots => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11850,7 +11836,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftDotsFill")]
             BsIcon::BsChatLeftDotsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11867,7 +11853,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftFill")]
             BsIcon::BsChatLeftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11884,7 +11870,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftHeart")]
             BsIcon::BsChatLeftHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11901,7 +11887,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftHeartFill")]
             BsIcon::BsChatLeftHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11918,7 +11904,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftQuote")]
             BsIcon::BsChatLeftQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11935,7 +11921,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftQuoteFill")]
             BsIcon::BsChatLeftQuoteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11952,7 +11938,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftText")]
             BsIcon::BsChatLeftText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11969,7 +11955,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatLeftTextFill")]
             BsIcon::BsChatLeftTextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11986,7 +11972,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatQuote")]
             BsIcon::BsChatQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12003,7 +11989,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatQuoteFill")]
             BsIcon::BsChatQuoteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12020,7 +12006,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRight")]
             BsIcon::BsChatRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12037,7 +12023,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightDots")]
             BsIcon::BsChatRightDots => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12054,7 +12040,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightDotsFill")]
             BsIcon::BsChatRightDotsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12071,7 +12057,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightFill")]
             BsIcon::BsChatRightFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12088,7 +12074,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightHeart")]
             BsIcon::BsChatRightHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12105,7 +12091,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightHeartFill")]
             BsIcon::BsChatRightHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12122,7 +12108,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightQuote")]
             BsIcon::BsChatRightQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12139,7 +12125,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightQuoteFill")]
             BsIcon::BsChatRightQuoteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12156,7 +12142,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightText")]
             BsIcon::BsChatRightText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12173,7 +12159,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatRightTextFill")]
             BsIcon::BsChatRightTextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12190,7 +12176,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquare")]
             BsIcon::BsChatSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12207,7 +12193,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareDots")]
             BsIcon::BsChatSquareDots => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12224,7 +12210,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareDotsFill")]
             BsIcon::BsChatSquareDotsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12241,7 +12227,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareFill")]
             BsIcon::BsChatSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12258,7 +12244,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareHeart")]
             BsIcon::BsChatSquareHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12275,7 +12261,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareHeartFill")]
             BsIcon::BsChatSquareHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12292,7 +12278,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareQuote")]
             BsIcon::BsChatSquareQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12309,7 +12295,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareQuoteFill")]
             BsIcon::BsChatSquareQuoteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12326,7 +12312,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareText")]
             BsIcon::BsChatSquareText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12343,7 +12329,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatSquareTextFill")]
             BsIcon::BsChatSquareTextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12360,7 +12346,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatText")]
             BsIcon::BsChatText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12377,7 +12363,7 @@ impl Data {
             }
             #[cfg(feature = "BsChatTextFill")]
             BsIcon::BsChatTextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12394,7 +12380,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheck")]
             BsIcon::BsCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12411,7 +12397,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheck2")]
             BsIcon::BsCheck2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12428,7 +12414,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheck2All")]
             BsIcon::BsCheck2All => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12445,7 +12431,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheck2Circle")]
             BsIcon::BsCheck2Circle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12462,7 +12448,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheck2Square")]
             BsIcon::BsCheck2Square => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12479,7 +12465,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheckAll")]
             BsIcon::BsCheckAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12496,7 +12482,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheckCircle")]
             BsIcon::BsCheckCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12513,7 +12499,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheckCircleFill")]
             BsIcon::BsCheckCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12530,7 +12516,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheckLg")]
             BsIcon::BsCheckLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12547,7 +12533,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheckSquare")]
             BsIcon::BsCheckSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12564,7 +12550,7 @@ impl Data {
             }
             #[cfg(feature = "BsCheckSquareFill")]
             BsIcon::BsCheckSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12581,7 +12567,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronBarContract")]
             BsIcon::BsChevronBarContract => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12598,7 +12584,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronBarDown")]
             BsIcon::BsChevronBarDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12615,7 +12601,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronBarExpand")]
             BsIcon::BsChevronBarExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12632,7 +12618,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronBarLeft")]
             BsIcon::BsChevronBarLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12649,7 +12635,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronBarRight")]
             BsIcon::BsChevronBarRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12666,7 +12652,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronBarUp")]
             BsIcon::BsChevronBarUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12683,7 +12669,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronCompactDown")]
             BsIcon::BsChevronCompactDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12700,7 +12686,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronCompactLeft")]
             BsIcon::BsChevronCompactLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12717,7 +12703,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronCompactRight")]
             BsIcon::BsChevronCompactRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12734,7 +12720,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronCompactUp")]
             BsIcon::BsChevronCompactUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12751,7 +12737,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronContract")]
             BsIcon::BsChevronContract => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12768,7 +12754,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronDoubleDown")]
             BsIcon::BsChevronDoubleDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12785,7 +12771,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronDoubleLeft")]
             BsIcon::BsChevronDoubleLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12802,7 +12788,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronDoubleRight")]
             BsIcon::BsChevronDoubleRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12819,7 +12805,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronDoubleUp")]
             BsIcon::BsChevronDoubleUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12836,7 +12822,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronDown")]
             BsIcon::BsChevronDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12853,7 +12839,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronExpand")]
             BsIcon::BsChevronExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12870,7 +12856,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronLeft")]
             BsIcon::BsChevronLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12887,7 +12873,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronRight")]
             BsIcon::BsChevronRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12904,7 +12890,7 @@ impl Data {
             }
             #[cfg(feature = "BsChevronUp")]
             BsIcon::BsChevronUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12921,7 +12907,7 @@ impl Data {
             }
             #[cfg(feature = "BsCircle")]
             BsIcon::BsCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12938,7 +12924,7 @@ impl Data {
             }
             #[cfg(feature = "BsCircleFill")]
             BsIcon::BsCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12955,7 +12941,7 @@ impl Data {
             }
             #[cfg(feature = "BsCircleHalf")]
             BsIcon::BsCircleHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12972,7 +12958,7 @@ impl Data {
             }
             #[cfg(feature = "BsCircleSquare")]
             BsIcon::BsCircleSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12989,7 +12975,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard")]
             BsIcon::BsClipboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13006,7 +12992,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2")]
             BsIcon::BsClipboard2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13023,7 +13009,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Check")]
             BsIcon::BsClipboard2Check => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13040,7 +13026,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2CheckFill")]
             BsIcon::BsClipboard2CheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13057,7 +13043,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Data")]
             BsIcon::BsClipboard2Data => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13074,7 +13060,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2DataFill")]
             BsIcon::BsClipboard2DataFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13091,7 +13077,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Fill")]
             BsIcon::BsClipboard2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13108,7 +13094,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Heart")]
             BsIcon::BsClipboard2Heart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13125,7 +13111,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2HeartFill")]
             BsIcon::BsClipboard2HeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13142,7 +13128,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Minus")]
             BsIcon::BsClipboard2Minus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13159,7 +13145,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2MinusFill")]
             BsIcon::BsClipboard2MinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13176,7 +13162,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Plus")]
             BsIcon::BsClipboard2Plus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13193,7 +13179,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2PlusFill")]
             BsIcon::BsClipboard2PlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13210,7 +13196,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2Pulse")]
             BsIcon::BsClipboard2Pulse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13227,7 +13213,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2PulseFill")]
             BsIcon::BsClipboard2PulseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13244,7 +13230,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2X")]
             BsIcon::BsClipboard2X => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13261,7 +13247,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboard2XFill")]
             BsIcon::BsClipboard2XFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13278,7 +13264,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardCheck")]
             BsIcon::BsClipboardCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13295,7 +13281,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardCheckFill")]
             BsIcon::BsClipboardCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13312,7 +13298,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardData")]
             BsIcon::BsClipboardData => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13329,7 +13315,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardDataFill")]
             BsIcon::BsClipboardDataFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13346,7 +13332,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardFill")]
             BsIcon::BsClipboardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13363,7 +13349,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardHeart")]
             BsIcon::BsClipboardHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13380,7 +13366,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardHeartFill")]
             BsIcon::BsClipboardHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13397,7 +13383,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardMinus")]
             BsIcon::BsClipboardMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13414,7 +13400,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardMinusFill")]
             BsIcon::BsClipboardMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13431,7 +13417,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardPlus")]
             BsIcon::BsClipboardPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13448,7 +13434,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardPlusFill")]
             BsIcon::BsClipboardPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13465,7 +13451,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardPulse")]
             BsIcon::BsClipboardPulse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13482,7 +13468,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardX")]
             BsIcon::BsClipboardX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13499,7 +13485,7 @@ impl Data {
             }
             #[cfg(feature = "BsClipboardXFill")]
             BsIcon::BsClipboardXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13516,7 +13502,7 @@ impl Data {
             }
             #[cfg(feature = "BsClock")]
             BsIcon::BsClock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13533,7 +13519,7 @@ impl Data {
             }
             #[cfg(feature = "BsClockFill")]
             BsIcon::BsClockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13550,7 +13536,7 @@ impl Data {
             }
             #[cfg(feature = "BsClockHistory")]
             BsIcon::BsClockHistory => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13567,7 +13553,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloud")]
             BsIcon::BsCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13584,7 +13570,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudArrowDown")]
             BsIcon::BsCloudArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13601,7 +13587,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudArrowDownFill")]
             BsIcon::BsCloudArrowDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13618,7 +13604,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudArrowUp")]
             BsIcon::BsCloudArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13635,7 +13621,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudArrowUpFill")]
             BsIcon::BsCloudArrowUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13652,7 +13638,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudCheck")]
             BsIcon::BsCloudCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13669,7 +13655,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudCheckFill")]
             BsIcon::BsCloudCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13686,7 +13672,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudDownload")]
             BsIcon::BsCloudDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13703,7 +13689,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudDownloadFill")]
             BsIcon::BsCloudDownloadFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13720,7 +13706,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudDrizzle")]
             BsIcon::BsCloudDrizzle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13737,7 +13723,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudDrizzleFill")]
             BsIcon::BsCloudDrizzleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13754,7 +13740,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudFill")]
             BsIcon::BsCloudFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13771,7 +13757,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudFog")]
             BsIcon::BsCloudFog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13788,7 +13774,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudFog2")]
             BsIcon::BsCloudFog2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13805,7 +13791,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudFog2Fill")]
             BsIcon::BsCloudFog2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13822,7 +13808,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudFogFill")]
             BsIcon::BsCloudFogFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13839,7 +13825,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudHail")]
             BsIcon::BsCloudHail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13856,7 +13842,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudHailFill")]
             BsIcon::BsCloudHailFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13873,7 +13859,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudHaze")]
             BsIcon::BsCloudHaze => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13890,7 +13876,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudHaze2")]
             BsIcon::BsCloudHaze2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13907,7 +13893,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudHaze2Fill")]
             BsIcon::BsCloudHaze2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13924,7 +13910,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudHazeFill")]
             BsIcon::BsCloudHazeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13941,7 +13927,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudLightning")]
             BsIcon::BsCloudLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13958,7 +13944,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudLightningFill")]
             BsIcon::BsCloudLightningFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13975,7 +13961,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudLightningRain")]
             BsIcon::BsCloudLightningRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13992,7 +13978,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudLightningRainFill")]
             BsIcon::BsCloudLightningRainFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14009,7 +13995,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudMinus")]
             BsIcon::BsCloudMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14026,7 +14012,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudMinusFill")]
             BsIcon::BsCloudMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14043,7 +14029,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudMoon")]
             BsIcon::BsCloudMoon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14060,7 +14046,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudMoonFill")]
             BsIcon::BsCloudMoonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14077,7 +14063,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudPlus")]
             BsIcon::BsCloudPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14094,7 +14080,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudPlusFill")]
             BsIcon::BsCloudPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14111,7 +14097,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudRain")]
             BsIcon::BsCloudRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14128,7 +14114,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudRainFill")]
             BsIcon::BsCloudRainFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14145,7 +14131,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudRainHeavy")]
             BsIcon::BsCloudRainHeavy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14162,7 +14148,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudRainHeavyFill")]
             BsIcon::BsCloudRainHeavyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14179,7 +14165,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSlash")]
             BsIcon::BsCloudSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14196,7 +14182,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSlashFill")]
             BsIcon::BsCloudSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14213,7 +14199,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSleet")]
             BsIcon::BsCloudSleet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14230,7 +14216,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSleetFill")]
             BsIcon::BsCloudSleetFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14247,7 +14233,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSnow")]
             BsIcon::BsCloudSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14264,7 +14250,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSnowFill")]
             BsIcon::BsCloudSnowFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14281,7 +14267,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSun")]
             BsIcon::BsCloudSun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14298,7 +14284,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudSunFill")]
             BsIcon::BsCloudSunFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14315,7 +14301,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudUpload")]
             BsIcon::BsCloudUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14332,7 +14318,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudUploadFill")]
             BsIcon::BsCloudUploadFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14349,7 +14335,7 @@ impl Data {
             }
             #[cfg(feature = "BsClouds")]
             BsIcon::BsClouds => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14366,7 +14352,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudsFill")]
             BsIcon::BsCloudsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14383,7 +14369,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudy")]
             BsIcon::BsCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14400,7 +14386,7 @@ impl Data {
             }
             #[cfg(feature = "BsCloudyFill")]
             BsIcon::BsCloudyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14417,7 +14403,7 @@ impl Data {
             }
             #[cfg(feature = "BsCode")]
             BsIcon::BsCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14434,7 +14420,7 @@ impl Data {
             }
             #[cfg(feature = "BsCodeSlash")]
             BsIcon::BsCodeSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14451,7 +14437,7 @@ impl Data {
             }
             #[cfg(feature = "BsCodeSquare")]
             BsIcon::BsCodeSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14468,7 +14454,7 @@ impl Data {
             }
             #[cfg(feature = "BsCoin")]
             BsIcon::BsCoin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14485,7 +14471,7 @@ impl Data {
             }
             #[cfg(feature = "BsCollection")]
             BsIcon::BsCollection => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14502,7 +14488,7 @@ impl Data {
             }
             #[cfg(feature = "BsCollectionFill")]
             BsIcon::BsCollectionFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14519,7 +14505,7 @@ impl Data {
             }
             #[cfg(feature = "BsCollectionPlay")]
             BsIcon::BsCollectionPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14536,7 +14522,7 @@ impl Data {
             }
             #[cfg(feature = "BsCollectionPlayFill")]
             BsIcon::BsCollectionPlayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14553,7 +14539,7 @@ impl Data {
             }
             #[cfg(feature = "BsColumns")]
             BsIcon::BsColumns => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14570,7 +14556,7 @@ impl Data {
             }
             #[cfg(feature = "BsColumnsGap")]
             BsIcon::BsColumnsGap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14587,7 +14573,7 @@ impl Data {
             }
             #[cfg(feature = "BsCommand")]
             BsIcon::BsCommand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14604,7 +14590,7 @@ impl Data {
             }
             #[cfg(feature = "BsCompass")]
             BsIcon::BsCompass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14621,7 +14607,7 @@ impl Data {
             }
             #[cfg(feature = "BsCompassFill")]
             BsIcon::BsCompassFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14638,7 +14624,7 @@ impl Data {
             }
             #[cfg(feature = "BsCone")]
             BsIcon::BsCone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14655,7 +14641,7 @@ impl Data {
             }
             #[cfg(feature = "BsConeStriped")]
             BsIcon::BsConeStriped => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14672,7 +14658,7 @@ impl Data {
             }
             #[cfg(feature = "BsController")]
             BsIcon::BsController => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14689,7 +14675,7 @@ impl Data {
             }
             #[cfg(feature = "BsCpu")]
             BsIcon::BsCpu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14706,7 +14692,7 @@ impl Data {
             }
             #[cfg(feature = "BsCpuFill")]
             BsIcon::BsCpuFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14723,7 +14709,7 @@ impl Data {
             }
             #[cfg(feature = "BsCreditCard")]
             BsIcon::BsCreditCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14740,7 +14726,7 @@ impl Data {
             }
             #[cfg(feature = "BsCreditCard2Back")]
             BsIcon::BsCreditCard2Back => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14757,7 +14743,7 @@ impl Data {
             }
             #[cfg(feature = "BsCreditCard2BackFill")]
             BsIcon::BsCreditCard2BackFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14774,7 +14760,7 @@ impl Data {
             }
             #[cfg(feature = "BsCreditCard2Front")]
             BsIcon::BsCreditCard2Front => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14791,7 +14777,7 @@ impl Data {
             }
             #[cfg(feature = "BsCreditCard2FrontFill")]
             BsIcon::BsCreditCard2FrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14808,7 +14794,7 @@ impl Data {
             }
             #[cfg(feature = "BsCreditCardFill")]
             BsIcon::BsCreditCardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14825,7 +14811,7 @@ impl Data {
             }
             #[cfg(feature = "BsCrop")]
             BsIcon::BsCrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14842,7 +14828,7 @@ impl Data {
             }
             #[cfg(feature = "BsCup")]
             BsIcon::BsCup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14859,7 +14845,7 @@ impl Data {
             }
             #[cfg(feature = "BsCupFill")]
             BsIcon::BsCupFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14876,7 +14862,7 @@ impl Data {
             }
             #[cfg(feature = "BsCupHot")]
             BsIcon::BsCupHot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14893,7 +14879,7 @@ impl Data {
             }
             #[cfg(feature = "BsCupHotFill")]
             BsIcon::BsCupHotFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14910,7 +14896,7 @@ impl Data {
             }
             #[cfg(feature = "BsCupStraw")]
             BsIcon::BsCupStraw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14927,7 +14913,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyBitcoin")]
             BsIcon::BsCurrencyBitcoin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14944,7 +14930,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyDollar")]
             BsIcon::BsCurrencyDollar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14961,7 +14947,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyEuro")]
             BsIcon::BsCurrencyEuro => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14978,7 +14964,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyExchange")]
             BsIcon::BsCurrencyExchange => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14995,7 +14981,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyPound")]
             BsIcon::BsCurrencyPound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15012,7 +14998,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyRupee")]
             BsIcon::BsCurrencyRupee => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15029,7 +15015,7 @@ impl Data {
             }
             #[cfg(feature = "BsCurrencyYen")]
             BsIcon::BsCurrencyYen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15046,7 +15032,7 @@ impl Data {
             }
             #[cfg(feature = "BsCursor")]
             BsIcon::BsCursor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15063,7 +15049,7 @@ impl Data {
             }
             #[cfg(feature = "BsCursorFill")]
             BsIcon::BsCursorFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15080,7 +15066,7 @@ impl Data {
             }
             #[cfg(feature = "BsCursorText")]
             BsIcon::BsCursorText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15097,7 +15083,7 @@ impl Data {
             }
             #[cfg(feature = "BsDash")]
             BsIcon::BsDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15114,7 +15100,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashCircle")]
             BsIcon::BsDashCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15131,7 +15117,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashCircleDotted")]
             BsIcon::BsDashCircleDotted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15148,7 +15134,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashCircleFill")]
             BsIcon::BsDashCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15165,7 +15151,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashLg")]
             BsIcon::BsDashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15182,7 +15168,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashSquare")]
             BsIcon::BsDashSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15199,7 +15185,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashSquareDotted")]
             BsIcon::BsDashSquareDotted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15216,7 +15202,7 @@ impl Data {
             }
             #[cfg(feature = "BsDashSquareFill")]
             BsIcon::BsDashSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15233,7 +15219,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabase")]
             BsIcon::BsDatabase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15250,7 +15236,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseAdd")]
             BsIcon::BsDatabaseAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15267,7 +15253,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseCheck")]
             BsIcon::BsDatabaseCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15284,7 +15270,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseDash")]
             BsIcon::BsDatabaseDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15301,7 +15287,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseDown")]
             BsIcon::BsDatabaseDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15318,7 +15304,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseExclamation")]
             BsIcon::BsDatabaseExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15335,7 +15321,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFill")]
             BsIcon::BsDatabaseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15352,7 +15338,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillAdd")]
             BsIcon::BsDatabaseFillAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15369,7 +15355,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillCheck")]
             BsIcon::BsDatabaseFillCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15386,7 +15372,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillDash")]
             BsIcon::BsDatabaseFillDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15403,7 +15389,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillDown")]
             BsIcon::BsDatabaseFillDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15420,7 +15406,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillExclamation")]
             BsIcon::BsDatabaseFillExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15437,7 +15423,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillGear")]
             BsIcon::BsDatabaseFillGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15454,7 +15440,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillLock")]
             BsIcon::BsDatabaseFillLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15471,7 +15457,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillSlash")]
             BsIcon::BsDatabaseFillSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15488,7 +15474,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillUp")]
             BsIcon::BsDatabaseFillUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15505,7 +15491,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseFillX")]
             BsIcon::BsDatabaseFillX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15522,7 +15508,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseGear")]
             BsIcon::BsDatabaseGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15539,7 +15525,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseLock")]
             BsIcon::BsDatabaseLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15556,7 +15542,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseSlash")]
             BsIcon::BsDatabaseSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15573,7 +15559,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseUp")]
             BsIcon::BsDatabaseUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15590,7 +15576,7 @@ impl Data {
             }
             #[cfg(feature = "BsDatabaseX")]
             BsIcon::BsDatabaseX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15607,7 +15593,7 @@ impl Data {
             }
             #[cfg(feature = "BsDeviceHdd")]
             BsIcon::BsDeviceHdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15624,7 +15610,7 @@ impl Data {
             }
             #[cfg(feature = "BsDeviceHddFill")]
             BsIcon::BsDeviceHddFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15641,7 +15627,7 @@ impl Data {
             }
             #[cfg(feature = "BsDeviceSsd")]
             BsIcon::BsDeviceSsd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15658,7 +15644,7 @@ impl Data {
             }
             #[cfg(feature = "BsDeviceSsdFill")]
             BsIcon::BsDeviceSsdFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15675,7 +15661,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiagram2")]
             BsIcon::BsDiagram2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15692,7 +15678,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiagram2Fill")]
             BsIcon::BsDiagram2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15709,7 +15695,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiagram3")]
             BsIcon::BsDiagram3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15726,7 +15712,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiagram3Fill")]
             BsIcon::BsDiagram3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15743,7 +15729,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiamond")]
             BsIcon::BsDiamond => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15760,7 +15746,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiamondFill")]
             BsIcon::BsDiamondFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15777,7 +15763,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiamondHalf")]
             BsIcon::BsDiamondHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15794,7 +15780,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice1")]
             BsIcon::BsDice1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15811,7 +15797,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice1Fill")]
             BsIcon::BsDice1Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15828,7 +15814,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice2")]
             BsIcon::BsDice2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15845,7 +15831,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice2Fill")]
             BsIcon::BsDice2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15862,7 +15848,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice3")]
             BsIcon::BsDice3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15879,7 +15865,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice3Fill")]
             BsIcon::BsDice3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15896,7 +15882,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice4")]
             BsIcon::BsDice4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15913,7 +15899,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice4Fill")]
             BsIcon::BsDice4Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15930,7 +15916,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice5")]
             BsIcon::BsDice5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15947,7 +15933,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice5Fill")]
             BsIcon::BsDice5Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15964,7 +15950,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice6")]
             BsIcon::BsDice6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15981,7 +15967,7 @@ impl Data {
             }
             #[cfg(feature = "BsDice6Fill")]
             BsIcon::BsDice6Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15998,7 +15984,7 @@ impl Data {
             }
             #[cfg(feature = "BsDisc")]
             BsIcon::BsDisc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16015,7 +16001,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiscFill")]
             BsIcon::BsDiscFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16032,7 +16018,7 @@ impl Data {
             }
             #[cfg(feature = "BsDiscord")]
             BsIcon::BsDiscord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16049,7 +16035,7 @@ impl Data {
             }
             #[cfg(feature = "BsDisplay")]
             BsIcon::BsDisplay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16066,7 +16052,7 @@ impl Data {
             }
             #[cfg(feature = "BsDisplayFill")]
             BsIcon::BsDisplayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16083,7 +16069,7 @@ impl Data {
             }
             #[cfg(feature = "BsDisplayport")]
             BsIcon::BsDisplayport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16100,7 +16086,7 @@ impl Data {
             }
             #[cfg(feature = "BsDisplayportFill")]
             BsIcon::BsDisplayportFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16117,7 +16103,7 @@ impl Data {
             }
             #[cfg(feature = "BsDistributeHorizontal")]
             BsIcon::BsDistributeHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16134,7 +16120,7 @@ impl Data {
             }
             #[cfg(feature = "BsDistributeVertical")]
             BsIcon::BsDistributeVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16151,7 +16137,7 @@ impl Data {
             }
             #[cfg(feature = "BsDoorClosed")]
             BsIcon::BsDoorClosed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16168,7 +16154,7 @@ impl Data {
             }
             #[cfg(feature = "BsDoorClosedFill")]
             BsIcon::BsDoorClosedFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16185,7 +16171,7 @@ impl Data {
             }
             #[cfg(feature = "BsDoorOpen")]
             BsIcon::BsDoorOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16202,7 +16188,7 @@ impl Data {
             }
             #[cfg(feature = "BsDoorOpenFill")]
             BsIcon::BsDoorOpenFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16219,7 +16205,7 @@ impl Data {
             }
             #[cfg(feature = "BsDot")]
             BsIcon::BsDot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16236,7 +16222,7 @@ impl Data {
             }
             #[cfg(feature = "BsDownload")]
             BsIcon::BsDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16253,7 +16239,7 @@ impl Data {
             }
             #[cfg(feature = "BsDpad")]
             BsIcon::BsDpad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16270,7 +16256,7 @@ impl Data {
             }
             #[cfg(feature = "BsDpadFill")]
             BsIcon::BsDpadFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16287,7 +16273,7 @@ impl Data {
             }
             #[cfg(feature = "BsDribbble")]
             BsIcon::BsDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16304,7 +16290,7 @@ impl Data {
             }
             #[cfg(feature = "BsDropbox")]
             BsIcon::BsDropbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16321,7 +16307,7 @@ impl Data {
             }
             #[cfg(feature = "BsDroplet")]
             BsIcon::BsDroplet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16338,7 +16324,7 @@ impl Data {
             }
             #[cfg(feature = "BsDropletFill")]
             BsIcon::BsDropletFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16355,7 +16341,7 @@ impl Data {
             }
             #[cfg(feature = "BsDropletHalf")]
             BsIcon::BsDropletHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16372,7 +16358,7 @@ impl Data {
             }
             #[cfg(feature = "BsEar")]
             BsIcon::BsEar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16389,7 +16375,7 @@ impl Data {
             }
             #[cfg(feature = "BsEarFill")]
             BsIcon::BsEarFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16406,7 +16392,7 @@ impl Data {
             }
             #[cfg(feature = "BsEarbuds")]
             BsIcon::BsEarbuds => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16423,7 +16409,7 @@ impl Data {
             }
             #[cfg(feature = "BsEasel")]
             BsIcon::BsEasel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16440,7 +16426,7 @@ impl Data {
             }
             #[cfg(feature = "BsEasel2")]
             BsIcon::BsEasel2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16457,7 +16443,7 @@ impl Data {
             }
             #[cfg(feature = "BsEasel2Fill")]
             BsIcon::BsEasel2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16474,7 +16460,7 @@ impl Data {
             }
             #[cfg(feature = "BsEasel3")]
             BsIcon::BsEasel3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16491,7 +16477,7 @@ impl Data {
             }
             #[cfg(feature = "BsEasel3Fill")]
             BsIcon::BsEasel3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16508,7 +16494,7 @@ impl Data {
             }
             #[cfg(feature = "BsEaselFill")]
             BsIcon::BsEaselFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16525,7 +16511,7 @@ impl Data {
             }
             #[cfg(feature = "BsEgg")]
             BsIcon::BsEgg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16542,7 +16528,7 @@ impl Data {
             }
             #[cfg(feature = "BsEggFill")]
             BsIcon::BsEggFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16559,7 +16545,7 @@ impl Data {
             }
             #[cfg(feature = "BsEggFried")]
             BsIcon::BsEggFried => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16576,7 +16562,7 @@ impl Data {
             }
             #[cfg(feature = "BsEject")]
             BsIcon::BsEject => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16593,7 +16579,7 @@ impl Data {
             }
             #[cfg(feature = "BsEjectFill")]
             BsIcon::BsEjectFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16610,7 +16596,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiAngry")]
             BsIcon::BsEmojiAngry => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16627,7 +16613,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiAngryFill")]
             BsIcon::BsEmojiAngryFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16644,7 +16630,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiDizzy")]
             BsIcon::BsEmojiDizzy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16661,7 +16647,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiDizzyFill")]
             BsIcon::BsEmojiDizzyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16678,7 +16664,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiExpressionless")]
             BsIcon::BsEmojiExpressionless => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16695,7 +16681,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiExpressionlessFill")]
             BsIcon::BsEmojiExpressionlessFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16712,7 +16698,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiFrown")]
             BsIcon::BsEmojiFrown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16729,7 +16715,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiFrownFill")]
             BsIcon::BsEmojiFrownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16746,7 +16732,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiHeartEyes")]
             BsIcon::BsEmojiHeartEyes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16763,7 +16749,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiHeartEyesFill")]
             BsIcon::BsEmojiHeartEyesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16780,7 +16766,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiKiss")]
             BsIcon::BsEmojiKiss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16797,7 +16783,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiKissFill")]
             BsIcon::BsEmojiKissFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16814,7 +16800,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiLaughing")]
             BsIcon::BsEmojiLaughing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16831,7 +16817,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiLaughingFill")]
             BsIcon::BsEmojiLaughingFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16848,7 +16834,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiNeutral")]
             BsIcon::BsEmojiNeutral => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16865,7 +16851,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiNeutralFill")]
             BsIcon::BsEmojiNeutralFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16882,7 +16868,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiSmile")]
             BsIcon::BsEmojiSmile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16899,7 +16885,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiSmileFill")]
             BsIcon::BsEmojiSmileFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16916,7 +16902,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiSmileUpsideDown")]
             BsIcon::BsEmojiSmileUpsideDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16933,7 +16919,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiSmileUpsideDownFill")]
             BsIcon::BsEmojiSmileUpsideDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16950,7 +16936,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiSunglasses")]
             BsIcon::BsEmojiSunglasses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16967,7 +16953,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiSunglassesFill")]
             BsIcon::BsEmojiSunglassesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16984,7 +16970,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiWink")]
             BsIcon::BsEmojiWink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17001,7 +16987,7 @@ impl Data {
             }
             #[cfg(feature = "BsEmojiWinkFill")]
             BsIcon::BsEmojiWinkFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17018,7 +17004,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelope")]
             BsIcon::BsEnvelope => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17035,7 +17021,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeAt")]
             BsIcon::BsEnvelopeAt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17052,7 +17038,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeAtFill")]
             BsIcon::BsEnvelopeAtFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17069,7 +17055,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeCheck")]
             BsIcon::BsEnvelopeCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17086,7 +17072,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeCheckFill")]
             BsIcon::BsEnvelopeCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17103,7 +17089,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeDash")]
             BsIcon::BsEnvelopeDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17120,7 +17106,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeDashFill")]
             BsIcon::BsEnvelopeDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17137,7 +17123,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeExclamation")]
             BsIcon::BsEnvelopeExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17154,7 +17140,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeExclamationFill")]
             BsIcon::BsEnvelopeExclamationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17171,7 +17157,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeFill")]
             BsIcon::BsEnvelopeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17188,7 +17174,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeHeart")]
             BsIcon::BsEnvelopeHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17205,7 +17191,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeHeartFill")]
             BsIcon::BsEnvelopeHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17222,7 +17208,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeOpen")]
             BsIcon::BsEnvelopeOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17239,7 +17225,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeOpenFill")]
             BsIcon::BsEnvelopeOpenFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17256,7 +17242,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeOpenHeart")]
             BsIcon::BsEnvelopeOpenHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17273,7 +17259,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeOpenHeartFill")]
             BsIcon::BsEnvelopeOpenHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17290,7 +17276,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopePaper")]
             BsIcon::BsEnvelopePaper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17307,7 +17293,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopePaperFill")]
             BsIcon::BsEnvelopePaperFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17324,7 +17310,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopePaperHeart")]
             BsIcon::BsEnvelopePaperHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17341,7 +17327,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopePaperHeartFill")]
             BsIcon::BsEnvelopePaperHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17358,7 +17344,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopePlus")]
             BsIcon::BsEnvelopePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17375,7 +17361,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopePlusFill")]
             BsIcon::BsEnvelopePlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17392,7 +17378,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeSlash")]
             BsIcon::BsEnvelopeSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17409,7 +17395,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeSlashFill")]
             BsIcon::BsEnvelopeSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17426,7 +17412,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeX")]
             BsIcon::BsEnvelopeX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17443,7 +17429,7 @@ impl Data {
             }
             #[cfg(feature = "BsEnvelopeXFill")]
             BsIcon::BsEnvelopeXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17460,7 +17446,7 @@ impl Data {
             }
             #[cfg(feature = "BsEraser")]
             BsIcon::BsEraser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17477,7 +17463,7 @@ impl Data {
             }
             #[cfg(feature = "BsEraserFill")]
             BsIcon::BsEraserFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17494,7 +17480,7 @@ impl Data {
             }
             #[cfg(feature = "BsEscape")]
             BsIcon::BsEscape => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17511,7 +17497,7 @@ impl Data {
             }
             #[cfg(feature = "BsEthernet")]
             BsIcon::BsEthernet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17528,7 +17514,7 @@ impl Data {
             }
             #[cfg(feature = "BsEvFront")]
             BsIcon::BsEvFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17545,7 +17531,7 @@ impl Data {
             }
             #[cfg(feature = "BsEvFrontFill")]
             BsIcon::BsEvFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17562,7 +17548,7 @@ impl Data {
             }
             #[cfg(feature = "BsEvStation")]
             BsIcon::BsEvStation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17579,7 +17565,7 @@ impl Data {
             }
             #[cfg(feature = "BsEvStationFill")]
             BsIcon::BsEvStationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17596,7 +17582,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamation")]
             BsIcon::BsExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17613,7 +17599,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationCircle")]
             BsIcon::BsExclamationCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17630,7 +17616,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationCircleFill")]
             BsIcon::BsExclamationCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17647,7 +17633,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationDiamond")]
             BsIcon::BsExclamationDiamond => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17664,7 +17650,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationDiamondFill")]
             BsIcon::BsExclamationDiamondFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17681,7 +17667,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationLg")]
             BsIcon::BsExclamationLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17698,7 +17684,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationOctagon")]
             BsIcon::BsExclamationOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17715,7 +17701,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationOctagonFill")]
             BsIcon::BsExclamationOctagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17732,7 +17718,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationSquare")]
             BsIcon::BsExclamationSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17749,7 +17735,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationSquareFill")]
             BsIcon::BsExclamationSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17766,7 +17752,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationTriangle")]
             BsIcon::BsExclamationTriangle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17783,7 +17769,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclamationTriangleFill")]
             BsIcon::BsExclamationTriangleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17800,7 +17786,7 @@ impl Data {
             }
             #[cfg(feature = "BsExclude")]
             BsIcon::BsExclude => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17817,7 +17803,7 @@ impl Data {
             }
             #[cfg(feature = "BsExplicit")]
             BsIcon::BsExplicit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17834,7 +17820,7 @@ impl Data {
             }
             #[cfg(feature = "BsExplicitFill")]
             BsIcon::BsExplicitFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17851,7 +17837,7 @@ impl Data {
             }
             #[cfg(feature = "BsEye")]
             BsIcon::BsEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17868,7 +17854,7 @@ impl Data {
             }
             #[cfg(feature = "BsEyeFill")]
             BsIcon::BsEyeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17885,7 +17871,7 @@ impl Data {
             }
             #[cfg(feature = "BsEyeSlash")]
             BsIcon::BsEyeSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17902,7 +17888,7 @@ impl Data {
             }
             #[cfg(feature = "BsEyeSlashFill")]
             BsIcon::BsEyeSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17919,7 +17905,7 @@ impl Data {
             }
             #[cfg(feature = "BsEyedropper")]
             BsIcon::BsEyedropper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17936,7 +17922,7 @@ impl Data {
             }
             #[cfg(feature = "BsEyeglasses")]
             BsIcon::BsEyeglasses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17953,7 +17939,7 @@ impl Data {
             }
             #[cfg(feature = "BsFacebook")]
             BsIcon::BsFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17970,7 +17956,7 @@ impl Data {
             }
             #[cfg(feature = "BsFan")]
             BsIcon::BsFan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17987,7 +17973,7 @@ impl Data {
             }
             #[cfg(feature = "BsFastForward")]
             BsIcon::BsFastForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18004,7 +17990,7 @@ impl Data {
             }
             #[cfg(feature = "BsFastForwardBtn")]
             BsIcon::BsFastForwardBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18021,7 +18007,7 @@ impl Data {
             }
             #[cfg(feature = "BsFastForwardBtnFill")]
             BsIcon::BsFastForwardBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18038,7 +18024,7 @@ impl Data {
             }
             #[cfg(feature = "BsFastForwardCircle")]
             BsIcon::BsFastForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18055,7 +18041,7 @@ impl Data {
             }
             #[cfg(feature = "BsFastForwardCircleFill")]
             BsIcon::BsFastForwardCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18072,7 +18058,7 @@ impl Data {
             }
             #[cfg(feature = "BsFastForwardFill")]
             BsIcon::BsFastForwardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18089,7 +18075,7 @@ impl Data {
             }
             #[cfg(feature = "BsFile")]
             BsIcon::BsFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18106,7 +18092,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileArrowDown")]
             BsIcon::BsFileArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18123,7 +18109,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileArrowDownFill")]
             BsIcon::BsFileArrowDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18140,7 +18126,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileArrowUp")]
             BsIcon::BsFileArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18157,7 +18143,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileArrowUpFill")]
             BsIcon::BsFileArrowUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18174,7 +18160,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileBarGraph")]
             BsIcon::BsFileBarGraph => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18191,7 +18177,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileBarGraphFill")]
             BsIcon::BsFileBarGraphFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18208,7 +18194,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileBinary")]
             BsIcon::BsFileBinary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18225,7 +18211,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileBinaryFill")]
             BsIcon::BsFileBinaryFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18242,7 +18228,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileBreak")]
             BsIcon::BsFileBreak => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18259,7 +18245,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileBreakFill")]
             BsIcon::BsFileBreakFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18276,7 +18262,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileCheck")]
             BsIcon::BsFileCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18293,7 +18279,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileCheckFill")]
             BsIcon::BsFileCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18310,7 +18296,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileCode")]
             BsIcon::BsFileCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18327,7 +18313,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileCodeFill")]
             BsIcon::BsFileCodeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18344,7 +18330,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileDiff")]
             BsIcon::BsFileDiff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18361,7 +18347,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileDiffFill")]
             BsIcon::BsFileDiffFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18378,7 +18364,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmark")]
             BsIcon::BsFileEarmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18395,7 +18381,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkArrowDown")]
             BsIcon::BsFileEarmarkArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18412,7 +18398,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkArrowDownFill")]
             BsIcon::BsFileEarmarkArrowDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18429,7 +18415,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkArrowUp")]
             BsIcon::BsFileEarmarkArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18446,7 +18432,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkArrowUpFill")]
             BsIcon::BsFileEarmarkArrowUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18463,7 +18449,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkBarGraph")]
             BsIcon::BsFileEarmarkBarGraph => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18480,7 +18466,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkBarGraphFill")]
             BsIcon::BsFileEarmarkBarGraphFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18497,7 +18483,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkBinary")]
             BsIcon::BsFileEarmarkBinary => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18514,7 +18500,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkBinaryFill")]
             BsIcon::BsFileEarmarkBinaryFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18531,7 +18517,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkBreak")]
             BsIcon::BsFileEarmarkBreak => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18548,7 +18534,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkBreakFill")]
             BsIcon::BsFileEarmarkBreakFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18565,7 +18551,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkCheck")]
             BsIcon::BsFileEarmarkCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18582,7 +18568,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkCheckFill")]
             BsIcon::BsFileEarmarkCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18599,7 +18585,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkCode")]
             BsIcon::BsFileEarmarkCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18616,7 +18602,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkCodeFill")]
             BsIcon::BsFileEarmarkCodeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18633,7 +18619,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkDiff")]
             BsIcon::BsFileEarmarkDiff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18650,7 +18636,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkDiffFill")]
             BsIcon::BsFileEarmarkDiffFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18667,7 +18653,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkEasel")]
             BsIcon::BsFileEarmarkEasel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18684,7 +18670,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkEaselFill")]
             BsIcon::BsFileEarmarkEaselFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18701,7 +18687,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkExcel")]
             BsIcon::BsFileEarmarkExcel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18718,7 +18704,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkExcelFill")]
             BsIcon::BsFileEarmarkExcelFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18735,7 +18721,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkFill")]
             BsIcon::BsFileEarmarkFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18752,7 +18738,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkFont")]
             BsIcon::BsFileEarmarkFont => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18769,7 +18755,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkFontFill")]
             BsIcon::BsFileEarmarkFontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18786,7 +18772,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkImage")]
             BsIcon::BsFileEarmarkImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18803,7 +18789,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkImageFill")]
             BsIcon::BsFileEarmarkImageFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18820,7 +18806,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkLock")]
             BsIcon::BsFileEarmarkLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18837,7 +18823,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkLock2")]
             BsIcon::BsFileEarmarkLock2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18854,7 +18840,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkLock2Fill")]
             BsIcon::BsFileEarmarkLock2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18871,7 +18857,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkLockFill")]
             BsIcon::BsFileEarmarkLockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18888,7 +18874,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkMedical")]
             BsIcon::BsFileEarmarkMedical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18905,7 +18891,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkMedicalFill")]
             BsIcon::BsFileEarmarkMedicalFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18922,7 +18908,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkMinus")]
             BsIcon::BsFileEarmarkMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18939,7 +18925,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkMinusFill")]
             BsIcon::BsFileEarmarkMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18956,7 +18942,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkMusic")]
             BsIcon::BsFileEarmarkMusic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18973,7 +18959,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkMusicFill")]
             BsIcon::BsFileEarmarkMusicFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18990,7 +18976,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPdf")]
             BsIcon::BsFileEarmarkPdf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19007,7 +18993,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPdfFill")]
             BsIcon::BsFileEarmarkPdfFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19024,7 +19010,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPerson")]
             BsIcon::BsFileEarmarkPerson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19041,7 +19027,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPersonFill")]
             BsIcon::BsFileEarmarkPersonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19058,7 +19044,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPlay")]
             BsIcon::BsFileEarmarkPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19075,7 +19061,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPlayFill")]
             BsIcon::BsFileEarmarkPlayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19092,7 +19078,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPlus")]
             BsIcon::BsFileEarmarkPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19109,7 +19095,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPlusFill")]
             BsIcon::BsFileEarmarkPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19126,7 +19112,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPost")]
             BsIcon::BsFileEarmarkPost => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19143,7 +19129,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPostFill")]
             BsIcon::BsFileEarmarkPostFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19160,7 +19146,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPpt")]
             BsIcon::BsFileEarmarkPpt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19177,7 +19163,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkPptFill")]
             BsIcon::BsFileEarmarkPptFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19194,7 +19180,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkRichtext")]
             BsIcon::BsFileEarmarkRichtext => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19211,7 +19197,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkRichtextFill")]
             BsIcon::BsFileEarmarkRichtextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19228,7 +19214,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkRuled")]
             BsIcon::BsFileEarmarkRuled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19245,7 +19231,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkRuledFill")]
             BsIcon::BsFileEarmarkRuledFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19262,7 +19248,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkSlides")]
             BsIcon::BsFileEarmarkSlides => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19279,7 +19265,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkSlidesFill")]
             BsIcon::BsFileEarmarkSlidesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19296,7 +19282,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkSpreadsheet")]
             BsIcon::BsFileEarmarkSpreadsheet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19313,7 +19299,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkSpreadsheetFill")]
             BsIcon::BsFileEarmarkSpreadsheetFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19330,7 +19316,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkText")]
             BsIcon::BsFileEarmarkText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19347,7 +19333,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkTextFill")]
             BsIcon::BsFileEarmarkTextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19364,7 +19350,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkWord")]
             BsIcon::BsFileEarmarkWord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19381,7 +19367,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkWordFill")]
             BsIcon::BsFileEarmarkWordFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19398,7 +19384,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkX")]
             BsIcon::BsFileEarmarkX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19415,7 +19401,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkXFill")]
             BsIcon::BsFileEarmarkXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19432,7 +19418,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkZip")]
             BsIcon::BsFileEarmarkZip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19449,7 +19435,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEarmarkZipFill")]
             BsIcon::BsFileEarmarkZipFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19466,7 +19452,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEasel")]
             BsIcon::BsFileEasel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19483,7 +19469,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileEaselFill")]
             BsIcon::BsFileEaselFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19500,7 +19486,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileExcel")]
             BsIcon::BsFileExcel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19517,7 +19503,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileExcelFill")]
             BsIcon::BsFileExcelFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19534,7 +19520,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileFill")]
             BsIcon::BsFileFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19551,7 +19537,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileFont")]
             BsIcon::BsFileFont => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19568,7 +19554,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileFontFill")]
             BsIcon::BsFileFontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19585,7 +19571,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileImage")]
             BsIcon::BsFileImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19602,7 +19588,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileImageFill")]
             BsIcon::BsFileImageFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19619,7 +19605,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileLock")]
             BsIcon::BsFileLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19636,7 +19622,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileLock2")]
             BsIcon::BsFileLock2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19653,7 +19639,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileLock2Fill")]
             BsIcon::BsFileLock2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19670,7 +19656,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileLockFill")]
             BsIcon::BsFileLockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19687,7 +19673,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileMedical")]
             BsIcon::BsFileMedical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19704,7 +19690,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileMedicalFill")]
             BsIcon::BsFileMedicalFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19721,7 +19707,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileMinus")]
             BsIcon::BsFileMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19738,7 +19724,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileMinusFill")]
             BsIcon::BsFileMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19755,7 +19741,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileMusic")]
             BsIcon::BsFileMusic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19772,7 +19758,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileMusicFill")]
             BsIcon::BsFileMusicFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19789,7 +19775,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePdf")]
             BsIcon::BsFilePdf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19806,7 +19792,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePdfFill")]
             BsIcon::BsFilePdfFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19823,7 +19809,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePerson")]
             BsIcon::BsFilePerson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19840,7 +19826,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePersonFill")]
             BsIcon::BsFilePersonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19857,7 +19843,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePlay")]
             BsIcon::BsFilePlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19874,7 +19860,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePlayFill")]
             BsIcon::BsFilePlayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19891,7 +19877,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePlus")]
             BsIcon::BsFilePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19908,7 +19894,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePlusFill")]
             BsIcon::BsFilePlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19925,7 +19911,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePost")]
             BsIcon::BsFilePost => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19942,7 +19928,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePostFill")]
             BsIcon::BsFilePostFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19959,7 +19945,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePpt")]
             BsIcon::BsFilePpt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19976,7 +19962,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilePptFill")]
             BsIcon::BsFilePptFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19993,7 +19979,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileRichtext")]
             BsIcon::BsFileRichtext => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20010,7 +19996,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileRichtextFill")]
             BsIcon::BsFileRichtextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20027,7 +20013,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileRuled")]
             BsIcon::BsFileRuled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20044,7 +20030,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileRuledFill")]
             BsIcon::BsFileRuledFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20061,7 +20047,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileSlides")]
             BsIcon::BsFileSlides => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20078,7 +20064,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileSlidesFill")]
             BsIcon::BsFileSlidesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20095,7 +20081,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileSpreadsheet")]
             BsIcon::BsFileSpreadsheet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20112,7 +20098,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileSpreadsheetFill")]
             BsIcon::BsFileSpreadsheetFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20129,7 +20115,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileText")]
             BsIcon::BsFileText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20146,7 +20132,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileTextFill")]
             BsIcon::BsFileTextFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20163,7 +20149,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileWord")]
             BsIcon::BsFileWord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20180,7 +20166,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileWordFill")]
             BsIcon::BsFileWordFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20197,7 +20183,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileX")]
             BsIcon::BsFileX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20214,7 +20200,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileXFill")]
             BsIcon::BsFileXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20231,7 +20217,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileZip")]
             BsIcon::BsFileZip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20248,7 +20234,7 @@ impl Data {
             }
             #[cfg(feature = "BsFileZipFill")]
             BsIcon::BsFileZipFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20265,7 +20251,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiles")]
             BsIcon::BsFiles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20282,7 +20268,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilesAlt")]
             BsIcon::BsFilesAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20299,7 +20285,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeAac")]
             BsIcon::BsFiletypeAac => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20316,7 +20302,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeAi")]
             BsIcon::BsFiletypeAi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20333,7 +20319,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeBmp")]
             BsIcon::BsFiletypeBmp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20350,7 +20336,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeCs")]
             BsIcon::BsFiletypeCs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20367,7 +20353,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeCss")]
             BsIcon::BsFiletypeCss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20384,7 +20370,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeCsv")]
             BsIcon::BsFiletypeCsv => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20401,7 +20387,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeDoc")]
             BsIcon::BsFiletypeDoc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20418,7 +20404,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeDocx")]
             BsIcon::BsFiletypeDocx => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20435,7 +20421,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeExe")]
             BsIcon::BsFiletypeExe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20452,7 +20438,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeGif")]
             BsIcon::BsFiletypeGif => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20469,7 +20455,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeHeic")]
             BsIcon::BsFiletypeHeic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20486,7 +20472,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeHtml")]
             BsIcon::BsFiletypeHtml => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20503,7 +20489,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeJava")]
             BsIcon::BsFiletypeJava => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20520,7 +20506,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeJpg")]
             BsIcon::BsFiletypeJpg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20537,7 +20523,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeJs")]
             BsIcon::BsFiletypeJs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20554,7 +20540,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeJson")]
             BsIcon::BsFiletypeJson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20571,7 +20557,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeJsx")]
             BsIcon::BsFiletypeJsx => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20588,7 +20574,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeKey")]
             BsIcon::BsFiletypeKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20605,7 +20591,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeM4p")]
             BsIcon::BsFiletypeM4p => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20622,7 +20608,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeMd")]
             BsIcon::BsFiletypeMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20639,7 +20625,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeMdx")]
             BsIcon::BsFiletypeMdx => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20656,7 +20642,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeMov")]
             BsIcon::BsFiletypeMov => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20673,7 +20659,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeMp3")]
             BsIcon::BsFiletypeMp3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20690,7 +20676,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeMp4")]
             BsIcon::BsFiletypeMp4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20707,7 +20693,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeOtf")]
             BsIcon::BsFiletypeOtf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20724,7 +20710,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePdf")]
             BsIcon::BsFiletypePdf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20741,7 +20727,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePhp")]
             BsIcon::BsFiletypePhp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20758,7 +20744,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePng")]
             BsIcon::BsFiletypePng => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20775,7 +20761,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePpt")]
             BsIcon::BsFiletypePpt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20792,7 +20778,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePptx")]
             BsIcon::BsFiletypePptx => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20809,7 +20795,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePsd")]
             BsIcon::BsFiletypePsd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20826,7 +20812,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypePy")]
             BsIcon::BsFiletypePy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20843,7 +20829,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeRaw")]
             BsIcon::BsFiletypeRaw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20860,7 +20846,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeRb")]
             BsIcon::BsFiletypeRb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20877,7 +20863,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeSass")]
             BsIcon::BsFiletypeSass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20894,7 +20880,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeScss")]
             BsIcon::BsFiletypeScss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20911,7 +20897,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeSh")]
             BsIcon::BsFiletypeSh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20928,7 +20914,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeSql")]
             BsIcon::BsFiletypeSql => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20945,7 +20931,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeSvg")]
             BsIcon::BsFiletypeSvg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20962,7 +20948,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeTiff")]
             BsIcon::BsFiletypeTiff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20979,7 +20965,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeTsx")]
             BsIcon::BsFiletypeTsx => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20996,7 +20982,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeTtf")]
             BsIcon::BsFiletypeTtf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21013,7 +20999,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeTxt")]
             BsIcon::BsFiletypeTxt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21030,7 +21016,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeWav")]
             BsIcon::BsFiletypeWav => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21047,7 +21033,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeWoff")]
             BsIcon::BsFiletypeWoff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21064,7 +21050,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeXls")]
             BsIcon::BsFiletypeXls => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21081,7 +21067,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeXlsx")]
             BsIcon::BsFiletypeXlsx => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21098,7 +21084,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeXml")]
             BsIcon::BsFiletypeXml => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21115,7 +21101,7 @@ impl Data {
             }
             #[cfg(feature = "BsFiletypeYml")]
             BsIcon::BsFiletypeYml => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21132,7 +21118,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilm")]
             BsIcon::BsFilm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21149,7 +21135,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilter")]
             BsIcon::BsFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21166,7 +21152,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilterCircle")]
             BsIcon::BsFilterCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21183,7 +21169,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilterCircleFill")]
             BsIcon::BsFilterCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21200,7 +21186,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilterLeft")]
             BsIcon::BsFilterLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21217,7 +21203,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilterRight")]
             BsIcon::BsFilterRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21234,7 +21220,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilterSquare")]
             BsIcon::BsFilterSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21251,7 +21237,7 @@ impl Data {
             }
             #[cfg(feature = "BsFilterSquareFill")]
             BsIcon::BsFilterSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21268,7 +21254,7 @@ impl Data {
             }
             #[cfg(feature = "BsFingerprint")]
             BsIcon::BsFingerprint => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21285,7 +21271,7 @@ impl Data {
             }
             #[cfg(feature = "BsFire")]
             BsIcon::BsFire => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21302,7 +21288,7 @@ impl Data {
             }
             #[cfg(feature = "BsFlag")]
             BsIcon::BsFlag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21319,7 +21305,7 @@ impl Data {
             }
             #[cfg(feature = "BsFlagFill")]
             BsIcon::BsFlagFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21336,7 +21322,7 @@ impl Data {
             }
             #[cfg(feature = "BsFlower1")]
             BsIcon::BsFlower1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21353,7 +21339,7 @@ impl Data {
             }
             #[cfg(feature = "BsFlower2")]
             BsIcon::BsFlower2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21370,7 +21356,7 @@ impl Data {
             }
             #[cfg(feature = "BsFlower3")]
             BsIcon::BsFlower3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21387,7 +21373,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolder")]
             BsIcon::BsFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21404,7 +21390,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolder2")]
             BsIcon::BsFolder2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21421,7 +21407,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolder2Open")]
             BsIcon::BsFolder2Open => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21438,7 +21424,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderCheck")]
             BsIcon::BsFolderCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21455,7 +21441,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderFill")]
             BsIcon::BsFolderFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21472,7 +21458,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderMinus")]
             BsIcon::BsFolderMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21489,7 +21475,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderPlus")]
             BsIcon::BsFolderPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21506,7 +21492,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderSymlink")]
             BsIcon::BsFolderSymlink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21523,7 +21509,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderSymlinkFill")]
             BsIcon::BsFolderSymlinkFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21540,7 +21526,7 @@ impl Data {
             }
             #[cfg(feature = "BsFolderX")]
             BsIcon::BsFolderX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21557,7 +21543,7 @@ impl Data {
             }
             #[cfg(feature = "BsFonts")]
             BsIcon::BsFonts => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21574,7 +21560,7 @@ impl Data {
             }
             #[cfg(feature = "BsForward")]
             BsIcon::BsForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21591,7 +21577,7 @@ impl Data {
             }
             #[cfg(feature = "BsForwardFill")]
             BsIcon::BsForwardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21608,7 +21594,7 @@ impl Data {
             }
             #[cfg(feature = "BsFront")]
             BsIcon::BsFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21625,7 +21611,7 @@ impl Data {
             }
             #[cfg(feature = "BsFuelPump")]
             BsIcon::BsFuelPump => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21642,7 +21628,7 @@ impl Data {
             }
             #[cfg(feature = "BsFuelPumpDiesel")]
             BsIcon::BsFuelPumpDiesel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21659,7 +21645,7 @@ impl Data {
             }
             #[cfg(feature = "BsFuelPumpDieselFill")]
             BsIcon::BsFuelPumpDieselFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21676,7 +21662,7 @@ impl Data {
             }
             #[cfg(feature = "BsFuelPumpFill")]
             BsIcon::BsFuelPumpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21693,7 +21679,7 @@ impl Data {
             }
             #[cfg(feature = "BsFullscreen")]
             BsIcon::BsFullscreen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21710,7 +21696,7 @@ impl Data {
             }
             #[cfg(feature = "BsFullscreenExit")]
             BsIcon::BsFullscreenExit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21727,7 +21713,7 @@ impl Data {
             }
             #[cfg(feature = "BsFunnel")]
             BsIcon::BsFunnel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21744,7 +21730,7 @@ impl Data {
             }
             #[cfg(feature = "BsFunnelFill")]
             BsIcon::BsFunnelFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21761,7 +21747,7 @@ impl Data {
             }
             #[cfg(feature = "BsGear")]
             BsIcon::BsGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21778,7 +21764,7 @@ impl Data {
             }
             #[cfg(feature = "BsGearFill")]
             BsIcon::BsGearFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21795,7 +21781,7 @@ impl Data {
             }
             #[cfg(feature = "BsGearWide")]
             BsIcon::BsGearWide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21812,7 +21798,7 @@ impl Data {
             }
             #[cfg(feature = "BsGearWideConnected")]
             BsIcon::BsGearWideConnected => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21829,7 +21815,7 @@ impl Data {
             }
             #[cfg(feature = "BsGem")]
             BsIcon::BsGem => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21846,7 +21832,7 @@ impl Data {
             }
             #[cfg(feature = "BsGenderAmbiguous")]
             BsIcon::BsGenderAmbiguous => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21863,7 +21849,7 @@ impl Data {
             }
             #[cfg(feature = "BsGenderFemale")]
             BsIcon::BsGenderFemale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21880,7 +21866,7 @@ impl Data {
             }
             #[cfg(feature = "BsGenderMale")]
             BsIcon::BsGenderMale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21897,7 +21883,7 @@ impl Data {
             }
             #[cfg(feature = "BsGenderTrans")]
             BsIcon::BsGenderTrans => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21914,7 +21900,7 @@ impl Data {
             }
             #[cfg(feature = "BsGeo")]
             BsIcon::BsGeo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21931,7 +21917,7 @@ impl Data {
             }
             #[cfg(feature = "BsGeoAlt")]
             BsIcon::BsGeoAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21948,7 +21934,7 @@ impl Data {
             }
             #[cfg(feature = "BsGeoAltFill")]
             BsIcon::BsGeoAltFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21965,7 +21951,7 @@ impl Data {
             }
             #[cfg(feature = "BsGeoFill")]
             BsIcon::BsGeoFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21982,7 +21968,7 @@ impl Data {
             }
             #[cfg(feature = "BsGift")]
             BsIcon::BsGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21999,7 +21985,7 @@ impl Data {
             }
             #[cfg(feature = "BsGiftFill")]
             BsIcon::BsGiftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22016,7 +22002,7 @@ impl Data {
             }
             #[cfg(feature = "BsGit")]
             BsIcon::BsGit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22033,7 +22019,7 @@ impl Data {
             }
             #[cfg(feature = "BsGithub")]
             BsIcon::BsGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22050,7 +22036,7 @@ impl Data {
             }
             #[cfg(feature = "BsGlobe")]
             BsIcon::BsGlobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22067,7 +22053,7 @@ impl Data {
             }
             #[cfg(feature = "BsGlobe2")]
             BsIcon::BsGlobe2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22084,7 +22070,7 @@ impl Data {
             }
             #[cfg(feature = "BsGlobeAmericas")]
             BsIcon::BsGlobeAmericas => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22101,7 +22087,7 @@ impl Data {
             }
             #[cfg(feature = "BsGlobeAsiaAustralia")]
             BsIcon::BsGlobeAsiaAustralia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22118,7 +22104,7 @@ impl Data {
             }
             #[cfg(feature = "BsGlobeCentralSouthAsia")]
             BsIcon::BsGlobeCentralSouthAsia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22135,7 +22121,7 @@ impl Data {
             }
             #[cfg(feature = "BsGlobeEuropeAfrica")]
             BsIcon::BsGlobeEuropeAfrica => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22152,7 +22138,7 @@ impl Data {
             }
             #[cfg(feature = "BsGoogle")]
             BsIcon::BsGoogle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22169,7 +22155,7 @@ impl Data {
             }
             #[cfg(feature = "BsGooglePlay")]
             BsIcon::BsGooglePlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22186,7 +22172,7 @@ impl Data {
             }
             #[cfg(feature = "BsGpuCard")]
             BsIcon::BsGpuCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22203,7 +22189,7 @@ impl Data {
             }
             #[cfg(feature = "BsGraphDown")]
             BsIcon::BsGraphDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22220,7 +22206,7 @@ impl Data {
             }
             #[cfg(feature = "BsGraphDownArrow")]
             BsIcon::BsGraphDownArrow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22237,7 +22223,7 @@ impl Data {
             }
             #[cfg(feature = "BsGraphUp")]
             BsIcon::BsGraphUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22254,7 +22240,7 @@ impl Data {
             }
             #[cfg(feature = "BsGraphUpArrow")]
             BsIcon::BsGraphUpArrow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22271,7 +22257,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid")]
             BsIcon::BsGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22288,7 +22274,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid1x2")]
             BsIcon::BsGrid1x2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22305,7 +22291,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid1x2Fill")]
             BsIcon::BsGrid1x2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22322,7 +22308,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid3x2")]
             BsIcon::BsGrid3x2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22339,7 +22325,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid3x2Gap")]
             BsIcon::BsGrid3x2Gap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22356,7 +22342,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid3x2GapFill")]
             BsIcon::BsGrid3x2GapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22373,7 +22359,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid3x3")]
             BsIcon::BsGrid3x3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22390,7 +22376,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid3x3Gap")]
             BsIcon::BsGrid3x3Gap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22407,7 +22393,7 @@ impl Data {
             }
             #[cfg(feature = "BsGrid3x3GapFill")]
             BsIcon::BsGrid3x3GapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22424,7 +22410,7 @@ impl Data {
             }
             #[cfg(feature = "BsGridFill")]
             BsIcon::BsGridFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22441,7 +22427,7 @@ impl Data {
             }
             #[cfg(feature = "BsGripHorizontal")]
             BsIcon::BsGripHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22458,7 +22444,7 @@ impl Data {
             }
             #[cfg(feature = "BsGripVertical")]
             BsIcon::BsGripVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22475,7 +22461,7 @@ impl Data {
             }
             #[cfg(feature = "BsHCircle")]
             BsIcon::BsHCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22492,7 +22478,7 @@ impl Data {
             }
             #[cfg(feature = "BsHCircleFill")]
             BsIcon::BsHCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22509,7 +22495,7 @@ impl Data {
             }
             #[cfg(feature = "BsHSquare")]
             BsIcon::BsHSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22526,7 +22512,7 @@ impl Data {
             }
             #[cfg(feature = "BsHSquareFill")]
             BsIcon::BsHSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22543,7 +22529,7 @@ impl Data {
             }
             #[cfg(feature = "BsHammer")]
             BsIcon::BsHammer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22560,7 +22546,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandIndex")]
             BsIcon::BsHandIndex => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22577,7 +22563,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandIndexFill")]
             BsIcon::BsHandIndexFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22594,7 +22580,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandIndexThumb")]
             BsIcon::BsHandIndexThumb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22611,7 +22597,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandIndexThumbFill")]
             BsIcon::BsHandIndexThumbFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22628,7 +22614,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandThumbsDown")]
             BsIcon::BsHandThumbsDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22645,7 +22631,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandThumbsDownFill")]
             BsIcon::BsHandThumbsDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22662,7 +22648,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandThumbsUp")]
             BsIcon::BsHandThumbsUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22679,7 +22665,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandThumbsUpFill")]
             BsIcon::BsHandThumbsUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22696,7 +22682,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandbag")]
             BsIcon::BsHandbag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22713,7 +22699,7 @@ impl Data {
             }
             #[cfg(feature = "BsHandbagFill")]
             BsIcon::BsHandbagFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22730,7 +22716,7 @@ impl Data {
             }
             #[cfg(feature = "BsHash")]
             BsIcon::BsHash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22747,7 +22733,7 @@ impl Data {
             }
             #[cfg(feature = "BsHdd")]
             BsIcon::BsHdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22764,7 +22750,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddFill")]
             BsIcon::BsHddFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22781,7 +22767,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddNetwork")]
             BsIcon::BsHddNetwork => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22798,7 +22784,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddNetworkFill")]
             BsIcon::BsHddNetworkFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22815,7 +22801,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddRack")]
             BsIcon::BsHddRack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22832,7 +22818,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddRackFill")]
             BsIcon::BsHddRackFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22849,7 +22835,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddStack")]
             BsIcon::BsHddStack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22866,7 +22852,7 @@ impl Data {
             }
             #[cfg(feature = "BsHddStackFill")]
             BsIcon::BsHddStackFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22883,7 +22869,7 @@ impl Data {
             }
             #[cfg(feature = "BsHdmi")]
             BsIcon::BsHdmi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22900,7 +22886,7 @@ impl Data {
             }
             #[cfg(feature = "BsHdmiFill")]
             BsIcon::BsHdmiFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22917,7 +22903,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeadphones")]
             BsIcon::BsHeadphones => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22934,7 +22920,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeadset")]
             BsIcon::BsHeadset => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22951,7 +22937,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeadsetVr")]
             BsIcon::BsHeadsetVr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22968,7 +22954,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeart")]
             BsIcon::BsHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22985,7 +22971,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartArrow")]
             BsIcon::BsHeartArrow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23002,7 +22988,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartFill")]
             BsIcon::BsHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23019,7 +23005,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartHalf")]
             BsIcon::BsHeartHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23036,7 +23022,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartPulse")]
             BsIcon::BsHeartPulse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23053,7 +23039,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartPulseFill")]
             BsIcon::BsHeartPulseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23070,7 +23056,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartbreak")]
             BsIcon::BsHeartbreak => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23087,7 +23073,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeartbreakFill")]
             BsIcon::BsHeartbreakFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23104,7 +23090,7 @@ impl Data {
             }
             #[cfg(feature = "BsHearts")]
             BsIcon::BsHearts => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23121,7 +23107,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeptagon")]
             BsIcon::BsHeptagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23138,7 +23124,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeptagonFill")]
             BsIcon::BsHeptagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23155,7 +23141,7 @@ impl Data {
             }
             #[cfg(feature = "BsHeptagonHalf")]
             BsIcon::BsHeptagonHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23172,7 +23158,7 @@ impl Data {
             }
             #[cfg(feature = "BsHexagon")]
             BsIcon::BsHexagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23189,7 +23175,7 @@ impl Data {
             }
             #[cfg(feature = "BsHexagonFill")]
             BsIcon::BsHexagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23206,7 +23192,7 @@ impl Data {
             }
             #[cfg(feature = "BsHexagonHalf")]
             BsIcon::BsHexagonHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23223,7 +23209,7 @@ impl Data {
             }
             #[cfg(feature = "BsHospital")]
             BsIcon::BsHospital => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23240,7 +23226,7 @@ impl Data {
             }
             #[cfg(feature = "BsHospitalFill")]
             BsIcon::BsHospitalFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23257,7 +23243,7 @@ impl Data {
             }
             #[cfg(feature = "BsHourglass")]
             BsIcon::BsHourglass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23274,7 +23260,7 @@ impl Data {
             }
             #[cfg(feature = "BsHourglassBottom")]
             BsIcon::BsHourglassBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23291,7 +23277,7 @@ impl Data {
             }
             #[cfg(feature = "BsHourglassSplit")]
             BsIcon::BsHourglassSplit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23308,7 +23294,7 @@ impl Data {
             }
             #[cfg(feature = "BsHourglassTop")]
             BsIcon::BsHourglassTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23325,7 +23311,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouse")]
             BsIcon::BsHouse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23342,7 +23328,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseAdd")]
             BsIcon::BsHouseAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23359,7 +23345,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseAddFill")]
             BsIcon::BsHouseAddFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23376,7 +23362,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseCheck")]
             BsIcon::BsHouseCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23393,7 +23379,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseCheckFill")]
             BsIcon::BsHouseCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23410,7 +23396,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseDash")]
             BsIcon::BsHouseDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23427,7 +23413,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseDashFill")]
             BsIcon::BsHouseDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23444,7 +23430,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseDoor")]
             BsIcon::BsHouseDoor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23461,7 +23447,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseDoorFill")]
             BsIcon::BsHouseDoorFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23478,7 +23464,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseDown")]
             BsIcon::BsHouseDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23495,7 +23481,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseDownFill")]
             BsIcon::BsHouseDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23512,7 +23498,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseExclamation")]
             BsIcon::BsHouseExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23529,7 +23515,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseExclamationFill")]
             BsIcon::BsHouseExclamationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23546,7 +23532,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseFill")]
             BsIcon::BsHouseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23563,7 +23549,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseGear")]
             BsIcon::BsHouseGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23580,7 +23566,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseGearFill")]
             BsIcon::BsHouseGearFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23597,7 +23583,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseHeart")]
             BsIcon::BsHouseHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23614,7 +23600,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseHeartFill")]
             BsIcon::BsHouseHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23631,7 +23617,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseLock")]
             BsIcon::BsHouseLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23648,7 +23634,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseLockFill")]
             BsIcon::BsHouseLockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23665,7 +23651,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseSlash")]
             BsIcon::BsHouseSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23682,7 +23668,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseSlashFill")]
             BsIcon::BsHouseSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23699,7 +23685,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseUp")]
             BsIcon::BsHouseUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23716,7 +23702,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseUpFill")]
             BsIcon::BsHouseUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23733,7 +23719,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseX")]
             BsIcon::BsHouseX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23750,7 +23736,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouseXFill")]
             BsIcon::BsHouseXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23767,7 +23753,7 @@ impl Data {
             }
             #[cfg(feature = "BsHouses")]
             BsIcon::BsHouses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23784,7 +23770,7 @@ impl Data {
             }
             #[cfg(feature = "BsHousesFill")]
             BsIcon::BsHousesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23801,7 +23787,7 @@ impl Data {
             }
             #[cfg(feature = "BsHr")]
             BsIcon::BsHr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23818,7 +23804,7 @@ impl Data {
             }
             #[cfg(feature = "BsHurricane")]
             BsIcon::BsHurricane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23835,7 +23821,7 @@ impl Data {
             }
             #[cfg(feature = "BsHypnotize")]
             BsIcon::BsHypnotize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23852,7 +23838,7 @@ impl Data {
             }
             #[cfg(feature = "BsImage")]
             BsIcon::BsImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23869,7 +23855,7 @@ impl Data {
             }
             #[cfg(feature = "BsImageAlt")]
             BsIcon::BsImageAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23886,7 +23872,7 @@ impl Data {
             }
             #[cfg(feature = "BsImageFill")]
             BsIcon::BsImageFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23903,7 +23889,7 @@ impl Data {
             }
             #[cfg(feature = "BsImages")]
             BsIcon::BsImages => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23920,7 +23906,7 @@ impl Data {
             }
             #[cfg(feature = "BsInbox")]
             BsIcon::BsInbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23937,7 +23923,7 @@ impl Data {
             }
             #[cfg(feature = "BsInboxFill")]
             BsIcon::BsInboxFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23954,7 +23940,7 @@ impl Data {
             }
             #[cfg(feature = "BsInboxes")]
             BsIcon::BsInboxes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23971,7 +23957,7 @@ impl Data {
             }
             #[cfg(feature = "BsInboxesFill")]
             BsIcon::BsInboxesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23988,7 +23974,7 @@ impl Data {
             }
             #[cfg(feature = "BsIncognito")]
             BsIcon::BsIncognito => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24005,7 +23991,7 @@ impl Data {
             }
             #[cfg(feature = "BsIndent")]
             BsIcon::BsIndent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24022,7 +24008,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfinity")]
             BsIcon::BsInfinity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24039,7 +24025,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfo")]
             BsIcon::BsInfo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24056,7 +24042,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfoCircle")]
             BsIcon::BsInfoCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24073,7 +24059,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfoCircleFill")]
             BsIcon::BsInfoCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24090,7 +24076,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfoLg")]
             BsIcon::BsInfoLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24107,7 +24093,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfoSquare")]
             BsIcon::BsInfoSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24124,7 +24110,7 @@ impl Data {
             }
             #[cfg(feature = "BsInfoSquareFill")]
             BsIcon::BsInfoSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24141,7 +24127,7 @@ impl Data {
             }
             #[cfg(feature = "BsInputCursor")]
             BsIcon::BsInputCursor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24158,7 +24144,7 @@ impl Data {
             }
             #[cfg(feature = "BsInputCursorText")]
             BsIcon::BsInputCursorText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24175,7 +24161,7 @@ impl Data {
             }
             #[cfg(feature = "BsInstagram")]
             BsIcon::BsInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24192,7 +24178,7 @@ impl Data {
             }
             #[cfg(feature = "BsIntersect")]
             BsIcon::BsIntersect => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24209,7 +24195,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournal")]
             BsIcon::BsJournal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24226,7 +24212,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalAlbum")]
             BsIcon::BsJournalAlbum => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24243,7 +24229,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalArrowDown")]
             BsIcon::BsJournalArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24260,7 +24246,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalArrowUp")]
             BsIcon::BsJournalArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24277,7 +24263,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalBookmark")]
             BsIcon::BsJournalBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24294,7 +24280,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalBookmarkFill")]
             BsIcon::BsJournalBookmarkFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24311,7 +24297,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalCheck")]
             BsIcon::BsJournalCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24328,7 +24314,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalCode")]
             BsIcon::BsJournalCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24345,7 +24331,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalMedical")]
             BsIcon::BsJournalMedical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24362,7 +24348,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalMinus")]
             BsIcon::BsJournalMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24379,7 +24365,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalPlus")]
             BsIcon::BsJournalPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24396,7 +24382,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalRichtext")]
             BsIcon::BsJournalRichtext => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24413,7 +24399,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalText")]
             BsIcon::BsJournalText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24430,7 +24416,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournalX")]
             BsIcon::BsJournalX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24447,7 +24433,7 @@ impl Data {
             }
             #[cfg(feature = "BsJournals")]
             BsIcon::BsJournals => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24464,7 +24450,7 @@ impl Data {
             }
             #[cfg(feature = "BsJoystick")]
             BsIcon::BsJoystick => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24481,7 +24467,7 @@ impl Data {
             }
             #[cfg(feature = "BsJustify")]
             BsIcon::BsJustify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24498,7 +24484,7 @@ impl Data {
             }
             #[cfg(feature = "BsJustifyLeft")]
             BsIcon::BsJustifyLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24515,7 +24501,7 @@ impl Data {
             }
             #[cfg(feature = "BsJustifyRight")]
             BsIcon::BsJustifyRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24532,7 +24518,7 @@ impl Data {
             }
             #[cfg(feature = "BsKanban")]
             BsIcon::BsKanban => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24549,7 +24535,7 @@ impl Data {
             }
             #[cfg(feature = "BsKanbanFill")]
             BsIcon::BsKanbanFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24566,7 +24552,7 @@ impl Data {
             }
             #[cfg(feature = "BsKey")]
             BsIcon::BsKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24583,7 +24569,7 @@ impl Data {
             }
             #[cfg(feature = "BsKeyFill")]
             BsIcon::BsKeyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24600,7 +24586,7 @@ impl Data {
             }
             #[cfg(feature = "BsKeyboard")]
             BsIcon::BsKeyboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24617,7 +24603,7 @@ impl Data {
             }
             #[cfg(feature = "BsKeyboardFill")]
             BsIcon::BsKeyboardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24634,7 +24620,7 @@ impl Data {
             }
             #[cfg(feature = "BsLadder")]
             BsIcon::BsLadder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24651,7 +24637,7 @@ impl Data {
             }
             #[cfg(feature = "BsLamp")]
             BsIcon::BsLamp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24668,7 +24654,7 @@ impl Data {
             }
             #[cfg(feature = "BsLampFill")]
             BsIcon::BsLampFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24685,7 +24671,7 @@ impl Data {
             }
             #[cfg(feature = "BsLaptop")]
             BsIcon::BsLaptop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24702,7 +24688,7 @@ impl Data {
             }
             #[cfg(feature = "BsLaptopFill")]
             BsIcon::BsLaptopFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24719,7 +24705,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayerBackward")]
             BsIcon::BsLayerBackward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24736,7 +24722,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayerForward")]
             BsIcon::BsLayerForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24753,7 +24739,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayers")]
             BsIcon::BsLayers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24770,7 +24756,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayersFill")]
             BsIcon::BsLayersFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24787,7 +24773,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayersHalf")]
             BsIcon::BsLayersHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24804,7 +24790,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutSidebar")]
             BsIcon::BsLayoutSidebar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24821,7 +24807,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutSidebarInset")]
             BsIcon::BsLayoutSidebarInset => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24838,7 +24824,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutSidebarInsetReverse")]
             BsIcon::BsLayoutSidebarInsetReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24855,7 +24841,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutSidebarReverse")]
             BsIcon::BsLayoutSidebarReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24872,7 +24858,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutSplit")]
             BsIcon::BsLayoutSplit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24889,7 +24875,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutTextSidebar")]
             BsIcon::BsLayoutTextSidebar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24906,7 +24892,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutTextSidebarReverse")]
             BsIcon::BsLayoutTextSidebarReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24923,7 +24909,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutTextWindow")]
             BsIcon::BsLayoutTextWindow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24940,7 +24926,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutTextWindowReverse")]
             BsIcon::BsLayoutTextWindowReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24957,7 +24943,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutThreeColumns")]
             BsIcon::BsLayoutThreeColumns => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24974,7 +24960,7 @@ impl Data {
             }
             #[cfg(feature = "BsLayoutWtf")]
             BsIcon::BsLayoutWtf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24991,7 +24977,7 @@ impl Data {
             }
             #[cfg(feature = "BsLifePreserver")]
             BsIcon::BsLifePreserver => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25008,7 +24994,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightbulb")]
             BsIcon::BsLightbulb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25025,7 +25011,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightbulbFill")]
             BsIcon::BsLightbulbFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25042,7 +25028,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightbulbOff")]
             BsIcon::BsLightbulbOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25059,7 +25045,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightbulbOffFill")]
             BsIcon::BsLightbulbOffFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25076,7 +25062,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightning")]
             BsIcon::BsLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25093,7 +25079,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightningCharge")]
             BsIcon::BsLightningCharge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25110,7 +25096,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightningChargeFill")]
             BsIcon::BsLightningChargeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25127,7 +25113,7 @@ impl Data {
             }
             #[cfg(feature = "BsLightningFill")]
             BsIcon::BsLightningFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25144,7 +25130,7 @@ impl Data {
             }
             #[cfg(feature = "BsLine")]
             BsIcon::BsLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25161,7 +25147,7 @@ impl Data {
             }
             #[cfg(feature = "BsLink")]
             BsIcon::BsLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25178,7 +25164,7 @@ impl Data {
             }
             #[cfg(feature = "BsLink45deg")]
             BsIcon::BsLink45deg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25195,7 +25181,7 @@ impl Data {
             }
             #[cfg(feature = "BsLinkedin")]
             BsIcon::BsLinkedin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25212,7 +25198,7 @@ impl Data {
             }
             #[cfg(feature = "BsList")]
             BsIcon::BsList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25229,7 +25215,7 @@ impl Data {
             }
             #[cfg(feature = "BsListCheck")]
             BsIcon::BsListCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25246,7 +25232,7 @@ impl Data {
             }
             #[cfg(feature = "BsListColumns")]
             BsIcon::BsListColumns => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25263,7 +25249,7 @@ impl Data {
             }
             #[cfg(feature = "BsListColumnsReverse")]
             BsIcon::BsListColumnsReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25280,7 +25266,7 @@ impl Data {
             }
             #[cfg(feature = "BsListNested")]
             BsIcon::BsListNested => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25297,7 +25283,7 @@ impl Data {
             }
             #[cfg(feature = "BsListOl")]
             BsIcon::BsListOl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25314,7 +25300,7 @@ impl Data {
             }
             #[cfg(feature = "BsListStars")]
             BsIcon::BsListStars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25331,7 +25317,7 @@ impl Data {
             }
             #[cfg(feature = "BsListTask")]
             BsIcon::BsListTask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25348,7 +25334,7 @@ impl Data {
             }
             #[cfg(feature = "BsListUl")]
             BsIcon::BsListUl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25365,7 +25351,7 @@ impl Data {
             }
             #[cfg(feature = "BsLock")]
             BsIcon::BsLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25382,7 +25368,7 @@ impl Data {
             }
             #[cfg(feature = "BsLockFill")]
             BsIcon::BsLockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25399,7 +25385,7 @@ impl Data {
             }
             #[cfg(feature = "BsLungs")]
             BsIcon::BsLungs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25416,7 +25402,7 @@ impl Data {
             }
             #[cfg(feature = "BsLungsFill")]
             BsIcon::BsLungsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25433,7 +25419,7 @@ impl Data {
             }
             #[cfg(feature = "BsMagic")]
             BsIcon::BsMagic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25450,7 +25436,7 @@ impl Data {
             }
             #[cfg(feature = "BsMagnet")]
             BsIcon::BsMagnet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25467,7 +25453,7 @@ impl Data {
             }
             #[cfg(feature = "BsMagnetFill")]
             BsIcon::BsMagnetFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25484,7 +25470,7 @@ impl Data {
             }
             #[cfg(feature = "BsMailbox")]
             BsIcon::BsMailbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25501,7 +25487,7 @@ impl Data {
             }
             #[cfg(feature = "BsMailbox2")]
             BsIcon::BsMailbox2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25518,7 +25504,7 @@ impl Data {
             }
             #[cfg(feature = "BsMap")]
             BsIcon::BsMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25535,7 +25521,7 @@ impl Data {
             }
             #[cfg(feature = "BsMapFill")]
             BsIcon::BsMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25552,7 +25538,7 @@ impl Data {
             }
             #[cfg(feature = "BsMarkdown")]
             BsIcon::BsMarkdown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25569,7 +25555,7 @@ impl Data {
             }
             #[cfg(feature = "BsMarkdownFill")]
             BsIcon::BsMarkdownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25586,7 +25572,7 @@ impl Data {
             }
             #[cfg(feature = "BsMask")]
             BsIcon::BsMask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25603,7 +25589,7 @@ impl Data {
             }
             #[cfg(feature = "BsMastodon")]
             BsIcon::BsMastodon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25620,7 +25606,7 @@ impl Data {
             }
             #[cfg(feature = "BsMedium")]
             BsIcon::BsMedium => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25637,7 +25623,7 @@ impl Data {
             }
             #[cfg(feature = "BsMegaphone")]
             BsIcon::BsMegaphone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25654,7 +25640,7 @@ impl Data {
             }
             #[cfg(feature = "BsMegaphoneFill")]
             BsIcon::BsMegaphoneFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25671,7 +25657,7 @@ impl Data {
             }
             #[cfg(feature = "BsMemory")]
             BsIcon::BsMemory => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25688,7 +25674,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuApp")]
             BsIcon::BsMenuApp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25705,7 +25691,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuAppFill")]
             BsIcon::BsMenuAppFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25722,7 +25708,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuButton")]
             BsIcon::BsMenuButton => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25739,7 +25725,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuButtonFill")]
             BsIcon::BsMenuButtonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25756,7 +25742,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuButtonWide")]
             BsIcon::BsMenuButtonWide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25773,7 +25759,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuButtonWideFill")]
             BsIcon::BsMenuButtonWideFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25790,7 +25776,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuDown")]
             BsIcon::BsMenuDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25807,7 +25793,7 @@ impl Data {
             }
             #[cfg(feature = "BsMenuUp")]
             BsIcon::BsMenuUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25824,7 +25810,7 @@ impl Data {
             }
             #[cfg(feature = "BsMessenger")]
             BsIcon::BsMessenger => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25841,7 +25827,7 @@ impl Data {
             }
             #[cfg(feature = "BsMeta")]
             BsIcon::BsMeta => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25858,7 +25844,7 @@ impl Data {
             }
             #[cfg(feature = "BsMic")]
             BsIcon::BsMic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25875,7 +25861,7 @@ impl Data {
             }
             #[cfg(feature = "BsMicFill")]
             BsIcon::BsMicFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25892,7 +25878,7 @@ impl Data {
             }
             #[cfg(feature = "BsMicMute")]
             BsIcon::BsMicMute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25909,7 +25895,7 @@ impl Data {
             }
             #[cfg(feature = "BsMicMuteFill")]
             BsIcon::BsMicMuteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25926,7 +25912,7 @@ impl Data {
             }
             #[cfg(feature = "BsMicrosoft")]
             BsIcon::BsMicrosoft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25943,7 +25929,7 @@ impl Data {
             }
             #[cfg(feature = "BsMicrosoftTeams")]
             BsIcon::BsMicrosoftTeams => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25960,7 +25946,7 @@ impl Data {
             }
             #[cfg(feature = "BsMinecart")]
             BsIcon::BsMinecart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25977,7 +25963,7 @@ impl Data {
             }
             #[cfg(feature = "BsMinecartLoaded")]
             BsIcon::BsMinecartLoaded => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25994,7 +25980,7 @@ impl Data {
             }
             #[cfg(feature = "BsModem")]
             BsIcon::BsModem => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26011,7 +25997,7 @@ impl Data {
             }
             #[cfg(feature = "BsModemFill")]
             BsIcon::BsModemFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26028,7 +26014,7 @@ impl Data {
             }
             #[cfg(feature = "BsMoisture")]
             BsIcon::BsMoisture => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26045,7 +26031,7 @@ impl Data {
             }
             #[cfg(feature = "BsMoon")]
             BsIcon::BsMoon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26062,7 +26048,7 @@ impl Data {
             }
             #[cfg(feature = "BsMoonFill")]
             BsIcon::BsMoonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26079,7 +26065,7 @@ impl Data {
             }
             #[cfg(feature = "BsMoonStars")]
             BsIcon::BsMoonStars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26096,7 +26082,7 @@ impl Data {
             }
             #[cfg(feature = "BsMoonStarsFill")]
             BsIcon::BsMoonStarsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26113,7 +26099,7 @@ impl Data {
             }
             #[cfg(feature = "BsMortarboard")]
             BsIcon::BsMortarboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26130,7 +26116,7 @@ impl Data {
             }
             #[cfg(feature = "BsMortarboardFill")]
             BsIcon::BsMortarboardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26147,7 +26133,7 @@ impl Data {
             }
             #[cfg(feature = "BsMotherboard")]
             BsIcon::BsMotherboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26164,7 +26150,7 @@ impl Data {
             }
             #[cfg(feature = "BsMotherboardFill")]
             BsIcon::BsMotherboardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26181,7 +26167,7 @@ impl Data {
             }
             #[cfg(feature = "BsMouse")]
             BsIcon::BsMouse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26198,7 +26184,7 @@ impl Data {
             }
             #[cfg(feature = "BsMouse2")]
             BsIcon::BsMouse2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26215,7 +26201,7 @@ impl Data {
             }
             #[cfg(feature = "BsMouse2Fill")]
             BsIcon::BsMouse2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26232,7 +26218,7 @@ impl Data {
             }
             #[cfg(feature = "BsMouse3")]
             BsIcon::BsMouse3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26249,7 +26235,7 @@ impl Data {
             }
             #[cfg(feature = "BsMouse3Fill")]
             BsIcon::BsMouse3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26266,7 +26252,7 @@ impl Data {
             }
             #[cfg(feature = "BsMouseFill")]
             BsIcon::BsMouseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26283,7 +26269,7 @@ impl Data {
             }
             #[cfg(feature = "BsMusicNote")]
             BsIcon::BsMusicNote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26300,7 +26286,7 @@ impl Data {
             }
             #[cfg(feature = "BsMusicNoteBeamed")]
             BsIcon::BsMusicNoteBeamed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26317,7 +26303,7 @@ impl Data {
             }
             #[cfg(feature = "BsMusicNoteList")]
             BsIcon::BsMusicNoteList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26334,7 +26320,7 @@ impl Data {
             }
             #[cfg(feature = "BsMusicPlayer")]
             BsIcon::BsMusicPlayer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26351,7 +26337,7 @@ impl Data {
             }
             #[cfg(feature = "BsMusicPlayerFill")]
             BsIcon::BsMusicPlayerFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26368,7 +26354,7 @@ impl Data {
             }
             #[cfg(feature = "BsNewspaper")]
             BsIcon::BsNewspaper => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26385,7 +26371,7 @@ impl Data {
             }
             #[cfg(feature = "BsNintendoSwitch")]
             BsIcon::BsNintendoSwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26402,7 +26388,7 @@ impl Data {
             }
             #[cfg(feature = "BsNodeMinus")]
             BsIcon::BsNodeMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26419,7 +26405,7 @@ impl Data {
             }
             #[cfg(feature = "BsNodeMinusFill")]
             BsIcon::BsNodeMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26436,7 +26422,7 @@ impl Data {
             }
             #[cfg(feature = "BsNodePlus")]
             BsIcon::BsNodePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26453,7 +26439,7 @@ impl Data {
             }
             #[cfg(feature = "BsNodePlusFill")]
             BsIcon::BsNodePlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26470,7 +26456,7 @@ impl Data {
             }
             #[cfg(feature = "BsNut")]
             BsIcon::BsNut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26487,7 +26473,7 @@ impl Data {
             }
             #[cfg(feature = "BsNutFill")]
             BsIcon::BsNutFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26504,7 +26490,7 @@ impl Data {
             }
             #[cfg(feature = "BsNvidia")]
             BsIcon::BsNvidia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26521,7 +26507,7 @@ impl Data {
             }
             #[cfg(feature = "BsOctagon")]
             BsIcon::BsOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26538,7 +26524,7 @@ impl Data {
             }
             #[cfg(feature = "BsOctagonFill")]
             BsIcon::BsOctagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26555,7 +26541,7 @@ impl Data {
             }
             #[cfg(feature = "BsOctagonHalf")]
             BsIcon::BsOctagonHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26572,7 +26558,7 @@ impl Data {
             }
             #[cfg(feature = "BsOpticalAudio")]
             BsIcon::BsOpticalAudio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26589,7 +26575,7 @@ impl Data {
             }
             #[cfg(feature = "BsOpticalAudioFill")]
             BsIcon::BsOpticalAudioFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26606,7 +26592,7 @@ impl Data {
             }
             #[cfg(feature = "BsOption")]
             BsIcon::BsOption => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26623,7 +26609,7 @@ impl Data {
             }
             #[cfg(feature = "BsOutlet")]
             BsIcon::BsOutlet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26640,7 +26626,7 @@ impl Data {
             }
             #[cfg(feature = "BsPCircle")]
             BsIcon::BsPCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26657,7 +26643,7 @@ impl Data {
             }
             #[cfg(feature = "BsPCircleFill")]
             BsIcon::BsPCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26674,7 +26660,7 @@ impl Data {
             }
             #[cfg(feature = "BsPSquare")]
             BsIcon::BsPSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26691,7 +26677,7 @@ impl Data {
             }
             #[cfg(feature = "BsPSquareFill")]
             BsIcon::BsPSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26708,7 +26694,7 @@ impl Data {
             }
             #[cfg(feature = "BsPaintBucket")]
             BsIcon::BsPaintBucket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26725,7 +26711,7 @@ impl Data {
             }
             #[cfg(feature = "BsPalette")]
             BsIcon::BsPalette => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26742,7 +26728,7 @@ impl Data {
             }
             #[cfg(feature = "BsPalette2")]
             BsIcon::BsPalette2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26759,7 +26745,7 @@ impl Data {
             }
             #[cfg(feature = "BsPaletteFill")]
             BsIcon::BsPaletteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26776,7 +26762,7 @@ impl Data {
             }
             #[cfg(feature = "BsPaperclip")]
             BsIcon::BsPaperclip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26793,7 +26779,7 @@ impl Data {
             }
             #[cfg(feature = "BsParagraph")]
             BsIcon::BsParagraph => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26810,7 +26796,7 @@ impl Data {
             }
             #[cfg(feature = "BsPass")]
             BsIcon::BsPass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26827,7 +26813,7 @@ impl Data {
             }
             #[cfg(feature = "BsPassFill")]
             BsIcon::BsPassFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26844,7 +26830,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchCheck")]
             BsIcon::BsPatchCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26861,7 +26847,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchCheckFill")]
             BsIcon::BsPatchCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26878,7 +26864,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchExclamation")]
             BsIcon::BsPatchExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26895,7 +26881,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchExclamationFill")]
             BsIcon::BsPatchExclamationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26912,7 +26898,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchMinus")]
             BsIcon::BsPatchMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26929,7 +26915,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchMinusFill")]
             BsIcon::BsPatchMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26946,7 +26932,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchPlus")]
             BsIcon::BsPatchPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26963,7 +26949,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchPlusFill")]
             BsIcon::BsPatchPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26980,7 +26966,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchQuestion")]
             BsIcon::BsPatchQuestion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26997,7 +26983,7 @@ impl Data {
             }
             #[cfg(feature = "BsPatchQuestionFill")]
             BsIcon::BsPatchQuestionFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27014,7 +27000,7 @@ impl Data {
             }
             #[cfg(feature = "BsPause")]
             BsIcon::BsPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27031,7 +27017,7 @@ impl Data {
             }
             #[cfg(feature = "BsPauseBtn")]
             BsIcon::BsPauseBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27048,7 +27034,7 @@ impl Data {
             }
             #[cfg(feature = "BsPauseBtnFill")]
             BsIcon::BsPauseBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27065,7 +27051,7 @@ impl Data {
             }
             #[cfg(feature = "BsPauseCircle")]
             BsIcon::BsPauseCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27082,7 +27068,7 @@ impl Data {
             }
             #[cfg(feature = "BsPauseCircleFill")]
             BsIcon::BsPauseCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27099,7 +27085,7 @@ impl Data {
             }
             #[cfg(feature = "BsPauseFill")]
             BsIcon::BsPauseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27116,7 +27102,7 @@ impl Data {
             }
             #[cfg(feature = "BsPaypal")]
             BsIcon::BsPaypal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27133,7 +27119,7 @@ impl Data {
             }
             #[cfg(feature = "BsPc")]
             BsIcon::BsPc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27150,7 +27136,7 @@ impl Data {
             }
             #[cfg(feature = "BsPcDisplay")]
             BsIcon::BsPcDisplay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27167,7 +27153,7 @@ impl Data {
             }
             #[cfg(feature = "BsPcDisplayHorizontal")]
             BsIcon::BsPcDisplayHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27184,7 +27170,7 @@ impl Data {
             }
             #[cfg(feature = "BsPcHorizontal")]
             BsIcon::BsPcHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27201,7 +27187,7 @@ impl Data {
             }
             #[cfg(feature = "BsPciCard")]
             BsIcon::BsPciCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27218,7 +27204,7 @@ impl Data {
             }
             #[cfg(feature = "BsPeace")]
             BsIcon::BsPeace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27235,7 +27221,7 @@ impl Data {
             }
             #[cfg(feature = "BsPeaceFill")]
             BsIcon::BsPeaceFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27252,7 +27238,7 @@ impl Data {
             }
             #[cfg(feature = "BsPen")]
             BsIcon::BsPen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27269,7 +27255,7 @@ impl Data {
             }
             #[cfg(feature = "BsPenFill")]
             BsIcon::BsPenFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27286,7 +27272,7 @@ impl Data {
             }
             #[cfg(feature = "BsPencil")]
             BsIcon::BsPencil => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27303,7 +27289,7 @@ impl Data {
             }
             #[cfg(feature = "BsPencilFill")]
             BsIcon::BsPencilFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27320,7 +27306,7 @@ impl Data {
             }
             #[cfg(feature = "BsPencilSquare")]
             BsIcon::BsPencilSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27337,7 +27323,7 @@ impl Data {
             }
             #[cfg(feature = "BsPentagon")]
             BsIcon::BsPentagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27354,7 +27340,7 @@ impl Data {
             }
             #[cfg(feature = "BsPentagonFill")]
             BsIcon::BsPentagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27371,7 +27357,7 @@ impl Data {
             }
             #[cfg(feature = "BsPentagonHalf")]
             BsIcon::BsPentagonHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27388,7 +27374,7 @@ impl Data {
             }
             #[cfg(feature = "BsPeople")]
             BsIcon::BsPeople => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27405,7 +27391,7 @@ impl Data {
             }
             #[cfg(feature = "BsPeopleFill")]
             BsIcon::BsPeopleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27422,7 +27408,7 @@ impl Data {
             }
             #[cfg(feature = "BsPercent")]
             BsIcon::BsPercent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27439,7 +27425,7 @@ impl Data {
             }
             #[cfg(feature = "BsPerson")]
             BsIcon::BsPerson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27456,7 +27442,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonAdd")]
             BsIcon::BsPersonAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27473,7 +27459,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonBadge")]
             BsIcon::BsPersonBadge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27490,7 +27476,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonBadgeFill")]
             BsIcon::BsPersonBadgeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27507,7 +27493,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonBoundingBox")]
             BsIcon::BsPersonBoundingBox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27524,7 +27510,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonCheck")]
             BsIcon::BsPersonCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27541,7 +27527,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonCheckFill")]
             BsIcon::BsPersonCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27558,7 +27544,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonCircle")]
             BsIcon::BsPersonCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27575,7 +27561,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonDash")]
             BsIcon::BsPersonDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27592,7 +27578,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonDashFill")]
             BsIcon::BsPersonDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27609,7 +27595,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonDown")]
             BsIcon::BsPersonDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27626,7 +27612,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonExclamation")]
             BsIcon::BsPersonExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27643,7 +27629,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFill")]
             BsIcon::BsPersonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27660,7 +27646,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillAdd")]
             BsIcon::BsPersonFillAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27677,7 +27663,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillCheck")]
             BsIcon::BsPersonFillCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27694,7 +27680,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillDash")]
             BsIcon::BsPersonFillDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27711,7 +27697,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillDown")]
             BsIcon::BsPersonFillDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27728,7 +27714,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillExclamation")]
             BsIcon::BsPersonFillExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27745,7 +27731,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillGear")]
             BsIcon::BsPersonFillGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27762,7 +27748,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillLock")]
             BsIcon::BsPersonFillLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27779,7 +27765,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillSlash")]
             BsIcon::BsPersonFillSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27796,7 +27782,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillUp")]
             BsIcon::BsPersonFillUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27813,7 +27799,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonFillX")]
             BsIcon::BsPersonFillX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27830,7 +27816,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonGear")]
             BsIcon::BsPersonGear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27847,7 +27833,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonHeart")]
             BsIcon::BsPersonHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27864,7 +27850,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonHearts")]
             BsIcon::BsPersonHearts => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27881,7 +27867,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonLinesFill")]
             BsIcon::BsPersonLinesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27898,7 +27884,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonLock")]
             BsIcon::BsPersonLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27915,7 +27901,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonPlus")]
             BsIcon::BsPersonPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27932,7 +27918,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonPlusFill")]
             BsIcon::BsPersonPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27949,7 +27935,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonRolodex")]
             BsIcon::BsPersonRolodex => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27966,7 +27952,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonSlash")]
             BsIcon::BsPersonSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27983,7 +27969,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonSquare")]
             BsIcon::BsPersonSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28000,7 +27986,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonUp")]
             BsIcon::BsPersonUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28017,7 +28003,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonVcard")]
             BsIcon::BsPersonVcard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28034,7 +28020,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonVcardFill")]
             BsIcon::BsPersonVcardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28051,7 +28037,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonVideo")]
             BsIcon::BsPersonVideo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28068,7 +28054,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonVideo2")]
             BsIcon::BsPersonVideo2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28085,7 +28071,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonVideo3")]
             BsIcon::BsPersonVideo3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28102,7 +28088,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonWorkspace")]
             BsIcon::BsPersonWorkspace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28119,7 +28105,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonX")]
             BsIcon::BsPersonX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28136,7 +28122,7 @@ impl Data {
             }
             #[cfg(feature = "BsPersonXFill")]
             BsIcon::BsPersonXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28153,7 +28139,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhone")]
             BsIcon::BsPhone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28170,7 +28156,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhoneFill")]
             BsIcon::BsPhoneFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28187,7 +28173,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhoneFlip")]
             BsIcon::BsPhoneFlip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28204,7 +28190,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhoneLandscape")]
             BsIcon::BsPhoneLandscape => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28221,7 +28207,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhoneLandscapeFill")]
             BsIcon::BsPhoneLandscapeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28238,7 +28224,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhoneVibrate")]
             BsIcon::BsPhoneVibrate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28255,7 +28241,7 @@ impl Data {
             }
             #[cfg(feature = "BsPhoneVibrateFill")]
             BsIcon::BsPhoneVibrateFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28272,7 +28258,7 @@ impl Data {
             }
             #[cfg(feature = "BsPieChart")]
             BsIcon::BsPieChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28289,7 +28275,7 @@ impl Data {
             }
             #[cfg(feature = "BsPieChartFill")]
             BsIcon::BsPieChartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28306,7 +28292,7 @@ impl Data {
             }
             #[cfg(feature = "BsPiggyBank")]
             BsIcon::BsPiggyBank => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28323,7 +28309,7 @@ impl Data {
             }
             #[cfg(feature = "BsPiggyBankFill")]
             BsIcon::BsPiggyBankFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28340,7 +28326,7 @@ impl Data {
             }
             #[cfg(feature = "BsPin")]
             BsIcon::BsPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28357,7 +28343,7 @@ impl Data {
             }
             #[cfg(feature = "BsPinAngle")]
             BsIcon::BsPinAngle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28374,7 +28360,7 @@ impl Data {
             }
             #[cfg(feature = "BsPinAngleFill")]
             BsIcon::BsPinAngleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28391,7 +28377,7 @@ impl Data {
             }
             #[cfg(feature = "BsPinFill")]
             BsIcon::BsPinFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28408,7 +28394,7 @@ impl Data {
             }
             #[cfg(feature = "BsPinMap")]
             BsIcon::BsPinMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28425,7 +28411,7 @@ impl Data {
             }
             #[cfg(feature = "BsPinMapFill")]
             BsIcon::BsPinMapFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28442,7 +28428,7 @@ impl Data {
             }
             #[cfg(feature = "BsPinterest")]
             BsIcon::BsPinterest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28459,7 +28445,7 @@ impl Data {
             }
             #[cfg(feature = "BsPip")]
             BsIcon::BsPip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28476,7 +28462,7 @@ impl Data {
             }
             #[cfg(feature = "BsPipFill")]
             BsIcon::BsPipFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28493,7 +28479,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlay")]
             BsIcon::BsPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28510,7 +28496,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlayBtn")]
             BsIcon::BsPlayBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28527,7 +28513,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlayBtnFill")]
             BsIcon::BsPlayBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28544,7 +28530,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlayCircle")]
             BsIcon::BsPlayCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28561,7 +28547,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlayCircleFill")]
             BsIcon::BsPlayCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28578,7 +28564,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlayFill")]
             BsIcon::BsPlayFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28595,7 +28581,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlaystation")]
             BsIcon::BsPlaystation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28612,7 +28598,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlug")]
             BsIcon::BsPlug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28629,7 +28615,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlugFill")]
             BsIcon::BsPlugFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28646,7 +28632,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlugin")]
             BsIcon::BsPlugin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28663,7 +28649,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlus")]
             BsIcon::BsPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28680,7 +28666,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusCircle")]
             BsIcon::BsPlusCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28697,7 +28683,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusCircleDotted")]
             BsIcon::BsPlusCircleDotted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28714,7 +28700,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusCircleFill")]
             BsIcon::BsPlusCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28731,7 +28717,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusLg")]
             BsIcon::BsPlusLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28748,7 +28734,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusSlashMinus")]
             BsIcon::BsPlusSlashMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28765,7 +28751,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusSquare")]
             BsIcon::BsPlusSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28782,7 +28768,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusSquareDotted")]
             BsIcon::BsPlusSquareDotted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28799,7 +28785,7 @@ impl Data {
             }
             #[cfg(feature = "BsPlusSquareFill")]
             BsIcon::BsPlusSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28816,7 +28802,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostage")]
             BsIcon::BsPostage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28833,7 +28819,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostageFill")]
             BsIcon::BsPostageFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28850,7 +28836,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostageHeart")]
             BsIcon::BsPostageHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28867,7 +28853,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostageHeartFill")]
             BsIcon::BsPostageHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28884,7 +28870,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostcard")]
             BsIcon::BsPostcard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28901,7 +28887,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostcardFill")]
             BsIcon::BsPostcardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28918,7 +28904,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostcardHeart")]
             BsIcon::BsPostcardHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28935,7 +28921,7 @@ impl Data {
             }
             #[cfg(feature = "BsPostcardHeartFill")]
             BsIcon::BsPostcardHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28952,7 +28938,7 @@ impl Data {
             }
             #[cfg(feature = "BsPower")]
             BsIcon::BsPower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28969,7 +28955,7 @@ impl Data {
             }
             #[cfg(feature = "BsPrescription")]
             BsIcon::BsPrescription => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28986,7 +28972,7 @@ impl Data {
             }
             #[cfg(feature = "BsPrescription2")]
             BsIcon::BsPrescription2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29003,7 +28989,7 @@ impl Data {
             }
             #[cfg(feature = "BsPrinter")]
             BsIcon::BsPrinter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29020,7 +29006,7 @@ impl Data {
             }
             #[cfg(feature = "BsPrinterFill")]
             BsIcon::BsPrinterFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29037,7 +29023,7 @@ impl Data {
             }
             #[cfg(feature = "BsProjector")]
             BsIcon::BsProjector => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29054,7 +29040,7 @@ impl Data {
             }
             #[cfg(feature = "BsProjectorFill")]
             BsIcon::BsProjectorFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29071,7 +29057,7 @@ impl Data {
             }
             #[cfg(feature = "BsPuzzle")]
             BsIcon::BsPuzzle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29088,7 +29074,7 @@ impl Data {
             }
             #[cfg(feature = "BsPuzzleFill")]
             BsIcon::BsPuzzleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29105,7 +29091,7 @@ impl Data {
             }
             #[cfg(feature = "BsQrCode")]
             BsIcon::BsQrCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29122,7 +29108,7 @@ impl Data {
             }
             #[cfg(feature = "BsQrCodeScan")]
             BsIcon::BsQrCodeScan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29139,7 +29125,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestion")]
             BsIcon::BsQuestion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29156,7 +29142,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionCircle")]
             BsIcon::BsQuestionCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29173,7 +29159,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionCircleFill")]
             BsIcon::BsQuestionCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29190,7 +29176,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionDiamond")]
             BsIcon::BsQuestionDiamond => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29207,7 +29193,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionDiamondFill")]
             BsIcon::BsQuestionDiamondFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29224,7 +29210,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionLg")]
             BsIcon::BsQuestionLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29241,7 +29227,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionOctagon")]
             BsIcon::BsQuestionOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29258,7 +29244,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionOctagonFill")]
             BsIcon::BsQuestionOctagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29275,7 +29261,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionSquare")]
             BsIcon::BsQuestionSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29292,7 +29278,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuestionSquareFill")]
             BsIcon::BsQuestionSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29309,7 +29295,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuora")]
             BsIcon::BsQuora => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29326,7 +29312,7 @@ impl Data {
             }
             #[cfg(feature = "BsQuote")]
             BsIcon::BsQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29343,7 +29329,7 @@ impl Data {
             }
             #[cfg(feature = "BsRCircle")]
             BsIcon::BsRCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29360,7 +29346,7 @@ impl Data {
             }
             #[cfg(feature = "BsRCircleFill")]
             BsIcon::BsRCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29377,7 +29363,7 @@ impl Data {
             }
             #[cfg(feature = "BsRSquare")]
             BsIcon::BsRSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29394,7 +29380,7 @@ impl Data {
             }
             #[cfg(feature = "BsRSquareFill")]
             BsIcon::BsRSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29411,7 +29397,7 @@ impl Data {
             }
             #[cfg(feature = "BsRadioactive")]
             BsIcon::BsRadioactive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29428,7 +29414,7 @@ impl Data {
             }
             #[cfg(feature = "BsRainbow")]
             BsIcon::BsRainbow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29445,7 +29431,7 @@ impl Data {
             }
             #[cfg(feature = "BsReceipt")]
             BsIcon::BsReceipt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29462,7 +29448,7 @@ impl Data {
             }
             #[cfg(feature = "BsReceiptCutoff")]
             BsIcon::BsReceiptCutoff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29479,7 +29465,7 @@ impl Data {
             }
             #[cfg(feature = "BsReception0")]
             BsIcon::BsReception0 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29496,7 +29482,7 @@ impl Data {
             }
             #[cfg(feature = "BsReception1")]
             BsIcon::BsReception1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29513,7 +29499,7 @@ impl Data {
             }
             #[cfg(feature = "BsReception2")]
             BsIcon::BsReception2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29530,7 +29516,7 @@ impl Data {
             }
             #[cfg(feature = "BsReception3")]
             BsIcon::BsReception3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29547,7 +29533,7 @@ impl Data {
             }
             #[cfg(feature = "BsReception4")]
             BsIcon::BsReception4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29564,7 +29550,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecord")]
             BsIcon::BsRecord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29581,7 +29567,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecord2")]
             BsIcon::BsRecord2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29598,7 +29584,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecord2Fill")]
             BsIcon::BsRecord2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29615,7 +29601,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecordBtn")]
             BsIcon::BsRecordBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29632,7 +29618,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecordBtnFill")]
             BsIcon::BsRecordBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29649,7 +29635,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecordCircle")]
             BsIcon::BsRecordCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29666,7 +29652,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecordCircleFill")]
             BsIcon::BsRecordCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29683,7 +29669,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecordFill")]
             BsIcon::BsRecordFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29700,7 +29686,7 @@ impl Data {
             }
             #[cfg(feature = "BsRecycle")]
             BsIcon::BsRecycle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29717,7 +29703,7 @@ impl Data {
             }
             #[cfg(feature = "BsReddit")]
             BsIcon::BsReddit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29734,7 +29720,7 @@ impl Data {
             }
             #[cfg(feature = "BsRegex")]
             BsIcon::BsRegex => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29751,7 +29737,7 @@ impl Data {
             }
             #[cfg(feature = "BsRepeat")]
             BsIcon::BsRepeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29768,7 +29754,7 @@ impl Data {
             }
             #[cfg(feature = "BsRepeat1")]
             BsIcon::BsRepeat1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29785,7 +29771,7 @@ impl Data {
             }
             #[cfg(feature = "BsReply")]
             BsIcon::BsReply => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29802,7 +29788,7 @@ impl Data {
             }
             #[cfg(feature = "BsReplyAll")]
             BsIcon::BsReplyAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29819,7 +29805,7 @@ impl Data {
             }
             #[cfg(feature = "BsReplyAllFill")]
             BsIcon::BsReplyAllFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29836,7 +29822,7 @@ impl Data {
             }
             #[cfg(feature = "BsReplyFill")]
             BsIcon::BsReplyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29853,7 +29839,7 @@ impl Data {
             }
             #[cfg(feature = "BsRewind")]
             BsIcon::BsRewind => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29870,7 +29856,7 @@ impl Data {
             }
             #[cfg(feature = "BsRewindBtn")]
             BsIcon::BsRewindBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29887,7 +29873,7 @@ impl Data {
             }
             #[cfg(feature = "BsRewindBtnFill")]
             BsIcon::BsRewindBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29904,7 +29890,7 @@ impl Data {
             }
             #[cfg(feature = "BsRewindCircle")]
             BsIcon::BsRewindCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29921,7 +29907,7 @@ impl Data {
             }
             #[cfg(feature = "BsRewindCircleFill")]
             BsIcon::BsRewindCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29938,7 +29924,7 @@ impl Data {
             }
             #[cfg(feature = "BsRewindFill")]
             BsIcon::BsRewindFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29955,7 +29941,7 @@ impl Data {
             }
             #[cfg(feature = "BsRobot")]
             BsIcon::BsRobot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29972,7 +29958,7 @@ impl Data {
             }
             #[cfg(feature = "BsRocket")]
             BsIcon::BsRocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29989,7 +29975,7 @@ impl Data {
             }
             #[cfg(feature = "BsRocketFill")]
             BsIcon::BsRocketFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30006,7 +29992,7 @@ impl Data {
             }
             #[cfg(feature = "BsRocketTakeoff")]
             BsIcon::BsRocketTakeoff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30023,7 +30009,7 @@ impl Data {
             }
             #[cfg(feature = "BsRocketTakeoffFill")]
             BsIcon::BsRocketTakeoffFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30040,7 +30026,7 @@ impl Data {
             }
             #[cfg(feature = "BsRouter")]
             BsIcon::BsRouter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30057,7 +30043,7 @@ impl Data {
             }
             #[cfg(feature = "BsRouterFill")]
             BsIcon::BsRouterFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30074,7 +30060,7 @@ impl Data {
             }
             #[cfg(feature = "BsRss")]
             BsIcon::BsRss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30091,7 +30077,7 @@ impl Data {
             }
             #[cfg(feature = "BsRssFill")]
             BsIcon::BsRssFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30108,7 +30094,7 @@ impl Data {
             }
             #[cfg(feature = "BsRulers")]
             BsIcon::BsRulers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30125,7 +30111,7 @@ impl Data {
             }
             #[cfg(feature = "BsSafe")]
             BsIcon::BsSafe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30142,7 +30128,7 @@ impl Data {
             }
             #[cfg(feature = "BsSafe2")]
             BsIcon::BsSafe2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30159,7 +30145,7 @@ impl Data {
             }
             #[cfg(feature = "BsSafe2Fill")]
             BsIcon::BsSafe2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30176,7 +30162,7 @@ impl Data {
             }
             #[cfg(feature = "BsSafeFill")]
             BsIcon::BsSafeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30193,7 +30179,7 @@ impl Data {
             }
             #[cfg(feature = "BsSave")]
             BsIcon::BsSave => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30210,7 +30196,7 @@ impl Data {
             }
             #[cfg(feature = "BsSave2")]
             BsIcon::BsSave2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30227,7 +30213,7 @@ impl Data {
             }
             #[cfg(feature = "BsSave2Fill")]
             BsIcon::BsSave2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30244,7 +30230,7 @@ impl Data {
             }
             #[cfg(feature = "BsSaveFill")]
             BsIcon::BsSaveFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30261,7 +30247,7 @@ impl Data {
             }
             #[cfg(feature = "BsScissors")]
             BsIcon::BsScissors => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30278,7 +30264,7 @@ impl Data {
             }
             #[cfg(feature = "BsScooter")]
             BsIcon::BsScooter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30295,7 +30281,7 @@ impl Data {
             }
             #[cfg(feature = "BsScrewdriver")]
             BsIcon::BsScrewdriver => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30312,7 +30298,7 @@ impl Data {
             }
             #[cfg(feature = "BsSdCard")]
             BsIcon::BsSdCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30329,7 +30315,7 @@ impl Data {
             }
             #[cfg(feature = "BsSdCardFill")]
             BsIcon::BsSdCardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30346,7 +30332,7 @@ impl Data {
             }
             #[cfg(feature = "BsSearch")]
             BsIcon::BsSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30363,7 +30349,7 @@ impl Data {
             }
             #[cfg(feature = "BsSearchHeart")]
             BsIcon::BsSearchHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30380,7 +30366,7 @@ impl Data {
             }
             #[cfg(feature = "BsSearchHeartFill")]
             BsIcon::BsSearchHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30397,7 +30383,7 @@ impl Data {
             }
             #[cfg(feature = "BsSegmentedNav")]
             BsIcon::BsSegmentedNav => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30414,7 +30400,7 @@ impl Data {
             }
             #[cfg(feature = "BsSend")]
             BsIcon::BsSend => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30431,7 +30417,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendCheck")]
             BsIcon::BsSendCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30448,7 +30434,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendCheckFill")]
             BsIcon::BsSendCheckFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30465,7 +30451,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendDash")]
             BsIcon::BsSendDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30482,7 +30468,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendDashFill")]
             BsIcon::BsSendDashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30499,7 +30485,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendExclamation")]
             BsIcon::BsSendExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30516,7 +30502,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendExclamationFill")]
             BsIcon::BsSendExclamationFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30533,7 +30519,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendFill")]
             BsIcon::BsSendFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30550,7 +30536,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendPlus")]
             BsIcon::BsSendPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30567,7 +30553,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendPlusFill")]
             BsIcon::BsSendPlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30584,7 +30570,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendSlash")]
             BsIcon::BsSendSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30601,7 +30587,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendSlashFill")]
             BsIcon::BsSendSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30618,7 +30604,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendX")]
             BsIcon::BsSendX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30635,7 +30621,7 @@ impl Data {
             }
             #[cfg(feature = "BsSendXFill")]
             BsIcon::BsSendXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30652,7 +30638,7 @@ impl Data {
             }
             #[cfg(feature = "BsServer")]
             BsIcon::BsServer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30669,7 +30655,7 @@ impl Data {
             }
             #[cfg(feature = "BsShare")]
             BsIcon::BsShare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30686,7 +30672,7 @@ impl Data {
             }
             #[cfg(feature = "BsShareFill")]
             BsIcon::BsShareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30703,7 +30689,7 @@ impl Data {
             }
             #[cfg(feature = "BsShield")]
             BsIcon::BsShield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30720,7 +30706,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldCheck")]
             BsIcon::BsShieldCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30737,7 +30723,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldExclamation")]
             BsIcon::BsShieldExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30754,7 +30740,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldFill")]
             BsIcon::BsShieldFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30771,7 +30757,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldFillCheck")]
             BsIcon::BsShieldFillCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30788,7 +30774,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldFillExclamation")]
             BsIcon::BsShieldFillExclamation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30805,7 +30791,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldFillMinus")]
             BsIcon::BsShieldFillMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30822,7 +30808,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldFillPlus")]
             BsIcon::BsShieldFillPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30839,7 +30825,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldFillX")]
             BsIcon::BsShieldFillX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30856,7 +30842,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldLock")]
             BsIcon::BsShieldLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30873,7 +30859,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldLockFill")]
             BsIcon::BsShieldLockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30890,7 +30876,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldMinus")]
             BsIcon::BsShieldMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30907,7 +30893,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldPlus")]
             BsIcon::BsShieldPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30924,7 +30910,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldShaded")]
             BsIcon::BsShieldShaded => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30941,7 +30927,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldSlash")]
             BsIcon::BsShieldSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30958,7 +30944,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldSlashFill")]
             BsIcon::BsShieldSlashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30975,7 +30961,7 @@ impl Data {
             }
             #[cfg(feature = "BsShieldX")]
             BsIcon::BsShieldX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30992,7 +30978,7 @@ impl Data {
             }
             #[cfg(feature = "BsShift")]
             BsIcon::BsShift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31009,7 +30995,7 @@ impl Data {
             }
             #[cfg(feature = "BsShiftFill")]
             BsIcon::BsShiftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31026,7 +31012,7 @@ impl Data {
             }
             #[cfg(feature = "BsShop")]
             BsIcon::BsShop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31043,7 +31029,7 @@ impl Data {
             }
             #[cfg(feature = "BsShopWindow")]
             BsIcon::BsShopWindow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31060,7 +31046,7 @@ impl Data {
             }
             #[cfg(feature = "BsShuffle")]
             BsIcon::BsShuffle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31077,7 +31063,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignDeadEnd")]
             BsIcon::BsSignDeadEnd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31094,7 +31080,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignDeadEndFill")]
             BsIcon::BsSignDeadEndFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31111,7 +31097,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignDoNotEnter")]
             BsIcon::BsSignDoNotEnter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31128,7 +31114,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignDoNotEnterFill")]
             BsIcon::BsSignDoNotEnterFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31145,7 +31131,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersection")]
             BsIcon::BsSignIntersection => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31162,7 +31148,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionFill")]
             BsIcon::BsSignIntersectionFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31179,7 +31165,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionSide")]
             BsIcon::BsSignIntersectionSide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31196,7 +31182,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionSideFill")]
             BsIcon::BsSignIntersectionSideFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31213,7 +31199,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionT")]
             BsIcon::BsSignIntersectionT => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31230,7 +31216,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionTFill")]
             BsIcon::BsSignIntersectionTFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31247,7 +31233,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionY")]
             BsIcon::BsSignIntersectionY => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31264,7 +31250,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignIntersectionYFill")]
             BsIcon::BsSignIntersectionYFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31281,7 +31267,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignMergeLeft")]
             BsIcon::BsSignMergeLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31298,7 +31284,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignMergeLeftFill")]
             BsIcon::BsSignMergeLeftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31315,7 +31301,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignMergeRight")]
             BsIcon::BsSignMergeRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31332,7 +31318,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignMergeRightFill")]
             BsIcon::BsSignMergeRightFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31349,7 +31335,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignNoLeftTurn")]
             BsIcon::BsSignNoLeftTurn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31366,7 +31352,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignNoLeftTurnFill")]
             BsIcon::BsSignNoLeftTurnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31383,7 +31369,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignNoParking")]
             BsIcon::BsSignNoParking => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31400,7 +31386,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignNoParkingFill")]
             BsIcon::BsSignNoParkingFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31417,7 +31403,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignNoRightTurn")]
             BsIcon::BsSignNoRightTurn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31434,7 +31420,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignNoRightTurnFill")]
             BsIcon::BsSignNoRightTurnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31451,7 +31437,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignRailroad")]
             BsIcon::BsSignRailroad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31468,7 +31454,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignRailroadFill")]
             BsIcon::BsSignRailroadFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31485,7 +31471,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignStop")]
             BsIcon::BsSignStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31502,7 +31488,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignStopFill")]
             BsIcon::BsSignStopFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31519,7 +31505,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignStopLights")]
             BsIcon::BsSignStopLights => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31536,7 +31522,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignStopLightsFill")]
             BsIcon::BsSignStopLightsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31553,7 +31539,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnLeft")]
             BsIcon::BsSignTurnLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31570,7 +31556,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnLeftFill")]
             BsIcon::BsSignTurnLeftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31587,7 +31573,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnRight")]
             BsIcon::BsSignTurnRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31604,7 +31590,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnRightFill")]
             BsIcon::BsSignTurnRightFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31621,7 +31607,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnSlightLeft")]
             BsIcon::BsSignTurnSlightLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31638,7 +31624,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnSlightLeftFill")]
             BsIcon::BsSignTurnSlightLeftFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31655,7 +31641,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnSlightRight")]
             BsIcon::BsSignTurnSlightRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31672,7 +31658,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignTurnSlightRightFill")]
             BsIcon::BsSignTurnSlightRightFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31689,7 +31675,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignYield")]
             BsIcon::BsSignYield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31706,7 +31692,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignYieldFill")]
             BsIcon::BsSignYieldFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31723,7 +31709,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignal")]
             BsIcon::BsSignal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31740,7 +31726,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignpost")]
             BsIcon::BsSignpost => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31757,7 +31743,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignpost2")]
             BsIcon::BsSignpost2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31774,7 +31760,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignpost2Fill")]
             BsIcon::BsSignpost2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31791,7 +31777,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignpostFill")]
             BsIcon::BsSignpostFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31808,7 +31794,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignpostSplit")]
             BsIcon::BsSignpostSplit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31825,7 +31811,7 @@ impl Data {
             }
             #[cfg(feature = "BsSignpostSplitFill")]
             BsIcon::BsSignpostSplitFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31842,7 +31828,7 @@ impl Data {
             }
             #[cfg(feature = "BsSim")]
             BsIcon::BsSim => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31859,7 +31845,7 @@ impl Data {
             }
             #[cfg(feature = "BsSimFill")]
             BsIcon::BsSimFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31876,7 +31862,7 @@ impl Data {
             }
             #[cfg(feature = "BsSinaWeibo")]
             BsIcon::BsSinaWeibo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31893,7 +31879,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipBackward")]
             BsIcon::BsSkipBackward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31910,7 +31896,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipBackwardBtn")]
             BsIcon::BsSkipBackwardBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31927,7 +31913,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipBackwardBtnFill")]
             BsIcon::BsSkipBackwardBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31944,7 +31930,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipBackwardCircle")]
             BsIcon::BsSkipBackwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31961,7 +31947,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipBackwardCircleFill")]
             BsIcon::BsSkipBackwardCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31978,7 +31964,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipBackwardFill")]
             BsIcon::BsSkipBackwardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31995,7 +31981,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipEnd")]
             BsIcon::BsSkipEnd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32012,7 +31998,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipEndBtn")]
             BsIcon::BsSkipEndBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32029,7 +32015,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipEndBtnFill")]
             BsIcon::BsSkipEndBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32046,7 +32032,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipEndCircle")]
             BsIcon::BsSkipEndCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32063,7 +32049,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipEndCircleFill")]
             BsIcon::BsSkipEndCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32080,7 +32066,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipEndFill")]
             BsIcon::BsSkipEndFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32097,7 +32083,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipForward")]
             BsIcon::BsSkipForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32114,7 +32100,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipForwardBtn")]
             BsIcon::BsSkipForwardBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32131,7 +32117,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipForwardBtnFill")]
             BsIcon::BsSkipForwardBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32148,7 +32134,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipForwardCircle")]
             BsIcon::BsSkipForwardCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32165,7 +32151,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipForwardCircleFill")]
             BsIcon::BsSkipForwardCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32182,7 +32168,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipForwardFill")]
             BsIcon::BsSkipForwardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32199,7 +32185,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipStart")]
             BsIcon::BsSkipStart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32216,7 +32202,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipStartBtn")]
             BsIcon::BsSkipStartBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32233,7 +32219,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipStartBtnFill")]
             BsIcon::BsSkipStartBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32250,7 +32236,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipStartCircle")]
             BsIcon::BsSkipStartCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32267,7 +32253,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipStartCircleFill")]
             BsIcon::BsSkipStartCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32284,7 +32270,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkipStartFill")]
             BsIcon::BsSkipStartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32301,7 +32287,7 @@ impl Data {
             }
             #[cfg(feature = "BsSkype")]
             BsIcon::BsSkype => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32318,7 +32304,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlack")]
             BsIcon::BsSlack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32335,7 +32321,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlash")]
             BsIcon::BsSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32352,7 +32338,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlashCircle")]
             BsIcon::BsSlashCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32369,7 +32355,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlashCircleFill")]
             BsIcon::BsSlashCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32386,7 +32372,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlashLg")]
             BsIcon::BsSlashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32403,7 +32389,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlashSquare")]
             BsIcon::BsSlashSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32420,7 +32406,7 @@ impl Data {
             }
             #[cfg(feature = "BsSlashSquareFill")]
             BsIcon::BsSlashSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32437,7 +32423,7 @@ impl Data {
             }
             #[cfg(feature = "BsSliders")]
             BsIcon::BsSliders => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32454,7 +32440,7 @@ impl Data {
             }
             #[cfg(feature = "BsSliders2")]
             BsIcon::BsSliders2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32471,7 +32457,7 @@ impl Data {
             }
             #[cfg(feature = "BsSliders2Vertical")]
             BsIcon::BsSliders2Vertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32488,7 +32474,7 @@ impl Data {
             }
             #[cfg(feature = "BsSmartwatch")]
             BsIcon::BsSmartwatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32505,7 +32491,7 @@ impl Data {
             }
             #[cfg(feature = "BsSnapchat")]
             BsIcon::BsSnapchat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32522,7 +32508,7 @@ impl Data {
             }
             #[cfg(feature = "BsSnow")]
             BsIcon::BsSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32539,7 +32525,7 @@ impl Data {
             }
             #[cfg(feature = "BsSnow2")]
             BsIcon::BsSnow2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32556,7 +32542,7 @@ impl Data {
             }
             #[cfg(feature = "BsSnow3")]
             BsIcon::BsSnow3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32573,7 +32559,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortAlphaDown")]
             BsIcon::BsSortAlphaDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32590,7 +32576,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortAlphaDownAlt")]
             BsIcon::BsSortAlphaDownAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32607,7 +32593,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortAlphaUp")]
             BsIcon::BsSortAlphaUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32624,7 +32610,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortAlphaUpAlt")]
             BsIcon::BsSortAlphaUpAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32641,7 +32627,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortDown")]
             BsIcon::BsSortDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32658,7 +32644,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortDownAlt")]
             BsIcon::BsSortDownAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32675,7 +32661,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortNumericDown")]
             BsIcon::BsSortNumericDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32692,7 +32678,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortNumericDownAlt")]
             BsIcon::BsSortNumericDownAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32709,7 +32695,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortNumericUp")]
             BsIcon::BsSortNumericUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32726,7 +32712,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortNumericUpAlt")]
             BsIcon::BsSortNumericUpAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32743,7 +32729,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortUp")]
             BsIcon::BsSortUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32760,7 +32746,7 @@ impl Data {
             }
             #[cfg(feature = "BsSortUpAlt")]
             BsIcon::BsSortUpAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32777,7 +32763,7 @@ impl Data {
             }
             #[cfg(feature = "BsSoundwave")]
             BsIcon::BsSoundwave => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32794,7 +32780,7 @@ impl Data {
             }
             #[cfg(feature = "BsSpeaker")]
             BsIcon::BsSpeaker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32811,7 +32797,7 @@ impl Data {
             }
             #[cfg(feature = "BsSpeakerFill")]
             BsIcon::BsSpeakerFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32828,7 +32814,7 @@ impl Data {
             }
             #[cfg(feature = "BsSpeedometer")]
             BsIcon::BsSpeedometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32845,7 +32831,7 @@ impl Data {
             }
             #[cfg(feature = "BsSpeedometer2")]
             BsIcon::BsSpeedometer2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32862,7 +32848,7 @@ impl Data {
             }
             #[cfg(feature = "BsSpellcheck")]
             BsIcon::BsSpellcheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32879,7 +32865,7 @@ impl Data {
             }
             #[cfg(feature = "BsSpotify")]
             BsIcon::BsSpotify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32896,7 +32882,7 @@ impl Data {
             }
             #[cfg(feature = "BsSquare")]
             BsIcon::BsSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32913,7 +32899,7 @@ impl Data {
             }
             #[cfg(feature = "BsSquareFill")]
             BsIcon::BsSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32930,7 +32916,7 @@ impl Data {
             }
             #[cfg(feature = "BsSquareHalf")]
             BsIcon::BsSquareHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32947,7 +32933,7 @@ impl Data {
             }
             #[cfg(feature = "BsStack")]
             BsIcon::BsStack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32964,7 +32950,7 @@ impl Data {
             }
             #[cfg(feature = "BsStackOverflow")]
             BsIcon::BsStackOverflow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32981,7 +32967,7 @@ impl Data {
             }
             #[cfg(feature = "BsStar")]
             BsIcon::BsStar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32998,7 +32984,7 @@ impl Data {
             }
             #[cfg(feature = "BsStarFill")]
             BsIcon::BsStarFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33015,7 +33001,7 @@ impl Data {
             }
             #[cfg(feature = "BsStarHalf")]
             BsIcon::BsStarHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33032,7 +33018,7 @@ impl Data {
             }
             #[cfg(feature = "BsStars")]
             BsIcon::BsStars => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33049,7 +33035,7 @@ impl Data {
             }
             #[cfg(feature = "BsSteam")]
             BsIcon::BsSteam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33066,7 +33052,7 @@ impl Data {
             }
             #[cfg(feature = "BsStickies")]
             BsIcon::BsStickies => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33083,7 +33069,7 @@ impl Data {
             }
             #[cfg(feature = "BsStickiesFill")]
             BsIcon::BsStickiesFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33100,7 +33086,7 @@ impl Data {
             }
             #[cfg(feature = "BsSticky")]
             BsIcon::BsSticky => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33117,7 +33103,7 @@ impl Data {
             }
             #[cfg(feature = "BsStickyFill")]
             BsIcon::BsStickyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33134,7 +33120,7 @@ impl Data {
             }
             #[cfg(feature = "BsStop")]
             BsIcon::BsStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33151,7 +33137,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopBtn")]
             BsIcon::BsStopBtn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33168,7 +33154,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopBtnFill")]
             BsIcon::BsStopBtnFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33185,7 +33171,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopCircle")]
             BsIcon::BsStopCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33202,7 +33188,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopCircleFill")]
             BsIcon::BsStopCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33219,7 +33205,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopFill")]
             BsIcon::BsStopFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33236,7 +33222,7 @@ impl Data {
             }
             #[cfg(feature = "BsStoplights")]
             BsIcon::BsStoplights => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33253,7 +33239,7 @@ impl Data {
             }
             #[cfg(feature = "BsStoplightsFill")]
             BsIcon::BsStoplightsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33270,7 +33256,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopwatch")]
             BsIcon::BsStopwatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33287,7 +33273,7 @@ impl Data {
             }
             #[cfg(feature = "BsStopwatchFill")]
             BsIcon::BsStopwatchFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33304,7 +33290,7 @@ impl Data {
             }
             #[cfg(feature = "BsStrava")]
             BsIcon::BsStrava => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33321,7 +33307,7 @@ impl Data {
             }
             #[cfg(feature = "BsStripe")]
             BsIcon::BsStripe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33338,7 +33324,7 @@ impl Data {
             }
             #[cfg(feature = "BsSubscript")]
             BsIcon::BsSubscript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33355,7 +33341,7 @@ impl Data {
             }
             #[cfg(feature = "BsSubtract")]
             BsIcon::BsSubtract => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33372,7 +33358,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitClub")]
             BsIcon::BsSuitClub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33389,7 +33375,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitClubFill")]
             BsIcon::BsSuitClubFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33406,7 +33392,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitDiamond")]
             BsIcon::BsSuitDiamond => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33423,7 +33409,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitDiamondFill")]
             BsIcon::BsSuitDiamondFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33440,7 +33426,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitHeart")]
             BsIcon::BsSuitHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33457,7 +33443,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitHeartFill")]
             BsIcon::BsSuitHeartFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33474,7 +33460,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitSpade")]
             BsIcon::BsSuitSpade => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33491,7 +33477,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuitSpadeFill")]
             BsIcon::BsSuitSpadeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33508,7 +33494,7 @@ impl Data {
             }
             #[cfg(feature = "BsSun")]
             BsIcon::BsSun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33525,7 +33511,7 @@ impl Data {
             }
             #[cfg(feature = "BsSunFill")]
             BsIcon::BsSunFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33542,7 +33528,7 @@ impl Data {
             }
             #[cfg(feature = "BsSunglasses")]
             BsIcon::BsSunglasses => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33559,7 +33545,7 @@ impl Data {
             }
             #[cfg(feature = "BsSunrise")]
             BsIcon::BsSunrise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33576,7 +33562,7 @@ impl Data {
             }
             #[cfg(feature = "BsSunriseFill")]
             BsIcon::BsSunriseFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33593,7 +33579,7 @@ impl Data {
             }
             #[cfg(feature = "BsSunset")]
             BsIcon::BsSunset => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33610,7 +33596,7 @@ impl Data {
             }
             #[cfg(feature = "BsSunsetFill")]
             BsIcon::BsSunsetFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33627,7 +33613,7 @@ impl Data {
             }
             #[cfg(feature = "BsSuperscript")]
             BsIcon::BsSuperscript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33644,7 +33630,7 @@ impl Data {
             }
             #[cfg(feature = "BsSymmetryHorizontal")]
             BsIcon::BsSymmetryHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33661,7 +33647,7 @@ impl Data {
             }
             #[cfg(feature = "BsSymmetryVertical")]
             BsIcon::BsSymmetryVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33678,7 +33664,7 @@ impl Data {
             }
             #[cfg(feature = "BsTable")]
             BsIcon::BsTable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33695,7 +33681,7 @@ impl Data {
             }
             #[cfg(feature = "BsTablet")]
             BsIcon::BsTablet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33712,7 +33698,7 @@ impl Data {
             }
             #[cfg(feature = "BsTabletFill")]
             BsIcon::BsTabletFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33729,7 +33715,7 @@ impl Data {
             }
             #[cfg(feature = "BsTabletLandscape")]
             BsIcon::BsTabletLandscape => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33746,7 +33732,7 @@ impl Data {
             }
             #[cfg(feature = "BsTabletLandscapeFill")]
             BsIcon::BsTabletLandscapeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33763,7 +33749,7 @@ impl Data {
             }
             #[cfg(feature = "BsTag")]
             BsIcon::BsTag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33780,7 +33766,7 @@ impl Data {
             }
             #[cfg(feature = "BsTagFill")]
             BsIcon::BsTagFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33797,7 +33783,7 @@ impl Data {
             }
             #[cfg(feature = "BsTags")]
             BsIcon::BsTags => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33814,7 +33800,7 @@ impl Data {
             }
             #[cfg(feature = "BsTagsFill")]
             BsIcon::BsTagsFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33831,7 +33817,7 @@ impl Data {
             }
             #[cfg(feature = "BsTaxiFront")]
             BsIcon::BsTaxiFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33848,7 +33834,7 @@ impl Data {
             }
             #[cfg(feature = "BsTaxiFrontFill")]
             BsIcon::BsTaxiFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33865,7 +33851,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelegram")]
             BsIcon::BsTelegram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33882,7 +33868,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephone")]
             BsIcon::BsTelephone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33899,7 +33885,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneFill")]
             BsIcon::BsTelephoneFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33916,7 +33902,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneForward")]
             BsIcon::BsTelephoneForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33933,7 +33919,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneForwardFill")]
             BsIcon::BsTelephoneForwardFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33950,7 +33936,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneInbound")]
             BsIcon::BsTelephoneInbound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33967,7 +33953,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneInboundFill")]
             BsIcon::BsTelephoneInboundFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33984,7 +33970,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneMinus")]
             BsIcon::BsTelephoneMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34001,7 +33987,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneMinusFill")]
             BsIcon::BsTelephoneMinusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34018,7 +34004,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneOutbound")]
             BsIcon::BsTelephoneOutbound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34035,7 +34021,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneOutboundFill")]
             BsIcon::BsTelephoneOutboundFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34052,7 +34038,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephonePlus")]
             BsIcon::BsTelephonePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34069,7 +34055,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephonePlusFill")]
             BsIcon::BsTelephonePlusFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34086,7 +34072,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneX")]
             BsIcon::BsTelephoneX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34103,7 +34089,7 @@ impl Data {
             }
             #[cfg(feature = "BsTelephoneXFill")]
             BsIcon::BsTelephoneXFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34120,7 +34106,7 @@ impl Data {
             }
             #[cfg(feature = "BsTencentQq")]
             BsIcon::BsTencentQq => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34137,7 +34123,7 @@ impl Data {
             }
             #[cfg(feature = "BsTerminal")]
             BsIcon::BsTerminal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34154,7 +34140,7 @@ impl Data {
             }
             #[cfg(feature = "BsTerminalDash")]
             BsIcon::BsTerminalDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34171,7 +34157,7 @@ impl Data {
             }
             #[cfg(feature = "BsTerminalFill")]
             BsIcon::BsTerminalFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34188,7 +34174,7 @@ impl Data {
             }
             #[cfg(feature = "BsTerminalPlus")]
             BsIcon::BsTerminalPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34205,7 +34191,7 @@ impl Data {
             }
             #[cfg(feature = "BsTerminalSplit")]
             BsIcon::BsTerminalSplit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34222,7 +34208,7 @@ impl Data {
             }
             #[cfg(feature = "BsTerminalX")]
             BsIcon::BsTerminalX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34239,7 +34225,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextCenter")]
             BsIcon::BsTextCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34256,7 +34242,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextIndentLeft")]
             BsIcon::BsTextIndentLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34273,7 +34259,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextIndentRight")]
             BsIcon::BsTextIndentRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34290,7 +34276,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextLeft")]
             BsIcon::BsTextLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34307,7 +34293,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextParagraph")]
             BsIcon::BsTextParagraph => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34324,7 +34310,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextRight")]
             BsIcon::BsTextRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34341,7 +34327,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextWrap")]
             BsIcon::BsTextWrap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34358,7 +34344,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextarea")]
             BsIcon::BsTextarea => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34375,7 +34361,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextareaResize")]
             BsIcon::BsTextareaResize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34392,7 +34378,7 @@ impl Data {
             }
             #[cfg(feature = "BsTextareaT")]
             BsIcon::BsTextareaT => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34409,7 +34395,7 @@ impl Data {
             }
             #[cfg(feature = "BsThermometer")]
             BsIcon::BsThermometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34426,7 +34412,7 @@ impl Data {
             }
             #[cfg(feature = "BsThermometerHalf")]
             BsIcon::BsThermometerHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34443,7 +34429,7 @@ impl Data {
             }
             #[cfg(feature = "BsThermometerHigh")]
             BsIcon::BsThermometerHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34460,7 +34446,7 @@ impl Data {
             }
             #[cfg(feature = "BsThermometerLow")]
             BsIcon::BsThermometerLow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34477,7 +34463,7 @@ impl Data {
             }
             #[cfg(feature = "BsThermometerSnow")]
             BsIcon::BsThermometerSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34494,7 +34480,7 @@ impl Data {
             }
             #[cfg(feature = "BsThermometerSun")]
             BsIcon::BsThermometerSun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34511,7 +34497,7 @@ impl Data {
             }
             #[cfg(feature = "BsThreeDots")]
             BsIcon::BsThreeDots => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34528,7 +34514,7 @@ impl Data {
             }
             #[cfg(feature = "BsThreeDotsVertical")]
             BsIcon::BsThreeDotsVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34545,7 +34531,7 @@ impl Data {
             }
             #[cfg(feature = "BsThunderbolt")]
             BsIcon::BsThunderbolt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34562,7 +34548,7 @@ impl Data {
             }
             #[cfg(feature = "BsThunderboltFill")]
             BsIcon::BsThunderboltFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34579,7 +34565,7 @@ impl Data {
             }
             #[cfg(feature = "BsTicket")]
             BsIcon::BsTicket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34596,7 +34582,7 @@ impl Data {
             }
             #[cfg(feature = "BsTicketDetailed")]
             BsIcon::BsTicketDetailed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34613,7 +34599,7 @@ impl Data {
             }
             #[cfg(feature = "BsTicketDetailedFill")]
             BsIcon::BsTicketDetailedFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34630,7 +34616,7 @@ impl Data {
             }
             #[cfg(feature = "BsTicketFill")]
             BsIcon::BsTicketFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34647,7 +34633,7 @@ impl Data {
             }
             #[cfg(feature = "BsTicketPerforated")]
             BsIcon::BsTicketPerforated => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34664,7 +34650,7 @@ impl Data {
             }
             #[cfg(feature = "BsTicketPerforatedFill")]
             BsIcon::BsTicketPerforatedFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34681,7 +34667,7 @@ impl Data {
             }
             #[cfg(feature = "BsTiktok")]
             BsIcon::BsTiktok => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34698,7 +34684,7 @@ impl Data {
             }
             #[cfg(feature = "BsToggle2Off")]
             BsIcon::BsToggle2Off => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34715,7 +34701,7 @@ impl Data {
             }
             #[cfg(feature = "BsToggle2On")]
             BsIcon::BsToggle2On => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34732,7 +34718,7 @@ impl Data {
             }
             #[cfg(feature = "BsToggleOff")]
             BsIcon::BsToggleOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34749,7 +34735,7 @@ impl Data {
             }
             #[cfg(feature = "BsToggleOn")]
             BsIcon::BsToggleOn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34766,7 +34752,7 @@ impl Data {
             }
             #[cfg(feature = "BsToggles")]
             BsIcon::BsToggles => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34783,7 +34769,7 @@ impl Data {
             }
             #[cfg(feature = "BsToggles2")]
             BsIcon::BsToggles2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34800,7 +34786,7 @@ impl Data {
             }
             #[cfg(feature = "BsTools")]
             BsIcon::BsTools => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34817,7 +34803,7 @@ impl Data {
             }
             #[cfg(feature = "BsTornado")]
             BsIcon::BsTornado => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34834,7 +34820,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrainFreightFront")]
             BsIcon::BsTrainFreightFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34851,7 +34837,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrainFreightFrontFill")]
             BsIcon::BsTrainFreightFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34868,7 +34854,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrainFront")]
             BsIcon::BsTrainFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34885,7 +34871,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrainFrontFill")]
             BsIcon::BsTrainFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34902,7 +34888,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrainLightrailFront")]
             BsIcon::BsTrainLightrailFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34919,7 +34905,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrainLightrailFrontFill")]
             BsIcon::BsTrainLightrailFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34936,7 +34922,7 @@ impl Data {
             }
             #[cfg(feature = "BsTranslate")]
             BsIcon::BsTranslate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34953,7 +34939,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrash")]
             BsIcon::BsTrash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34970,7 +34956,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrash2")]
             BsIcon::BsTrash2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34987,7 +34973,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrash2Fill")]
             BsIcon::BsTrash2Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35004,7 +34990,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrash3")]
             BsIcon::BsTrash3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35021,7 +35007,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrash3Fill")]
             BsIcon::BsTrash3Fill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35038,7 +35024,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrashFill")]
             BsIcon::BsTrashFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35055,7 +35041,7 @@ impl Data {
             }
             #[cfg(feature = "BsTree")]
             BsIcon::BsTree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35072,7 +35058,7 @@ impl Data {
             }
             #[cfg(feature = "BsTreeFill")]
             BsIcon::BsTreeFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35089,7 +35075,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrello")]
             BsIcon::BsTrello => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35106,7 +35092,7 @@ impl Data {
             }
             #[cfg(feature = "BsTriangle")]
             BsIcon::BsTriangle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35123,7 +35109,7 @@ impl Data {
             }
             #[cfg(feature = "BsTriangleFill")]
             BsIcon::BsTriangleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35140,7 +35126,7 @@ impl Data {
             }
             #[cfg(feature = "BsTriangleHalf")]
             BsIcon::BsTriangleHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35157,7 +35143,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrophy")]
             BsIcon::BsTrophy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35174,7 +35160,7 @@ impl Data {
             }
             #[cfg(feature = "BsTrophyFill")]
             BsIcon::BsTrophyFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35191,7 +35177,7 @@ impl Data {
             }
             #[cfg(feature = "BsTropicalStorm")]
             BsIcon::BsTropicalStorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35208,7 +35194,7 @@ impl Data {
             }
             #[cfg(feature = "BsTruck")]
             BsIcon::BsTruck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35225,7 +35211,7 @@ impl Data {
             }
             #[cfg(feature = "BsTruckFlatbed")]
             BsIcon::BsTruckFlatbed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35242,7 +35228,7 @@ impl Data {
             }
             #[cfg(feature = "BsTruckFront")]
             BsIcon::BsTruckFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35259,7 +35245,7 @@ impl Data {
             }
             #[cfg(feature = "BsTruckFrontFill")]
             BsIcon::BsTruckFrontFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35276,7 +35262,7 @@ impl Data {
             }
             #[cfg(feature = "BsTsunami")]
             BsIcon::BsTsunami => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35293,7 +35279,7 @@ impl Data {
             }
             #[cfg(feature = "BsTv")]
             BsIcon::BsTv => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35310,7 +35296,7 @@ impl Data {
             }
             #[cfg(feature = "BsTvFill")]
             BsIcon::BsTvFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35327,7 +35313,7 @@ impl Data {
             }
             #[cfg(feature = "BsTwitch")]
             BsIcon::BsTwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35344,7 +35330,7 @@ impl Data {
             }
             #[cfg(feature = "BsTwitter")]
             BsIcon::BsTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35361,7 +35347,7 @@ impl Data {
             }
             #[cfg(feature = "BsType")]
             BsIcon::BsType => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35378,7 +35364,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeBold")]
             BsIcon::BsTypeBold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35395,7 +35381,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeH1")]
             BsIcon::BsTypeH1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35412,7 +35398,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeH2")]
             BsIcon::BsTypeH2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35429,7 +35415,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeH3")]
             BsIcon::BsTypeH3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35446,7 +35432,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeItalic")]
             BsIcon::BsTypeItalic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35463,7 +35449,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeStrikethrough")]
             BsIcon::BsTypeStrikethrough => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35480,7 +35466,7 @@ impl Data {
             }
             #[cfg(feature = "BsTypeUnderline")]
             BsIcon::BsTypeUnderline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35497,7 +35483,7 @@ impl Data {
             }
             #[cfg(feature = "BsUbuntu")]
             BsIcon::BsUbuntu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35514,7 +35500,7 @@ impl Data {
             }
             #[cfg(feature = "BsUiChecks")]
             BsIcon::BsUiChecks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35531,7 +35517,7 @@ impl Data {
             }
             #[cfg(feature = "BsUiChecksGrid")]
             BsIcon::BsUiChecksGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35548,7 +35534,7 @@ impl Data {
             }
             #[cfg(feature = "BsUiRadios")]
             BsIcon::BsUiRadios => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35565,7 +35551,7 @@ impl Data {
             }
             #[cfg(feature = "BsUiRadiosGrid")]
             BsIcon::BsUiRadiosGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35582,7 +35568,7 @@ impl Data {
             }
             #[cfg(feature = "BsUmbrella")]
             BsIcon::BsUmbrella => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35599,7 +35585,7 @@ impl Data {
             }
             #[cfg(feature = "BsUmbrellaFill")]
             BsIcon::BsUmbrellaFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35616,7 +35602,7 @@ impl Data {
             }
             #[cfg(feature = "BsUnindent")]
             BsIcon::BsUnindent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35633,7 +35619,7 @@ impl Data {
             }
             #[cfg(feature = "BsUnion")]
             BsIcon::BsUnion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35650,7 +35636,7 @@ impl Data {
             }
             #[cfg(feature = "BsUnity")]
             BsIcon::BsUnity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35667,7 +35653,7 @@ impl Data {
             }
             #[cfg(feature = "BsUniversalAccess")]
             BsIcon::BsUniversalAccess => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35684,7 +35670,7 @@ impl Data {
             }
             #[cfg(feature = "BsUniversalAccessCircle")]
             BsIcon::BsUniversalAccessCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35701,7 +35687,7 @@ impl Data {
             }
             #[cfg(feature = "BsUnlock")]
             BsIcon::BsUnlock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35718,7 +35704,7 @@ impl Data {
             }
             #[cfg(feature = "BsUnlockFill")]
             BsIcon::BsUnlockFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35735,7 +35721,7 @@ impl Data {
             }
             #[cfg(feature = "BsUpc")]
             BsIcon::BsUpc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35752,7 +35738,7 @@ impl Data {
             }
             #[cfg(feature = "BsUpcScan")]
             BsIcon::BsUpcScan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35769,7 +35755,7 @@ impl Data {
             }
             #[cfg(feature = "BsUpload")]
             BsIcon::BsUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35786,7 +35772,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsb")]
             BsIcon::BsUsb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35803,7 +35789,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbC")]
             BsIcon::BsUsbC => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35820,7 +35806,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbCFill")]
             BsIcon::BsUsbCFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35837,7 +35823,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbDrive")]
             BsIcon::BsUsbDrive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35854,7 +35840,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbDriveFill")]
             BsIcon::BsUsbDriveFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35871,7 +35857,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbFill")]
             BsIcon::BsUsbFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35888,7 +35874,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbMicro")]
             BsIcon::BsUsbMicro => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35905,7 +35891,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbMicroFill")]
             BsIcon::BsUsbMicroFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35922,7 +35908,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbMini")]
             BsIcon::BsUsbMini => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35939,7 +35925,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbMiniFill")]
             BsIcon::BsUsbMiniFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35956,7 +35942,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbPlug")]
             BsIcon::BsUsbPlug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35973,7 +35959,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbPlugFill")]
             BsIcon::BsUsbPlugFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35990,7 +35976,7 @@ impl Data {
             }
             #[cfg(feature = "BsUsbSymbol")]
             BsIcon::BsUsbSymbol => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36007,7 +35993,7 @@ impl Data {
             }
             #[cfg(feature = "BsValentine")]
             BsIcon::BsValentine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36024,7 +36010,7 @@ impl Data {
             }
             #[cfg(feature = "BsValentine2")]
             BsIcon::BsValentine2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36041,7 +36027,7 @@ impl Data {
             }
             #[cfg(feature = "BsVectorPen")]
             BsIcon::BsVectorPen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36058,7 +36044,7 @@ impl Data {
             }
             #[cfg(feature = "BsViewList")]
             BsIcon::BsViewList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36075,7 +36061,7 @@ impl Data {
             }
             #[cfg(feature = "BsViewStacked")]
             BsIcon::BsViewStacked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36092,7 +36078,7 @@ impl Data {
             }
             #[cfg(feature = "BsVimeo")]
             BsIcon::BsVimeo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36109,7 +36095,7 @@ impl Data {
             }
             #[cfg(feature = "BsVinyl")]
             BsIcon::BsVinyl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36126,7 +36112,7 @@ impl Data {
             }
             #[cfg(feature = "BsVinylFill")]
             BsIcon::BsVinylFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36143,7 +36129,7 @@ impl Data {
             }
             #[cfg(feature = "BsVirus")]
             BsIcon::BsVirus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36160,7 +36146,7 @@ impl Data {
             }
             #[cfg(feature = "BsVirus2")]
             BsIcon::BsVirus2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36177,7 +36163,7 @@ impl Data {
             }
             #[cfg(feature = "BsVoicemail")]
             BsIcon::BsVoicemail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36194,7 +36180,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeDown")]
             BsIcon::BsVolumeDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36211,7 +36197,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeDownFill")]
             BsIcon::BsVolumeDownFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36228,7 +36214,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeMute")]
             BsIcon::BsVolumeMute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36245,7 +36231,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeMuteFill")]
             BsIcon::BsVolumeMuteFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36262,7 +36248,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeOff")]
             BsIcon::BsVolumeOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36279,7 +36265,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeOffFill")]
             BsIcon::BsVolumeOffFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36296,7 +36282,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeUp")]
             BsIcon::BsVolumeUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36313,7 +36299,7 @@ impl Data {
             }
             #[cfg(feature = "BsVolumeUpFill")]
             BsIcon::BsVolumeUpFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36330,7 +36316,7 @@ impl Data {
             }
             #[cfg(feature = "BsVr")]
             BsIcon::BsVr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36347,7 +36333,7 @@ impl Data {
             }
             #[cfg(feature = "BsWallet")]
             BsIcon::BsWallet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36364,7 +36350,7 @@ impl Data {
             }
             #[cfg(feature = "BsWallet2")]
             BsIcon::BsWallet2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36381,7 +36367,7 @@ impl Data {
             }
             #[cfg(feature = "BsWalletFill")]
             BsIcon::BsWalletFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36398,7 +36384,7 @@ impl Data {
             }
             #[cfg(feature = "BsWatch")]
             BsIcon::BsWatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36415,7 +36401,7 @@ impl Data {
             }
             #[cfg(feature = "BsWater")]
             BsIcon::BsWater => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36432,7 +36418,7 @@ impl Data {
             }
             #[cfg(feature = "BsWebcam")]
             BsIcon::BsWebcam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36449,7 +36435,7 @@ impl Data {
             }
             #[cfg(feature = "BsWebcamFill")]
             BsIcon::BsWebcamFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36466,7 +36452,7 @@ impl Data {
             }
             #[cfg(feature = "BsWechat")]
             BsIcon::BsWechat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36483,7 +36469,7 @@ impl Data {
             }
             #[cfg(feature = "BsWhatsapp")]
             BsIcon::BsWhatsapp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36500,7 +36486,7 @@ impl Data {
             }
             #[cfg(feature = "BsWifi")]
             BsIcon::BsWifi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36517,7 +36503,7 @@ impl Data {
             }
             #[cfg(feature = "BsWifi1")]
             BsIcon::BsWifi1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36534,7 +36520,7 @@ impl Data {
             }
             #[cfg(feature = "BsWifi2")]
             BsIcon::BsWifi2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36551,7 +36537,7 @@ impl Data {
             }
             #[cfg(feature = "BsWifiOff")]
             BsIcon::BsWifiOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36568,7 +36554,7 @@ impl Data {
             }
             #[cfg(feature = "BsWikipedia")]
             BsIcon::BsWikipedia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36585,7 +36571,7 @@ impl Data {
             }
             #[cfg(feature = "BsWind")]
             BsIcon::BsWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36602,7 +36588,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindow")]
             BsIcon::BsWindow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36619,7 +36605,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowDash")]
             BsIcon::BsWindowDash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36636,7 +36622,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowDesktop")]
             BsIcon::BsWindowDesktop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36653,7 +36639,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowDock")]
             BsIcon::BsWindowDock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36670,7 +36656,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowFullscreen")]
             BsIcon::BsWindowFullscreen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36687,7 +36673,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowPlus")]
             BsIcon::BsWindowPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36704,7 +36690,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowSidebar")]
             BsIcon::BsWindowSidebar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36721,7 +36707,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowSplit")]
             BsIcon::BsWindowSplit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36738,7 +36724,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowStack")]
             BsIcon::BsWindowStack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36755,7 +36741,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindowX")]
             BsIcon::BsWindowX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36772,7 +36758,7 @@ impl Data {
             }
             #[cfg(feature = "BsWindows")]
             BsIcon::BsWindows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36789,7 +36775,7 @@ impl Data {
             }
             #[cfg(feature = "BsWordpress")]
             BsIcon::BsWordpress => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36806,7 +36792,7 @@ impl Data {
             }
             #[cfg(feature = "BsWrench")]
             BsIcon::BsWrench => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36823,7 +36809,7 @@ impl Data {
             }
             #[cfg(feature = "BsWrenchAdjustable")]
             BsIcon::BsWrenchAdjustable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36840,7 +36826,7 @@ impl Data {
             }
             #[cfg(feature = "BsWrenchAdjustableCircle")]
             BsIcon::BsWrenchAdjustableCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36857,7 +36843,7 @@ impl Data {
             }
             #[cfg(feature = "BsWrenchAdjustableCircleFill")]
             BsIcon::BsWrenchAdjustableCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36874,7 +36860,7 @@ impl Data {
             }
             #[cfg(feature = "BsX")]
             BsIcon::BsX => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36891,7 +36877,7 @@ impl Data {
             }
             #[cfg(feature = "BsXCircle")]
             BsIcon::BsXCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36908,7 +36894,7 @@ impl Data {
             }
             #[cfg(feature = "BsXCircleFill")]
             BsIcon::BsXCircleFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36925,7 +36911,7 @@ impl Data {
             }
             #[cfg(feature = "BsXDiamond")]
             BsIcon::BsXDiamond => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36942,7 +36928,7 @@ impl Data {
             }
             #[cfg(feature = "BsXDiamondFill")]
             BsIcon::BsXDiamondFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36959,7 +36945,7 @@ impl Data {
             }
             #[cfg(feature = "BsXLg")]
             BsIcon::BsXLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36976,7 +36962,7 @@ impl Data {
             }
             #[cfg(feature = "BsXOctagon")]
             BsIcon::BsXOctagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36993,7 +36979,7 @@ impl Data {
             }
             #[cfg(feature = "BsXOctagonFill")]
             BsIcon::BsXOctagonFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37010,7 +36996,7 @@ impl Data {
             }
             #[cfg(feature = "BsXSquare")]
             BsIcon::BsXSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37027,7 +37013,7 @@ impl Data {
             }
             #[cfg(feature = "BsXSquareFill")]
             BsIcon::BsXSquareFill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37044,7 +37030,7 @@ impl Data {
             }
             #[cfg(feature = "BsXbox")]
             BsIcon::BsXbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37061,7 +37047,7 @@ impl Data {
             }
             #[cfg(feature = "BsYelp")]
             BsIcon::BsYelp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37078,7 +37064,7 @@ impl Data {
             }
             #[cfg(feature = "BsYinYang")]
             BsIcon::BsYinYang => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37095,7 +37081,7 @@ impl Data {
             }
             #[cfg(feature = "BsYoutube")]
             BsIcon::BsYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37112,7 +37098,7 @@ impl Data {
             }
             #[cfg(feature = "BsZoomIn")]
             BsIcon::BsZoomIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37129,7 +37115,7 @@ impl Data {
             }
             #[cfg(feature = "BsZoomOut")]
             BsIcon::BsZoomOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37146,62 +37132,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosBsIcon(
-    cx: leptos::Scope,
-    icon: BsIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

@@ -1598,26 +1598,12 @@ pub enum AiIcon {
     AiZoomOutOutlined,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: AiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for AiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "AiAccountBookFilled")]
             AiIcon::AiAccountBookFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1634,7 +1620,7 @@ impl Data {
             }
             #[cfg(feature = "AiAccountBookOutlined")]
             AiIcon::AiAccountBookOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1651,7 +1637,7 @@ impl Data {
             }
             #[cfg(feature = "AiAccountBookTwotone")]
             AiIcon::AiAccountBookTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1668,7 +1654,7 @@ impl Data {
             }
             #[cfg(feature = "AiAimOutlined")]
             AiIcon::AiAimOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1685,7 +1671,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlertFilled")]
             AiIcon::AiAlertFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1702,7 +1688,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlertOutlined")]
             AiIcon::AiAlertOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1719,7 +1705,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlertTwotone")]
             AiIcon::AiAlertTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1736,7 +1722,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlibabaOutlined")]
             AiIcon::AiAlibabaOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1753,7 +1739,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlignCenterOutlined")]
             AiIcon::AiAlignCenterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1770,7 +1756,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlignLeftOutlined")]
             AiIcon::AiAlignLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1787,7 +1773,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlignRightOutlined")]
             AiIcon::AiAlignRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1804,7 +1790,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlipayCircleFilled")]
             AiIcon::AiAlipayCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1821,7 +1807,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlipayCircleOutlined")]
             AiIcon::AiAlipayCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1838,7 +1824,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlipayOutlined")]
             AiIcon::AiAlipayOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1855,7 +1841,7 @@ impl Data {
             }
             #[cfg(feature = "AiAlipaySquareFilled")]
             AiIcon::AiAlipaySquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1872,7 +1858,7 @@ impl Data {
             }
             #[cfg(feature = "AiAliwangwangFilled")]
             AiIcon::AiAliwangwangFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1889,7 +1875,7 @@ impl Data {
             }
             #[cfg(feature = "AiAliwangwangOutlined")]
             AiIcon::AiAliwangwangOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1906,7 +1892,7 @@ impl Data {
             }
             #[cfg(feature = "AiAliyunOutlined")]
             AiIcon::AiAliyunOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1923,7 +1909,7 @@ impl Data {
             }
             #[cfg(feature = "AiAmazonCircleFilled")]
             AiIcon::AiAmazonCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1940,7 +1926,7 @@ impl Data {
             }
             #[cfg(feature = "AiAmazonOutlined")]
             AiIcon::AiAmazonOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1957,7 +1943,7 @@ impl Data {
             }
             #[cfg(feature = "AiAmazonSquareFilled")]
             AiIcon::AiAmazonSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1974,7 +1960,7 @@ impl Data {
             }
             #[cfg(feature = "AiAndroidFilled")]
             AiIcon::AiAndroidFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1991,7 +1977,7 @@ impl Data {
             }
             #[cfg(feature = "AiAndroidOutlined")]
             AiIcon::AiAndroidOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2008,7 +1994,7 @@ impl Data {
             }
             #[cfg(feature = "AiAntCloudOutlined")]
             AiIcon::AiAntCloudOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2025,7 +2011,7 @@ impl Data {
             }
             #[cfg(feature = "AiAntDesignOutlined")]
             AiIcon::AiAntDesignOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2042,7 +2028,7 @@ impl Data {
             }
             #[cfg(feature = "AiApartmentOutlined")]
             AiIcon::AiApartmentOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2059,7 +2045,7 @@ impl Data {
             }
             #[cfg(feature = "AiApiFilled")]
             AiIcon::AiApiFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2076,7 +2062,7 @@ impl Data {
             }
             #[cfg(feature = "AiApiOutlined")]
             AiIcon::AiApiOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2093,7 +2079,7 @@ impl Data {
             }
             #[cfg(feature = "AiApiTwotone")]
             AiIcon::AiApiTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2110,7 +2096,7 @@ impl Data {
             }
             #[cfg(feature = "AiAppleFilled")]
             AiIcon::AiAppleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2127,7 +2113,7 @@ impl Data {
             }
             #[cfg(feature = "AiAppleOutlined")]
             AiIcon::AiAppleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2144,7 +2130,7 @@ impl Data {
             }
             #[cfg(feature = "AiAppstoreAddOutlined")]
             AiIcon::AiAppstoreAddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2161,7 +2147,7 @@ impl Data {
             }
             #[cfg(feature = "AiAppstoreFilled")]
             AiIcon::AiAppstoreFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2178,7 +2164,7 @@ impl Data {
             }
             #[cfg(feature = "AiAppstoreOutlined")]
             AiIcon::AiAppstoreOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2195,7 +2181,7 @@ impl Data {
             }
             #[cfg(feature = "AiAppstoreTwotone")]
             AiIcon::AiAppstoreTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2212,7 +2198,7 @@ impl Data {
             }
             #[cfg(feature = "AiAreaChartOutlined")]
             AiIcon::AiAreaChartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2229,7 +2215,7 @@ impl Data {
             }
             #[cfg(feature = "AiArrowDownOutlined")]
             AiIcon::AiArrowDownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2246,7 +2232,7 @@ impl Data {
             }
             #[cfg(feature = "AiArrowLeftOutlined")]
             AiIcon::AiArrowLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2263,7 +2249,7 @@ impl Data {
             }
             #[cfg(feature = "AiArrowRightOutlined")]
             AiIcon::AiArrowRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2280,7 +2266,7 @@ impl Data {
             }
             #[cfg(feature = "AiArrowUpOutlined")]
             AiIcon::AiArrowUpOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2297,7 +2283,7 @@ impl Data {
             }
             #[cfg(feature = "AiArrowsAltOutlined")]
             AiIcon::AiArrowsAltOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2314,7 +2300,7 @@ impl Data {
             }
             #[cfg(feature = "AiAudioFilled")]
             AiIcon::AiAudioFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2331,7 +2317,7 @@ impl Data {
             }
             #[cfg(feature = "AiAudioMutedOutlined")]
             AiIcon::AiAudioMutedOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2348,7 +2334,7 @@ impl Data {
             }
             #[cfg(feature = "AiAudioOutlined")]
             AiIcon::AiAudioOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2365,7 +2351,7 @@ impl Data {
             }
             #[cfg(feature = "AiAudioTwotone")]
             AiIcon::AiAudioTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2382,7 +2368,7 @@ impl Data {
             }
             #[cfg(feature = "AiAuditOutlined")]
             AiIcon::AiAuditOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2399,7 +2385,7 @@ impl Data {
             }
             #[cfg(feature = "AiBackwardFilled")]
             AiIcon::AiBackwardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2416,7 +2402,7 @@ impl Data {
             }
             #[cfg(feature = "AiBackwardOutlined")]
             AiIcon::AiBackwardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2433,7 +2419,7 @@ impl Data {
             }
             #[cfg(feature = "AiBankFilled")]
             AiIcon::AiBankFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2450,7 +2436,7 @@ impl Data {
             }
             #[cfg(feature = "AiBankOutlined")]
             AiIcon::AiBankOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2467,7 +2453,7 @@ impl Data {
             }
             #[cfg(feature = "AiBankTwotone")]
             AiIcon::AiBankTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2484,7 +2470,7 @@ impl Data {
             }
             #[cfg(feature = "AiBarChartOutlined")]
             AiIcon::AiBarChartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2501,7 +2487,7 @@ impl Data {
             }
             #[cfg(feature = "AiBarcodeOutlined")]
             AiIcon::AiBarcodeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2518,7 +2504,7 @@ impl Data {
             }
             #[cfg(feature = "AiBarsOutlined")]
             AiIcon::AiBarsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2535,7 +2521,7 @@ impl Data {
             }
             #[cfg(feature = "AiBehanceCircleFilled")]
             AiIcon::AiBehanceCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2552,7 +2538,7 @@ impl Data {
             }
             #[cfg(feature = "AiBehanceOutlined")]
             AiIcon::AiBehanceOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2569,7 +2555,7 @@ impl Data {
             }
             #[cfg(feature = "AiBehanceSquareFilled")]
             AiIcon::AiBehanceSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2586,7 +2572,7 @@ impl Data {
             }
             #[cfg(feature = "AiBehanceSquareOutlined")]
             AiIcon::AiBehanceSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2603,7 +2589,7 @@ impl Data {
             }
             #[cfg(feature = "AiBellFilled")]
             AiIcon::AiBellFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2620,7 +2606,7 @@ impl Data {
             }
             #[cfg(feature = "AiBellOutlined")]
             AiIcon::AiBellOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2637,7 +2623,7 @@ impl Data {
             }
             #[cfg(feature = "AiBellTwotone")]
             AiIcon::AiBellTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2654,7 +2640,7 @@ impl Data {
             }
             #[cfg(feature = "AiBgColorsOutlined")]
             AiIcon::AiBgColorsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2671,7 +2657,7 @@ impl Data {
             }
             #[cfg(feature = "AiBlockOutlined")]
             AiIcon::AiBlockOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2688,7 +2674,7 @@ impl Data {
             }
             #[cfg(feature = "AiBoldOutlined")]
             AiIcon::AiBoldOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2705,7 +2691,7 @@ impl Data {
             }
             #[cfg(feature = "AiBookFilled")]
             AiIcon::AiBookFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2722,7 +2708,7 @@ impl Data {
             }
             #[cfg(feature = "AiBookOutlined")]
             AiIcon::AiBookOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2739,7 +2725,7 @@ impl Data {
             }
             #[cfg(feature = "AiBookTwotone")]
             AiIcon::AiBookTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2756,7 +2742,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderBottomOutlined")]
             AiIcon::AiBorderBottomOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2773,7 +2759,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderHorizontalOutlined")]
             AiIcon::AiBorderHorizontalOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2790,7 +2776,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderInnerOutlined")]
             AiIcon::AiBorderInnerOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2807,7 +2793,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderLeftOutlined")]
             AiIcon::AiBorderLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2824,7 +2810,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderOuterOutlined")]
             AiIcon::AiBorderOuterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2841,7 +2827,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderOutlined")]
             AiIcon::AiBorderOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2858,7 +2844,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderRightOutlined")]
             AiIcon::AiBorderRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2875,7 +2861,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderTopOutlined")]
             AiIcon::AiBorderTopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2892,7 +2878,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderVerticleOutlined")]
             AiIcon::AiBorderVerticleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2909,7 +2895,7 @@ impl Data {
             }
             #[cfg(feature = "AiBorderlessTableOutlined")]
             AiIcon::AiBorderlessTableOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2926,7 +2912,7 @@ impl Data {
             }
             #[cfg(feature = "AiBoxPlotFilled")]
             AiIcon::AiBoxPlotFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2943,7 +2929,7 @@ impl Data {
             }
             #[cfg(feature = "AiBoxPlotOutlined")]
             AiIcon::AiBoxPlotOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2960,7 +2946,7 @@ impl Data {
             }
             #[cfg(feature = "AiBoxPlotTwotone")]
             AiIcon::AiBoxPlotTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2977,7 +2963,7 @@ impl Data {
             }
             #[cfg(feature = "AiBranchesOutlined")]
             AiIcon::AiBranchesOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2994,7 +2980,7 @@ impl Data {
             }
             #[cfg(feature = "AiBugFilled")]
             AiIcon::AiBugFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3011,7 +2997,7 @@ impl Data {
             }
             #[cfg(feature = "AiBugOutlined")]
             AiIcon::AiBugOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3028,7 +3014,7 @@ impl Data {
             }
             #[cfg(feature = "AiBugTwotone")]
             AiIcon::AiBugTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3045,7 +3031,7 @@ impl Data {
             }
             #[cfg(feature = "AiBuildFilled")]
             AiIcon::AiBuildFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3062,7 +3048,7 @@ impl Data {
             }
             #[cfg(feature = "AiBuildOutlined")]
             AiIcon::AiBuildOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3079,7 +3065,7 @@ impl Data {
             }
             #[cfg(feature = "AiBuildTwotone")]
             AiIcon::AiBuildTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3096,7 +3082,7 @@ impl Data {
             }
             #[cfg(feature = "AiBulbFilled")]
             AiIcon::AiBulbFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3113,7 +3099,7 @@ impl Data {
             }
             #[cfg(feature = "AiBulbOutlined")]
             AiIcon::AiBulbOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3130,7 +3116,7 @@ impl Data {
             }
             #[cfg(feature = "AiBulbTwotone")]
             AiIcon::AiBulbTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3147,7 +3133,7 @@ impl Data {
             }
             #[cfg(feature = "AiCalculatorFilled")]
             AiIcon::AiCalculatorFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3164,7 +3150,7 @@ impl Data {
             }
             #[cfg(feature = "AiCalculatorOutlined")]
             AiIcon::AiCalculatorOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3181,7 +3167,7 @@ impl Data {
             }
             #[cfg(feature = "AiCalculatorTwotone")]
             AiIcon::AiCalculatorTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3198,7 +3184,7 @@ impl Data {
             }
             #[cfg(feature = "AiCalendarFilled")]
             AiIcon::AiCalendarFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3215,7 +3201,7 @@ impl Data {
             }
             #[cfg(feature = "AiCalendarOutlined")]
             AiIcon::AiCalendarOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3232,7 +3218,7 @@ impl Data {
             }
             #[cfg(feature = "AiCalendarTwotone")]
             AiIcon::AiCalendarTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3249,7 +3235,7 @@ impl Data {
             }
             #[cfg(feature = "AiCameraFilled")]
             AiIcon::AiCameraFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3266,7 +3252,7 @@ impl Data {
             }
             #[cfg(feature = "AiCameraOutlined")]
             AiIcon::AiCameraOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3283,7 +3269,7 @@ impl Data {
             }
             #[cfg(feature = "AiCameraTwotone")]
             AiIcon::AiCameraTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3300,7 +3286,7 @@ impl Data {
             }
             #[cfg(feature = "AiCarFilled")]
             AiIcon::AiCarFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3317,7 +3303,7 @@ impl Data {
             }
             #[cfg(feature = "AiCarOutlined")]
             AiIcon::AiCarOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3334,7 +3320,7 @@ impl Data {
             }
             #[cfg(feature = "AiCarTwotone")]
             AiIcon::AiCarTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3351,7 +3337,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretDownFilled")]
             AiIcon::AiCaretDownFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3368,7 +3354,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretDownOutlined")]
             AiIcon::AiCaretDownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3385,7 +3371,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretLeftFilled")]
             AiIcon::AiCaretLeftFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3402,7 +3388,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretLeftOutlined")]
             AiIcon::AiCaretLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3419,7 +3405,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretRightFilled")]
             AiIcon::AiCaretRightFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3436,7 +3422,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretRightOutlined")]
             AiIcon::AiCaretRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3453,7 +3439,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretUpFilled")]
             AiIcon::AiCaretUpFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3470,7 +3456,7 @@ impl Data {
             }
             #[cfg(feature = "AiCaretUpOutlined")]
             AiIcon::AiCaretUpOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3487,7 +3473,7 @@ impl Data {
             }
             #[cfg(feature = "AiCarryOutFilled")]
             AiIcon::AiCarryOutFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3504,7 +3490,7 @@ impl Data {
             }
             #[cfg(feature = "AiCarryOutOutlined")]
             AiIcon::AiCarryOutOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3521,7 +3507,7 @@ impl Data {
             }
             #[cfg(feature = "AiCarryOutTwotone")]
             AiIcon::AiCarryOutTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3538,7 +3524,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckCircleFilled")]
             AiIcon::AiCheckCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3555,7 +3541,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckCircleOutlined")]
             AiIcon::AiCheckCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3572,7 +3558,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckCircleTwotone")]
             AiIcon::AiCheckCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3589,7 +3575,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckOutlined")]
             AiIcon::AiCheckOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3606,7 +3592,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckSquareFilled")]
             AiIcon::AiCheckSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3623,7 +3609,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckSquareOutlined")]
             AiIcon::AiCheckSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3640,7 +3626,7 @@ impl Data {
             }
             #[cfg(feature = "AiCheckSquareTwotone")]
             AiIcon::AiCheckSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3657,7 +3643,7 @@ impl Data {
             }
             #[cfg(feature = "AiChromeFilled")]
             AiIcon::AiChromeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3674,7 +3660,7 @@ impl Data {
             }
             #[cfg(feature = "AiChromeOutlined")]
             AiIcon::AiChromeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3691,7 +3677,7 @@ impl Data {
             }
             #[cfg(feature = "AiCiCircleFilled")]
             AiIcon::AiCiCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3708,7 +3694,7 @@ impl Data {
             }
             #[cfg(feature = "AiCiCircleOutlined")]
             AiIcon::AiCiCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3725,7 +3711,7 @@ impl Data {
             }
             #[cfg(feature = "AiCiCircleTwotone")]
             AiIcon::AiCiCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3742,7 +3728,7 @@ impl Data {
             }
             #[cfg(feature = "AiCiOutlined")]
             AiIcon::AiCiOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3759,7 +3745,7 @@ impl Data {
             }
             #[cfg(feature = "AiCiTwotone")]
             AiIcon::AiCiTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3776,7 +3762,7 @@ impl Data {
             }
             #[cfg(feature = "AiClearOutlined")]
             AiIcon::AiClearOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3793,7 +3779,7 @@ impl Data {
             }
             #[cfg(feature = "AiClockCircleFilled")]
             AiIcon::AiClockCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3810,7 +3796,7 @@ impl Data {
             }
             #[cfg(feature = "AiClockCircleOutlined")]
             AiIcon::AiClockCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3827,7 +3813,7 @@ impl Data {
             }
             #[cfg(feature = "AiClockCircleTwotone")]
             AiIcon::AiClockCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3844,7 +3830,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseCircleFilled")]
             AiIcon::AiCloseCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3861,7 +3847,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseCircleOutlined")]
             AiIcon::AiCloseCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3878,7 +3864,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseCircleTwotone")]
             AiIcon::AiCloseCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3895,7 +3881,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseOutlined")]
             AiIcon::AiCloseOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3912,7 +3898,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseSquareFilled")]
             AiIcon::AiCloseSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3929,7 +3915,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseSquareOutlined")]
             AiIcon::AiCloseSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3946,7 +3932,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloseSquareTwotone")]
             AiIcon::AiCloseSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3963,7 +3949,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudDownloadOutlined")]
             AiIcon::AiCloudDownloadOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3980,7 +3966,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudFilled")]
             AiIcon::AiCloudFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3997,7 +3983,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudOutlined")]
             AiIcon::AiCloudOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4014,7 +4000,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudServerOutlined")]
             AiIcon::AiCloudServerOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4031,7 +4017,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudSyncOutlined")]
             AiIcon::AiCloudSyncOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4048,7 +4034,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudTwotone")]
             AiIcon::AiCloudTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4065,7 +4051,7 @@ impl Data {
             }
             #[cfg(feature = "AiCloudUploadOutlined")]
             AiIcon::AiCloudUploadOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4082,7 +4068,7 @@ impl Data {
             }
             #[cfg(feature = "AiClusterOutlined")]
             AiIcon::AiClusterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4099,7 +4085,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodeFilled")]
             AiIcon::AiCodeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4116,7 +4102,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodeOutlined")]
             AiIcon::AiCodeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4133,7 +4119,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodeSandboxCircleFilled")]
             AiIcon::AiCodeSandboxCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4150,7 +4136,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodeSandboxOutlined")]
             AiIcon::AiCodeSandboxOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4167,7 +4153,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodeSandboxSquareFilled")]
             AiIcon::AiCodeSandboxSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4184,7 +4170,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodeTwotone")]
             AiIcon::AiCodeTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4201,7 +4187,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodepenCircleFilled")]
             AiIcon::AiCodepenCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4218,7 +4204,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodepenCircleOutlined")]
             AiIcon::AiCodepenCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4235,7 +4221,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodepenOutlined")]
             AiIcon::AiCodepenOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4252,7 +4238,7 @@ impl Data {
             }
             #[cfg(feature = "AiCodepenSquareFilled")]
             AiIcon::AiCodepenSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4269,7 +4255,7 @@ impl Data {
             }
             #[cfg(feature = "AiCoffeeOutlined")]
             AiIcon::AiCoffeeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4286,7 +4272,7 @@ impl Data {
             }
             #[cfg(feature = "AiColumnHeightOutlined")]
             AiIcon::AiColumnHeightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4303,7 +4289,7 @@ impl Data {
             }
             #[cfg(feature = "AiColumnWidthOutlined")]
             AiIcon::AiColumnWidthOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4320,7 +4306,7 @@ impl Data {
             }
             #[cfg(feature = "AiCommentOutlined")]
             AiIcon::AiCommentOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4337,7 +4323,7 @@ impl Data {
             }
             #[cfg(feature = "AiCompassFilled")]
             AiIcon::AiCompassFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4354,7 +4340,7 @@ impl Data {
             }
             #[cfg(feature = "AiCompassOutlined")]
             AiIcon::AiCompassOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4371,7 +4357,7 @@ impl Data {
             }
             #[cfg(feature = "AiCompassTwotone")]
             AiIcon::AiCompassTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4388,7 +4374,7 @@ impl Data {
             }
             #[cfg(feature = "AiCompressOutlined")]
             AiIcon::AiCompressOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4405,7 +4391,7 @@ impl Data {
             }
             #[cfg(feature = "AiConsoleSqlOutlined")]
             AiIcon::AiConsoleSqlOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4422,7 +4408,7 @@ impl Data {
             }
             #[cfg(feature = "AiContactsFilled")]
             AiIcon::AiContactsFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4439,7 +4425,7 @@ impl Data {
             }
             #[cfg(feature = "AiContactsOutlined")]
             AiIcon::AiContactsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4456,7 +4442,7 @@ impl Data {
             }
             #[cfg(feature = "AiContactsTwotone")]
             AiIcon::AiContactsTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4473,7 +4459,7 @@ impl Data {
             }
             #[cfg(feature = "AiContainerFilled")]
             AiIcon::AiContainerFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4490,7 +4476,7 @@ impl Data {
             }
             #[cfg(feature = "AiContainerOutlined")]
             AiIcon::AiContainerOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4507,7 +4493,7 @@ impl Data {
             }
             #[cfg(feature = "AiContainerTwotone")]
             AiIcon::AiContainerTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4524,7 +4510,7 @@ impl Data {
             }
             #[cfg(feature = "AiControlFilled")]
             AiIcon::AiControlFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4541,7 +4527,7 @@ impl Data {
             }
             #[cfg(feature = "AiControlOutlined")]
             AiIcon::AiControlOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4558,7 +4544,7 @@ impl Data {
             }
             #[cfg(feature = "AiControlTwotone")]
             AiIcon::AiControlTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4575,7 +4561,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyFilled")]
             AiIcon::AiCopyFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4592,7 +4578,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyOutlined")]
             AiIcon::AiCopyOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4609,7 +4595,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyTwotone")]
             AiIcon::AiCopyTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4626,7 +4612,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyrightCircleFilled")]
             AiIcon::AiCopyrightCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4643,7 +4629,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyrightCircleOutlined")]
             AiIcon::AiCopyrightCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4660,7 +4646,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyrightCircleTwotone")]
             AiIcon::AiCopyrightCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4677,7 +4663,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyrightOutlined")]
             AiIcon::AiCopyrightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4694,7 +4680,7 @@ impl Data {
             }
             #[cfg(feature = "AiCopyrightTwotone")]
             AiIcon::AiCopyrightTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4711,7 +4697,7 @@ impl Data {
             }
             #[cfg(feature = "AiCreditCardFilled")]
             AiIcon::AiCreditCardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4728,7 +4714,7 @@ impl Data {
             }
             #[cfg(feature = "AiCreditCardOutlined")]
             AiIcon::AiCreditCardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4745,7 +4731,7 @@ impl Data {
             }
             #[cfg(feature = "AiCreditCardTwotone")]
             AiIcon::AiCreditCardTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4762,7 +4748,7 @@ impl Data {
             }
             #[cfg(feature = "AiCrownFilled")]
             AiIcon::AiCrownFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4779,7 +4765,7 @@ impl Data {
             }
             #[cfg(feature = "AiCrownOutlined")]
             AiIcon::AiCrownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4796,7 +4782,7 @@ impl Data {
             }
             #[cfg(feature = "AiCrownTwotone")]
             AiIcon::AiCrownTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4813,7 +4799,7 @@ impl Data {
             }
             #[cfg(feature = "AiCustomerServiceFilled")]
             AiIcon::AiCustomerServiceFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4830,7 +4816,7 @@ impl Data {
             }
             #[cfg(feature = "AiCustomerServiceOutlined")]
             AiIcon::AiCustomerServiceOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4847,7 +4833,7 @@ impl Data {
             }
             #[cfg(feature = "AiCustomerServiceTwotone")]
             AiIcon::AiCustomerServiceTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4864,7 +4850,7 @@ impl Data {
             }
             #[cfg(feature = "AiDashOutlined")]
             AiIcon::AiDashOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4881,7 +4867,7 @@ impl Data {
             }
             #[cfg(feature = "AiDashboardFilled")]
             AiIcon::AiDashboardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4898,7 +4884,7 @@ impl Data {
             }
             #[cfg(feature = "AiDashboardOutlined")]
             AiIcon::AiDashboardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4915,7 +4901,7 @@ impl Data {
             }
             #[cfg(feature = "AiDashboardTwotone")]
             AiIcon::AiDashboardTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4932,7 +4918,7 @@ impl Data {
             }
             #[cfg(feature = "AiDatabaseFilled")]
             AiIcon::AiDatabaseFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4949,7 +4935,7 @@ impl Data {
             }
             #[cfg(feature = "AiDatabaseOutlined")]
             AiIcon::AiDatabaseOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4966,7 +4952,7 @@ impl Data {
             }
             #[cfg(feature = "AiDatabaseTwotone")]
             AiIcon::AiDatabaseTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4983,7 +4969,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeleteColumnOutlined")]
             AiIcon::AiDeleteColumnOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5000,7 +4986,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeleteFilled")]
             AiIcon::AiDeleteFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5017,7 +5003,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeleteOutlined")]
             AiIcon::AiDeleteOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5034,7 +5020,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeleteRowOutlined")]
             AiIcon::AiDeleteRowOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5051,7 +5037,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeleteTwotone")]
             AiIcon::AiDeleteTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5068,7 +5054,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeliveredProcedureOutlined")]
             AiIcon::AiDeliveredProcedureOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5085,7 +5071,7 @@ impl Data {
             }
             #[cfg(feature = "AiDeploymentUnitOutlined")]
             AiIcon::AiDeploymentUnitOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5102,7 +5088,7 @@ impl Data {
             }
             #[cfg(feature = "AiDesktopOutlined")]
             AiIcon::AiDesktopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5119,7 +5105,7 @@ impl Data {
             }
             #[cfg(feature = "AiDiffFilled")]
             AiIcon::AiDiffFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5136,7 +5122,7 @@ impl Data {
             }
             #[cfg(feature = "AiDiffOutlined")]
             AiIcon::AiDiffOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5153,7 +5139,7 @@ impl Data {
             }
             #[cfg(feature = "AiDiffTwotone")]
             AiIcon::AiDiffTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5170,7 +5156,7 @@ impl Data {
             }
             #[cfg(feature = "AiDingdingOutlined")]
             AiIcon::AiDingdingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5187,7 +5173,7 @@ impl Data {
             }
             #[cfg(feature = "AiDingtalkCircleFilled")]
             AiIcon::AiDingtalkCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5204,7 +5190,7 @@ impl Data {
             }
             #[cfg(feature = "AiDingtalkOutlined")]
             AiIcon::AiDingtalkOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5221,7 +5207,7 @@ impl Data {
             }
             #[cfg(feature = "AiDingtalkSquareFilled")]
             AiIcon::AiDingtalkSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5238,7 +5224,7 @@ impl Data {
             }
             #[cfg(feature = "AiDisconnectOutlined")]
             AiIcon::AiDisconnectOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5255,7 +5241,7 @@ impl Data {
             }
             #[cfg(feature = "AiDislikeFilled")]
             AiIcon::AiDislikeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5272,7 +5258,7 @@ impl Data {
             }
             #[cfg(feature = "AiDislikeOutlined")]
             AiIcon::AiDislikeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5289,7 +5275,7 @@ impl Data {
             }
             #[cfg(feature = "AiDislikeTwotone")]
             AiIcon::AiDislikeTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5306,7 +5292,7 @@ impl Data {
             }
             #[cfg(feature = "AiDollarCircleFilled")]
             AiIcon::AiDollarCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5323,7 +5309,7 @@ impl Data {
             }
             #[cfg(feature = "AiDollarCircleOutlined")]
             AiIcon::AiDollarCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5340,7 +5326,7 @@ impl Data {
             }
             #[cfg(feature = "AiDollarCircleTwotone")]
             AiIcon::AiDollarCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5357,7 +5343,7 @@ impl Data {
             }
             #[cfg(feature = "AiDollarOutlined")]
             AiIcon::AiDollarOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5374,7 +5360,7 @@ impl Data {
             }
             #[cfg(feature = "AiDollarTwotone")]
             AiIcon::AiDollarTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5391,7 +5377,7 @@ impl Data {
             }
             #[cfg(feature = "AiDotChartOutlined")]
             AiIcon::AiDotChartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5408,7 +5394,7 @@ impl Data {
             }
             #[cfg(feature = "AiDoubleLeftOutlined")]
             AiIcon::AiDoubleLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5425,7 +5411,7 @@ impl Data {
             }
             #[cfg(feature = "AiDoubleRightOutlined")]
             AiIcon::AiDoubleRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5442,7 +5428,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownCircleFilled")]
             AiIcon::AiDownCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5459,7 +5445,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownCircleOutlined")]
             AiIcon::AiDownCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5476,7 +5462,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownCircleTwotone")]
             AiIcon::AiDownCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5493,7 +5479,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownOutlined")]
             AiIcon::AiDownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5510,7 +5496,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownSquareFilled")]
             AiIcon::AiDownSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5527,7 +5513,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownSquareOutlined")]
             AiIcon::AiDownSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5544,7 +5530,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownSquareTwotone")]
             AiIcon::AiDownSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5561,7 +5547,7 @@ impl Data {
             }
             #[cfg(feature = "AiDownloadOutlined")]
             AiIcon::AiDownloadOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5578,7 +5564,7 @@ impl Data {
             }
             #[cfg(feature = "AiDragOutlined")]
             AiIcon::AiDragOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5595,7 +5581,7 @@ impl Data {
             }
             #[cfg(feature = "AiDribbbleCircleFilled")]
             AiIcon::AiDribbbleCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5612,7 +5598,7 @@ impl Data {
             }
             #[cfg(feature = "AiDribbbleOutlined")]
             AiIcon::AiDribbbleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5629,7 +5615,7 @@ impl Data {
             }
             #[cfg(feature = "AiDribbbleSquareFilled")]
             AiIcon::AiDribbbleSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5646,7 +5632,7 @@ impl Data {
             }
             #[cfg(feature = "AiDribbbleSquareOutlined")]
             AiIcon::AiDribbbleSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5663,7 +5649,7 @@ impl Data {
             }
             #[cfg(feature = "AiDropboxCircleFilled")]
             AiIcon::AiDropboxCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5680,7 +5666,7 @@ impl Data {
             }
             #[cfg(feature = "AiDropboxOutlined")]
             AiIcon::AiDropboxOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5697,7 +5683,7 @@ impl Data {
             }
             #[cfg(feature = "AiDropboxSquareFilled")]
             AiIcon::AiDropboxSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5714,7 +5700,7 @@ impl Data {
             }
             #[cfg(feature = "AiEditFilled")]
             AiIcon::AiEditFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5731,7 +5717,7 @@ impl Data {
             }
             #[cfg(feature = "AiEditOutlined")]
             AiIcon::AiEditOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5748,7 +5734,7 @@ impl Data {
             }
             #[cfg(feature = "AiEditTwotone")]
             AiIcon::AiEditTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5765,7 +5751,7 @@ impl Data {
             }
             #[cfg(feature = "AiEllipsisOutlined")]
             AiIcon::AiEllipsisOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5782,7 +5768,7 @@ impl Data {
             }
             #[cfg(feature = "AiEnterOutlined")]
             AiIcon::AiEnterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5799,7 +5785,7 @@ impl Data {
             }
             #[cfg(feature = "AiEnvironmentFilled")]
             AiIcon::AiEnvironmentFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5816,7 +5802,7 @@ impl Data {
             }
             #[cfg(feature = "AiEnvironmentOutlined")]
             AiIcon::AiEnvironmentOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5833,7 +5819,7 @@ impl Data {
             }
             #[cfg(feature = "AiEnvironmentTwotone")]
             AiIcon::AiEnvironmentTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5850,7 +5836,7 @@ impl Data {
             }
             #[cfg(feature = "AiEuroCircleFilled")]
             AiIcon::AiEuroCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5867,7 +5853,7 @@ impl Data {
             }
             #[cfg(feature = "AiEuroCircleOutlined")]
             AiIcon::AiEuroCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5884,7 +5870,7 @@ impl Data {
             }
             #[cfg(feature = "AiEuroCircleTwotone")]
             AiIcon::AiEuroCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5901,7 +5887,7 @@ impl Data {
             }
             #[cfg(feature = "AiEuroOutlined")]
             AiIcon::AiEuroOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5918,7 +5904,7 @@ impl Data {
             }
             #[cfg(feature = "AiEuroTwotone")]
             AiIcon::AiEuroTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5935,7 +5921,7 @@ impl Data {
             }
             #[cfg(feature = "AiExceptionOutlined")]
             AiIcon::AiExceptionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5952,7 +5938,7 @@ impl Data {
             }
             #[cfg(feature = "AiExclamationCircleFilled")]
             AiIcon::AiExclamationCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5969,7 +5955,7 @@ impl Data {
             }
             #[cfg(feature = "AiExclamationCircleOutlined")]
             AiIcon::AiExclamationCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5986,7 +5972,7 @@ impl Data {
             }
             #[cfg(feature = "AiExclamationCircleTwotone")]
             AiIcon::AiExclamationCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6003,7 +5989,7 @@ impl Data {
             }
             #[cfg(feature = "AiExclamationOutlined")]
             AiIcon::AiExclamationOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6020,7 +6006,7 @@ impl Data {
             }
             #[cfg(feature = "AiExpandAltOutlined")]
             AiIcon::AiExpandAltOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6037,7 +6023,7 @@ impl Data {
             }
             #[cfg(feature = "AiExpandOutlined")]
             AiIcon::AiExpandOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6054,7 +6040,7 @@ impl Data {
             }
             #[cfg(feature = "AiExperimentFilled")]
             AiIcon::AiExperimentFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6071,7 +6057,7 @@ impl Data {
             }
             #[cfg(feature = "AiExperimentOutlined")]
             AiIcon::AiExperimentOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6088,7 +6074,7 @@ impl Data {
             }
             #[cfg(feature = "AiExperimentTwotone")]
             AiIcon::AiExperimentTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6105,7 +6091,7 @@ impl Data {
             }
             #[cfg(feature = "AiExportOutlined")]
             AiIcon::AiExportOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6122,7 +6108,7 @@ impl Data {
             }
             #[cfg(feature = "AiEyeFilled")]
             AiIcon::AiEyeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6139,7 +6125,7 @@ impl Data {
             }
             #[cfg(feature = "AiEyeInvisibleFilled")]
             AiIcon::AiEyeInvisibleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6156,7 +6142,7 @@ impl Data {
             }
             #[cfg(feature = "AiEyeInvisibleOutlined")]
             AiIcon::AiEyeInvisibleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6173,7 +6159,7 @@ impl Data {
             }
             #[cfg(feature = "AiEyeInvisibleTwotone")]
             AiIcon::AiEyeInvisibleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6190,7 +6176,7 @@ impl Data {
             }
             #[cfg(feature = "AiEyeOutlined")]
             AiIcon::AiEyeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6207,7 +6193,7 @@ impl Data {
             }
             #[cfg(feature = "AiEyeTwotone")]
             AiIcon::AiEyeTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6224,7 +6210,7 @@ impl Data {
             }
             #[cfg(feature = "AiFacebookFilled")]
             AiIcon::AiFacebookFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6241,7 +6227,7 @@ impl Data {
             }
             #[cfg(feature = "AiFacebookOutlined")]
             AiIcon::AiFacebookOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6258,7 +6244,7 @@ impl Data {
             }
             #[cfg(feature = "AiFallOutlined")]
             AiIcon::AiFallOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6275,7 +6261,7 @@ impl Data {
             }
             #[cfg(feature = "AiFastBackwardFilled")]
             AiIcon::AiFastBackwardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6292,7 +6278,7 @@ impl Data {
             }
             #[cfg(feature = "AiFastBackwardOutlined")]
             AiIcon::AiFastBackwardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6309,7 +6295,7 @@ impl Data {
             }
             #[cfg(feature = "AiFastForwardFilled")]
             AiIcon::AiFastForwardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6326,7 +6312,7 @@ impl Data {
             }
             #[cfg(feature = "AiFastForwardOutlined")]
             AiIcon::AiFastForwardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6343,7 +6329,7 @@ impl Data {
             }
             #[cfg(feature = "AiFieldBinaryOutlined")]
             AiIcon::AiFieldBinaryOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6360,7 +6346,7 @@ impl Data {
             }
             #[cfg(feature = "AiFieldNumberOutlined")]
             AiIcon::AiFieldNumberOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6377,7 +6363,7 @@ impl Data {
             }
             #[cfg(feature = "AiFieldStringOutlined")]
             AiIcon::AiFieldStringOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6394,7 +6380,7 @@ impl Data {
             }
             #[cfg(feature = "AiFieldTimeOutlined")]
             AiIcon::AiFieldTimeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6411,7 +6397,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileAddFilled")]
             AiIcon::AiFileAddFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6428,7 +6414,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileAddOutlined")]
             AiIcon::AiFileAddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6445,7 +6431,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileAddTwotone")]
             AiIcon::AiFileAddTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6462,7 +6448,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileDoneOutlined")]
             AiIcon::AiFileDoneOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6479,7 +6465,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileExcelFilled")]
             AiIcon::AiFileExcelFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6496,7 +6482,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileExcelOutlined")]
             AiIcon::AiFileExcelOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6513,7 +6499,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileExcelTwotone")]
             AiIcon::AiFileExcelTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6530,7 +6516,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileExclamationFilled")]
             AiIcon::AiFileExclamationFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6547,7 +6533,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileExclamationOutlined")]
             AiIcon::AiFileExclamationOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6564,7 +6550,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileExclamationTwotone")]
             AiIcon::AiFileExclamationTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6581,7 +6567,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileFilled")]
             AiIcon::AiFileFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6598,7 +6584,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileGifOutlined")]
             AiIcon::AiFileGifOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6615,7 +6601,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileImageFilled")]
             AiIcon::AiFileImageFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6632,7 +6618,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileImageOutlined")]
             AiIcon::AiFileImageOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6649,7 +6635,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileImageTwotone")]
             AiIcon::AiFileImageTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6666,7 +6652,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileJpgOutlined")]
             AiIcon::AiFileJpgOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6683,7 +6669,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileMarkdownFilled")]
             AiIcon::AiFileMarkdownFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6700,7 +6686,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileMarkdownOutlined")]
             AiIcon::AiFileMarkdownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6717,7 +6703,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileMarkdownTwotone")]
             AiIcon::AiFileMarkdownTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6734,7 +6720,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileOutlined")]
             AiIcon::AiFileOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6751,7 +6737,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilePdfFilled")]
             AiIcon::AiFilePdfFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6768,7 +6754,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilePdfOutlined")]
             AiIcon::AiFilePdfOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6785,7 +6771,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilePdfTwotone")]
             AiIcon::AiFilePdfTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6802,7 +6788,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilePptFilled")]
             AiIcon::AiFilePptFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6819,7 +6805,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilePptOutlined")]
             AiIcon::AiFilePptOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6836,7 +6822,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilePptTwotone")]
             AiIcon::AiFilePptTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6853,7 +6839,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileProtectOutlined")]
             AiIcon::AiFileProtectOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6870,7 +6856,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileSearchOutlined")]
             AiIcon::AiFileSearchOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6887,7 +6873,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileSyncOutlined")]
             AiIcon::AiFileSyncOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6904,7 +6890,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileTextFilled")]
             AiIcon::AiFileTextFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6921,7 +6907,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileTextOutlined")]
             AiIcon::AiFileTextOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6938,7 +6924,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileTextTwotone")]
             AiIcon::AiFileTextTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6955,7 +6941,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileTwotone")]
             AiIcon::AiFileTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6972,7 +6958,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileUnknownFilled")]
             AiIcon::AiFileUnknownFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6989,7 +6975,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileUnknownOutlined")]
             AiIcon::AiFileUnknownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7006,7 +6992,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileUnknownTwotone")]
             AiIcon::AiFileUnknownTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7023,7 +7009,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileWordFilled")]
             AiIcon::AiFileWordFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7040,7 +7026,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileWordOutlined")]
             AiIcon::AiFileWordOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7057,7 +7043,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileWordTwotone")]
             AiIcon::AiFileWordTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7074,7 +7060,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileZipFilled")]
             AiIcon::AiFileZipFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7091,7 +7077,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileZipOutlined")]
             AiIcon::AiFileZipOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7108,7 +7094,7 @@ impl Data {
             }
             #[cfg(feature = "AiFileZipTwotone")]
             AiIcon::AiFileZipTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7125,7 +7111,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilterFilled")]
             AiIcon::AiFilterFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7142,7 +7128,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilterOutlined")]
             AiIcon::AiFilterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7159,7 +7145,7 @@ impl Data {
             }
             #[cfg(feature = "AiFilterTwotone")]
             AiIcon::AiFilterTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7176,7 +7162,7 @@ impl Data {
             }
             #[cfg(feature = "AiFireFilled")]
             AiIcon::AiFireFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7193,7 +7179,7 @@ impl Data {
             }
             #[cfg(feature = "AiFireOutlined")]
             AiIcon::AiFireOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7210,7 +7196,7 @@ impl Data {
             }
             #[cfg(feature = "AiFireTwotone")]
             AiIcon::AiFireTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7227,7 +7213,7 @@ impl Data {
             }
             #[cfg(feature = "AiFlagFilled")]
             AiIcon::AiFlagFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7244,7 +7230,7 @@ impl Data {
             }
             #[cfg(feature = "AiFlagOutlined")]
             AiIcon::AiFlagOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7261,7 +7247,7 @@ impl Data {
             }
             #[cfg(feature = "AiFlagTwotone")]
             AiIcon::AiFlagTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7278,7 +7264,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderAddFilled")]
             AiIcon::AiFolderAddFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7295,7 +7281,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderAddOutlined")]
             AiIcon::AiFolderAddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7312,7 +7298,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderAddTwotone")]
             AiIcon::AiFolderAddTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7329,7 +7315,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderFilled")]
             AiIcon::AiFolderFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7346,7 +7332,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderOpenFilled")]
             AiIcon::AiFolderOpenFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7363,7 +7349,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderOpenOutlined")]
             AiIcon::AiFolderOpenOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7380,7 +7366,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderOpenTwotone")]
             AiIcon::AiFolderOpenTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7397,7 +7383,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderOutlined")]
             AiIcon::AiFolderOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7414,7 +7400,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderTwotone")]
             AiIcon::AiFolderTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7431,7 +7417,7 @@ impl Data {
             }
             #[cfg(feature = "AiFolderViewOutlined")]
             AiIcon::AiFolderViewOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7448,7 +7434,7 @@ impl Data {
             }
             #[cfg(feature = "AiFontColorsOutlined")]
             AiIcon::AiFontColorsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7465,7 +7451,7 @@ impl Data {
             }
             #[cfg(feature = "AiFontSizeOutlined")]
             AiIcon::AiFontSizeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7482,7 +7468,7 @@ impl Data {
             }
             #[cfg(feature = "AiForkOutlined")]
             AiIcon::AiForkOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7499,7 +7485,7 @@ impl Data {
             }
             #[cfg(feature = "AiFormOutlined")]
             AiIcon::AiFormOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7516,7 +7502,7 @@ impl Data {
             }
             #[cfg(feature = "AiFormatPainterFilled")]
             AiIcon::AiFormatPainterFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7533,7 +7519,7 @@ impl Data {
             }
             #[cfg(feature = "AiFormatPainterOutlined")]
             AiIcon::AiFormatPainterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7550,7 +7536,7 @@ impl Data {
             }
             #[cfg(feature = "AiForwardFilled")]
             AiIcon::AiForwardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7567,7 +7553,7 @@ impl Data {
             }
             #[cfg(feature = "AiForwardOutlined")]
             AiIcon::AiForwardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7584,7 +7570,7 @@ impl Data {
             }
             #[cfg(feature = "AiFrownFilled")]
             AiIcon::AiFrownFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7601,7 +7587,7 @@ impl Data {
             }
             #[cfg(feature = "AiFrownOutlined")]
             AiIcon::AiFrownOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7618,7 +7604,7 @@ impl Data {
             }
             #[cfg(feature = "AiFrownTwotone")]
             AiIcon::AiFrownTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7635,7 +7621,7 @@ impl Data {
             }
             #[cfg(feature = "AiFullscreenExitOutlined")]
             AiIcon::AiFullscreenExitOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7652,7 +7638,7 @@ impl Data {
             }
             #[cfg(feature = "AiFullscreenOutlined")]
             AiIcon::AiFullscreenOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7669,7 +7655,7 @@ impl Data {
             }
             #[cfg(feature = "AiFunctionOutlined")]
             AiIcon::AiFunctionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7686,7 +7672,7 @@ impl Data {
             }
             #[cfg(feature = "AiFundFilled")]
             AiIcon::AiFundFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7703,7 +7689,7 @@ impl Data {
             }
             #[cfg(feature = "AiFundOutlined")]
             AiIcon::AiFundOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7720,7 +7706,7 @@ impl Data {
             }
             #[cfg(feature = "AiFundProjectionScreenOutlined")]
             AiIcon::AiFundProjectionScreenOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7737,7 +7723,7 @@ impl Data {
             }
             #[cfg(feature = "AiFundTwotone")]
             AiIcon::AiFundTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7754,7 +7740,7 @@ impl Data {
             }
             #[cfg(feature = "AiFundViewOutlined")]
             AiIcon::AiFundViewOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7771,7 +7757,7 @@ impl Data {
             }
             #[cfg(feature = "AiFunnelPlotFilled")]
             AiIcon::AiFunnelPlotFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7788,7 +7774,7 @@ impl Data {
             }
             #[cfg(feature = "AiFunnelPlotOutlined")]
             AiIcon::AiFunnelPlotOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7805,7 +7791,7 @@ impl Data {
             }
             #[cfg(feature = "AiFunnelPlotTwotone")]
             AiIcon::AiFunnelPlotTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7822,7 +7808,7 @@ impl Data {
             }
             #[cfg(feature = "AiGatewayOutlined")]
             AiIcon::AiGatewayOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7839,7 +7825,7 @@ impl Data {
             }
             #[cfg(feature = "AiGifOutlined")]
             AiIcon::AiGifOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7856,7 +7842,7 @@ impl Data {
             }
             #[cfg(feature = "AiGiftFilled")]
             AiIcon::AiGiftFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7873,7 +7859,7 @@ impl Data {
             }
             #[cfg(feature = "AiGiftOutlined")]
             AiIcon::AiGiftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7890,7 +7876,7 @@ impl Data {
             }
             #[cfg(feature = "AiGiftTwotone")]
             AiIcon::AiGiftTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7907,7 +7893,7 @@ impl Data {
             }
             #[cfg(feature = "AiGithubFilled")]
             AiIcon::AiGithubFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7924,7 +7910,7 @@ impl Data {
             }
             #[cfg(feature = "AiGithubOutlined")]
             AiIcon::AiGithubOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7941,7 +7927,7 @@ impl Data {
             }
             #[cfg(feature = "AiGitlabFilled")]
             AiIcon::AiGitlabFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7958,7 +7944,7 @@ impl Data {
             }
             #[cfg(feature = "AiGitlabOutlined")]
             AiIcon::AiGitlabOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7975,7 +7961,7 @@ impl Data {
             }
             #[cfg(feature = "AiGlobalOutlined")]
             AiIcon::AiGlobalOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7992,7 +7978,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoldFilled")]
             AiIcon::AiGoldFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8009,7 +7995,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoldOutlined")]
             AiIcon::AiGoldOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8026,7 +8012,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoldTwotone")]
             AiIcon::AiGoldTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8043,7 +8029,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoldenFilled")]
             AiIcon::AiGoldenFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8060,7 +8046,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoogleCircleFilled")]
             AiIcon::AiGoogleCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8077,7 +8063,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoogleOutlined")]
             AiIcon::AiGoogleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8094,7 +8080,7 @@ impl Data {
             }
             #[cfg(feature = "AiGooglePlusCircleFilled")]
             AiIcon::AiGooglePlusCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8111,7 +8097,7 @@ impl Data {
             }
             #[cfg(feature = "AiGooglePlusOutlined")]
             AiIcon::AiGooglePlusOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8128,7 +8114,7 @@ impl Data {
             }
             #[cfg(feature = "AiGooglePlusSquareFilled")]
             AiIcon::AiGooglePlusSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8145,7 +8131,7 @@ impl Data {
             }
             #[cfg(feature = "AiGoogleSquareFilled")]
             AiIcon::AiGoogleSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8162,7 +8148,7 @@ impl Data {
             }
             #[cfg(feature = "AiGroupOutlined")]
             AiIcon::AiGroupOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8179,7 +8165,7 @@ impl Data {
             }
             #[cfg(feature = "AiHddFilled")]
             AiIcon::AiHddFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8196,7 +8182,7 @@ impl Data {
             }
             #[cfg(feature = "AiHddOutlined")]
             AiIcon::AiHddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8213,7 +8199,7 @@ impl Data {
             }
             #[cfg(feature = "AiHddTwotone")]
             AiIcon::AiHddTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8230,7 +8216,7 @@ impl Data {
             }
             #[cfg(feature = "AiHeartFilled")]
             AiIcon::AiHeartFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8247,7 +8233,7 @@ impl Data {
             }
             #[cfg(feature = "AiHeartOutlined")]
             AiIcon::AiHeartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8264,7 +8250,7 @@ impl Data {
             }
             #[cfg(feature = "AiHeartTwotone")]
             AiIcon::AiHeartTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8281,7 +8267,7 @@ impl Data {
             }
             #[cfg(feature = "AiHeatMapOutlined")]
             AiIcon::AiHeatMapOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8298,7 +8284,7 @@ impl Data {
             }
             #[cfg(feature = "AiHighlightFilled")]
             AiIcon::AiHighlightFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8315,7 +8301,7 @@ impl Data {
             }
             #[cfg(feature = "AiHighlightOutlined")]
             AiIcon::AiHighlightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8332,7 +8318,7 @@ impl Data {
             }
             #[cfg(feature = "AiHighlightTwotone")]
             AiIcon::AiHighlightTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8349,7 +8335,7 @@ impl Data {
             }
             #[cfg(feature = "AiHistoryOutlined")]
             AiIcon::AiHistoryOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8366,7 +8352,7 @@ impl Data {
             }
             #[cfg(feature = "AiHolderOutlined")]
             AiIcon::AiHolderOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8383,7 +8369,7 @@ impl Data {
             }
             #[cfg(feature = "AiHomeFilled")]
             AiIcon::AiHomeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8400,7 +8386,7 @@ impl Data {
             }
             #[cfg(feature = "AiHomeOutlined")]
             AiIcon::AiHomeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8417,7 +8403,7 @@ impl Data {
             }
             #[cfg(feature = "AiHomeTwotone")]
             AiIcon::AiHomeTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8434,7 +8420,7 @@ impl Data {
             }
             #[cfg(feature = "AiHourglassFilled")]
             AiIcon::AiHourglassFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8451,7 +8437,7 @@ impl Data {
             }
             #[cfg(feature = "AiHourglassOutlined")]
             AiIcon::AiHourglassOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8468,7 +8454,7 @@ impl Data {
             }
             #[cfg(feature = "AiHourglassTwotone")]
             AiIcon::AiHourglassTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8485,7 +8471,7 @@ impl Data {
             }
             #[cfg(feature = "AiHtml5Filled")]
             AiIcon::AiHtml5Filled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8502,7 +8488,7 @@ impl Data {
             }
             #[cfg(feature = "AiHtml5Outlined")]
             AiIcon::AiHtml5Outlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8519,7 +8505,7 @@ impl Data {
             }
             #[cfg(feature = "AiHtml5Twotone")]
             AiIcon::AiHtml5Twotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8536,7 +8522,7 @@ impl Data {
             }
             #[cfg(feature = "AiIdcardFilled")]
             AiIcon::AiIdcardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8553,7 +8539,7 @@ impl Data {
             }
             #[cfg(feature = "AiIdcardOutlined")]
             AiIcon::AiIdcardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8570,7 +8556,7 @@ impl Data {
             }
             #[cfg(feature = "AiIdcardTwotone")]
             AiIcon::AiIdcardTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8587,7 +8573,7 @@ impl Data {
             }
             #[cfg(feature = "AiIeCircleFilled")]
             AiIcon::AiIeCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8604,7 +8590,7 @@ impl Data {
             }
             #[cfg(feature = "AiIeOutlined")]
             AiIcon::AiIeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8621,7 +8607,7 @@ impl Data {
             }
             #[cfg(feature = "AiIeSquareFilled")]
             AiIcon::AiIeSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8638,7 +8624,7 @@ impl Data {
             }
             #[cfg(feature = "AiImportOutlined")]
             AiIcon::AiImportOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8655,7 +8641,7 @@ impl Data {
             }
             #[cfg(feature = "AiInboxOutlined")]
             AiIcon::AiInboxOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8672,7 +8658,7 @@ impl Data {
             }
             #[cfg(feature = "AiInfoCircleFilled")]
             AiIcon::AiInfoCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8689,7 +8675,7 @@ impl Data {
             }
             #[cfg(feature = "AiInfoCircleOutlined")]
             AiIcon::AiInfoCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8706,7 +8692,7 @@ impl Data {
             }
             #[cfg(feature = "AiInfoCircleTwotone")]
             AiIcon::AiInfoCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8723,7 +8709,7 @@ impl Data {
             }
             #[cfg(feature = "AiInfoOutlined")]
             AiIcon::AiInfoOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8740,7 +8726,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsertRowAboveOutlined")]
             AiIcon::AiInsertRowAboveOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8757,7 +8743,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsertRowBelowOutlined")]
             AiIcon::AiInsertRowBelowOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8774,7 +8760,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsertRowLeftOutlined")]
             AiIcon::AiInsertRowLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8791,7 +8777,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsertRowRightOutlined")]
             AiIcon::AiInsertRowRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8808,7 +8794,7 @@ impl Data {
             }
             #[cfg(feature = "AiInstagramFilled")]
             AiIcon::AiInstagramFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8825,7 +8811,7 @@ impl Data {
             }
             #[cfg(feature = "AiInstagramOutlined")]
             AiIcon::AiInstagramOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8842,7 +8828,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsuranceFilled")]
             AiIcon::AiInsuranceFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8859,7 +8845,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsuranceOutlined")]
             AiIcon::AiInsuranceOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8876,7 +8862,7 @@ impl Data {
             }
             #[cfg(feature = "AiInsuranceTwotone")]
             AiIcon::AiInsuranceTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8893,7 +8879,7 @@ impl Data {
             }
             #[cfg(feature = "AiInteractionFilled")]
             AiIcon::AiInteractionFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8910,7 +8896,7 @@ impl Data {
             }
             #[cfg(feature = "AiInteractionOutlined")]
             AiIcon::AiInteractionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8927,7 +8913,7 @@ impl Data {
             }
             #[cfg(feature = "AiInteractionTwotone")]
             AiIcon::AiInteractionTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8944,7 +8930,7 @@ impl Data {
             }
             #[cfg(feature = "AiIssuesCloseOutlined")]
             AiIcon::AiIssuesCloseOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8961,7 +8947,7 @@ impl Data {
             }
             #[cfg(feature = "AiItalicOutlined")]
             AiIcon::AiItalicOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8978,7 +8964,7 @@ impl Data {
             }
             #[cfg(feature = "AiKeyOutlined")]
             AiIcon::AiKeyOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8995,7 +8981,7 @@ impl Data {
             }
             #[cfg(feature = "AiLaptopOutlined")]
             AiIcon::AiLaptopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9012,7 +8998,7 @@ impl Data {
             }
             #[cfg(feature = "AiLayoutFilled")]
             AiIcon::AiLayoutFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9029,7 +9015,7 @@ impl Data {
             }
             #[cfg(feature = "AiLayoutOutlined")]
             AiIcon::AiLayoutOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9046,7 +9032,7 @@ impl Data {
             }
             #[cfg(feature = "AiLayoutTwotone")]
             AiIcon::AiLayoutTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9063,7 +9049,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftCircleFilled")]
             AiIcon::AiLeftCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9080,7 +9066,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftCircleOutlined")]
             AiIcon::AiLeftCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9097,7 +9083,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftCircleTwotone")]
             AiIcon::AiLeftCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9114,7 +9100,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftOutlined")]
             AiIcon::AiLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9131,7 +9117,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftSquareFilled")]
             AiIcon::AiLeftSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9148,7 +9134,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftSquareOutlined")]
             AiIcon::AiLeftSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9165,7 +9151,7 @@ impl Data {
             }
             #[cfg(feature = "AiLeftSquareTwotone")]
             AiIcon::AiLeftSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9182,7 +9168,7 @@ impl Data {
             }
             #[cfg(feature = "AiLikeFilled")]
             AiIcon::AiLikeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9199,7 +9185,7 @@ impl Data {
             }
             #[cfg(feature = "AiLikeOutlined")]
             AiIcon::AiLikeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9216,7 +9202,7 @@ impl Data {
             }
             #[cfg(feature = "AiLikeTwotone")]
             AiIcon::AiLikeTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9233,7 +9219,7 @@ impl Data {
             }
             #[cfg(feature = "AiLineChartOutlined")]
             AiIcon::AiLineChartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9250,7 +9236,7 @@ impl Data {
             }
             #[cfg(feature = "AiLineHeightOutlined")]
             AiIcon::AiLineHeightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9267,7 +9253,7 @@ impl Data {
             }
             #[cfg(feature = "AiLineOutlined")]
             AiIcon::AiLineOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9284,7 +9270,7 @@ impl Data {
             }
             #[cfg(feature = "AiLinkOutlined")]
             AiIcon::AiLinkOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9301,7 +9287,7 @@ impl Data {
             }
             #[cfg(feature = "AiLinkedinFilled")]
             AiIcon::AiLinkedinFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9318,7 +9304,7 @@ impl Data {
             }
             #[cfg(feature = "AiLinkedinOutlined")]
             AiIcon::AiLinkedinOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9335,7 +9321,7 @@ impl Data {
             }
             #[cfg(feature = "AiLoading3QuartersOutlined")]
             AiIcon::AiLoading3QuartersOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9352,7 +9338,7 @@ impl Data {
             }
             #[cfg(feature = "AiLoadingOutlined")]
             AiIcon::AiLoadingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9369,7 +9355,7 @@ impl Data {
             }
             #[cfg(feature = "AiLockFilled")]
             AiIcon::AiLockFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9386,7 +9372,7 @@ impl Data {
             }
             #[cfg(feature = "AiLockOutlined")]
             AiIcon::AiLockOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9403,7 +9389,7 @@ impl Data {
             }
             #[cfg(feature = "AiLockTwotone")]
             AiIcon::AiLockTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9420,7 +9406,7 @@ impl Data {
             }
             #[cfg(feature = "AiLoginOutlined")]
             AiIcon::AiLoginOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9437,7 +9423,7 @@ impl Data {
             }
             #[cfg(feature = "AiLogoutOutlined")]
             AiIcon::AiLogoutOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9454,7 +9440,7 @@ impl Data {
             }
             #[cfg(feature = "AiMacCommandFilled")]
             AiIcon::AiMacCommandFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9471,7 +9457,7 @@ impl Data {
             }
             #[cfg(feature = "AiMacCommandOutlined")]
             AiIcon::AiMacCommandOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9488,7 +9474,7 @@ impl Data {
             }
             #[cfg(feature = "AiMailFilled")]
             AiIcon::AiMailFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9505,7 +9491,7 @@ impl Data {
             }
             #[cfg(feature = "AiMailOutlined")]
             AiIcon::AiMailOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9522,7 +9508,7 @@ impl Data {
             }
             #[cfg(feature = "AiMailTwotone")]
             AiIcon::AiMailTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9539,7 +9525,7 @@ impl Data {
             }
             #[cfg(feature = "AiManOutlined")]
             AiIcon::AiManOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9556,7 +9542,7 @@ impl Data {
             }
             #[cfg(feature = "AiMedicineBoxFilled")]
             AiIcon::AiMedicineBoxFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9573,7 +9559,7 @@ impl Data {
             }
             #[cfg(feature = "AiMedicineBoxOutlined")]
             AiIcon::AiMedicineBoxOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9590,7 +9576,7 @@ impl Data {
             }
             #[cfg(feature = "AiMedicineBoxTwotone")]
             AiIcon::AiMedicineBoxTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9607,7 +9593,7 @@ impl Data {
             }
             #[cfg(feature = "AiMediumCircleFilled")]
             AiIcon::AiMediumCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9624,7 +9610,7 @@ impl Data {
             }
             #[cfg(feature = "AiMediumOutlined")]
             AiIcon::AiMediumOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9641,7 +9627,7 @@ impl Data {
             }
             #[cfg(feature = "AiMediumSquareFilled")]
             AiIcon::AiMediumSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9658,7 +9644,7 @@ impl Data {
             }
             #[cfg(feature = "AiMediumWorkmarkOutlined")]
             AiIcon::AiMediumWorkmarkOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9675,7 +9661,7 @@ impl Data {
             }
             #[cfg(feature = "AiMehFilled")]
             AiIcon::AiMehFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9692,7 +9678,7 @@ impl Data {
             }
             #[cfg(feature = "AiMehOutlined")]
             AiIcon::AiMehOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9709,7 +9695,7 @@ impl Data {
             }
             #[cfg(feature = "AiMehTwotone")]
             AiIcon::AiMehTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9726,7 +9712,7 @@ impl Data {
             }
             #[cfg(feature = "AiMenuFoldOutlined")]
             AiIcon::AiMenuFoldOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9743,7 +9729,7 @@ impl Data {
             }
             #[cfg(feature = "AiMenuOutlined")]
             AiIcon::AiMenuOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9760,7 +9746,7 @@ impl Data {
             }
             #[cfg(feature = "AiMenuUnfoldOutlined")]
             AiIcon::AiMenuUnfoldOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9777,7 +9763,7 @@ impl Data {
             }
             #[cfg(feature = "AiMergeCellsOutlined")]
             AiIcon::AiMergeCellsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9794,7 +9780,7 @@ impl Data {
             }
             #[cfg(feature = "AiMessageFilled")]
             AiIcon::AiMessageFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9811,7 +9797,7 @@ impl Data {
             }
             #[cfg(feature = "AiMessageOutlined")]
             AiIcon::AiMessageOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9828,7 +9814,7 @@ impl Data {
             }
             #[cfg(feature = "AiMessageTwotone")]
             AiIcon::AiMessageTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9845,7 +9831,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusCircleFilled")]
             AiIcon::AiMinusCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9862,7 +9848,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusCircleOutlined")]
             AiIcon::AiMinusCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9879,7 +9865,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusCircleTwotone")]
             AiIcon::AiMinusCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9896,7 +9882,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusOutlined")]
             AiIcon::AiMinusOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9913,7 +9899,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusSquareFilled")]
             AiIcon::AiMinusSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9930,7 +9916,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusSquareOutlined")]
             AiIcon::AiMinusSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9947,7 +9933,7 @@ impl Data {
             }
             #[cfg(feature = "AiMinusSquareTwotone")]
             AiIcon::AiMinusSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9964,7 +9950,7 @@ impl Data {
             }
             #[cfg(feature = "AiMobileFilled")]
             AiIcon::AiMobileFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9981,7 +9967,7 @@ impl Data {
             }
             #[cfg(feature = "AiMobileOutlined")]
             AiIcon::AiMobileOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9998,7 +9984,7 @@ impl Data {
             }
             #[cfg(feature = "AiMobileTwotone")]
             AiIcon::AiMobileTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10015,7 +10001,7 @@ impl Data {
             }
             #[cfg(feature = "AiMoneyCollectFilled")]
             AiIcon::AiMoneyCollectFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10032,7 +10018,7 @@ impl Data {
             }
             #[cfg(feature = "AiMoneyCollectOutlined")]
             AiIcon::AiMoneyCollectOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10049,7 +10035,7 @@ impl Data {
             }
             #[cfg(feature = "AiMoneyCollectTwotone")]
             AiIcon::AiMoneyCollectTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10066,7 +10052,7 @@ impl Data {
             }
             #[cfg(feature = "AiMonitorOutlined")]
             AiIcon::AiMonitorOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10083,7 +10069,7 @@ impl Data {
             }
             #[cfg(feature = "AiMoreOutlined")]
             AiIcon::AiMoreOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10100,7 +10086,7 @@ impl Data {
             }
             #[cfg(feature = "AiNodeCollapseOutlined")]
             AiIcon::AiNodeCollapseOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10117,7 +10103,7 @@ impl Data {
             }
             #[cfg(feature = "AiNodeExpandOutlined")]
             AiIcon::AiNodeExpandOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10134,7 +10120,7 @@ impl Data {
             }
             #[cfg(feature = "AiNodeIndexOutlined")]
             AiIcon::AiNodeIndexOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10151,7 +10137,7 @@ impl Data {
             }
             #[cfg(feature = "AiNotificationFilled")]
             AiIcon::AiNotificationFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10168,7 +10154,7 @@ impl Data {
             }
             #[cfg(feature = "AiNotificationOutlined")]
             AiIcon::AiNotificationOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10185,7 +10171,7 @@ impl Data {
             }
             #[cfg(feature = "AiNotificationTwotone")]
             AiIcon::AiNotificationTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10202,7 +10188,7 @@ impl Data {
             }
             #[cfg(feature = "AiNumberOutlined")]
             AiIcon::AiNumberOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10219,7 +10205,7 @@ impl Data {
             }
             #[cfg(feature = "AiOneToOneOutlined")]
             AiIcon::AiOneToOneOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10236,7 +10222,7 @@ impl Data {
             }
             #[cfg(feature = "AiOrderedListOutlined")]
             AiIcon::AiOrderedListOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10253,7 +10239,7 @@ impl Data {
             }
             #[cfg(feature = "AiPaperClipOutlined")]
             AiIcon::AiPaperClipOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10270,7 +10256,7 @@ impl Data {
             }
             #[cfg(feature = "AiPartitionOutlined")]
             AiIcon::AiPartitionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10287,7 +10273,7 @@ impl Data {
             }
             #[cfg(feature = "AiPauseCircleFilled")]
             AiIcon::AiPauseCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10304,7 +10290,7 @@ impl Data {
             }
             #[cfg(feature = "AiPauseCircleOutlined")]
             AiIcon::AiPauseCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10321,7 +10307,7 @@ impl Data {
             }
             #[cfg(feature = "AiPauseCircleTwotone")]
             AiIcon::AiPauseCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10338,7 +10324,7 @@ impl Data {
             }
             #[cfg(feature = "AiPauseOutlined")]
             AiIcon::AiPauseOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10355,7 +10341,7 @@ impl Data {
             }
             #[cfg(feature = "AiPayCircleFilled")]
             AiIcon::AiPayCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10372,7 +10358,7 @@ impl Data {
             }
             #[cfg(feature = "AiPayCircleOutlined")]
             AiIcon::AiPayCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10389,7 +10375,7 @@ impl Data {
             }
             #[cfg(feature = "AiPercentageOutlined")]
             AiIcon::AiPercentageOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10406,7 +10392,7 @@ impl Data {
             }
             #[cfg(feature = "AiPhoneFilled")]
             AiIcon::AiPhoneFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10423,7 +10409,7 @@ impl Data {
             }
             #[cfg(feature = "AiPhoneOutlined")]
             AiIcon::AiPhoneOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10440,7 +10426,7 @@ impl Data {
             }
             #[cfg(feature = "AiPhoneTwotone")]
             AiIcon::AiPhoneTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10457,7 +10443,7 @@ impl Data {
             }
             #[cfg(feature = "AiPicCenterOutlined")]
             AiIcon::AiPicCenterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10474,7 +10460,7 @@ impl Data {
             }
             #[cfg(feature = "AiPicLeftOutlined")]
             AiIcon::AiPicLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10491,7 +10477,7 @@ impl Data {
             }
             #[cfg(feature = "AiPicRightOutlined")]
             AiIcon::AiPicRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10508,7 +10494,7 @@ impl Data {
             }
             #[cfg(feature = "AiPictureFilled")]
             AiIcon::AiPictureFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10525,7 +10511,7 @@ impl Data {
             }
             #[cfg(feature = "AiPictureOutlined")]
             AiIcon::AiPictureOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10542,7 +10528,7 @@ impl Data {
             }
             #[cfg(feature = "AiPictureTwotone")]
             AiIcon::AiPictureTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10559,7 +10545,7 @@ impl Data {
             }
             #[cfg(feature = "AiPieChartFilled")]
             AiIcon::AiPieChartFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10576,7 +10562,7 @@ impl Data {
             }
             #[cfg(feature = "AiPieChartOutlined")]
             AiIcon::AiPieChartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10593,7 +10579,7 @@ impl Data {
             }
             #[cfg(feature = "AiPieChartTwotone")]
             AiIcon::AiPieChartTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10610,7 +10596,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlayCircleFilled")]
             AiIcon::AiPlayCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10627,7 +10613,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlayCircleOutlined")]
             AiIcon::AiPlayCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10644,7 +10630,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlayCircleTwotone")]
             AiIcon::AiPlayCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10661,7 +10647,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlaySquareFilled")]
             AiIcon::AiPlaySquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10678,7 +10664,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlaySquareOutlined")]
             AiIcon::AiPlaySquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10695,7 +10681,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlaySquareTwotone")]
             AiIcon::AiPlaySquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10712,7 +10698,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusCircleFilled")]
             AiIcon::AiPlusCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10729,7 +10715,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusCircleOutlined")]
             AiIcon::AiPlusCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10746,7 +10732,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusCircleTwotone")]
             AiIcon::AiPlusCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10763,7 +10749,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusOutlined")]
             AiIcon::AiPlusOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some(""),
                     x: None,
                     y: None,
@@ -10780,7 +10766,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusSquareFilled")]
             AiIcon::AiPlusSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10797,7 +10783,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusSquareOutlined")]
             AiIcon::AiPlusSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10814,7 +10800,7 @@ impl Data {
             }
             #[cfg(feature = "AiPlusSquareTwotone")]
             AiIcon::AiPlusSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10831,7 +10817,7 @@ impl Data {
             }
             #[cfg(feature = "AiPoundCircleFilled")]
             AiIcon::AiPoundCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10848,7 +10834,7 @@ impl Data {
             }
             #[cfg(feature = "AiPoundCircleOutlined")]
             AiIcon::AiPoundCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10865,7 +10851,7 @@ impl Data {
             }
             #[cfg(feature = "AiPoundCircleTwotone")]
             AiIcon::AiPoundCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10882,7 +10868,7 @@ impl Data {
             }
             #[cfg(feature = "AiPoundOutlined")]
             AiIcon::AiPoundOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10899,7 +10885,7 @@ impl Data {
             }
             #[cfg(feature = "AiPoweroffOutlined")]
             AiIcon::AiPoweroffOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10916,7 +10902,7 @@ impl Data {
             }
             #[cfg(feature = "AiPrinterFilled")]
             AiIcon::AiPrinterFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10933,7 +10919,7 @@ impl Data {
             }
             #[cfg(feature = "AiPrinterOutlined")]
             AiIcon::AiPrinterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10950,7 +10936,7 @@ impl Data {
             }
             #[cfg(feature = "AiPrinterTwotone")]
             AiIcon::AiPrinterTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10967,7 +10953,7 @@ impl Data {
             }
             #[cfg(feature = "AiProfileFilled")]
             AiIcon::AiProfileFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10984,7 +10970,7 @@ impl Data {
             }
             #[cfg(feature = "AiProfileOutlined")]
             AiIcon::AiProfileOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11001,7 +10987,7 @@ impl Data {
             }
             #[cfg(feature = "AiProfileTwotone")]
             AiIcon::AiProfileTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11018,7 +11004,7 @@ impl Data {
             }
             #[cfg(feature = "AiProjectFilled")]
             AiIcon::AiProjectFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11035,7 +11021,7 @@ impl Data {
             }
             #[cfg(feature = "AiProjectOutlined")]
             AiIcon::AiProjectOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11052,7 +11038,7 @@ impl Data {
             }
             #[cfg(feature = "AiProjectTwotone")]
             AiIcon::AiProjectTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11069,7 +11055,7 @@ impl Data {
             }
             #[cfg(feature = "AiPropertySafetyFilled")]
             AiIcon::AiPropertySafetyFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11086,7 +11072,7 @@ impl Data {
             }
             #[cfg(feature = "AiPropertySafetyOutlined")]
             AiIcon::AiPropertySafetyOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11103,7 +11089,7 @@ impl Data {
             }
             #[cfg(feature = "AiPropertySafetyTwotone")]
             AiIcon::AiPropertySafetyTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11120,7 +11106,7 @@ impl Data {
             }
             #[cfg(feature = "AiPullRequestOutlined")]
             AiIcon::AiPullRequestOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11137,7 +11123,7 @@ impl Data {
             }
             #[cfg(feature = "AiPushpinFilled")]
             AiIcon::AiPushpinFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11154,7 +11140,7 @@ impl Data {
             }
             #[cfg(feature = "AiPushpinOutlined")]
             AiIcon::AiPushpinOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11171,7 +11157,7 @@ impl Data {
             }
             #[cfg(feature = "AiPushpinTwotone")]
             AiIcon::AiPushpinTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11188,7 +11174,7 @@ impl Data {
             }
             #[cfg(feature = "AiQqCircleFilled")]
             AiIcon::AiQqCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11205,7 +11191,7 @@ impl Data {
             }
             #[cfg(feature = "AiQqOutlined")]
             AiIcon::AiQqOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11222,7 +11208,7 @@ impl Data {
             }
             #[cfg(feature = "AiQqSquareFilled")]
             AiIcon::AiQqSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11239,7 +11225,7 @@ impl Data {
             }
             #[cfg(feature = "AiQrcodeOutlined")]
             AiIcon::AiQrcodeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11256,7 +11242,7 @@ impl Data {
             }
             #[cfg(feature = "AiQuestionCircleFilled")]
             AiIcon::AiQuestionCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11273,7 +11259,7 @@ impl Data {
             }
             #[cfg(feature = "AiQuestionCircleOutlined")]
             AiIcon::AiQuestionCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11290,7 +11276,7 @@ impl Data {
             }
             #[cfg(feature = "AiQuestionCircleTwotone")]
             AiIcon::AiQuestionCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11307,7 +11293,7 @@ impl Data {
             }
             #[cfg(feature = "AiQuestionOutlined")]
             AiIcon::AiQuestionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11324,7 +11310,7 @@ impl Data {
             }
             #[cfg(feature = "AiRadarChartOutlined")]
             AiIcon::AiRadarChartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11341,7 +11327,7 @@ impl Data {
             }
             #[cfg(feature = "AiRadiusBottomleftOutlined")]
             AiIcon::AiRadiusBottomleftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11358,7 +11344,7 @@ impl Data {
             }
             #[cfg(feature = "AiRadiusBottomrightOutlined")]
             AiIcon::AiRadiusBottomrightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11375,7 +11361,7 @@ impl Data {
             }
             #[cfg(feature = "AiRadiusSettingOutlined")]
             AiIcon::AiRadiusSettingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11392,7 +11378,7 @@ impl Data {
             }
             #[cfg(feature = "AiRadiusUpleftOutlined")]
             AiIcon::AiRadiusUpleftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11409,7 +11395,7 @@ impl Data {
             }
             #[cfg(feature = "AiRadiusUprightOutlined")]
             AiIcon::AiRadiusUprightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11426,7 +11412,7 @@ impl Data {
             }
             #[cfg(feature = "AiReadFilled")]
             AiIcon::AiReadFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11443,7 +11429,7 @@ impl Data {
             }
             #[cfg(feature = "AiReadOutlined")]
             AiIcon::AiReadOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11460,7 +11446,7 @@ impl Data {
             }
             #[cfg(feature = "AiReconciliationFilled")]
             AiIcon::AiReconciliationFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11477,7 +11463,7 @@ impl Data {
             }
             #[cfg(feature = "AiReconciliationOutlined")]
             AiIcon::AiReconciliationOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11494,7 +11480,7 @@ impl Data {
             }
             #[cfg(feature = "AiReconciliationTwotone")]
             AiIcon::AiReconciliationTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11511,7 +11497,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedEnvelopeFilled")]
             AiIcon::AiRedEnvelopeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11528,7 +11514,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedEnvelopeOutlined")]
             AiIcon::AiRedEnvelopeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11545,7 +11531,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedEnvelopeTwotone")]
             AiIcon::AiRedEnvelopeTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11562,7 +11548,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedditCircleFilled")]
             AiIcon::AiRedditCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11579,7 +11565,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedditOutlined")]
             AiIcon::AiRedditOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11596,7 +11582,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedditSquareFilled")]
             AiIcon::AiRedditSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11613,7 +11599,7 @@ impl Data {
             }
             #[cfg(feature = "AiRedoOutlined")]
             AiIcon::AiRedoOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11630,7 +11616,7 @@ impl Data {
             }
             #[cfg(feature = "AiReloadOutlined")]
             AiIcon::AiReloadOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11647,7 +11633,7 @@ impl Data {
             }
             #[cfg(feature = "AiRestFilled")]
             AiIcon::AiRestFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11664,7 +11650,7 @@ impl Data {
             }
             #[cfg(feature = "AiRestOutlined")]
             AiIcon::AiRestOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11681,7 +11667,7 @@ impl Data {
             }
             #[cfg(feature = "AiRestTwotone")]
             AiIcon::AiRestTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11698,7 +11684,7 @@ impl Data {
             }
             #[cfg(feature = "AiRetweetOutlined")]
             AiIcon::AiRetweetOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11715,7 +11701,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightCircleFilled")]
             AiIcon::AiRightCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11732,7 +11718,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightCircleOutlined")]
             AiIcon::AiRightCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11749,7 +11735,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightCircleTwotone")]
             AiIcon::AiRightCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11766,7 +11752,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightOutlined")]
             AiIcon::AiRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11783,7 +11769,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightSquareFilled")]
             AiIcon::AiRightSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11800,7 +11786,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightSquareOutlined")]
             AiIcon::AiRightSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11817,7 +11803,7 @@ impl Data {
             }
             #[cfg(feature = "AiRightSquareTwotone")]
             AiIcon::AiRightSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11834,7 +11820,7 @@ impl Data {
             }
             #[cfg(feature = "AiRiseOutlined")]
             AiIcon::AiRiseOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11851,7 +11837,7 @@ impl Data {
             }
             #[cfg(feature = "AiRobotFilled")]
             AiIcon::AiRobotFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11868,7 +11854,7 @@ impl Data {
             }
             #[cfg(feature = "AiRobotOutlined")]
             AiIcon::AiRobotOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11885,7 +11871,7 @@ impl Data {
             }
             #[cfg(feature = "AiRocketFilled")]
             AiIcon::AiRocketFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11902,7 +11888,7 @@ impl Data {
             }
             #[cfg(feature = "AiRocketOutlined")]
             AiIcon::AiRocketOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11919,7 +11905,7 @@ impl Data {
             }
             #[cfg(feature = "AiRocketTwotone")]
             AiIcon::AiRocketTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11936,7 +11922,7 @@ impl Data {
             }
             #[cfg(feature = "AiRollbackOutlined")]
             AiIcon::AiRollbackOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11953,7 +11939,7 @@ impl Data {
             }
             #[cfg(feature = "AiRotateLeftOutlined")]
             AiIcon::AiRotateLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11970,7 +11956,7 @@ impl Data {
             }
             #[cfg(feature = "AiRotateRightOutlined")]
             AiIcon::AiRotateRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11987,7 +11973,7 @@ impl Data {
             }
             #[cfg(feature = "AiSafetyCertificateFilled")]
             AiIcon::AiSafetyCertificateFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12004,7 +11990,7 @@ impl Data {
             }
             #[cfg(feature = "AiSafetyCertificateOutlined")]
             AiIcon::AiSafetyCertificateOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12021,7 +12007,7 @@ impl Data {
             }
             #[cfg(feature = "AiSafetyCertificateTwotone")]
             AiIcon::AiSafetyCertificateTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12038,7 +12024,7 @@ impl Data {
             }
             #[cfg(feature = "AiSafetyOutlined")]
             AiIcon::AiSafetyOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12055,7 +12041,7 @@ impl Data {
             }
             #[cfg(feature = "AiSaveFilled")]
             AiIcon::AiSaveFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12072,7 +12058,7 @@ impl Data {
             }
             #[cfg(feature = "AiSaveOutlined")]
             AiIcon::AiSaveOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12089,7 +12075,7 @@ impl Data {
             }
             #[cfg(feature = "AiSaveTwotone")]
             AiIcon::AiSaveTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12106,7 +12092,7 @@ impl Data {
             }
             #[cfg(feature = "AiScanOutlined")]
             AiIcon::AiScanOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12123,7 +12109,7 @@ impl Data {
             }
             #[cfg(feature = "AiScheduleFilled")]
             AiIcon::AiScheduleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12140,7 +12126,7 @@ impl Data {
             }
             #[cfg(feature = "AiScheduleOutlined")]
             AiIcon::AiScheduleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12157,7 +12143,7 @@ impl Data {
             }
             #[cfg(feature = "AiScheduleTwotone")]
             AiIcon::AiScheduleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12174,7 +12160,7 @@ impl Data {
             }
             #[cfg(feature = "AiScissorOutlined")]
             AiIcon::AiScissorOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12191,7 +12177,7 @@ impl Data {
             }
             #[cfg(feature = "AiSearchOutlined")]
             AiIcon::AiSearchOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12208,7 +12194,7 @@ impl Data {
             }
             #[cfg(feature = "AiSecurityScanFilled")]
             AiIcon::AiSecurityScanFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12225,7 +12211,7 @@ impl Data {
             }
             #[cfg(feature = "AiSecurityScanOutlined")]
             AiIcon::AiSecurityScanOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12242,7 +12228,7 @@ impl Data {
             }
             #[cfg(feature = "AiSecurityScanTwotone")]
             AiIcon::AiSecurityScanTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12259,7 +12245,7 @@ impl Data {
             }
             #[cfg(feature = "AiSelectOutlined")]
             AiIcon::AiSelectOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12276,7 +12262,7 @@ impl Data {
             }
             #[cfg(feature = "AiSendOutlined")]
             AiIcon::AiSendOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12293,7 +12279,7 @@ impl Data {
             }
             #[cfg(feature = "AiSettingFilled")]
             AiIcon::AiSettingFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12310,7 +12296,7 @@ impl Data {
             }
             #[cfg(feature = "AiSettingOutlined")]
             AiIcon::AiSettingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12327,7 +12313,7 @@ impl Data {
             }
             #[cfg(feature = "AiSettingTwotone")]
             AiIcon::AiSettingTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12344,7 +12330,7 @@ impl Data {
             }
             #[cfg(feature = "AiShakeOutlined")]
             AiIcon::AiShakeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12361,7 +12347,7 @@ impl Data {
             }
             #[cfg(feature = "AiShareAltOutlined")]
             AiIcon::AiShareAltOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12378,7 +12364,7 @@ impl Data {
             }
             #[cfg(feature = "AiShopFilled")]
             AiIcon::AiShopFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12395,7 +12381,7 @@ impl Data {
             }
             #[cfg(feature = "AiShopOutlined")]
             AiIcon::AiShopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12412,7 +12398,7 @@ impl Data {
             }
             #[cfg(feature = "AiShopTwotone")]
             AiIcon::AiShopTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12429,7 +12415,7 @@ impl Data {
             }
             #[cfg(feature = "AiShoppingCartOutlined")]
             AiIcon::AiShoppingCartOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12446,7 +12432,7 @@ impl Data {
             }
             #[cfg(feature = "AiShoppingFilled")]
             AiIcon::AiShoppingFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12463,7 +12449,7 @@ impl Data {
             }
             #[cfg(feature = "AiShoppingOutlined")]
             AiIcon::AiShoppingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12480,7 +12466,7 @@ impl Data {
             }
             #[cfg(feature = "AiShoppingTwotone")]
             AiIcon::AiShoppingTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12497,7 +12483,7 @@ impl Data {
             }
             #[cfg(feature = "AiShrinkOutlined")]
             AiIcon::AiShrinkOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12514,7 +12500,7 @@ impl Data {
             }
             #[cfg(feature = "AiSignalFilled")]
             AiIcon::AiSignalFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12531,7 +12517,7 @@ impl Data {
             }
             #[cfg(feature = "AiSisternodeOutlined")]
             AiIcon::AiSisternodeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12548,7 +12534,7 @@ impl Data {
             }
             #[cfg(feature = "AiSketchCircleFilled")]
             AiIcon::AiSketchCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12565,7 +12551,7 @@ impl Data {
             }
             #[cfg(feature = "AiSketchOutlined")]
             AiIcon::AiSketchOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12582,7 +12568,7 @@ impl Data {
             }
             #[cfg(feature = "AiSketchSquareFilled")]
             AiIcon::AiSketchSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12599,7 +12585,7 @@ impl Data {
             }
             #[cfg(feature = "AiSkinFilled")]
             AiIcon::AiSkinFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12616,7 +12602,7 @@ impl Data {
             }
             #[cfg(feature = "AiSkinOutlined")]
             AiIcon::AiSkinOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12633,7 +12619,7 @@ impl Data {
             }
             #[cfg(feature = "AiSkinTwotone")]
             AiIcon::AiSkinTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12650,7 +12636,7 @@ impl Data {
             }
             #[cfg(feature = "AiSkypeFilled")]
             AiIcon::AiSkypeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12667,7 +12653,7 @@ impl Data {
             }
             #[cfg(feature = "AiSkypeOutlined")]
             AiIcon::AiSkypeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12684,7 +12670,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlackCircleFilled")]
             AiIcon::AiSlackCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12701,7 +12687,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlackOutlined")]
             AiIcon::AiSlackOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12718,7 +12704,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlackSquareFilled")]
             AiIcon::AiSlackSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12735,7 +12721,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlackSquareOutlined")]
             AiIcon::AiSlackSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12752,7 +12738,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlidersFilled")]
             AiIcon::AiSlidersFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12769,7 +12755,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlidersOutlined")]
             AiIcon::AiSlidersOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12786,7 +12772,7 @@ impl Data {
             }
             #[cfg(feature = "AiSlidersTwotone")]
             AiIcon::AiSlidersTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12803,7 +12789,7 @@ impl Data {
             }
             #[cfg(feature = "AiSmallDashOutlined")]
             AiIcon::AiSmallDashOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12820,7 +12806,7 @@ impl Data {
             }
             #[cfg(feature = "AiSmileFilled")]
             AiIcon::AiSmileFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12837,7 +12823,7 @@ impl Data {
             }
             #[cfg(feature = "AiSmileOutlined")]
             AiIcon::AiSmileOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12854,7 +12840,7 @@ impl Data {
             }
             #[cfg(feature = "AiSmileTwotone")]
             AiIcon::AiSmileTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12871,7 +12857,7 @@ impl Data {
             }
             #[cfg(feature = "AiSnippetsFilled")]
             AiIcon::AiSnippetsFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12888,7 +12874,7 @@ impl Data {
             }
             #[cfg(feature = "AiSnippetsOutlined")]
             AiIcon::AiSnippetsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12905,7 +12891,7 @@ impl Data {
             }
             #[cfg(feature = "AiSnippetsTwotone")]
             AiIcon::AiSnippetsTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12922,7 +12908,7 @@ impl Data {
             }
             #[cfg(feature = "AiSolutionOutlined")]
             AiIcon::AiSolutionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12939,7 +12925,7 @@ impl Data {
             }
             #[cfg(feature = "AiSortAscendingOutlined")]
             AiIcon::AiSortAscendingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12956,7 +12942,7 @@ impl Data {
             }
             #[cfg(feature = "AiSortDescendingOutlined")]
             AiIcon::AiSortDescendingOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12973,7 +12959,7 @@ impl Data {
             }
             #[cfg(feature = "AiSoundFilled")]
             AiIcon::AiSoundFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12990,7 +12976,7 @@ impl Data {
             }
             #[cfg(feature = "AiSoundOutlined")]
             AiIcon::AiSoundOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13007,7 +12993,7 @@ impl Data {
             }
             #[cfg(feature = "AiSoundTwotone")]
             AiIcon::AiSoundTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13024,7 +13010,7 @@ impl Data {
             }
             #[cfg(feature = "AiSplitCellsOutlined")]
             AiIcon::AiSplitCellsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13041,7 +13027,7 @@ impl Data {
             }
             #[cfg(feature = "AiStarFilled")]
             AiIcon::AiStarFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13058,7 +13044,7 @@ impl Data {
             }
             #[cfg(feature = "AiStarOutlined")]
             AiIcon::AiStarOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13075,7 +13061,7 @@ impl Data {
             }
             #[cfg(feature = "AiStarTwotone")]
             AiIcon::AiStarTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13092,7 +13078,7 @@ impl Data {
             }
             #[cfg(feature = "AiStepBackwardFilled")]
             AiIcon::AiStepBackwardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13109,7 +13095,7 @@ impl Data {
             }
             #[cfg(feature = "AiStepBackwardOutlined")]
             AiIcon::AiStepBackwardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13126,7 +13112,7 @@ impl Data {
             }
             #[cfg(feature = "AiStepForwardFilled")]
             AiIcon::AiStepForwardFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13143,7 +13129,7 @@ impl Data {
             }
             #[cfg(feature = "AiStepForwardOutlined")]
             AiIcon::AiStepForwardOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13160,7 +13146,7 @@ impl Data {
             }
             #[cfg(feature = "AiStockOutlined")]
             AiIcon::AiStockOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13177,7 +13163,7 @@ impl Data {
             }
             #[cfg(feature = "AiStopFilled")]
             AiIcon::AiStopFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13194,7 +13180,7 @@ impl Data {
             }
             #[cfg(feature = "AiStopOutlined")]
             AiIcon::AiStopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13211,7 +13197,7 @@ impl Data {
             }
             #[cfg(feature = "AiStopTwotone")]
             AiIcon::AiStopTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13228,7 +13214,7 @@ impl Data {
             }
             #[cfg(feature = "AiStrikethroughOutlined")]
             AiIcon::AiStrikethroughOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13245,7 +13231,7 @@ impl Data {
             }
             #[cfg(feature = "AiSubnodeOutlined")]
             AiIcon::AiSubnodeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13262,7 +13248,7 @@ impl Data {
             }
             #[cfg(feature = "AiSwapLeftOutlined")]
             AiIcon::AiSwapLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13279,7 +13265,7 @@ impl Data {
             }
             #[cfg(feature = "AiSwapOutlined")]
             AiIcon::AiSwapOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13296,7 +13282,7 @@ impl Data {
             }
             #[cfg(feature = "AiSwapRightOutlined")]
             AiIcon::AiSwapRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13313,7 +13299,7 @@ impl Data {
             }
             #[cfg(feature = "AiSwitcherFilled")]
             AiIcon::AiSwitcherFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13330,7 +13316,7 @@ impl Data {
             }
             #[cfg(feature = "AiSwitcherOutlined")]
             AiIcon::AiSwitcherOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13347,7 +13333,7 @@ impl Data {
             }
             #[cfg(feature = "AiSwitcherTwotone")]
             AiIcon::AiSwitcherTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13364,7 +13350,7 @@ impl Data {
             }
             #[cfg(feature = "AiSyncOutlined")]
             AiIcon::AiSyncOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13381,7 +13367,7 @@ impl Data {
             }
             #[cfg(feature = "AiTableOutlined")]
             AiIcon::AiTableOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13398,7 +13384,7 @@ impl Data {
             }
             #[cfg(feature = "AiTabletFilled")]
             AiIcon::AiTabletFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13415,7 +13401,7 @@ impl Data {
             }
             #[cfg(feature = "AiTabletOutlined")]
             AiIcon::AiTabletOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13432,7 +13418,7 @@ impl Data {
             }
             #[cfg(feature = "AiTabletTwotone")]
             AiIcon::AiTabletTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13449,7 +13435,7 @@ impl Data {
             }
             #[cfg(feature = "AiTagFilled")]
             AiIcon::AiTagFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13466,7 +13452,7 @@ impl Data {
             }
             #[cfg(feature = "AiTagOutlined")]
             AiIcon::AiTagOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13483,7 +13469,7 @@ impl Data {
             }
             #[cfg(feature = "AiTagTwotone")]
             AiIcon::AiTagTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13500,7 +13486,7 @@ impl Data {
             }
             #[cfg(feature = "AiTagsFilled")]
             AiIcon::AiTagsFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13517,7 +13503,7 @@ impl Data {
             }
             #[cfg(feature = "AiTagsOutlined")]
             AiIcon::AiTagsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13534,7 +13520,7 @@ impl Data {
             }
             #[cfg(feature = "AiTagsTwotone")]
             AiIcon::AiTagsTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13551,7 +13537,7 @@ impl Data {
             }
             #[cfg(feature = "AiTaobaoCircleFilled")]
             AiIcon::AiTaobaoCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13568,7 +13554,7 @@ impl Data {
             }
             #[cfg(feature = "AiTaobaoCircleOutlined")]
             AiIcon::AiTaobaoCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13585,7 +13571,7 @@ impl Data {
             }
             #[cfg(feature = "AiTaobaoOutlined")]
             AiIcon::AiTaobaoOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13602,7 +13588,7 @@ impl Data {
             }
             #[cfg(feature = "AiTaobaoSquareFilled")]
             AiIcon::AiTaobaoSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13619,7 +13605,7 @@ impl Data {
             }
             #[cfg(feature = "AiTeamOutlined")]
             AiIcon::AiTeamOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13636,7 +13622,7 @@ impl Data {
             }
             #[cfg(feature = "AiThunderboltFilled")]
             AiIcon::AiThunderboltFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13653,7 +13639,7 @@ impl Data {
             }
             #[cfg(feature = "AiThunderboltOutlined")]
             AiIcon::AiThunderboltOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13670,7 +13656,7 @@ impl Data {
             }
             #[cfg(feature = "AiThunderboltTwotone")]
             AiIcon::AiThunderboltTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13687,7 +13673,7 @@ impl Data {
             }
             #[cfg(feature = "AiToTopOutlined")]
             AiIcon::AiToTopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13704,7 +13690,7 @@ impl Data {
             }
             #[cfg(feature = "AiToolFilled")]
             AiIcon::AiToolFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13721,7 +13707,7 @@ impl Data {
             }
             #[cfg(feature = "AiToolOutlined")]
             AiIcon::AiToolOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13738,7 +13724,7 @@ impl Data {
             }
             #[cfg(feature = "AiToolTwotone")]
             AiIcon::AiToolTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13755,7 +13741,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrademarkCircleFilled")]
             AiIcon::AiTrademarkCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13772,7 +13758,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrademarkCircleOutlined")]
             AiIcon::AiTrademarkCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13789,7 +13775,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrademarkCircleTwotone")]
             AiIcon::AiTrademarkCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13806,7 +13792,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrademarkOutlined")]
             AiIcon::AiTrademarkOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13823,7 +13809,7 @@ impl Data {
             }
             #[cfg(feature = "AiTransactionOutlined")]
             AiIcon::AiTransactionOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13840,7 +13826,7 @@ impl Data {
             }
             #[cfg(feature = "AiTranslationOutlined")]
             AiIcon::AiTranslationOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13857,7 +13843,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrophyFilled")]
             AiIcon::AiTrophyFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13874,7 +13860,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrophyOutlined")]
             AiIcon::AiTrophyOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13891,7 +13877,7 @@ impl Data {
             }
             #[cfg(feature = "AiTrophyTwotone")]
             AiIcon::AiTrophyTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13908,7 +13894,7 @@ impl Data {
             }
             #[cfg(feature = "AiTwitterCircleFilled")]
             AiIcon::AiTwitterCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13925,7 +13911,7 @@ impl Data {
             }
             #[cfg(feature = "AiTwitterOutlined")]
             AiIcon::AiTwitterOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13942,7 +13928,7 @@ impl Data {
             }
             #[cfg(feature = "AiTwitterSquareFilled")]
             AiIcon::AiTwitterSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13959,7 +13945,7 @@ impl Data {
             }
             #[cfg(feature = "AiUnderlineOutlined")]
             AiIcon::AiUnderlineOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13976,7 +13962,7 @@ impl Data {
             }
             #[cfg(feature = "AiUndoOutlined")]
             AiIcon::AiUndoOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13993,7 +13979,7 @@ impl Data {
             }
             #[cfg(feature = "AiUngroupOutlined")]
             AiIcon::AiUngroupOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14010,7 +13996,7 @@ impl Data {
             }
             #[cfg(feature = "AiUnlockFilled")]
             AiIcon::AiUnlockFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14027,7 +14013,7 @@ impl Data {
             }
             #[cfg(feature = "AiUnlockOutlined")]
             AiIcon::AiUnlockOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14044,7 +14030,7 @@ impl Data {
             }
             #[cfg(feature = "AiUnlockTwotone")]
             AiIcon::AiUnlockTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14061,7 +14047,7 @@ impl Data {
             }
             #[cfg(feature = "AiUnorderedListOutlined")]
             AiIcon::AiUnorderedListOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14078,7 +14064,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpCircleFilled")]
             AiIcon::AiUpCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14095,7 +14081,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpCircleOutlined")]
             AiIcon::AiUpCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14112,7 +14098,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpCircleTwotone")]
             AiIcon::AiUpCircleTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14129,7 +14115,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpOutlined")]
             AiIcon::AiUpOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14146,7 +14132,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpSquareFilled")]
             AiIcon::AiUpSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14163,7 +14149,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpSquareOutlined")]
             AiIcon::AiUpSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14180,7 +14166,7 @@ impl Data {
             }
             #[cfg(feature = "AiUpSquareTwotone")]
             AiIcon::AiUpSquareTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14197,7 +14183,7 @@ impl Data {
             }
             #[cfg(feature = "AiUploadOutlined")]
             AiIcon::AiUploadOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14214,7 +14200,7 @@ impl Data {
             }
             #[cfg(feature = "AiUsbFilled")]
             AiIcon::AiUsbFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14231,7 +14217,7 @@ impl Data {
             }
             #[cfg(feature = "AiUsbOutlined")]
             AiIcon::AiUsbOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14248,7 +14234,7 @@ impl Data {
             }
             #[cfg(feature = "AiUsbTwotone")]
             AiIcon::AiUsbTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14265,7 +14251,7 @@ impl Data {
             }
             #[cfg(feature = "AiUserAddOutlined")]
             AiIcon::AiUserAddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14282,7 +14268,7 @@ impl Data {
             }
             #[cfg(feature = "AiUserDeleteOutlined")]
             AiIcon::AiUserDeleteOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14299,7 +14285,7 @@ impl Data {
             }
             #[cfg(feature = "AiUserOutlined")]
             AiIcon::AiUserOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14316,7 +14302,7 @@ impl Data {
             }
             #[cfg(feature = "AiUserSwitchOutlined")]
             AiIcon::AiUserSwitchOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14333,7 +14319,7 @@ impl Data {
             }
             #[cfg(feature = "AiUsergroupAddOutlined")]
             AiIcon::AiUsergroupAddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14350,7 +14336,7 @@ impl Data {
             }
             #[cfg(feature = "AiUsergroupDeleteOutlined")]
             AiIcon::AiUsergroupDeleteOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14367,7 +14353,7 @@ impl Data {
             }
             #[cfg(feature = "AiVerifiedOutlined")]
             AiIcon::AiVerifiedOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14384,7 +14370,7 @@ impl Data {
             }
             #[cfg(feature = "AiVerticalAlignBottomOutlined")]
             AiIcon::AiVerticalAlignBottomOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14401,7 +14387,7 @@ impl Data {
             }
             #[cfg(feature = "AiVerticalAlignMiddleOutlined")]
             AiIcon::AiVerticalAlignMiddleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14418,7 +14404,7 @@ impl Data {
             }
             #[cfg(feature = "AiVerticalAlignTopOutlined")]
             AiIcon::AiVerticalAlignTopOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14435,7 +14421,7 @@ impl Data {
             }
             #[cfg(feature = "AiVerticalLeftOutlined")]
             AiIcon::AiVerticalLeftOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14452,7 +14438,7 @@ impl Data {
             }
             #[cfg(feature = "AiVerticalRightOutlined")]
             AiIcon::AiVerticalRightOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14469,7 +14455,7 @@ impl Data {
             }
             #[cfg(feature = "AiVideoCameraAddOutlined")]
             AiIcon::AiVideoCameraAddOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14486,7 +14472,7 @@ impl Data {
             }
             #[cfg(feature = "AiVideoCameraFilled")]
             AiIcon::AiVideoCameraFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14503,7 +14489,7 @@ impl Data {
             }
             #[cfg(feature = "AiVideoCameraOutlined")]
             AiIcon::AiVideoCameraOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14520,7 +14506,7 @@ impl Data {
             }
             #[cfg(feature = "AiVideoCameraTwotone")]
             AiIcon::AiVideoCameraTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14537,7 +14523,7 @@ impl Data {
             }
             #[cfg(feature = "AiWalletFilled")]
             AiIcon::AiWalletFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14554,7 +14540,7 @@ impl Data {
             }
             #[cfg(feature = "AiWalletOutlined")]
             AiIcon::AiWalletOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14571,7 +14557,7 @@ impl Data {
             }
             #[cfg(feature = "AiWalletTwotone")]
             AiIcon::AiWalletTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14588,7 +14574,7 @@ impl Data {
             }
             #[cfg(feature = "AiWarningFilled")]
             AiIcon::AiWarningFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14605,7 +14591,7 @@ impl Data {
             }
             #[cfg(feature = "AiWarningOutlined")]
             AiIcon::AiWarningOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14622,7 +14608,7 @@ impl Data {
             }
             #[cfg(feature = "AiWarningTwotone")]
             AiIcon::AiWarningTwotone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14639,7 +14625,7 @@ impl Data {
             }
             #[cfg(feature = "AiWechatFilled")]
             AiIcon::AiWechatFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14656,7 +14642,7 @@ impl Data {
             }
             #[cfg(feature = "AiWechatOutlined")]
             AiIcon::AiWechatOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14673,7 +14659,7 @@ impl Data {
             }
             #[cfg(feature = "AiWeiboCircleFilled")]
             AiIcon::AiWeiboCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14690,7 +14676,7 @@ impl Data {
             }
             #[cfg(feature = "AiWeiboCircleOutlined")]
             AiIcon::AiWeiboCircleOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14707,7 +14693,7 @@ impl Data {
             }
             #[cfg(feature = "AiWeiboOutlined")]
             AiIcon::AiWeiboOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14724,7 +14710,7 @@ impl Data {
             }
             #[cfg(feature = "AiWeiboSquareFilled")]
             AiIcon::AiWeiboSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14741,7 +14727,7 @@ impl Data {
             }
             #[cfg(feature = "AiWeiboSquareOutlined")]
             AiIcon::AiWeiboSquareOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14758,7 +14744,7 @@ impl Data {
             }
             #[cfg(feature = "AiWhatsAppOutlined")]
             AiIcon::AiWhatsAppOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14775,7 +14761,7 @@ impl Data {
             }
             #[cfg(feature = "AiWifiOutlined")]
             AiIcon::AiWifiOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14792,7 +14778,7 @@ impl Data {
             }
             #[cfg(feature = "AiWindowsFilled")]
             AiIcon::AiWindowsFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14809,7 +14795,7 @@ impl Data {
             }
             #[cfg(feature = "AiWindowsOutlined")]
             AiIcon::AiWindowsOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14826,7 +14812,7 @@ impl Data {
             }
             #[cfg(feature = "AiWomanOutlined")]
             AiIcon::AiWomanOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14843,7 +14829,7 @@ impl Data {
             }
             #[cfg(feature = "AiYahooFilled")]
             AiIcon::AiYahooFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14860,7 +14846,7 @@ impl Data {
             }
             #[cfg(feature = "AiYahooOutlined")]
             AiIcon::AiYahooOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14877,7 +14863,7 @@ impl Data {
             }
             #[cfg(feature = "AiYoutubeFilled")]
             AiIcon::AiYoutubeFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14894,7 +14880,7 @@ impl Data {
             }
             #[cfg(feature = "AiYoutubeOutlined")]
             AiIcon::AiYoutubeOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14911,7 +14897,7 @@ impl Data {
             }
             #[cfg(feature = "AiYuqueFilled")]
             AiIcon::AiYuqueFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14928,7 +14914,7 @@ impl Data {
             }
             #[cfg(feature = "AiYuqueOutlined")]
             AiIcon::AiYuqueOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14945,7 +14931,7 @@ impl Data {
             }
             #[cfg(feature = "AiZhihuCircleFilled")]
             AiIcon::AiZhihuCircleFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14962,7 +14948,7 @@ impl Data {
             }
             #[cfg(feature = "AiZhihuOutlined")]
             AiIcon::AiZhihuOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14979,7 +14965,7 @@ impl Data {
             }
             #[cfg(feature = "AiZhihuSquareFilled")]
             AiIcon::AiZhihuSquareFilled => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14996,7 +14982,7 @@ impl Data {
             }
             #[cfg(feature = "AiZoomInOutlined")]
             AiIcon::AiZoomInOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15013,7 +14999,7 @@ impl Data {
             }
             #[cfg(feature = "AiZoomOutOutlined")]
             AiIcon::AiZoomOutOutlined => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15030,62 +15016,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosAiIcon(
-    cx: leptos::Scope,
-    icon: AiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

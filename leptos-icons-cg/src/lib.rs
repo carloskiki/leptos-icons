@@ -1428,26 +1428,12 @@ pub enum CgIcon {
     CgZoomOut,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: CgIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for CgIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "CgAbstract")]
             CgIcon::CgAbstract => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1464,7 +1450,7 @@ impl Data {
             }
             #[cfg(feature = "CgAdd")]
             CgIcon::CgAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1481,7 +1467,7 @@ impl Data {
             }
             #[cfg(feature = "CgAddR")]
             CgIcon::CgAddR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1498,7 +1484,7 @@ impl Data {
             }
             #[cfg(feature = "CgAdidas")]
             CgIcon::CgAdidas => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1515,7 +1501,7 @@ impl Data {
             }
             #[cfg(feature = "CgAirplane")]
             CgIcon::CgAirplane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1532,7 +1518,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlarm")]
             CgIcon::CgAlarm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1549,7 +1535,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlbum")]
             CgIcon::CgAlbum => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1566,7 +1552,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlignBottom")]
             CgIcon::CgAlignBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1583,7 +1569,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlignCenter")]
             CgIcon::CgAlignCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1600,7 +1586,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlignLeft")]
             CgIcon::CgAlignLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1617,7 +1603,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlignMiddle")]
             CgIcon::CgAlignMiddle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1634,7 +1620,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlignRight")]
             CgIcon::CgAlignRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1651,7 +1637,7 @@ impl Data {
             }
             #[cfg(feature = "CgAlignTop")]
             CgIcon::CgAlignTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1668,7 +1654,7 @@ impl Data {
             }
             #[cfg(feature = "CgAnchor")]
             CgIcon::CgAnchor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1685,7 +1671,7 @@ impl Data {
             }
             #[cfg(feature = "CgAppleWatch")]
             CgIcon::CgAppleWatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1702,7 +1688,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrangeBack")]
             CgIcon::CgArrangeBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1719,7 +1705,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrangeFront")]
             CgIcon::CgArrangeFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1736,7 +1722,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowAlignH")]
             CgIcon::CgArrowAlignH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1753,7 +1739,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowAlignV")]
             CgIcon::CgArrowAlignV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1770,7 +1756,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowBottomLeft")]
             CgIcon::CgArrowBottomLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1787,7 +1773,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowBottomLeftO")]
             CgIcon::CgArrowBottomLeftO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1804,7 +1790,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowBottomLeftR")]
             CgIcon::CgArrowBottomLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1821,7 +1807,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowBottomRight")]
             CgIcon::CgArrowBottomRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1838,7 +1824,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowBottomRightO")]
             CgIcon::CgArrowBottomRightO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1855,7 +1841,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowBottomRightR")]
             CgIcon::CgArrowBottomRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1872,7 +1858,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowDown")]
             CgIcon::CgArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1889,7 +1875,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowDownO")]
             CgIcon::CgArrowDownO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1906,7 +1892,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowDownR")]
             CgIcon::CgArrowDownR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1923,7 +1909,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLeft")]
             CgIcon::CgArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1940,7 +1926,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLeftO")]
             CgIcon::CgArrowLeftO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1957,7 +1943,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLeftR")]
             CgIcon::CgArrowLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1974,7 +1960,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongDown")]
             CgIcon::CgArrowLongDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1991,7 +1977,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongDownC")]
             CgIcon::CgArrowLongDownC => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2008,7 +1994,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongDownE")]
             CgIcon::CgArrowLongDownE => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2025,7 +2011,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongDownL")]
             CgIcon::CgArrowLongDownL => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2042,7 +2028,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongDownR")]
             CgIcon::CgArrowLongDownR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2059,7 +2045,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongLeft")]
             CgIcon::CgArrowLongLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2076,7 +2062,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongLeftC")]
             CgIcon::CgArrowLongLeftC => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2093,7 +2079,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongLeftE")]
             CgIcon::CgArrowLongLeftE => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2110,7 +2096,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongLeftL")]
             CgIcon::CgArrowLongLeftL => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2127,7 +2113,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongLeftR")]
             CgIcon::CgArrowLongLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2144,7 +2130,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongRight")]
             CgIcon::CgArrowLongRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2161,7 +2147,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongRightC")]
             CgIcon::CgArrowLongRightC => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2178,7 +2164,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongRightE")]
             CgIcon::CgArrowLongRightE => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2195,7 +2181,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongRightL")]
             CgIcon::CgArrowLongRightL => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2212,7 +2198,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongRightR")]
             CgIcon::CgArrowLongRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2229,7 +2215,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongUp")]
             CgIcon::CgArrowLongUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2246,7 +2232,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongUpC")]
             CgIcon::CgArrowLongUpC => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2263,7 +2249,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongUpE")]
             CgIcon::CgArrowLongUpE => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2280,7 +2266,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongUpL")]
             CgIcon::CgArrowLongUpL => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2297,7 +2283,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowLongUpR")]
             CgIcon::CgArrowLongUpR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2314,7 +2300,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowRight")]
             CgIcon::CgArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2331,7 +2317,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowRightO")]
             CgIcon::CgArrowRightO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2348,7 +2334,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowRightR")]
             CgIcon::CgArrowRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2365,7 +2351,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowTopLeft")]
             CgIcon::CgArrowTopLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2382,7 +2368,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowTopLeftO")]
             CgIcon::CgArrowTopLeftO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2399,7 +2385,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowTopLeftR")]
             CgIcon::CgArrowTopLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2416,7 +2402,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowTopRight")]
             CgIcon::CgArrowTopRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2433,7 +2419,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowTopRightO")]
             CgIcon::CgArrowTopRightO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2450,7 +2436,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowTopRightR")]
             CgIcon::CgArrowTopRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2467,7 +2453,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowUp")]
             CgIcon::CgArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2484,7 +2470,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowUpO")]
             CgIcon::CgArrowUpO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2501,7 +2487,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowUpR")]
             CgIcon::CgArrowUpR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2518,7 +2504,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsBreakeH")]
             CgIcon::CgArrowsBreakeH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2535,7 +2521,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsBreakeV")]
             CgIcon::CgArrowsBreakeV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2552,7 +2538,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExchange")]
             CgIcon::CgArrowsExchange => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2569,7 +2555,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExchangeAlt")]
             CgIcon::CgArrowsExchangeAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2586,7 +2572,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExchangeAltV")]
             CgIcon::CgArrowsExchangeAltV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2603,7 +2589,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExchangeV")]
             CgIcon::CgArrowsExchangeV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2620,7 +2606,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandDownLeft")]
             CgIcon::CgArrowsExpandDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2637,7 +2623,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandDownRight")]
             CgIcon::CgArrowsExpandDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2654,7 +2640,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandLeft")]
             CgIcon::CgArrowsExpandLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2671,7 +2657,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandLeftAlt")]
             CgIcon::CgArrowsExpandLeftAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2688,7 +2674,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandRight")]
             CgIcon::CgArrowsExpandRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2705,7 +2691,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandRightAlt")]
             CgIcon::CgArrowsExpandRightAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2722,7 +2708,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandUpLeft")]
             CgIcon::CgArrowsExpandUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2739,7 +2725,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsExpandUpRight")]
             CgIcon::CgArrowsExpandUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2756,7 +2742,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsH")]
             CgIcon::CgArrowsH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2773,7 +2759,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsHAlt")]
             CgIcon::CgArrowsHAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2790,7 +2776,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsMergeAltH")]
             CgIcon::CgArrowsMergeAltH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2807,7 +2793,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsMergeAltV")]
             CgIcon::CgArrowsMergeAltV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2824,7 +2810,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsScrollH")]
             CgIcon::CgArrowsScrollH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2841,7 +2827,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsScrollV")]
             CgIcon::CgArrowsScrollV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2858,7 +2844,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsShrinkH")]
             CgIcon::CgArrowsShrinkH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2875,7 +2861,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsShrinkV")]
             CgIcon::CgArrowsShrinkV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2892,7 +2878,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsV")]
             CgIcon::CgArrowsV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2909,7 +2895,7 @@ impl Data {
             }
             #[cfg(feature = "CgArrowsVAlt")]
             CgIcon::CgArrowsVAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2926,7 +2912,7 @@ impl Data {
             }
             #[cfg(feature = "CgAssign")]
             CgIcon::CgAssign => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2943,7 +2929,7 @@ impl Data {
             }
             #[cfg(feature = "CgAsterisk")]
             CgIcon::CgAsterisk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2960,7 +2946,7 @@ impl Data {
             }
             #[cfg(feature = "CgAtlasian")]
             CgIcon::CgAtlasian => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2977,7 +2963,7 @@ impl Data {
             }
             #[cfg(feature = "CgAttachment")]
             CgIcon::CgAttachment => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2994,7 +2980,7 @@ impl Data {
             }
             #[cfg(feature = "CgAttribution")]
             CgIcon::CgAttribution => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3011,7 +2997,7 @@ impl Data {
             }
             #[cfg(feature = "CgAwards")]
             CgIcon::CgAwards => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3028,7 +3014,7 @@ impl Data {
             }
             #[cfg(feature = "CgBackspace")]
             CgIcon::CgBackspace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3045,7 +3031,7 @@ impl Data {
             }
             #[cfg(feature = "CgBandAid")]
             CgIcon::CgBandAid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3062,7 +3048,7 @@ impl Data {
             }
             #[cfg(feature = "CgBattery")]
             CgIcon::CgBattery => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3079,7 +3065,7 @@ impl Data {
             }
             #[cfg(feature = "CgBatteryEmpty")]
             CgIcon::CgBatteryEmpty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3096,7 +3082,7 @@ impl Data {
             }
             #[cfg(feature = "CgBatteryFull")]
             CgIcon::CgBatteryFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3113,7 +3099,7 @@ impl Data {
             }
             #[cfg(feature = "CgBee")]
             CgIcon::CgBee => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3130,7 +3116,7 @@ impl Data {
             }
             #[cfg(feature = "CgBell")]
             CgIcon::CgBell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3147,7 +3133,7 @@ impl Data {
             }
             #[cfg(feature = "CgBitbucket")]
             CgIcon::CgBitbucket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3164,7 +3150,7 @@ impl Data {
             }
             #[cfg(feature = "CgBlock")]
             CgIcon::CgBlock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3181,7 +3167,7 @@ impl Data {
             }
             #[cfg(feature = "CgBmw")]
             CgIcon::CgBmw => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3198,7 +3184,7 @@ impl Data {
             }
             #[cfg(feature = "CgBoard")]
             CgIcon::CgBoard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3215,7 +3201,7 @@ impl Data {
             }
             #[cfg(feature = "CgBolt")]
             CgIcon::CgBolt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3232,7 +3218,7 @@ impl Data {
             }
             #[cfg(feature = "CgBookmark")]
             CgIcon::CgBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3249,7 +3235,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderAll")]
             CgIcon::CgBorderAll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3266,7 +3252,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderBottom")]
             CgIcon::CgBorderBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3283,7 +3269,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderLeft")]
             CgIcon::CgBorderLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3300,7 +3286,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderRight")]
             CgIcon::CgBorderRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3317,7 +3303,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderStyleDashed")]
             CgIcon::CgBorderStyleDashed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3334,7 +3320,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderStyleDotted")]
             CgIcon::CgBorderStyleDotted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3351,7 +3337,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderStyleSolid")]
             CgIcon::CgBorderStyleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3368,7 +3354,7 @@ impl Data {
             }
             #[cfg(feature = "CgBorderTop")]
             CgIcon::CgBorderTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3385,7 +3371,7 @@ impl Data {
             }
             #[cfg(feature = "CgBot")]
             CgIcon::CgBot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3402,7 +3388,7 @@ impl Data {
             }
             #[cfg(feature = "CgBowl")]
             CgIcon::CgBowl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3419,7 +3405,7 @@ impl Data {
             }
             #[cfg(feature = "CgBox")]
             CgIcon::CgBox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3436,7 +3422,7 @@ impl Data {
             }
             #[cfg(feature = "CgBoy")]
             CgIcon::CgBoy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3453,7 +3439,7 @@ impl Data {
             }
             #[cfg(feature = "CgBrackets")]
             CgIcon::CgBrackets => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3470,7 +3456,7 @@ impl Data {
             }
             #[cfg(feature = "CgBriefcase")]
             CgIcon::CgBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3487,7 +3473,7 @@ impl Data {
             }
             #[cfg(feature = "CgBrowse")]
             CgIcon::CgBrowse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3504,7 +3490,7 @@ impl Data {
             }
             #[cfg(feature = "CgBrowser")]
             CgIcon::CgBrowser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3521,7 +3507,7 @@ impl Data {
             }
             #[cfg(feature = "CgBrush")]
             CgIcon::CgBrush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3538,7 +3524,7 @@ impl Data {
             }
             #[cfg(feature = "CgBulb")]
             CgIcon::CgBulb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3555,7 +3541,7 @@ impl Data {
             }
             #[cfg(feature = "CgCPlusPlus")]
             CgIcon::CgCPlusPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3572,7 +3558,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalculator")]
             CgIcon::CgCalculator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3589,7 +3575,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalendar")]
             CgIcon::CgCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3606,7 +3592,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalendarDates")]
             CgIcon::CgCalendarDates => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3623,7 +3609,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalendarDue")]
             CgIcon::CgCalendarDue => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3640,7 +3626,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalendarNext")]
             CgIcon::CgCalendarNext => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3657,7 +3643,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalendarToday")]
             CgIcon::CgCalendarToday => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3674,7 +3660,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalendarTwo")]
             CgIcon::CgCalendarTwo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3691,7 +3677,7 @@ impl Data {
             }
             #[cfg(feature = "CgCalibrate")]
             CgIcon::CgCalibrate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3708,7 +3694,7 @@ impl Data {
             }
             #[cfg(feature = "CgCamera")]
             CgIcon::CgCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3725,7 +3711,7 @@ impl Data {
             }
             #[cfg(feature = "CgCap")]
             CgIcon::CgCap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3742,7 +3728,7 @@ impl Data {
             }
             #[cfg(feature = "CgCaptions")]
             CgIcon::CgCaptions => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3759,7 +3745,7 @@ impl Data {
             }
             #[cfg(feature = "CgCardClubs")]
             CgIcon::CgCardClubs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3776,7 +3762,7 @@ impl Data {
             }
             #[cfg(feature = "CgCardDiamonds")]
             CgIcon::CgCardDiamonds => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3793,7 +3779,7 @@ impl Data {
             }
             #[cfg(feature = "CgCardHearts")]
             CgIcon::CgCardHearts => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3810,7 +3796,7 @@ impl Data {
             }
             #[cfg(feature = "CgCardSpades")]
             CgIcon::CgCardSpades => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3827,7 +3813,7 @@ impl Data {
             }
             #[cfg(feature = "CgCarousel")]
             CgIcon::CgCarousel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3844,7 +3830,7 @@ impl Data {
             }
             #[cfg(feature = "CgCast")]
             CgIcon::CgCast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3861,7 +3847,7 @@ impl Data {
             }
             #[cfg(feature = "CgChanel")]
             CgIcon::CgChanel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3878,7 +3864,7 @@ impl Data {
             }
             #[cfg(feature = "CgChart")]
             CgIcon::CgChart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3895,7 +3881,7 @@ impl Data {
             }
             #[cfg(feature = "CgCheck")]
             CgIcon::CgCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3912,7 +3898,7 @@ impl Data {
             }
             #[cfg(feature = "CgCheckO")]
             CgIcon::CgCheckO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3929,7 +3915,7 @@ impl Data {
             }
             #[cfg(feature = "CgCheckR")]
             CgIcon::CgCheckR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3946,7 +3932,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleDown")]
             CgIcon::CgChevronDoubleDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3963,7 +3949,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleDownO")]
             CgIcon::CgChevronDoubleDownO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3980,7 +3966,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleDownR")]
             CgIcon::CgChevronDoubleDownR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3997,7 +3983,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleLeft")]
             CgIcon::CgChevronDoubleLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4014,7 +4000,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleLeftO")]
             CgIcon::CgChevronDoubleLeftO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4031,7 +4017,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleLeftR")]
             CgIcon::CgChevronDoubleLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4048,7 +4034,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleRight")]
             CgIcon::CgChevronDoubleRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4065,7 +4051,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleRightO")]
             CgIcon::CgChevronDoubleRightO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4082,7 +4068,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleRightR")]
             CgIcon::CgChevronDoubleRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4099,7 +4085,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleUp")]
             CgIcon::CgChevronDoubleUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4116,7 +4102,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleUpO")]
             CgIcon::CgChevronDoubleUpO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4133,7 +4119,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDoubleUpR")]
             CgIcon::CgChevronDoubleUpR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4150,7 +4136,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDown")]
             CgIcon::CgChevronDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4167,7 +4153,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDownO")]
             CgIcon::CgChevronDownO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4184,7 +4170,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronDownR")]
             CgIcon::CgChevronDownR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4201,7 +4187,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronLeft")]
             CgIcon::CgChevronLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4218,7 +4204,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronLeftO")]
             CgIcon::CgChevronLeftO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4235,7 +4221,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronLeftR")]
             CgIcon::CgChevronLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4252,7 +4238,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronRight")]
             CgIcon::CgChevronRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4269,7 +4255,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronRightO")]
             CgIcon::CgChevronRightO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4286,7 +4272,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronRightR")]
             CgIcon::CgChevronRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4303,7 +4289,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronUp")]
             CgIcon::CgChevronUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4320,7 +4306,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronUpO")]
             CgIcon::CgChevronUpO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4337,7 +4323,7 @@ impl Data {
             }
             #[cfg(feature = "CgChevronUpR")]
             CgIcon::CgChevronUpR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4354,7 +4340,7 @@ impl Data {
             }
             #[cfg(feature = "CgCircleci")]
             CgIcon::CgCircleci => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4371,7 +4357,7 @@ impl Data {
             }
             #[cfg(feature = "CgClapperBoard")]
             CgIcon::CgClapperBoard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4388,7 +4374,7 @@ impl Data {
             }
             #[cfg(feature = "CgClipboard")]
             CgIcon::CgClipboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4405,7 +4391,7 @@ impl Data {
             }
             #[cfg(feature = "CgClose")]
             CgIcon::CgClose => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4422,7 +4408,7 @@ impl Data {
             }
             #[cfg(feature = "CgCloseO")]
             CgIcon::CgCloseO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4439,7 +4425,7 @@ impl Data {
             }
             #[cfg(feature = "CgCloseR")]
             CgIcon::CgCloseR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4456,7 +4442,7 @@ impl Data {
             }
             #[cfg(feature = "CgCloud")]
             CgIcon::CgCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4473,7 +4459,7 @@ impl Data {
             }
             #[cfg(feature = "CgCode")]
             CgIcon::CgCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4490,7 +4476,7 @@ impl Data {
             }
             #[cfg(feature = "CgCodeClimate")]
             CgIcon::CgCodeClimate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4507,7 +4493,7 @@ impl Data {
             }
             #[cfg(feature = "CgCodeSlash")]
             CgIcon::CgCodeSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4524,7 +4510,7 @@ impl Data {
             }
             #[cfg(feature = "CgCoffee")]
             CgIcon::CgCoffee => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4541,7 +4527,7 @@ impl Data {
             }
             #[cfg(feature = "CgCollage")]
             CgIcon::CgCollage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4558,7 +4544,7 @@ impl Data {
             }
             #[cfg(feature = "CgColorBucket")]
             CgIcon::CgColorBucket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4575,7 +4561,7 @@ impl Data {
             }
             #[cfg(feature = "CgColorPicker")]
             CgIcon::CgColorPicker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4592,7 +4578,7 @@ impl Data {
             }
             #[cfg(feature = "CgComedyCentral")]
             CgIcon::CgComedyCentral => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4609,7 +4595,7 @@ impl Data {
             }
             #[cfg(feature = "CgComment")]
             CgIcon::CgComment => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4626,7 +4612,7 @@ impl Data {
             }
             #[cfg(feature = "CgCommunity")]
             CgIcon::CgCommunity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4643,7 +4629,7 @@ impl Data {
             }
             #[cfg(feature = "CgComponents")]
             CgIcon::CgComponents => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4660,7 +4646,7 @@ impl Data {
             }
             #[cfg(feature = "CgCompress")]
             CgIcon::CgCompress => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4677,7 +4663,7 @@ impl Data {
             }
             #[cfg(feature = "CgCompressLeft")]
             CgIcon::CgCompressLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4694,7 +4680,7 @@ impl Data {
             }
             #[cfg(feature = "CgCompressRight")]
             CgIcon::CgCompressRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4711,7 +4697,7 @@ impl Data {
             }
             #[cfg(feature = "CgCompressV")]
             CgIcon::CgCompressV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4728,7 +4714,7 @@ impl Data {
             }
             #[cfg(feature = "CgController")]
             CgIcon::CgController => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4745,7 +4731,7 @@ impl Data {
             }
             #[cfg(feature = "CgCopy")]
             CgIcon::CgCopy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4762,7 +4748,7 @@ impl Data {
             }
             #[cfg(feature = "CgCopyright")]
             CgIcon::CgCopyright => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4779,7 +4765,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleDownLeft")]
             CgIcon::CgCornerDoubleDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4796,7 +4782,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleDownRight")]
             CgIcon::CgCornerDoubleDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4813,7 +4799,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleLeftDown")]
             CgIcon::CgCornerDoubleLeftDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4830,7 +4816,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleLeftUp")]
             CgIcon::CgCornerDoubleLeftUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4847,7 +4833,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleRightDown")]
             CgIcon::CgCornerDoubleRightDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4864,7 +4850,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleRightUp")]
             CgIcon::CgCornerDoubleRightUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4881,7 +4867,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleUpLeft")]
             CgIcon::CgCornerDoubleUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4898,7 +4884,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDoubleUpRight")]
             CgIcon::CgCornerDoubleUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4915,7 +4901,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDownLeft")]
             CgIcon::CgCornerDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4932,7 +4918,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerDownRight")]
             CgIcon::CgCornerDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4949,7 +4935,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerLeftDown")]
             CgIcon::CgCornerLeftDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4966,7 +4952,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerLeftUp")]
             CgIcon::CgCornerLeftUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4983,7 +4969,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerRightDown")]
             CgIcon::CgCornerRightDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5000,7 +4986,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerRightUp")]
             CgIcon::CgCornerRightUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5017,7 +5003,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerUpLeft")]
             CgIcon::CgCornerUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5034,7 +5020,7 @@ impl Data {
             }
             #[cfg(feature = "CgCornerUpRight")]
             CgIcon::CgCornerUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5051,7 +5037,7 @@ impl Data {
             }
             #[cfg(feature = "CgCreditCard")]
             CgIcon::CgCreditCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5068,7 +5054,7 @@ impl Data {
             }
             #[cfg(feature = "CgCrop")]
             CgIcon::CgCrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5085,7 +5071,7 @@ impl Data {
             }
             #[cfg(feature = "CgCross")]
             CgIcon::CgCross => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5102,7 +5088,7 @@ impl Data {
             }
             #[cfg(feature = "CgCrowdfire")]
             CgIcon::CgCrowdfire => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5119,7 +5105,7 @@ impl Data {
             }
             #[cfg(feature = "CgCrown")]
             CgIcon::CgCrown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5136,7 +5122,7 @@ impl Data {
             }
             #[cfg(feature = "CgDanger")]
             CgIcon::CgDanger => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5153,7 +5139,7 @@ impl Data {
             }
             #[cfg(feature = "CgDarkMode")]
             CgIcon::CgDarkMode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5170,7 +5156,7 @@ impl Data {
             }
             #[cfg(feature = "CgData")]
             CgIcon::CgData => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5187,7 +5173,7 @@ impl Data {
             }
             #[cfg(feature = "CgDatabase")]
             CgIcon::CgDatabase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5204,7 +5190,7 @@ impl Data {
             }
             #[cfg(feature = "CgDebug")]
             CgIcon::CgDebug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5221,7 +5207,7 @@ impl Data {
             }
             #[cfg(feature = "CgDesignmodo")]
             CgIcon::CgDesignmodo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5238,7 +5224,7 @@ impl Data {
             }
             #[cfg(feature = "CgDesktop")]
             CgIcon::CgDesktop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5255,7 +5241,7 @@ impl Data {
             }
             #[cfg(feature = "CgDetailsLess")]
             CgIcon::CgDetailsLess => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5272,7 +5258,7 @@ impl Data {
             }
             #[cfg(feature = "CgDetailsMore")]
             CgIcon::CgDetailsMore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5289,7 +5275,7 @@ impl Data {
             }
             #[cfg(feature = "CgDialpad")]
             CgIcon::CgDialpad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5306,7 +5292,7 @@ impl Data {
             }
             #[cfg(feature = "CgDice1")]
             CgIcon::CgDice1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5323,7 +5309,7 @@ impl Data {
             }
             #[cfg(feature = "CgDice2")]
             CgIcon::CgDice2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5340,7 +5326,7 @@ impl Data {
             }
             #[cfg(feature = "CgDice3")]
             CgIcon::CgDice3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5357,7 +5343,7 @@ impl Data {
             }
             #[cfg(feature = "CgDice4")]
             CgIcon::CgDice4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5374,7 +5360,7 @@ impl Data {
             }
             #[cfg(feature = "CgDice5")]
             CgIcon::CgDice5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5391,7 +5377,7 @@ impl Data {
             }
             #[cfg(feature = "CgDice6")]
             CgIcon::CgDice6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5408,7 +5394,7 @@ impl Data {
             }
             #[cfg(feature = "CgDigitalocean")]
             CgIcon::CgDigitalocean => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5425,7 +5411,7 @@ impl Data {
             }
             #[cfg(feature = "CgDisc")]
             CgIcon::CgDisc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5442,7 +5428,7 @@ impl Data {
             }
             #[cfg(feature = "CgDisplayFlex")]
             CgIcon::CgDisplayFlex => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5459,7 +5445,7 @@ impl Data {
             }
             #[cfg(feature = "CgDisplayFullwidth")]
             CgIcon::CgDisplayFullwidth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5476,7 +5462,7 @@ impl Data {
             }
             #[cfg(feature = "CgDisplayGrid")]
             CgIcon::CgDisplayGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5493,7 +5479,7 @@ impl Data {
             }
             #[cfg(feature = "CgDisplaySpacing")]
             CgIcon::CgDisplaySpacing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5510,7 +5496,7 @@ impl Data {
             }
             #[cfg(feature = "CgDistributeHorizontal")]
             CgIcon::CgDistributeHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5527,7 +5513,7 @@ impl Data {
             }
             #[cfg(feature = "CgDistributeVertical")]
             CgIcon::CgDistributeVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5544,7 +5530,7 @@ impl Data {
             }
             #[cfg(feature = "CgDockBottom")]
             CgIcon::CgDockBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5561,7 +5547,7 @@ impl Data {
             }
             #[cfg(feature = "CgDockLeft")]
             CgIcon::CgDockLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5578,7 +5564,7 @@ impl Data {
             }
             #[cfg(feature = "CgDockRight")]
             CgIcon::CgDockRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5595,7 +5581,7 @@ impl Data {
             }
             #[cfg(feature = "CgDockWindow")]
             CgIcon::CgDockWindow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5612,7 +5598,7 @@ impl Data {
             }
             #[cfg(feature = "CgDolby")]
             CgIcon::CgDolby => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5629,7 +5615,7 @@ impl Data {
             }
             #[cfg(feature = "CgDollar")]
             CgIcon::CgDollar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5646,7 +5632,7 @@ impl Data {
             }
             #[cfg(feature = "CgDribbble")]
             CgIcon::CgDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5663,7 +5649,7 @@ impl Data {
             }
             #[cfg(feature = "CgDrive")]
             CgIcon::CgDrive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5680,7 +5666,7 @@ impl Data {
             }
             #[cfg(feature = "CgDrop")]
             CgIcon::CgDrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5697,7 +5683,7 @@ impl Data {
             }
             #[cfg(feature = "CgDropInvert")]
             CgIcon::CgDropInvert => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5714,7 +5700,7 @@ impl Data {
             }
             #[cfg(feature = "CgDropOpacity")]
             CgIcon::CgDropOpacity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5731,7 +5717,7 @@ impl Data {
             }
             #[cfg(feature = "CgDuplicate")]
             CgIcon::CgDuplicate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5748,7 +5734,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditBlackPoint")]
             CgIcon::CgEditBlackPoint => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5765,7 +5751,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditContrast")]
             CgIcon::CgEditContrast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5782,7 +5768,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditExposure")]
             CgIcon::CgEditExposure => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5799,7 +5785,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditFade")]
             CgIcon::CgEditFade => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5816,7 +5802,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditFlipH")]
             CgIcon::CgEditFlipH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5833,7 +5819,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditFlipV")]
             CgIcon::CgEditFlipV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5850,7 +5836,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditHighlight")]
             CgIcon::CgEditHighlight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5867,7 +5853,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditMarkup")]
             CgIcon::CgEditMarkup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5884,7 +5870,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditMask")]
             CgIcon::CgEditMask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5901,7 +5887,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditNoise")]
             CgIcon::CgEditNoise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5918,7 +5904,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditShadows")]
             CgIcon::CgEditShadows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5935,7 +5921,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditStraight")]
             CgIcon::CgEditStraight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5952,7 +5938,7 @@ impl Data {
             }
             #[cfg(feature = "CgEditUnmask")]
             CgIcon::CgEditUnmask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5969,7 +5955,7 @@ impl Data {
             }
             #[cfg(feature = "CgEject")]
             CgIcon::CgEject => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5986,7 +5972,7 @@ impl Data {
             }
             #[cfg(feature = "CgEnter")]
             CgIcon::CgEnter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6003,7 +5989,7 @@ impl Data {
             }
             #[cfg(feature = "CgErase")]
             CgIcon::CgErase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6020,7 +6006,7 @@ impl Data {
             }
             #[cfg(feature = "CgEreader")]
             CgIcon::CgEreader => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6037,7 +6023,7 @@ impl Data {
             }
             #[cfg(feature = "CgEricsson")]
             CgIcon::CgEricsson => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6054,7 +6040,7 @@ impl Data {
             }
             #[cfg(feature = "CgEthernet")]
             CgIcon::CgEthernet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6071,7 +6057,7 @@ impl Data {
             }
             #[cfg(feature = "CgEuro")]
             CgIcon::CgEuro => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6088,7 +6074,7 @@ impl Data {
             }
             #[cfg(feature = "CgEventbrite")]
             CgIcon::CgEventbrite => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6105,7 +6091,7 @@ impl Data {
             }
             #[cfg(feature = "CgExpand")]
             CgIcon::CgExpand => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6122,7 +6108,7 @@ impl Data {
             }
             #[cfg(feature = "CgExport")]
             CgIcon::CgExport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6139,7 +6125,7 @@ impl Data {
             }
             #[cfg(feature = "CgExtension")]
             CgIcon::CgExtension => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6156,7 +6142,7 @@ impl Data {
             }
             #[cfg(feature = "CgExtensionAdd")]
             CgIcon::CgExtensionAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6173,7 +6159,7 @@ impl Data {
             }
             #[cfg(feature = "CgExtensionAlt")]
             CgIcon::CgExtensionAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6190,7 +6176,7 @@ impl Data {
             }
             #[cfg(feature = "CgExtensionRemove")]
             CgIcon::CgExtensionRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6207,7 +6193,7 @@ impl Data {
             }
             #[cfg(feature = "CgExternal")]
             CgIcon::CgExternal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6224,7 +6210,7 @@ impl Data {
             }
             #[cfg(feature = "CgEye")]
             CgIcon::CgEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6241,7 +6227,7 @@ impl Data {
             }
             #[cfg(feature = "CgEyeAlt")]
             CgIcon::CgEyeAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6258,7 +6244,7 @@ impl Data {
             }
             #[cfg(feature = "CgFacebook")]
             CgIcon::CgFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6275,7 +6261,7 @@ impl Data {
             }
             #[cfg(feature = "CgFeed")]
             CgIcon::CgFeed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6292,7 +6278,7 @@ impl Data {
             }
             #[cfg(feature = "CgFigma")]
             CgIcon::CgFigma => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6309,7 +6295,7 @@ impl Data {
             }
             #[cfg(feature = "CgFile")]
             CgIcon::CgFile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6326,7 +6312,7 @@ impl Data {
             }
             #[cfg(feature = "CgFileAdd")]
             CgIcon::CgFileAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6343,7 +6329,7 @@ impl Data {
             }
             #[cfg(feature = "CgFileDocument")]
             CgIcon::CgFileDocument => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6360,7 +6346,7 @@ impl Data {
             }
             #[cfg(feature = "CgFileRemove")]
             CgIcon::CgFileRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6377,7 +6363,7 @@ impl Data {
             }
             #[cfg(feature = "CgFilm")]
             CgIcon::CgFilm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6394,7 +6380,7 @@ impl Data {
             }
             #[cfg(feature = "CgFilters")]
             CgIcon::CgFilters => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6411,7 +6397,7 @@ impl Data {
             }
             #[cfg(feature = "CgFlag")]
             CgIcon::CgFlag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6428,7 +6414,7 @@ impl Data {
             }
             #[cfg(feature = "CgFlagAlt")]
             CgIcon::CgFlagAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6445,7 +6431,7 @@ impl Data {
             }
             #[cfg(feature = "CgFolder")]
             CgIcon::CgFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6462,7 +6448,7 @@ impl Data {
             }
             #[cfg(feature = "CgFolderAdd")]
             CgIcon::CgFolderAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6479,7 +6465,7 @@ impl Data {
             }
             #[cfg(feature = "CgFolderRemove")]
             CgIcon::CgFolderRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6496,7 +6482,7 @@ impl Data {
             }
             #[cfg(feature = "CgFontHeight")]
             CgIcon::CgFontHeight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6513,7 +6499,7 @@ impl Data {
             }
             #[cfg(feature = "CgFontSpacing")]
             CgIcon::CgFontSpacing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6530,7 +6516,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatBold")]
             CgIcon::CgFormatBold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6547,7 +6533,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatCenter")]
             CgIcon::CgFormatCenter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6564,7 +6550,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatColor")]
             CgIcon::CgFormatColor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6581,7 +6567,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatHeading")]
             CgIcon::CgFormatHeading => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6598,7 +6584,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatIndentDecrease")]
             CgIcon::CgFormatIndentDecrease => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6615,7 +6601,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatIndentIncrease")]
             CgIcon::CgFormatIndentIncrease => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6632,7 +6618,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatItalic")]
             CgIcon::CgFormatItalic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6649,7 +6635,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatJustify")]
             CgIcon::CgFormatJustify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6666,7 +6652,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatLeft")]
             CgIcon::CgFormatLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6683,7 +6669,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatLineHeight")]
             CgIcon::CgFormatLineHeight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6700,7 +6686,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatRight")]
             CgIcon::CgFormatRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6717,7 +6703,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatSeparator")]
             CgIcon::CgFormatSeparator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6734,7 +6720,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatSlash")]
             CgIcon::CgFormatSlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6751,7 +6737,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatStrike")]
             CgIcon::CgFormatStrike => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6768,7 +6754,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatText")]
             CgIcon::CgFormatText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6785,7 +6771,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatUnderline")]
             CgIcon::CgFormatUnderline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6802,7 +6788,7 @@ impl Data {
             }
             #[cfg(feature = "CgFormatUppercase")]
             CgIcon::CgFormatUppercase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6819,7 +6805,7 @@ impl Data {
             }
             #[cfg(feature = "CgFramer")]
             CgIcon::CgFramer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6836,7 +6822,7 @@ impl Data {
             }
             #[cfg(feature = "CgGames")]
             CgIcon::CgGames => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6853,7 +6839,7 @@ impl Data {
             }
             #[cfg(feature = "CgGenderFemale")]
             CgIcon::CgGenderFemale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6870,7 +6856,7 @@ impl Data {
             }
             #[cfg(feature = "CgGenderMale")]
             CgIcon::CgGenderMale => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6887,7 +6873,7 @@ impl Data {
             }
             #[cfg(feature = "CgGhost")]
             CgIcon::CgGhost => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6904,7 +6890,7 @@ impl Data {
             }
             #[cfg(feature = "CgGhostCharacter")]
             CgIcon::CgGhostCharacter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6921,7 +6907,7 @@ impl Data {
             }
             #[cfg(feature = "CgGift")]
             CgIcon::CgGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6938,7 +6924,7 @@ impl Data {
             }
             #[cfg(feature = "CgGirl")]
             CgIcon::CgGirl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6955,7 +6941,7 @@ impl Data {
             }
             #[cfg(feature = "CgGitBranch")]
             CgIcon::CgGitBranch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6972,7 +6958,7 @@ impl Data {
             }
             #[cfg(feature = "CgGitCommit")]
             CgIcon::CgGitCommit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6989,7 +6975,7 @@ impl Data {
             }
             #[cfg(feature = "CgGitFork")]
             CgIcon::CgGitFork => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7006,7 +6992,7 @@ impl Data {
             }
             #[cfg(feature = "CgGitPull")]
             CgIcon::CgGitPull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7023,7 +7009,7 @@ impl Data {
             }
             #[cfg(feature = "CgGitter")]
             CgIcon::CgGitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7040,7 +7026,7 @@ impl Data {
             }
             #[cfg(feature = "CgGlass")]
             CgIcon::CgGlass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7057,7 +7043,7 @@ impl Data {
             }
             #[cfg(feature = "CgGlassAlt")]
             CgIcon::CgGlassAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7074,7 +7060,7 @@ impl Data {
             }
             #[cfg(feature = "CgGlobe")]
             CgIcon::CgGlobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7091,7 +7077,7 @@ impl Data {
             }
             #[cfg(feature = "CgGlobeAlt")]
             CgIcon::CgGlobeAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7108,7 +7094,7 @@ impl Data {
             }
             #[cfg(feature = "CgGoogle")]
             CgIcon::CgGoogle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7125,7 +7111,7 @@ impl Data {
             }
             #[cfg(feature = "CgGoogleTasks")]
             CgIcon::CgGoogleTasks => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7142,7 +7128,7 @@ impl Data {
             }
             #[cfg(feature = "CgGym")]
             CgIcon::CgGym => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7159,7 +7145,7 @@ impl Data {
             }
             #[cfg(feature = "CgHashtag")]
             CgIcon::CgHashtag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7176,7 +7162,7 @@ impl Data {
             }
             #[cfg(feature = "CgHeadset")]
             CgIcon::CgHeadset => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7193,7 +7179,7 @@ impl Data {
             }
             #[cfg(feature = "CgHeart")]
             CgIcon::CgHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7210,7 +7196,7 @@ impl Data {
             }
             #[cfg(feature = "CgHello")]
             CgIcon::CgHello => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7227,7 +7213,7 @@ impl Data {
             }
             #[cfg(feature = "CgHome")]
             CgIcon::CgHome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7244,7 +7230,7 @@ impl Data {
             }
             #[cfg(feature = "CgHomeAlt")]
             CgIcon::CgHomeAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7261,7 +7247,7 @@ impl Data {
             }
             #[cfg(feature = "CgHomeScreen")]
             CgIcon::CgHomeScreen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7278,7 +7264,7 @@ impl Data {
             }
             #[cfg(feature = "CgIcecream")]
             CgIcon::CgIcecream => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7295,7 +7281,7 @@ impl Data {
             }
             #[cfg(feature = "CgIfDesign")]
             CgIcon::CgIfDesign => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7312,7 +7298,7 @@ impl Data {
             }
             #[cfg(feature = "CgImage")]
             CgIcon::CgImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7329,7 +7315,7 @@ impl Data {
             }
             #[cfg(feature = "CgImport")]
             CgIcon::CgImport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7346,7 +7332,7 @@ impl Data {
             }
             #[cfg(feature = "CgInbox")]
             CgIcon::CgInbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7363,7 +7349,7 @@ impl Data {
             }
             #[cfg(feature = "CgIndieHackers")]
             CgIcon::CgIndieHackers => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7380,7 +7366,7 @@ impl Data {
             }
             #[cfg(feature = "CgInfinity")]
             CgIcon::CgInfinity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7397,7 +7383,7 @@ impl Data {
             }
             #[cfg(feature = "CgInfo")]
             CgIcon::CgInfo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7414,7 +7400,7 @@ impl Data {
             }
             #[cfg(feature = "CgInpicture")]
             CgIcon::CgInpicture => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7431,7 +7417,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsertAfter")]
             CgIcon::CgInsertAfter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7448,7 +7434,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsertAfterO")]
             CgIcon::CgInsertAfterO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7465,7 +7451,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsertAfterR")]
             CgIcon::CgInsertAfterR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7482,7 +7468,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsertBefore")]
             CgIcon::CgInsertBefore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7499,7 +7485,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsertBeforeO")]
             CgIcon::CgInsertBeforeO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7516,7 +7502,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsertBeforeR")]
             CgIcon::CgInsertBeforeR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7533,7 +7519,7 @@ impl Data {
             }
             #[cfg(feature = "CgInsights")]
             CgIcon::CgInsights => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7550,7 +7536,7 @@ impl Data {
             }
             #[cfg(feature = "CgInstagram")]
             CgIcon::CgInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7567,7 +7553,7 @@ impl Data {
             }
             #[cfg(feature = "CgInternal")]
             CgIcon::CgInternal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7584,7 +7570,7 @@ impl Data {
             }
             #[cfg(feature = "CgKey")]
             CgIcon::CgKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7601,7 +7587,7 @@ impl Data {
             }
             #[cfg(feature = "CgKeyboard")]
             CgIcon::CgKeyboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7618,7 +7604,7 @@ impl Data {
             }
             #[cfg(feature = "CgKeyhole")]
             CgIcon::CgKeyhole => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7635,7 +7621,7 @@ impl Data {
             }
             #[cfg(feature = "CgLaptop")]
             CgIcon::CgLaptop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7652,7 +7638,7 @@ impl Data {
             }
             #[cfg(feature = "CgLastpass")]
             CgIcon::CgLastpass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7669,7 +7655,7 @@ impl Data {
             }
             #[cfg(feature = "CgLayoutGrid")]
             CgIcon::CgLayoutGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7686,7 +7672,7 @@ impl Data {
             }
             #[cfg(feature = "CgLayoutGridSmall")]
             CgIcon::CgLayoutGridSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7703,7 +7689,7 @@ impl Data {
             }
             #[cfg(feature = "CgLayoutList")]
             CgIcon::CgLayoutList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7720,7 +7706,7 @@ impl Data {
             }
             #[cfg(feature = "CgLayoutPin")]
             CgIcon::CgLayoutPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7737,7 +7723,7 @@ impl Data {
             }
             #[cfg(feature = "CgLinear")]
             CgIcon::CgLinear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7754,7 +7740,7 @@ impl Data {
             }
             #[cfg(feature = "CgLink")]
             CgIcon::CgLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7771,7 +7757,7 @@ impl Data {
             }
             #[cfg(feature = "CgList")]
             CgIcon::CgList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7788,7 +7774,7 @@ impl Data {
             }
             #[cfg(feature = "CgListTree")]
             CgIcon::CgListTree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7805,7 +7791,7 @@ impl Data {
             }
             #[cfg(feature = "CgLivePhoto")]
             CgIcon::CgLivePhoto => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7822,7 +7808,7 @@ impl Data {
             }
             #[cfg(feature = "CgLoadbar")]
             CgIcon::CgLoadbar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7839,7 +7825,7 @@ impl Data {
             }
             #[cfg(feature = "CgLoadbarAlt")]
             CgIcon::CgLoadbarAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7856,7 +7842,7 @@ impl Data {
             }
             #[cfg(feature = "CgLoadbarDoc")]
             CgIcon::CgLoadbarDoc => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7873,7 +7859,7 @@ impl Data {
             }
             #[cfg(feature = "CgLoadbarSound")]
             CgIcon::CgLoadbarSound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7890,7 +7876,7 @@ impl Data {
             }
             #[cfg(feature = "CgLock")]
             CgIcon::CgLock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7907,7 +7893,7 @@ impl Data {
             }
             #[cfg(feature = "CgLockUnlock")]
             CgIcon::CgLockUnlock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7924,7 +7910,7 @@ impl Data {
             }
             #[cfg(feature = "CgLogIn")]
             CgIcon::CgLogIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7941,7 +7927,7 @@ impl Data {
             }
             #[cfg(feature = "CgLogOff")]
             CgIcon::CgLogOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7958,7 +7944,7 @@ impl Data {
             }
             #[cfg(feature = "CgLogOut")]
             CgIcon::CgLogOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7975,7 +7961,7 @@ impl Data {
             }
             #[cfg(feature = "CgLoupe")]
             CgIcon::CgLoupe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7992,7 +7978,7 @@ impl Data {
             }
             #[cfg(feature = "CgMagnet")]
             CgIcon::CgMagnet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8009,7 +7995,7 @@ impl Data {
             }
             #[cfg(feature = "CgMail")]
             CgIcon::CgMail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8026,7 +8012,7 @@ impl Data {
             }
             #[cfg(feature = "CgMailForward")]
             CgIcon::CgMailForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8043,7 +8029,7 @@ impl Data {
             }
             #[cfg(feature = "CgMailOpen")]
             CgIcon::CgMailOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8060,7 +8046,7 @@ impl Data {
             }
             #[cfg(feature = "CgMailReply")]
             CgIcon::CgMailReply => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8077,7 +8063,7 @@ impl Data {
             }
             #[cfg(feature = "CgMathDivide")]
             CgIcon::CgMathDivide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8094,7 +8080,7 @@ impl Data {
             }
             #[cfg(feature = "CgMathEqual")]
             CgIcon::CgMathEqual => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8111,7 +8097,7 @@ impl Data {
             }
             #[cfg(feature = "CgMathMinus")]
             CgIcon::CgMathMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8128,7 +8114,7 @@ impl Data {
             }
             #[cfg(feature = "CgMathPercent")]
             CgIcon::CgMathPercent => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8145,7 +8131,7 @@ impl Data {
             }
             #[cfg(feature = "CgMathPlus")]
             CgIcon::CgMathPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8162,7 +8148,7 @@ impl Data {
             }
             #[cfg(feature = "CgMaximize")]
             CgIcon::CgMaximize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8179,7 +8165,7 @@ impl Data {
             }
             #[cfg(feature = "CgMaximizeAlt")]
             CgIcon::CgMaximizeAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8196,7 +8182,7 @@ impl Data {
             }
             #[cfg(feature = "CgMaze")]
             CgIcon::CgMaze => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8213,7 +8199,7 @@ impl Data {
             }
             #[cfg(feature = "CgMediaLive")]
             CgIcon::CgMediaLive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8230,7 +8216,7 @@ impl Data {
             }
             #[cfg(feature = "CgMediaPodcast")]
             CgIcon::CgMediaPodcast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8247,7 +8233,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenu")]
             CgIcon::CgMenu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8264,7 +8250,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuBoxed")]
             CgIcon::CgMenuBoxed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8281,7 +8267,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuCake")]
             CgIcon::CgMenuCake => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8298,7 +8284,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuCheese")]
             CgIcon::CgMenuCheese => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8315,7 +8301,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuGridO")]
             CgIcon::CgMenuGridO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8332,7 +8318,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuGridR")]
             CgIcon::CgMenuGridR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8349,7 +8335,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuHotdog")]
             CgIcon::CgMenuHotdog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8366,7 +8352,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuLeft")]
             CgIcon::CgMenuLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8383,7 +8369,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuLeftAlt")]
             CgIcon::CgMenuLeftAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8400,7 +8386,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuMotion")]
             CgIcon::CgMenuMotion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8417,7 +8403,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuOreos")]
             CgIcon::CgMenuOreos => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8434,7 +8420,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuRight")]
             CgIcon::CgMenuRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8451,7 +8437,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuRightAlt")]
             CgIcon::CgMenuRightAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8468,7 +8454,7 @@ impl Data {
             }
             #[cfg(feature = "CgMenuRound")]
             CgIcon::CgMenuRound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8485,7 +8471,7 @@ impl Data {
             }
             #[cfg(feature = "CgMergeHorizontal")]
             CgIcon::CgMergeHorizontal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8502,7 +8488,7 @@ impl Data {
             }
             #[cfg(feature = "CgMergeVertical")]
             CgIcon::CgMergeVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8519,7 +8505,7 @@ impl Data {
             }
             #[cfg(feature = "CgMic")]
             CgIcon::CgMic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8536,7 +8522,7 @@ impl Data {
             }
             #[cfg(feature = "CgMicrobit")]
             CgIcon::CgMicrobit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8553,7 +8539,7 @@ impl Data {
             }
             #[cfg(feature = "CgMicrosoft")]
             CgIcon::CgMicrosoft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8570,7 +8556,7 @@ impl Data {
             }
             #[cfg(feature = "CgMiniPlayer")]
             CgIcon::CgMiniPlayer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8587,7 +8573,7 @@ impl Data {
             }
             #[cfg(feature = "CgMinimize")]
             CgIcon::CgMinimize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8604,7 +8590,7 @@ impl Data {
             }
             #[cfg(feature = "CgMinimizeAlt")]
             CgIcon::CgMinimizeAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8621,7 +8607,7 @@ impl Data {
             }
             #[cfg(feature = "CgModem")]
             CgIcon::CgModem => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8638,7 +8624,7 @@ impl Data {
             }
             #[cfg(feature = "CgMonday")]
             CgIcon::CgMonday => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8655,7 +8641,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoon")]
             CgIcon::CgMoon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8672,7 +8658,7 @@ impl Data {
             }
             #[cfg(feature = "CgMore")]
             CgIcon::CgMore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8689,7 +8675,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreAlt")]
             CgIcon::CgMoreAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8706,7 +8692,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreO")]
             CgIcon::CgMoreO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8723,7 +8709,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreR")]
             CgIcon::CgMoreR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8740,7 +8726,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreVertical")]
             CgIcon::CgMoreVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8757,7 +8743,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreVerticalAlt")]
             CgIcon::CgMoreVerticalAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8774,7 +8760,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreVerticalO")]
             CgIcon::CgMoreVerticalO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8791,7 +8777,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoreVerticalR")]
             CgIcon::CgMoreVerticalR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8808,7 +8794,7 @@ impl Data {
             }
             #[cfg(feature = "CgMouse")]
             CgIcon::CgMouse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8825,7 +8811,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoveDown")]
             CgIcon::CgMoveDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8842,7 +8828,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoveLeft")]
             CgIcon::CgMoveLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8859,7 +8845,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoveRight")]
             CgIcon::CgMoveRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8876,7 +8862,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoveTask")]
             CgIcon::CgMoveTask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8893,7 +8879,7 @@ impl Data {
             }
             #[cfg(feature = "CgMoveUp")]
             CgIcon::CgMoveUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8910,7 +8896,7 @@ impl Data {
             }
             #[cfg(feature = "CgMusic")]
             CgIcon::CgMusic => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8927,7 +8913,7 @@ impl Data {
             }
             #[cfg(feature = "CgMusicNote")]
             CgIcon::CgMusicNote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8944,7 +8930,7 @@ impl Data {
             }
             #[cfg(feature = "CgMusicSpeaker")]
             CgIcon::CgMusicSpeaker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8961,7 +8947,7 @@ impl Data {
             }
             #[cfg(feature = "CgNametag")]
             CgIcon::CgNametag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8978,7 +8964,7 @@ impl Data {
             }
             #[cfg(feature = "CgNotes")]
             CgIcon::CgNotes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8995,7 +8981,7 @@ impl Data {
             }
             #[cfg(feature = "CgNotifications")]
             CgIcon::CgNotifications => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9012,7 +8998,7 @@ impl Data {
             }
             #[cfg(feature = "CgNpm")]
             CgIcon::CgNpm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9029,7 +9015,7 @@ impl Data {
             }
             #[cfg(feature = "CgOculus")]
             CgIcon::CgOculus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9046,7 +9032,7 @@ impl Data {
             }
             #[cfg(feature = "CgOpenCollective")]
             CgIcon::CgOpenCollective => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9063,7 +9049,7 @@ impl Data {
             }
             #[cfg(feature = "CgOptions")]
             CgIcon::CgOptions => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9080,7 +9066,7 @@ impl Data {
             }
             #[cfg(feature = "CgOrganisation")]
             CgIcon::CgOrganisation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9097,7 +9083,7 @@ impl Data {
             }
             #[cfg(feature = "CgOverflow")]
             CgIcon::CgOverflow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9114,7 +9100,7 @@ impl Data {
             }
             #[cfg(feature = "CgPacman")]
             CgIcon::CgPacman => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9131,7 +9117,7 @@ impl Data {
             }
             #[cfg(feature = "CgPassword")]
             CgIcon::CgPassword => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9148,7 +9134,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathBack")]
             CgIcon::CgPathBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9165,7 +9151,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathCrop")]
             CgIcon::CgPathCrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9182,7 +9168,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathDivide")]
             CgIcon::CgPathDivide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9199,7 +9185,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathExclude")]
             CgIcon::CgPathExclude => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9216,7 +9202,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathFront")]
             CgIcon::CgPathFront => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9233,7 +9219,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathIntersect")]
             CgIcon::CgPathIntersect => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9250,7 +9236,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathOutline")]
             CgIcon::CgPathOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9267,7 +9253,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathTrim")]
             CgIcon::CgPathTrim => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9284,7 +9270,7 @@ impl Data {
             }
             #[cfg(feature = "CgPathUnite")]
             CgIcon::CgPathUnite => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9301,7 +9287,7 @@ impl Data {
             }
             #[cfg(feature = "CgPatreon")]
             CgIcon::CgPatreon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9318,7 +9304,7 @@ impl Data {
             }
             #[cfg(feature = "CgPaypal")]
             CgIcon::CgPaypal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9335,7 +9321,7 @@ impl Data {
             }
             #[cfg(feature = "CgPen")]
             CgIcon::CgPen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9352,7 +9338,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonBottomLeft")]
             CgIcon::CgPentagonBottomLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9369,7 +9355,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonBottomRight")]
             CgIcon::CgPentagonBottomRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9386,7 +9372,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonDown")]
             CgIcon::CgPentagonDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9403,7 +9389,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonLeft")]
             CgIcon::CgPentagonLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9420,7 +9406,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonRight")]
             CgIcon::CgPentagonRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9437,7 +9423,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonTopLeft")]
             CgIcon::CgPentagonTopLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9454,7 +9440,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonTopRight")]
             CgIcon::CgPentagonTopRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9471,7 +9457,7 @@ impl Data {
             }
             #[cfg(feature = "CgPentagonUp")]
             CgIcon::CgPentagonUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9488,7 +9474,7 @@ impl Data {
             }
             #[cfg(feature = "CgPerformance")]
             CgIcon::CgPerformance => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9505,7 +9491,7 @@ impl Data {
             }
             #[cfg(feature = "CgPexels")]
             CgIcon::CgPexels => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9522,7 +9508,7 @@ impl Data {
             }
             #[cfg(feature = "CgPhone")]
             CgIcon::CgPhone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9539,7 +9525,7 @@ impl Data {
             }
             #[cfg(feature = "CgPhotoscan")]
             CgIcon::CgPhotoscan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9556,7 +9542,7 @@ impl Data {
             }
             #[cfg(feature = "CgPiano")]
             CgIcon::CgPiano => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9573,7 +9559,7 @@ impl Data {
             }
             #[cfg(feature = "CgPill")]
             CgIcon::CgPill => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9590,7 +9576,7 @@ impl Data {
             }
             #[cfg(feature = "CgPin")]
             CgIcon::CgPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9607,7 +9593,7 @@ impl Data {
             }
             #[cfg(feature = "CgPinAlt")]
             CgIcon::CgPinAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9624,7 +9610,7 @@ impl Data {
             }
             #[cfg(feature = "CgPinBottom")]
             CgIcon::CgPinBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9641,7 +9627,7 @@ impl Data {
             }
             #[cfg(feature = "CgPinTop")]
             CgIcon::CgPinTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9658,7 +9644,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayBackwards")]
             CgIcon::CgPlayBackwards => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9675,7 +9661,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayButton")]
             CgIcon::CgPlayButton => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9692,7 +9678,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayButtonO")]
             CgIcon::CgPlayButtonO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9709,7 +9695,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayButtonR")]
             CgIcon::CgPlayButtonR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9726,7 +9712,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayForwards")]
             CgIcon::CgPlayForwards => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9743,7 +9729,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayList")]
             CgIcon::CgPlayList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9760,7 +9746,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayListAdd")]
             CgIcon::CgPlayListAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9777,7 +9763,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayListCheck")]
             CgIcon::CgPlayListCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9794,7 +9780,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayListRemove")]
             CgIcon::CgPlayListRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9811,7 +9797,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayListSearch")]
             CgIcon::CgPlayListSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9828,7 +9814,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayPause")]
             CgIcon::CgPlayPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9845,7 +9831,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayPauseO")]
             CgIcon::CgPlayPauseO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9862,7 +9848,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayPauseR")]
             CgIcon::CgPlayPauseR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9879,7 +9865,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayStop")]
             CgIcon::CgPlayStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9896,7 +9882,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayStopO")]
             CgIcon::CgPlayStopO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9913,7 +9899,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayStopR")]
             CgIcon::CgPlayStopR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9930,7 +9916,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayTrackNext")]
             CgIcon::CgPlayTrackNext => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9947,7 +9933,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayTrackNextO")]
             CgIcon::CgPlayTrackNextO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9964,7 +9950,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayTrackNextR")]
             CgIcon::CgPlayTrackNextR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9981,7 +9967,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayTrackPrev")]
             CgIcon::CgPlayTrackPrev => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9998,7 +9984,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayTrackPrevO")]
             CgIcon::CgPlayTrackPrevO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10015,7 +10001,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlayTrackPrevR")]
             CgIcon::CgPlayTrackPrevR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10032,7 +10018,7 @@ impl Data {
             }
             #[cfg(feature = "CgPlug")]
             CgIcon::CgPlug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10049,7 +10035,7 @@ impl Data {
             }
             #[cfg(feature = "CgPocket")]
             CgIcon::CgPocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10066,7 +10052,7 @@ impl Data {
             }
             #[cfg(feature = "CgPokemon")]
             CgIcon::CgPokemon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10083,7 +10069,7 @@ impl Data {
             }
             #[cfg(feature = "CgPolaroid")]
             CgIcon::CgPolaroid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10100,7 +10086,7 @@ impl Data {
             }
             #[cfg(feature = "CgPoll")]
             CgIcon::CgPoll => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10117,7 +10103,7 @@ impl Data {
             }
             #[cfg(feature = "CgPresentation")]
             CgIcon::CgPresentation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10134,7 +10120,7 @@ impl Data {
             }
             #[cfg(feature = "CgPrinter")]
             CgIcon::CgPrinter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10151,7 +10137,7 @@ impl Data {
             }
             #[cfg(feature = "CgProductHunt")]
             CgIcon::CgProductHunt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10168,7 +10154,7 @@ impl Data {
             }
             #[cfg(feature = "CgProfile")]
             CgIcon::CgProfile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10185,7 +10171,7 @@ impl Data {
             }
             #[cfg(feature = "CgPullClear")]
             CgIcon::CgPullClear => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10202,7 +10188,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronDown")]
             CgIcon::CgPushChevronDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10219,7 +10205,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronDownO")]
             CgIcon::CgPushChevronDownO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10236,7 +10222,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronDownR")]
             CgIcon::CgPushChevronDownR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10253,7 +10239,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronLeft")]
             CgIcon::CgPushChevronLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10270,7 +10256,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronLeftO")]
             CgIcon::CgPushChevronLeftO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10287,7 +10273,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronLeftR")]
             CgIcon::CgPushChevronLeftR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10304,7 +10290,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronRight")]
             CgIcon::CgPushChevronRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10321,7 +10307,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronRightO")]
             CgIcon::CgPushChevronRightO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10338,7 +10324,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronRightR")]
             CgIcon::CgPushChevronRightR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10355,7 +10341,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronUp")]
             CgIcon::CgPushChevronUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10372,7 +10358,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronUpO")]
             CgIcon::CgPushChevronUpO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10389,7 +10375,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushChevronUpR")]
             CgIcon::CgPushChevronUpR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10406,7 +10392,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushDown")]
             CgIcon::CgPushDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10423,7 +10409,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushLeft")]
             CgIcon::CgPushLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10440,7 +10426,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushRight")]
             CgIcon::CgPushRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10457,7 +10443,7 @@ impl Data {
             }
             #[cfg(feature = "CgPushUp")]
             CgIcon::CgPushUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10474,7 +10460,7 @@ impl Data {
             }
             #[cfg(feature = "CgQr")]
             CgIcon::CgQr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10491,7 +10477,7 @@ impl Data {
             }
             #[cfg(feature = "CgQuote")]
             CgIcon::CgQuote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10508,7 +10494,7 @@ impl Data {
             }
             #[cfg(feature = "CgQuoteO")]
             CgIcon::CgQuoteO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10525,7 +10511,7 @@ impl Data {
             }
             #[cfg(feature = "CgRadioCheck")]
             CgIcon::CgRadioCheck => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10542,7 +10528,7 @@ impl Data {
             }
             #[cfg(feature = "CgRadioChecked")]
             CgIcon::CgRadioChecked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10559,7 +10545,7 @@ impl Data {
             }
             #[cfg(feature = "CgRatio")]
             CgIcon::CgRatio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10576,7 +10562,7 @@ impl Data {
             }
             #[cfg(feature = "CgRead")]
             CgIcon::CgRead => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10593,7 +10579,7 @@ impl Data {
             }
             #[cfg(feature = "CgReadme")]
             CgIcon::CgReadme => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10610,7 +10596,7 @@ impl Data {
             }
             #[cfg(feature = "CgRecord")]
             CgIcon::CgRecord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10627,7 +10613,7 @@ impl Data {
             }
             #[cfg(feature = "CgRedo")]
             CgIcon::CgRedo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10644,7 +10630,7 @@ impl Data {
             }
             #[cfg(feature = "CgRemote")]
             CgIcon::CgRemote => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10661,7 +10647,7 @@ impl Data {
             }
             #[cfg(feature = "CgRemove")]
             CgIcon::CgRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10678,7 +10664,7 @@ impl Data {
             }
             #[cfg(feature = "CgRemoveR")]
             CgIcon::CgRemoveR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10695,7 +10681,7 @@ impl Data {
             }
             #[cfg(feature = "CgRename")]
             CgIcon::CgRename => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10712,7 +10698,7 @@ impl Data {
             }
             #[cfg(feature = "CgReorder")]
             CgIcon::CgReorder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10729,7 +10715,7 @@ impl Data {
             }
             #[cfg(feature = "CgRepeat")]
             CgIcon::CgRepeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10746,7 +10732,7 @@ impl Data {
             }
             #[cfg(feature = "CgRing")]
             CgIcon::CgRing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10763,7 +10749,7 @@ impl Data {
             }
             #[cfg(feature = "CgRowFirst")]
             CgIcon::CgRowFirst => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10780,7 +10766,7 @@ impl Data {
             }
             #[cfg(feature = "CgRowLast")]
             CgIcon::CgRowLast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10797,7 +10783,7 @@ impl Data {
             }
             #[cfg(feature = "CgRuler")]
             CgIcon::CgRuler => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10814,7 +10800,7 @@ impl Data {
             }
             #[cfg(feature = "CgSandClock")]
             CgIcon::CgSandClock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10831,7 +10817,7 @@ impl Data {
             }
             #[cfg(feature = "CgScan")]
             CgIcon::CgScan => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10848,7 +10834,7 @@ impl Data {
             }
             #[cfg(feature = "CgScreen")]
             CgIcon::CgScreen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10865,7 +10851,7 @@ impl Data {
             }
             #[cfg(feature = "CgScreenMirror")]
             CgIcon::CgScreenMirror => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10882,7 +10868,7 @@ impl Data {
             }
             #[cfg(feature = "CgScreenShot")]
             CgIcon::CgScreenShot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10899,7 +10885,7 @@ impl Data {
             }
             #[cfg(feature = "CgScreenWide")]
             CgIcon::CgScreenWide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10916,7 +10902,7 @@ impl Data {
             }
             #[cfg(feature = "CgScrollH")]
             CgIcon::CgScrollH => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10933,7 +10919,7 @@ impl Data {
             }
             #[cfg(feature = "CgScrollV")]
             CgIcon::CgScrollV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10950,7 +10936,7 @@ impl Data {
             }
             #[cfg(feature = "CgSearch")]
             CgIcon::CgSearch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10967,7 +10953,7 @@ impl Data {
             }
             #[cfg(feature = "CgSearchFound")]
             CgIcon::CgSearchFound => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10984,7 +10970,7 @@ impl Data {
             }
             #[cfg(feature = "CgSearchLoading")]
             CgIcon::CgSearchLoading => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11001,7 +10987,7 @@ impl Data {
             }
             #[cfg(feature = "CgSelect")]
             CgIcon::CgSelect => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11018,7 +11004,7 @@ impl Data {
             }
             #[cfg(feature = "CgSelectO")]
             CgIcon::CgSelectO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11035,7 +11021,7 @@ impl Data {
             }
             #[cfg(feature = "CgSelectR")]
             CgIcon::CgSelectR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11052,7 +11038,7 @@ impl Data {
             }
             #[cfg(feature = "CgServer")]
             CgIcon::CgServer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11069,7 +11055,7 @@ impl Data {
             }
             #[cfg(feature = "CgServerless")]
             CgIcon::CgServerless => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11086,7 +11072,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeCircle")]
             CgIcon::CgShapeCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11103,7 +11089,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeHalfCircle")]
             CgIcon::CgShapeHalfCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11120,7 +11106,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeHexagon")]
             CgIcon::CgShapeHexagon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11137,7 +11123,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeRhombus")]
             CgIcon::CgShapeRhombus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11154,7 +11140,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeSquare")]
             CgIcon::CgShapeSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11171,7 +11157,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeTriangle")]
             CgIcon::CgShapeTriangle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11188,7 +11174,7 @@ impl Data {
             }
             #[cfg(feature = "CgShapeZigzag")]
             CgIcon::CgShapeZigzag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11205,7 +11191,7 @@ impl Data {
             }
             #[cfg(feature = "CgShare")]
             CgIcon::CgShare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11222,7 +11208,7 @@ impl Data {
             }
             #[cfg(feature = "CgShield")]
             CgIcon::CgShield => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11239,7 +11225,7 @@ impl Data {
             }
             #[cfg(feature = "CgShoppingBag")]
             CgIcon::CgShoppingBag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11256,7 +11242,7 @@ impl Data {
             }
             #[cfg(feature = "CgShoppingCart")]
             CgIcon::CgShoppingCart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11273,7 +11259,7 @@ impl Data {
             }
             #[cfg(feature = "CgShortcut")]
             CgIcon::CgShortcut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11290,7 +11276,7 @@ impl Data {
             }
             #[cfg(feature = "CgShutterstock")]
             CgIcon::CgShutterstock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11307,7 +11293,7 @@ impl Data {
             }
             #[cfg(feature = "CgSidebar")]
             CgIcon::CgSidebar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11324,7 +11310,7 @@ impl Data {
             }
             #[cfg(feature = "CgSidebarOpen")]
             CgIcon::CgSidebarOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11341,7 +11327,7 @@ impl Data {
             }
             #[cfg(feature = "CgSidebarRight")]
             CgIcon::CgSidebarRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11358,7 +11344,7 @@ impl Data {
             }
             #[cfg(feature = "CgSignal")]
             CgIcon::CgSignal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11375,7 +11361,7 @@ impl Data {
             }
             #[cfg(feature = "CgSize")]
             CgIcon::CgSize => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11392,7 +11378,7 @@ impl Data {
             }
             #[cfg(feature = "CgSketch")]
             CgIcon::CgSketch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11409,7 +11395,7 @@ impl Data {
             }
             #[cfg(feature = "CgSlack")]
             CgIcon::CgSlack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11426,7 +11412,7 @@ impl Data {
             }
             #[cfg(feature = "CgSleep")]
             CgIcon::CgSleep => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11443,7 +11429,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartHomeBoiler")]
             CgIcon::CgSmartHomeBoiler => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11460,7 +11446,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartHomeCooker")]
             CgIcon::CgSmartHomeCooker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11477,7 +11463,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartHomeHeat")]
             CgIcon::CgSmartHomeHeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11494,7 +11480,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartHomeLight")]
             CgIcon::CgSmartHomeLight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11511,7 +11497,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartHomeRefrigerator")]
             CgIcon::CgSmartHomeRefrigerator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11528,7 +11514,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartHomeWashMachine")]
             CgIcon::CgSmartHomeWashMachine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11545,7 +11531,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartphone")]
             CgIcon::CgSmartphone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11562,7 +11548,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartphoneChip")]
             CgIcon::CgSmartphoneChip => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11579,7 +11565,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartphoneRam")]
             CgIcon::CgSmartphoneRam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11596,7 +11582,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmartphoneShake")]
             CgIcon::CgSmartphoneShake => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11613,7 +11599,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmile")]
             CgIcon::CgSmile => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11630,7 +11616,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmileMouthOpen")]
             CgIcon::CgSmileMouthOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11647,7 +11633,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmileNeutral")]
             CgIcon::CgSmileNeutral => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11664,7 +11650,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmileNoMouth")]
             CgIcon::CgSmileNoMouth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11681,7 +11667,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmileNone")]
             CgIcon::CgSmileNone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11698,7 +11684,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmileSad")]
             CgIcon::CgSmileSad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11715,7 +11701,7 @@ impl Data {
             }
             #[cfg(feature = "CgSmileUpside")]
             CgIcon::CgSmileUpside => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11732,7 +11718,7 @@ impl Data {
             }
             #[cfg(feature = "CgSoftwareDownload")]
             CgIcon::CgSoftwareDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11749,7 +11735,7 @@ impl Data {
             }
             #[cfg(feature = "CgSoftwareUpload")]
             CgIcon::CgSoftwareUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11766,7 +11752,7 @@ impl Data {
             }
             #[cfg(feature = "CgSortAz")]
             CgIcon::CgSortAz => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11783,7 +11769,7 @@ impl Data {
             }
             #[cfg(feature = "CgSortZa")]
             CgIcon::CgSortZa => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11800,7 +11786,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpaceBetween")]
             CgIcon::CgSpaceBetween => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11817,7 +11803,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpaceBetweenV")]
             CgIcon::CgSpaceBetweenV => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11834,7 +11820,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpectrum")]
             CgIcon::CgSpectrum => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11851,7 +11837,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpinner")]
             CgIcon::CgSpinner => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11868,7 +11854,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpinnerAlt")]
             CgIcon::CgSpinnerAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11885,7 +11871,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpinnerTwo")]
             CgIcon::CgSpinnerTwo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11902,7 +11888,7 @@ impl Data {
             }
             #[cfg(feature = "CgSpinnerTwoAlt")]
             CgIcon::CgSpinnerTwoAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11919,7 +11905,7 @@ impl Data {
             }
             #[cfg(feature = "CgSquare")]
             CgIcon::CgSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11936,7 +11922,7 @@ impl Data {
             }
             #[cfg(feature = "CgStack")]
             CgIcon::CgStack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11953,7 +11939,7 @@ impl Data {
             }
             #[cfg(feature = "CgStark")]
             CgIcon::CgStark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11970,7 +11956,7 @@ impl Data {
             }
             #[cfg(feature = "CgStopwatch")]
             CgIcon::CgStopwatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11987,7 +11973,7 @@ impl Data {
             }
             #[cfg(feature = "CgStories")]
             CgIcon::CgStories => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12004,7 +11990,7 @@ impl Data {
             }
             #[cfg(feature = "CgStudio")]
             CgIcon::CgStudio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12021,7 +12007,7 @@ impl Data {
             }
             #[cfg(feature = "CgStyle")]
             CgIcon::CgStyle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12038,7 +12024,7 @@ impl Data {
             }
             #[cfg(feature = "CgSun")]
             CgIcon::CgSun => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12055,7 +12041,7 @@ impl Data {
             }
             #[cfg(feature = "CgSupport")]
             CgIcon::CgSupport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12072,7 +12058,7 @@ impl Data {
             }
             #[cfg(feature = "CgSwap")]
             CgIcon::CgSwap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12089,7 +12075,7 @@ impl Data {
             }
             #[cfg(feature = "CgSwapVertical")]
             CgIcon::CgSwapVertical => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12106,7 +12092,7 @@ impl Data {
             }
             #[cfg(feature = "CgSweden")]
             CgIcon::CgSweden => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12123,7 +12109,7 @@ impl Data {
             }
             #[cfg(feature = "CgSwiss")]
             CgIcon::CgSwiss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12140,7 +12126,7 @@ impl Data {
             }
             #[cfg(feature = "CgSync")]
             CgIcon::CgSync => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12157,7 +12143,7 @@ impl Data {
             }
             #[cfg(feature = "CgTab")]
             CgIcon::CgTab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12174,7 +12160,7 @@ impl Data {
             }
             #[cfg(feature = "CgTag")]
             CgIcon::CgTag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12191,7 +12177,7 @@ impl Data {
             }
             #[cfg(feature = "CgTally")]
             CgIcon::CgTally => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12208,7 +12194,7 @@ impl Data {
             }
             #[cfg(feature = "CgTapDouble")]
             CgIcon::CgTapDouble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12225,7 +12211,7 @@ impl Data {
             }
             #[cfg(feature = "CgTapSingle")]
             CgIcon::CgTapSingle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12242,7 +12228,7 @@ impl Data {
             }
             #[cfg(feature = "CgTemplate")]
             CgIcon::CgTemplate => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12259,7 +12245,7 @@ impl Data {
             }
             #[cfg(feature = "CgTennis")]
             CgIcon::CgTennis => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12276,7 +12262,7 @@ impl Data {
             }
             #[cfg(feature = "CgTerminal")]
             CgIcon::CgTerminal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12293,7 +12279,7 @@ impl Data {
             }
             #[cfg(feature = "CgTerrain")]
             CgIcon::CgTerrain => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12310,7 +12296,7 @@ impl Data {
             }
             #[cfg(feature = "CgThermometer")]
             CgIcon::CgThermometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12327,7 +12313,7 @@ impl Data {
             }
             #[cfg(feature = "CgThermostat")]
             CgIcon::CgThermostat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12344,7 +12330,7 @@ impl Data {
             }
             #[cfg(feature = "CgTikcode")]
             CgIcon::CgTikcode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12361,7 +12347,7 @@ impl Data {
             }
             #[cfg(feature = "CgTime")]
             CgIcon::CgTime => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12378,7 +12364,7 @@ impl Data {
             }
             #[cfg(feature = "CgTimelapse")]
             CgIcon::CgTimelapse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12395,7 +12381,7 @@ impl Data {
             }
             #[cfg(feature = "CgTimer")]
             CgIcon::CgTimer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12412,7 +12398,7 @@ impl Data {
             }
             #[cfg(feature = "CgToday")]
             CgIcon::CgToday => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12429,7 +12415,7 @@ impl Data {
             }
             #[cfg(feature = "CgToggleOff")]
             CgIcon::CgToggleOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12446,7 +12432,7 @@ impl Data {
             }
             #[cfg(feature = "CgToggleOn")]
             CgIcon::CgToggleOn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12463,7 +12449,7 @@ impl Data {
             }
             #[cfg(feature = "CgToggleSquare")]
             CgIcon::CgToggleSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12480,7 +12466,7 @@ impl Data {
             }
             #[cfg(feature = "CgToggleSquareOff")]
             CgIcon::CgToggleSquareOff => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12497,7 +12483,7 @@ impl Data {
             }
             #[cfg(feature = "CgToolbarBottom")]
             CgIcon::CgToolbarBottom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12514,7 +12500,7 @@ impl Data {
             }
             #[cfg(feature = "CgToolbarLeft")]
             CgIcon::CgToolbarLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12531,7 +12517,7 @@ impl Data {
             }
             #[cfg(feature = "CgToolbarRight")]
             CgIcon::CgToolbarRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12548,7 +12534,7 @@ impl Data {
             }
             #[cfg(feature = "CgToolbarTop")]
             CgIcon::CgToolbarTop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12565,7 +12551,7 @@ impl Data {
             }
             #[cfg(feature = "CgToolbox")]
             CgIcon::CgToolbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12582,7 +12568,7 @@ impl Data {
             }
             #[cfg(feature = "CgTouchpad")]
             CgIcon::CgTouchpad => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12599,7 +12585,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrack")]
             CgIcon::CgTrack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12616,7 +12602,7 @@ impl Data {
             }
             #[cfg(feature = "CgTranscript")]
             CgIcon::CgTranscript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12633,7 +12619,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrash")]
             CgIcon::CgTrash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12650,7 +12636,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrashEmpty")]
             CgIcon::CgTrashEmpty => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12667,7 +12653,7 @@ impl Data {
             }
             #[cfg(feature = "CgTree")]
             CgIcon::CgTree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12684,7 +12670,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrees")]
             CgIcon::CgTrees => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12701,7 +12687,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrello")]
             CgIcon::CgTrello => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12718,7 +12704,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrending")]
             CgIcon::CgTrending => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12735,7 +12721,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrendingDown")]
             CgIcon::CgTrendingDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12752,7 +12738,7 @@ impl Data {
             }
             #[cfg(feature = "CgTrophy")]
             CgIcon::CgTrophy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12769,7 +12755,7 @@ impl Data {
             }
             #[cfg(feature = "CgTv")]
             CgIcon::CgTv => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12786,7 +12772,7 @@ impl Data {
             }
             #[cfg(feature = "CgTwilio")]
             CgIcon::CgTwilio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12803,7 +12789,7 @@ impl Data {
             }
             #[cfg(feature = "CgTwitter")]
             CgIcon::CgTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12820,7 +12806,7 @@ impl Data {
             }
             #[cfg(feature = "CgUiKit")]
             CgIcon::CgUiKit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12837,7 +12823,7 @@ impl Data {
             }
             #[cfg(feature = "CgUmbrella")]
             CgIcon::CgUmbrella => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12854,7 +12840,7 @@ impl Data {
             }
             #[cfg(feature = "CgUnavailable")]
             CgIcon::CgUnavailable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12871,7 +12857,7 @@ impl Data {
             }
             #[cfg(feature = "CgUnblock")]
             CgIcon::CgUnblock => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12888,7 +12874,7 @@ impl Data {
             }
             #[cfg(feature = "CgUndo")]
             CgIcon::CgUndo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12905,7 +12891,7 @@ impl Data {
             }
             #[cfg(feature = "CgUnfold")]
             CgIcon::CgUnfold => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12922,7 +12908,7 @@ impl Data {
             }
             #[cfg(feature = "CgUnsplash")]
             CgIcon::CgUnsplash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12939,7 +12925,7 @@ impl Data {
             }
             #[cfg(feature = "CgUsb")]
             CgIcon::CgUsb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12956,7 +12942,7 @@ impl Data {
             }
             #[cfg(feature = "CgUsbC")]
             CgIcon::CgUsbC => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12973,7 +12959,7 @@ impl Data {
             }
             #[cfg(feature = "CgUser")]
             CgIcon::CgUser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12990,7 +12976,7 @@ impl Data {
             }
             #[cfg(feature = "CgUserAdd")]
             CgIcon::CgUserAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13007,7 +12993,7 @@ impl Data {
             }
             #[cfg(feature = "CgUserList")]
             CgIcon::CgUserList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13024,7 +13010,7 @@ impl Data {
             }
             #[cfg(feature = "CgUserRemove")]
             CgIcon::CgUserRemove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13041,7 +13027,7 @@ impl Data {
             }
             #[cfg(feature = "CgUserlane")]
             CgIcon::CgUserlane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13058,7 +13044,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewCols")]
             CgIcon::CgViewCols => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13075,7 +13061,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewComfortable")]
             CgIcon::CgViewComfortable => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13092,7 +13078,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewDay")]
             CgIcon::CgViewDay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13109,7 +13095,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewGrid")]
             CgIcon::CgViewGrid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13126,7 +13112,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewList")]
             CgIcon::CgViewList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13143,7 +13129,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewMonth")]
             CgIcon::CgViewMonth => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13160,7 +13146,7 @@ impl Data {
             }
             #[cfg(feature = "CgViewSplit")]
             CgIcon::CgViewSplit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13177,7 +13163,7 @@ impl Data {
             }
             #[cfg(feature = "CgVinyl")]
             CgIcon::CgVinyl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13194,7 +13180,7 @@ impl Data {
             }
             #[cfg(feature = "CgVoicemail")]
             CgIcon::CgVoicemail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13211,7 +13197,7 @@ impl Data {
             }
             #[cfg(feature = "CgVoicemailO")]
             CgIcon::CgVoicemailO => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13228,7 +13214,7 @@ impl Data {
             }
             #[cfg(feature = "CgVoicemailR")]
             CgIcon::CgVoicemailR => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13245,7 +13231,7 @@ impl Data {
             }
             #[cfg(feature = "CgVolume")]
             CgIcon::CgVolume => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13262,7 +13248,7 @@ impl Data {
             }
             #[cfg(feature = "CgWebcam")]
             CgIcon::CgWebcam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13279,7 +13265,7 @@ impl Data {
             }
             #[cfg(feature = "CgWebsite")]
             CgIcon::CgWebsite => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13296,7 +13282,7 @@ impl Data {
             }
             #[cfg(feature = "CgWindows")]
             CgIcon::CgWindows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13313,7 +13299,7 @@ impl Data {
             }
             #[cfg(feature = "CgWorkAlt")]
             CgIcon::CgWorkAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13330,7 +13316,7 @@ impl Data {
             }
             #[cfg(feature = "CgYinyang")]
             CgIcon::CgYinyang => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13347,7 +13333,7 @@ impl Data {
             }
             #[cfg(feature = "CgYoutube")]
             CgIcon::CgYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13364,7 +13350,7 @@ impl Data {
             }
             #[cfg(feature = "CgZeit")]
             CgIcon::CgZeit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13381,7 +13367,7 @@ impl Data {
             }
             #[cfg(feature = "CgZoomIn")]
             CgIcon::CgZoomIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13398,7 +13384,7 @@ impl Data {
             }
             #[cfg(feature = "CgZoomOut")]
             CgIcon::CgZoomOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13415,62 +13401,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosCgIcon(
-    cx: leptos::Scope,
-    icon: CgIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

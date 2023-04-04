@@ -1772,26 +1772,12 @@ pub enum HiIcon {
     HiXMarkSolidMd,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: HiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for HiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "HiAcademicCapOutlineLg")]
             HiIcon::HiAcademicCapOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1808,7 +1794,7 @@ impl Data {
             }
             #[cfg(feature = "HiAcademicCapSolidLg")]
             HiIcon::HiAcademicCapSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1825,7 +1811,7 @@ impl Data {
             }
             #[cfg(feature = "HiAcademicCapSolidMd")]
             HiIcon::HiAcademicCapSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1842,7 +1828,7 @@ impl Data {
             }
             #[cfg(feature = "HiAdjustmentsHorizontalOutlineLg")]
             HiIcon::HiAdjustmentsHorizontalOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1859,7 +1845,7 @@ impl Data {
             }
             #[cfg(feature = "HiAdjustmentsHorizontalSolidLg")]
             HiIcon::HiAdjustmentsHorizontalSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1876,7 +1862,7 @@ impl Data {
             }
             #[cfg(feature = "HiAdjustmentsHorizontalSolidMd")]
             HiIcon::HiAdjustmentsHorizontalSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1893,7 +1879,7 @@ impl Data {
             }
             #[cfg(feature = "HiAdjustmentsVerticalOutlineLg")]
             HiIcon::HiAdjustmentsVerticalOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1910,7 +1896,7 @@ impl Data {
             }
             #[cfg(feature = "HiAdjustmentsVerticalSolidLg")]
             HiIcon::HiAdjustmentsVerticalSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1927,7 +1913,7 @@ impl Data {
             }
             #[cfg(feature = "HiAdjustmentsVerticalSolidMd")]
             HiIcon::HiAdjustmentsVerticalSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1944,7 +1930,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxArrowDownOutlineLg")]
             HiIcon::HiArchiveBoxArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1961,7 +1947,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxArrowDownSolidLg")]
             HiIcon::HiArchiveBoxArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1978,7 +1964,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxArrowDownSolidMd")]
             HiIcon::HiArchiveBoxArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1995,7 +1981,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxOutlineLg")]
             HiIcon::HiArchiveBoxOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2012,7 +1998,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxSolidLg")]
             HiIcon::HiArchiveBoxSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2029,7 +2015,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxSolidMd")]
             HiIcon::HiArchiveBoxSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2046,7 +2032,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxXMarkOutlineLg")]
             HiIcon::HiArchiveBoxXMarkOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2063,7 +2049,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxXMarkSolidLg")]
             HiIcon::HiArchiveBoxXMarkSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2080,7 +2066,7 @@ impl Data {
             }
             #[cfg(feature = "HiArchiveBoxXMarkSolidMd")]
             HiIcon::HiArchiveBoxXMarkSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2097,7 +2083,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownCircleOutlineLg")]
             HiIcon::HiArrowDownCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2114,7 +2100,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownCircleSolidLg")]
             HiIcon::HiArrowDownCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2131,7 +2117,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownCircleSolidMd")]
             HiIcon::HiArrowDownCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2148,7 +2134,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownLeftOutlineLg")]
             HiIcon::HiArrowDownLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2165,7 +2151,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownLeftSolidLg")]
             HiIcon::HiArrowDownLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2182,7 +2168,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownLeftSolidMd")]
             HiIcon::HiArrowDownLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2199,7 +2185,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOnSquareOutlineLg")]
             HiIcon::HiArrowDownOnSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2216,7 +2202,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOnSquareSolidLg")]
             HiIcon::HiArrowDownOnSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2233,7 +2219,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOnSquareSolidMd")]
             HiIcon::HiArrowDownOnSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2250,7 +2236,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOnSquareStackOutlineLg")]
             HiIcon::HiArrowDownOnSquareStackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2267,7 +2253,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOnSquareStackSolidLg")]
             HiIcon::HiArrowDownOnSquareStackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2284,7 +2270,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOnSquareStackSolidMd")]
             HiIcon::HiArrowDownOnSquareStackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2301,7 +2287,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownOutlineLg")]
             HiIcon::HiArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2318,7 +2304,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownRightOutlineLg")]
             HiIcon::HiArrowDownRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2335,7 +2321,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownRightSolidLg")]
             HiIcon::HiArrowDownRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2352,7 +2338,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownRightSolidMd")]
             HiIcon::HiArrowDownRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2369,7 +2355,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownSolidLg")]
             HiIcon::HiArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2386,7 +2372,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownSolidMd")]
             HiIcon::HiArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2403,7 +2389,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownTrayOutlineLg")]
             HiIcon::HiArrowDownTrayOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2420,7 +2406,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownTraySolidLg")]
             HiIcon::HiArrowDownTraySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2437,7 +2423,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowDownTraySolidMd")]
             HiIcon::HiArrowDownTraySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2454,7 +2440,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftCircleOutlineLg")]
             HiIcon::HiArrowLeftCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2471,7 +2457,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftCircleSolidLg")]
             HiIcon::HiArrowLeftCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2488,7 +2474,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftCircleSolidMd")]
             HiIcon::HiArrowLeftCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2505,7 +2491,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftOnRectangleOutlineLg")]
             HiIcon::HiArrowLeftOnRectangleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2522,7 +2508,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftOnRectangleSolidLg")]
             HiIcon::HiArrowLeftOnRectangleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2539,7 +2525,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftOnRectangleSolidMd")]
             HiIcon::HiArrowLeftOnRectangleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2556,7 +2542,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftOutlineLg")]
             HiIcon::HiArrowLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2573,7 +2559,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftSolidLg")]
             HiIcon::HiArrowLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2590,7 +2576,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLeftSolidMd")]
             HiIcon::HiArrowLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2607,7 +2593,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongDownOutlineLg")]
             HiIcon::HiArrowLongDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2624,7 +2610,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongDownSolidLg")]
             HiIcon::HiArrowLongDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2641,7 +2627,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongDownSolidMd")]
             HiIcon::HiArrowLongDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2658,7 +2644,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongLeftOutlineLg")]
             HiIcon::HiArrowLongLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2675,7 +2661,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongLeftSolidLg")]
             HiIcon::HiArrowLongLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2692,7 +2678,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongLeftSolidMd")]
             HiIcon::HiArrowLongLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2709,7 +2695,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongRightOutlineLg")]
             HiIcon::HiArrowLongRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2726,7 +2712,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongRightSolidLg")]
             HiIcon::HiArrowLongRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2743,7 +2729,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongRightSolidMd")]
             HiIcon::HiArrowLongRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2760,7 +2746,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongUpOutlineLg")]
             HiIcon::HiArrowLongUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2777,7 +2763,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongUpSolidLg")]
             HiIcon::HiArrowLongUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2794,7 +2780,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowLongUpSolidMd")]
             HiIcon::HiArrowLongUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2811,7 +2797,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowPathOutlineLg")]
             HiIcon::HiArrowPathOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2828,7 +2814,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowPathRoundedSquareOutlineLg")]
             HiIcon::HiArrowPathRoundedSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2845,7 +2831,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowPathRoundedSquareSolidLg")]
             HiIcon::HiArrowPathRoundedSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2862,7 +2848,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowPathRoundedSquareSolidMd")]
             HiIcon::HiArrowPathRoundedSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2879,7 +2865,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowPathSolidLg")]
             HiIcon::HiArrowPathSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2896,7 +2882,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowPathSolidMd")]
             HiIcon::HiArrowPathSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2913,7 +2899,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightCircleOutlineLg")]
             HiIcon::HiArrowRightCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2930,7 +2916,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightCircleSolidLg")]
             HiIcon::HiArrowRightCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2947,7 +2933,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightCircleSolidMd")]
             HiIcon::HiArrowRightCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2964,7 +2950,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightOnRectangleOutlineLg")]
             HiIcon::HiArrowRightOnRectangleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2981,7 +2967,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightOnRectangleSolidLg")]
             HiIcon::HiArrowRightOnRectangleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2998,7 +2984,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightOnRectangleSolidMd")]
             HiIcon::HiArrowRightOnRectangleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3015,7 +3001,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightOutlineLg")]
             HiIcon::HiArrowRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3032,7 +3018,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightSolidLg")]
             HiIcon::HiArrowRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3049,7 +3035,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowRightSolidMd")]
             HiIcon::HiArrowRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3066,7 +3052,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallDownOutlineLg")]
             HiIcon::HiArrowSmallDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3083,7 +3069,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallDownSolidLg")]
             HiIcon::HiArrowSmallDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3100,7 +3086,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallDownSolidMd")]
             HiIcon::HiArrowSmallDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3117,7 +3103,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallLeftOutlineLg")]
             HiIcon::HiArrowSmallLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3134,7 +3120,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallLeftSolidLg")]
             HiIcon::HiArrowSmallLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3151,7 +3137,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallLeftSolidMd")]
             HiIcon::HiArrowSmallLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3168,7 +3154,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallRightOutlineLg")]
             HiIcon::HiArrowSmallRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3185,7 +3171,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallRightSolidLg")]
             HiIcon::HiArrowSmallRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3202,7 +3188,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallRightSolidMd")]
             HiIcon::HiArrowSmallRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3219,7 +3205,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallUpOutlineLg")]
             HiIcon::HiArrowSmallUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3236,7 +3222,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallUpSolidLg")]
             HiIcon::HiArrowSmallUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3253,7 +3239,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowSmallUpSolidMd")]
             HiIcon::HiArrowSmallUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3270,7 +3256,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTopRightOnSquareOutlineLg")]
             HiIcon::HiArrowTopRightOnSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3287,7 +3273,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTopRightOnSquareSolidLg")]
             HiIcon::HiArrowTopRightOnSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3304,7 +3290,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTopRightOnSquareSolidMd")]
             HiIcon::HiArrowTopRightOnSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3321,7 +3307,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTrendingDownOutlineLg")]
             HiIcon::HiArrowTrendingDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3338,7 +3324,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTrendingDownSolidLg")]
             HiIcon::HiArrowTrendingDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3355,7 +3341,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTrendingDownSolidMd")]
             HiIcon::HiArrowTrendingDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3372,7 +3358,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTrendingUpOutlineLg")]
             HiIcon::HiArrowTrendingUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3389,7 +3375,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTrendingUpSolidLg")]
             HiIcon::HiArrowTrendingUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3406,7 +3392,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowTrendingUpSolidMd")]
             HiIcon::HiArrowTrendingUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3423,7 +3409,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpCircleOutlineLg")]
             HiIcon::HiArrowUpCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3440,7 +3426,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpCircleSolidLg")]
             HiIcon::HiArrowUpCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3457,7 +3443,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpCircleSolidMd")]
             HiIcon::HiArrowUpCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3474,7 +3460,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpLeftOutlineLg")]
             HiIcon::HiArrowUpLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3491,7 +3477,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpLeftSolidLg")]
             HiIcon::HiArrowUpLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3508,7 +3494,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpLeftSolidMd")]
             HiIcon::HiArrowUpLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3525,7 +3511,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOnSquareOutlineLg")]
             HiIcon::HiArrowUpOnSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3542,7 +3528,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOnSquareSolidLg")]
             HiIcon::HiArrowUpOnSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3559,7 +3545,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOnSquareSolidMd")]
             HiIcon::HiArrowUpOnSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3576,7 +3562,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOnSquareStackOutlineLg")]
             HiIcon::HiArrowUpOnSquareStackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3593,7 +3579,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOnSquareStackSolidLg")]
             HiIcon::HiArrowUpOnSquareStackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3610,7 +3596,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOnSquareStackSolidMd")]
             HiIcon::HiArrowUpOnSquareStackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3627,7 +3613,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpOutlineLg")]
             HiIcon::HiArrowUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3644,7 +3630,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpRightOutlineLg")]
             HiIcon::HiArrowUpRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3661,7 +3647,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpRightSolidLg")]
             HiIcon::HiArrowUpRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3678,7 +3664,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpRightSolidMd")]
             HiIcon::HiArrowUpRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3695,7 +3681,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpSolidLg")]
             HiIcon::HiArrowUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3712,7 +3698,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpSolidMd")]
             HiIcon::HiArrowUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3729,7 +3715,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpTrayOutlineLg")]
             HiIcon::HiArrowUpTrayOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3746,7 +3732,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpTraySolidLg")]
             HiIcon::HiArrowUpTraySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3763,7 +3749,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUpTraySolidMd")]
             HiIcon::HiArrowUpTraySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3780,7 +3766,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnDownOutlineLg")]
             HiIcon::HiArrowUturnDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3797,7 +3783,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnDownSolidLg")]
             HiIcon::HiArrowUturnDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3814,7 +3800,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnDownSolidMd")]
             HiIcon::HiArrowUturnDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3831,7 +3817,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnLeftOutlineLg")]
             HiIcon::HiArrowUturnLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3848,7 +3834,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnLeftSolidLg")]
             HiIcon::HiArrowUturnLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3865,7 +3851,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnLeftSolidMd")]
             HiIcon::HiArrowUturnLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3882,7 +3868,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnRightOutlineLg")]
             HiIcon::HiArrowUturnRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3899,7 +3885,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnRightSolidLg")]
             HiIcon::HiArrowUturnRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3916,7 +3902,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnRightSolidMd")]
             HiIcon::HiArrowUturnRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3933,7 +3919,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnUpOutlineLg")]
             HiIcon::HiArrowUturnUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3950,7 +3936,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnUpSolidLg")]
             HiIcon::HiArrowUturnUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3967,7 +3953,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowUturnUpSolidMd")]
             HiIcon::HiArrowUturnUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3984,7 +3970,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsPointingInOutlineLg")]
             HiIcon::HiArrowsPointingInOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4001,7 +3987,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsPointingInSolidLg")]
             HiIcon::HiArrowsPointingInSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4018,7 +4004,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsPointingInSolidMd")]
             HiIcon::HiArrowsPointingInSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4035,7 +4021,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsPointingOutOutlineLg")]
             HiIcon::HiArrowsPointingOutOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4052,7 +4038,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsPointingOutSolidLg")]
             HiIcon::HiArrowsPointingOutSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4069,7 +4055,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsPointingOutSolidMd")]
             HiIcon::HiArrowsPointingOutSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4086,7 +4072,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsRightLeftOutlineLg")]
             HiIcon::HiArrowsRightLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4103,7 +4089,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsRightLeftSolidLg")]
             HiIcon::HiArrowsRightLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4120,7 +4106,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsRightLeftSolidMd")]
             HiIcon::HiArrowsRightLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4137,7 +4123,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsUpDownOutlineLg")]
             HiIcon::HiArrowsUpDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4154,7 +4140,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsUpDownSolidLg")]
             HiIcon::HiArrowsUpDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4171,7 +4157,7 @@ impl Data {
             }
             #[cfg(feature = "HiArrowsUpDownSolidMd")]
             HiIcon::HiArrowsUpDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4188,7 +4174,7 @@ impl Data {
             }
             #[cfg(feature = "HiAtSymbolOutlineLg")]
             HiIcon::HiAtSymbolOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4205,7 +4191,7 @@ impl Data {
             }
             #[cfg(feature = "HiAtSymbolSolidLg")]
             HiIcon::HiAtSymbolSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4222,7 +4208,7 @@ impl Data {
             }
             #[cfg(feature = "HiAtSymbolSolidMd")]
             HiIcon::HiAtSymbolSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4239,7 +4225,7 @@ impl Data {
             }
             #[cfg(feature = "HiBackspaceOutlineLg")]
             HiIcon::HiBackspaceOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4256,7 +4242,7 @@ impl Data {
             }
             #[cfg(feature = "HiBackspaceSolidLg")]
             HiIcon::HiBackspaceSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4273,7 +4259,7 @@ impl Data {
             }
             #[cfg(feature = "HiBackspaceSolidMd")]
             HiIcon::HiBackspaceSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4290,7 +4276,7 @@ impl Data {
             }
             #[cfg(feature = "HiBackwardOutlineLg")]
             HiIcon::HiBackwardOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4307,7 +4293,7 @@ impl Data {
             }
             #[cfg(feature = "HiBackwardSolidLg")]
             HiIcon::HiBackwardSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4324,7 +4310,7 @@ impl Data {
             }
             #[cfg(feature = "HiBackwardSolidMd")]
             HiIcon::HiBackwardSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4341,7 +4327,7 @@ impl Data {
             }
             #[cfg(feature = "HiBanknotesOutlineLg")]
             HiIcon::HiBanknotesOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4358,7 +4344,7 @@ impl Data {
             }
             #[cfg(feature = "HiBanknotesSolidLg")]
             HiIcon::HiBanknotesSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4375,7 +4361,7 @@ impl Data {
             }
             #[cfg(feature = "HiBanknotesSolidMd")]
             HiIcon::HiBanknotesSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4392,7 +4378,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars2OutlineLg")]
             HiIcon::HiBars2OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4409,7 +4395,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars2SolidLg")]
             HiIcon::HiBars2SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4426,7 +4412,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars2SolidMd")]
             HiIcon::HiBars2SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4443,7 +4429,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3BottomLeftOutlineLg")]
             HiIcon::HiBars3BottomLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4460,7 +4446,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3BottomLeftSolidLg")]
             HiIcon::HiBars3BottomLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4477,7 +4463,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3BottomLeftSolidMd")]
             HiIcon::HiBars3BottomLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4494,7 +4480,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3BottomRightOutlineLg")]
             HiIcon::HiBars3BottomRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4511,7 +4497,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3BottomRightSolidLg")]
             HiIcon::HiBars3BottomRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4528,7 +4514,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3BottomRightSolidMd")]
             HiIcon::HiBars3BottomRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4545,7 +4531,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3CenterLeftOutlineLg")]
             HiIcon::HiBars3CenterLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4562,7 +4548,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3CenterLeftSolidLg")]
             HiIcon::HiBars3CenterLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4579,7 +4565,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3CenterLeftSolidMd")]
             HiIcon::HiBars3CenterLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4596,7 +4582,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3OutlineLg")]
             HiIcon::HiBars3OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4613,7 +4599,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3SolidLg")]
             HiIcon::HiBars3SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4630,7 +4616,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars3SolidMd")]
             HiIcon::HiBars3SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4647,7 +4633,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars4OutlineLg")]
             HiIcon::HiBars4OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4664,7 +4650,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars4SolidLg")]
             HiIcon::HiBars4SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4681,7 +4667,7 @@ impl Data {
             }
             #[cfg(feature = "HiBars4SolidMd")]
             HiIcon::HiBars4SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4698,7 +4684,7 @@ impl Data {
             }
             #[cfg(feature = "HiBarsArrowDownOutlineLg")]
             HiIcon::HiBarsArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4715,7 +4701,7 @@ impl Data {
             }
             #[cfg(feature = "HiBarsArrowDownSolidLg")]
             HiIcon::HiBarsArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4732,7 +4718,7 @@ impl Data {
             }
             #[cfg(feature = "HiBarsArrowDownSolidMd")]
             HiIcon::HiBarsArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4749,7 +4735,7 @@ impl Data {
             }
             #[cfg(feature = "HiBarsArrowUpOutlineLg")]
             HiIcon::HiBarsArrowUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4766,7 +4752,7 @@ impl Data {
             }
             #[cfg(feature = "HiBarsArrowUpSolidLg")]
             HiIcon::HiBarsArrowUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4783,7 +4769,7 @@ impl Data {
             }
             #[cfg(feature = "HiBarsArrowUpSolidMd")]
             HiIcon::HiBarsArrowUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4800,7 +4786,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery0OutlineLg")]
             HiIcon::HiBattery0OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4817,7 +4803,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery0SolidLg")]
             HiIcon::HiBattery0SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4834,7 +4820,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery0SolidMd")]
             HiIcon::HiBattery0SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4851,7 +4837,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery100OutlineLg")]
             HiIcon::HiBattery100OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4868,7 +4854,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery100SolidLg")]
             HiIcon::HiBattery100SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4885,7 +4871,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery100SolidMd")]
             HiIcon::HiBattery100SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4902,7 +4888,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery50OutlineLg")]
             HiIcon::HiBattery50OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4919,7 +4905,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery50SolidLg")]
             HiIcon::HiBattery50SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4936,7 +4922,7 @@ impl Data {
             }
             #[cfg(feature = "HiBattery50SolidMd")]
             HiIcon::HiBattery50SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4953,7 +4939,7 @@ impl Data {
             }
             #[cfg(feature = "HiBeakerOutlineLg")]
             HiIcon::HiBeakerOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4970,7 +4956,7 @@ impl Data {
             }
             #[cfg(feature = "HiBeakerSolidLg")]
             HiIcon::HiBeakerSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4987,7 +4973,7 @@ impl Data {
             }
             #[cfg(feature = "HiBeakerSolidMd")]
             HiIcon::HiBeakerSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5004,7 +4990,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellAlertOutlineLg")]
             HiIcon::HiBellAlertOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5021,7 +5007,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellAlertSolidLg")]
             HiIcon::HiBellAlertSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5038,7 +5024,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellAlertSolidMd")]
             HiIcon::HiBellAlertSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5055,7 +5041,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellOutlineLg")]
             HiIcon::HiBellOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5072,7 +5058,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSlashOutlineLg")]
             HiIcon::HiBellSlashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5089,7 +5075,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSlashSolidLg")]
             HiIcon::HiBellSlashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5106,7 +5092,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSlashSolidMd")]
             HiIcon::HiBellSlashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5123,7 +5109,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSnoozeOutlineLg")]
             HiIcon::HiBellSnoozeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5140,7 +5126,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSnoozeSolidLg")]
             HiIcon::HiBellSnoozeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5157,7 +5143,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSnoozeSolidMd")]
             HiIcon::HiBellSnoozeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5174,7 +5160,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSolidLg")]
             HiIcon::HiBellSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5191,7 +5177,7 @@ impl Data {
             }
             #[cfg(feature = "HiBellSolidMd")]
             HiIcon::HiBellSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5208,7 +5194,7 @@ impl Data {
             }
             #[cfg(feature = "HiBoltOutlineLg")]
             HiIcon::HiBoltOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5225,7 +5211,7 @@ impl Data {
             }
             #[cfg(feature = "HiBoltSlashOutlineLg")]
             HiIcon::HiBoltSlashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5242,7 +5228,7 @@ impl Data {
             }
             #[cfg(feature = "HiBoltSlashSolidLg")]
             HiIcon::HiBoltSlashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5259,7 +5245,7 @@ impl Data {
             }
             #[cfg(feature = "HiBoltSlashSolidMd")]
             HiIcon::HiBoltSlashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5276,7 +5262,7 @@ impl Data {
             }
             #[cfg(feature = "HiBoltSolidLg")]
             HiIcon::HiBoltSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5293,7 +5279,7 @@ impl Data {
             }
             #[cfg(feature = "HiBoltSolidMd")]
             HiIcon::HiBoltSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5310,7 +5296,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookOpenOutlineLg")]
             HiIcon::HiBookOpenOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5327,7 +5313,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookOpenSolidLg")]
             HiIcon::HiBookOpenSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5344,7 +5330,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookOpenSolidMd")]
             HiIcon::HiBookOpenSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5361,7 +5347,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkOutlineLg")]
             HiIcon::HiBookmarkOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5378,7 +5364,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSlashOutlineLg")]
             HiIcon::HiBookmarkSlashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5395,7 +5381,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSlashSolidLg")]
             HiIcon::HiBookmarkSlashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5412,7 +5398,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSlashSolidMd")]
             HiIcon::HiBookmarkSlashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5429,7 +5415,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSolidLg")]
             HiIcon::HiBookmarkSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5446,7 +5432,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSolidMd")]
             HiIcon::HiBookmarkSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5463,7 +5449,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSquareOutlineLg")]
             HiIcon::HiBookmarkSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5480,7 +5466,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSquareSolidLg")]
             HiIcon::HiBookmarkSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5497,7 +5483,7 @@ impl Data {
             }
             #[cfg(feature = "HiBookmarkSquareSolidMd")]
             HiIcon::HiBookmarkSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5514,7 +5500,7 @@ impl Data {
             }
             #[cfg(feature = "HiBriefcaseOutlineLg")]
             HiIcon::HiBriefcaseOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5531,7 +5517,7 @@ impl Data {
             }
             #[cfg(feature = "HiBriefcaseSolidLg")]
             HiIcon::HiBriefcaseSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5548,7 +5534,7 @@ impl Data {
             }
             #[cfg(feature = "HiBriefcaseSolidMd")]
             HiIcon::HiBriefcaseSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5565,7 +5551,7 @@ impl Data {
             }
             #[cfg(feature = "HiBugAntOutlineLg")]
             HiIcon::HiBugAntOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5582,7 +5568,7 @@ impl Data {
             }
             #[cfg(feature = "HiBugAntSolidLg")]
             HiIcon::HiBugAntSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5599,7 +5585,7 @@ impl Data {
             }
             #[cfg(feature = "HiBugAntSolidMd")]
             HiIcon::HiBugAntSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5616,7 +5602,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingLibraryOutlineLg")]
             HiIcon::HiBuildingLibraryOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5633,7 +5619,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingLibrarySolidLg")]
             HiIcon::HiBuildingLibrarySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5650,7 +5636,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingLibrarySolidMd")]
             HiIcon::HiBuildingLibrarySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5667,7 +5653,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingOffice2OutlineLg")]
             HiIcon::HiBuildingOffice2OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5684,7 +5670,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingOffice2SolidLg")]
             HiIcon::HiBuildingOffice2SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5701,7 +5687,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingOffice2SolidMd")]
             HiIcon::HiBuildingOffice2SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5718,7 +5704,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingOfficeOutlineLg")]
             HiIcon::HiBuildingOfficeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5735,7 +5721,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingOfficeSolidLg")]
             HiIcon::HiBuildingOfficeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5752,7 +5738,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingOfficeSolidMd")]
             HiIcon::HiBuildingOfficeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5769,7 +5755,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingStorefrontOutlineLg")]
             HiIcon::HiBuildingStorefrontOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5786,7 +5772,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingStorefrontSolidLg")]
             HiIcon::HiBuildingStorefrontSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5803,7 +5789,7 @@ impl Data {
             }
             #[cfg(feature = "HiBuildingStorefrontSolidMd")]
             HiIcon::HiBuildingStorefrontSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5820,7 +5806,7 @@ impl Data {
             }
             #[cfg(feature = "HiCakeOutlineLg")]
             HiIcon::HiCakeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5837,7 +5823,7 @@ impl Data {
             }
             #[cfg(feature = "HiCakeSolidLg")]
             HiIcon::HiCakeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5854,7 +5840,7 @@ impl Data {
             }
             #[cfg(feature = "HiCakeSolidMd")]
             HiIcon::HiCakeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5871,7 +5857,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalculatorOutlineLg")]
             HiIcon::HiCalculatorOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5888,7 +5874,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalculatorSolidLg")]
             HiIcon::HiCalculatorSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5905,7 +5891,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalculatorSolidMd")]
             HiIcon::HiCalculatorSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5922,7 +5908,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalendarDaysOutlineLg")]
             HiIcon::HiCalendarDaysOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5939,7 +5925,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalendarDaysSolidLg")]
             HiIcon::HiCalendarDaysSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5956,7 +5942,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalendarDaysSolidMd")]
             HiIcon::HiCalendarDaysSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5973,7 +5959,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalendarOutlineLg")]
             HiIcon::HiCalendarOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5990,7 +5976,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalendarSolidLg")]
             HiIcon::HiCalendarSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6007,7 +5993,7 @@ impl Data {
             }
             #[cfg(feature = "HiCalendarSolidMd")]
             HiIcon::HiCalendarSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6024,7 +6010,7 @@ impl Data {
             }
             #[cfg(feature = "HiCameraOutlineLg")]
             HiIcon::HiCameraOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6041,7 +6027,7 @@ impl Data {
             }
             #[cfg(feature = "HiCameraSolidLg")]
             HiIcon::HiCameraSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6058,7 +6044,7 @@ impl Data {
             }
             #[cfg(feature = "HiCameraSolidMd")]
             HiIcon::HiCameraSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6075,7 +6061,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartBarOutlineLg")]
             HiIcon::HiChartBarOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6092,7 +6078,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartBarSolidLg")]
             HiIcon::HiChartBarSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6109,7 +6095,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartBarSolidMd")]
             HiIcon::HiChartBarSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6126,7 +6112,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartBarSquareOutlineLg")]
             HiIcon::HiChartBarSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6143,7 +6129,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartBarSquareSolidLg")]
             HiIcon::HiChartBarSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6160,7 +6146,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartBarSquareSolidMd")]
             HiIcon::HiChartBarSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6177,7 +6163,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartPieOutlineLg")]
             HiIcon::HiChartPieOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6194,7 +6180,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartPieSolidLg")]
             HiIcon::HiChartPieSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6211,7 +6197,7 @@ impl Data {
             }
             #[cfg(feature = "HiChartPieSolidMd")]
             HiIcon::HiChartPieSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6228,7 +6214,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleBottomCenterOutlineLg")]
             HiIcon::HiChatBubbleBottomCenterOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6245,7 +6231,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleBottomCenterSolidLg")]
             HiIcon::HiChatBubbleBottomCenterSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6262,7 +6248,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleBottomCenterSolidMd")]
             HiIcon::HiChatBubbleBottomCenterSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6279,7 +6265,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleBottomCenterTextOutlineLg")]
             HiIcon::HiChatBubbleBottomCenterTextOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6296,7 +6282,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleBottomCenterTextSolidLg")]
             HiIcon::HiChatBubbleBottomCenterTextSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6313,7 +6299,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleBottomCenterTextSolidMd")]
             HiIcon::HiChatBubbleBottomCenterTextSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6330,7 +6316,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftEllipsisOutlineLg")]
             HiIcon::HiChatBubbleLeftEllipsisOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6347,7 +6333,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftEllipsisSolidLg")]
             HiIcon::HiChatBubbleLeftEllipsisSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6364,7 +6350,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftEllipsisSolidMd")]
             HiIcon::HiChatBubbleLeftEllipsisSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6381,7 +6367,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftOutlineLg")]
             HiIcon::HiChatBubbleLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6398,7 +6384,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftRightOutlineLg")]
             HiIcon::HiChatBubbleLeftRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6415,7 +6401,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftRightSolidLg")]
             HiIcon::HiChatBubbleLeftRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6432,7 +6418,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftRightSolidMd")]
             HiIcon::HiChatBubbleLeftRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6449,7 +6435,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftSolidLg")]
             HiIcon::HiChatBubbleLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6466,7 +6452,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleLeftSolidMd")]
             HiIcon::HiChatBubbleLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6483,7 +6469,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleOvalLeftEllipsisOutlineLg")]
             HiIcon::HiChatBubbleOvalLeftEllipsisOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6500,7 +6486,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleOvalLeftEllipsisSolidLg")]
             HiIcon::HiChatBubbleOvalLeftEllipsisSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6517,7 +6503,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleOvalLeftEllipsisSolidMd")]
             HiIcon::HiChatBubbleOvalLeftEllipsisSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6534,7 +6520,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleOvalLeftOutlineLg")]
             HiIcon::HiChatBubbleOvalLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6551,7 +6537,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleOvalLeftSolidLg")]
             HiIcon::HiChatBubbleOvalLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6568,7 +6554,7 @@ impl Data {
             }
             #[cfg(feature = "HiChatBubbleOvalLeftSolidMd")]
             HiIcon::HiChatBubbleOvalLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6585,7 +6571,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckBadgeOutlineLg")]
             HiIcon::HiCheckBadgeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6602,7 +6588,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckBadgeSolidLg")]
             HiIcon::HiCheckBadgeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6619,7 +6605,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckBadgeSolidMd")]
             HiIcon::HiCheckBadgeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6636,7 +6622,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckCircleOutlineLg")]
             HiIcon::HiCheckCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6653,7 +6639,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckCircleSolidLg")]
             HiIcon::HiCheckCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6670,7 +6656,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckCircleSolidMd")]
             HiIcon::HiCheckCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6687,7 +6673,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckOutlineLg")]
             HiIcon::HiCheckOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6704,7 +6690,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckSolidLg")]
             HiIcon::HiCheckSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6721,7 +6707,7 @@ impl Data {
             }
             #[cfg(feature = "HiCheckSolidMd")]
             HiIcon::HiCheckSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6738,7 +6724,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleDownOutlineLg")]
             HiIcon::HiChevronDoubleDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6755,7 +6741,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleDownSolidLg")]
             HiIcon::HiChevronDoubleDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6772,7 +6758,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleDownSolidMd")]
             HiIcon::HiChevronDoubleDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6789,7 +6775,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleLeftOutlineLg")]
             HiIcon::HiChevronDoubleLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6806,7 +6792,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleLeftSolidLg")]
             HiIcon::HiChevronDoubleLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6823,7 +6809,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleLeftSolidMd")]
             HiIcon::HiChevronDoubleLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6840,7 +6826,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleRightOutlineLg")]
             HiIcon::HiChevronDoubleRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6857,7 +6843,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleRightSolidLg")]
             HiIcon::HiChevronDoubleRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6874,7 +6860,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleRightSolidMd")]
             HiIcon::HiChevronDoubleRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6891,7 +6877,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleUpOutlineLg")]
             HiIcon::HiChevronDoubleUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6908,7 +6894,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleUpSolidLg")]
             HiIcon::HiChevronDoubleUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6925,7 +6911,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDoubleUpSolidMd")]
             HiIcon::HiChevronDoubleUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6942,7 +6928,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDownOutlineLg")]
             HiIcon::HiChevronDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6959,7 +6945,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDownSolidLg")]
             HiIcon::HiChevronDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6976,7 +6962,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronDownSolidMd")]
             HiIcon::HiChevronDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6993,7 +6979,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronLeftOutlineLg")]
             HiIcon::HiChevronLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7010,7 +6996,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronLeftSolidLg")]
             HiIcon::HiChevronLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7027,7 +7013,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronLeftSolidMd")]
             HiIcon::HiChevronLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7044,7 +7030,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronRightOutlineLg")]
             HiIcon::HiChevronRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7061,7 +7047,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronRightSolidLg")]
             HiIcon::HiChevronRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7078,7 +7064,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronRightSolidMd")]
             HiIcon::HiChevronRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7095,7 +7081,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronUpDownOutlineLg")]
             HiIcon::HiChevronUpDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7112,7 +7098,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronUpDownSolidLg")]
             HiIcon::HiChevronUpDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7129,7 +7115,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronUpDownSolidMd")]
             HiIcon::HiChevronUpDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7146,7 +7132,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronUpOutlineLg")]
             HiIcon::HiChevronUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7163,7 +7149,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronUpSolidLg")]
             HiIcon::HiChevronUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7180,7 +7166,7 @@ impl Data {
             }
             #[cfg(feature = "HiChevronUpSolidMd")]
             HiIcon::HiChevronUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7197,7 +7183,7 @@ impl Data {
             }
             #[cfg(feature = "HiCircleStackOutlineLg")]
             HiIcon::HiCircleStackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7214,7 +7200,7 @@ impl Data {
             }
             #[cfg(feature = "HiCircleStackSolidLg")]
             HiIcon::HiCircleStackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7231,7 +7217,7 @@ impl Data {
             }
             #[cfg(feature = "HiCircleStackSolidMd")]
             HiIcon::HiCircleStackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7248,7 +7234,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentCheckOutlineLg")]
             HiIcon::HiClipboardDocumentCheckOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7265,7 +7251,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentCheckSolidLg")]
             HiIcon::HiClipboardDocumentCheckSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7282,7 +7268,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentCheckSolidMd")]
             HiIcon::HiClipboardDocumentCheckSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7299,7 +7285,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentListOutlineLg")]
             HiIcon::HiClipboardDocumentListOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7316,7 +7302,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentListSolidLg")]
             HiIcon::HiClipboardDocumentListSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7333,7 +7319,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentListSolidMd")]
             HiIcon::HiClipboardDocumentListSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7350,7 +7336,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentOutlineLg")]
             HiIcon::HiClipboardDocumentOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7367,7 +7353,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentSolidLg")]
             HiIcon::HiClipboardDocumentSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7384,7 +7370,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardDocumentSolidMd")]
             HiIcon::HiClipboardDocumentSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7401,7 +7387,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardOutlineLg")]
             HiIcon::HiClipboardOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7418,7 +7404,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardSolidLg")]
             HiIcon::HiClipboardSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7435,7 +7421,7 @@ impl Data {
             }
             #[cfg(feature = "HiClipboardSolidMd")]
             HiIcon::HiClipboardSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7452,7 +7438,7 @@ impl Data {
             }
             #[cfg(feature = "HiClockOutlineLg")]
             HiIcon::HiClockOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7469,7 +7455,7 @@ impl Data {
             }
             #[cfg(feature = "HiClockSolidLg")]
             HiIcon::HiClockSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7486,7 +7472,7 @@ impl Data {
             }
             #[cfg(feature = "HiClockSolidMd")]
             HiIcon::HiClockSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7503,7 +7489,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudArrowDownOutlineLg")]
             HiIcon::HiCloudArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7520,7 +7506,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudArrowDownSolidLg")]
             HiIcon::HiCloudArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7537,7 +7523,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudArrowDownSolidMd")]
             HiIcon::HiCloudArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7554,7 +7540,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudArrowUpOutlineLg")]
             HiIcon::HiCloudArrowUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7571,7 +7557,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudArrowUpSolidLg")]
             HiIcon::HiCloudArrowUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7588,7 +7574,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudArrowUpSolidMd")]
             HiIcon::HiCloudArrowUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7605,7 +7591,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudOutlineLg")]
             HiIcon::HiCloudOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7622,7 +7608,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudSolidLg")]
             HiIcon::HiCloudSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7639,7 +7625,7 @@ impl Data {
             }
             #[cfg(feature = "HiCloudSolidMd")]
             HiIcon::HiCloudSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7656,7 +7642,7 @@ impl Data {
             }
             #[cfg(feature = "HiCodeBracketOutlineLg")]
             HiIcon::HiCodeBracketOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7673,7 +7659,7 @@ impl Data {
             }
             #[cfg(feature = "HiCodeBracketSolidLg")]
             HiIcon::HiCodeBracketSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7690,7 +7676,7 @@ impl Data {
             }
             #[cfg(feature = "HiCodeBracketSolidMd")]
             HiIcon::HiCodeBracketSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7707,7 +7693,7 @@ impl Data {
             }
             #[cfg(feature = "HiCodeBracketSquareOutlineLg")]
             HiIcon::HiCodeBracketSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7724,7 +7710,7 @@ impl Data {
             }
             #[cfg(feature = "HiCodeBracketSquareSolidLg")]
             HiIcon::HiCodeBracketSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7741,7 +7727,7 @@ impl Data {
             }
             #[cfg(feature = "HiCodeBracketSquareSolidMd")]
             HiIcon::HiCodeBracketSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7758,7 +7744,7 @@ impl Data {
             }
             #[cfg(feature = "HiCog6ToothOutlineLg")]
             HiIcon::HiCog6ToothOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7775,7 +7761,7 @@ impl Data {
             }
             #[cfg(feature = "HiCog6ToothSolidLg")]
             HiIcon::HiCog6ToothSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7792,7 +7778,7 @@ impl Data {
             }
             #[cfg(feature = "HiCog6ToothSolidMd")]
             HiIcon::HiCog6ToothSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7809,7 +7795,7 @@ impl Data {
             }
             #[cfg(feature = "HiCog8ToothOutlineLg")]
             HiIcon::HiCog8ToothOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7826,7 +7812,7 @@ impl Data {
             }
             #[cfg(feature = "HiCog8ToothSolidLg")]
             HiIcon::HiCog8ToothSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7843,7 +7829,7 @@ impl Data {
             }
             #[cfg(feature = "HiCog8ToothSolidMd")]
             HiIcon::HiCog8ToothSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7860,7 +7846,7 @@ impl Data {
             }
             #[cfg(feature = "HiCogOutlineLg")]
             HiIcon::HiCogOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7877,7 +7863,7 @@ impl Data {
             }
             #[cfg(feature = "HiCogSolidLg")]
             HiIcon::HiCogSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7894,7 +7880,7 @@ impl Data {
             }
             #[cfg(feature = "HiCogSolidMd")]
             HiIcon::HiCogSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7911,7 +7897,7 @@ impl Data {
             }
             #[cfg(feature = "HiCommandLineOutlineLg")]
             HiIcon::HiCommandLineOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7928,7 +7914,7 @@ impl Data {
             }
             #[cfg(feature = "HiCommandLineSolidLg")]
             HiIcon::HiCommandLineSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7945,7 +7931,7 @@ impl Data {
             }
             #[cfg(feature = "HiCommandLineSolidMd")]
             HiIcon::HiCommandLineSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7962,7 +7948,7 @@ impl Data {
             }
             #[cfg(feature = "HiComputerDesktopOutlineLg")]
             HiIcon::HiComputerDesktopOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7979,7 +7965,7 @@ impl Data {
             }
             #[cfg(feature = "HiComputerDesktopSolidLg")]
             HiIcon::HiComputerDesktopSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7996,7 +7982,7 @@ impl Data {
             }
             #[cfg(feature = "HiComputerDesktopSolidMd")]
             HiIcon::HiComputerDesktopSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8013,7 +7999,7 @@ impl Data {
             }
             #[cfg(feature = "HiCpuChipOutlineLg")]
             HiIcon::HiCpuChipOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8030,7 +8016,7 @@ impl Data {
             }
             #[cfg(feature = "HiCpuChipSolidLg")]
             HiIcon::HiCpuChipSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8047,7 +8033,7 @@ impl Data {
             }
             #[cfg(feature = "HiCpuChipSolidMd")]
             HiIcon::HiCpuChipSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8064,7 +8050,7 @@ impl Data {
             }
             #[cfg(feature = "HiCreditCardOutlineLg")]
             HiIcon::HiCreditCardOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8081,7 +8067,7 @@ impl Data {
             }
             #[cfg(feature = "HiCreditCardSolidLg")]
             HiIcon::HiCreditCardSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8098,7 +8084,7 @@ impl Data {
             }
             #[cfg(feature = "HiCreditCardSolidMd")]
             HiIcon::HiCreditCardSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8115,7 +8101,7 @@ impl Data {
             }
             #[cfg(feature = "HiCubeOutlineLg")]
             HiIcon::HiCubeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8132,7 +8118,7 @@ impl Data {
             }
             #[cfg(feature = "HiCubeSolidLg")]
             HiIcon::HiCubeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8149,7 +8135,7 @@ impl Data {
             }
             #[cfg(feature = "HiCubeSolidMd")]
             HiIcon::HiCubeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8166,7 +8152,7 @@ impl Data {
             }
             #[cfg(feature = "HiCubeTransparentOutlineLg")]
             HiIcon::HiCubeTransparentOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8183,7 +8169,7 @@ impl Data {
             }
             #[cfg(feature = "HiCubeTransparentSolidLg")]
             HiIcon::HiCubeTransparentSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8200,7 +8186,7 @@ impl Data {
             }
             #[cfg(feature = "HiCubeTransparentSolidMd")]
             HiIcon::HiCubeTransparentSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8217,7 +8203,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyBangladeshiOutlineLg")]
             HiIcon::HiCurrencyBangladeshiOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8234,7 +8220,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyBangladeshiSolidLg")]
             HiIcon::HiCurrencyBangladeshiSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8251,7 +8237,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyBangladeshiSolidMd")]
             HiIcon::HiCurrencyBangladeshiSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8268,7 +8254,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyDollarOutlineLg")]
             HiIcon::HiCurrencyDollarOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8285,7 +8271,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyDollarSolidLg")]
             HiIcon::HiCurrencyDollarSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8302,7 +8288,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyDollarSolidMd")]
             HiIcon::HiCurrencyDollarSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8319,7 +8305,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyEuroOutlineLg")]
             HiIcon::HiCurrencyEuroOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8336,7 +8322,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyEuroSolidLg")]
             HiIcon::HiCurrencyEuroSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8353,7 +8339,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyEuroSolidMd")]
             HiIcon::HiCurrencyEuroSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8370,7 +8356,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyPoundOutlineLg")]
             HiIcon::HiCurrencyPoundOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8387,7 +8373,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyPoundSolidLg")]
             HiIcon::HiCurrencyPoundSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8404,7 +8390,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyPoundSolidMd")]
             HiIcon::HiCurrencyPoundSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8421,7 +8407,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyRupeeOutlineLg")]
             HiIcon::HiCurrencyRupeeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8438,7 +8424,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyRupeeSolidLg")]
             HiIcon::HiCurrencyRupeeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8455,7 +8441,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyRupeeSolidMd")]
             HiIcon::HiCurrencyRupeeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8472,7 +8458,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyYenOutlineLg")]
             HiIcon::HiCurrencyYenOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8489,7 +8475,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyYenSolidLg")]
             HiIcon::HiCurrencyYenSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8506,7 +8492,7 @@ impl Data {
             }
             #[cfg(feature = "HiCurrencyYenSolidMd")]
             HiIcon::HiCurrencyYenSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8523,7 +8509,7 @@ impl Data {
             }
             #[cfg(feature = "HiCursorArrowRaysOutlineLg")]
             HiIcon::HiCursorArrowRaysOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8540,7 +8526,7 @@ impl Data {
             }
             #[cfg(feature = "HiCursorArrowRaysSolidLg")]
             HiIcon::HiCursorArrowRaysSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8557,7 +8543,7 @@ impl Data {
             }
             #[cfg(feature = "HiCursorArrowRaysSolidMd")]
             HiIcon::HiCursorArrowRaysSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8574,7 +8560,7 @@ impl Data {
             }
             #[cfg(feature = "HiCursorArrowRippleOutlineLg")]
             HiIcon::HiCursorArrowRippleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8591,7 +8577,7 @@ impl Data {
             }
             #[cfg(feature = "HiCursorArrowRippleSolidLg")]
             HiIcon::HiCursorArrowRippleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8608,7 +8594,7 @@ impl Data {
             }
             #[cfg(feature = "HiCursorArrowRippleSolidMd")]
             HiIcon::HiCursorArrowRippleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8625,7 +8611,7 @@ impl Data {
             }
             #[cfg(feature = "HiDevicePhoneMobileOutlineLg")]
             HiIcon::HiDevicePhoneMobileOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8642,7 +8628,7 @@ impl Data {
             }
             #[cfg(feature = "HiDevicePhoneMobileSolidLg")]
             HiIcon::HiDevicePhoneMobileSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8659,7 +8645,7 @@ impl Data {
             }
             #[cfg(feature = "HiDevicePhoneMobileSolidMd")]
             HiIcon::HiDevicePhoneMobileSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8676,7 +8662,7 @@ impl Data {
             }
             #[cfg(feature = "HiDeviceTabletOutlineLg")]
             HiIcon::HiDeviceTabletOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8693,7 +8679,7 @@ impl Data {
             }
             #[cfg(feature = "HiDeviceTabletSolidLg")]
             HiIcon::HiDeviceTabletSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8710,7 +8696,7 @@ impl Data {
             }
             #[cfg(feature = "HiDeviceTabletSolidMd")]
             HiIcon::HiDeviceTabletSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8727,7 +8713,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentArrowDownOutlineLg")]
             HiIcon::HiDocumentArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8744,7 +8730,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentArrowDownSolidLg")]
             HiIcon::HiDocumentArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8761,7 +8747,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentArrowDownSolidMd")]
             HiIcon::HiDocumentArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8778,7 +8764,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentArrowUpOutlineLg")]
             HiIcon::HiDocumentArrowUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8795,7 +8781,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentArrowUpSolidLg")]
             HiIcon::HiDocumentArrowUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8812,7 +8798,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentArrowUpSolidMd")]
             HiIcon::HiDocumentArrowUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8829,7 +8815,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentChartBarOutlineLg")]
             HiIcon::HiDocumentChartBarOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8846,7 +8832,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentChartBarSolidLg")]
             HiIcon::HiDocumentChartBarSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8863,7 +8849,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentChartBarSolidMd")]
             HiIcon::HiDocumentChartBarSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8880,7 +8866,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentCheckOutlineLg")]
             HiIcon::HiDocumentCheckOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8897,7 +8883,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentCheckSolidLg")]
             HiIcon::HiDocumentCheckSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8914,7 +8900,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentCheckSolidMd")]
             HiIcon::HiDocumentCheckSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8931,7 +8917,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentDuplicateOutlineLg")]
             HiIcon::HiDocumentDuplicateOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8948,7 +8934,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentDuplicateSolidLg")]
             HiIcon::HiDocumentDuplicateSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8965,7 +8951,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentDuplicateSolidMd")]
             HiIcon::HiDocumentDuplicateSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8982,7 +8968,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentMagnifyingGlassOutlineLg")]
             HiIcon::HiDocumentMagnifyingGlassOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8999,7 +8985,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentMagnifyingGlassSolidLg")]
             HiIcon::HiDocumentMagnifyingGlassSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9016,7 +9002,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentMagnifyingGlassSolidMd")]
             HiIcon::HiDocumentMagnifyingGlassSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9033,7 +9019,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentMinusOutlineLg")]
             HiIcon::HiDocumentMinusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9050,7 +9036,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentMinusSolidLg")]
             HiIcon::HiDocumentMinusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9067,7 +9053,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentMinusSolidMd")]
             HiIcon::HiDocumentMinusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9084,7 +9070,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentOutlineLg")]
             HiIcon::HiDocumentOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9101,7 +9087,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentPlusOutlineLg")]
             HiIcon::HiDocumentPlusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9118,7 +9104,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentPlusSolidLg")]
             HiIcon::HiDocumentPlusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9135,7 +9121,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentPlusSolidMd")]
             HiIcon::HiDocumentPlusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9152,7 +9138,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentSolidLg")]
             HiIcon::HiDocumentSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9169,7 +9155,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentSolidMd")]
             HiIcon::HiDocumentSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9186,7 +9172,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentTextOutlineLg")]
             HiIcon::HiDocumentTextOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9203,7 +9189,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentTextSolidLg")]
             HiIcon::HiDocumentTextSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9220,7 +9206,7 @@ impl Data {
             }
             #[cfg(feature = "HiDocumentTextSolidMd")]
             HiIcon::HiDocumentTextSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9237,7 +9223,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisHorizontalCircleOutlineLg")]
             HiIcon::HiEllipsisHorizontalCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9254,7 +9240,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisHorizontalCircleSolidLg")]
             HiIcon::HiEllipsisHorizontalCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9271,7 +9257,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisHorizontalCircleSolidMd")]
             HiIcon::HiEllipsisHorizontalCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9288,7 +9274,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisHorizontalOutlineLg")]
             HiIcon::HiEllipsisHorizontalOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9305,7 +9291,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisHorizontalSolidLg")]
             HiIcon::HiEllipsisHorizontalSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9322,7 +9308,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisHorizontalSolidMd")]
             HiIcon::HiEllipsisHorizontalSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9339,7 +9325,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisVerticalOutlineLg")]
             HiIcon::HiEllipsisVerticalOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9356,7 +9342,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisVerticalSolidLg")]
             HiIcon::HiEllipsisVerticalSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9373,7 +9359,7 @@ impl Data {
             }
             #[cfg(feature = "HiEllipsisVerticalSolidMd")]
             HiIcon::HiEllipsisVerticalSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9390,7 +9376,7 @@ impl Data {
             }
             #[cfg(feature = "HiEnvelopeOpenOutlineLg")]
             HiIcon::HiEnvelopeOpenOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9407,7 +9393,7 @@ impl Data {
             }
             #[cfg(feature = "HiEnvelopeOpenSolidLg")]
             HiIcon::HiEnvelopeOpenSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9424,7 +9410,7 @@ impl Data {
             }
             #[cfg(feature = "HiEnvelopeOpenSolidMd")]
             HiIcon::HiEnvelopeOpenSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9441,7 +9427,7 @@ impl Data {
             }
             #[cfg(feature = "HiEnvelopeOutlineLg")]
             HiIcon::HiEnvelopeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9458,7 +9444,7 @@ impl Data {
             }
             #[cfg(feature = "HiEnvelopeSolidLg")]
             HiIcon::HiEnvelopeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9475,7 +9461,7 @@ impl Data {
             }
             #[cfg(feature = "HiEnvelopeSolidMd")]
             HiIcon::HiEnvelopeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9492,7 +9478,7 @@ impl Data {
             }
             #[cfg(feature = "HiExclamationCircleOutlineLg")]
             HiIcon::HiExclamationCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9509,7 +9495,7 @@ impl Data {
             }
             #[cfg(feature = "HiExclamationCircleSolidLg")]
             HiIcon::HiExclamationCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9526,7 +9512,7 @@ impl Data {
             }
             #[cfg(feature = "HiExclamationCircleSolidMd")]
             HiIcon::HiExclamationCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9543,7 +9529,7 @@ impl Data {
             }
             #[cfg(feature = "HiExclamationTriangleOutlineLg")]
             HiIcon::HiExclamationTriangleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9560,7 +9546,7 @@ impl Data {
             }
             #[cfg(feature = "HiExclamationTriangleSolidLg")]
             HiIcon::HiExclamationTriangleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9577,7 +9563,7 @@ impl Data {
             }
             #[cfg(feature = "HiExclamationTriangleSolidMd")]
             HiIcon::HiExclamationTriangleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9594,7 +9580,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeDropperOutlineLg")]
             HiIcon::HiEyeDropperOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9611,7 +9597,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeDropperSolidLg")]
             HiIcon::HiEyeDropperSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9628,7 +9614,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeDropperSolidMd")]
             HiIcon::HiEyeDropperSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9645,7 +9631,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeOutlineLg")]
             HiIcon::HiEyeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9662,7 +9648,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeSlashOutlineLg")]
             HiIcon::HiEyeSlashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9679,7 +9665,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeSlashSolidLg")]
             HiIcon::HiEyeSlashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9696,7 +9682,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeSlashSolidMd")]
             HiIcon::HiEyeSlashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9713,7 +9699,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeSolidLg")]
             HiIcon::HiEyeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9730,7 +9716,7 @@ impl Data {
             }
             #[cfg(feature = "HiEyeSolidMd")]
             HiIcon::HiEyeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9747,7 +9733,7 @@ impl Data {
             }
             #[cfg(feature = "HiFaceFrownOutlineLg")]
             HiIcon::HiFaceFrownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9764,7 +9750,7 @@ impl Data {
             }
             #[cfg(feature = "HiFaceFrownSolidLg")]
             HiIcon::HiFaceFrownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9781,7 +9767,7 @@ impl Data {
             }
             #[cfg(feature = "HiFaceFrownSolidMd")]
             HiIcon::HiFaceFrownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9798,7 +9784,7 @@ impl Data {
             }
             #[cfg(feature = "HiFaceSmileOutlineLg")]
             HiIcon::HiFaceSmileOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9815,7 +9801,7 @@ impl Data {
             }
             #[cfg(feature = "HiFaceSmileSolidLg")]
             HiIcon::HiFaceSmileSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9832,7 +9818,7 @@ impl Data {
             }
             #[cfg(feature = "HiFaceSmileSolidMd")]
             HiIcon::HiFaceSmileSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9849,7 +9835,7 @@ impl Data {
             }
             #[cfg(feature = "HiFilmOutlineLg")]
             HiIcon::HiFilmOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9866,7 +9852,7 @@ impl Data {
             }
             #[cfg(feature = "HiFilmSolidLg")]
             HiIcon::HiFilmSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9883,7 +9869,7 @@ impl Data {
             }
             #[cfg(feature = "HiFilmSolidMd")]
             HiIcon::HiFilmSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9900,7 +9886,7 @@ impl Data {
             }
             #[cfg(feature = "HiFingerPrintOutlineLg")]
             HiIcon::HiFingerPrintOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9917,7 +9903,7 @@ impl Data {
             }
             #[cfg(feature = "HiFingerPrintSolidLg")]
             HiIcon::HiFingerPrintSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9934,7 +9920,7 @@ impl Data {
             }
             #[cfg(feature = "HiFingerPrintSolidMd")]
             HiIcon::HiFingerPrintSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9951,7 +9937,7 @@ impl Data {
             }
             #[cfg(feature = "HiFireOutlineLg")]
             HiIcon::HiFireOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9968,7 +9954,7 @@ impl Data {
             }
             #[cfg(feature = "HiFireSolidLg")]
             HiIcon::HiFireSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9985,7 +9971,7 @@ impl Data {
             }
             #[cfg(feature = "HiFireSolidMd")]
             HiIcon::HiFireSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10002,7 +9988,7 @@ impl Data {
             }
             #[cfg(feature = "HiFlagOutlineLg")]
             HiIcon::HiFlagOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10019,7 +10005,7 @@ impl Data {
             }
             #[cfg(feature = "HiFlagSolidLg")]
             HiIcon::HiFlagSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10036,7 +10022,7 @@ impl Data {
             }
             #[cfg(feature = "HiFlagSolidMd")]
             HiIcon::HiFlagSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10053,7 +10039,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderArrowDownOutlineLg")]
             HiIcon::HiFolderArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10070,7 +10056,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderArrowDownSolidLg")]
             HiIcon::HiFolderArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10087,7 +10073,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderArrowDownSolidMd")]
             HiIcon::HiFolderArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10104,7 +10090,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderMinusOutlineLg")]
             HiIcon::HiFolderMinusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10121,7 +10107,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderMinusSolidLg")]
             HiIcon::HiFolderMinusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10138,7 +10124,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderMinusSolidMd")]
             HiIcon::HiFolderMinusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10155,7 +10141,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderOpenOutlineLg")]
             HiIcon::HiFolderOpenOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10172,7 +10158,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderOpenSolidLg")]
             HiIcon::HiFolderOpenSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10189,7 +10175,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderOpenSolidMd")]
             HiIcon::HiFolderOpenSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10206,7 +10192,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderOutlineLg")]
             HiIcon::HiFolderOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10223,7 +10209,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderPlusOutlineLg")]
             HiIcon::HiFolderPlusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10240,7 +10226,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderPlusSolidLg")]
             HiIcon::HiFolderPlusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10257,7 +10243,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderPlusSolidMd")]
             HiIcon::HiFolderPlusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10274,7 +10260,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderSolidLg")]
             HiIcon::HiFolderSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10291,7 +10277,7 @@ impl Data {
             }
             #[cfg(feature = "HiFolderSolidMd")]
             HiIcon::HiFolderSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10308,7 +10294,7 @@ impl Data {
             }
             #[cfg(feature = "HiForwardOutlineLg")]
             HiIcon::HiForwardOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10325,7 +10311,7 @@ impl Data {
             }
             #[cfg(feature = "HiForwardSolidLg")]
             HiIcon::HiForwardSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10342,7 +10328,7 @@ impl Data {
             }
             #[cfg(feature = "HiForwardSolidMd")]
             HiIcon::HiForwardSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10359,7 +10345,7 @@ impl Data {
             }
             #[cfg(feature = "HiFunnelOutlineLg")]
             HiIcon::HiFunnelOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10376,7 +10362,7 @@ impl Data {
             }
             #[cfg(feature = "HiFunnelSolidLg")]
             HiIcon::HiFunnelSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10393,7 +10379,7 @@ impl Data {
             }
             #[cfg(feature = "HiFunnelSolidMd")]
             HiIcon::HiFunnelSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10410,7 +10396,7 @@ impl Data {
             }
             #[cfg(feature = "HiGifOutlineLg")]
             HiIcon::HiGifOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10427,7 +10413,7 @@ impl Data {
             }
             #[cfg(feature = "HiGifSolidLg")]
             HiIcon::HiGifSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10444,7 +10430,7 @@ impl Data {
             }
             #[cfg(feature = "HiGifSolidMd")]
             HiIcon::HiGifSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10461,7 +10447,7 @@ impl Data {
             }
             #[cfg(feature = "HiGiftOutlineLg")]
             HiIcon::HiGiftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10478,7 +10464,7 @@ impl Data {
             }
             #[cfg(feature = "HiGiftSolidLg")]
             HiIcon::HiGiftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10495,7 +10481,7 @@ impl Data {
             }
             #[cfg(feature = "HiGiftSolidMd")]
             HiIcon::HiGiftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10512,7 +10498,7 @@ impl Data {
             }
             #[cfg(feature = "HiGiftTopOutlineLg")]
             HiIcon::HiGiftTopOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10529,7 +10515,7 @@ impl Data {
             }
             #[cfg(feature = "HiGiftTopSolidLg")]
             HiIcon::HiGiftTopSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10546,7 +10532,7 @@ impl Data {
             }
             #[cfg(feature = "HiGiftTopSolidMd")]
             HiIcon::HiGiftTopSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10563,7 +10549,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAltOutlineLg")]
             HiIcon::HiGlobeAltOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10580,7 +10566,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAltSolidLg")]
             HiIcon::HiGlobeAltSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10597,7 +10583,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAltSolidMd")]
             HiIcon::HiGlobeAltSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10614,7 +10600,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAmericasOutlineLg")]
             HiIcon::HiGlobeAmericasOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10631,7 +10617,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAmericasSolidLg")]
             HiIcon::HiGlobeAmericasSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10648,7 +10634,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAmericasSolidMd")]
             HiIcon::HiGlobeAmericasSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10665,7 +10651,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAsiaAustraliaOutlineLg")]
             HiIcon::HiGlobeAsiaAustraliaOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10682,7 +10668,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAsiaAustraliaSolidLg")]
             HiIcon::HiGlobeAsiaAustraliaSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10699,7 +10685,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeAsiaAustraliaSolidMd")]
             HiIcon::HiGlobeAsiaAustraliaSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10716,7 +10702,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeEuropeAfricaOutlineLg")]
             HiIcon::HiGlobeEuropeAfricaOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10733,7 +10719,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeEuropeAfricaSolidLg")]
             HiIcon::HiGlobeEuropeAfricaSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10750,7 +10736,7 @@ impl Data {
             }
             #[cfg(feature = "HiGlobeEuropeAfricaSolidMd")]
             HiIcon::HiGlobeEuropeAfricaSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10767,7 +10753,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandRaisedOutlineLg")]
             HiIcon::HiHandRaisedOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10784,7 +10770,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandRaisedSolidLg")]
             HiIcon::HiHandRaisedSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10801,7 +10787,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandRaisedSolidMd")]
             HiIcon::HiHandRaisedSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10818,7 +10804,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandThumbDownOutlineLg")]
             HiIcon::HiHandThumbDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10835,7 +10821,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandThumbDownSolidLg")]
             HiIcon::HiHandThumbDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10852,7 +10838,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandThumbDownSolidMd")]
             HiIcon::HiHandThumbDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10869,7 +10855,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandThumbUpOutlineLg")]
             HiIcon::HiHandThumbUpOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10886,7 +10872,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandThumbUpSolidLg")]
             HiIcon::HiHandThumbUpSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10903,7 +10889,7 @@ impl Data {
             }
             #[cfg(feature = "HiHandThumbUpSolidMd")]
             HiIcon::HiHandThumbUpSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10920,7 +10906,7 @@ impl Data {
             }
             #[cfg(feature = "HiHashtagOutlineLg")]
             HiIcon::HiHashtagOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10937,7 +10923,7 @@ impl Data {
             }
             #[cfg(feature = "HiHashtagSolidLg")]
             HiIcon::HiHashtagSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10954,7 +10940,7 @@ impl Data {
             }
             #[cfg(feature = "HiHashtagSolidMd")]
             HiIcon::HiHashtagSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10971,7 +10957,7 @@ impl Data {
             }
             #[cfg(feature = "HiHeartOutlineLg")]
             HiIcon::HiHeartOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10988,7 +10974,7 @@ impl Data {
             }
             #[cfg(feature = "HiHeartSolidLg")]
             HiIcon::HiHeartSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11005,7 +10991,7 @@ impl Data {
             }
             #[cfg(feature = "HiHeartSolidMd")]
             HiIcon::HiHeartSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11022,7 +11008,7 @@ impl Data {
             }
             #[cfg(feature = "HiHomeModernOutlineLg")]
             HiIcon::HiHomeModernOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11039,7 +11025,7 @@ impl Data {
             }
             #[cfg(feature = "HiHomeModernSolidLg")]
             HiIcon::HiHomeModernSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11056,7 +11042,7 @@ impl Data {
             }
             #[cfg(feature = "HiHomeModernSolidMd")]
             HiIcon::HiHomeModernSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11073,7 +11059,7 @@ impl Data {
             }
             #[cfg(feature = "HiHomeOutlineLg")]
             HiIcon::HiHomeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11090,7 +11076,7 @@ impl Data {
             }
             #[cfg(feature = "HiHomeSolidLg")]
             HiIcon::HiHomeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11107,7 +11093,7 @@ impl Data {
             }
             #[cfg(feature = "HiHomeSolidMd")]
             HiIcon::HiHomeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11124,7 +11110,7 @@ impl Data {
             }
             #[cfg(feature = "HiIdentificationOutlineLg")]
             HiIcon::HiIdentificationOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11141,7 +11127,7 @@ impl Data {
             }
             #[cfg(feature = "HiIdentificationSolidLg")]
             HiIcon::HiIdentificationSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11158,7 +11144,7 @@ impl Data {
             }
             #[cfg(feature = "HiIdentificationSolidMd")]
             HiIcon::HiIdentificationSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11175,7 +11161,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxArrowDownOutlineLg")]
             HiIcon::HiInboxArrowDownOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11192,7 +11178,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxArrowDownSolidLg")]
             HiIcon::HiInboxArrowDownSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11209,7 +11195,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxArrowDownSolidMd")]
             HiIcon::HiInboxArrowDownSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11226,7 +11212,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxOutlineLg")]
             HiIcon::HiInboxOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11243,7 +11229,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxSolidLg")]
             HiIcon::HiInboxSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11260,7 +11246,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxSolidMd")]
             HiIcon::HiInboxSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11277,7 +11263,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxStackOutlineLg")]
             HiIcon::HiInboxStackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11294,7 +11280,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxStackSolidLg")]
             HiIcon::HiInboxStackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11311,7 +11297,7 @@ impl Data {
             }
             #[cfg(feature = "HiInboxStackSolidMd")]
             HiIcon::HiInboxStackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11328,7 +11314,7 @@ impl Data {
             }
             #[cfg(feature = "HiInformationCircleOutlineLg")]
             HiIcon::HiInformationCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11345,7 +11331,7 @@ impl Data {
             }
             #[cfg(feature = "HiInformationCircleSolidLg")]
             HiIcon::HiInformationCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11362,7 +11348,7 @@ impl Data {
             }
             #[cfg(feature = "HiInformationCircleSolidMd")]
             HiIcon::HiInformationCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11379,7 +11365,7 @@ impl Data {
             }
             #[cfg(feature = "HiKeyOutlineLg")]
             HiIcon::HiKeyOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11396,7 +11382,7 @@ impl Data {
             }
             #[cfg(feature = "HiKeySolidLg")]
             HiIcon::HiKeySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11413,7 +11399,7 @@ impl Data {
             }
             #[cfg(feature = "HiKeySolidMd")]
             HiIcon::HiKeySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11430,7 +11416,7 @@ impl Data {
             }
             #[cfg(feature = "HiLanguageOutlineLg")]
             HiIcon::HiLanguageOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11447,7 +11433,7 @@ impl Data {
             }
             #[cfg(feature = "HiLanguageSolidLg")]
             HiIcon::HiLanguageSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11464,7 +11450,7 @@ impl Data {
             }
             #[cfg(feature = "HiLanguageSolidMd")]
             HiIcon::HiLanguageSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11481,7 +11467,7 @@ impl Data {
             }
             #[cfg(feature = "HiLifebuoyOutlineLg")]
             HiIcon::HiLifebuoyOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11498,7 +11484,7 @@ impl Data {
             }
             #[cfg(feature = "HiLifebuoySolidLg")]
             HiIcon::HiLifebuoySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11515,7 +11501,7 @@ impl Data {
             }
             #[cfg(feature = "HiLifebuoySolidMd")]
             HiIcon::HiLifebuoySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11532,7 +11518,7 @@ impl Data {
             }
             #[cfg(feature = "HiLightBulbOutlineLg")]
             HiIcon::HiLightBulbOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11549,7 +11535,7 @@ impl Data {
             }
             #[cfg(feature = "HiLightBulbSolidLg")]
             HiIcon::HiLightBulbSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11566,7 +11552,7 @@ impl Data {
             }
             #[cfg(feature = "HiLightBulbSolidMd")]
             HiIcon::HiLightBulbSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11583,7 +11569,7 @@ impl Data {
             }
             #[cfg(feature = "HiLinkOutlineLg")]
             HiIcon::HiLinkOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11600,7 +11586,7 @@ impl Data {
             }
             #[cfg(feature = "HiLinkSolidLg")]
             HiIcon::HiLinkSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11617,7 +11603,7 @@ impl Data {
             }
             #[cfg(feature = "HiLinkSolidMd")]
             HiIcon::HiLinkSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11634,7 +11620,7 @@ impl Data {
             }
             #[cfg(feature = "HiListBulletOutlineLg")]
             HiIcon::HiListBulletOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11651,7 +11637,7 @@ impl Data {
             }
             #[cfg(feature = "HiListBulletSolidLg")]
             HiIcon::HiListBulletSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11668,7 +11654,7 @@ impl Data {
             }
             #[cfg(feature = "HiListBulletSolidMd")]
             HiIcon::HiListBulletSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11685,7 +11671,7 @@ impl Data {
             }
             #[cfg(feature = "HiLockClosedOutlineLg")]
             HiIcon::HiLockClosedOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11702,7 +11688,7 @@ impl Data {
             }
             #[cfg(feature = "HiLockClosedSolidLg")]
             HiIcon::HiLockClosedSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11719,7 +11705,7 @@ impl Data {
             }
             #[cfg(feature = "HiLockClosedSolidMd")]
             HiIcon::HiLockClosedSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11736,7 +11722,7 @@ impl Data {
             }
             #[cfg(feature = "HiLockOpenOutlineLg")]
             HiIcon::HiLockOpenOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11753,7 +11739,7 @@ impl Data {
             }
             #[cfg(feature = "HiLockOpenSolidLg")]
             HiIcon::HiLockOpenSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11770,7 +11756,7 @@ impl Data {
             }
             #[cfg(feature = "HiLockOpenSolidMd")]
             HiIcon::HiLockOpenSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11787,7 +11773,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassCircleOutlineLg")]
             HiIcon::HiMagnifyingGlassCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11804,7 +11790,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassCircleSolidLg")]
             HiIcon::HiMagnifyingGlassCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11821,7 +11807,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassCircleSolidMd")]
             HiIcon::HiMagnifyingGlassCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11838,7 +11824,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassMinusOutlineLg")]
             HiIcon::HiMagnifyingGlassMinusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11855,7 +11841,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassMinusSolidLg")]
             HiIcon::HiMagnifyingGlassMinusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11872,7 +11858,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassMinusSolidMd")]
             HiIcon::HiMagnifyingGlassMinusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11889,7 +11875,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassOutlineLg")]
             HiIcon::HiMagnifyingGlassOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11906,7 +11892,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassPlusOutlineLg")]
             HiIcon::HiMagnifyingGlassPlusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11923,7 +11909,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassPlusSolidLg")]
             HiIcon::HiMagnifyingGlassPlusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11940,7 +11926,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassPlusSolidMd")]
             HiIcon::HiMagnifyingGlassPlusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11957,7 +11943,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassSolidLg")]
             HiIcon::HiMagnifyingGlassSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11974,7 +11960,7 @@ impl Data {
             }
             #[cfg(feature = "HiMagnifyingGlassSolidMd")]
             HiIcon::HiMagnifyingGlassSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11991,7 +11977,7 @@ impl Data {
             }
             #[cfg(feature = "HiMapOutlineLg")]
             HiIcon::HiMapOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12008,7 +11994,7 @@ impl Data {
             }
             #[cfg(feature = "HiMapPinOutlineLg")]
             HiIcon::HiMapPinOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12025,7 +12011,7 @@ impl Data {
             }
             #[cfg(feature = "HiMapPinSolidLg")]
             HiIcon::HiMapPinSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12042,7 +12028,7 @@ impl Data {
             }
             #[cfg(feature = "HiMapPinSolidMd")]
             HiIcon::HiMapPinSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12059,7 +12045,7 @@ impl Data {
             }
             #[cfg(feature = "HiMapSolidLg")]
             HiIcon::HiMapSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12076,7 +12062,7 @@ impl Data {
             }
             #[cfg(feature = "HiMapSolidMd")]
             HiIcon::HiMapSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12093,7 +12079,7 @@ impl Data {
             }
             #[cfg(feature = "HiMegaphoneOutlineLg")]
             HiIcon::HiMegaphoneOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12110,7 +12096,7 @@ impl Data {
             }
             #[cfg(feature = "HiMegaphoneSolidLg")]
             HiIcon::HiMegaphoneSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12127,7 +12113,7 @@ impl Data {
             }
             #[cfg(feature = "HiMegaphoneSolidMd")]
             HiIcon::HiMegaphoneSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12144,7 +12130,7 @@ impl Data {
             }
             #[cfg(feature = "HiMicrophoneOutlineLg")]
             HiIcon::HiMicrophoneOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12161,7 +12147,7 @@ impl Data {
             }
             #[cfg(feature = "HiMicrophoneSolidLg")]
             HiIcon::HiMicrophoneSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12178,7 +12164,7 @@ impl Data {
             }
             #[cfg(feature = "HiMicrophoneSolidMd")]
             HiIcon::HiMicrophoneSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12195,7 +12181,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusCircleOutlineLg")]
             HiIcon::HiMinusCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12212,7 +12198,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusCircleSolidLg")]
             HiIcon::HiMinusCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12229,7 +12215,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusCircleSolidMd")]
             HiIcon::HiMinusCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12246,7 +12232,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusOutlineLg")]
             HiIcon::HiMinusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12263,7 +12249,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusSmallOutlineLg")]
             HiIcon::HiMinusSmallOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12280,7 +12266,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusSmallSolidLg")]
             HiIcon::HiMinusSmallSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12297,7 +12283,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusSmallSolidMd")]
             HiIcon::HiMinusSmallSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12314,7 +12300,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusSolidLg")]
             HiIcon::HiMinusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12331,7 +12317,7 @@ impl Data {
             }
             #[cfg(feature = "HiMinusSolidMd")]
             HiIcon::HiMinusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12348,7 +12334,7 @@ impl Data {
             }
             #[cfg(feature = "HiMoonOutlineLg")]
             HiIcon::HiMoonOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12365,7 +12351,7 @@ impl Data {
             }
             #[cfg(feature = "HiMoonSolidLg")]
             HiIcon::HiMoonSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12382,7 +12368,7 @@ impl Data {
             }
             #[cfg(feature = "HiMoonSolidMd")]
             HiIcon::HiMoonSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12399,7 +12385,7 @@ impl Data {
             }
             #[cfg(feature = "HiMusicalNoteOutlineLg")]
             HiIcon::HiMusicalNoteOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12416,7 +12402,7 @@ impl Data {
             }
             #[cfg(feature = "HiMusicalNoteSolidLg")]
             HiIcon::HiMusicalNoteSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12433,7 +12419,7 @@ impl Data {
             }
             #[cfg(feature = "HiMusicalNoteSolidMd")]
             HiIcon::HiMusicalNoteSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12450,7 +12436,7 @@ impl Data {
             }
             #[cfg(feature = "HiNewspaperOutlineLg")]
             HiIcon::HiNewspaperOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12467,7 +12453,7 @@ impl Data {
             }
             #[cfg(feature = "HiNewspaperSolidLg")]
             HiIcon::HiNewspaperSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12484,7 +12470,7 @@ impl Data {
             }
             #[cfg(feature = "HiNewspaperSolidMd")]
             HiIcon::HiNewspaperSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12501,7 +12487,7 @@ impl Data {
             }
             #[cfg(feature = "HiNoSymbolOutlineLg")]
             HiIcon::HiNoSymbolOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12518,7 +12504,7 @@ impl Data {
             }
             #[cfg(feature = "HiNoSymbolSolidLg")]
             HiIcon::HiNoSymbolSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12535,7 +12521,7 @@ impl Data {
             }
             #[cfg(feature = "HiNoSymbolSolidMd")]
             HiIcon::HiNoSymbolSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12552,7 +12538,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaintBrushOutlineLg")]
             HiIcon::HiPaintBrushOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12569,7 +12555,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaintBrushSolidLg")]
             HiIcon::HiPaintBrushSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12586,7 +12572,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaintBrushSolidMd")]
             HiIcon::HiPaintBrushSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12603,7 +12589,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaperAirplaneOutlineLg")]
             HiIcon::HiPaperAirplaneOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12620,7 +12606,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaperAirplaneSolidLg")]
             HiIcon::HiPaperAirplaneSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12637,7 +12623,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaperAirplaneSolidMd")]
             HiIcon::HiPaperAirplaneSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12654,7 +12640,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaperClipOutlineLg")]
             HiIcon::HiPaperClipOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12671,7 +12657,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaperClipSolidLg")]
             HiIcon::HiPaperClipSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12688,7 +12674,7 @@ impl Data {
             }
             #[cfg(feature = "HiPaperClipSolidMd")]
             HiIcon::HiPaperClipSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12705,7 +12691,7 @@ impl Data {
             }
             #[cfg(feature = "HiPauseCircleOutlineLg")]
             HiIcon::HiPauseCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12722,7 +12708,7 @@ impl Data {
             }
             #[cfg(feature = "HiPauseCircleSolidLg")]
             HiIcon::HiPauseCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12739,7 +12725,7 @@ impl Data {
             }
             #[cfg(feature = "HiPauseCircleSolidMd")]
             HiIcon::HiPauseCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12756,7 +12742,7 @@ impl Data {
             }
             #[cfg(feature = "HiPauseOutlineLg")]
             HiIcon::HiPauseOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12773,7 +12759,7 @@ impl Data {
             }
             #[cfg(feature = "HiPauseSolidLg")]
             HiIcon::HiPauseSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12790,7 +12776,7 @@ impl Data {
             }
             #[cfg(feature = "HiPauseSolidMd")]
             HiIcon::HiPauseSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12807,7 +12793,7 @@ impl Data {
             }
             #[cfg(feature = "HiPencilOutlineLg")]
             HiIcon::HiPencilOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12824,7 +12810,7 @@ impl Data {
             }
             #[cfg(feature = "HiPencilSolidLg")]
             HiIcon::HiPencilSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12841,7 +12827,7 @@ impl Data {
             }
             #[cfg(feature = "HiPencilSolidMd")]
             HiIcon::HiPencilSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12858,7 +12844,7 @@ impl Data {
             }
             #[cfg(feature = "HiPencilSquareOutlineLg")]
             HiIcon::HiPencilSquareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12875,7 +12861,7 @@ impl Data {
             }
             #[cfg(feature = "HiPencilSquareSolidLg")]
             HiIcon::HiPencilSquareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12892,7 +12878,7 @@ impl Data {
             }
             #[cfg(feature = "HiPencilSquareSolidMd")]
             HiIcon::HiPencilSquareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12909,7 +12895,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneArrowDownLeftOutlineLg")]
             HiIcon::HiPhoneArrowDownLeftOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12926,7 +12912,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneArrowDownLeftSolidLg")]
             HiIcon::HiPhoneArrowDownLeftSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12943,7 +12929,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneArrowDownLeftSolidMd")]
             HiIcon::HiPhoneArrowDownLeftSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12960,7 +12946,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneArrowUpRightOutlineLg")]
             HiIcon::HiPhoneArrowUpRightOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12977,7 +12963,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneArrowUpRightSolidLg")]
             HiIcon::HiPhoneArrowUpRightSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12994,7 +12980,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneArrowUpRightSolidMd")]
             HiIcon::HiPhoneArrowUpRightSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13011,7 +12997,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneOutlineLg")]
             HiIcon::HiPhoneOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13028,7 +13014,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneSolidLg")]
             HiIcon::HiPhoneSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13045,7 +13031,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneSolidMd")]
             HiIcon::HiPhoneSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13062,7 +13048,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneXMarkOutlineLg")]
             HiIcon::HiPhoneXMarkOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13079,7 +13065,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneXMarkSolidLg")]
             HiIcon::HiPhoneXMarkSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13096,7 +13082,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhoneXMarkSolidMd")]
             HiIcon::HiPhoneXMarkSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13113,7 +13099,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhotoOutlineLg")]
             HiIcon::HiPhotoOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13130,7 +13116,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhotoSolidLg")]
             HiIcon::HiPhotoSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13147,7 +13133,7 @@ impl Data {
             }
             #[cfg(feature = "HiPhotoSolidMd")]
             HiIcon::HiPhotoSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13164,7 +13150,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayCircleOutlineLg")]
             HiIcon::HiPlayCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13181,7 +13167,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayCircleSolidLg")]
             HiIcon::HiPlayCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13198,7 +13184,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayCircleSolidMd")]
             HiIcon::HiPlayCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13215,7 +13201,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayOutlineLg")]
             HiIcon::HiPlayOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13232,7 +13218,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayPauseOutlineLg")]
             HiIcon::HiPlayPauseOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13249,7 +13235,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayPauseSolidLg")]
             HiIcon::HiPlayPauseSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13266,7 +13252,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlayPauseSolidMd")]
             HiIcon::HiPlayPauseSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13283,7 +13269,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlaySolidLg")]
             HiIcon::HiPlaySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13300,7 +13286,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlaySolidMd")]
             HiIcon::HiPlaySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13317,7 +13303,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusCircleOutlineLg")]
             HiIcon::HiPlusCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13334,7 +13320,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusCircleSolidLg")]
             HiIcon::HiPlusCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13351,7 +13337,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusCircleSolidMd")]
             HiIcon::HiPlusCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13368,7 +13354,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusOutlineLg")]
             HiIcon::HiPlusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13385,7 +13371,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusSmallOutlineLg")]
             HiIcon::HiPlusSmallOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13402,7 +13388,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusSmallSolidLg")]
             HiIcon::HiPlusSmallSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13419,7 +13405,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusSmallSolidMd")]
             HiIcon::HiPlusSmallSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13436,7 +13422,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusSolidLg")]
             HiIcon::HiPlusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13453,7 +13439,7 @@ impl Data {
             }
             #[cfg(feature = "HiPlusSolidMd")]
             HiIcon::HiPlusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13470,7 +13456,7 @@ impl Data {
             }
             #[cfg(feature = "HiPowerOutlineLg")]
             HiIcon::HiPowerOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13487,7 +13473,7 @@ impl Data {
             }
             #[cfg(feature = "HiPowerSolidLg")]
             HiIcon::HiPowerSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13504,7 +13490,7 @@ impl Data {
             }
             #[cfg(feature = "HiPowerSolidMd")]
             HiIcon::HiPowerSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13521,7 +13507,7 @@ impl Data {
             }
             #[cfg(feature = "HiPresentationChartBarOutlineLg")]
             HiIcon::HiPresentationChartBarOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13538,7 +13524,7 @@ impl Data {
             }
             #[cfg(feature = "HiPresentationChartBarSolidLg")]
             HiIcon::HiPresentationChartBarSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13555,7 +13541,7 @@ impl Data {
             }
             #[cfg(feature = "HiPresentationChartBarSolidMd")]
             HiIcon::HiPresentationChartBarSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13572,7 +13558,7 @@ impl Data {
             }
             #[cfg(feature = "HiPresentationChartLineOutlineLg")]
             HiIcon::HiPresentationChartLineOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13589,7 +13575,7 @@ impl Data {
             }
             #[cfg(feature = "HiPresentationChartLineSolidLg")]
             HiIcon::HiPresentationChartLineSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13606,7 +13592,7 @@ impl Data {
             }
             #[cfg(feature = "HiPresentationChartLineSolidMd")]
             HiIcon::HiPresentationChartLineSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13623,7 +13609,7 @@ impl Data {
             }
             #[cfg(feature = "HiPrinterOutlineLg")]
             HiIcon::HiPrinterOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13640,7 +13626,7 @@ impl Data {
             }
             #[cfg(feature = "HiPrinterSolidLg")]
             HiIcon::HiPrinterSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13657,7 +13643,7 @@ impl Data {
             }
             #[cfg(feature = "HiPrinterSolidMd")]
             HiIcon::HiPrinterSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13674,7 +13660,7 @@ impl Data {
             }
             #[cfg(feature = "HiPuzzlePieceOutlineLg")]
             HiIcon::HiPuzzlePieceOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13691,7 +13677,7 @@ impl Data {
             }
             #[cfg(feature = "HiPuzzlePieceSolidLg")]
             HiIcon::HiPuzzlePieceSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13708,7 +13694,7 @@ impl Data {
             }
             #[cfg(feature = "HiPuzzlePieceSolidMd")]
             HiIcon::HiPuzzlePieceSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13725,7 +13711,7 @@ impl Data {
             }
             #[cfg(feature = "HiQrCodeOutlineLg")]
             HiIcon::HiQrCodeOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13742,7 +13728,7 @@ impl Data {
             }
             #[cfg(feature = "HiQrCodeSolidLg")]
             HiIcon::HiQrCodeSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13759,7 +13745,7 @@ impl Data {
             }
             #[cfg(feature = "HiQrCodeSolidMd")]
             HiIcon::HiQrCodeSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13776,7 +13762,7 @@ impl Data {
             }
             #[cfg(feature = "HiQuestionMarkCircleOutlineLg")]
             HiIcon::HiQuestionMarkCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13793,7 +13779,7 @@ impl Data {
             }
             #[cfg(feature = "HiQuestionMarkCircleSolidLg")]
             HiIcon::HiQuestionMarkCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13810,7 +13796,7 @@ impl Data {
             }
             #[cfg(feature = "HiQuestionMarkCircleSolidMd")]
             HiIcon::HiQuestionMarkCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13827,7 +13813,7 @@ impl Data {
             }
             #[cfg(feature = "HiQueueListOutlineLg")]
             HiIcon::HiQueueListOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13844,7 +13830,7 @@ impl Data {
             }
             #[cfg(feature = "HiQueueListSolidLg")]
             HiIcon::HiQueueListSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13861,7 +13847,7 @@ impl Data {
             }
             #[cfg(feature = "HiQueueListSolidMd")]
             HiIcon::HiQueueListSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13878,7 +13864,7 @@ impl Data {
             }
             #[cfg(feature = "HiRadioOutlineLg")]
             HiIcon::HiRadioOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13895,7 +13881,7 @@ impl Data {
             }
             #[cfg(feature = "HiRadioSolidLg")]
             HiIcon::HiRadioSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13912,7 +13898,7 @@ impl Data {
             }
             #[cfg(feature = "HiRadioSolidMd")]
             HiIcon::HiRadioSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13929,7 +13915,7 @@ impl Data {
             }
             #[cfg(feature = "HiReceiptPercentOutlineLg")]
             HiIcon::HiReceiptPercentOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13946,7 +13932,7 @@ impl Data {
             }
             #[cfg(feature = "HiReceiptPercentSolidLg")]
             HiIcon::HiReceiptPercentSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13963,7 +13949,7 @@ impl Data {
             }
             #[cfg(feature = "HiReceiptPercentSolidMd")]
             HiIcon::HiReceiptPercentSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13980,7 +13966,7 @@ impl Data {
             }
             #[cfg(feature = "HiReceiptRefundOutlineLg")]
             HiIcon::HiReceiptRefundOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13997,7 +13983,7 @@ impl Data {
             }
             #[cfg(feature = "HiReceiptRefundSolidLg")]
             HiIcon::HiReceiptRefundSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14014,7 +14000,7 @@ impl Data {
             }
             #[cfg(feature = "HiReceiptRefundSolidMd")]
             HiIcon::HiReceiptRefundSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14031,7 +14017,7 @@ impl Data {
             }
             #[cfg(feature = "HiRectangleGroupOutlineLg")]
             HiIcon::HiRectangleGroupOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14048,7 +14034,7 @@ impl Data {
             }
             #[cfg(feature = "HiRectangleGroupSolidLg")]
             HiIcon::HiRectangleGroupSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14065,7 +14051,7 @@ impl Data {
             }
             #[cfg(feature = "HiRectangleGroupSolidMd")]
             HiIcon::HiRectangleGroupSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14082,7 +14068,7 @@ impl Data {
             }
             #[cfg(feature = "HiRectangleStackOutlineLg")]
             HiIcon::HiRectangleStackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14099,7 +14085,7 @@ impl Data {
             }
             #[cfg(feature = "HiRectangleStackSolidLg")]
             HiIcon::HiRectangleStackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14116,7 +14102,7 @@ impl Data {
             }
             #[cfg(feature = "HiRectangleStackSolidMd")]
             HiIcon::HiRectangleStackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14133,7 +14119,7 @@ impl Data {
             }
             #[cfg(feature = "HiRocketLaunchOutlineLg")]
             HiIcon::HiRocketLaunchOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14150,7 +14136,7 @@ impl Data {
             }
             #[cfg(feature = "HiRocketLaunchSolidLg")]
             HiIcon::HiRocketLaunchSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14167,7 +14153,7 @@ impl Data {
             }
             #[cfg(feature = "HiRocketLaunchSolidMd")]
             HiIcon::HiRocketLaunchSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14184,7 +14170,7 @@ impl Data {
             }
             #[cfg(feature = "HiRssOutlineLg")]
             HiIcon::HiRssOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14201,7 +14187,7 @@ impl Data {
             }
             #[cfg(feature = "HiRssSolidLg")]
             HiIcon::HiRssSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14218,7 +14204,7 @@ impl Data {
             }
             #[cfg(feature = "HiRssSolidMd")]
             HiIcon::HiRssSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14235,7 +14221,7 @@ impl Data {
             }
             #[cfg(feature = "HiScaleOutlineLg")]
             HiIcon::HiScaleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14252,7 +14238,7 @@ impl Data {
             }
             #[cfg(feature = "HiScaleSolidLg")]
             HiIcon::HiScaleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14269,7 +14255,7 @@ impl Data {
             }
             #[cfg(feature = "HiScaleSolidMd")]
             HiIcon::HiScaleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14286,7 +14272,7 @@ impl Data {
             }
             #[cfg(feature = "HiScissorsOutlineLg")]
             HiIcon::HiScissorsOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14303,7 +14289,7 @@ impl Data {
             }
             #[cfg(feature = "HiScissorsSolidLg")]
             HiIcon::HiScissorsSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14320,7 +14306,7 @@ impl Data {
             }
             #[cfg(feature = "HiScissorsSolidMd")]
             HiIcon::HiScissorsSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14337,7 +14323,7 @@ impl Data {
             }
             #[cfg(feature = "HiServerOutlineLg")]
             HiIcon::HiServerOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14354,7 +14340,7 @@ impl Data {
             }
             #[cfg(feature = "HiServerSolidLg")]
             HiIcon::HiServerSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14371,7 +14357,7 @@ impl Data {
             }
             #[cfg(feature = "HiServerSolidMd")]
             HiIcon::HiServerSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14388,7 +14374,7 @@ impl Data {
             }
             #[cfg(feature = "HiServerStackOutlineLg")]
             HiIcon::HiServerStackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14405,7 +14391,7 @@ impl Data {
             }
             #[cfg(feature = "HiServerStackSolidLg")]
             HiIcon::HiServerStackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14422,7 +14408,7 @@ impl Data {
             }
             #[cfg(feature = "HiServerStackSolidMd")]
             HiIcon::HiServerStackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14439,7 +14425,7 @@ impl Data {
             }
             #[cfg(feature = "HiShareOutlineLg")]
             HiIcon::HiShareOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14456,7 +14442,7 @@ impl Data {
             }
             #[cfg(feature = "HiShareSolidLg")]
             HiIcon::HiShareSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14473,7 +14459,7 @@ impl Data {
             }
             #[cfg(feature = "HiShareSolidMd")]
             HiIcon::HiShareSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14490,7 +14476,7 @@ impl Data {
             }
             #[cfg(feature = "HiShieldCheckOutlineLg")]
             HiIcon::HiShieldCheckOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14507,7 +14493,7 @@ impl Data {
             }
             #[cfg(feature = "HiShieldCheckSolidLg")]
             HiIcon::HiShieldCheckSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14524,7 +14510,7 @@ impl Data {
             }
             #[cfg(feature = "HiShieldCheckSolidMd")]
             HiIcon::HiShieldCheckSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14541,7 +14527,7 @@ impl Data {
             }
             #[cfg(feature = "HiShieldExclamationOutlineLg")]
             HiIcon::HiShieldExclamationOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14558,7 +14544,7 @@ impl Data {
             }
             #[cfg(feature = "HiShieldExclamationSolidLg")]
             HiIcon::HiShieldExclamationSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14575,7 +14561,7 @@ impl Data {
             }
             #[cfg(feature = "HiShieldExclamationSolidMd")]
             HiIcon::HiShieldExclamationSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14592,7 +14578,7 @@ impl Data {
             }
             #[cfg(feature = "HiShoppingBagOutlineLg")]
             HiIcon::HiShoppingBagOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14609,7 +14595,7 @@ impl Data {
             }
             #[cfg(feature = "HiShoppingBagSolidLg")]
             HiIcon::HiShoppingBagSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14626,7 +14612,7 @@ impl Data {
             }
             #[cfg(feature = "HiShoppingBagSolidMd")]
             HiIcon::HiShoppingBagSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14643,7 +14629,7 @@ impl Data {
             }
             #[cfg(feature = "HiShoppingCartOutlineLg")]
             HiIcon::HiShoppingCartOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14660,7 +14646,7 @@ impl Data {
             }
             #[cfg(feature = "HiShoppingCartSolidLg")]
             HiIcon::HiShoppingCartSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14677,7 +14663,7 @@ impl Data {
             }
             #[cfg(feature = "HiShoppingCartSolidMd")]
             HiIcon::HiShoppingCartSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14694,7 +14680,7 @@ impl Data {
             }
             #[cfg(feature = "HiSignalOutlineLg")]
             HiIcon::HiSignalOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14711,7 +14697,7 @@ impl Data {
             }
             #[cfg(feature = "HiSignalSlashOutlineLg")]
             HiIcon::HiSignalSlashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14728,7 +14714,7 @@ impl Data {
             }
             #[cfg(feature = "HiSignalSlashSolidLg")]
             HiIcon::HiSignalSlashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14745,7 +14731,7 @@ impl Data {
             }
             #[cfg(feature = "HiSignalSlashSolidMd")]
             HiIcon::HiSignalSlashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14762,7 +14748,7 @@ impl Data {
             }
             #[cfg(feature = "HiSignalSolidLg")]
             HiIcon::HiSignalSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14779,7 +14765,7 @@ impl Data {
             }
             #[cfg(feature = "HiSignalSolidMd")]
             HiIcon::HiSignalSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14796,7 +14782,7 @@ impl Data {
             }
             #[cfg(feature = "HiSparklesOutlineLg")]
             HiIcon::HiSparklesOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14813,7 +14799,7 @@ impl Data {
             }
             #[cfg(feature = "HiSparklesSolidLg")]
             HiIcon::HiSparklesSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14830,7 +14816,7 @@ impl Data {
             }
             #[cfg(feature = "HiSparklesSolidMd")]
             HiIcon::HiSparklesSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14847,7 +14833,7 @@ impl Data {
             }
             #[cfg(feature = "HiSpeakerWaveOutlineLg")]
             HiIcon::HiSpeakerWaveOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14864,7 +14850,7 @@ impl Data {
             }
             #[cfg(feature = "HiSpeakerWaveSolidLg")]
             HiIcon::HiSpeakerWaveSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14881,7 +14867,7 @@ impl Data {
             }
             #[cfg(feature = "HiSpeakerWaveSolidMd")]
             HiIcon::HiSpeakerWaveSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14898,7 +14884,7 @@ impl Data {
             }
             #[cfg(feature = "HiSpeakerXMarkOutlineLg")]
             HiIcon::HiSpeakerXMarkOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14915,7 +14901,7 @@ impl Data {
             }
             #[cfg(feature = "HiSpeakerXMarkSolidLg")]
             HiIcon::HiSpeakerXMarkSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14932,7 +14918,7 @@ impl Data {
             }
             #[cfg(feature = "HiSpeakerXMarkSolidMd")]
             HiIcon::HiSpeakerXMarkSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14949,7 +14935,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquare2StackOutlineLg")]
             HiIcon::HiSquare2StackOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14966,7 +14952,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquare2StackSolidLg")]
             HiIcon::HiSquare2StackSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14983,7 +14969,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquare2StackSolidMd")]
             HiIcon::HiSquare2StackSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15000,7 +14986,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquare3Stack3dOutlineLg")]
             HiIcon::HiSquare3Stack3dOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15017,7 +15003,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquare3Stack3dSolidLg")]
             HiIcon::HiSquare3Stack3dSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15034,7 +15020,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquare3Stack3dSolidMd")]
             HiIcon::HiSquare3Stack3dSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15051,7 +15037,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquares2x2OutlineLg")]
             HiIcon::HiSquares2x2OutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15068,7 +15054,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquares2x2SolidLg")]
             HiIcon::HiSquares2x2SolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15085,7 +15071,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquares2x2SolidMd")]
             HiIcon::HiSquares2x2SolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15102,7 +15088,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquaresPlusOutlineLg")]
             HiIcon::HiSquaresPlusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15119,7 +15105,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquaresPlusSolidLg")]
             HiIcon::HiSquaresPlusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15136,7 +15122,7 @@ impl Data {
             }
             #[cfg(feature = "HiSquaresPlusSolidMd")]
             HiIcon::HiSquaresPlusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15153,7 +15139,7 @@ impl Data {
             }
             #[cfg(feature = "HiStarOutlineLg")]
             HiIcon::HiStarOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15170,7 +15156,7 @@ impl Data {
             }
             #[cfg(feature = "HiStarSolidLg")]
             HiIcon::HiStarSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15187,7 +15173,7 @@ impl Data {
             }
             #[cfg(feature = "HiStarSolidMd")]
             HiIcon::HiStarSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15204,7 +15190,7 @@ impl Data {
             }
             #[cfg(feature = "HiStopCircleOutlineLg")]
             HiIcon::HiStopCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15221,7 +15207,7 @@ impl Data {
             }
             #[cfg(feature = "HiStopCircleSolidLg")]
             HiIcon::HiStopCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15238,7 +15224,7 @@ impl Data {
             }
             #[cfg(feature = "HiStopCircleSolidMd")]
             HiIcon::HiStopCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15255,7 +15241,7 @@ impl Data {
             }
             #[cfg(feature = "HiStopOutlineLg")]
             HiIcon::HiStopOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15272,7 +15258,7 @@ impl Data {
             }
             #[cfg(feature = "HiStopSolidLg")]
             HiIcon::HiStopSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15289,7 +15275,7 @@ impl Data {
             }
             #[cfg(feature = "HiStopSolidMd")]
             HiIcon::HiStopSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15306,7 +15292,7 @@ impl Data {
             }
             #[cfg(feature = "HiSunOutlineLg")]
             HiIcon::HiSunOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15323,7 +15309,7 @@ impl Data {
             }
             #[cfg(feature = "HiSunSolidLg")]
             HiIcon::HiSunSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15340,7 +15326,7 @@ impl Data {
             }
             #[cfg(feature = "HiSunSolidMd")]
             HiIcon::HiSunSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15357,7 +15343,7 @@ impl Data {
             }
             #[cfg(feature = "HiSwatchOutlineLg")]
             HiIcon::HiSwatchOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15374,7 +15360,7 @@ impl Data {
             }
             #[cfg(feature = "HiSwatchSolidLg")]
             HiIcon::HiSwatchSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15391,7 +15377,7 @@ impl Data {
             }
             #[cfg(feature = "HiSwatchSolidMd")]
             HiIcon::HiSwatchSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15408,7 +15394,7 @@ impl Data {
             }
             #[cfg(feature = "HiTableCellsOutlineLg")]
             HiIcon::HiTableCellsOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15425,7 +15411,7 @@ impl Data {
             }
             #[cfg(feature = "HiTableCellsSolidLg")]
             HiIcon::HiTableCellsSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15442,7 +15428,7 @@ impl Data {
             }
             #[cfg(feature = "HiTableCellsSolidMd")]
             HiIcon::HiTableCellsSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15459,7 +15445,7 @@ impl Data {
             }
             #[cfg(feature = "HiTagOutlineLg")]
             HiIcon::HiTagOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15476,7 +15462,7 @@ impl Data {
             }
             #[cfg(feature = "HiTagSolidLg")]
             HiIcon::HiTagSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15493,7 +15479,7 @@ impl Data {
             }
             #[cfg(feature = "HiTagSolidMd")]
             HiIcon::HiTagSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15510,7 +15496,7 @@ impl Data {
             }
             #[cfg(feature = "HiTicketOutlineLg")]
             HiIcon::HiTicketOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15527,7 +15513,7 @@ impl Data {
             }
             #[cfg(feature = "HiTicketSolidLg")]
             HiIcon::HiTicketSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15544,7 +15530,7 @@ impl Data {
             }
             #[cfg(feature = "HiTicketSolidMd")]
             HiIcon::HiTicketSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15561,7 +15547,7 @@ impl Data {
             }
             #[cfg(feature = "HiTrashOutlineLg")]
             HiIcon::HiTrashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15578,7 +15564,7 @@ impl Data {
             }
             #[cfg(feature = "HiTrashSolidLg")]
             HiIcon::HiTrashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15595,7 +15581,7 @@ impl Data {
             }
             #[cfg(feature = "HiTrashSolidMd")]
             HiIcon::HiTrashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15612,7 +15598,7 @@ impl Data {
             }
             #[cfg(feature = "HiTrophyOutlineLg")]
             HiIcon::HiTrophyOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15629,7 +15615,7 @@ impl Data {
             }
             #[cfg(feature = "HiTrophySolidLg")]
             HiIcon::HiTrophySolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15646,7 +15632,7 @@ impl Data {
             }
             #[cfg(feature = "HiTrophySolidMd")]
             HiIcon::HiTrophySolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15663,7 +15649,7 @@ impl Data {
             }
             #[cfg(feature = "HiTruckOutlineLg")]
             HiIcon::HiTruckOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15680,7 +15666,7 @@ impl Data {
             }
             #[cfg(feature = "HiTruckSolidLg")]
             HiIcon::HiTruckSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15697,7 +15683,7 @@ impl Data {
             }
             #[cfg(feature = "HiTruckSolidMd")]
             HiIcon::HiTruckSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15714,7 +15700,7 @@ impl Data {
             }
             #[cfg(feature = "HiTvOutlineLg")]
             HiIcon::HiTvOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15731,7 +15717,7 @@ impl Data {
             }
             #[cfg(feature = "HiTvSolidLg")]
             HiIcon::HiTvSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15748,7 +15734,7 @@ impl Data {
             }
             #[cfg(feature = "HiTvSolidMd")]
             HiIcon::HiTvSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15765,7 +15751,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserCircleOutlineLg")]
             HiIcon::HiUserCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15782,7 +15768,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserCircleSolidLg")]
             HiIcon::HiUserCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15799,7 +15785,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserCircleSolidMd")]
             HiIcon::HiUserCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15816,7 +15802,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserGroupOutlineLg")]
             HiIcon::HiUserGroupOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15833,7 +15819,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserGroupSolidLg")]
             HiIcon::HiUserGroupSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15850,7 +15836,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserGroupSolidMd")]
             HiIcon::HiUserGroupSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15867,7 +15853,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserMinusOutlineLg")]
             HiIcon::HiUserMinusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15884,7 +15870,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserMinusSolidLg")]
             HiIcon::HiUserMinusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15901,7 +15887,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserMinusSolidMd")]
             HiIcon::HiUserMinusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15918,7 +15904,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserOutlineLg")]
             HiIcon::HiUserOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15935,7 +15921,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserPlusOutlineLg")]
             HiIcon::HiUserPlusOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15952,7 +15938,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserPlusSolidLg")]
             HiIcon::HiUserPlusSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15969,7 +15955,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserPlusSolidMd")]
             HiIcon::HiUserPlusSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15986,7 +15972,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserSolidLg")]
             HiIcon::HiUserSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16003,7 +15989,7 @@ impl Data {
             }
             #[cfg(feature = "HiUserSolidMd")]
             HiIcon::HiUserSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16020,7 +16006,7 @@ impl Data {
             }
             #[cfg(feature = "HiUsersOutlineLg")]
             HiIcon::HiUsersOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16037,7 +16023,7 @@ impl Data {
             }
             #[cfg(feature = "HiUsersSolidLg")]
             HiIcon::HiUsersSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16054,7 +16040,7 @@ impl Data {
             }
             #[cfg(feature = "HiUsersSolidMd")]
             HiIcon::HiUsersSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16071,7 +16057,7 @@ impl Data {
             }
             #[cfg(feature = "HiVariableOutlineLg")]
             HiIcon::HiVariableOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16088,7 +16074,7 @@ impl Data {
             }
             #[cfg(feature = "HiVariableSolidLg")]
             HiIcon::HiVariableSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16105,7 +16091,7 @@ impl Data {
             }
             #[cfg(feature = "HiVariableSolidMd")]
             HiIcon::HiVariableSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16122,7 +16108,7 @@ impl Data {
             }
             #[cfg(feature = "HiVideoCameraOutlineLg")]
             HiIcon::HiVideoCameraOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16139,7 +16125,7 @@ impl Data {
             }
             #[cfg(feature = "HiVideoCameraSlashOutlineLg")]
             HiIcon::HiVideoCameraSlashOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16156,7 +16142,7 @@ impl Data {
             }
             #[cfg(feature = "HiVideoCameraSlashSolidLg")]
             HiIcon::HiVideoCameraSlashSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16173,7 +16159,7 @@ impl Data {
             }
             #[cfg(feature = "HiVideoCameraSlashSolidMd")]
             HiIcon::HiVideoCameraSlashSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16190,7 +16176,7 @@ impl Data {
             }
             #[cfg(feature = "HiVideoCameraSolidLg")]
             HiIcon::HiVideoCameraSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16207,7 +16193,7 @@ impl Data {
             }
             #[cfg(feature = "HiVideoCameraSolidMd")]
             HiIcon::HiVideoCameraSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16224,7 +16210,7 @@ impl Data {
             }
             #[cfg(feature = "HiViewColumnsOutlineLg")]
             HiIcon::HiViewColumnsOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16241,7 +16227,7 @@ impl Data {
             }
             #[cfg(feature = "HiViewColumnsSolidLg")]
             HiIcon::HiViewColumnsSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16258,7 +16244,7 @@ impl Data {
             }
             #[cfg(feature = "HiViewColumnsSolidMd")]
             HiIcon::HiViewColumnsSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16275,7 +16261,7 @@ impl Data {
             }
             #[cfg(feature = "HiViewfinderCircleOutlineLg")]
             HiIcon::HiViewfinderCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16292,7 +16278,7 @@ impl Data {
             }
             #[cfg(feature = "HiViewfinderCircleSolidLg")]
             HiIcon::HiViewfinderCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16309,7 +16295,7 @@ impl Data {
             }
             #[cfg(feature = "HiViewfinderCircleSolidMd")]
             HiIcon::HiViewfinderCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16326,7 +16312,7 @@ impl Data {
             }
             #[cfg(feature = "HiWalletOutlineLg")]
             HiIcon::HiWalletOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16343,7 +16329,7 @@ impl Data {
             }
             #[cfg(feature = "HiWalletSolidLg")]
             HiIcon::HiWalletSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16360,7 +16346,7 @@ impl Data {
             }
             #[cfg(feature = "HiWalletSolidMd")]
             HiIcon::HiWalletSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16377,7 +16363,7 @@ impl Data {
             }
             #[cfg(feature = "HiWifiOutlineLg")]
             HiIcon::HiWifiOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16394,7 +16380,7 @@ impl Data {
             }
             #[cfg(feature = "HiWifiSolidLg")]
             HiIcon::HiWifiSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16411,7 +16397,7 @@ impl Data {
             }
             #[cfg(feature = "HiWifiSolidMd")]
             HiIcon::HiWifiSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16428,7 +16414,7 @@ impl Data {
             }
             #[cfg(feature = "HiWindowOutlineLg")]
             HiIcon::HiWindowOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16445,7 +16431,7 @@ impl Data {
             }
             #[cfg(feature = "HiWindowSolidLg")]
             HiIcon::HiWindowSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16462,7 +16448,7 @@ impl Data {
             }
             #[cfg(feature = "HiWindowSolidMd")]
             HiIcon::HiWindowSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16479,7 +16465,7 @@ impl Data {
             }
             #[cfg(feature = "HiWrenchOutlineLg")]
             HiIcon::HiWrenchOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16496,7 +16482,7 @@ impl Data {
             }
             #[cfg(feature = "HiWrenchScrewdriverOutlineLg")]
             HiIcon::HiWrenchScrewdriverOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16513,7 +16499,7 @@ impl Data {
             }
             #[cfg(feature = "HiWrenchScrewdriverSolidLg")]
             HiIcon::HiWrenchScrewdriverSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16530,7 +16516,7 @@ impl Data {
             }
             #[cfg(feature = "HiWrenchScrewdriverSolidMd")]
             HiIcon::HiWrenchScrewdriverSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16547,7 +16533,7 @@ impl Data {
             }
             #[cfg(feature = "HiWrenchSolidLg")]
             HiIcon::HiWrenchSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16564,7 +16550,7 @@ impl Data {
             }
             #[cfg(feature = "HiWrenchSolidMd")]
             HiIcon::HiWrenchSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16581,7 +16567,7 @@ impl Data {
             }
             #[cfg(feature = "HiXCircleOutlineLg")]
             HiIcon::HiXCircleOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16598,7 +16584,7 @@ impl Data {
             }
             #[cfg(feature = "HiXCircleSolidLg")]
             HiIcon::HiXCircleSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16615,7 +16601,7 @@ impl Data {
             }
             #[cfg(feature = "HiXCircleSolidMd")]
             HiIcon::HiXCircleSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16632,7 +16618,7 @@ impl Data {
             }
             #[cfg(feature = "HiXMarkOutlineLg")]
             HiIcon::HiXMarkOutlineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16649,7 +16635,7 @@ impl Data {
             }
             #[cfg(feature = "HiXMarkSolidLg")]
             HiIcon::HiXMarkSolidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16666,7 +16652,7 @@ impl Data {
             }
             #[cfg(feature = "HiXMarkSolidMd")]
             HiIcon::HiXMarkSolidMd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16683,62 +16669,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosHiIcon(
-    cx: leptos::Scope,
-    icon: HiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

@@ -204,56 +204,185 @@ pub fn LeptosIcon(
     #[allow(unused)]
     style: Option<String>,
 ) -> impl leptos::IntoView {
+    use leptos_icons_core::IconData;
     leptos::IntoView::into_view(
         match icon {
             #[cfg(feature = "Ai")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Ai(icon) => LeptosAiIcon(cx, icon, width, height, class, style),
+            Icon::Ai(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Fa")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Fa(icon) => LeptosFaIcon(cx, icon, width, height, class, style),
+            Icon::Fa(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Wi")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Wi(icon) => LeptosWiIcon(cx, icon, width, height, class, style),
+            Icon::Wi(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Fi")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Fi(icon) => LeptosFiIcon(cx, icon, width, height, class, style),
+            Icon::Fi(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Vs")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Vs(icon) => LeptosVsIcon(cx, icon, width, height, class, style),
+            Icon::Vs(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Bs")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Bs(icon) => LeptosBsIcon(cx, icon, width, height, class, style),
+            Icon::Bs(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Bi")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Bi(icon) => LeptosBiIcon(cx, icon, width, height, class, style),
+            Icon::Bi(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Im")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Im(icon) => LeptosImIcon(cx, icon, width, height, class, style),
+            Icon::Im(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Io")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Io(icon) => LeptosIoIcon(cx, icon, width, height, class, style),
+            Icon::Io(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Ri")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Ri(icon) => LeptosRiIcon(cx, icon, width, height, class, style),
+            Icon::Ri(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Si")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Si(icon) => LeptosSiIcon(cx, icon, width, height, class, style),
+            Icon::Si(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Ti")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Ti(icon) => LeptosTiIcon(cx, icon, width, height, class, style),
+            Icon::Ti(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Hi")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Hi(icon) => LeptosHiIcon(cx, icon, width, height, class, style),
+            Icon::Hi(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Cg")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Cg(icon) => LeptosCgIcon(cx, icon, width, height, class, style),
+            Icon::Cg(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Tb")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Tb(icon) => LeptosTbIcon(cx, icon, width, height, class, style),
+            Icon::Tb(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
             #[cfg(feature = "Oc")]
-            #[allow(unreachable_code, unreachable_patterns)]
-            Icon::Oc(icon) => LeptosOcIcon(cx, icon, width, height, class, style),
+            Icon::Oc(icon) => {
+                leptos_icons_core::LeptosIconCore(
+                    cx,
+                    icon.data(),
+                    width,
+                    height,
+                    class,
+                    style,
+                )
+            }
         },
         cx,
     )

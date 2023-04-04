@@ -1172,26 +1172,12 @@ pub enum OcIcon {
     OcZoomOutSm,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: OcIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for OcIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "OcAccessibilityInsetSm")]
             OcIcon::OcAccessibilityInsetSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1208,7 +1194,7 @@ impl Data {
             }
             #[cfg(feature = "OcAccessibilitySm")]
             OcIcon::OcAccessibilitySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1225,7 +1211,7 @@ impl Data {
             }
             #[cfg(feature = "OcAlertFillLg")]
             OcIcon::OcAlertFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1242,7 +1228,7 @@ impl Data {
             }
             #[cfg(feature = "OcAlertFillSm")]
             OcIcon::OcAlertFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1259,7 +1245,7 @@ impl Data {
             }
             #[cfg(feature = "OcAlertFillXs")]
             OcIcon::OcAlertFillXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1276,7 +1262,7 @@ impl Data {
             }
             #[cfg(feature = "OcAlertLg")]
             OcIcon::OcAlertLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1293,7 +1279,7 @@ impl Data {
             }
             #[cfg(feature = "OcAlertSm")]
             OcIcon::OcAlertSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1310,7 +1296,7 @@ impl Data {
             }
             #[cfg(feature = "OcAppsSm")]
             OcIcon::OcAppsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1327,7 +1313,7 @@ impl Data {
             }
             #[cfg(feature = "OcArchiveLg")]
             OcIcon::OcArchiveLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1344,7 +1330,7 @@ impl Data {
             }
             #[cfg(feature = "OcArchiveSm")]
             OcIcon::OcArchiveSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1361,7 +1347,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowBothLg")]
             OcIcon::OcArrowBothLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1378,7 +1364,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowBothSm")]
             OcIcon::OcArrowBothSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1395,7 +1381,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowDownLeftLg")]
             OcIcon::OcArrowDownLeftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1412,7 +1398,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowDownLeftSm")]
             OcIcon::OcArrowDownLeftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1429,7 +1415,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowDownLg")]
             OcIcon::OcArrowDownLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1446,7 +1432,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowDownRightLg")]
             OcIcon::OcArrowDownRightLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1463,7 +1449,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowDownRightSm")]
             OcIcon::OcArrowDownRightSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1480,7 +1466,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowDownSm")]
             OcIcon::OcArrowDownSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1497,7 +1483,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowLeftLg")]
             OcIcon::OcArrowLeftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1514,7 +1500,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowLeftSm")]
             OcIcon::OcArrowLeftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1531,7 +1517,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowRightLg")]
             OcIcon::OcArrowRightLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1548,7 +1534,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowRightSm")]
             OcIcon::OcArrowRightSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1565,7 +1551,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowSwitchLg")]
             OcIcon::OcArrowSwitchLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1582,7 +1568,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowSwitchSm")]
             OcIcon::OcArrowSwitchSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1599,7 +1585,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowUpLeftLg")]
             OcIcon::OcArrowUpLeftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1616,7 +1602,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowUpLeftSm")]
             OcIcon::OcArrowUpLeftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1633,7 +1619,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowUpLg")]
             OcIcon::OcArrowUpLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1650,7 +1636,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowUpRightLg")]
             OcIcon::OcArrowUpRightLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1667,7 +1653,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowUpRightSm")]
             OcIcon::OcArrowUpRightSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1684,7 +1670,7 @@ impl Data {
             }
             #[cfg(feature = "OcArrowUpSm")]
             OcIcon::OcArrowUpSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1701,7 +1687,7 @@ impl Data {
             }
             #[cfg(feature = "OcBeakerLg")]
             OcIcon::OcBeakerLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1718,7 +1704,7 @@ impl Data {
             }
             #[cfg(feature = "OcBeakerSm")]
             OcIcon::OcBeakerSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1735,7 +1721,7 @@ impl Data {
             }
             #[cfg(feature = "OcBellFillLg")]
             OcIcon::OcBellFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1752,7 +1738,7 @@ impl Data {
             }
             #[cfg(feature = "OcBellFillSm")]
             OcIcon::OcBellFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1769,7 +1755,7 @@ impl Data {
             }
             #[cfg(feature = "OcBellLg")]
             OcIcon::OcBellLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1786,7 +1772,7 @@ impl Data {
             }
             #[cfg(feature = "OcBellSlashLg")]
             OcIcon::OcBellSlashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1803,7 +1789,7 @@ impl Data {
             }
             #[cfg(feature = "OcBellSlashSm")]
             OcIcon::OcBellSlashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1820,7 +1806,7 @@ impl Data {
             }
             #[cfg(feature = "OcBellSm")]
             OcIcon::OcBellSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1837,7 +1823,7 @@ impl Data {
             }
             #[cfg(feature = "OcBlockedLg")]
             OcIcon::OcBlockedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1854,7 +1840,7 @@ impl Data {
             }
             #[cfg(feature = "OcBlockedSm")]
             OcIcon::OcBlockedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1871,7 +1857,7 @@ impl Data {
             }
             #[cfg(feature = "OcBoldLg")]
             OcIcon::OcBoldLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1888,7 +1874,7 @@ impl Data {
             }
             #[cfg(feature = "OcBoldSm")]
             OcIcon::OcBoldSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1905,7 +1891,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookLg")]
             OcIcon::OcBookLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1922,7 +1908,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookSm")]
             OcIcon::OcBookSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1939,7 +1925,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookmarkFillLg")]
             OcIcon::OcBookmarkFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1956,7 +1942,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookmarkLg")]
             OcIcon::OcBookmarkLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1973,7 +1959,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookmarkSlashFillLg")]
             OcIcon::OcBookmarkSlashFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1990,7 +1976,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookmarkSlashLg")]
             OcIcon::OcBookmarkSlashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2007,7 +1993,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookmarkSlashSm")]
             OcIcon::OcBookmarkSlashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2024,7 +2010,7 @@ impl Data {
             }
             #[cfg(feature = "OcBookmarkSm")]
             OcIcon::OcBookmarkSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2041,7 +2027,7 @@ impl Data {
             }
             #[cfg(feature = "OcBriefcaseLg")]
             OcIcon::OcBriefcaseLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2058,7 +2044,7 @@ impl Data {
             }
             #[cfg(feature = "OcBriefcaseSm")]
             OcIcon::OcBriefcaseSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2075,7 +2061,7 @@ impl Data {
             }
             #[cfg(feature = "OcBroadcastLg")]
             OcIcon::OcBroadcastLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2092,7 +2078,7 @@ impl Data {
             }
             #[cfg(feature = "OcBroadcastSm")]
             OcIcon::OcBroadcastSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2109,7 +2095,7 @@ impl Data {
             }
             #[cfg(feature = "OcBrowserLg")]
             OcIcon::OcBrowserLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2126,7 +2112,7 @@ impl Data {
             }
             #[cfg(feature = "OcBrowserSm")]
             OcIcon::OcBrowserSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2143,7 +2129,7 @@ impl Data {
             }
             #[cfg(feature = "OcBugLg")]
             OcIcon::OcBugLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2160,7 +2146,7 @@ impl Data {
             }
             #[cfg(feature = "OcBugSm")]
             OcIcon::OcBugSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2177,7 +2163,7 @@ impl Data {
             }
             #[cfg(feature = "OcCacheSm")]
             OcIcon::OcCacheSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2194,7 +2180,7 @@ impl Data {
             }
             #[cfg(feature = "OcCalendarLg")]
             OcIcon::OcCalendarLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2211,7 +2197,7 @@ impl Data {
             }
             #[cfg(feature = "OcCalendarSm")]
             OcIcon::OcCalendarSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2228,7 +2214,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckCircleFillLg")]
             OcIcon::OcCheckCircleFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2245,7 +2231,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckCircleFillSm")]
             OcIcon::OcCheckCircleFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2262,7 +2248,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckCircleFillXs")]
             OcIcon::OcCheckCircleFillXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2279,7 +2265,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckCircleLg")]
             OcIcon::OcCheckCircleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2296,7 +2282,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckCircleSm")]
             OcIcon::OcCheckCircleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2313,7 +2299,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckLg")]
             OcIcon::OcCheckLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2330,7 +2316,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckSm")]
             OcIcon::OcCheckSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2347,7 +2333,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckboxLg")]
             OcIcon::OcCheckboxLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2364,7 +2350,7 @@ impl Data {
             }
             #[cfg(feature = "OcCheckboxSm")]
             OcIcon::OcCheckboxSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2381,7 +2367,7 @@ impl Data {
             }
             #[cfg(feature = "OcChecklistLg")]
             OcIcon::OcChecklistLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2398,7 +2384,7 @@ impl Data {
             }
             #[cfg(feature = "OcChecklistSm")]
             OcIcon::OcChecklistSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2415,7 +2401,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronDownLg")]
             OcIcon::OcChevronDownLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2432,7 +2418,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronDownSm")]
             OcIcon::OcChevronDownSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2449,7 +2435,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronDownXs")]
             OcIcon::OcChevronDownXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2466,7 +2452,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronLeftLg")]
             OcIcon::OcChevronLeftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2483,7 +2469,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronLeftSm")]
             OcIcon::OcChevronLeftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2500,7 +2486,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronRightLg")]
             OcIcon::OcChevronRightLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2517,7 +2503,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronRightSm")]
             OcIcon::OcChevronRightSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2534,7 +2520,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronRightXs")]
             OcIcon::OcChevronRightXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2551,7 +2537,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronUpLg")]
             OcIcon::OcChevronUpLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2568,7 +2554,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronUpSm")]
             OcIcon::OcChevronUpSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2585,7 +2571,7 @@ impl Data {
             }
             #[cfg(feature = "OcChevronUpXs")]
             OcIcon::OcChevronUpXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2602,7 +2588,7 @@ impl Data {
             }
             #[cfg(feature = "OcCircleLg")]
             OcIcon::OcCircleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2619,7 +2605,7 @@ impl Data {
             }
             #[cfg(feature = "OcCircleSlashLg")]
             OcIcon::OcCircleSlashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2636,7 +2622,7 @@ impl Data {
             }
             #[cfg(feature = "OcCircleSlashSm")]
             OcIcon::OcCircleSlashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2653,7 +2639,7 @@ impl Data {
             }
             #[cfg(feature = "OcCircleSm")]
             OcIcon::OcCircleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2670,7 +2656,7 @@ impl Data {
             }
             #[cfg(feature = "OcClockFillLg")]
             OcIcon::OcClockFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2687,7 +2673,7 @@ impl Data {
             }
             #[cfg(feature = "OcClockFillSm")]
             OcIcon::OcClockFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2704,7 +2690,7 @@ impl Data {
             }
             #[cfg(feature = "OcClockLg")]
             OcIcon::OcClockLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2721,7 +2707,7 @@ impl Data {
             }
             #[cfg(feature = "OcClockSm")]
             OcIcon::OcClockSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2738,7 +2724,7 @@ impl Data {
             }
             #[cfg(feature = "OcCloudLg")]
             OcIcon::OcCloudLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2755,7 +2741,7 @@ impl Data {
             }
             #[cfg(feature = "OcCloudOfflineLg")]
             OcIcon::OcCloudOfflineLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2772,7 +2758,7 @@ impl Data {
             }
             #[cfg(feature = "OcCloudOfflineSm")]
             OcIcon::OcCloudOfflineSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2789,7 +2775,7 @@ impl Data {
             }
             #[cfg(feature = "OcCloudSm")]
             OcIcon::OcCloudSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2806,7 +2792,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeLg")]
             OcIcon::OcCodeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2823,7 +2809,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeOfConductLg")]
             OcIcon::OcCodeOfConductLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2840,7 +2826,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeOfConductSm")]
             OcIcon::OcCodeOfConductSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2857,7 +2843,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeReviewLg")]
             OcIcon::OcCodeReviewLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2874,7 +2860,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeReviewSm")]
             OcIcon::OcCodeReviewSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2891,7 +2877,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeSm")]
             OcIcon::OcCodeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2908,7 +2894,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeSquareLg")]
             OcIcon::OcCodeSquareLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2925,7 +2911,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodeSquareSm")]
             OcIcon::OcCodeSquareSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2942,7 +2928,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodescanCheckmarkLg")]
             OcIcon::OcCodescanCheckmarkLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2959,7 +2945,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodescanCheckmarkSm")]
             OcIcon::OcCodescanCheckmarkSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2976,7 +2962,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodescanLg")]
             OcIcon::OcCodescanLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2993,7 +2979,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodescanSm")]
             OcIcon::OcCodescanSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3010,7 +2996,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodespacesLg")]
             OcIcon::OcCodespacesLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3027,7 +3013,7 @@ impl Data {
             }
             #[cfg(feature = "OcCodespacesSm")]
             OcIcon::OcCodespacesSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3044,7 +3030,7 @@ impl Data {
             }
             #[cfg(feature = "OcColumnsLg")]
             OcIcon::OcColumnsLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3061,7 +3047,7 @@ impl Data {
             }
             #[cfg(feature = "OcColumnsSm")]
             OcIcon::OcColumnsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3078,7 +3064,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommandPaletteLg")]
             OcIcon::OcCommandPaletteLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3095,7 +3081,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommandPaletteSm")]
             OcIcon::OcCommandPaletteSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3112,7 +3098,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommentDiscussionLg")]
             OcIcon::OcCommentDiscussionLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3129,7 +3115,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommentDiscussionSm")]
             OcIcon::OcCommentDiscussionSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3146,7 +3132,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommentLg")]
             OcIcon::OcCommentLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3163,7 +3149,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommentSm")]
             OcIcon::OcCommentSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3180,7 +3166,7 @@ impl Data {
             }
             #[cfg(feature = "OcCommitLg")]
             OcIcon::OcCommitLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3197,7 +3183,7 @@ impl Data {
             }
             #[cfg(feature = "OcContainerLg")]
             OcIcon::OcContainerLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3214,7 +3200,7 @@ impl Data {
             }
             #[cfg(feature = "OcContainerSm")]
             OcIcon::OcContainerSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3231,7 +3217,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopilotErrorSm")]
             OcIcon::OcCopilotErrorSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3248,7 +3234,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopilotLg")]
             OcIcon::OcCopilotLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3265,7 +3251,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopilotSm")]
             OcIcon::OcCopilotSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3282,7 +3268,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopilotWarningSm")]
             OcIcon::OcCopilotWarningSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3299,7 +3285,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopilotXl")]
             OcIcon::OcCopilotXl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3316,7 +3302,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopilotXxl")]
             OcIcon::OcCopilotXxl => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3333,7 +3319,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopyLg")]
             OcIcon::OcCopyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3350,7 +3336,7 @@ impl Data {
             }
             #[cfg(feature = "OcCopySm")]
             OcIcon::OcCopySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3367,7 +3353,7 @@ impl Data {
             }
             #[cfg(feature = "OcCpuLg")]
             OcIcon::OcCpuLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3384,7 +3370,7 @@ impl Data {
             }
             #[cfg(feature = "OcCpuSm")]
             OcIcon::OcCpuSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3401,7 +3387,7 @@ impl Data {
             }
             #[cfg(feature = "OcCreditCardLg")]
             OcIcon::OcCreditCardLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3418,7 +3404,7 @@ impl Data {
             }
             #[cfg(feature = "OcCreditCardSm")]
             OcIcon::OcCreditCardSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3435,7 +3421,7 @@ impl Data {
             }
             #[cfg(feature = "OcCrossReferenceLg")]
             OcIcon::OcCrossReferenceLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3452,7 +3438,7 @@ impl Data {
             }
             #[cfg(feature = "OcCrossReferenceSm")]
             OcIcon::OcCrossReferenceSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3469,7 +3455,7 @@ impl Data {
             }
             #[cfg(feature = "OcDashLg")]
             OcIcon::OcDashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3486,7 +3472,7 @@ impl Data {
             }
             #[cfg(feature = "OcDashSm")]
             OcIcon::OcDashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3503,7 +3489,7 @@ impl Data {
             }
             #[cfg(feature = "OcDatabaseLg")]
             OcIcon::OcDatabaseLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3520,7 +3506,7 @@ impl Data {
             }
             #[cfg(feature = "OcDatabaseSm")]
             OcIcon::OcDatabaseSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3537,7 +3523,7 @@ impl Data {
             }
             #[cfg(feature = "OcDependabotLg")]
             OcIcon::OcDependabotLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3554,7 +3540,7 @@ impl Data {
             }
             #[cfg(feature = "OcDependabotSm")]
             OcIcon::OcDependabotSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3571,7 +3557,7 @@ impl Data {
             }
             #[cfg(feature = "OcDesktopDownloadLg")]
             OcIcon::OcDesktopDownloadLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3588,7 +3574,7 @@ impl Data {
             }
             #[cfg(feature = "OcDesktopDownloadSm")]
             OcIcon::OcDesktopDownloadSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3605,7 +3591,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceCameraSm")]
             OcIcon::OcDeviceCameraSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3622,7 +3608,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceCameraVideoLg")]
             OcIcon::OcDeviceCameraVideoLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3639,7 +3625,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceCameraVideoSm")]
             OcIcon::OcDeviceCameraVideoSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3656,7 +3642,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceDesktopLg")]
             OcIcon::OcDeviceDesktopLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3673,7 +3659,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceDesktopSm")]
             OcIcon::OcDeviceDesktopSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3690,7 +3676,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceMobileLg")]
             OcIcon::OcDeviceMobileLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3707,7 +3693,7 @@ impl Data {
             }
             #[cfg(feature = "OcDeviceMobileSm")]
             OcIcon::OcDeviceMobileSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3724,7 +3710,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiamondLg")]
             OcIcon::OcDiamondLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3741,7 +3727,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiamondSm")]
             OcIcon::OcDiamondSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3758,7 +3744,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffAddedSm")]
             OcIcon::OcDiffAddedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3775,7 +3761,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffIgnoredSm")]
             OcIcon::OcDiffIgnoredSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3792,7 +3778,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffLg")]
             OcIcon::OcDiffLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3809,7 +3795,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffModifiedSm")]
             OcIcon::OcDiffModifiedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3826,7 +3812,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffRemovedSm")]
             OcIcon::OcDiffRemovedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3843,7 +3829,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffRenamedSm")]
             OcIcon::OcDiffRenamedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3860,7 +3846,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiffSm")]
             OcIcon::OcDiffSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3877,7 +3863,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiscussionClosedLg")]
             OcIcon::OcDiscussionClosedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3894,7 +3880,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiscussionClosedSm")]
             OcIcon::OcDiscussionClosedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3911,7 +3897,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiscussionDuplicateLg")]
             OcIcon::OcDiscussionDuplicateLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3928,7 +3914,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiscussionDuplicateSm")]
             OcIcon::OcDiscussionDuplicateSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3945,7 +3931,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiscussionOutdatedLg")]
             OcIcon::OcDiscussionOutdatedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3962,7 +3948,7 @@ impl Data {
             }
             #[cfg(feature = "OcDiscussionOutdatedSm")]
             OcIcon::OcDiscussionOutdatedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3979,7 +3965,7 @@ impl Data {
             }
             #[cfg(feature = "OcDotFillLg")]
             OcIcon::OcDotFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3996,7 +3982,7 @@ impl Data {
             }
             #[cfg(feature = "OcDotFillSm")]
             OcIcon::OcDotFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4013,7 +3999,7 @@ impl Data {
             }
             #[cfg(feature = "OcDotLg")]
             OcIcon::OcDotLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4030,7 +4016,7 @@ impl Data {
             }
             #[cfg(feature = "OcDotSm")]
             OcIcon::OcDotSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4047,7 +4033,7 @@ impl Data {
             }
             #[cfg(feature = "OcDownloadLg")]
             OcIcon::OcDownloadLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4064,7 +4050,7 @@ impl Data {
             }
             #[cfg(feature = "OcDownloadSm")]
             OcIcon::OcDownloadSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4081,7 +4067,7 @@ impl Data {
             }
             #[cfg(feature = "OcDuplicateLg")]
             OcIcon::OcDuplicateLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4098,7 +4084,7 @@ impl Data {
             }
             #[cfg(feature = "OcDuplicateSm")]
             OcIcon::OcDuplicateSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4115,7 +4101,7 @@ impl Data {
             }
             #[cfg(feature = "OcEllipsisSm")]
             OcIcon::OcEllipsisSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4132,7 +4118,7 @@ impl Data {
             }
             #[cfg(feature = "OcEyeClosedLg")]
             OcIcon::OcEyeClosedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4149,7 +4135,7 @@ impl Data {
             }
             #[cfg(feature = "OcEyeClosedSm")]
             OcIcon::OcEyeClosedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4166,7 +4152,7 @@ impl Data {
             }
             #[cfg(feature = "OcEyeLg")]
             OcIcon::OcEyeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4183,7 +4169,7 @@ impl Data {
             }
             #[cfg(feature = "OcEyeSm")]
             OcIcon::OcEyeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4200,7 +4186,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedDiscussionSm")]
             OcIcon::OcFeedDiscussionSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4217,7 +4203,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedForkedSm")]
             OcIcon::OcFeedForkedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4234,7 +4220,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedHeartSm")]
             OcIcon::OcFeedHeartSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4251,7 +4237,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedMergedSm")]
             OcIcon::OcFeedMergedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4268,7 +4254,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedPersonSm")]
             OcIcon::OcFeedPersonSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4285,7 +4271,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedRepoSm")]
             OcIcon::OcFeedRepoSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4302,7 +4288,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedRocketSm")]
             OcIcon::OcFeedRocketSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4319,7 +4305,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedStarSm")]
             OcIcon::OcFeedStarSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4336,7 +4322,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedTagSm")]
             OcIcon::OcFeedTagSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4353,7 +4339,7 @@ impl Data {
             }
             #[cfg(feature = "OcFeedTrophySm")]
             OcIcon::OcFeedTrophySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4370,7 +4356,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileAddedSm")]
             OcIcon::OcFileAddedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4387,7 +4373,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileBadgeSm")]
             OcIcon::OcFileBadgeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4404,7 +4390,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileBinaryLg")]
             OcIcon::OcFileBinaryLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4421,7 +4407,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileBinarySm")]
             OcIcon::OcFileBinarySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4438,7 +4424,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileCodeLg")]
             OcIcon::OcFileCodeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4455,7 +4441,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileCodeSm")]
             OcIcon::OcFileCodeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4472,7 +4458,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDiffLg")]
             OcIcon::OcFileDiffLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4489,7 +4475,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDiffSm")]
             OcIcon::OcFileDiffSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4506,7 +4492,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDirectoryFillLg")]
             OcIcon::OcFileDirectoryFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4523,7 +4509,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDirectoryFillSm")]
             OcIcon::OcFileDirectoryFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4540,7 +4526,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDirectoryLg")]
             OcIcon::OcFileDirectoryLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4557,7 +4543,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDirectoryOpenFillSm")]
             OcIcon::OcFileDirectoryOpenFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4574,7 +4560,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileDirectorySm")]
             OcIcon::OcFileDirectorySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4591,7 +4577,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileLg")]
             OcIcon::OcFileLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4608,7 +4594,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileMediaLg")]
             OcIcon::OcFileMediaLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4625,7 +4611,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileMovedSm")]
             OcIcon::OcFileMovedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4642,7 +4628,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileRemovedSm")]
             OcIcon::OcFileRemovedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4659,7 +4645,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileSm")]
             OcIcon::OcFileSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4676,7 +4662,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileSubmoduleLg")]
             OcIcon::OcFileSubmoduleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4693,7 +4679,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileSubmoduleSm")]
             OcIcon::OcFileSubmoduleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4710,7 +4696,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileSymlinkFileLg")]
             OcIcon::OcFileSymlinkFileLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4727,7 +4713,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileSymlinkFileSm")]
             OcIcon::OcFileSymlinkFileSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4744,7 +4730,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileZipLg")]
             OcIcon::OcFileZipLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4761,7 +4747,7 @@ impl Data {
             }
             #[cfg(feature = "OcFileZipSm")]
             OcIcon::OcFileZipSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4778,7 +4764,7 @@ impl Data {
             }
             #[cfg(feature = "OcFilterLg")]
             OcIcon::OcFilterLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4795,7 +4781,7 @@ impl Data {
             }
             #[cfg(feature = "OcFilterSm")]
             OcIcon::OcFilterSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4812,7 +4798,7 @@ impl Data {
             }
             #[cfg(feature = "OcFiscalHostSm")]
             OcIcon::OcFiscalHostSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4829,7 +4815,7 @@ impl Data {
             }
             #[cfg(feature = "OcFlameLg")]
             OcIcon::OcFlameLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4846,7 +4832,7 @@ impl Data {
             }
             #[cfg(feature = "OcFlameSm")]
             OcIcon::OcFlameSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4863,7 +4849,7 @@ impl Data {
             }
             #[cfg(feature = "OcFoldDownLg")]
             OcIcon::OcFoldDownLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4880,7 +4866,7 @@ impl Data {
             }
             #[cfg(feature = "OcFoldDownSm")]
             OcIcon::OcFoldDownSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4897,7 +4883,7 @@ impl Data {
             }
             #[cfg(feature = "OcFoldLg")]
             OcIcon::OcFoldLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4914,7 +4900,7 @@ impl Data {
             }
             #[cfg(feature = "OcFoldSm")]
             OcIcon::OcFoldSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4931,7 +4917,7 @@ impl Data {
             }
             #[cfg(feature = "OcFoldUpLg")]
             OcIcon::OcFoldUpLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4948,7 +4934,7 @@ impl Data {
             }
             #[cfg(feature = "OcFoldUpSm")]
             OcIcon::OcFoldUpSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4965,7 +4951,7 @@ impl Data {
             }
             #[cfg(feature = "OcGearLg")]
             OcIcon::OcGearLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4982,7 +4968,7 @@ impl Data {
             }
             #[cfg(feature = "OcGearSm")]
             OcIcon::OcGearSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4999,7 +4985,7 @@ impl Data {
             }
             #[cfg(feature = "OcGiftLg")]
             OcIcon::OcGiftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5016,7 +5002,7 @@ impl Data {
             }
             #[cfg(feature = "OcGiftSm")]
             OcIcon::OcGiftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5033,7 +5019,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitBranchLg")]
             OcIcon::OcGitBranchLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5050,7 +5036,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitBranchSm")]
             OcIcon::OcGitBranchSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5067,7 +5053,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitCommitLg")]
             OcIcon::OcGitCommitLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5084,7 +5070,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitCommitSm")]
             OcIcon::OcGitCommitSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5101,7 +5087,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitCompareLg")]
             OcIcon::OcGitCompareLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5118,7 +5104,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitCompareSm")]
             OcIcon::OcGitCompareSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5135,7 +5121,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitMergeLg")]
             OcIcon::OcGitMergeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5152,7 +5138,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitMergeQueueLg")]
             OcIcon::OcGitMergeQueueLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5169,7 +5155,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitMergeQueueSm")]
             OcIcon::OcGitMergeQueueSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5186,7 +5172,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitMergeSm")]
             OcIcon::OcGitMergeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5203,7 +5189,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitPullRequestClosedLg")]
             OcIcon::OcGitPullRequestClosedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5220,7 +5206,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitPullRequestClosedSm")]
             OcIcon::OcGitPullRequestClosedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5237,7 +5223,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitPullRequestDraftLg")]
             OcIcon::OcGitPullRequestDraftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5254,7 +5240,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitPullRequestDraftSm")]
             OcIcon::OcGitPullRequestDraftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5271,7 +5257,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitPullRequestLg")]
             OcIcon::OcGitPullRequestLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5288,7 +5274,7 @@ impl Data {
             }
             #[cfg(feature = "OcGitPullRequestSm")]
             OcIcon::OcGitPullRequestSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5305,7 +5291,7 @@ impl Data {
             }
             #[cfg(feature = "OcGlobeLg")]
             OcIcon::OcGlobeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5322,7 +5308,7 @@ impl Data {
             }
             #[cfg(feature = "OcGlobeSm")]
             OcIcon::OcGlobeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5339,7 +5325,7 @@ impl Data {
             }
             #[cfg(feature = "OcGoalLg")]
             OcIcon::OcGoalLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5356,7 +5342,7 @@ impl Data {
             }
             #[cfg(feature = "OcGoalSm")]
             OcIcon::OcGoalSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5373,7 +5359,7 @@ impl Data {
             }
             #[cfg(feature = "OcGrabberLg")]
             OcIcon::OcGrabberLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5390,7 +5376,7 @@ impl Data {
             }
             #[cfg(feature = "OcGrabberSm")]
             OcIcon::OcGrabberSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5407,7 +5393,7 @@ impl Data {
             }
             #[cfg(feature = "OcGraphLg")]
             OcIcon::OcGraphLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5424,7 +5410,7 @@ impl Data {
             }
             #[cfg(feature = "OcGraphSm")]
             OcIcon::OcGraphSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5441,7 +5427,7 @@ impl Data {
             }
             #[cfg(feature = "OcHashLg")]
             OcIcon::OcHashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5458,7 +5444,7 @@ impl Data {
             }
             #[cfg(feature = "OcHashSm")]
             OcIcon::OcHashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5475,7 +5461,7 @@ impl Data {
             }
             #[cfg(feature = "OcHeadingLg")]
             OcIcon::OcHeadingLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5492,7 +5478,7 @@ impl Data {
             }
             #[cfg(feature = "OcHeadingSm")]
             OcIcon::OcHeadingSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5509,7 +5495,7 @@ impl Data {
             }
             #[cfg(feature = "OcHeartFillLg")]
             OcIcon::OcHeartFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5526,7 +5512,7 @@ impl Data {
             }
             #[cfg(feature = "OcHeartFillSm")]
             OcIcon::OcHeartFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5543,7 +5529,7 @@ impl Data {
             }
             #[cfg(feature = "OcHeartLg")]
             OcIcon::OcHeartLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5560,7 +5546,7 @@ impl Data {
             }
             #[cfg(feature = "OcHeartSm")]
             OcIcon::OcHeartSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5577,7 +5563,7 @@ impl Data {
             }
             #[cfg(feature = "OcHistoryLg")]
             OcIcon::OcHistoryLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5594,7 +5580,7 @@ impl Data {
             }
             #[cfg(feature = "OcHistorySm")]
             OcIcon::OcHistorySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5611,7 +5597,7 @@ impl Data {
             }
             #[cfg(feature = "OcHomeFillLg")]
             OcIcon::OcHomeFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5628,7 +5614,7 @@ impl Data {
             }
             #[cfg(feature = "OcHomeLg")]
             OcIcon::OcHomeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5645,7 +5631,7 @@ impl Data {
             }
             #[cfg(feature = "OcHomeSm")]
             OcIcon::OcHomeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5662,7 +5648,7 @@ impl Data {
             }
             #[cfg(feature = "OcHorizontalRuleLg")]
             OcIcon::OcHorizontalRuleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5679,7 +5665,7 @@ impl Data {
             }
             #[cfg(feature = "OcHorizontalRuleSm")]
             OcIcon::OcHorizontalRuleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5696,7 +5682,7 @@ impl Data {
             }
             #[cfg(feature = "OcHourglassLg")]
             OcIcon::OcHourglassLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5713,7 +5699,7 @@ impl Data {
             }
             #[cfg(feature = "OcHourglassSm")]
             OcIcon::OcHourglassSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5730,7 +5716,7 @@ impl Data {
             }
             #[cfg(feature = "OcHubotLg")]
             OcIcon::OcHubotLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5747,7 +5733,7 @@ impl Data {
             }
             #[cfg(feature = "OcHubotSm")]
             OcIcon::OcHubotSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5764,7 +5750,7 @@ impl Data {
             }
             #[cfg(feature = "OcIdBadgeSm")]
             OcIcon::OcIdBadgeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5781,7 +5767,7 @@ impl Data {
             }
             #[cfg(feature = "OcImageLg")]
             OcIcon::OcImageLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5798,7 +5784,7 @@ impl Data {
             }
             #[cfg(feature = "OcImageSm")]
             OcIcon::OcImageSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5815,7 +5801,7 @@ impl Data {
             }
             #[cfg(feature = "OcInboxLg")]
             OcIcon::OcInboxLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5832,7 +5818,7 @@ impl Data {
             }
             #[cfg(feature = "OcInboxSm")]
             OcIcon::OcInboxSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5849,7 +5835,7 @@ impl Data {
             }
             #[cfg(feature = "OcInfinityLg")]
             OcIcon::OcInfinityLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5866,7 +5852,7 @@ impl Data {
             }
             #[cfg(feature = "OcInfinitySm")]
             OcIcon::OcInfinitySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5883,7 +5869,7 @@ impl Data {
             }
             #[cfg(feature = "OcInfoLg")]
             OcIcon::OcInfoLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5900,7 +5886,7 @@ impl Data {
             }
             #[cfg(feature = "OcInfoSm")]
             OcIcon::OcInfoSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5917,7 +5903,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueClosedLg")]
             OcIcon::OcIssueClosedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5934,7 +5920,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueClosedSm")]
             OcIcon::OcIssueClosedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5951,7 +5937,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueDraftLg")]
             OcIcon::OcIssueDraftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5968,7 +5954,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueDraftSm")]
             OcIcon::OcIssueDraftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5985,7 +5971,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueOpenedLg")]
             OcIcon::OcIssueOpenedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6002,7 +5988,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueOpenedSm")]
             OcIcon::OcIssueOpenedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6019,7 +6005,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueReopenedLg")]
             OcIcon::OcIssueReopenedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6036,7 +6022,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueReopenedSm")]
             OcIcon::OcIssueReopenedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6053,7 +6039,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueTrackedByLg")]
             OcIcon::OcIssueTrackedByLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6070,7 +6056,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueTrackedBySm")]
             OcIcon::OcIssueTrackedBySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6087,7 +6073,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueTracksLg")]
             OcIcon::OcIssueTracksLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6104,7 +6090,7 @@ impl Data {
             }
             #[cfg(feature = "OcIssueTracksSm")]
             OcIcon::OcIssueTracksSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6121,7 +6107,7 @@ impl Data {
             }
             #[cfg(feature = "OcItalicLg")]
             OcIcon::OcItalicLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6138,7 +6124,7 @@ impl Data {
             }
             #[cfg(feature = "OcItalicSm")]
             OcIcon::OcItalicSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6155,7 +6141,7 @@ impl Data {
             }
             #[cfg(feature = "OcIterationsLg")]
             OcIcon::OcIterationsLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6172,7 +6158,7 @@ impl Data {
             }
             #[cfg(feature = "OcIterationsSm")]
             OcIcon::OcIterationsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6189,7 +6175,7 @@ impl Data {
             }
             #[cfg(feature = "OcKebabHorizontalLg")]
             OcIcon::OcKebabHorizontalLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6206,7 +6192,7 @@ impl Data {
             }
             #[cfg(feature = "OcKebabHorizontalSm")]
             OcIcon::OcKebabHorizontalSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6223,7 +6209,7 @@ impl Data {
             }
             #[cfg(feature = "OcKeyAsteriskSm")]
             OcIcon::OcKeyAsteriskSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6240,7 +6226,7 @@ impl Data {
             }
             #[cfg(feature = "OcKeyLg")]
             OcIcon::OcKeyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6257,7 +6243,7 @@ impl Data {
             }
             #[cfg(feature = "OcKeySm")]
             OcIcon::OcKeySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6274,7 +6260,7 @@ impl Data {
             }
             #[cfg(feature = "OcLawLg")]
             OcIcon::OcLawLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6291,7 +6277,7 @@ impl Data {
             }
             #[cfg(feature = "OcLawSm")]
             OcIcon::OcLawSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6308,7 +6294,7 @@ impl Data {
             }
             #[cfg(feature = "OcLightBulbLg")]
             OcIcon::OcLightBulbLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6325,7 +6311,7 @@ impl Data {
             }
             #[cfg(feature = "OcLightBulbSm")]
             OcIcon::OcLightBulbSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6342,7 +6328,7 @@ impl Data {
             }
             #[cfg(feature = "OcLinkExternalLg")]
             OcIcon::OcLinkExternalLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6359,7 +6345,7 @@ impl Data {
             }
             #[cfg(feature = "OcLinkExternalSm")]
             OcIcon::OcLinkExternalSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6376,7 +6362,7 @@ impl Data {
             }
             #[cfg(feature = "OcLinkLg")]
             OcIcon::OcLinkLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6393,7 +6379,7 @@ impl Data {
             }
             #[cfg(feature = "OcLinkSm")]
             OcIcon::OcLinkSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6410,7 +6396,7 @@ impl Data {
             }
             #[cfg(feature = "OcListOrderedLg")]
             OcIcon::OcListOrderedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6427,7 +6413,7 @@ impl Data {
             }
             #[cfg(feature = "OcListOrderedSm")]
             OcIcon::OcListOrderedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6444,7 +6430,7 @@ impl Data {
             }
             #[cfg(feature = "OcListUnorderedLg")]
             OcIcon::OcListUnorderedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6461,7 +6447,7 @@ impl Data {
             }
             #[cfg(feature = "OcListUnorderedSm")]
             OcIcon::OcListUnorderedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6478,7 +6464,7 @@ impl Data {
             }
             #[cfg(feature = "OcLocationLg")]
             OcIcon::OcLocationLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6495,7 +6481,7 @@ impl Data {
             }
             #[cfg(feature = "OcLocationSm")]
             OcIcon::OcLocationSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6512,7 +6498,7 @@ impl Data {
             }
             #[cfg(feature = "OcLockLg")]
             OcIcon::OcLockLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6529,7 +6515,7 @@ impl Data {
             }
             #[cfg(feature = "OcLockSm")]
             OcIcon::OcLockSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6546,7 +6532,7 @@ impl Data {
             }
             #[cfg(feature = "OcLogLg")]
             OcIcon::OcLogLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6563,7 +6549,7 @@ impl Data {
             }
             #[cfg(feature = "OcLogSm")]
             OcIcon::OcLogSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6580,7 +6566,7 @@ impl Data {
             }
             #[cfg(feature = "OcLogoGistSm")]
             OcIcon::OcLogoGistSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6597,7 +6583,7 @@ impl Data {
             }
             #[cfg(feature = "OcLogoGithubSm")]
             OcIcon::OcLogoGithubSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6614,7 +6600,7 @@ impl Data {
             }
             #[cfg(feature = "OcMailLg")]
             OcIcon::OcMailLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6631,7 +6617,7 @@ impl Data {
             }
             #[cfg(feature = "OcMailSm")]
             OcIcon::OcMailSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6648,7 +6634,7 @@ impl Data {
             }
             #[cfg(feature = "OcMarkGithubSm")]
             OcIcon::OcMarkGithubSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6665,7 +6651,7 @@ impl Data {
             }
             #[cfg(feature = "OcMarkdownSm")]
             OcIcon::OcMarkdownSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6682,7 +6668,7 @@ impl Data {
             }
             #[cfg(feature = "OcMegaphoneLg")]
             OcIcon::OcMegaphoneLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6699,7 +6685,7 @@ impl Data {
             }
             #[cfg(feature = "OcMegaphoneSm")]
             OcIcon::OcMegaphoneSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6716,7 +6702,7 @@ impl Data {
             }
             #[cfg(feature = "OcMentionLg")]
             OcIcon::OcMentionLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6733,7 +6719,7 @@ impl Data {
             }
             #[cfg(feature = "OcMentionSm")]
             OcIcon::OcMentionSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6750,7 +6736,7 @@ impl Data {
             }
             #[cfg(feature = "OcMeterSm")]
             OcIcon::OcMeterSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6767,7 +6753,7 @@ impl Data {
             }
             #[cfg(feature = "OcMilestoneLg")]
             OcIcon::OcMilestoneLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6784,7 +6770,7 @@ impl Data {
             }
             #[cfg(feature = "OcMilestoneSm")]
             OcIcon::OcMilestoneSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6801,7 +6787,7 @@ impl Data {
             }
             #[cfg(feature = "OcMirrorLg")]
             OcIcon::OcMirrorLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6818,7 +6804,7 @@ impl Data {
             }
             #[cfg(feature = "OcMirrorSm")]
             OcIcon::OcMirrorSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6835,7 +6821,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoonLg")]
             OcIcon::OcMoonLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6852,7 +6838,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoonSm")]
             OcIcon::OcMoonSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6869,7 +6855,7 @@ impl Data {
             }
             #[cfg(feature = "OcMortarBoardLg")]
             OcIcon::OcMortarBoardLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6886,7 +6872,7 @@ impl Data {
             }
             #[cfg(feature = "OcMortarBoardSm")]
             OcIcon::OcMortarBoardSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6903,7 +6889,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToBottomLg")]
             OcIcon::OcMoveToBottomLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6920,7 +6906,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToBottomSm")]
             OcIcon::OcMoveToBottomSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6937,7 +6923,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToEndLg")]
             OcIcon::OcMoveToEndLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6954,7 +6940,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToEndSm")]
             OcIcon::OcMoveToEndSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6971,7 +6957,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToStartLg")]
             OcIcon::OcMoveToStartLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6988,7 +6974,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToStartSm")]
             OcIcon::OcMoveToStartSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7005,7 +6991,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToTopLg")]
             OcIcon::OcMoveToTopLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7022,7 +7008,7 @@ impl Data {
             }
             #[cfg(feature = "OcMoveToTopSm")]
             OcIcon::OcMoveToTopSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7039,7 +7025,7 @@ impl Data {
             }
             #[cfg(feature = "OcMultiSelectLg")]
             OcIcon::OcMultiSelectLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7056,7 +7042,7 @@ impl Data {
             }
             #[cfg(feature = "OcMultiSelectSm")]
             OcIcon::OcMultiSelectSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7073,7 +7059,7 @@ impl Data {
             }
             #[cfg(feature = "OcMuteLg")]
             OcIcon::OcMuteLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7090,7 +7076,7 @@ impl Data {
             }
             #[cfg(feature = "OcMuteSm")]
             OcIcon::OcMuteSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7107,7 +7093,7 @@ impl Data {
             }
             #[cfg(feature = "OcNoEntryFillXs")]
             OcIcon::OcNoEntryFillXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7124,7 +7110,7 @@ impl Data {
             }
             #[cfg(feature = "OcNoEntryLg")]
             OcIcon::OcNoEntryLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7141,7 +7127,7 @@ impl Data {
             }
             #[cfg(feature = "OcNoEntrySm")]
             OcIcon::OcNoEntrySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7158,7 +7144,7 @@ impl Data {
             }
             #[cfg(feature = "OcNorthStarLg")]
             OcIcon::OcNorthStarLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7175,7 +7161,7 @@ impl Data {
             }
             #[cfg(feature = "OcNorthStarSm")]
             OcIcon::OcNorthStarSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7192,7 +7178,7 @@ impl Data {
             }
             #[cfg(feature = "OcNoteLg")]
             OcIcon::OcNoteLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7209,7 +7195,7 @@ impl Data {
             }
             #[cfg(feature = "OcNoteSm")]
             OcIcon::OcNoteSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7226,7 +7212,7 @@ impl Data {
             }
             #[cfg(feature = "OcNumberLg")]
             OcIcon::OcNumberLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7243,7 +7229,7 @@ impl Data {
             }
             #[cfg(feature = "OcNumberSm")]
             OcIcon::OcNumberSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7260,7 +7246,7 @@ impl Data {
             }
             #[cfg(feature = "OcOrganizationLg")]
             OcIcon::OcOrganizationLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7277,7 +7263,7 @@ impl Data {
             }
             #[cfg(feature = "OcOrganizationSm")]
             OcIcon::OcOrganizationSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7294,7 +7280,7 @@ impl Data {
             }
             #[cfg(feature = "OcPackageDependenciesLg")]
             OcIcon::OcPackageDependenciesLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7311,7 +7297,7 @@ impl Data {
             }
             #[cfg(feature = "OcPackageDependenciesSm")]
             OcIcon::OcPackageDependenciesSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7328,7 +7314,7 @@ impl Data {
             }
             #[cfg(feature = "OcPackageDependentsLg")]
             OcIcon::OcPackageDependentsLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7345,7 +7331,7 @@ impl Data {
             }
             #[cfg(feature = "OcPackageDependentsSm")]
             OcIcon::OcPackageDependentsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7362,7 +7348,7 @@ impl Data {
             }
             #[cfg(feature = "OcPackageLg")]
             OcIcon::OcPackageLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7379,7 +7365,7 @@ impl Data {
             }
             #[cfg(feature = "OcPackageSm")]
             OcIcon::OcPackageSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7396,7 +7382,7 @@ impl Data {
             }
             #[cfg(feature = "OcPaintbrushSm")]
             OcIcon::OcPaintbrushSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7413,7 +7399,7 @@ impl Data {
             }
             #[cfg(feature = "OcPaperAirplaneLg")]
             OcIcon::OcPaperAirplaneLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7430,7 +7416,7 @@ impl Data {
             }
             #[cfg(feature = "OcPaperAirplaneSm")]
             OcIcon::OcPaperAirplaneSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7447,7 +7433,7 @@ impl Data {
             }
             #[cfg(feature = "OcPaperclipLg")]
             OcIcon::OcPaperclipLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7464,7 +7450,7 @@ impl Data {
             }
             #[cfg(feature = "OcPaperclipSm")]
             OcIcon::OcPaperclipSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7481,7 +7467,7 @@ impl Data {
             }
             #[cfg(feature = "OcPasskeyFillLg")]
             OcIcon::OcPasskeyFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7498,7 +7484,7 @@ impl Data {
             }
             #[cfg(feature = "OcPasskeyFillSm")]
             OcIcon::OcPasskeyFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7515,7 +7501,7 @@ impl Data {
             }
             #[cfg(feature = "OcPasteLg")]
             OcIcon::OcPasteLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7532,7 +7518,7 @@ impl Data {
             }
             #[cfg(feature = "OcPasteSm")]
             OcIcon::OcPasteSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7549,7 +7535,7 @@ impl Data {
             }
             #[cfg(feature = "OcPencilLg")]
             OcIcon::OcPencilLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7566,7 +7552,7 @@ impl Data {
             }
             #[cfg(feature = "OcPencilSm")]
             OcIcon::OcPencilSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7583,7 +7569,7 @@ impl Data {
             }
             #[cfg(feature = "OcPeopleLg")]
             OcIcon::OcPeopleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7600,7 +7586,7 @@ impl Data {
             }
             #[cfg(feature = "OcPeopleSm")]
             OcIcon::OcPeopleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7617,7 +7603,7 @@ impl Data {
             }
             #[cfg(feature = "OcPersonAddLg")]
             OcIcon::OcPersonAddLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7634,7 +7620,7 @@ impl Data {
             }
             #[cfg(feature = "OcPersonAddSm")]
             OcIcon::OcPersonAddSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7651,7 +7637,7 @@ impl Data {
             }
             #[cfg(feature = "OcPersonFillLg")]
             OcIcon::OcPersonFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7668,7 +7654,7 @@ impl Data {
             }
             #[cfg(feature = "OcPersonFillSm")]
             OcIcon::OcPersonFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7685,7 +7671,7 @@ impl Data {
             }
             #[cfg(feature = "OcPersonLg")]
             OcIcon::OcPersonLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7702,7 +7688,7 @@ impl Data {
             }
             #[cfg(feature = "OcPersonSm")]
             OcIcon::OcPersonSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7719,7 +7705,7 @@ impl Data {
             }
             #[cfg(feature = "OcPinLg")]
             OcIcon::OcPinLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7736,7 +7722,7 @@ impl Data {
             }
             #[cfg(feature = "OcPinSm")]
             OcIcon::OcPinSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7753,7 +7739,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlayLg")]
             OcIcon::OcPlayLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7770,7 +7756,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlaySm")]
             OcIcon::OcPlaySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7787,7 +7773,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlugLg")]
             OcIcon::OcPlugLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7804,7 +7790,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlugSm")]
             OcIcon::OcPlugSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7821,7 +7807,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlusCircleLg")]
             OcIcon::OcPlusCircleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7838,7 +7824,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlusCircleSm")]
             OcIcon::OcPlusCircleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7855,7 +7841,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlusLg")]
             OcIcon::OcPlusLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7872,7 +7858,7 @@ impl Data {
             }
             #[cfg(feature = "OcPlusSm")]
             OcIcon::OcPlusSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7889,7 +7875,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectLg")]
             OcIcon::OcProjectLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7906,7 +7892,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectRoadmapLg")]
             OcIcon::OcProjectRoadmapLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7923,7 +7909,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectRoadmapSm")]
             OcIcon::OcProjectRoadmapSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7940,7 +7926,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectSm")]
             OcIcon::OcProjectSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7957,7 +7943,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectSymlinkLg")]
             OcIcon::OcProjectSymlinkLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7974,7 +7960,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectSymlinkSm")]
             OcIcon::OcProjectSymlinkSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7991,7 +7977,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectTemplateLg")]
             OcIcon::OcProjectTemplateLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8008,7 +7994,7 @@ impl Data {
             }
             #[cfg(feature = "OcProjectTemplateSm")]
             OcIcon::OcProjectTemplateSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8025,7 +8011,7 @@ impl Data {
             }
             #[cfg(feature = "OcPulseLg")]
             OcIcon::OcPulseLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8042,7 +8028,7 @@ impl Data {
             }
             #[cfg(feature = "OcPulseSm")]
             OcIcon::OcPulseSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8059,7 +8045,7 @@ impl Data {
             }
             #[cfg(feature = "OcQuestionLg")]
             OcIcon::OcQuestionLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8076,7 +8062,7 @@ impl Data {
             }
             #[cfg(feature = "OcQuestionSm")]
             OcIcon::OcQuestionSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8093,7 +8079,7 @@ impl Data {
             }
             #[cfg(feature = "OcQuoteLg")]
             OcIcon::OcQuoteLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8110,7 +8096,7 @@ impl Data {
             }
             #[cfg(feature = "OcQuoteSm")]
             OcIcon::OcQuoteSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8127,7 +8113,7 @@ impl Data {
             }
             #[cfg(feature = "OcReadLg")]
             OcIcon::OcReadLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8144,7 +8130,7 @@ impl Data {
             }
             #[cfg(feature = "OcReadSm")]
             OcIcon::OcReadSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8161,7 +8147,7 @@ impl Data {
             }
             #[cfg(feature = "OcRelFilePathLg")]
             OcIcon::OcRelFilePathLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8178,7 +8164,7 @@ impl Data {
             }
             #[cfg(feature = "OcRelFilePathSm")]
             OcIcon::OcRelFilePathSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8195,7 +8181,7 @@ impl Data {
             }
             #[cfg(feature = "OcReplyLg")]
             OcIcon::OcReplyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8212,7 +8198,7 @@ impl Data {
             }
             #[cfg(feature = "OcReplySm")]
             OcIcon::OcReplySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8229,7 +8215,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoCloneSm")]
             OcIcon::OcRepoCloneSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8246,7 +8232,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoDeletedSm")]
             OcIcon::OcRepoDeletedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8263,7 +8249,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoForkedLg")]
             OcIcon::OcRepoForkedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8280,7 +8266,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoForkedSm")]
             OcIcon::OcRepoForkedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8297,7 +8283,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoLg")]
             OcIcon::OcRepoLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8314,7 +8300,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoLockedLg")]
             OcIcon::OcRepoLockedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8331,7 +8317,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoLockedSm")]
             OcIcon::OcRepoLockedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8348,7 +8334,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoPullSm")]
             OcIcon::OcRepoPullSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8365,7 +8351,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoPushLg")]
             OcIcon::OcRepoPushLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8382,7 +8368,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoPushSm")]
             OcIcon::OcRepoPushSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8399,7 +8385,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoSm")]
             OcIcon::OcRepoSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8416,7 +8402,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoTemplateLg")]
             OcIcon::OcRepoTemplateLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8433,7 +8419,7 @@ impl Data {
             }
             #[cfg(feature = "OcRepoTemplateSm")]
             OcIcon::OcRepoTemplateSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8450,7 +8436,7 @@ impl Data {
             }
             #[cfg(feature = "OcReportLg")]
             OcIcon::OcReportLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8467,7 +8453,7 @@ impl Data {
             }
             #[cfg(feature = "OcReportSm")]
             OcIcon::OcReportSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8484,7 +8470,7 @@ impl Data {
             }
             #[cfg(feature = "OcRocketLg")]
             OcIcon::OcRocketLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8501,7 +8487,7 @@ impl Data {
             }
             #[cfg(feature = "OcRocketSm")]
             OcIcon::OcRocketSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8518,7 +8504,7 @@ impl Data {
             }
             #[cfg(feature = "OcRowsLg")]
             OcIcon::OcRowsLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8535,7 +8521,7 @@ impl Data {
             }
             #[cfg(feature = "OcRowsSm")]
             OcIcon::OcRowsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8552,7 +8538,7 @@ impl Data {
             }
             #[cfg(feature = "OcRssLg")]
             OcIcon::OcRssLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8569,7 +8555,7 @@ impl Data {
             }
             #[cfg(feature = "OcRssSm")]
             OcIcon::OcRssSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8586,7 +8572,7 @@ impl Data {
             }
             #[cfg(feature = "OcRubyLg")]
             OcIcon::OcRubyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8603,7 +8589,7 @@ impl Data {
             }
             #[cfg(feature = "OcRubySm")]
             OcIcon::OcRubySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8620,7 +8606,7 @@ impl Data {
             }
             #[cfg(feature = "OcScreenFullLg")]
             OcIcon::OcScreenFullLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8637,7 +8623,7 @@ impl Data {
             }
             #[cfg(feature = "OcScreenFullSm")]
             OcIcon::OcScreenFullSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8654,7 +8640,7 @@ impl Data {
             }
             #[cfg(feature = "OcScreenNormalLg")]
             OcIcon::OcScreenNormalLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8671,7 +8657,7 @@ impl Data {
             }
             #[cfg(feature = "OcScreenNormalSm")]
             OcIcon::OcScreenNormalSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8688,7 +8674,7 @@ impl Data {
             }
             #[cfg(feature = "OcSearchLg")]
             OcIcon::OcSearchLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8705,7 +8691,7 @@ impl Data {
             }
             #[cfg(feature = "OcSearchSm")]
             OcIcon::OcSearchSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8722,7 +8708,7 @@ impl Data {
             }
             #[cfg(feature = "OcServerLg")]
             OcIcon::OcServerLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8739,7 +8725,7 @@ impl Data {
             }
             #[cfg(feature = "OcServerSm")]
             OcIcon::OcServerSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8756,7 +8742,7 @@ impl Data {
             }
             #[cfg(feature = "OcShareAndroidLg")]
             OcIcon::OcShareAndroidLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8773,7 +8759,7 @@ impl Data {
             }
             #[cfg(feature = "OcShareAndroidSm")]
             OcIcon::OcShareAndroidSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8790,7 +8776,7 @@ impl Data {
             }
             #[cfg(feature = "OcShareLg")]
             OcIcon::OcShareLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8807,7 +8793,7 @@ impl Data {
             }
             #[cfg(feature = "OcShareSm")]
             OcIcon::OcShareSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8824,7 +8810,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldCheckLg")]
             OcIcon::OcShieldCheckLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8841,7 +8827,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldCheckSm")]
             OcIcon::OcShieldCheckSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8858,7 +8844,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldLg")]
             OcIcon::OcShieldLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8875,7 +8861,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldLockLg")]
             OcIcon::OcShieldLockLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8892,7 +8878,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldLockSm")]
             OcIcon::OcShieldLockSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8909,7 +8895,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldSlashLg")]
             OcIcon::OcShieldSlashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8926,7 +8912,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldSlashSm")]
             OcIcon::OcShieldSlashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8943,7 +8929,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldSm")]
             OcIcon::OcShieldSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8960,7 +8946,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldXLg")]
             OcIcon::OcShieldXLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8977,7 +8963,7 @@ impl Data {
             }
             #[cfg(feature = "OcShieldXSm")]
             OcIcon::OcShieldXSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8994,7 +8980,7 @@ impl Data {
             }
             #[cfg(feature = "OcSidebarCollapseLg")]
             OcIcon::OcSidebarCollapseLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9011,7 +8997,7 @@ impl Data {
             }
             #[cfg(feature = "OcSidebarCollapseSm")]
             OcIcon::OcSidebarCollapseSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9028,7 +9014,7 @@ impl Data {
             }
             #[cfg(feature = "OcSidebarExpandLg")]
             OcIcon::OcSidebarExpandLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9045,7 +9031,7 @@ impl Data {
             }
             #[cfg(feature = "OcSidebarExpandSm")]
             OcIcon::OcSidebarExpandSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9062,7 +9048,7 @@ impl Data {
             }
             #[cfg(feature = "OcSignInLg")]
             OcIcon::OcSignInLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9079,7 +9065,7 @@ impl Data {
             }
             #[cfg(feature = "OcSignInSm")]
             OcIcon::OcSignInSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9096,7 +9082,7 @@ impl Data {
             }
             #[cfg(feature = "OcSignOutLg")]
             OcIcon::OcSignOutLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9113,7 +9099,7 @@ impl Data {
             }
             #[cfg(feature = "OcSignOutSm")]
             OcIcon::OcSignOutSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9130,7 +9116,7 @@ impl Data {
             }
             #[cfg(feature = "OcSingleSelectLg")]
             OcIcon::OcSingleSelectLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9147,7 +9133,7 @@ impl Data {
             }
             #[cfg(feature = "OcSingleSelectSm")]
             OcIcon::OcSingleSelectSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9164,7 +9150,7 @@ impl Data {
             }
             #[cfg(feature = "OcSkipFillLg")]
             OcIcon::OcSkipFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9181,7 +9167,7 @@ impl Data {
             }
             #[cfg(feature = "OcSkipFillSm")]
             OcIcon::OcSkipFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9198,7 +9184,7 @@ impl Data {
             }
             #[cfg(feature = "OcSkipLg")]
             OcIcon::OcSkipLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9215,7 +9201,7 @@ impl Data {
             }
             #[cfg(feature = "OcSkipSm")]
             OcIcon::OcSkipSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9232,7 +9218,7 @@ impl Data {
             }
             #[cfg(feature = "OcSlidersSm")]
             OcIcon::OcSlidersSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9249,7 +9235,7 @@ impl Data {
             }
             #[cfg(feature = "OcSmileyLg")]
             OcIcon::OcSmileyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9266,7 +9252,7 @@ impl Data {
             }
             #[cfg(feature = "OcSmileySm")]
             OcIcon::OcSmileySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9283,7 +9269,7 @@ impl Data {
             }
             #[cfg(feature = "OcSortAscLg")]
             OcIcon::OcSortAscLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9300,7 +9286,7 @@ impl Data {
             }
             #[cfg(feature = "OcSortAscSm")]
             OcIcon::OcSortAscSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9317,7 +9303,7 @@ impl Data {
             }
             #[cfg(feature = "OcSortDescLg")]
             OcIcon::OcSortDescLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9334,7 +9320,7 @@ impl Data {
             }
             #[cfg(feature = "OcSortDescSm")]
             OcIcon::OcSortDescSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9351,7 +9337,7 @@ impl Data {
             }
             #[cfg(feature = "OcSparkleFillSm")]
             OcIcon::OcSparkleFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9368,7 +9354,7 @@ impl Data {
             }
             #[cfg(feature = "OcSponsorTiersLg")]
             OcIcon::OcSponsorTiersLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9385,7 +9371,7 @@ impl Data {
             }
             #[cfg(feature = "OcSponsorTiersSm")]
             OcIcon::OcSponsorTiersSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9402,7 +9388,7 @@ impl Data {
             }
             #[cfg(feature = "OcSquareFillLg")]
             OcIcon::OcSquareFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9419,7 +9405,7 @@ impl Data {
             }
             #[cfg(feature = "OcSquareFillSm")]
             OcIcon::OcSquareFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9436,7 +9422,7 @@ impl Data {
             }
             #[cfg(feature = "OcSquareLg")]
             OcIcon::OcSquareLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9453,7 +9439,7 @@ impl Data {
             }
             #[cfg(feature = "OcSquareSm")]
             OcIcon::OcSquareSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9470,7 +9456,7 @@ impl Data {
             }
             #[cfg(feature = "OcSquirrelLg")]
             OcIcon::OcSquirrelLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9487,7 +9473,7 @@ impl Data {
             }
             #[cfg(feature = "OcSquirrelSm")]
             OcIcon::OcSquirrelSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9504,7 +9490,7 @@ impl Data {
             }
             #[cfg(feature = "OcStackLg")]
             OcIcon::OcStackLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9521,7 +9507,7 @@ impl Data {
             }
             #[cfg(feature = "OcStackSm")]
             OcIcon::OcStackSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9538,7 +9524,7 @@ impl Data {
             }
             #[cfg(feature = "OcStarFillLg")]
             OcIcon::OcStarFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9555,7 +9541,7 @@ impl Data {
             }
             #[cfg(feature = "OcStarFillSm")]
             OcIcon::OcStarFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9572,7 +9558,7 @@ impl Data {
             }
             #[cfg(feature = "OcStarLg")]
             OcIcon::OcStarLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9589,7 +9575,7 @@ impl Data {
             }
             #[cfg(feature = "OcStarSm")]
             OcIcon::OcStarSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9606,7 +9592,7 @@ impl Data {
             }
             #[cfg(feature = "OcStopLg")]
             OcIcon::OcStopLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9623,7 +9609,7 @@ impl Data {
             }
             #[cfg(feature = "OcStopSm")]
             OcIcon::OcStopSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9640,7 +9626,7 @@ impl Data {
             }
             #[cfg(feature = "OcStopwatchLg")]
             OcIcon::OcStopwatchLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9657,7 +9643,7 @@ impl Data {
             }
             #[cfg(feature = "OcStopwatchSm")]
             OcIcon::OcStopwatchSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9674,7 +9660,7 @@ impl Data {
             }
             #[cfg(feature = "OcStrikethroughLg")]
             OcIcon::OcStrikethroughLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9691,7 +9677,7 @@ impl Data {
             }
             #[cfg(feature = "OcStrikethroughSm")]
             OcIcon::OcStrikethroughSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9708,7 +9694,7 @@ impl Data {
             }
             #[cfg(feature = "OcSunLg")]
             OcIcon::OcSunLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9725,7 +9711,7 @@ impl Data {
             }
             #[cfg(feature = "OcSunSm")]
             OcIcon::OcSunSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9742,7 +9728,7 @@ impl Data {
             }
             #[cfg(feature = "OcSyncLg")]
             OcIcon::OcSyncLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9759,7 +9745,7 @@ impl Data {
             }
             #[cfg(feature = "OcSyncSm")]
             OcIcon::OcSyncSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9776,7 +9762,7 @@ impl Data {
             }
             #[cfg(feature = "OcTabExternalSm")]
             OcIcon::OcTabExternalSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9793,7 +9779,7 @@ impl Data {
             }
             #[cfg(feature = "OcTabLg")]
             OcIcon::OcTabLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9810,7 +9796,7 @@ impl Data {
             }
             #[cfg(feature = "OcTableLg")]
             OcIcon::OcTableLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9827,7 +9813,7 @@ impl Data {
             }
             #[cfg(feature = "OcTableSm")]
             OcIcon::OcTableSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9844,7 +9830,7 @@ impl Data {
             }
             #[cfg(feature = "OcTagLg")]
             OcIcon::OcTagLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9861,7 +9847,7 @@ impl Data {
             }
             #[cfg(feature = "OcTagSm")]
             OcIcon::OcTagSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9878,7 +9864,7 @@ impl Data {
             }
             #[cfg(feature = "OcTasklistLg")]
             OcIcon::OcTasklistLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9895,7 +9881,7 @@ impl Data {
             }
             #[cfg(feature = "OcTasklistSm")]
             OcIcon::OcTasklistSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9912,7 +9898,7 @@ impl Data {
             }
             #[cfg(feature = "OcTelescopeFillLg")]
             OcIcon::OcTelescopeFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9929,7 +9915,7 @@ impl Data {
             }
             #[cfg(feature = "OcTelescopeFillSm")]
             OcIcon::OcTelescopeFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9946,7 +9932,7 @@ impl Data {
             }
             #[cfg(feature = "OcTelescopeLg")]
             OcIcon::OcTelescopeLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9963,7 +9949,7 @@ impl Data {
             }
             #[cfg(feature = "OcTelescopeSm")]
             OcIcon::OcTelescopeSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9980,7 +9966,7 @@ impl Data {
             }
             #[cfg(feature = "OcTerminalLg")]
             OcIcon::OcTerminalLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9997,7 +9983,7 @@ impl Data {
             }
             #[cfg(feature = "OcTerminalSm")]
             OcIcon::OcTerminalSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10014,7 +10000,7 @@ impl Data {
             }
             #[cfg(feature = "OcThreeBarsSm")]
             OcIcon::OcThreeBarsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10031,7 +10017,7 @@ impl Data {
             }
             #[cfg(feature = "OcThumbsdownLg")]
             OcIcon::OcThumbsdownLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10048,7 +10034,7 @@ impl Data {
             }
             #[cfg(feature = "OcThumbsdownSm")]
             OcIcon::OcThumbsdownSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10065,7 +10051,7 @@ impl Data {
             }
             #[cfg(feature = "OcThumbsupLg")]
             OcIcon::OcThumbsupLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10082,7 +10068,7 @@ impl Data {
             }
             #[cfg(feature = "OcThumbsupSm")]
             OcIcon::OcThumbsupSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10099,7 +10085,7 @@ impl Data {
             }
             #[cfg(feature = "OcToolsLg")]
             OcIcon::OcToolsLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10116,7 +10102,7 @@ impl Data {
             }
             #[cfg(feature = "OcToolsSm")]
             OcIcon::OcToolsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10133,7 +10119,7 @@ impl Data {
             }
             #[cfg(feature = "OcTrashLg")]
             OcIcon::OcTrashLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10150,7 +10136,7 @@ impl Data {
             }
             #[cfg(feature = "OcTrashSm")]
             OcIcon::OcTrashSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10167,7 +10153,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleDownLg")]
             OcIcon::OcTriangleDownLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10184,7 +10170,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleDownSm")]
             OcIcon::OcTriangleDownSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10201,7 +10187,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleLeftLg")]
             OcIcon::OcTriangleLeftLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10218,7 +10204,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleLeftSm")]
             OcIcon::OcTriangleLeftSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10235,7 +10221,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleRightLg")]
             OcIcon::OcTriangleRightLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10252,7 +10238,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleRightSm")]
             OcIcon::OcTriangleRightSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10269,7 +10255,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleUpLg")]
             OcIcon::OcTriangleUpLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10286,7 +10272,7 @@ impl Data {
             }
             #[cfg(feature = "OcTriangleUpSm")]
             OcIcon::OcTriangleUpSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10303,7 +10289,7 @@ impl Data {
             }
             #[cfg(feature = "OcTrophyLg")]
             OcIcon::OcTrophyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10320,7 +10306,7 @@ impl Data {
             }
             #[cfg(feature = "OcTrophySm")]
             OcIcon::OcTrophySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10337,7 +10323,7 @@ impl Data {
             }
             #[cfg(feature = "OcTypographyLg")]
             OcIcon::OcTypographyLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10354,7 +10340,7 @@ impl Data {
             }
             #[cfg(feature = "OcTypographySm")]
             OcIcon::OcTypographySm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10371,7 +10357,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnfoldLg")]
             OcIcon::OcUnfoldLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10388,7 +10374,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnfoldSm")]
             OcIcon::OcUnfoldSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10405,7 +10391,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnlinkLg")]
             OcIcon::OcUnlinkLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10422,7 +10408,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnlinkSm")]
             OcIcon::OcUnlinkSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10439,7 +10425,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnlockLg")]
             OcIcon::OcUnlockLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10456,7 +10442,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnlockSm")]
             OcIcon::OcUnlockSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10473,7 +10459,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnmuteLg")]
             OcIcon::OcUnmuteLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10490,7 +10476,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnmuteSm")]
             OcIcon::OcUnmuteSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10507,7 +10493,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnreadLg")]
             OcIcon::OcUnreadLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10524,7 +10510,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnreadSm")]
             OcIcon::OcUnreadSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10541,7 +10527,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnverifiedLg")]
             OcIcon::OcUnverifiedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10558,7 +10544,7 @@ impl Data {
             }
             #[cfg(feature = "OcUnverifiedSm")]
             OcIcon::OcUnverifiedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10575,7 +10561,7 @@ impl Data {
             }
             #[cfg(feature = "OcUploadLg")]
             OcIcon::OcUploadLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10592,7 +10578,7 @@ impl Data {
             }
             #[cfg(feature = "OcUploadSm")]
             OcIcon::OcUploadSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10609,7 +10595,7 @@ impl Data {
             }
             #[cfg(feature = "OcVerifiedLg")]
             OcIcon::OcVerifiedLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10626,7 +10612,7 @@ impl Data {
             }
             #[cfg(feature = "OcVerifiedSm")]
             OcIcon::OcVerifiedSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10643,7 +10629,7 @@ impl Data {
             }
             #[cfg(feature = "OcVersionsLg")]
             OcIcon::OcVersionsLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10660,7 +10646,7 @@ impl Data {
             }
             #[cfg(feature = "OcVersionsSm")]
             OcIcon::OcVersionsSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10677,7 +10663,7 @@ impl Data {
             }
             #[cfg(feature = "OcVideoLg")]
             OcIcon::OcVideoLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10694,7 +10680,7 @@ impl Data {
             }
             #[cfg(feature = "OcVideoSm")]
             OcIcon::OcVideoSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10711,7 +10697,7 @@ impl Data {
             }
             #[cfg(feature = "OcWebhookSm")]
             OcIcon::OcWebhookSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10728,7 +10714,7 @@ impl Data {
             }
             #[cfg(feature = "OcWorkflowLg")]
             OcIcon::OcWorkflowLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10745,7 +10731,7 @@ impl Data {
             }
             #[cfg(feature = "OcWorkflowSm")]
             OcIcon::OcWorkflowSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10762,7 +10748,7 @@ impl Data {
             }
             #[cfg(feature = "OcXCircleFillLg")]
             OcIcon::OcXCircleFillLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10779,7 +10765,7 @@ impl Data {
             }
             #[cfg(feature = "OcXCircleFillSm")]
             OcIcon::OcXCircleFillSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10796,7 +10782,7 @@ impl Data {
             }
             #[cfg(feature = "OcXCircleFillXs")]
             OcIcon::OcXCircleFillXs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10813,7 +10799,7 @@ impl Data {
             }
             #[cfg(feature = "OcXCircleLg")]
             OcIcon::OcXCircleLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10830,7 +10816,7 @@ impl Data {
             }
             #[cfg(feature = "OcXCircleSm")]
             OcIcon::OcXCircleSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10847,7 +10833,7 @@ impl Data {
             }
             #[cfg(feature = "OcXLg")]
             OcIcon::OcXLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10864,7 +10850,7 @@ impl Data {
             }
             #[cfg(feature = "OcXSm")]
             OcIcon::OcXSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10881,7 +10867,7 @@ impl Data {
             }
             #[cfg(feature = "OcZapLg")]
             OcIcon::OcZapLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10898,7 +10884,7 @@ impl Data {
             }
             #[cfg(feature = "OcZapSm")]
             OcIcon::OcZapSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10915,7 +10901,7 @@ impl Data {
             }
             #[cfg(feature = "OcZoomInLg")]
             OcIcon::OcZoomInLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10932,7 +10918,7 @@ impl Data {
             }
             #[cfg(feature = "OcZoomInSm")]
             OcIcon::OcZoomInSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10949,7 +10935,7 @@ impl Data {
             }
             #[cfg(feature = "OcZoomOutLg")]
             OcIcon::OcZoomOutLg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10966,7 +10952,7 @@ impl Data {
             }
             #[cfg(feature = "OcZoomOutSm")]
             OcIcon::OcZoomOutSm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10983,62 +10969,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosOcIcon(
-    cx: leptos::Scope,
-    icon: OcIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

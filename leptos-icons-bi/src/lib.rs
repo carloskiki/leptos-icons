@@ -3288,26 +3288,12 @@ pub enum BiIcon {
     BiZoomOutSolid,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: BiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for BiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "Bi500px")]
             BiIcon::Bi500px => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3324,7 +3310,7 @@ impl Data {
             }
             #[cfg(feature = "Bi99designs")]
             BiIcon::Bi99designs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3341,7 +3327,7 @@ impl Data {
             }
             #[cfg(feature = "BiAbacusRegular")]
             BiIcon::BiAbacusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3358,7 +3344,7 @@ impl Data {
             }
             #[cfg(feature = "BiAccessibilityRegular")]
             BiIcon::BiAccessibilityRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3375,7 +3361,7 @@ impl Data {
             }
             #[cfg(feature = "BiAddToQueueRegular")]
             BiIcon::BiAddToQueueRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3392,7 +3378,7 @@ impl Data {
             }
             #[cfg(feature = "BiAddToQueueSolid")]
             BiIcon::BiAddToQueueSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3409,7 +3395,7 @@ impl Data {
             }
             #[cfg(feature = "BiAdjustAltSolid")]
             BiIcon::BiAdjustAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3426,7 +3412,7 @@ impl Data {
             }
             #[cfg(feature = "BiAdjustRegular")]
             BiIcon::BiAdjustRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3443,7 +3429,7 @@ impl Data {
             }
             #[cfg(feature = "BiAdjustSolid")]
             BiIcon::BiAdjustSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3460,7 +3446,7 @@ impl Data {
             }
             #[cfg(feature = "BiAdobe")]
             BiIcon::BiAdobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3477,7 +3463,7 @@ impl Data {
             }
             #[cfg(feature = "BiAirbnb")]
             BiIcon::BiAirbnb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3494,7 +3480,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmAddRegular")]
             BiIcon::BiAlarmAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3511,7 +3497,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmAddSolid")]
             BiIcon::BiAlarmAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3528,7 +3514,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmExclamationRegular")]
             BiIcon::BiAlarmExclamationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3545,7 +3531,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmExclamationSolid")]
             BiIcon::BiAlarmExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3562,7 +3548,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmOffRegular")]
             BiIcon::BiAlarmOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3579,7 +3565,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmOffSolid")]
             BiIcon::BiAlarmOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3596,7 +3582,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmRegular")]
             BiIcon::BiAlarmRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3613,7 +3599,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmSnoozeRegular")]
             BiIcon::BiAlarmSnoozeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3630,7 +3616,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmSnoozeSolid")]
             BiIcon::BiAlarmSnoozeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3647,7 +3633,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlarmSolid")]
             BiIcon::BiAlarmSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3664,7 +3650,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlbumRegular")]
             BiIcon::BiAlbumRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3681,7 +3667,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlbumSolid")]
             BiIcon::BiAlbumSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3698,7 +3684,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlgolia")]
             BiIcon::BiAlgolia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3715,7 +3701,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlignJustifyRegular")]
             BiIcon::BiAlignJustifyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3732,7 +3718,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlignLeftRegular")]
             BiIcon::BiAlignLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3749,7 +3735,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlignMiddleRegular")]
             BiIcon::BiAlignMiddleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3766,7 +3752,7 @@ impl Data {
             }
             #[cfg(feature = "BiAlignRightRegular")]
             BiIcon::BiAlignRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3783,7 +3769,7 @@ impl Data {
             }
             #[cfg(feature = "BiAmazon")]
             BiIcon::BiAmazon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3800,7 +3786,7 @@ impl Data {
             }
             #[cfg(feature = "BiAmbulanceSolid")]
             BiIcon::BiAmbulanceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3817,7 +3803,7 @@ impl Data {
             }
             #[cfg(feature = "BiAnalyseRegular")]
             BiIcon::BiAnalyseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3834,7 +3820,7 @@ impl Data {
             }
             #[cfg(feature = "BiAnalyseSolid")]
             BiIcon::BiAnalyseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3851,7 +3837,7 @@ impl Data {
             }
             #[cfg(feature = "BiAnchorRegular")]
             BiIcon::BiAnchorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3868,7 +3854,7 @@ impl Data {
             }
             #[cfg(feature = "BiAndroid")]
             BiIcon::BiAndroid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3885,7 +3871,7 @@ impl Data {
             }
             #[cfg(feature = "BiAngryRegular")]
             BiIcon::BiAngryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3902,7 +3888,7 @@ impl Data {
             }
             #[cfg(feature = "BiAngrySolid")]
             BiIcon::BiAngrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3919,7 +3905,7 @@ impl Data {
             }
             #[cfg(feature = "BiAngular")]
             BiIcon::BiAngular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3936,7 +3922,7 @@ impl Data {
             }
             #[cfg(feature = "BiApertureRegular")]
             BiIcon::BiApertureRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3953,7 +3939,7 @@ impl Data {
             }
             #[cfg(feature = "BiApple")]
             BiIcon::BiApple => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3970,7 +3956,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchRegular")]
             BiIcon::BiArchRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3987,7 +3973,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchSolid")]
             BiIcon::BiArchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4004,7 +3990,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchiveInRegular")]
             BiIcon::BiArchiveInRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4021,7 +4007,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchiveInSolid")]
             BiIcon::BiArchiveInSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4038,7 +4024,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchiveOutRegular")]
             BiIcon::BiArchiveOutRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4055,7 +4041,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchiveOutSolid")]
             BiIcon::BiArchiveOutSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4072,7 +4058,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchiveRegular")]
             BiIcon::BiArchiveRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4089,7 +4075,7 @@ impl Data {
             }
             #[cfg(feature = "BiArchiveSolid")]
             BiIcon::BiArchiveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4106,7 +4092,7 @@ impl Data {
             }
             #[cfg(feature = "BiAreaRegular")]
             BiIcon::BiAreaRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4123,7 +4109,7 @@ impl Data {
             }
             #[cfg(feature = "BiAreaSolid")]
             BiIcon::BiAreaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4140,7 +4126,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowBackRegular")]
             BiIcon::BiArrowBackRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4157,7 +4143,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromBottomRegular")]
             BiIcon::BiArrowFromBottomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4174,7 +4160,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromBottomSolid")]
             BiIcon::BiArrowFromBottomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4191,7 +4177,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromLeftRegular")]
             BiIcon::BiArrowFromLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4208,7 +4194,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromLeftSolid")]
             BiIcon::BiArrowFromLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4225,7 +4211,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromRightRegular")]
             BiIcon::BiArrowFromRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4242,7 +4228,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromRightSolid")]
             BiIcon::BiArrowFromRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4259,7 +4245,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromTopRegular")]
             BiIcon::BiArrowFromTopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4276,7 +4262,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowFromTopSolid")]
             BiIcon::BiArrowFromTopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4293,7 +4279,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToBottomRegular")]
             BiIcon::BiArrowToBottomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4310,7 +4296,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToBottomSolid")]
             BiIcon::BiArrowToBottomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4327,7 +4313,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToLeftRegular")]
             BiIcon::BiArrowToLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4344,7 +4330,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToLeftSolid")]
             BiIcon::BiArrowToLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4361,7 +4347,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToRightRegular")]
             BiIcon::BiArrowToRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4378,7 +4364,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToRightSolid")]
             BiIcon::BiArrowToRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4395,7 +4381,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToTopRegular")]
             BiIcon::BiArrowToTopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4412,7 +4398,7 @@ impl Data {
             }
             #[cfg(feature = "BiArrowToTopSolid")]
             BiIcon::BiArrowToTopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4429,7 +4415,7 @@ impl Data {
             }
             #[cfg(feature = "BiAtRegular")]
             BiIcon::BiAtRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4446,7 +4432,7 @@ impl Data {
             }
             #[cfg(feature = "BiAtomRegular")]
             BiIcon::BiAtomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4463,7 +4449,7 @@ impl Data {
             }
             #[cfg(feature = "BiAudible")]
             BiIcon::BiAudible => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4480,7 +4466,7 @@ impl Data {
             }
             #[cfg(feature = "BiAwardRegular")]
             BiIcon::BiAwardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4497,7 +4483,7 @@ impl Data {
             }
             #[cfg(feature = "BiAwardSolid")]
             BiIcon::BiAwardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4514,7 +4500,7 @@ impl Data {
             }
             #[cfg(feature = "BiAws")]
             BiIcon::BiAws => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4531,7 +4517,7 @@ impl Data {
             }
             #[cfg(feature = "BiBabyCarriageSolid")]
             BiIcon::BiBabyCarriageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4548,7 +4534,7 @@ impl Data {
             }
             #[cfg(feature = "BiBackpackSolid")]
             BiIcon::BiBackpackSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4565,7 +4551,7 @@ impl Data {
             }
             #[cfg(feature = "BiBadgeCheckRegular")]
             BiIcon::BiBadgeCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4582,7 +4568,7 @@ impl Data {
             }
             #[cfg(feature = "BiBadgeCheckSolid")]
             BiIcon::BiBadgeCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4599,7 +4585,7 @@ impl Data {
             }
             #[cfg(feature = "BiBadgeDollarSolid")]
             BiIcon::BiBadgeDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4616,7 +4602,7 @@ impl Data {
             }
             #[cfg(feature = "BiBadgeRegular")]
             BiIcon::BiBadgeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4633,7 +4619,7 @@ impl Data {
             }
             #[cfg(feature = "BiBadgeSolid")]
             BiIcon::BiBadgeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4650,7 +4636,7 @@ impl Data {
             }
             #[cfg(feature = "BiBaguetteRegular")]
             BiIcon::BiBaguetteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4667,7 +4653,7 @@ impl Data {
             }
             #[cfg(feature = "BiBaguetteSolid")]
             BiIcon::BiBaguetteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4684,7 +4670,7 @@ impl Data {
             }
             #[cfg(feature = "BiBaidu")]
             BiIcon::BiBaidu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4701,7 +4687,7 @@ impl Data {
             }
             #[cfg(feature = "BiBallRegular")]
             BiIcon::BiBallRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4718,7 +4704,7 @@ impl Data {
             }
             #[cfg(feature = "BiBallSolid")]
             BiIcon::BiBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4735,7 +4721,7 @@ impl Data {
             }
             #[cfg(feature = "BiBalloonSolid")]
             BiIcon::BiBalloonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4752,7 +4738,7 @@ impl Data {
             }
             #[cfg(feature = "BiBandAidRegular")]
             BiIcon::BiBandAidRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4769,7 +4755,7 @@ impl Data {
             }
             #[cfg(feature = "BiBandAidSolid")]
             BiIcon::BiBandAidSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4786,7 +4772,7 @@ impl Data {
             }
             #[cfg(feature = "BiBankSolid")]
             BiIcon::BiBankSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4803,7 +4789,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarChartAlt2Regular")]
             BiIcon::BiBarChartAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4820,7 +4806,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarChartAlt2Solid")]
             BiIcon::BiBarChartAlt2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4837,7 +4823,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarChartAltRegular")]
             BiIcon::BiBarChartAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4854,7 +4840,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarChartRegular")]
             BiIcon::BiBarChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4871,7 +4857,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarChartSquareRegular")]
             BiIcon::BiBarChartSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4888,7 +4874,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarChartSquareSolid")]
             BiIcon::BiBarChartSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4905,7 +4891,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarcodeReaderRegular")]
             BiIcon::BiBarcodeReaderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4922,7 +4908,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarcodeRegular")]
             BiIcon::BiBarcodeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4939,7 +4925,7 @@ impl Data {
             }
             #[cfg(feature = "BiBarcodeSolid")]
             BiIcon::BiBarcodeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4956,7 +4942,7 @@ impl Data {
             }
             #[cfg(feature = "BiBaseballRegular")]
             BiIcon::BiBaseballRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4973,7 +4959,7 @@ impl Data {
             }
             #[cfg(feature = "BiBaseballSolid")]
             BiIcon::BiBaseballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4990,7 +4976,7 @@ impl Data {
             }
             #[cfg(feature = "BiBasketRegular")]
             BiIcon::BiBasketRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5007,7 +4993,7 @@ impl Data {
             }
             #[cfg(feature = "BiBasketSolid")]
             BiIcon::BiBasketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5024,7 +5010,7 @@ impl Data {
             }
             #[cfg(feature = "BiBasketballRegular")]
             BiIcon::BiBasketballRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5041,7 +5027,7 @@ impl Data {
             }
             #[cfg(feature = "BiBasketballSolid")]
             BiIcon::BiBasketballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5058,7 +5044,7 @@ impl Data {
             }
             #[cfg(feature = "BiBathRegular")]
             BiIcon::BiBathRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5075,7 +5061,7 @@ impl Data {
             }
             #[cfg(feature = "BiBathSolid")]
             BiIcon::BiBathSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5092,7 +5078,7 @@ impl Data {
             }
             #[cfg(feature = "BiBatteryChargingSolid")]
             BiIcon::BiBatteryChargingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5109,7 +5095,7 @@ impl Data {
             }
             #[cfg(feature = "BiBatteryFullSolid")]
             BiIcon::BiBatteryFullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5126,7 +5112,7 @@ impl Data {
             }
             #[cfg(feature = "BiBatteryLowSolid")]
             BiIcon::BiBatteryLowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5143,7 +5129,7 @@ impl Data {
             }
             #[cfg(feature = "BiBatteryRegular")]
             BiIcon::BiBatteryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5160,7 +5146,7 @@ impl Data {
             }
             #[cfg(feature = "BiBatterySolid")]
             BiIcon::BiBatterySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5177,7 +5163,7 @@ impl Data {
             }
             #[cfg(feature = "BiBedRegular")]
             BiIcon::BiBedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5194,7 +5180,7 @@ impl Data {
             }
             #[cfg(feature = "BiBedSolid")]
             BiIcon::BiBedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5211,7 +5197,7 @@ impl Data {
             }
             #[cfg(feature = "BiBeenHereRegular")]
             BiIcon::BiBeenHereRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5228,7 +5214,7 @@ impl Data {
             }
             #[cfg(feature = "BiBeenHereSolid")]
             BiIcon::BiBeenHereSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5245,7 +5231,7 @@ impl Data {
             }
             #[cfg(feature = "BiBeerRegular")]
             BiIcon::BiBeerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5262,7 +5248,7 @@ impl Data {
             }
             #[cfg(feature = "BiBeerSolid")]
             BiIcon::BiBeerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5279,7 +5265,7 @@ impl Data {
             }
             #[cfg(feature = "BiBehance")]
             BiIcon::BiBehance => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5296,7 +5282,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellMinusRegular")]
             BiIcon::BiBellMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5313,7 +5299,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellMinusSolid")]
             BiIcon::BiBellMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5330,7 +5316,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellOffRegular")]
             BiIcon::BiBellOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5347,7 +5333,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellOffSolid")]
             BiIcon::BiBellOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5364,7 +5350,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellPlusRegular")]
             BiIcon::BiBellPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5381,7 +5367,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellPlusSolid")]
             BiIcon::BiBellPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5398,7 +5384,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellRegular")]
             BiIcon::BiBellRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5415,7 +5401,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellRingSolid")]
             BiIcon::BiBellRingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5432,7 +5418,7 @@ impl Data {
             }
             #[cfg(feature = "BiBellSolid")]
             BiIcon::BiBellSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5449,7 +5435,7 @@ impl Data {
             }
             #[cfg(feature = "BiBibleRegular")]
             BiIcon::BiBibleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5466,7 +5452,7 @@ impl Data {
             }
             #[cfg(feature = "BiBibleSolid")]
             BiIcon::BiBibleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5483,7 +5469,7 @@ impl Data {
             }
             #[cfg(feature = "BiBing")]
             BiIcon::BiBing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5500,7 +5486,7 @@ impl Data {
             }
             #[cfg(feature = "BiBinocularsSolid")]
             BiIcon::BiBinocularsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5517,7 +5503,7 @@ impl Data {
             }
             #[cfg(feature = "BiBitcoin")]
             BiIcon::BiBitcoin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5534,7 +5520,7 @@ impl Data {
             }
             #[cfg(feature = "BiBitcoinRegular")]
             BiIcon::BiBitcoinRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5551,7 +5537,7 @@ impl Data {
             }
             #[cfg(feature = "BiBlanketRegular")]
             BiIcon::BiBlanketRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5568,7 +5554,7 @@ impl Data {
             }
             #[cfg(feature = "BiBlanketSolid")]
             BiIcon::BiBlanketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5585,7 +5571,7 @@ impl Data {
             }
             #[cfg(feature = "BiBlender")]
             BiIcon::BiBlender => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5602,7 +5588,7 @@ impl Data {
             }
             #[cfg(feature = "BiBlockRegular")]
             BiIcon::BiBlockRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5619,7 +5605,7 @@ impl Data {
             }
             #[cfg(feature = "BiBlogger")]
             BiIcon::BiBlogger => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5636,7 +5622,7 @@ impl Data {
             }
             #[cfg(feature = "BiBluetoothRegular")]
             BiIcon::BiBluetoothRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5653,7 +5639,7 @@ impl Data {
             }
             #[cfg(feature = "BiBodyRegular")]
             BiIcon::BiBodyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5670,7 +5656,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoldRegular")]
             BiIcon::BiBoldRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5687,7 +5673,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoltCircleRegular")]
             BiIcon::BiBoltCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5704,7 +5690,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoltCircleSolid")]
             BiIcon::BiBoltCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5721,7 +5707,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoltSolid")]
             BiIcon::BiBoltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5738,7 +5724,7 @@ impl Data {
             }
             #[cfg(feature = "BiBombRegular")]
             BiIcon::BiBombRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5755,7 +5741,7 @@ impl Data {
             }
             #[cfg(feature = "BiBombSolid")]
             BiIcon::BiBombSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5772,7 +5758,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoneRegular")]
             BiIcon::BiBoneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5789,7 +5775,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoneSolid")]
             BiIcon::BiBoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5806,7 +5792,7 @@ impl Data {
             }
             #[cfg(feature = "BiBongRegular")]
             BiIcon::BiBongRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5823,7 +5809,7 @@ impl Data {
             }
             #[cfg(feature = "BiBongSolid")]
             BiIcon::BiBongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5840,7 +5826,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookAddRegular")]
             BiIcon::BiBookAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5857,7 +5843,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookAddSolid")]
             BiIcon::BiBookAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5874,7 +5860,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookAltRegular")]
             BiIcon::BiBookAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5891,7 +5877,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookAltSolid")]
             BiIcon::BiBookAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5908,7 +5894,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookBookmarkRegular")]
             BiIcon::BiBookBookmarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5925,7 +5911,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookBookmarkSolid")]
             BiIcon::BiBookBookmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5942,7 +5928,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookContentRegular")]
             BiIcon::BiBookContentRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5959,7 +5945,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookContentSolid")]
             BiIcon::BiBookContentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5976,7 +5962,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookHeartRegular")]
             BiIcon::BiBookHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5993,7 +5979,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookHeartSolid")]
             BiIcon::BiBookHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6010,7 +5996,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookOpenRegular")]
             BiIcon::BiBookOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6027,7 +6013,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookOpenSolid")]
             BiIcon::BiBookOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6044,7 +6030,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookReaderRegular")]
             BiIcon::BiBookReaderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6061,7 +6047,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookReaderSolid")]
             BiIcon::BiBookReaderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6078,7 +6064,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookRegular")]
             BiIcon::BiBookRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6095,7 +6081,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookSolid")]
             BiIcon::BiBookSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6112,7 +6098,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkAltMinusRegular")]
             BiIcon::BiBookmarkAltMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6129,7 +6115,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkAltMinusSolid")]
             BiIcon::BiBookmarkAltMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6146,7 +6132,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkAltPlusRegular")]
             BiIcon::BiBookmarkAltPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6163,7 +6149,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkAltPlusSolid")]
             BiIcon::BiBookmarkAltPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6180,7 +6166,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkAltRegular")]
             BiIcon::BiBookmarkAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6197,7 +6183,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkAltSolid")]
             BiIcon::BiBookmarkAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6214,7 +6200,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkHeartRegular")]
             BiIcon::BiBookmarkHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6231,7 +6217,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkHeartSolid")]
             BiIcon::BiBookmarkHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6248,7 +6234,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkMinusRegular")]
             BiIcon::BiBookmarkMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6265,7 +6251,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkMinusSolid")]
             BiIcon::BiBookmarkMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6282,7 +6268,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkPlusRegular")]
             BiIcon::BiBookmarkPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6299,7 +6285,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkPlusSolid")]
             BiIcon::BiBookmarkPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6316,7 +6302,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkRegular")]
             BiIcon::BiBookmarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6333,7 +6319,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkSolid")]
             BiIcon::BiBookmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6350,7 +6336,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarkStarSolid")]
             BiIcon::BiBookmarkStarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6367,7 +6353,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarksRegular")]
             BiIcon::BiBookmarksRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6384,7 +6370,7 @@ impl Data {
             }
             #[cfg(feature = "BiBookmarksSolid")]
             BiIcon::BiBookmarksSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6401,7 +6387,7 @@ impl Data {
             }
             #[cfg(feature = "BiBootstrap")]
             BiIcon::BiBootstrap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6418,7 +6404,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderAllRegular")]
             BiIcon::BiBorderAllRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6435,7 +6421,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderBottomRegular")]
             BiIcon::BiBorderBottomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6452,7 +6438,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderInnerRegular")]
             BiIcon::BiBorderInnerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6469,7 +6455,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderLeftRegular")]
             BiIcon::BiBorderLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6486,7 +6472,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderNoneRegular")]
             BiIcon::BiBorderNoneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6503,7 +6489,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderOuterRegular")]
             BiIcon::BiBorderOuterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6520,7 +6506,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderRadiusRegular")]
             BiIcon::BiBorderRadiusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6537,7 +6523,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderRightRegular")]
             BiIcon::BiBorderRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6554,7 +6540,7 @@ impl Data {
             }
             #[cfg(feature = "BiBorderTopRegular")]
             BiIcon::BiBorderTopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6571,7 +6557,7 @@ impl Data {
             }
             #[cfg(feature = "BiBotRegular")]
             BiIcon::BiBotRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6588,7 +6574,7 @@ impl Data {
             }
             #[cfg(feature = "BiBotSolid")]
             BiIcon::BiBotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6605,7 +6591,7 @@ impl Data {
             }
             #[cfg(feature = "BiBowlHotRegular")]
             BiIcon::BiBowlHotRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6622,7 +6608,7 @@ impl Data {
             }
             #[cfg(feature = "BiBowlHotSolid")]
             BiIcon::BiBowlHotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6639,7 +6625,7 @@ impl Data {
             }
             #[cfg(feature = "BiBowlRiceRegular")]
             BiIcon::BiBowlRiceRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6656,7 +6642,7 @@ impl Data {
             }
             #[cfg(feature = "BiBowlRiceSolid")]
             BiIcon::BiBowlRiceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6673,7 +6659,7 @@ impl Data {
             }
             #[cfg(feature = "BiBowlingBallRegular")]
             BiIcon::BiBowlingBallRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6690,7 +6676,7 @@ impl Data {
             }
             #[cfg(feature = "BiBowlingBallSolid")]
             BiIcon::BiBowlingBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6707,7 +6693,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoxRegular")]
             BiIcon::BiBoxRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6724,7 +6710,7 @@ impl Data {
             }
             #[cfg(feature = "BiBoxSolid")]
             BiIcon::BiBoxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6741,7 +6727,7 @@ impl Data {
             }
             #[cfg(feature = "BiBracketRegular")]
             BiIcon::BiBracketRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6758,7 +6744,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrailleRegular")]
             BiIcon::BiBrailleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6775,7 +6761,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrainRegular")]
             BiIcon::BiBrainRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6792,7 +6778,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrainSolid")]
             BiIcon::BiBrainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6809,7 +6795,7 @@ impl Data {
             }
             #[cfg(feature = "BiBriefcaseAlt2Regular")]
             BiIcon::BiBriefcaseAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6826,7 +6812,7 @@ impl Data {
             }
             #[cfg(feature = "BiBriefcaseAlt2Solid")]
             BiIcon::BiBriefcaseAlt2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6843,7 +6829,7 @@ impl Data {
             }
             #[cfg(feature = "BiBriefcaseAltRegular")]
             BiIcon::BiBriefcaseAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6860,7 +6846,7 @@ impl Data {
             }
             #[cfg(feature = "BiBriefcaseAltSolid")]
             BiIcon::BiBriefcaseAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6877,7 +6863,7 @@ impl Data {
             }
             #[cfg(feature = "BiBriefcaseRegular")]
             BiIcon::BiBriefcaseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6894,7 +6880,7 @@ impl Data {
             }
             #[cfg(feature = "BiBriefcaseSolid")]
             BiIcon::BiBriefcaseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6911,7 +6897,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrightnessHalfRegular")]
             BiIcon::BiBrightnessHalfRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6928,7 +6914,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrightnessHalfSolid")]
             BiIcon::BiBrightnessHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6945,7 +6931,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrightnessRegular")]
             BiIcon::BiBrightnessRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6962,7 +6948,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrightnessSolid")]
             BiIcon::BiBrightnessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6979,7 +6965,7 @@ impl Data {
             }
             #[cfg(feature = "BiBroadcastRegular")]
             BiIcon::BiBroadcastRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6996,7 +6982,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrushAltRegular")]
             BiIcon::BiBrushAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7013,7 +6999,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrushAltSolid")]
             BiIcon::BiBrushAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7030,7 +7016,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrushRegular")]
             BiIcon::BiBrushRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7047,7 +7033,7 @@ impl Data {
             }
             #[cfg(feature = "BiBrushSolid")]
             BiIcon::BiBrushSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7064,7 +7050,7 @@ impl Data {
             }
             #[cfg(feature = "BiBugAltRegular")]
             BiIcon::BiBugAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7081,7 +7067,7 @@ impl Data {
             }
             #[cfg(feature = "BiBugAltSolid")]
             BiIcon::BiBugAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7098,7 +7084,7 @@ impl Data {
             }
             #[cfg(feature = "BiBugRegular")]
             BiIcon::BiBugRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7115,7 +7101,7 @@ impl Data {
             }
             #[cfg(feature = "BiBugSolid")]
             BiIcon::BiBugSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7132,7 +7118,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuildingHouseRegular")]
             BiIcon::BiBuildingHouseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7149,7 +7135,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuildingHouseSolid")]
             BiIcon::BiBuildingHouseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7166,7 +7152,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuildingRegular")]
             BiIcon::BiBuildingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7183,7 +7169,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuildingSolid")]
             BiIcon::BiBuildingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7200,7 +7186,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuildingsRegular")]
             BiIcon::BiBuildingsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7217,7 +7203,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuildingsSolid")]
             BiIcon::BiBuildingsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7234,7 +7220,7 @@ impl Data {
             }
             #[cfg(feature = "BiBulbRegular")]
             BiIcon::BiBulbRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7251,7 +7237,7 @@ impl Data {
             }
             #[cfg(feature = "BiBulbSolid")]
             BiIcon::BiBulbSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7268,7 +7254,7 @@ impl Data {
             }
             #[cfg(feature = "BiBullseyeRegular")]
             BiIcon::BiBullseyeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7285,7 +7271,7 @@ impl Data {
             }
             #[cfg(feature = "BiBullseyeSolid")]
             BiIcon::BiBullseyeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7302,7 +7288,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuoyRegular")]
             BiIcon::BiBuoyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7319,7 +7305,7 @@ impl Data {
             }
             #[cfg(feature = "BiBuoySolid")]
             BiIcon::BiBuoySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7336,7 +7322,7 @@ impl Data {
             }
             #[cfg(feature = "BiBusRegular")]
             BiIcon::BiBusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7353,7 +7339,7 @@ impl Data {
             }
             #[cfg(feature = "BiBusSchoolRegular")]
             BiIcon::BiBusSchoolRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7370,7 +7356,7 @@ impl Data {
             }
             #[cfg(feature = "BiBusSchoolSolid")]
             BiIcon::BiBusSchoolSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7387,7 +7373,7 @@ impl Data {
             }
             #[cfg(feature = "BiBusSolid")]
             BiIcon::BiBusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7404,7 +7390,7 @@ impl Data {
             }
             #[cfg(feature = "BiBusinessSolid")]
             BiIcon::BiBusinessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7421,7 +7407,7 @@ impl Data {
             }
             #[cfg(feature = "BiCPlusPlus")]
             BiIcon::BiCPlusPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7438,7 +7424,7 @@ impl Data {
             }
             #[cfg(feature = "BiCabinetRegular")]
             BiIcon::BiCabinetRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7455,7 +7441,7 @@ impl Data {
             }
             #[cfg(feature = "BiCabinetSolid")]
             BiIcon::BiCabinetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7472,7 +7458,7 @@ impl Data {
             }
             #[cfg(feature = "BiCableCarRegular")]
             BiIcon::BiCableCarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7489,7 +7475,7 @@ impl Data {
             }
             #[cfg(feature = "BiCableCarSolid")]
             BiIcon::BiCableCarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7506,7 +7492,7 @@ impl Data {
             }
             #[cfg(feature = "BiCakeRegular")]
             BiIcon::BiCakeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7523,7 +7509,7 @@ impl Data {
             }
             #[cfg(feature = "BiCakeSolid")]
             BiIcon::BiCakeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7540,7 +7526,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalculatorRegular")]
             BiIcon::BiCalculatorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7557,7 +7543,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalculatorSolid")]
             BiIcon::BiCalculatorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7574,7 +7560,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarAltRegular")]
             BiIcon::BiCalendarAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7591,7 +7577,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarAltSolid")]
             BiIcon::BiCalendarAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7608,7 +7594,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarCheckRegular")]
             BiIcon::BiCalendarCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7625,7 +7611,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarCheckSolid")]
             BiIcon::BiCalendarCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7642,7 +7628,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarEditRegular")]
             BiIcon::BiCalendarEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7659,7 +7645,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarEditSolid")]
             BiIcon::BiCalendarEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7676,7 +7662,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarEventRegular")]
             BiIcon::BiCalendarEventRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7693,7 +7679,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarEventSolid")]
             BiIcon::BiCalendarEventSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7710,7 +7696,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarExclamationRegular")]
             BiIcon::BiCalendarExclamationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7727,7 +7713,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarExclamationSolid")]
             BiIcon::BiCalendarExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7744,7 +7730,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarHeartRegular")]
             BiIcon::BiCalendarHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7761,7 +7747,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarHeartSolid")]
             BiIcon::BiCalendarHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7778,7 +7764,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarMinusRegular")]
             BiIcon::BiCalendarMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7795,7 +7781,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarMinusSolid")]
             BiIcon::BiCalendarMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7812,7 +7798,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarPlusRegular")]
             BiIcon::BiCalendarPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7829,7 +7815,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarPlusSolid")]
             BiIcon::BiCalendarPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7846,7 +7832,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarRegular")]
             BiIcon::BiCalendarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7863,7 +7849,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarSolid")]
             BiIcon::BiCalendarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7880,7 +7866,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarStarRegular")]
             BiIcon::BiCalendarStarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7897,7 +7883,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarStarSolid")]
             BiIcon::BiCalendarStarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7914,7 +7900,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarWeekRegular")]
             BiIcon::BiCalendarWeekRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7931,7 +7917,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarWeekSolid")]
             BiIcon::BiCalendarWeekSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7948,7 +7934,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarXRegular")]
             BiIcon::BiCalendarXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7965,7 +7951,7 @@ impl Data {
             }
             #[cfg(feature = "BiCalendarXSolid")]
             BiIcon::BiCalendarXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7982,7 +7968,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraHomeRegular")]
             BiIcon::BiCameraHomeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7999,7 +7985,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraHomeSolid")]
             BiIcon::BiCameraHomeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8016,7 +8002,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraMovieRegular")]
             BiIcon::BiCameraMovieRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8033,7 +8019,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraMovieSolid")]
             BiIcon::BiCameraMovieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8050,7 +8036,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraOffRegular")]
             BiIcon::BiCameraOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8067,7 +8053,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraOffSolid")]
             BiIcon::BiCameraOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8084,7 +8070,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraPlusSolid")]
             BiIcon::BiCameraPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8101,7 +8087,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraRegular")]
             BiIcon::BiCameraRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8118,7 +8104,7 @@ impl Data {
             }
             #[cfg(feature = "BiCameraSolid")]
             BiIcon::BiCameraSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8135,7 +8121,7 @@ impl Data {
             }
             #[cfg(feature = "BiCandlesRegular")]
             BiIcon::BiCandlesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8152,7 +8138,7 @@ impl Data {
             }
             #[cfg(feature = "BiCapsuleRegular")]
             BiIcon::BiCapsuleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8169,7 +8155,7 @@ impl Data {
             }
             #[cfg(feature = "BiCapsuleSolid")]
             BiIcon::BiCapsuleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8186,7 +8172,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaptionsRegular")]
             BiIcon::BiCaptionsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8203,7 +8189,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaptionsSolid")]
             BiIcon::BiCaptionsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8220,7 +8206,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarBatterySolid")]
             BiIcon::BiCarBatterySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8237,7 +8223,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarCrashSolid")]
             BiIcon::BiCarCrashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8254,7 +8240,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarGarageSolid")]
             BiIcon::BiCarGarageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8271,7 +8257,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarMechanicSolid")]
             BiIcon::BiCarMechanicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8288,7 +8274,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarRegular")]
             BiIcon::BiCarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8305,7 +8291,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarSolid")]
             BiIcon::BiCarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8322,7 +8308,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarWashSolid")]
             BiIcon::BiCarWashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8339,7 +8325,7 @@ impl Data {
             }
             #[cfg(feature = "BiCardRegular")]
             BiIcon::BiCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8356,7 +8342,7 @@ impl Data {
             }
             #[cfg(feature = "BiCardSolid")]
             BiIcon::BiCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8373,7 +8359,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretDownCircleRegular")]
             BiIcon::BiCaretDownCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8390,7 +8376,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretDownCircleSolid")]
             BiIcon::BiCaretDownCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8407,7 +8393,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretDownRegular")]
             BiIcon::BiCaretDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8424,7 +8410,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretDownSquareRegular")]
             BiIcon::BiCaretDownSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8441,7 +8427,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretDownSquareSolid")]
             BiIcon::BiCaretDownSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8458,7 +8444,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretLeftCircleRegular")]
             BiIcon::BiCaretLeftCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8475,7 +8461,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretLeftCircleSolid")]
             BiIcon::BiCaretLeftCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8492,7 +8478,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretLeftRegular")]
             BiIcon::BiCaretLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8509,7 +8495,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretLeftSquareRegular")]
             BiIcon::BiCaretLeftSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8526,7 +8512,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretLeftSquareSolid")]
             BiIcon::BiCaretLeftSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8543,7 +8529,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretRightCircleRegular")]
             BiIcon::BiCaretRightCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8560,7 +8546,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretRightCircleSolid")]
             BiIcon::BiCaretRightCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8577,7 +8563,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretRightRegular")]
             BiIcon::BiCaretRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8594,7 +8580,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretRightSquareRegular")]
             BiIcon::BiCaretRightSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8611,7 +8597,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretRightSquareSolid")]
             BiIcon::BiCaretRightSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8628,7 +8614,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretUpCircleRegular")]
             BiIcon::BiCaretUpCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8645,7 +8631,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretUpCircleSolid")]
             BiIcon::BiCaretUpCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8662,7 +8648,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretUpRegular")]
             BiIcon::BiCaretUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8679,7 +8665,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretUpSquareRegular")]
             BiIcon::BiCaretUpSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8696,7 +8682,7 @@ impl Data {
             }
             #[cfg(feature = "BiCaretUpSquareSolid")]
             BiIcon::BiCaretUpSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8713,7 +8699,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarouselRegular")]
             BiIcon::BiCarouselRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8730,7 +8716,7 @@ impl Data {
             }
             #[cfg(feature = "BiCarouselSolid")]
             BiIcon::BiCarouselSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8747,7 +8733,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartAddRegular")]
             BiIcon::BiCartAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8764,7 +8750,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartAddSolid")]
             BiIcon::BiCartAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8781,7 +8767,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartAltRegular")]
             BiIcon::BiCartAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8798,7 +8784,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartAltSolid")]
             BiIcon::BiCartAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8815,7 +8801,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartDownloadRegular")]
             BiIcon::BiCartDownloadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8832,7 +8818,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartDownloadSolid")]
             BiIcon::BiCartDownloadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8849,7 +8835,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartRegular")]
             BiIcon::BiCartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8866,7 +8852,7 @@ impl Data {
             }
             #[cfg(feature = "BiCartSolid")]
             BiIcon::BiCartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8883,7 +8869,7 @@ impl Data {
             }
             #[cfg(feature = "BiCastRegular")]
             BiIcon::BiCastRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8900,7 +8886,7 @@ impl Data {
             }
             #[cfg(feature = "BiCastleSolid")]
             BiIcon::BiCastleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8917,7 +8903,7 @@ impl Data {
             }
             #[cfg(feature = "BiCatSolid")]
             BiIcon::BiCatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8934,7 +8920,7 @@ impl Data {
             }
             #[cfg(feature = "BiCategoryAltRegular")]
             BiIcon::BiCategoryAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8951,7 +8937,7 @@ impl Data {
             }
             #[cfg(feature = "BiCategoryAltSolid")]
             BiIcon::BiCategoryAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8968,7 +8954,7 @@ impl Data {
             }
             #[cfg(feature = "BiCategoryRegular")]
             BiIcon::BiCategoryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8985,7 +8971,7 @@ impl Data {
             }
             #[cfg(feature = "BiCategorySolid")]
             BiIcon::BiCategorySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9002,7 +8988,7 @@ impl Data {
             }
             #[cfg(feature = "BiCctvRegular")]
             BiIcon::BiCctvRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9019,7 +9005,7 @@ impl Data {
             }
             #[cfg(feature = "BiCctvSolid")]
             BiIcon::BiCctvSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9036,7 +9022,7 @@ impl Data {
             }
             #[cfg(feature = "BiCertificationRegular")]
             BiIcon::BiCertificationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9053,7 +9039,7 @@ impl Data {
             }
             #[cfg(feature = "BiCertificationSolid")]
             BiIcon::BiCertificationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9070,7 +9056,7 @@ impl Data {
             }
             #[cfg(feature = "BiChairRegular")]
             BiIcon::BiChairRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9087,7 +9073,7 @@ impl Data {
             }
             #[cfg(feature = "BiChalkboardRegular")]
             BiIcon::BiChalkboardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9104,7 +9090,7 @@ impl Data {
             }
             #[cfg(feature = "BiChalkboardSolid")]
             BiIcon::BiChalkboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9121,7 +9107,7 @@ impl Data {
             }
             #[cfg(feature = "BiChartRegular")]
             BiIcon::BiChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9138,7 +9124,7 @@ impl Data {
             }
             #[cfg(feature = "BiChartSolid")]
             BiIcon::BiChartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9155,7 +9141,7 @@ impl Data {
             }
             #[cfg(feature = "BiChatRegular")]
             BiIcon::BiChatRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9172,7 +9158,7 @@ impl Data {
             }
             #[cfg(feature = "BiChatSolid")]
             BiIcon::BiChatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9189,7 +9175,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckCircleRegular")]
             BiIcon::BiCheckCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9206,7 +9192,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckCircleSolid")]
             BiIcon::BiCheckCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9223,7 +9209,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckDoubleRegular")]
             BiIcon::BiCheckDoubleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9240,7 +9226,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckRegular")]
             BiIcon::BiCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9257,7 +9243,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckShieldRegular")]
             BiIcon::BiCheckShieldRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9274,7 +9260,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckShieldSolid")]
             BiIcon::BiCheckShieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9291,7 +9277,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckSquareRegular")]
             BiIcon::BiCheckSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9308,7 +9294,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckSquareSolid")]
             BiIcon::BiCheckSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9325,7 +9311,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxCheckedRegular")]
             BiIcon::BiCheckboxCheckedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9342,7 +9328,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxCheckedSolid")]
             BiIcon::BiCheckboxCheckedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9359,7 +9345,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxMinusRegular")]
             BiIcon::BiCheckboxMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9376,7 +9362,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxMinusSolid")]
             BiIcon::BiCheckboxMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9393,7 +9379,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxRegular")]
             BiIcon::BiCheckboxRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9410,7 +9396,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxSolid")]
             BiIcon::BiCheckboxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9427,7 +9413,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheckboxSquareRegular")]
             BiIcon::BiCheckboxSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9444,7 +9430,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheeseRegular")]
             BiIcon::BiCheeseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9461,7 +9447,7 @@ impl Data {
             }
             #[cfg(feature = "BiCheeseSolid")]
             BiIcon::BiCheeseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9478,7 +9464,7 @@ impl Data {
             }
             #[cfg(feature = "BiChessSolid")]
             BiIcon::BiChessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9495,7 +9481,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronDownCircleRegular")]
             BiIcon::BiChevronDownCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9512,7 +9498,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronDownCircleSolid")]
             BiIcon::BiChevronDownCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9529,7 +9515,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronDownRegular")]
             BiIcon::BiChevronDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9546,7 +9532,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronDownSolid")]
             BiIcon::BiChevronDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9563,7 +9549,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronDownSquareRegular")]
             BiIcon::BiChevronDownSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9580,7 +9566,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronDownSquareSolid")]
             BiIcon::BiChevronDownSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9597,7 +9583,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronLeftCircleRegular")]
             BiIcon::BiChevronLeftCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9614,7 +9600,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronLeftCircleSolid")]
             BiIcon::BiChevronLeftCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9631,7 +9617,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronLeftRegular")]
             BiIcon::BiChevronLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9648,7 +9634,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronLeftSolid")]
             BiIcon::BiChevronLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9665,7 +9651,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronLeftSquareRegular")]
             BiIcon::BiChevronLeftSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9682,7 +9668,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronLeftSquareSolid")]
             BiIcon::BiChevronLeftSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9699,7 +9685,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronRightCircleRegular")]
             BiIcon::BiChevronRightCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9716,7 +9702,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronRightCircleSolid")]
             BiIcon::BiChevronRightCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9733,7 +9719,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronRightRegular")]
             BiIcon::BiChevronRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9750,7 +9736,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronRightSolid")]
             BiIcon::BiChevronRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9767,7 +9753,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronRightSquareRegular")]
             BiIcon::BiChevronRightSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9784,7 +9770,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronRightSquareSolid")]
             BiIcon::BiChevronRightSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9801,7 +9787,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronUpCircleRegular")]
             BiIcon::BiChevronUpCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9818,7 +9804,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronUpCircleSolid")]
             BiIcon::BiChevronUpCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9835,7 +9821,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronUpRegular")]
             BiIcon::BiChevronUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9852,7 +9838,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronUpSolid")]
             BiIcon::BiChevronUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9869,7 +9855,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronUpSquareRegular")]
             BiIcon::BiChevronUpSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9886,7 +9872,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronUpSquareSolid")]
             BiIcon::BiChevronUpSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9903,7 +9889,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsDownRegular")]
             BiIcon::BiChevronsDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9920,7 +9906,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsDownSolid")]
             BiIcon::BiChevronsDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9937,7 +9923,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsLeftRegular")]
             BiIcon::BiChevronsLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9954,7 +9940,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsLeftSolid")]
             BiIcon::BiChevronsLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9971,7 +9957,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsRightRegular")]
             BiIcon::BiChevronsRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9988,7 +9974,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsRightSolid")]
             BiIcon::BiChevronsRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10005,7 +9991,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsUpRegular")]
             BiIcon::BiChevronsUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10022,7 +10008,7 @@ impl Data {
             }
             #[cfg(feature = "BiChevronsUpSolid")]
             BiIcon::BiChevronsUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10039,7 +10025,7 @@ impl Data {
             }
             #[cfg(feature = "BiChildRegular")]
             BiIcon::BiChildRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10056,7 +10042,7 @@ impl Data {
             }
             #[cfg(feature = "BiChipRegular")]
             BiIcon::BiChipRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10073,7 +10059,7 @@ impl Data {
             }
             #[cfg(feature = "BiChipSolid")]
             BiIcon::BiChipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10090,7 +10076,7 @@ impl Data {
             }
             #[cfg(feature = "BiChrome")]
             BiIcon::BiChrome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10107,7 +10093,7 @@ impl Data {
             }
             #[cfg(feature = "BiChurchRegular")]
             BiIcon::BiChurchRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10124,7 +10110,7 @@ impl Data {
             }
             #[cfg(feature = "BiChurchSolid")]
             BiIcon::BiChurchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10141,7 +10127,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleHalfRegular")]
             BiIcon::BiCircleHalfRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10158,7 +10144,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleHalfSolid")]
             BiIcon::BiCircleHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10175,7 +10161,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleQuarterRegular")]
             BiIcon::BiCircleQuarterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10192,7 +10178,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleQuarterSolid")]
             BiIcon::BiCircleQuarterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10209,7 +10195,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleRegular")]
             BiIcon::BiCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10226,7 +10212,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleSolid")]
             BiIcon::BiCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10243,7 +10229,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleThreeQuarterRegular")]
             BiIcon::BiCircleThreeQuarterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10260,7 +10246,7 @@ impl Data {
             }
             #[cfg(feature = "BiCircleThreeQuarterSolid")]
             BiIcon::BiCircleThreeQuarterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10277,7 +10263,7 @@ impl Data {
             }
             #[cfg(feature = "BiCitySolid")]
             BiIcon::BiCitySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10294,7 +10280,7 @@ impl Data {
             }
             #[cfg(feature = "BiClinicRegular")]
             BiIcon::BiClinicRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10311,7 +10297,7 @@ impl Data {
             }
             #[cfg(feature = "BiClinicSolid")]
             BiIcon::BiClinicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10328,7 +10314,7 @@ impl Data {
             }
             #[cfg(feature = "BiClipboardRegular")]
             BiIcon::BiClipboardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10345,7 +10331,7 @@ impl Data {
             }
             #[cfg(feature = "BiClosetRegular")]
             BiIcon::BiClosetRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10362,7 +10348,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudDownloadRegular")]
             BiIcon::BiCloudDownloadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10379,7 +10365,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudDownloadSolid")]
             BiIcon::BiCloudDownloadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10396,7 +10382,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudDrizzleRegular")]
             BiIcon::BiCloudDrizzleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10413,7 +10399,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudLightRainRegular")]
             BiIcon::BiCloudLightRainRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10430,7 +10416,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudLightningRegular")]
             BiIcon::BiCloudLightningRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10447,7 +10433,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudLightningSolid")]
             BiIcon::BiCloudLightningSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10464,7 +10450,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudRainRegular")]
             BiIcon::BiCloudRainRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10481,7 +10467,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudRainSolid")]
             BiIcon::BiCloudRainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10498,7 +10484,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudRegular")]
             BiIcon::BiCloudRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10515,7 +10501,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudSnowRegular")]
             BiIcon::BiCloudSnowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10532,7 +10518,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudSolid")]
             BiIcon::BiCloudSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10549,7 +10535,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudUploadRegular")]
             BiIcon::BiCloudUploadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10566,7 +10552,7 @@ impl Data {
             }
             #[cfg(feature = "BiCloudUploadSolid")]
             BiIcon::BiCloudUploadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10583,7 +10569,7 @@ impl Data {
             }
             #[cfg(feature = "BiCodeAltRegular")]
             BiIcon::BiCodeAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10600,7 +10586,7 @@ impl Data {
             }
             #[cfg(feature = "BiCodeBlockRegular")]
             BiIcon::BiCodeBlockRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10617,7 +10603,7 @@ impl Data {
             }
             #[cfg(feature = "BiCodeCurlyRegular")]
             BiIcon::BiCodeCurlyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10634,7 +10620,7 @@ impl Data {
             }
             #[cfg(feature = "BiCodeRegular")]
             BiIcon::BiCodeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10651,7 +10637,7 @@ impl Data {
             }
             #[cfg(feature = "BiCodepen")]
             BiIcon::BiCodepen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10668,7 +10654,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoffeeAltSolid")]
             BiIcon::BiCoffeeAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10685,7 +10671,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoffeeBeanSolid")]
             BiIcon::BiCoffeeBeanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10702,7 +10688,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoffeeRegular")]
             BiIcon::BiCoffeeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10719,7 +10705,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoffeeSolid")]
             BiIcon::BiCoffeeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10736,7 +10722,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoffeeTogoRegular")]
             BiIcon::BiCoffeeTogoRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10753,7 +10739,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoffeeTogoSolid")]
             BiIcon::BiCoffeeTogoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10770,7 +10756,7 @@ impl Data {
             }
             #[cfg(feature = "BiCogRegular")]
             BiIcon::BiCogRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10787,7 +10773,7 @@ impl Data {
             }
             #[cfg(feature = "BiCogSolid")]
             BiIcon::BiCogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10804,7 +10790,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoinRegular")]
             BiIcon::BiCoinRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10821,7 +10807,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoinSolid")]
             BiIcon::BiCoinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10838,7 +10824,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoinStackRegular")]
             BiIcon::BiCoinStackRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10855,7 +10841,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoinStackSolid")]
             BiIcon::BiCoinStackSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10872,7 +10858,7 @@ impl Data {
             }
             #[cfg(feature = "BiCollapseAltRegular")]
             BiIcon::BiCollapseAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10889,7 +10875,7 @@ impl Data {
             }
             #[cfg(feature = "BiCollapseHorizontalRegular")]
             BiIcon::BiCollapseHorizontalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10906,7 +10892,7 @@ impl Data {
             }
             #[cfg(feature = "BiCollapseRegular")]
             BiIcon::BiCollapseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10923,7 +10909,7 @@ impl Data {
             }
             #[cfg(feature = "BiCollapseVerticalRegular")]
             BiIcon::BiCollapseVerticalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10940,7 +10926,7 @@ impl Data {
             }
             #[cfg(feature = "BiCollectionRegular")]
             BiIcon::BiCollectionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10957,7 +10943,7 @@ impl Data {
             }
             #[cfg(feature = "BiCollectionSolid")]
             BiIcon::BiCollectionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10974,7 +10960,7 @@ impl Data {
             }
             #[cfg(feature = "BiColorFillRegular")]
             BiIcon::BiColorFillRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10991,7 +10977,7 @@ impl Data {
             }
             #[cfg(feature = "BiColorFillSolid")]
             BiIcon::BiColorFillSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11008,7 +10994,7 @@ impl Data {
             }
             #[cfg(feature = "BiColorRegular")]
             BiIcon::BiColorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11025,7 +11011,7 @@ impl Data {
             }
             #[cfg(feature = "BiColorSolid")]
             BiIcon::BiColorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11042,7 +11028,7 @@ impl Data {
             }
             #[cfg(feature = "BiColumnsRegular")]
             BiIcon::BiColumnsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11059,7 +11045,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommandRegular")]
             BiIcon::BiCommandRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11076,7 +11062,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentAddRegular")]
             BiIcon::BiCommentAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11093,7 +11079,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentAddSolid")]
             BiIcon::BiCommentAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11110,7 +11096,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentCheckRegular")]
             BiIcon::BiCommentCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11127,7 +11113,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentCheckSolid")]
             BiIcon::BiCommentCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11144,7 +11130,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentDetailRegular")]
             BiIcon::BiCommentDetailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11161,7 +11147,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentDetailSolid")]
             BiIcon::BiCommentDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11178,7 +11164,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentDotsRegular")]
             BiIcon::BiCommentDotsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11195,7 +11181,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentDotsSolid")]
             BiIcon::BiCommentDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11212,7 +11198,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentEditRegular")]
             BiIcon::BiCommentEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11229,7 +11215,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentEditSolid")]
             BiIcon::BiCommentEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11246,7 +11232,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentErrorRegular")]
             BiIcon::BiCommentErrorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11263,7 +11249,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentErrorSolid")]
             BiIcon::BiCommentErrorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11280,7 +11266,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentMinusRegular")]
             BiIcon::BiCommentMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11297,7 +11283,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentMinusSolid")]
             BiIcon::BiCommentMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11314,7 +11300,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentRegular")]
             BiIcon::BiCommentRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11331,7 +11317,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentSolid")]
             BiIcon::BiCommentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11348,7 +11334,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentXRegular")]
             BiIcon::BiCommentXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11365,7 +11351,7 @@ impl Data {
             }
             #[cfg(feature = "BiCommentXSolid")]
             BiIcon::BiCommentXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11382,7 +11368,7 @@ impl Data {
             }
             #[cfg(feature = "BiCompassRegular")]
             BiIcon::BiCompassRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11399,7 +11385,7 @@ impl Data {
             }
             #[cfg(feature = "BiCompassSolid")]
             BiIcon::BiCompassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11416,7 +11402,7 @@ impl Data {
             }
             #[cfg(feature = "BiComponentSolid")]
             BiIcon::BiComponentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11433,7 +11419,7 @@ impl Data {
             }
             #[cfg(feature = "BiConfusedRegular")]
             BiIcon::BiConfusedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11450,7 +11436,7 @@ impl Data {
             }
             #[cfg(feature = "BiConfusedSolid")]
             BiIcon::BiConfusedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11467,7 +11453,7 @@ impl Data {
             }
             #[cfg(feature = "BiContactSolid")]
             BiIcon::BiContactSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11484,7 +11470,7 @@ impl Data {
             }
             #[cfg(feature = "BiConversationRegular")]
             BiIcon::BiConversationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11501,7 +11487,7 @@ impl Data {
             }
             #[cfg(feature = "BiConversationSolid")]
             BiIcon::BiConversationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11518,7 +11504,7 @@ impl Data {
             }
             #[cfg(feature = "BiCookieRegular")]
             BiIcon::BiCookieRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11535,7 +11521,7 @@ impl Data {
             }
             #[cfg(feature = "BiCookieSolid")]
             BiIcon::BiCookieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11552,7 +11538,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoolRegular")]
             BiIcon::BiCoolRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11569,7 +11555,7 @@ impl Data {
             }
             #[cfg(feature = "BiCoolSolid")]
             BiIcon::BiCoolSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11586,7 +11572,7 @@ impl Data {
             }
             #[cfg(feature = "BiCopyAltRegular")]
             BiIcon::BiCopyAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11603,7 +11589,7 @@ impl Data {
             }
             #[cfg(feature = "BiCopyAltSolid")]
             BiIcon::BiCopyAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11620,7 +11606,7 @@ impl Data {
             }
             #[cfg(feature = "BiCopyRegular")]
             BiIcon::BiCopyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11637,7 +11623,7 @@ impl Data {
             }
             #[cfg(feature = "BiCopySolid")]
             BiIcon::BiCopySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11654,7 +11640,7 @@ impl Data {
             }
             #[cfg(feature = "BiCopyrightRegular")]
             BiIcon::BiCopyrightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11671,7 +11657,7 @@ impl Data {
             }
             #[cfg(feature = "BiCopyrightSolid")]
             BiIcon::BiCopyrightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11688,7 +11674,7 @@ impl Data {
             }
             #[cfg(feature = "BiCouponSolid")]
             BiIcon::BiCouponSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11705,7 +11691,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreativeCommons")]
             BiIcon::BiCreativeCommons => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11722,7 +11708,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreditCardAltRegular")]
             BiIcon::BiCreditCardAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11739,7 +11725,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreditCardAltSolid")]
             BiIcon::BiCreditCardAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11756,7 +11742,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreditCardFrontRegular")]
             BiIcon::BiCreditCardFrontRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11773,7 +11759,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreditCardFrontSolid")]
             BiIcon::BiCreditCardFrontSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11790,7 +11776,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreditCardRegular")]
             BiIcon::BiCreditCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11807,7 +11793,7 @@ impl Data {
             }
             #[cfg(feature = "BiCreditCardSolid")]
             BiIcon::BiCreditCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11824,7 +11810,7 @@ impl Data {
             }
             #[cfg(feature = "BiCricketBallRegular")]
             BiIcon::BiCricketBallRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11841,7 +11827,7 @@ impl Data {
             }
             #[cfg(feature = "BiCricketBallSolid")]
             BiIcon::BiCricketBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11858,7 +11844,7 @@ impl Data {
             }
             #[cfg(feature = "BiCropRegular")]
             BiIcon::BiCropRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11875,7 +11861,7 @@ impl Data {
             }
             #[cfg(feature = "BiCropSolid")]
             BiIcon::BiCropSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11892,7 +11878,7 @@ impl Data {
             }
             #[cfg(feature = "BiCrossRegular")]
             BiIcon::BiCrossRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11909,7 +11895,7 @@ impl Data {
             }
             #[cfg(feature = "BiCrosshairRegular")]
             BiIcon::BiCrosshairRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11926,7 +11912,7 @@ impl Data {
             }
             #[cfg(feature = "BiCrownRegular")]
             BiIcon::BiCrownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11943,7 +11929,7 @@ impl Data {
             }
             #[cfg(feature = "BiCrownSolid")]
             BiIcon::BiCrownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11960,7 +11946,7 @@ impl Data {
             }
             #[cfg(feature = "BiCss3")]
             BiIcon::BiCss3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11977,7 +11963,7 @@ impl Data {
             }
             #[cfg(feature = "BiCubeAltRegular")]
             BiIcon::BiCubeAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11994,7 +11980,7 @@ impl Data {
             }
             #[cfg(feature = "BiCubeAltSolid")]
             BiIcon::BiCubeAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12011,7 +11997,7 @@ impl Data {
             }
             #[cfg(feature = "BiCubeRegular")]
             BiIcon::BiCubeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12028,7 +12014,7 @@ impl Data {
             }
             #[cfg(feature = "BiCubeSolid")]
             BiIcon::BiCubeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12045,7 +12031,7 @@ impl Data {
             }
             #[cfg(feature = "BiCuboidRegular")]
             BiIcon::BiCuboidRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12062,7 +12048,7 @@ impl Data {
             }
             #[cfg(feature = "BiCuboidSolid")]
             BiIcon::BiCuboidSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12079,7 +12065,7 @@ impl Data {
             }
             #[cfg(feature = "BiCurrentLocationRegular")]
             BiIcon::BiCurrentLocationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12096,7 +12082,7 @@ impl Data {
             }
             #[cfg(feature = "BiCustomizeRegular")]
             BiIcon::BiCustomizeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12113,7 +12099,7 @@ impl Data {
             }
             #[cfg(feature = "BiCustomizeSolid")]
             BiIcon::BiCustomizeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12130,7 +12116,7 @@ impl Data {
             }
             #[cfg(feature = "BiCutRegular")]
             BiIcon::BiCutRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12147,7 +12133,7 @@ impl Data {
             }
             #[cfg(feature = "BiCyclingRegular")]
             BiIcon::BiCyclingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12164,7 +12150,7 @@ impl Data {
             }
             #[cfg(feature = "BiCylinderRegular")]
             BiIcon::BiCylinderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12181,7 +12167,7 @@ impl Data {
             }
             #[cfg(feature = "BiCylinderSolid")]
             BiIcon::BiCylinderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12198,7 +12184,7 @@ impl Data {
             }
             #[cfg(feature = "BiDailymotion")]
             BiIcon::BiDailymotion => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12215,7 +12201,7 @@ impl Data {
             }
             #[cfg(feature = "BiDashboardSolid")]
             BiIcon::BiDashboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12232,7 +12218,7 @@ impl Data {
             }
             #[cfg(feature = "BiDataRegular")]
             BiIcon::BiDataRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12249,7 +12235,7 @@ impl Data {
             }
             #[cfg(feature = "BiDataSolid")]
             BiIcon::BiDataSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12266,7 +12252,7 @@ impl Data {
             }
             #[cfg(feature = "BiDeezer")]
             BiIcon::BiDeezer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12283,7 +12269,7 @@ impl Data {
             }
             #[cfg(feature = "BiDesktopRegular")]
             BiIcon::BiDesktopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12300,7 +12286,7 @@ impl Data {
             }
             #[cfg(feature = "BiDetailRegular")]
             BiIcon::BiDetailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12317,7 +12303,7 @@ impl Data {
             }
             #[cfg(feature = "BiDetailSolid")]
             BiIcon::BiDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12334,7 +12320,7 @@ impl Data {
             }
             #[cfg(feature = "BiDevTo")]
             BiIcon::BiDevTo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12351,7 +12337,7 @@ impl Data {
             }
             #[cfg(feature = "BiDeviantart")]
             BiIcon::BiDeviantart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12368,7 +12354,7 @@ impl Data {
             }
             #[cfg(feature = "BiDevicesRegular")]
             BiIcon::BiDevicesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12385,7 +12371,7 @@ impl Data {
             }
             #[cfg(feature = "BiDevicesSolid")]
             BiIcon::BiDevicesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12402,7 +12388,7 @@ impl Data {
             }
             #[cfg(feature = "BiDialpadAltRegular")]
             BiIcon::BiDialpadAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12419,7 +12405,7 @@ impl Data {
             }
             #[cfg(feature = "BiDialpadRegular")]
             BiIcon::BiDialpadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12436,7 +12422,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiamondRegular")]
             BiIcon::BiDiamondRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12453,7 +12439,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiamondSolid")]
             BiIcon::BiDiamondSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12470,7 +12456,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice1Regular")]
             BiIcon::BiDice1Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12487,7 +12473,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice1Solid")]
             BiIcon::BiDice1Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12504,7 +12490,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice2Regular")]
             BiIcon::BiDice2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12521,7 +12507,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice2Solid")]
             BiIcon::BiDice2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12538,7 +12524,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice3Regular")]
             BiIcon::BiDice3Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12555,7 +12541,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice3Solid")]
             BiIcon::BiDice3Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12572,7 +12558,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice4Regular")]
             BiIcon::BiDice4Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12589,7 +12575,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice4Solid")]
             BiIcon::BiDice4Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12606,7 +12592,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice5Regular")]
             BiIcon::BiDice5Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12623,7 +12609,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice5Solid")]
             BiIcon::BiDice5Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12640,7 +12626,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice6Regular")]
             BiIcon::BiDice6Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12657,7 +12643,7 @@ impl Data {
             }
             #[cfg(feature = "BiDice6Solid")]
             BiIcon::BiDice6Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12674,7 +12660,7 @@ impl Data {
             }
             #[cfg(feature = "BiDigg")]
             BiIcon::BiDigg => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12691,7 +12677,7 @@ impl Data {
             }
             #[cfg(feature = "BiDigitalocean")]
             BiIcon::BiDigitalocean => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12708,7 +12694,7 @@ impl Data {
             }
             #[cfg(feature = "BiDirectionLeftSolid")]
             BiIcon::BiDirectionLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12725,7 +12711,7 @@ impl Data {
             }
             #[cfg(feature = "BiDirectionRightSolid")]
             BiIcon::BiDirectionRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12742,7 +12728,7 @@ impl Data {
             }
             #[cfg(feature = "BiDirectionsRegular")]
             BiIcon::BiDirectionsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12759,7 +12745,7 @@ impl Data {
             }
             #[cfg(feature = "BiDirectionsSolid")]
             BiIcon::BiDirectionsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12776,7 +12762,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiscRegular")]
             BiIcon::BiDiscRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12793,7 +12779,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiscSolid")]
             BiIcon::BiDiscSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12810,7 +12796,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiscord")]
             BiIcon::BiDiscord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12827,7 +12813,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiscordAlt")]
             BiIcon::BiDiscordAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12844,7 +12830,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiscountSolid")]
             BiIcon::BiDiscountSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12861,7 +12847,7 @@ impl Data {
             }
             #[cfg(feature = "BiDiscourse")]
             BiIcon::BiDiscourse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12878,7 +12864,7 @@ impl Data {
             }
             #[cfg(feature = "BiDishRegular")]
             BiIcon::BiDishRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12895,7 +12881,7 @@ impl Data {
             }
             #[cfg(feature = "BiDishSolid")]
             BiIcon::BiDishSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12912,7 +12898,7 @@ impl Data {
             }
             #[cfg(feature = "BiDislikeRegular")]
             BiIcon::BiDislikeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12929,7 +12915,7 @@ impl Data {
             }
             #[cfg(feature = "BiDislikeSolid")]
             BiIcon::BiDislikeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12946,7 +12932,7 @@ impl Data {
             }
             #[cfg(feature = "BiDizzyRegular")]
             BiIcon::BiDizzyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12963,7 +12949,7 @@ impl Data {
             }
             #[cfg(feature = "BiDizzySolid")]
             BiIcon::BiDizzySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12980,7 +12966,7 @@ impl Data {
             }
             #[cfg(feature = "BiDjango")]
             BiIcon::BiDjango => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12997,7 +12983,7 @@ impl Data {
             }
             #[cfg(feature = "BiDnaRegular")]
             BiIcon::BiDnaRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13014,7 +13000,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockBottomRegular")]
             BiIcon::BiDockBottomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13031,7 +13017,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockBottomSolid")]
             BiIcon::BiDockBottomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13048,7 +13034,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockLeftRegular")]
             BiIcon::BiDockLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13065,7 +13051,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockLeftSolid")]
             BiIcon::BiDockLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13082,7 +13068,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockRightRegular")]
             BiIcon::BiDockRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13099,7 +13085,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockRightSolid")]
             BiIcon::BiDockRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13116,7 +13102,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockTopRegular")]
             BiIcon::BiDockTopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13133,7 +13119,7 @@ impl Data {
             }
             #[cfg(feature = "BiDockTopSolid")]
             BiIcon::BiDockTopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13150,7 +13136,7 @@ impl Data {
             }
             #[cfg(feature = "BiDocker")]
             BiIcon::BiDocker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13167,7 +13153,7 @@ impl Data {
             }
             #[cfg(feature = "BiDogSolid")]
             BiIcon::BiDogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13184,7 +13170,7 @@ impl Data {
             }
             #[cfg(feature = "BiDollarCircleRegular")]
             BiIcon::BiDollarCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13201,7 +13187,7 @@ impl Data {
             }
             #[cfg(feature = "BiDollarCircleSolid")]
             BiIcon::BiDollarCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13218,7 +13204,7 @@ impl Data {
             }
             #[cfg(feature = "BiDollarRegular")]
             BiIcon::BiDollarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13235,7 +13221,7 @@ impl Data {
             }
             #[cfg(feature = "BiDonateBloodRegular")]
             BiIcon::BiDonateBloodRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13252,7 +13238,7 @@ impl Data {
             }
             #[cfg(feature = "BiDonateBloodSolid")]
             BiIcon::BiDonateBloodSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13269,7 +13255,7 @@ impl Data {
             }
             #[cfg(feature = "BiDonateHeartRegular")]
             BiIcon::BiDonateHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13286,7 +13272,7 @@ impl Data {
             }
             #[cfg(feature = "BiDonateHeartSolid")]
             BiIcon::BiDonateHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13303,7 +13289,7 @@ impl Data {
             }
             #[cfg(feature = "BiDoorOpenRegular")]
             BiIcon::BiDoorOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13320,7 +13306,7 @@ impl Data {
             }
             #[cfg(feature = "BiDoorOpenSolid")]
             BiIcon::BiDoorOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13337,7 +13323,7 @@ impl Data {
             }
             #[cfg(feature = "BiDotsHorizontalRegular")]
             BiIcon::BiDotsHorizontalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13354,7 +13340,7 @@ impl Data {
             }
             #[cfg(feature = "BiDotsHorizontalRoundedRegular")]
             BiIcon::BiDotsHorizontalRoundedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13371,7 +13357,7 @@ impl Data {
             }
             #[cfg(feature = "BiDotsVerticalRegular")]
             BiIcon::BiDotsVerticalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13388,7 +13374,7 @@ impl Data {
             }
             #[cfg(feature = "BiDotsVerticalRoundedRegular")]
             BiIcon::BiDotsVerticalRoundedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13405,7 +13391,7 @@ impl Data {
             }
             #[cfg(feature = "BiDoughnutChartRegular")]
             BiIcon::BiDoughnutChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13422,7 +13408,7 @@ impl Data {
             }
             #[cfg(feature = "BiDoughnutChartSolid")]
             BiIcon::BiDoughnutChartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13439,7 +13425,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowAltRegular")]
             BiIcon::BiDownArrowAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13456,7 +13442,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowAltSolid")]
             BiIcon::BiDownArrowAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13473,7 +13459,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowCircleRegular")]
             BiIcon::BiDownArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13490,7 +13476,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowCircleSolid")]
             BiIcon::BiDownArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13507,7 +13493,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowRegular")]
             BiIcon::BiDownArrowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13524,7 +13510,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowSolid")]
             BiIcon::BiDownArrowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13541,7 +13527,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownArrowSquareSolid")]
             BiIcon::BiDownArrowSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13558,7 +13544,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownloadRegular")]
             BiIcon::BiDownloadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13575,7 +13561,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownloadSolid")]
             BiIcon::BiDownloadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13592,7 +13578,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownvoteRegular")]
             BiIcon::BiDownvoteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13609,7 +13595,7 @@ impl Data {
             }
             #[cfg(feature = "BiDownvoteSolid")]
             BiIcon::BiDownvoteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13626,7 +13612,7 @@ impl Data {
             }
             #[cfg(feature = "BiDribbble")]
             BiIcon::BiDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13643,7 +13629,7 @@ impl Data {
             }
             #[cfg(feature = "BiDrinkRegular")]
             BiIcon::BiDrinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13660,7 +13646,7 @@ impl Data {
             }
             #[cfg(feature = "BiDrinkSolid")]
             BiIcon::BiDrinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13677,7 +13663,7 @@ impl Data {
             }
             #[cfg(feature = "BiDropbox")]
             BiIcon::BiDropbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13694,7 +13680,7 @@ impl Data {
             }
             #[cfg(feature = "BiDropletHalfSolid")]
             BiIcon::BiDropletHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13711,7 +13697,7 @@ impl Data {
             }
             #[cfg(feature = "BiDropletRegular")]
             BiIcon::BiDropletRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13728,7 +13714,7 @@ impl Data {
             }
             #[cfg(feature = "BiDropletSolid")]
             BiIcon::BiDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13745,7 +13731,7 @@ impl Data {
             }
             #[cfg(feature = "BiDrupal")]
             BiIcon::BiDrupal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13762,7 +13748,7 @@ impl Data {
             }
             #[cfg(feature = "BiDryerSolid")]
             BiIcon::BiDryerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13779,7 +13765,7 @@ impl Data {
             }
             #[cfg(feature = "BiDumbbellRegular")]
             BiIcon::BiDumbbellRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13796,7 +13782,7 @@ impl Data {
             }
             #[cfg(feature = "BiDuplicateRegular")]
             BiIcon::BiDuplicateRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13813,7 +13799,7 @@ impl Data {
             }
             #[cfg(feature = "BiDuplicateSolid")]
             BiIcon::BiDuplicateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13830,7 +13816,7 @@ impl Data {
             }
             #[cfg(feature = "BiEbay")]
             BiIcon::BiEbay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13847,7 +13833,7 @@ impl Data {
             }
             #[cfg(feature = "BiEdge")]
             BiIcon::BiEdge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13864,7 +13850,7 @@ impl Data {
             }
             #[cfg(feature = "BiEditAltRegular")]
             BiIcon::BiEditAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13881,7 +13867,7 @@ impl Data {
             }
             #[cfg(feature = "BiEditAltSolid")]
             BiIcon::BiEditAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13898,7 +13884,7 @@ impl Data {
             }
             #[cfg(feature = "BiEditLocationSolid")]
             BiIcon::BiEditLocationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13915,7 +13901,7 @@ impl Data {
             }
             #[cfg(feature = "BiEditRegular")]
             BiIcon::BiEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13932,7 +13918,7 @@ impl Data {
             }
             #[cfg(feature = "BiEditSolid")]
             BiIcon::BiEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13949,7 +13935,7 @@ impl Data {
             }
             #[cfg(feature = "BiEjectSolid")]
             BiIcon::BiEjectSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13966,7 +13952,7 @@ impl Data {
             }
             #[cfg(feature = "BiEnvelopeOpenRegular")]
             BiIcon::BiEnvelopeOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13983,7 +13969,7 @@ impl Data {
             }
             #[cfg(feature = "BiEnvelopeOpenSolid")]
             BiIcon::BiEnvelopeOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14000,7 +13986,7 @@ impl Data {
             }
             #[cfg(feature = "BiEnvelopeRegular")]
             BiIcon::BiEnvelopeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14017,7 +14003,7 @@ impl Data {
             }
             #[cfg(feature = "BiEnvelopeSolid")]
             BiIcon::BiEnvelopeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14034,7 +14020,7 @@ impl Data {
             }
             #[cfg(feature = "BiEqualizerRegular")]
             BiIcon::BiEqualizerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14051,7 +14037,7 @@ impl Data {
             }
             #[cfg(feature = "BiEraserRegular")]
             BiIcon::BiEraserRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14068,7 +14054,7 @@ impl Data {
             }
             #[cfg(feature = "BiEraserSolid")]
             BiIcon::BiEraserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14085,7 +14071,7 @@ impl Data {
             }
             #[cfg(feature = "BiErrorAltRegular")]
             BiIcon::BiErrorAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14102,7 +14088,7 @@ impl Data {
             }
             #[cfg(feature = "BiErrorAltSolid")]
             BiIcon::BiErrorAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14119,7 +14105,7 @@ impl Data {
             }
             #[cfg(feature = "BiErrorCircleRegular")]
             BiIcon::BiErrorCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14136,7 +14122,7 @@ impl Data {
             }
             #[cfg(feature = "BiErrorCircleSolid")]
             BiIcon::BiErrorCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14153,7 +14139,7 @@ impl Data {
             }
             #[cfg(feature = "BiErrorRegular")]
             BiIcon::BiErrorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14170,7 +14156,7 @@ impl Data {
             }
             #[cfg(feature = "BiErrorSolid")]
             BiIcon::BiErrorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14187,7 +14173,7 @@ impl Data {
             }
             #[cfg(feature = "BiEtsy")]
             BiIcon::BiEtsy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14204,7 +14190,7 @@ impl Data {
             }
             #[cfg(feature = "BiEuroRegular")]
             BiIcon::BiEuroRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14221,7 +14207,7 @@ impl Data {
             }
             #[cfg(feature = "BiEvStationSolid")]
             BiIcon::BiEvStationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14238,7 +14224,7 @@ impl Data {
             }
             #[cfg(feature = "BiExcludeRegular")]
             BiIcon::BiExcludeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14255,7 +14241,7 @@ impl Data {
             }
             #[cfg(feature = "BiExitFullscreenRegular")]
             BiIcon::BiExitFullscreenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14272,7 +14258,7 @@ impl Data {
             }
             #[cfg(feature = "BiExitRegular")]
             BiIcon::BiExitRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14289,7 +14275,7 @@ impl Data {
             }
             #[cfg(feature = "BiExitSolid")]
             BiIcon::BiExitSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14306,7 +14292,7 @@ impl Data {
             }
             #[cfg(feature = "BiExpandAltRegular")]
             BiIcon::BiExpandAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14323,7 +14309,7 @@ impl Data {
             }
             #[cfg(feature = "BiExpandHorizontalRegular")]
             BiIcon::BiExpandHorizontalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14340,7 +14326,7 @@ impl Data {
             }
             #[cfg(feature = "BiExpandRegular")]
             BiIcon::BiExpandRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14357,7 +14343,7 @@ impl Data {
             }
             #[cfg(feature = "BiExpandVerticalRegular")]
             BiIcon::BiExpandVerticalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14374,7 +14360,7 @@ impl Data {
             }
             #[cfg(feature = "BiExportRegular")]
             BiIcon::BiExportRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14391,7 +14377,7 @@ impl Data {
             }
             #[cfg(feature = "BiExtensionRegular")]
             BiIcon::BiExtensionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14408,7 +14394,7 @@ impl Data {
             }
             #[cfg(feature = "BiExtensionSolid")]
             BiIcon::BiExtensionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14425,7 +14411,7 @@ impl Data {
             }
             #[cfg(feature = "BiEyedropperSolid")]
             BiIcon::BiEyedropperSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14442,7 +14428,7 @@ impl Data {
             }
             #[cfg(feature = "BiFaceMaskSolid")]
             BiIcon::BiFaceMaskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14459,7 +14445,7 @@ impl Data {
             }
             #[cfg(feature = "BiFaceRegular")]
             BiIcon::BiFaceRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14476,7 +14462,7 @@ impl Data {
             }
             #[cfg(feature = "BiFaceSolid")]
             BiIcon::BiFaceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14493,7 +14479,7 @@ impl Data {
             }
             #[cfg(feature = "BiFacebook")]
             BiIcon::BiFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14510,7 +14496,7 @@ impl Data {
             }
             #[cfg(feature = "BiFacebookCircle")]
             BiIcon::BiFacebookCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14527,7 +14513,7 @@ impl Data {
             }
             #[cfg(feature = "BiFacebookSquare")]
             BiIcon::BiFacebookSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14544,7 +14530,7 @@ impl Data {
             }
             #[cfg(feature = "BiFactorySolid")]
             BiIcon::BiFactorySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14561,7 +14547,7 @@ impl Data {
             }
             #[cfg(feature = "BiFastForwardCircleRegular")]
             BiIcon::BiFastForwardCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14578,7 +14564,7 @@ impl Data {
             }
             #[cfg(feature = "BiFastForwardCircleSolid")]
             BiIcon::BiFastForwardCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14595,7 +14581,7 @@ impl Data {
             }
             #[cfg(feature = "BiFastForwardRegular")]
             BiIcon::BiFastForwardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14612,7 +14598,7 @@ impl Data {
             }
             #[cfg(feature = "BiFemaleRegular")]
             BiIcon::BiFemaleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14629,7 +14615,7 @@ impl Data {
             }
             #[cfg(feature = "BiFemaleSignRegular")]
             BiIcon::BiFemaleSignRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14646,7 +14632,7 @@ impl Data {
             }
             #[cfg(feature = "BiFigma")]
             BiIcon::BiFigma => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14663,7 +14649,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileArchiveSolid")]
             BiIcon::BiFileArchiveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14680,7 +14666,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileBlankRegular")]
             BiIcon::BiFileBlankRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14697,7 +14683,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileBlankSolid")]
             BiIcon::BiFileBlankSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14714,7 +14700,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileCssSolid")]
             BiIcon::BiFileCssSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14731,7 +14717,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileDocSolid")]
             BiIcon::BiFileDocSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14748,7 +14734,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileExportSolid")]
             BiIcon::BiFileExportSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14765,7 +14751,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileFindRegular")]
             BiIcon::BiFileFindRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14782,7 +14768,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileFindSolid")]
             BiIcon::BiFileFindSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14799,7 +14785,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileGifSolid")]
             BiIcon::BiFileGifSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14816,7 +14802,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileHtmlSolid")]
             BiIcon::BiFileHtmlSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14833,7 +14819,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileImageSolid")]
             BiIcon::BiFileImageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14850,7 +14836,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileImportSolid")]
             BiIcon::BiFileImportSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14867,7 +14853,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileJpgSolid")]
             BiIcon::BiFileJpgSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14884,7 +14870,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileJsSolid")]
             BiIcon::BiFileJsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14901,7 +14887,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileJsonSolid")]
             BiIcon::BiFileJsonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14918,7 +14904,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileMdSolid")]
             BiIcon::BiFileMdSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14935,7 +14921,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilePdfSolid")]
             BiIcon::BiFilePdfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14952,7 +14938,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilePlusSolid")]
             BiIcon::BiFilePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14969,7 +14955,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilePngSolid")]
             BiIcon::BiFilePngSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14986,7 +14972,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileRegular")]
             BiIcon::BiFileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15003,7 +14989,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileSolid")]
             BiIcon::BiFileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15020,7 +15006,7 @@ impl Data {
             }
             #[cfg(feature = "BiFileTxtSolid")]
             BiIcon::BiFileTxtSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15037,7 +15023,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilmRegular")]
             BiIcon::BiFilmRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15054,7 +15040,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilmSolid")]
             BiIcon::BiFilmSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15071,7 +15057,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilterAltRegular")]
             BiIcon::BiFilterAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15088,7 +15074,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilterAltSolid")]
             BiIcon::BiFilterAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15105,7 +15091,7 @@ impl Data {
             }
             #[cfg(feature = "BiFilterRegular")]
             BiIcon::BiFilterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15122,7 +15108,7 @@ impl Data {
             }
             #[cfg(feature = "BiFingerprintRegular")]
             BiIcon::BiFingerprintRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15139,7 +15125,7 @@ impl Data {
             }
             #[cfg(feature = "BiFirebase")]
             BiIcon::BiFirebase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15156,7 +15142,7 @@ impl Data {
             }
             #[cfg(feature = "BiFirefox")]
             BiIcon::BiFirefox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15173,7 +15159,7 @@ impl Data {
             }
             #[cfg(feature = "BiFirstAidRegular")]
             BiIcon::BiFirstAidRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15190,7 +15176,7 @@ impl Data {
             }
             #[cfg(feature = "BiFirstAidSolid")]
             BiIcon::BiFirstAidSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15207,7 +15193,7 @@ impl Data {
             }
             #[cfg(feature = "BiFirstPageRegular")]
             BiIcon::BiFirstPageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15224,7 +15210,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlagAltSolid")]
             BiIcon::BiFlagAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15241,7 +15227,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlagCheckeredSolid")]
             BiIcon::BiFlagCheckeredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15258,7 +15244,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlagRegular")]
             BiIcon::BiFlagRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15275,7 +15261,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlagSolid")]
             BiIcon::BiFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15292,7 +15278,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlameSolid")]
             BiIcon::BiFlameSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15309,7 +15295,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlask")]
             BiIcon::BiFlask => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15326,7 +15312,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlaskSolid")]
             BiIcon::BiFlaskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15343,7 +15329,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlickr")]
             BiIcon::BiFlickr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15360,7 +15346,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlickrSquare")]
             BiIcon::BiFlickrSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15377,7 +15363,7 @@ impl Data {
             }
             #[cfg(feature = "BiFloristSolid")]
             BiIcon::BiFloristSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15394,7 +15380,7 @@ impl Data {
             }
             #[cfg(feature = "BiFlutter")]
             BiIcon::BiFlutter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15411,7 +15397,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderMinusRegular")]
             BiIcon::BiFolderMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15428,7 +15414,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderMinusSolid")]
             BiIcon::BiFolderMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15445,7 +15431,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderOpenRegular")]
             BiIcon::BiFolderOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15462,7 +15448,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderOpenSolid")]
             BiIcon::BiFolderOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15479,7 +15465,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderPlusRegular")]
             BiIcon::BiFolderPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15496,7 +15482,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderPlusSolid")]
             BiIcon::BiFolderPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15513,7 +15499,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderRegular")]
             BiIcon::BiFolderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15530,7 +15516,7 @@ impl Data {
             }
             #[cfg(feature = "BiFolderSolid")]
             BiIcon::BiFolderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15547,7 +15533,7 @@ impl Data {
             }
             #[cfg(feature = "BiFontColorRegular")]
             BiIcon::BiFontColorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15564,7 +15550,7 @@ impl Data {
             }
             #[cfg(feature = "BiFontFamilyRegular")]
             BiIcon::BiFontFamilyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15581,7 +15567,7 @@ impl Data {
             }
             #[cfg(feature = "BiFontRegular")]
             BiIcon::BiFontRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15598,7 +15584,7 @@ impl Data {
             }
             #[cfg(feature = "BiFontSizeRegular")]
             BiIcon::BiFontSizeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15615,7 +15601,7 @@ impl Data {
             }
             #[cfg(feature = "BiFoodMenuRegular")]
             BiIcon::BiFoodMenuRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15632,7 +15618,7 @@ impl Data {
             }
             #[cfg(feature = "BiFoodMenuSolid")]
             BiIcon::BiFoodMenuSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15649,7 +15635,7 @@ impl Data {
             }
             #[cfg(feature = "BiFoodTagRegular")]
             BiIcon::BiFoodTagRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15666,7 +15652,7 @@ impl Data {
             }
             #[cfg(feature = "BiFootballRegular")]
             BiIcon::BiFootballRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15683,7 +15669,7 @@ impl Data {
             }
             #[cfg(feature = "BiForkRegular")]
             BiIcon::BiForkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15700,7 +15686,7 @@ impl Data {
             }
             #[cfg(feature = "BiFoursquare")]
             BiIcon::BiFoursquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15717,7 +15703,7 @@ impl Data {
             }
             #[cfg(feature = "BiFridgeRegular")]
             BiIcon::BiFridgeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15734,7 +15720,7 @@ impl Data {
             }
             #[cfg(feature = "BiFridgeSolid")]
             BiIcon::BiFridgeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15751,7 +15737,7 @@ impl Data {
             }
             #[cfg(feature = "BiFullscreenRegular")]
             BiIcon::BiFullscreenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15768,7 +15754,7 @@ impl Data {
             }
             #[cfg(feature = "BiGameRegular")]
             BiIcon::BiGameRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15785,7 +15771,7 @@ impl Data {
             }
             #[cfg(feature = "BiGameSolid")]
             BiIcon::BiGameSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15802,7 +15788,7 @@ impl Data {
             }
             #[cfg(feature = "BiGasPumpRegular")]
             BiIcon::BiGasPumpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15819,7 +15805,7 @@ impl Data {
             }
             #[cfg(feature = "BiGasPumpSolid")]
             BiIcon::BiGasPumpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15836,7 +15822,7 @@ impl Data {
             }
             #[cfg(feature = "BiGhostRegular")]
             BiIcon::BiGhostRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15853,7 +15839,7 @@ impl Data {
             }
             #[cfg(feature = "BiGhostSolid")]
             BiIcon::BiGhostSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15870,7 +15856,7 @@ impl Data {
             }
             #[cfg(feature = "BiGiftRegular")]
             BiIcon::BiGiftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15887,7 +15873,7 @@ impl Data {
             }
             #[cfg(feature = "BiGiftSolid")]
             BiIcon::BiGiftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15904,7 +15890,7 @@ impl Data {
             }
             #[cfg(feature = "BiGit")]
             BiIcon::BiGit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15921,7 +15907,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitBranchRegular")]
             BiIcon::BiGitBranchRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15938,7 +15924,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitCommitRegular")]
             BiIcon::BiGitCommitRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15955,7 +15941,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitCompareRegular")]
             BiIcon::BiGitCompareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15972,7 +15958,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitMergeRegular")]
             BiIcon::BiGitMergeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15989,7 +15975,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitPullRequestRegular")]
             BiIcon::BiGitPullRequestRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16006,7 +15992,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitRepoForkedRegular")]
             BiIcon::BiGitRepoForkedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16023,7 +16009,7 @@ impl Data {
             }
             #[cfg(feature = "BiGithub")]
             BiIcon::BiGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16040,7 +16026,7 @@ impl Data {
             }
             #[cfg(feature = "BiGitlab")]
             BiIcon::BiGitlab => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16057,7 +16043,7 @@ impl Data {
             }
             #[cfg(feature = "BiGlassesAltRegular")]
             BiIcon::BiGlassesAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16074,7 +16060,7 @@ impl Data {
             }
             #[cfg(feature = "BiGlassesRegular")]
             BiIcon::BiGlassesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16091,7 +16077,7 @@ impl Data {
             }
             #[cfg(feature = "BiGlobeAltRegular")]
             BiIcon::BiGlobeAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16108,7 +16094,7 @@ impl Data {
             }
             #[cfg(feature = "BiGlobeRegular")]
             BiIcon::BiGlobeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16125,7 +16111,7 @@ impl Data {
             }
             #[cfg(feature = "BiGmail")]
             BiIcon::BiGmail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16142,7 +16128,7 @@ impl Data {
             }
             #[cfg(feature = "BiGoLang")]
             BiIcon::BiGoLang => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16159,7 +16145,7 @@ impl Data {
             }
             #[cfg(feature = "BiGoogle")]
             BiIcon::BiGoogle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16176,7 +16162,7 @@ impl Data {
             }
             #[cfg(feature = "BiGoogleCloud")]
             BiIcon::BiGoogleCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16193,7 +16179,7 @@ impl Data {
             }
             #[cfg(feature = "BiGooglePlus")]
             BiIcon::BiGooglePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16210,7 +16196,7 @@ impl Data {
             }
             #[cfg(feature = "BiGooglePlusCircle")]
             BiIcon::BiGooglePlusCircle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16227,7 +16213,7 @@ impl Data {
             }
             #[cfg(feature = "BiGraduationSolid")]
             BiIcon::BiGraduationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16244,7 +16230,7 @@ impl Data {
             }
             #[cfg(feature = "BiGraphql")]
             BiIcon::BiGraphql => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16261,7 +16247,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridAltRegular")]
             BiIcon::BiGridAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16278,7 +16264,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridAltSolid")]
             BiIcon::BiGridAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16295,7 +16281,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridHorizontalRegular")]
             BiIcon::BiGridHorizontalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16312,7 +16298,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridRegular")]
             BiIcon::BiGridRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16329,7 +16315,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridSmallRegular")]
             BiIcon::BiGridSmallRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16346,7 +16332,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridSolid")]
             BiIcon::BiGridSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16363,7 +16349,7 @@ impl Data {
             }
             #[cfg(feature = "BiGridVerticalRegular")]
             BiIcon::BiGridVerticalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16380,7 +16366,7 @@ impl Data {
             }
             #[cfg(feature = "BiGroupRegular")]
             BiIcon::BiGroupRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16397,7 +16383,7 @@ impl Data {
             }
             #[cfg(feature = "BiGroupSolid")]
             BiIcon::BiGroupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16414,7 +16400,7 @@ impl Data {
             }
             #[cfg(feature = "BiGuitarAmpSolid")]
             BiIcon::BiGuitarAmpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16431,7 +16417,7 @@ impl Data {
             }
             #[cfg(feature = "BiHandDownSolid")]
             BiIcon::BiHandDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16448,7 +16434,7 @@ impl Data {
             }
             #[cfg(feature = "BiHandLeftSolid")]
             BiIcon::BiHandLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16465,7 +16451,7 @@ impl Data {
             }
             #[cfg(feature = "BiHandRightSolid")]
             BiIcon::BiHandRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16482,7 +16468,7 @@ impl Data {
             }
             #[cfg(feature = "BiHandSolid")]
             BiIcon::BiHandSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16499,7 +16485,7 @@ impl Data {
             }
             #[cfg(feature = "BiHandUpSolid")]
             BiIcon::BiHandUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16516,7 +16502,7 @@ impl Data {
             }
             #[cfg(feature = "BiHandicapRegular")]
             BiIcon::BiHandicapRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16533,7 +16519,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyAltRegular")]
             BiIcon::BiHappyAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16550,7 +16536,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyAltSolid")]
             BiIcon::BiHappyAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16567,7 +16553,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyBeamingRegular")]
             BiIcon::BiHappyBeamingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16584,7 +16570,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyBeamingSolid")]
             BiIcon::BiHappyBeamingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16601,7 +16587,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyHeartEyesRegular")]
             BiIcon::BiHappyHeartEyesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16618,7 +16604,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyHeartEyesSolid")]
             BiIcon::BiHappyHeartEyesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16635,7 +16621,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappyRegular")]
             BiIcon::BiHappyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16652,7 +16638,7 @@ impl Data {
             }
             #[cfg(feature = "BiHappySolid")]
             BiIcon::BiHappySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16669,7 +16655,7 @@ impl Data {
             }
             #[cfg(feature = "BiHardHatRegular")]
             BiIcon::BiHardHatRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16686,7 +16672,7 @@ impl Data {
             }
             #[cfg(feature = "BiHardHatSolid")]
             BiIcon::BiHardHatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16703,7 +16689,7 @@ impl Data {
             }
             #[cfg(feature = "BiHashRegular")]
             BiIcon::BiHashRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16720,7 +16706,7 @@ impl Data {
             }
             #[cfg(feature = "BiHddRegular")]
             BiIcon::BiHddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16737,7 +16723,7 @@ impl Data {
             }
             #[cfg(feature = "BiHddSolid")]
             BiIcon::BiHddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16754,7 +16740,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeadingRegular")]
             BiIcon::BiHeadingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16771,7 +16757,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeadphoneRegular")]
             BiIcon::BiHeadphoneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16788,7 +16774,7 @@ impl Data {
             }
             #[cfg(feature = "BiHealthRegular")]
             BiIcon::BiHealthRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16805,7 +16791,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeartCircleRegular")]
             BiIcon::BiHeartCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16822,7 +16808,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeartCircleSolid")]
             BiIcon::BiHeartCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16839,7 +16825,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeartRegular")]
             BiIcon::BiHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16856,7 +16842,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeartSolid")]
             BiIcon::BiHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16873,7 +16859,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeartSquareRegular")]
             BiIcon::BiHeartSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16890,7 +16876,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeartSquareSolid")]
             BiIcon::BiHeartSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16907,7 +16893,7 @@ impl Data {
             }
             #[cfg(feature = "BiHelpCircleRegular")]
             BiIcon::BiHelpCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16924,7 +16910,7 @@ impl Data {
             }
             #[cfg(feature = "BiHelpCircleSolid")]
             BiIcon::BiHelpCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16941,7 +16927,7 @@ impl Data {
             }
             #[cfg(feature = "BiHeroku")]
             BiIcon::BiHeroku => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16958,7 +16944,7 @@ impl Data {
             }
             #[cfg(feature = "BiHideRegular")]
             BiIcon::BiHideRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16975,7 +16961,7 @@ impl Data {
             }
             #[cfg(feature = "BiHideSolid")]
             BiIcon::BiHideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16992,7 +16978,7 @@ impl Data {
             }
             #[cfg(feature = "BiHighlightRegular")]
             BiIcon::BiHighlightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17009,7 +16995,7 @@ impl Data {
             }
             #[cfg(feature = "BiHistoryRegular")]
             BiIcon::BiHistoryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17026,7 +17012,7 @@ impl Data {
             }
             #[cfg(feature = "BiHiveRegular")]
             BiIcon::BiHiveRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17043,7 +17029,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeAlt2Regular")]
             BiIcon::BiHomeAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17060,7 +17046,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeAlt2Solid")]
             BiIcon::BiHomeAlt2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17077,7 +17063,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeAltRegular")]
             BiIcon::BiHomeAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17094,7 +17080,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeCircleRegular")]
             BiIcon::BiHomeCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17111,7 +17097,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeCircleSolid")]
             BiIcon::BiHomeCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17128,7 +17114,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeHeartRegular")]
             BiIcon::BiHomeHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17145,7 +17131,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeHeartSolid")]
             BiIcon::BiHomeHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17162,7 +17148,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeRegular")]
             BiIcon::BiHomeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17179,7 +17165,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeSmileRegular")]
             BiIcon::BiHomeSmileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17196,7 +17182,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeSmileSolid")]
             BiIcon::BiHomeSmileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17213,7 +17199,7 @@ impl Data {
             }
             #[cfg(feature = "BiHomeSolid")]
             BiIcon::BiHomeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17230,7 +17216,7 @@ impl Data {
             }
             #[cfg(feature = "BiHorizontalCenterRegular")]
             BiIcon::BiHorizontalCenterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17247,7 +17233,7 @@ impl Data {
             }
             #[cfg(feature = "BiHorizontalLeftRegular")]
             BiIcon::BiHorizontalLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17264,7 +17250,7 @@ impl Data {
             }
             #[cfg(feature = "BiHorizontalRightRegular")]
             BiIcon::BiHorizontalRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17281,7 +17267,7 @@ impl Data {
             }
             #[cfg(feature = "BiHotSolid")]
             BiIcon::BiHotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17298,7 +17284,7 @@ impl Data {
             }
             #[cfg(feature = "BiHotelRegular")]
             BiIcon::BiHotelRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17315,7 +17301,7 @@ impl Data {
             }
             #[cfg(feature = "BiHotelSolid")]
             BiIcon::BiHotelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17332,7 +17318,7 @@ impl Data {
             }
             #[cfg(feature = "BiHourglassBottomSolid")]
             BiIcon::BiHourglassBottomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17349,7 +17335,7 @@ impl Data {
             }
             #[cfg(feature = "BiHourglassRegular")]
             BiIcon::BiHourglassRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17366,7 +17352,7 @@ impl Data {
             }
             #[cfg(feature = "BiHourglassSolid")]
             BiIcon::BiHourglassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17383,7 +17369,7 @@ impl Data {
             }
             #[cfg(feature = "BiHourglassTopSolid")]
             BiIcon::BiHourglassTopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17400,7 +17386,7 @@ impl Data {
             }
             #[cfg(feature = "BiHtml5")]
             BiIcon::BiHtml5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17417,7 +17403,7 @@ impl Data {
             }
             #[cfg(feature = "BiIdCardRegular")]
             BiIcon::BiIdCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17434,7 +17420,7 @@ impl Data {
             }
             #[cfg(feature = "BiIdCardSolid")]
             BiIcon::BiIdCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17451,7 +17437,7 @@ impl Data {
             }
             #[cfg(feature = "BiImageAddRegular")]
             BiIcon::BiImageAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17468,7 +17454,7 @@ impl Data {
             }
             #[cfg(feature = "BiImageAddSolid")]
             BiIcon::BiImageAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17485,7 +17471,7 @@ impl Data {
             }
             #[cfg(feature = "BiImageAltRegular")]
             BiIcon::BiImageAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17502,7 +17488,7 @@ impl Data {
             }
             #[cfg(feature = "BiImageAltSolid")]
             BiIcon::BiImageAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17519,7 +17505,7 @@ impl Data {
             }
             #[cfg(feature = "BiImageRegular")]
             BiIcon::BiImageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17536,7 +17522,7 @@ impl Data {
             }
             #[cfg(feature = "BiImageSolid")]
             BiIcon::BiImageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17553,7 +17539,7 @@ impl Data {
             }
             #[cfg(feature = "BiImagesRegular")]
             BiIcon::BiImagesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17570,7 +17556,7 @@ impl Data {
             }
             #[cfg(feature = "BiImdb")]
             BiIcon::BiImdb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17587,7 +17573,7 @@ impl Data {
             }
             #[cfg(feature = "BiImportRegular")]
             BiIcon::BiImportRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17604,7 +17590,7 @@ impl Data {
             }
             #[cfg(feature = "BiInboxSolid")]
             BiIcon::BiInboxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17621,7 +17607,7 @@ impl Data {
             }
             #[cfg(feature = "BiInfiniteRegular")]
             BiIcon::BiInfiniteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17638,7 +17624,7 @@ impl Data {
             }
             #[cfg(feature = "BiInfoCircleRegular")]
             BiIcon::BiInfoCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17655,7 +17641,7 @@ impl Data {
             }
             #[cfg(feature = "BiInfoCircleSolid")]
             BiIcon::BiInfoCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17672,7 +17658,7 @@ impl Data {
             }
             #[cfg(feature = "BiInfoSquareRegular")]
             BiIcon::BiInfoSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17689,7 +17675,7 @@ impl Data {
             }
             #[cfg(feature = "BiInfoSquareSolid")]
             BiIcon::BiInfoSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17706,7 +17692,7 @@ impl Data {
             }
             #[cfg(feature = "BiInjectionRegular")]
             BiIcon::BiInjectionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17723,7 +17709,7 @@ impl Data {
             }
             #[cfg(feature = "BiInjectionSolid")]
             BiIcon::BiInjectionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17740,7 +17726,7 @@ impl Data {
             }
             #[cfg(feature = "BiInstagram")]
             BiIcon::BiInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17757,7 +17743,7 @@ impl Data {
             }
             #[cfg(feature = "BiInstagramAlt")]
             BiIcon::BiInstagramAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17774,7 +17760,7 @@ impl Data {
             }
             #[cfg(feature = "BiInstitutionSolid")]
             BiIcon::BiInstitutionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17791,7 +17777,7 @@ impl Data {
             }
             #[cfg(feature = "BiInternetExplorer")]
             BiIcon::BiInternetExplorer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17808,7 +17794,7 @@ impl Data {
             }
             #[cfg(feature = "BiIntersectRegular")]
             BiIcon::BiIntersectRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17825,7 +17811,7 @@ impl Data {
             }
             #[cfg(feature = "BiInvaderSolid")]
             BiIcon::BiInvaderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17842,7 +17828,7 @@ impl Data {
             }
             #[cfg(feature = "BiInvision")]
             BiIcon::BiInvision => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17859,7 +17845,7 @@ impl Data {
             }
             #[cfg(feature = "BiItalicRegular")]
             BiIcon::BiItalicRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17876,7 +17862,7 @@ impl Data {
             }
             #[cfg(feature = "BiJava")]
             BiIcon::BiJava => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17893,7 +17879,7 @@ impl Data {
             }
             #[cfg(feature = "BiJavascript")]
             BiIcon::BiJavascript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17910,7 +17896,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoomla")]
             BiIcon::BiJoomla => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17927,7 +17913,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoystickAltRegular")]
             BiIcon::BiJoystickAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17944,7 +17930,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoystickAltSolid")]
             BiIcon::BiJoystickAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17961,7 +17947,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoystickButtonRegular")]
             BiIcon::BiJoystickButtonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17978,7 +17964,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoystickButtonSolid")]
             BiIcon::BiJoystickButtonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17995,7 +17981,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoystickRegular")]
             BiIcon::BiJoystickRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18012,7 +17998,7 @@ impl Data {
             }
             #[cfg(feature = "BiJoystickSolid")]
             BiIcon::BiJoystickSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18029,7 +18015,7 @@ impl Data {
             }
             #[cfg(feature = "BiJquery")]
             BiIcon::BiJquery => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18046,7 +18032,7 @@ impl Data {
             }
             #[cfg(feature = "BiJsfiddle")]
             BiIcon::BiJsfiddle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18063,7 +18049,7 @@ impl Data {
             }
             #[cfg(feature = "BiKeyRegular")]
             BiIcon::BiKeyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18080,7 +18066,7 @@ impl Data {
             }
             #[cfg(feature = "BiKeySolid")]
             BiIcon::BiKeySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18097,7 +18083,7 @@ impl Data {
             }
             #[cfg(feature = "BiKeyboardSolid")]
             BiIcon::BiKeyboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18114,7 +18100,7 @@ impl Data {
             }
             #[cfg(feature = "BiKickstarter")]
             BiIcon::BiKickstarter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18131,7 +18117,7 @@ impl Data {
             }
             #[cfg(feature = "BiKnifeRegular")]
             BiIcon::BiKnifeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18148,7 +18134,7 @@ impl Data {
             }
             #[cfg(feature = "BiKubernetes")]
             BiIcon::BiKubernetes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18165,7 +18151,7 @@ impl Data {
             }
             #[cfg(feature = "BiLabelRegular")]
             BiIcon::BiLabelRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18182,7 +18168,7 @@ impl Data {
             }
             #[cfg(feature = "BiLabelSolid")]
             BiIcon::BiLabelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18199,7 +18185,7 @@ impl Data {
             }
             #[cfg(feature = "BiLandmarkSolid")]
             BiIcon::BiLandmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18216,7 +18202,7 @@ impl Data {
             }
             #[cfg(feature = "BiLandscapeRegular")]
             BiIcon::BiLandscapeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18233,7 +18219,7 @@ impl Data {
             }
             #[cfg(feature = "BiLandscapeSolid")]
             BiIcon::BiLandscapeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18250,7 +18236,7 @@ impl Data {
             }
             #[cfg(feature = "BiLaptopRegular")]
             BiIcon::BiLaptopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18267,7 +18253,7 @@ impl Data {
             }
             #[cfg(feature = "BiLastPageRegular")]
             BiIcon::BiLastPageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18284,7 +18270,7 @@ impl Data {
             }
             #[cfg(feature = "BiLaughRegular")]
             BiIcon::BiLaughRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18301,7 +18287,7 @@ impl Data {
             }
             #[cfg(feature = "BiLaughSolid")]
             BiIcon::BiLaughSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18318,7 +18304,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayerMinusRegular")]
             BiIcon::BiLayerMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18335,7 +18321,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayerMinusSolid")]
             BiIcon::BiLayerMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18352,7 +18338,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayerPlusRegular")]
             BiIcon::BiLayerPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18369,7 +18355,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayerPlusSolid")]
             BiIcon::BiLayerPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18386,7 +18372,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayerRegular")]
             BiIcon::BiLayerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18403,7 +18389,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayerSolid")]
             BiIcon::BiLayerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18420,7 +18406,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayoutRegular")]
             BiIcon::BiLayoutRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18437,7 +18423,7 @@ impl Data {
             }
             #[cfg(feature = "BiLayoutSolid")]
             BiIcon::BiLayoutSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18454,7 +18440,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeafRegular")]
             BiIcon::BiLeafRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18471,7 +18457,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeafSolid")]
             BiIcon::BiLeafSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18488,7 +18474,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowAltRegular")]
             BiIcon::BiLeftArrowAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18505,7 +18491,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowAltSolid")]
             BiIcon::BiLeftArrowAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18522,7 +18508,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowCircleRegular")]
             BiIcon::BiLeftArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18539,7 +18525,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowCircleSolid")]
             BiIcon::BiLeftArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18556,7 +18542,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowRegular")]
             BiIcon::BiLeftArrowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18573,7 +18559,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowSolid")]
             BiIcon::BiLeftArrowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18590,7 +18576,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftArrowSquareSolid")]
             BiIcon::BiLeftArrowSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18607,7 +18593,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftDownArrowCircleRegular")]
             BiIcon::BiLeftDownArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18624,7 +18610,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftDownArrowCircleSolid")]
             BiIcon::BiLeftDownArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18641,7 +18627,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftIndentRegular")]
             BiIcon::BiLeftIndentRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18658,7 +18644,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftTopArrowCircleRegular")]
             BiIcon::BiLeftTopArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18675,7 +18661,7 @@ impl Data {
             }
             #[cfg(feature = "BiLeftTopArrowCircleSolid")]
             BiIcon::BiLeftTopArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18692,7 +18678,7 @@ impl Data {
             }
             #[cfg(feature = "BiLemonRegular")]
             BiIcon::BiLemonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18709,7 +18695,7 @@ impl Data {
             }
             #[cfg(feature = "BiLemonSolid")]
             BiIcon::BiLemonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18726,7 +18712,7 @@ impl Data {
             }
             #[cfg(feature = "BiLess")]
             BiIcon::BiLess => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18743,7 +18729,7 @@ impl Data {
             }
             #[cfg(feature = "BiLibraryRegular")]
             BiIcon::BiLibraryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18760,7 +18746,7 @@ impl Data {
             }
             #[cfg(feature = "BiLikeRegular")]
             BiIcon::BiLikeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18777,7 +18763,7 @@ impl Data {
             }
             #[cfg(feature = "BiLikeSolid")]
             BiIcon::BiLikeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18794,7 +18780,7 @@ impl Data {
             }
             #[cfg(feature = "BiLineChartDownRegular")]
             BiIcon::BiLineChartDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18811,7 +18797,7 @@ impl Data {
             }
             #[cfg(feature = "BiLineChartRegular")]
             BiIcon::BiLineChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18828,7 +18814,7 @@ impl Data {
             }
             #[cfg(feature = "BiLinkAltRegular")]
             BiIcon::BiLinkAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18845,7 +18831,7 @@ impl Data {
             }
             #[cfg(feature = "BiLinkExternalRegular")]
             BiIcon::BiLinkExternalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18862,7 +18848,7 @@ impl Data {
             }
             #[cfg(feature = "BiLinkRegular")]
             BiIcon::BiLinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18879,7 +18865,7 @@ impl Data {
             }
             #[cfg(feature = "BiLinkedin")]
             BiIcon::BiLinkedin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18896,7 +18882,7 @@ impl Data {
             }
             #[cfg(feature = "BiLinkedinSquare")]
             BiIcon::BiLinkedinSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18913,7 +18899,7 @@ impl Data {
             }
             #[cfg(feature = "BiLiraRegular")]
             BiIcon::BiLiraRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18930,7 +18916,7 @@ impl Data {
             }
             #[cfg(feature = "BiListCheckRegular")]
             BiIcon::BiListCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18947,7 +18933,7 @@ impl Data {
             }
             #[cfg(feature = "BiListMinusRegular")]
             BiIcon::BiListMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18964,7 +18950,7 @@ impl Data {
             }
             #[cfg(feature = "BiListOlRegular")]
             BiIcon::BiListOlRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18981,7 +18967,7 @@ impl Data {
             }
             #[cfg(feature = "BiListPlusRegular")]
             BiIcon::BiListPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18998,7 +18984,7 @@ impl Data {
             }
             #[cfg(feature = "BiListUlRegular")]
             BiIcon::BiListUlRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19015,7 +19001,7 @@ impl Data {
             }
             #[cfg(feature = "BiLoaderAltRegular")]
             BiIcon::BiLoaderAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19032,7 +19018,7 @@ impl Data {
             }
             #[cfg(feature = "BiLoaderCircleRegular")]
             BiIcon::BiLoaderCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19049,7 +19035,7 @@ impl Data {
             }
             #[cfg(feature = "BiLoaderRegular")]
             BiIcon::BiLoaderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19066,7 +19052,7 @@ impl Data {
             }
             #[cfg(feature = "BiLocationPlusRegular")]
             BiIcon::BiLocationPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19083,7 +19069,7 @@ impl Data {
             }
             #[cfg(feature = "BiLocationPlusSolid")]
             BiIcon::BiLocationPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19100,7 +19086,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockAltRegular")]
             BiIcon::BiLockAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19117,7 +19103,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockAltSolid")]
             BiIcon::BiLockAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19134,7 +19120,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockOpenAltRegular")]
             BiIcon::BiLockOpenAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19151,7 +19137,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockOpenAltSolid")]
             BiIcon::BiLockOpenAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19168,7 +19154,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockOpenRegular")]
             BiIcon::BiLockOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19185,7 +19171,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockOpenSolid")]
             BiIcon::BiLockOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19202,7 +19188,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockRegular")]
             BiIcon::BiLockRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19219,7 +19205,7 @@ impl Data {
             }
             #[cfg(feature = "BiLockSolid")]
             BiIcon::BiLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19236,7 +19222,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogInCircleRegular")]
             BiIcon::BiLogInCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19253,7 +19239,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogInCircleSolid")]
             BiIcon::BiLogInCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19270,7 +19256,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogInRegular")]
             BiIcon::BiLogInRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19287,7 +19273,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogInSolid")]
             BiIcon::BiLogInSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19304,7 +19290,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogOutCircleRegular")]
             BiIcon::BiLogOutCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19321,7 +19307,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogOutCircleSolid")]
             BiIcon::BiLogOutCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19338,7 +19324,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogOutRegular")]
             BiIcon::BiLogOutRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19355,7 +19341,7 @@ impl Data {
             }
             #[cfg(feature = "BiLogOutSolid")]
             BiIcon::BiLogOutSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19372,7 +19358,7 @@ impl Data {
             }
             #[cfg(feature = "BiLowVisionRegular")]
             BiIcon::BiLowVisionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19389,7 +19375,7 @@ impl Data {
             }
             #[cfg(feature = "BiLowVisionSolid")]
             BiIcon::BiLowVisionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19406,7 +19392,7 @@ impl Data {
             }
             #[cfg(feature = "BiMagento")]
             BiIcon::BiMagento => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19423,7 +19409,7 @@ impl Data {
             }
             #[cfg(feature = "BiMagicWandSolid")]
             BiIcon::BiMagicWandSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19440,7 +19426,7 @@ impl Data {
             }
             #[cfg(feature = "BiMagnetRegular")]
             BiIcon::BiMagnetRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19457,7 +19443,7 @@ impl Data {
             }
             #[cfg(feature = "BiMagnetSolid")]
             BiIcon::BiMagnetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19474,7 +19460,7 @@ impl Data {
             }
             #[cfg(feature = "BiMailSendRegular")]
             BiIcon::BiMailSendRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19491,7 +19477,7 @@ impl Data {
             }
             #[cfg(feature = "BiMailchimp")]
             BiIcon::BiMailchimp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19508,7 +19494,7 @@ impl Data {
             }
             #[cfg(feature = "BiMaleFemaleRegular")]
             BiIcon::BiMaleFemaleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19525,7 +19511,7 @@ impl Data {
             }
             #[cfg(feature = "BiMaleRegular")]
             BiIcon::BiMaleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19542,7 +19528,7 @@ impl Data {
             }
             #[cfg(feature = "BiMaleSignRegular")]
             BiIcon::BiMaleSignRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19559,7 +19545,7 @@ impl Data {
             }
             #[cfg(feature = "BiMapAltRegular")]
             BiIcon::BiMapAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19576,7 +19562,7 @@ impl Data {
             }
             #[cfg(feature = "BiMapAltSolid")]
             BiIcon::BiMapAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19593,7 +19579,7 @@ impl Data {
             }
             #[cfg(feature = "BiMapPinRegular")]
             BiIcon::BiMapPinRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19610,7 +19596,7 @@ impl Data {
             }
             #[cfg(feature = "BiMapPinSolid")]
             BiIcon::BiMapPinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19627,7 +19613,7 @@ impl Data {
             }
             #[cfg(feature = "BiMapRegular")]
             BiIcon::BiMapRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19644,7 +19630,7 @@ impl Data {
             }
             #[cfg(feature = "BiMapSolid")]
             BiIcon::BiMapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19661,7 +19647,7 @@ impl Data {
             }
             #[cfg(feature = "BiMarkdown")]
             BiIcon::BiMarkdown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19678,7 +19664,7 @@ impl Data {
             }
             #[cfg(feature = "BiMaskRegular")]
             BiIcon::BiMaskRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19695,7 +19681,7 @@ impl Data {
             }
             #[cfg(feature = "BiMaskSolid")]
             BiIcon::BiMaskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19712,7 +19698,7 @@ impl Data {
             }
             #[cfg(feature = "BiMastercard")]
             BiIcon::BiMastercard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19729,7 +19715,7 @@ impl Data {
             }
             #[cfg(feature = "BiMastodon")]
             BiIcon::BiMastodon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19746,7 +19732,7 @@ impl Data {
             }
             #[cfg(feature = "BiMathRegular")]
             BiIcon::BiMathRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19763,7 +19749,7 @@ impl Data {
             }
             #[cfg(feature = "BiMedalRegular")]
             BiIcon::BiMedalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19780,7 +19766,7 @@ impl Data {
             }
             #[cfg(feature = "BiMedalSolid")]
             BiIcon::BiMedalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19797,7 +19783,7 @@ impl Data {
             }
             #[cfg(feature = "BiMedium")]
             BiIcon::BiMedium => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19814,7 +19800,7 @@ impl Data {
             }
             #[cfg(feature = "BiMediumOld")]
             BiIcon::BiMediumOld => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19831,7 +19817,7 @@ impl Data {
             }
             #[cfg(feature = "BiMediumSquare")]
             BiIcon::BiMediumSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19848,7 +19834,7 @@ impl Data {
             }
             #[cfg(feature = "BiMegaphoneSolid")]
             BiIcon::BiMegaphoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19865,7 +19851,7 @@ impl Data {
             }
             #[cfg(feature = "BiMehAltRegular")]
             BiIcon::BiMehAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19882,7 +19868,7 @@ impl Data {
             }
             #[cfg(feature = "BiMehAltSolid")]
             BiIcon::BiMehAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19899,7 +19885,7 @@ impl Data {
             }
             #[cfg(feature = "BiMehBlankRegular")]
             BiIcon::BiMehBlankRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19916,7 +19902,7 @@ impl Data {
             }
             #[cfg(feature = "BiMehBlankSolid")]
             BiIcon::BiMehBlankSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19933,7 +19919,7 @@ impl Data {
             }
             #[cfg(feature = "BiMehRegular")]
             BiIcon::BiMehRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19950,7 +19936,7 @@ impl Data {
             }
             #[cfg(feature = "BiMehSolid")]
             BiIcon::BiMehSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19967,7 +19953,7 @@ impl Data {
             }
             #[cfg(feature = "BiMemoryCardRegular")]
             BiIcon::BiMemoryCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19984,7 +19970,7 @@ impl Data {
             }
             #[cfg(feature = "BiMemoryCardSolid")]
             BiIcon::BiMemoryCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20001,7 +19987,7 @@ impl Data {
             }
             #[cfg(feature = "BiMenuAltLeftRegular")]
             BiIcon::BiMenuAltLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20018,7 +20004,7 @@ impl Data {
             }
             #[cfg(feature = "BiMenuAltRightRegular")]
             BiIcon::BiMenuAltRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20035,7 +20021,7 @@ impl Data {
             }
             #[cfg(feature = "BiMenuRegular")]
             BiIcon::BiMenuRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20052,7 +20038,7 @@ impl Data {
             }
             #[cfg(feature = "BiMergeRegular")]
             BiIcon::BiMergeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20069,7 +20055,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAddRegular")]
             BiIcon::BiMessageAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20086,7 +20072,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAddSolid")]
             BiIcon::BiMessageAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20103,7 +20089,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltAddRegular")]
             BiIcon::BiMessageAltAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20120,7 +20106,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltAddSolid")]
             BiIcon::BiMessageAltAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20137,7 +20123,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltCheckRegular")]
             BiIcon::BiMessageAltCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20154,7 +20140,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltCheckSolid")]
             BiIcon::BiMessageAltCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20171,7 +20157,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltDetailRegular")]
             BiIcon::BiMessageAltDetailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20188,7 +20174,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltDetailSolid")]
             BiIcon::BiMessageAltDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20205,7 +20191,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltDotsRegular")]
             BiIcon::BiMessageAltDotsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20222,7 +20208,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltDotsSolid")]
             BiIcon::BiMessageAltDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20239,7 +20225,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltEditRegular")]
             BiIcon::BiMessageAltEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20256,7 +20242,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltEditSolid")]
             BiIcon::BiMessageAltEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20273,7 +20259,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltErrorRegular")]
             BiIcon::BiMessageAltErrorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20290,7 +20276,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltErrorSolid")]
             BiIcon::BiMessageAltErrorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20307,7 +20293,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltMinusRegular")]
             BiIcon::BiMessageAltMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20324,7 +20310,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltMinusSolid")]
             BiIcon::BiMessageAltMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20341,7 +20327,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltRegular")]
             BiIcon::BiMessageAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20358,7 +20344,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltSolid")]
             BiIcon::BiMessageAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20375,7 +20361,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltXRegular")]
             BiIcon::BiMessageAltXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20392,7 +20378,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageAltXSolid")]
             BiIcon::BiMessageAltXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20409,7 +20395,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageCheckRegular")]
             BiIcon::BiMessageCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20426,7 +20412,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageCheckSolid")]
             BiIcon::BiMessageCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20443,7 +20429,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageDetailRegular")]
             BiIcon::BiMessageDetailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20460,7 +20446,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageDetailSolid")]
             BiIcon::BiMessageDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20477,7 +20463,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageDotsRegular")]
             BiIcon::BiMessageDotsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20494,7 +20480,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageDotsSolid")]
             BiIcon::BiMessageDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20511,7 +20497,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageEditRegular")]
             BiIcon::BiMessageEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20528,7 +20514,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageEditSolid")]
             BiIcon::BiMessageEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20545,7 +20531,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageErrorRegular")]
             BiIcon::BiMessageErrorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20562,7 +20548,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageErrorSolid")]
             BiIcon::BiMessageErrorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20579,7 +20565,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageMinusRegular")]
             BiIcon::BiMessageMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20596,7 +20582,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageMinusSolid")]
             BiIcon::BiMessageMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20613,7 +20599,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRegular")]
             BiIcon::BiMessageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20630,7 +20616,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedAddRegular")]
             BiIcon::BiMessageRoundedAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20647,7 +20633,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedAddSolid")]
             BiIcon::BiMessageRoundedAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20664,7 +20650,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedCheckRegular")]
             BiIcon::BiMessageRoundedCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20681,7 +20667,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedCheckSolid")]
             BiIcon::BiMessageRoundedCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20698,7 +20684,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedDetailRegular")]
             BiIcon::BiMessageRoundedDetailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20715,7 +20701,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedDetailSolid")]
             BiIcon::BiMessageRoundedDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20732,7 +20718,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedDotsRegular")]
             BiIcon::BiMessageRoundedDotsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20749,7 +20735,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedDotsSolid")]
             BiIcon::BiMessageRoundedDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20766,7 +20752,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedEditRegular")]
             BiIcon::BiMessageRoundedEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20783,7 +20769,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedEditSolid")]
             BiIcon::BiMessageRoundedEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20800,7 +20786,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedErrorRegular")]
             BiIcon::BiMessageRoundedErrorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20817,7 +20803,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedErrorSolid")]
             BiIcon::BiMessageRoundedErrorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20834,7 +20820,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedMinusRegular")]
             BiIcon::BiMessageRoundedMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20851,7 +20837,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedMinusSolid")]
             BiIcon::BiMessageRoundedMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20868,7 +20854,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedRegular")]
             BiIcon::BiMessageRoundedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20885,7 +20871,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedSolid")]
             BiIcon::BiMessageRoundedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20902,7 +20888,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedXRegular")]
             BiIcon::BiMessageRoundedXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20919,7 +20905,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageRoundedXSolid")]
             BiIcon::BiMessageRoundedXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20936,7 +20922,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSolid")]
             BiIcon::BiMessageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20953,7 +20939,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareAddRegular")]
             BiIcon::BiMessageSquareAddRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20970,7 +20956,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareAddSolid")]
             BiIcon::BiMessageSquareAddSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20987,7 +20973,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareCheckRegular")]
             BiIcon::BiMessageSquareCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21004,7 +20990,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareCheckSolid")]
             BiIcon::BiMessageSquareCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21021,7 +21007,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareDetailRegular")]
             BiIcon::BiMessageSquareDetailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21038,7 +21024,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareDetailSolid")]
             BiIcon::BiMessageSquareDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21055,7 +21041,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareDotsRegular")]
             BiIcon::BiMessageSquareDotsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21072,7 +21058,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareDotsSolid")]
             BiIcon::BiMessageSquareDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21089,7 +21075,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareEditRegular")]
             BiIcon::BiMessageSquareEditRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21106,7 +21092,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareEditSolid")]
             BiIcon::BiMessageSquareEditSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21123,7 +21109,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareErrorRegular")]
             BiIcon::BiMessageSquareErrorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21140,7 +21126,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareErrorSolid")]
             BiIcon::BiMessageSquareErrorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21157,7 +21143,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareMinusRegular")]
             BiIcon::BiMessageSquareMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21174,7 +21160,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareMinusSolid")]
             BiIcon::BiMessageSquareMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21191,7 +21177,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareRegular")]
             BiIcon::BiMessageSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21208,7 +21194,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareSolid")]
             BiIcon::BiMessageSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21225,7 +21211,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareXRegular")]
             BiIcon::BiMessageSquareXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21242,7 +21228,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageSquareXSolid")]
             BiIcon::BiMessageSquareXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21259,7 +21245,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageXRegular")]
             BiIcon::BiMessageXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21276,7 +21262,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessageXSolid")]
             BiIcon::BiMessageXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21293,7 +21279,7 @@ impl Data {
             }
             #[cfg(feature = "BiMessenger")]
             BiIcon::BiMessenger => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21310,7 +21296,7 @@ impl Data {
             }
             #[cfg(feature = "BiMeta")]
             BiIcon::BiMeta => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21327,7 +21313,7 @@ impl Data {
             }
             #[cfg(feature = "BiMeteorRegular")]
             BiIcon::BiMeteorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21344,7 +21330,7 @@ impl Data {
             }
             #[cfg(feature = "BiMeteorSolid")]
             BiIcon::BiMeteorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21361,7 +21347,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrochipRegular")]
             BiIcon::BiMicrochipRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21378,7 +21364,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrochipSolid")]
             BiIcon::BiMicrochipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21395,7 +21381,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrophoneAltSolid")]
             BiIcon::BiMicrophoneAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21412,7 +21398,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrophoneOffRegular")]
             BiIcon::BiMicrophoneOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21429,7 +21415,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrophoneOffSolid")]
             BiIcon::BiMicrophoneOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21446,7 +21432,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrophoneRegular")]
             BiIcon::BiMicrophoneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21463,7 +21449,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrophoneSolid")]
             BiIcon::BiMicrophoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21480,7 +21466,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrosoft")]
             BiIcon::BiMicrosoft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21497,7 +21483,7 @@ impl Data {
             }
             #[cfg(feature = "BiMicrosoftTeams")]
             BiIcon::BiMicrosoftTeams => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21514,7 +21500,7 @@ impl Data {
             }
             #[cfg(feature = "BiMinusBackRegular")]
             BiIcon::BiMinusBackRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21531,7 +21517,7 @@ impl Data {
             }
             #[cfg(feature = "BiMinusCircleRegular")]
             BiIcon::BiMinusCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21548,7 +21534,7 @@ impl Data {
             }
             #[cfg(feature = "BiMinusCircleSolid")]
             BiIcon::BiMinusCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21565,7 +21551,7 @@ impl Data {
             }
             #[cfg(feature = "BiMinusFrontRegular")]
             BiIcon::BiMinusFrontRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21582,7 +21568,7 @@ impl Data {
             }
             #[cfg(feature = "BiMinusRegular")]
             BiIcon::BiMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21599,7 +21585,7 @@ impl Data {
             }
             #[cfg(feature = "BiMinusSquareSolid")]
             BiIcon::BiMinusSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21616,7 +21602,7 @@ impl Data {
             }
             #[cfg(feature = "BiMobileAltRegular")]
             BiIcon::BiMobileAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21633,7 +21619,7 @@ impl Data {
             }
             #[cfg(feature = "BiMobileLandscapeRegular")]
             BiIcon::BiMobileLandscapeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21650,7 +21636,7 @@ impl Data {
             }
             #[cfg(feature = "BiMobileRegular")]
             BiIcon::BiMobileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21667,7 +21653,7 @@ impl Data {
             }
             #[cfg(feature = "BiMobileSolid")]
             BiIcon::BiMobileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21684,7 +21670,7 @@ impl Data {
             }
             #[cfg(feature = "BiMobileVibrationRegular")]
             BiIcon::BiMobileVibrationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21701,7 +21687,7 @@ impl Data {
             }
             #[cfg(feature = "BiMobileVibrationSolid")]
             BiIcon::BiMobileVibrationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21718,7 +21704,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoneyRegular")]
             BiIcon::BiMoneyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21735,7 +21721,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoneyWithdrawRegular")]
             BiIcon::BiMoneyWithdrawRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21752,7 +21738,7 @@ impl Data {
             }
             #[cfg(feature = "BiMongodb")]
             BiIcon::BiMongodb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21769,7 +21755,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoonRegular")]
             BiIcon::BiMoonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21786,7 +21772,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoonSolid")]
             BiIcon::BiMoonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21803,7 +21789,7 @@ impl Data {
             }
             #[cfg(feature = "BiMouseAltRegular")]
             BiIcon::BiMouseAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21820,7 +21806,7 @@ impl Data {
             }
             #[cfg(feature = "BiMouseAltSolid")]
             BiIcon::BiMouseAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21837,7 +21823,7 @@ impl Data {
             }
             #[cfg(feature = "BiMouseRegular")]
             BiIcon::BiMouseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21854,7 +21840,7 @@ impl Data {
             }
             #[cfg(feature = "BiMouseSolid")]
             BiIcon::BiMouseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21871,7 +21857,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoveHorizontalRegular")]
             BiIcon::BiMoveHorizontalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21888,7 +21874,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoveRegular")]
             BiIcon::BiMoveRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21905,7 +21891,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoveVerticalRegular")]
             BiIcon::BiMoveVerticalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21922,7 +21908,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoviePlayRegular")]
             BiIcon::BiMoviePlayRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21939,7 +21925,7 @@ impl Data {
             }
             #[cfg(feature = "BiMoviePlaySolid")]
             BiIcon::BiMoviePlaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21956,7 +21942,7 @@ impl Data {
             }
             #[cfg(feature = "BiMovieRegular")]
             BiIcon::BiMovieRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21973,7 +21959,7 @@ impl Data {
             }
             #[cfg(feature = "BiMovieSolid")]
             BiIcon::BiMovieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21990,7 +21976,7 @@ impl Data {
             }
             #[cfg(feature = "BiMusicRegular")]
             BiIcon::BiMusicRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22007,7 +21993,7 @@ impl Data {
             }
             #[cfg(feature = "BiMusicSolid")]
             BiIcon::BiMusicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22024,7 +22010,7 @@ impl Data {
             }
             #[cfg(feature = "BiNavigationRegular")]
             BiIcon::BiNavigationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22041,7 +22027,7 @@ impl Data {
             }
             #[cfg(feature = "BiNavigationSolid")]
             BiIcon::BiNavigationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22058,7 +22044,7 @@ impl Data {
             }
             #[cfg(feature = "BiNetlify")]
             BiIcon::BiNetlify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22075,7 +22061,7 @@ impl Data {
             }
             #[cfg(feature = "BiNetworkChartRegular")]
             BiIcon::BiNetworkChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22092,7 +22078,7 @@ impl Data {
             }
             #[cfg(feature = "BiNetworkChartSolid")]
             BiIcon::BiNetworkChartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22109,7 +22095,7 @@ impl Data {
             }
             #[cfg(feature = "BiNewsRegular")]
             BiIcon::BiNewsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22126,7 +22112,7 @@ impl Data {
             }
             #[cfg(feature = "BiNewsSolid")]
             BiIcon::BiNewsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22143,7 +22129,7 @@ impl Data {
             }
             #[cfg(feature = "BiNoEntryRegular")]
             BiIcon::BiNoEntryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22160,7 +22146,7 @@ impl Data {
             }
             #[cfg(feature = "BiNoEntrySolid")]
             BiIcon::BiNoEntrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22177,7 +22163,7 @@ impl Data {
             }
             #[cfg(feature = "BiNoSignalRegular")]
             BiIcon::BiNoSignalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22194,7 +22180,7 @@ impl Data {
             }
             #[cfg(feature = "BiNodejs")]
             BiIcon::BiNodejs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22211,7 +22197,7 @@ impl Data {
             }
             #[cfg(feature = "BiNoteRegular")]
             BiIcon::BiNoteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22228,7 +22214,7 @@ impl Data {
             }
             #[cfg(feature = "BiNoteSolid")]
             BiIcon::BiNoteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22245,7 +22231,7 @@ impl Data {
             }
             #[cfg(feature = "BiNotepadRegular")]
             BiIcon::BiNotepadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22262,7 +22248,7 @@ impl Data {
             }
             #[cfg(feature = "BiNotepadSolid")]
             BiIcon::BiNotepadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22279,7 +22265,7 @@ impl Data {
             }
             #[cfg(feature = "BiNotificationOffRegular")]
             BiIcon::BiNotificationOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22296,7 +22282,7 @@ impl Data {
             }
             #[cfg(feature = "BiNotificationOffSolid")]
             BiIcon::BiNotificationOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22313,7 +22299,7 @@ impl Data {
             }
             #[cfg(feature = "BiNotificationRegular")]
             BiIcon::BiNotificationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22330,7 +22316,7 @@ impl Data {
             }
             #[cfg(feature = "BiNotificationSolid")]
             BiIcon::BiNotificationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22347,7 +22333,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsHorizontalCenterRegular")]
             BiIcon::BiObjectsHorizontalCenterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22364,7 +22350,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsHorizontalCenterSolid")]
             BiIcon::BiObjectsHorizontalCenterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22381,7 +22367,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsHorizontalLeftRegular")]
             BiIcon::BiObjectsHorizontalLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22398,7 +22384,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsHorizontalLeftSolid")]
             BiIcon::BiObjectsHorizontalLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22415,7 +22401,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsHorizontalRightRegular")]
             BiIcon::BiObjectsHorizontalRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22432,7 +22418,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsHorizontalRightSolid")]
             BiIcon::BiObjectsHorizontalRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22449,7 +22435,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsVerticalBottomRegular")]
             BiIcon::BiObjectsVerticalBottomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22466,7 +22452,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsVerticalBottomSolid")]
             BiIcon::BiObjectsVerticalBottomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22483,7 +22469,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsVerticalCenterRegular")]
             BiIcon::BiObjectsVerticalCenterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22500,7 +22486,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsVerticalCenterSolid")]
             BiIcon::BiObjectsVerticalCenterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22517,7 +22503,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsVerticalTopRegular")]
             BiIcon::BiObjectsVerticalTopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22534,7 +22520,7 @@ impl Data {
             }
             #[cfg(feature = "BiObjectsVerticalTopSolid")]
             BiIcon::BiObjectsVerticalTopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22551,7 +22537,7 @@ impl Data {
             }
             #[cfg(feature = "BiOfferSolid")]
             BiIcon::BiOfferSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22568,7 +22554,7 @@ impl Data {
             }
             #[cfg(feature = "BiOkRu")]
             BiIcon::BiOkRu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22585,7 +22571,7 @@ impl Data {
             }
             #[cfg(feature = "BiOpera")]
             BiIcon::BiOpera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22602,7 +22588,7 @@ impl Data {
             }
             #[cfg(feature = "BiOutlineRegular")]
             BiIcon::BiOutlineRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22619,7 +22605,7 @@ impl Data {
             }
             #[cfg(feature = "BiPackageRegular")]
             BiIcon::BiPackageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22636,7 +22622,7 @@ impl Data {
             }
             #[cfg(feature = "BiPackageSolid")]
             BiIcon::BiPackageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22653,7 +22639,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaintRegular")]
             BiIcon::BiPaintRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22670,7 +22656,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaintRollRegular")]
             BiIcon::BiPaintRollRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22687,7 +22673,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaintRollSolid")]
             BiIcon::BiPaintRollSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22704,7 +22690,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaintSolid")]
             BiIcon::BiPaintSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22721,7 +22707,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaletteRegular")]
             BiIcon::BiPaletteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22738,7 +22724,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaletteSolid")]
             BiIcon::BiPaletteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22755,7 +22741,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaperPlaneRegular")]
             BiIcon::BiPaperPlaneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22772,7 +22758,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaperPlaneSolid")]
             BiIcon::BiPaperPlaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22789,7 +22775,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaperclipRegular")]
             BiIcon::BiPaperclipRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22806,7 +22792,7 @@ impl Data {
             }
             #[cfg(feature = "BiParagraphRegular")]
             BiIcon::BiParagraphRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22823,7 +22809,7 @@ impl Data {
             }
             #[cfg(feature = "BiParkingSolid")]
             BiIcon::BiParkingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22840,7 +22826,7 @@ impl Data {
             }
             #[cfg(feature = "BiPartyRegular")]
             BiIcon::BiPartyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22857,7 +22843,7 @@ impl Data {
             }
             #[cfg(feature = "BiPartySolid")]
             BiIcon::BiPartySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22874,7 +22860,7 @@ impl Data {
             }
             #[cfg(feature = "BiPasteRegular")]
             BiIcon::BiPasteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22891,7 +22877,7 @@ impl Data {
             }
             #[cfg(feature = "BiPasteSolid")]
             BiIcon::BiPasteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22908,7 +22894,7 @@ impl Data {
             }
             #[cfg(feature = "BiPatreon")]
             BiIcon::BiPatreon => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22925,7 +22911,7 @@ impl Data {
             }
             #[cfg(feature = "BiPauseCircleRegular")]
             BiIcon::BiPauseCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22942,7 +22928,7 @@ impl Data {
             }
             #[cfg(feature = "BiPauseRegular")]
             BiIcon::BiPauseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22959,7 +22945,7 @@ impl Data {
             }
             #[cfg(feature = "BiPaypal")]
             BiIcon::BiPaypal => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22976,7 +22962,7 @@ impl Data {
             }
             #[cfg(feature = "BiPearSolid")]
             BiIcon::BiPearSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22993,7 +22979,7 @@ impl Data {
             }
             #[cfg(feature = "BiPenRegular")]
             BiIcon::BiPenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23010,7 +22996,7 @@ impl Data {
             }
             #[cfg(feature = "BiPenSolid")]
             BiIcon::BiPenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23027,7 +23013,7 @@ impl Data {
             }
             #[cfg(feature = "BiPencilRegular")]
             BiIcon::BiPencilRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23044,7 +23030,7 @@ impl Data {
             }
             #[cfg(feature = "BiPencilSolid")]
             BiIcon::BiPencilSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23061,7 +23047,7 @@ impl Data {
             }
             #[cfg(feature = "BiPeriscope")]
             BiIcon::BiPeriscope => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23078,7 +23064,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneCallRegular")]
             BiIcon::BiPhoneCallRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23095,7 +23081,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneCallSolid")]
             BiIcon::BiPhoneCallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23112,7 +23098,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneIncomingRegular")]
             BiIcon::BiPhoneIncomingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23129,7 +23115,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneIncomingSolid")]
             BiIcon::BiPhoneIncomingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23146,7 +23132,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneOffRegular")]
             BiIcon::BiPhoneOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23163,7 +23149,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneOffSolid")]
             BiIcon::BiPhoneOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23180,7 +23166,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneOutgoingRegular")]
             BiIcon::BiPhoneOutgoingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23197,7 +23183,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneOutgoingSolid")]
             BiIcon::BiPhoneOutgoingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23214,7 +23200,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneRegular")]
             BiIcon::BiPhoneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23231,7 +23217,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhoneSolid")]
             BiIcon::BiPhoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23248,7 +23234,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhotoAlbumRegular")]
             BiIcon::BiPhotoAlbumRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23265,7 +23251,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhotoAlbumSolid")]
             BiIcon::BiPhotoAlbumSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23282,7 +23268,7 @@ impl Data {
             }
             #[cfg(feature = "BiPhp")]
             BiIcon::BiPhp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23299,7 +23285,7 @@ impl Data {
             }
             #[cfg(feature = "BiPianoSolid")]
             BiIcon::BiPianoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23316,7 +23302,7 @@ impl Data {
             }
             #[cfg(feature = "BiPieChartAlt2Regular")]
             BiIcon::BiPieChartAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23333,7 +23319,7 @@ impl Data {
             }
             #[cfg(feature = "BiPieChartAlt2Solid")]
             BiIcon::BiPieChartAlt2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23350,7 +23336,7 @@ impl Data {
             }
             #[cfg(feature = "BiPieChartAltRegular")]
             BiIcon::BiPieChartAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23367,7 +23353,7 @@ impl Data {
             }
             #[cfg(feature = "BiPieChartAltSolid")]
             BiIcon::BiPieChartAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23384,7 +23370,7 @@ impl Data {
             }
             #[cfg(feature = "BiPieChartRegular")]
             BiIcon::BiPieChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23401,7 +23387,7 @@ impl Data {
             }
             #[cfg(feature = "BiPieChartSolid")]
             BiIcon::BiPieChartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23418,7 +23404,7 @@ impl Data {
             }
             #[cfg(feature = "BiPinRegular")]
             BiIcon::BiPinRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23435,7 +23421,7 @@ impl Data {
             }
             #[cfg(feature = "BiPinSolid")]
             BiIcon::BiPinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23452,7 +23438,7 @@ impl Data {
             }
             #[cfg(feature = "BiPinterest")]
             BiIcon::BiPinterest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23469,7 +23455,7 @@ impl Data {
             }
             #[cfg(feature = "BiPinterestAlt")]
             BiIcon::BiPinterestAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23486,7 +23472,7 @@ impl Data {
             }
             #[cfg(feature = "BiPizzaSolid")]
             BiIcon::BiPizzaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23503,7 +23489,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlaneAltSolid")]
             BiIcon::BiPlaneAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23520,7 +23506,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlaneLandSolid")]
             BiIcon::BiPlaneLandSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23537,7 +23523,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlaneSolid")]
             BiIcon::BiPlaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23554,7 +23540,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlaneTakeOffSolid")]
             BiIcon::BiPlaneTakeOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23571,7 +23557,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlanetRegular")]
             BiIcon::BiPlanetRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23588,7 +23574,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlanetSolid")]
             BiIcon::BiPlanetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23605,7 +23591,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlayCircleRegular")]
             BiIcon::BiPlayCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23622,7 +23608,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlayRegular")]
             BiIcon::BiPlayRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23639,7 +23625,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlayStore")]
             BiIcon::BiPlayStore => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23656,7 +23642,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlaylistSolid")]
             BiIcon::BiPlaylistSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23673,7 +23659,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlugRegular")]
             BiIcon::BiPlugRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23690,7 +23676,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlugSolid")]
             BiIcon::BiPlugSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23707,7 +23693,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlusCircleRegular")]
             BiIcon::BiPlusCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23724,7 +23710,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlusCircleSolid")]
             BiIcon::BiPlusCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23741,7 +23727,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlusMedicalRegular")]
             BiIcon::BiPlusMedicalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23758,7 +23744,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlusRegular")]
             BiIcon::BiPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23775,7 +23761,7 @@ impl Data {
             }
             #[cfg(feature = "BiPlusSquareSolid")]
             BiIcon::BiPlusSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23792,7 +23778,7 @@ impl Data {
             }
             #[cfg(feature = "BiPocket")]
             BiIcon::BiPocket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23809,7 +23795,7 @@ impl Data {
             }
             #[cfg(feature = "BiPodcastRegular")]
             BiIcon::BiPodcastRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23826,7 +23812,7 @@ impl Data {
             }
             #[cfg(feature = "BiPointerRegular")]
             BiIcon::BiPointerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23843,7 +23829,7 @@ impl Data {
             }
             #[cfg(feature = "BiPointerSolid")]
             BiIcon::BiPointerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23860,7 +23846,7 @@ impl Data {
             }
             #[cfg(feature = "BiPollRegular")]
             BiIcon::BiPollRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23877,7 +23863,7 @@ impl Data {
             }
             #[cfg(feature = "BiPolygonRegular")]
             BiIcon::BiPolygonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23894,7 +23880,7 @@ impl Data {
             }
             #[cfg(feature = "BiPolygonSolid")]
             BiIcon::BiPolygonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23911,7 +23897,7 @@ impl Data {
             }
             #[cfg(feature = "BiPopsicleRegular")]
             BiIcon::BiPopsicleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23928,7 +23914,7 @@ impl Data {
             }
             #[cfg(feature = "BiPopsicleSolid")]
             BiIcon::BiPopsicleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23945,7 +23931,7 @@ impl Data {
             }
             #[cfg(feature = "BiPostgresql")]
             BiIcon::BiPostgresql => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23962,7 +23948,7 @@ impl Data {
             }
             #[cfg(feature = "BiPoundRegular")]
             BiIcon::BiPoundRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23979,7 +23965,7 @@ impl Data {
             }
             #[cfg(feature = "BiPowerOffRegular")]
             BiIcon::BiPowerOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23996,7 +23982,7 @@ impl Data {
             }
             #[cfg(feature = "BiPrinterRegular")]
             BiIcon::BiPrinterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24013,7 +23999,7 @@ impl Data {
             }
             #[cfg(feature = "BiPrinterSolid")]
             BiIcon::BiPrinterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24030,7 +24016,7 @@ impl Data {
             }
             #[cfg(feature = "BiProductHunt")]
             BiIcon::BiProductHunt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24047,7 +24033,7 @@ impl Data {
             }
             #[cfg(feature = "BiPulseRegular")]
             BiIcon::BiPulseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24064,7 +24050,7 @@ impl Data {
             }
             #[cfg(feature = "BiPurchaseTagAltRegular")]
             BiIcon::BiPurchaseTagAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24081,7 +24067,7 @@ impl Data {
             }
             #[cfg(feature = "BiPurchaseTagAltSolid")]
             BiIcon::BiPurchaseTagAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24098,7 +24084,7 @@ impl Data {
             }
             #[cfg(feature = "BiPurchaseTagRegular")]
             BiIcon::BiPurchaseTagRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24115,7 +24101,7 @@ impl Data {
             }
             #[cfg(feature = "BiPurchaseTagSolid")]
             BiIcon::BiPurchaseTagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24132,7 +24118,7 @@ impl Data {
             }
             #[cfg(feature = "BiPyramidRegular")]
             BiIcon::BiPyramidRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24149,7 +24135,7 @@ impl Data {
             }
             #[cfg(feature = "BiPyramidSolid")]
             BiIcon::BiPyramidSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24166,7 +24152,7 @@ impl Data {
             }
             #[cfg(feature = "BiPython")]
             BiIcon::BiPython => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24183,7 +24169,7 @@ impl Data {
             }
             #[cfg(feature = "BiQrRegular")]
             BiIcon::BiQrRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24200,7 +24186,7 @@ impl Data {
             }
             #[cfg(feature = "BiQrScanRegular")]
             BiIcon::BiQrScanRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24217,7 +24203,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuestionMarkRegular")]
             BiIcon::BiQuestionMarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24234,7 +24220,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuora")]
             BiIcon::BiQuora => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24251,7 +24237,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuoteAltLeftSolid")]
             BiIcon::BiQuoteAltLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24268,7 +24254,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuoteAltRightSolid")]
             BiIcon::BiQuoteAltRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24285,7 +24271,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuoteLeftSolid")]
             BiIcon::BiQuoteLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24302,7 +24288,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuoteRightSolid")]
             BiIcon::BiQuoteRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24319,7 +24305,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuoteSingleLeftSolid")]
             BiIcon::BiQuoteSingleLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24336,7 +24322,7 @@ impl Data {
             }
             #[cfg(feature = "BiQuoteSingleRightSolid")]
             BiIcon::BiQuoteSingleRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24353,7 +24339,7 @@ impl Data {
             }
             #[cfg(feature = "BiRadarRegular")]
             BiIcon::BiRadarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24370,7 +24356,7 @@ impl Data {
             }
             #[cfg(feature = "BiRadiationSolid")]
             BiIcon::BiRadiationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24387,7 +24373,7 @@ impl Data {
             }
             #[cfg(feature = "BiRadioCircleMarkedRegular")]
             BiIcon::BiRadioCircleMarkedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24404,7 +24390,7 @@ impl Data {
             }
             #[cfg(feature = "BiRadioCircleRegular")]
             BiIcon::BiRadioCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24421,7 +24407,7 @@ impl Data {
             }
             #[cfg(feature = "BiRadioRegular")]
             BiIcon::BiRadioRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24438,7 +24424,7 @@ impl Data {
             }
             #[cfg(feature = "BiRadioSolid")]
             BiIcon::BiRadioSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24455,7 +24441,7 @@ impl Data {
             }
             #[cfg(feature = "BiReact")]
             BiIcon::BiReact => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24472,7 +24458,7 @@ impl Data {
             }
             #[cfg(feature = "BiReceiptRegular")]
             BiIcon::BiReceiptRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24489,7 +24475,7 @@ impl Data {
             }
             #[cfg(feature = "BiReceiptSolid")]
             BiIcon::BiReceiptSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24506,7 +24492,7 @@ impl Data {
             }
             #[cfg(feature = "BiRectangleRegular")]
             BiIcon::BiRectangleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24523,7 +24509,7 @@ impl Data {
             }
             #[cfg(feature = "BiRectangleSolid")]
             BiIcon::BiRectangleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24540,7 +24526,7 @@ impl Data {
             }
             #[cfg(feature = "BiRecycleRegular")]
             BiIcon::BiRecycleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24557,7 +24543,7 @@ impl Data {
             }
             #[cfg(feature = "BiRedbubble")]
             BiIcon::BiRedbubble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24574,7 +24560,7 @@ impl Data {
             }
             #[cfg(feature = "BiReddit")]
             BiIcon::BiReddit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24591,7 +24577,7 @@ impl Data {
             }
             #[cfg(feature = "BiRedoRegular")]
             BiIcon::BiRedoRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24608,7 +24594,7 @@ impl Data {
             }
             #[cfg(feature = "BiRedux")]
             BiIcon::BiRedux => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24625,7 +24611,7 @@ impl Data {
             }
             #[cfg(feature = "BiReflectHorizontalRegular")]
             BiIcon::BiReflectHorizontalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24642,7 +24628,7 @@ impl Data {
             }
             #[cfg(feature = "BiReflectVerticalRegular")]
             BiIcon::BiReflectVerticalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24659,7 +24645,7 @@ impl Data {
             }
             #[cfg(feature = "BiRefreshRegular")]
             BiIcon::BiRefreshRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24676,7 +24662,7 @@ impl Data {
             }
             #[cfg(feature = "BiRegisteredRegular")]
             BiIcon::BiRegisteredRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24693,7 +24679,7 @@ impl Data {
             }
             #[cfg(feature = "BiRegisteredSolid")]
             BiIcon::BiRegisteredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24710,7 +24696,7 @@ impl Data {
             }
             #[cfg(feature = "BiRenameRegular")]
             BiIcon::BiRenameRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24727,7 +24713,7 @@ impl Data {
             }
             #[cfg(feature = "BiRenameSolid")]
             BiIcon::BiRenameSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24744,7 +24730,7 @@ impl Data {
             }
             #[cfg(feature = "BiRepeatRegular")]
             BiIcon::BiRepeatRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24761,7 +24747,7 @@ impl Data {
             }
             #[cfg(feature = "BiReplyAllRegular")]
             BiIcon::BiReplyAllRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24778,7 +24764,7 @@ impl Data {
             }
             #[cfg(feature = "BiReplyRegular")]
             BiIcon::BiReplyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24795,7 +24781,7 @@ impl Data {
             }
             #[cfg(feature = "BiReportSolid")]
             BiIcon::BiReportSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24812,7 +24798,7 @@ impl Data {
             }
             #[cfg(feature = "BiRepostRegular")]
             BiIcon::BiRepostRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24829,7 +24815,7 @@ impl Data {
             }
             #[cfg(feature = "BiResetRegular")]
             BiIcon::BiResetRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24846,7 +24832,7 @@ impl Data {
             }
             #[cfg(feature = "BiRestaurantRegular")]
             BiIcon::BiRestaurantRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24863,7 +24849,7 @@ impl Data {
             }
             #[cfg(feature = "BiRevisionRegular")]
             BiIcon::BiRevisionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24880,7 +24866,7 @@ impl Data {
             }
             #[cfg(feature = "BiRewindCircleRegular")]
             BiIcon::BiRewindCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24897,7 +24883,7 @@ impl Data {
             }
             #[cfg(feature = "BiRewindCircleSolid")]
             BiIcon::BiRewindCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24914,7 +24900,7 @@ impl Data {
             }
             #[cfg(feature = "BiRewindRegular")]
             BiIcon::BiRewindRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24931,7 +24917,7 @@ impl Data {
             }
             #[cfg(feature = "BiRfidRegular")]
             BiIcon::BiRfidRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24948,7 +24934,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowAltRegular")]
             BiIcon::BiRightArrowAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24965,7 +24951,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowAltSolid")]
             BiIcon::BiRightArrowAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24982,7 +24968,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowCircleRegular")]
             BiIcon::BiRightArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24999,7 +24985,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowCircleSolid")]
             BiIcon::BiRightArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25016,7 +25002,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowRegular")]
             BiIcon::BiRightArrowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25033,7 +25019,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowSolid")]
             BiIcon::BiRightArrowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25050,7 +25036,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightArrowSquareSolid")]
             BiIcon::BiRightArrowSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25067,7 +25053,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightDownArrowCircleRegular")]
             BiIcon::BiRightDownArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25084,7 +25070,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightDownArrowCircleSolid")]
             BiIcon::BiRightDownArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25101,7 +25087,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightIndentRegular")]
             BiIcon::BiRightIndentRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25118,7 +25104,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightTopArrowCircleRegular")]
             BiIcon::BiRightTopArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25135,7 +25121,7 @@ impl Data {
             }
             #[cfg(feature = "BiRightTopArrowCircleSolid")]
             BiIcon::BiRightTopArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25152,7 +25138,7 @@ impl Data {
             }
             #[cfg(feature = "BiRocketRegular")]
             BiIcon::BiRocketRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25169,7 +25155,7 @@ impl Data {
             }
             #[cfg(feature = "BiRocketSolid")]
             BiIcon::BiRocketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25186,7 +25172,7 @@ impl Data {
             }
             #[cfg(feature = "BiRotateLeftRegular")]
             BiIcon::BiRotateLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25203,7 +25189,7 @@ impl Data {
             }
             #[cfg(feature = "BiRotateRightRegular")]
             BiIcon::BiRotateRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25220,7 +25206,7 @@ impl Data {
             }
             #[cfg(feature = "BiRssRegular")]
             BiIcon::BiRssRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25237,7 +25223,7 @@ impl Data {
             }
             #[cfg(feature = "BiRubleRegular")]
             BiIcon::BiRubleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25254,7 +25240,7 @@ impl Data {
             }
             #[cfg(feature = "BiRulerRegular")]
             BiIcon::BiRulerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25271,7 +25257,7 @@ impl Data {
             }
             #[cfg(feature = "BiRulerSolid")]
             BiIcon::BiRulerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25288,7 +25274,7 @@ impl Data {
             }
             #[cfg(feature = "BiRunRegular")]
             BiIcon::BiRunRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25305,7 +25291,7 @@ impl Data {
             }
             #[cfg(feature = "BiRupeeRegular")]
             BiIcon::BiRupeeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25322,7 +25308,7 @@ impl Data {
             }
             #[cfg(feature = "BiSadRegular")]
             BiIcon::BiSadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25339,7 +25325,7 @@ impl Data {
             }
             #[cfg(feature = "BiSadSolid")]
             BiIcon::BiSadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25356,7 +25342,7 @@ impl Data {
             }
             #[cfg(feature = "BiSass")]
             BiIcon::BiSass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25373,7 +25359,7 @@ impl Data {
             }
             #[cfg(feature = "BiSaveRegular")]
             BiIcon::BiSaveRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25390,7 +25376,7 @@ impl Data {
             }
             #[cfg(feature = "BiSaveSolid")]
             BiIcon::BiSaveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25407,7 +25393,7 @@ impl Data {
             }
             #[cfg(feature = "BiScanRegular")]
             BiIcon::BiScanRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25424,7 +25410,7 @@ impl Data {
             }
             #[cfg(feature = "BiScatterChartRegular")]
             BiIcon::BiScatterChartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25441,7 +25427,7 @@ impl Data {
             }
             #[cfg(feature = "BiSchoolSolid")]
             BiIcon::BiSchoolSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25458,7 +25444,7 @@ impl Data {
             }
             #[cfg(feature = "BiScreenshotRegular")]
             BiIcon::BiScreenshotRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25475,7 +25461,7 @@ impl Data {
             }
             #[cfg(feature = "BiSearchAlt2Regular")]
             BiIcon::BiSearchAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25492,7 +25478,7 @@ impl Data {
             }
             #[cfg(feature = "BiSearchAlt2Solid")]
             BiIcon::BiSearchAlt2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25509,7 +25495,7 @@ impl Data {
             }
             #[cfg(feature = "BiSearchAltRegular")]
             BiIcon::BiSearchAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25526,7 +25512,7 @@ impl Data {
             }
             #[cfg(feature = "BiSearchRegular")]
             BiIcon::BiSearchRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25543,7 +25529,7 @@ impl Data {
             }
             #[cfg(feature = "BiSearchSolid")]
             BiIcon::BiSearchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25560,7 +25546,7 @@ impl Data {
             }
             #[cfg(feature = "BiSelectMultipleRegular")]
             BiIcon::BiSelectMultipleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25577,7 +25563,7 @@ impl Data {
             }
             #[cfg(feature = "BiSelectMultipleSolid")]
             BiIcon::BiSelectMultipleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25594,7 +25580,7 @@ impl Data {
             }
             #[cfg(feature = "BiSelectionRegular")]
             BiIcon::BiSelectionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25611,7 +25597,7 @@ impl Data {
             }
             #[cfg(feature = "BiSendRegular")]
             BiIcon::BiSendRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25628,7 +25614,7 @@ impl Data {
             }
             #[cfg(feature = "BiSendSolid")]
             BiIcon::BiSendSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25645,7 +25631,7 @@ impl Data {
             }
             #[cfg(feature = "BiServerRegular")]
             BiIcon::BiServerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25662,7 +25648,7 @@ impl Data {
             }
             #[cfg(feature = "BiServerSolid")]
             BiIcon::BiServerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25679,7 +25665,7 @@ impl Data {
             }
             #[cfg(feature = "BiShapeCircleRegular")]
             BiIcon::BiShapeCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25696,7 +25682,7 @@ impl Data {
             }
             #[cfg(feature = "BiShapePolygonRegular")]
             BiIcon::BiShapePolygonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25713,7 +25699,7 @@ impl Data {
             }
             #[cfg(feature = "BiShapeSquareRegular")]
             BiIcon::BiShapeSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25730,7 +25716,7 @@ impl Data {
             }
             #[cfg(feature = "BiShapeTriangleRegular")]
             BiIcon::BiShapeTriangleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25747,7 +25733,7 @@ impl Data {
             }
             #[cfg(feature = "BiShapesSolid")]
             BiIcon::BiShapesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25764,7 +25750,7 @@ impl Data {
             }
             #[cfg(feature = "BiShareAltRegular")]
             BiIcon::BiShareAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25781,7 +25767,7 @@ impl Data {
             }
             #[cfg(feature = "BiShareAltSolid")]
             BiIcon::BiShareAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25798,7 +25784,7 @@ impl Data {
             }
             #[cfg(feature = "BiShareRegular")]
             BiIcon::BiShareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25815,7 +25801,7 @@ impl Data {
             }
             #[cfg(feature = "BiShareSolid")]
             BiIcon::BiShareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25832,7 +25818,7 @@ impl Data {
             }
             #[cfg(feature = "BiShekelRegular")]
             BiIcon::BiShekelRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25849,7 +25835,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldAlt2Regular")]
             BiIcon::BiShieldAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25866,7 +25852,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldAlt2Solid")]
             BiIcon::BiShieldAlt2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25883,7 +25869,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldAltRegular")]
             BiIcon::BiShieldAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25900,7 +25886,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldMinusRegular")]
             BiIcon::BiShieldMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25917,7 +25903,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldMinusSolid")]
             BiIcon::BiShieldMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25934,7 +25920,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldPlusRegular")]
             BiIcon::BiShieldPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25951,7 +25937,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldPlusSolid")]
             BiIcon::BiShieldPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25968,7 +25954,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldQuarterRegular")]
             BiIcon::BiShieldQuarterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25985,7 +25971,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldRegular")]
             BiIcon::BiShieldRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26002,7 +25988,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldSolid")]
             BiIcon::BiShieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26019,7 +26005,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldXRegular")]
             BiIcon::BiShieldXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26036,7 +26022,7 @@ impl Data {
             }
             #[cfg(feature = "BiShieldXSolid")]
             BiIcon::BiShieldXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26053,7 +26039,7 @@ impl Data {
             }
             #[cfg(feature = "BiShipSolid")]
             BiIcon::BiShipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26070,7 +26056,7 @@ impl Data {
             }
             #[cfg(feature = "BiShockedRegular")]
             BiIcon::BiShockedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26087,7 +26073,7 @@ impl Data {
             }
             #[cfg(feature = "BiShockedSolid")]
             BiIcon::BiShockedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26104,7 +26090,7 @@ impl Data {
             }
             #[cfg(feature = "BiShopify")]
             BiIcon::BiShopify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26121,7 +26107,7 @@ impl Data {
             }
             #[cfg(feature = "BiShoppingBagAltSolid")]
             BiIcon::BiShoppingBagAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26138,7 +26124,7 @@ impl Data {
             }
             #[cfg(feature = "BiShoppingBagRegular")]
             BiIcon::BiShoppingBagRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26155,7 +26141,7 @@ impl Data {
             }
             #[cfg(feature = "BiShoppingBagSolid")]
             BiIcon::BiShoppingBagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26172,7 +26158,7 @@ impl Data {
             }
             #[cfg(feature = "BiShoppingBagsSolid")]
             BiIcon::BiShoppingBagsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26189,7 +26175,7 @@ impl Data {
             }
             #[cfg(feature = "BiShowAltRegular")]
             BiIcon::BiShowAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26206,7 +26192,7 @@ impl Data {
             }
             #[cfg(feature = "BiShowRegular")]
             BiIcon::BiShowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26223,7 +26209,7 @@ impl Data {
             }
             #[cfg(feature = "BiShowSolid")]
             BiIcon::BiShowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26240,7 +26226,7 @@ impl Data {
             }
             #[cfg(feature = "BiShowerRegular")]
             BiIcon::BiShowerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26257,7 +26243,7 @@ impl Data {
             }
             #[cfg(feature = "BiShowerSolid")]
             BiIcon::BiShowerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26274,7 +26260,7 @@ impl Data {
             }
             #[cfg(feature = "BiShuffleRegular")]
             BiIcon::BiShuffleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26291,7 +26277,7 @@ impl Data {
             }
             #[cfg(feature = "BiSidebarRegular")]
             BiIcon::BiSidebarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26308,7 +26294,7 @@ impl Data {
             }
             #[cfg(feature = "BiSignal1Regular")]
             BiIcon::BiSignal1Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26325,7 +26311,7 @@ impl Data {
             }
             #[cfg(feature = "BiSignal2Regular")]
             BiIcon::BiSignal2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26342,7 +26328,7 @@ impl Data {
             }
             #[cfg(feature = "BiSignal3Regular")]
             BiIcon::BiSignal3Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26359,7 +26345,7 @@ impl Data {
             }
             #[cfg(feature = "BiSignal4Regular")]
             BiIcon::BiSignal4Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26376,7 +26362,7 @@ impl Data {
             }
             #[cfg(feature = "BiSignal5Regular")]
             BiIcon::BiSignal5Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26393,7 +26379,7 @@ impl Data {
             }
             #[cfg(feature = "BiSitemapRegular")]
             BiIcon::BiSitemapRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26410,7 +26396,7 @@ impl Data {
             }
             #[cfg(feature = "BiSketch")]
             BiIcon::BiSketch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26427,7 +26413,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkipNextCircleRegular")]
             BiIcon::BiSkipNextCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26444,7 +26430,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkipNextCircleSolid")]
             BiIcon::BiSkipNextCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26461,7 +26447,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkipNextRegular")]
             BiIcon::BiSkipNextRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26478,7 +26464,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkipPreviousCircleRegular")]
             BiIcon::BiSkipPreviousCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26495,7 +26481,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkipPreviousCircleSolid")]
             BiIcon::BiSkipPreviousCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26512,7 +26498,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkipPreviousRegular")]
             BiIcon::BiSkipPreviousRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26529,7 +26515,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkullSolid")]
             BiIcon::BiSkullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26546,7 +26532,7 @@ impl Data {
             }
             #[cfg(feature = "BiSkype")]
             BiIcon::BiSkype => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26563,7 +26549,7 @@ impl Data {
             }
             #[cfg(feature = "BiSlack")]
             BiIcon::BiSlack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26580,7 +26566,7 @@ impl Data {
             }
             #[cfg(feature = "BiSlackOld")]
             BiIcon::BiSlackOld => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26597,7 +26583,7 @@ impl Data {
             }
             #[cfg(feature = "BiSleepyRegular")]
             BiIcon::BiSleepyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26614,7 +26600,7 @@ impl Data {
             }
             #[cfg(feature = "BiSleepySolid")]
             BiIcon::BiSleepySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26631,7 +26617,7 @@ impl Data {
             }
             #[cfg(feature = "BiSliderAltRegular")]
             BiIcon::BiSliderAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26648,7 +26634,7 @@ impl Data {
             }
             #[cfg(feature = "BiSliderRegular")]
             BiIcon::BiSliderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26665,7 +26651,7 @@ impl Data {
             }
             #[cfg(feature = "BiSlideshowRegular")]
             BiIcon::BiSlideshowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26682,7 +26668,7 @@ impl Data {
             }
             #[cfg(feature = "BiSlideshowSolid")]
             BiIcon::BiSlideshowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26699,7 +26685,7 @@ impl Data {
             }
             #[cfg(feature = "BiSmileRegular")]
             BiIcon::BiSmileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26716,7 +26702,7 @@ impl Data {
             }
             #[cfg(feature = "BiSmileSolid")]
             BiIcon::BiSmileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26733,7 +26719,7 @@ impl Data {
             }
             #[cfg(feature = "BiSnapchat")]
             BiIcon::BiSnapchat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26750,7 +26736,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortAZRegular")]
             BiIcon::BiSortAZRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26767,7 +26753,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortAlt2Regular")]
             BiIcon::BiSortAlt2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26784,7 +26770,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortAltSolid")]
             BiIcon::BiSortAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26801,7 +26787,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortDownRegular")]
             BiIcon::BiSortDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26818,7 +26804,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortRegular")]
             BiIcon::BiSortRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26835,7 +26821,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortUpRegular")]
             BiIcon::BiSortUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26852,7 +26838,7 @@ impl Data {
             }
             #[cfg(feature = "BiSortZARegular")]
             BiIcon::BiSortZARegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26869,7 +26855,7 @@ impl Data {
             }
             #[cfg(feature = "BiSoundcloud")]
             BiIcon::BiSoundcloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26886,7 +26872,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpaRegular")]
             BiIcon::BiSpaRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26903,7 +26889,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpaSolid")]
             BiIcon::BiSpaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26920,7 +26906,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpaceBarRegular")]
             BiIcon::BiSpaceBarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26937,7 +26923,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpeakerRegular")]
             BiIcon::BiSpeakerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26954,7 +26940,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpeakerSolid")]
             BiIcon::BiSpeakerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26971,7 +26957,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpotify")]
             BiIcon::BiSpotify => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26988,7 +26974,7 @@ impl Data {
             }
             #[cfg(feature = "BiSprayCanRegular")]
             BiIcon::BiSprayCanRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27005,7 +26991,7 @@ impl Data {
             }
             #[cfg(feature = "BiSprayCanSolid")]
             BiIcon::BiSprayCanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27022,7 +27008,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpreadsheetRegular")]
             BiIcon::BiSpreadsheetRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27039,7 +27025,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpreadsheetSolid")]
             BiIcon::BiSpreadsheetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27056,7 +27042,7 @@ impl Data {
             }
             #[cfg(feature = "BiSpringBoot")]
             BiIcon::BiSpringBoot => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27073,7 +27059,7 @@ impl Data {
             }
             #[cfg(feature = "BiSquareRegular")]
             BiIcon::BiSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27090,7 +27076,7 @@ impl Data {
             }
             #[cfg(feature = "BiSquareRoundedRegular")]
             BiIcon::BiSquareRoundedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27107,7 +27093,7 @@ impl Data {
             }
             #[cfg(feature = "BiSquareRoundedSolid")]
             BiIcon::BiSquareRoundedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27124,7 +27110,7 @@ impl Data {
             }
             #[cfg(feature = "BiSquareSolid")]
             BiIcon::BiSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27141,7 +27127,7 @@ impl Data {
             }
             #[cfg(feature = "BiSquarespace")]
             BiIcon::BiSquarespace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27158,7 +27144,7 @@ impl Data {
             }
             #[cfg(feature = "BiStackOverflow")]
             BiIcon::BiStackOverflow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27175,7 +27161,7 @@ impl Data {
             }
             #[cfg(feature = "BiStarHalfSolid")]
             BiIcon::BiStarHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27192,7 +27178,7 @@ impl Data {
             }
             #[cfg(feature = "BiStarRegular")]
             BiIcon::BiStarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27209,7 +27195,7 @@ impl Data {
             }
             #[cfg(feature = "BiStarSolid")]
             BiIcon::BiStarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27226,7 +27212,7 @@ impl Data {
             }
             #[cfg(feature = "BiStationRegular")]
             BiIcon::BiStationRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27243,7 +27229,7 @@ impl Data {
             }
             #[cfg(feature = "BiStatsRegular")]
             BiIcon::BiStatsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27260,7 +27246,7 @@ impl Data {
             }
             #[cfg(feature = "BiSteam")]
             BiIcon::BiSteam => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27277,7 +27263,7 @@ impl Data {
             }
             #[cfg(feature = "BiStickerRegular")]
             BiIcon::BiStickerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27294,7 +27280,7 @@ impl Data {
             }
             #[cfg(feature = "BiStickerSolid")]
             BiIcon::BiStickerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27311,7 +27297,7 @@ impl Data {
             }
             #[cfg(feature = "BiStopCircleRegular")]
             BiIcon::BiStopCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27328,7 +27314,7 @@ impl Data {
             }
             #[cfg(feature = "BiStopRegular")]
             BiIcon::BiStopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27345,7 +27331,7 @@ impl Data {
             }
             #[cfg(feature = "BiStopwatchRegular")]
             BiIcon::BiStopwatchRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27362,7 +27348,7 @@ impl Data {
             }
             #[cfg(feature = "BiStopwatchSolid")]
             BiIcon::BiStopwatchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27379,7 +27365,7 @@ impl Data {
             }
             #[cfg(feature = "BiStoreAltRegular")]
             BiIcon::BiStoreAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27396,7 +27382,7 @@ impl Data {
             }
             #[cfg(feature = "BiStoreAltSolid")]
             BiIcon::BiStoreAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27413,7 +27399,7 @@ impl Data {
             }
             #[cfg(feature = "BiStoreRegular")]
             BiIcon::BiStoreRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27430,7 +27416,7 @@ impl Data {
             }
             #[cfg(feature = "BiStoreSolid")]
             BiIcon::BiStoreSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27447,7 +27433,7 @@ impl Data {
             }
             #[cfg(feature = "BiStreetViewRegular")]
             BiIcon::BiStreetViewRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27464,7 +27450,7 @@ impl Data {
             }
             #[cfg(feature = "BiStrikethroughRegular")]
             BiIcon::BiStrikethroughRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27481,7 +27467,7 @@ impl Data {
             }
             #[cfg(feature = "BiStripe")]
             BiIcon::BiStripe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27498,7 +27484,7 @@ impl Data {
             }
             #[cfg(feature = "BiSubdirectoryLeftRegular")]
             BiIcon::BiSubdirectoryLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27515,7 +27501,7 @@ impl Data {
             }
             #[cfg(feature = "BiSubdirectoryRightRegular")]
             BiIcon::BiSubdirectoryRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27532,7 +27518,7 @@ impl Data {
             }
             #[cfg(feature = "BiSunRegular")]
             BiIcon::BiSunRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27549,7 +27535,7 @@ impl Data {
             }
             #[cfg(feature = "BiSunSolid")]
             BiIcon::BiSunSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27566,7 +27552,7 @@ impl Data {
             }
             #[cfg(feature = "BiSupportRegular")]
             BiIcon::BiSupportRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27583,7 +27569,7 @@ impl Data {
             }
             #[cfg(feature = "BiSushiRegular")]
             BiIcon::BiSushiRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27600,7 +27586,7 @@ impl Data {
             }
             #[cfg(feature = "BiSushiSolid")]
             BiIcon::BiSushiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27617,7 +27603,7 @@ impl Data {
             }
             #[cfg(feature = "BiSwimRegular")]
             BiIcon::BiSwimRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27634,7 +27620,7 @@ impl Data {
             }
             #[cfg(feature = "BiSyncRegular")]
             BiIcon::BiSyncRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27651,7 +27637,7 @@ impl Data {
             }
             #[cfg(feature = "BiTShirtSolid")]
             BiIcon::BiTShirtSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27668,7 +27654,7 @@ impl Data {
             }
             #[cfg(feature = "BiTabRegular")]
             BiIcon::BiTabRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27685,7 +27671,7 @@ impl Data {
             }
             #[cfg(feature = "BiTableRegular")]
             BiIcon::BiTableRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27702,7 +27688,7 @@ impl Data {
             }
             #[cfg(feature = "BiTachometerRegular")]
             BiIcon::BiTachometerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27719,7 +27705,7 @@ impl Data {
             }
             #[cfg(feature = "BiTachometerSolid")]
             BiIcon::BiTachometerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27736,7 +27722,7 @@ impl Data {
             }
             #[cfg(feature = "BiTagAltRegular")]
             BiIcon::BiTagAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27753,7 +27739,7 @@ impl Data {
             }
             #[cfg(feature = "BiTagAltSolid")]
             BiIcon::BiTagAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27770,7 +27756,7 @@ impl Data {
             }
             #[cfg(feature = "BiTagRegular")]
             BiIcon::BiTagRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27787,7 +27773,7 @@ impl Data {
             }
             #[cfg(feature = "BiTagSolid")]
             BiIcon::BiTagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27804,7 +27790,7 @@ impl Data {
             }
             #[cfg(feature = "BiTagXSolid")]
             BiIcon::BiTagXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27821,7 +27807,7 @@ impl Data {
             }
             #[cfg(feature = "BiTailwindCss")]
             BiIcon::BiTailwindCss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27838,7 +27824,7 @@ impl Data {
             }
             #[cfg(feature = "BiTargetLockRegular")]
             BiIcon::BiTargetLockRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27855,7 +27841,7 @@ impl Data {
             }
             #[cfg(feature = "BiTaskRegular")]
             BiIcon::BiTaskRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27872,7 +27858,7 @@ impl Data {
             }
             #[cfg(feature = "BiTaskXRegular")]
             BiIcon::BiTaskXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27889,7 +27875,7 @@ impl Data {
             }
             #[cfg(feature = "BiTaxiRegular")]
             BiIcon::BiTaxiRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27906,7 +27892,7 @@ impl Data {
             }
             #[cfg(feature = "BiTaxiSolid")]
             BiIcon::BiTaxiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27923,7 +27909,7 @@ impl Data {
             }
             #[cfg(feature = "BiTelegram")]
             BiIcon::BiTelegram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27940,7 +27926,7 @@ impl Data {
             }
             #[cfg(feature = "BiTennisBallRegular")]
             BiIcon::BiTennisBallRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27957,7 +27943,7 @@ impl Data {
             }
             #[cfg(feature = "BiTennisBallSolid")]
             BiIcon::BiTennisBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27974,7 +27960,7 @@ impl Data {
             }
             #[cfg(feature = "BiTerminalRegular")]
             BiIcon::BiTerminalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27991,7 +27977,7 @@ impl Data {
             }
             #[cfg(feature = "BiTerminalSolid")]
             BiIcon::BiTerminalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28008,7 +27994,7 @@ impl Data {
             }
             #[cfg(feature = "BiTestTubeRegular")]
             BiIcon::BiTestTubeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28025,7 +28011,7 @@ impl Data {
             }
             #[cfg(feature = "BiTextRegular")]
             BiIcon::BiTextRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28042,7 +28028,7 @@ impl Data {
             }
             #[cfg(feature = "BiThermometerSolid")]
             BiIcon::BiThermometerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28059,7 +28045,7 @@ impl Data {
             }
             #[cfg(feature = "BiTiktok")]
             BiIcon::BiTiktok => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28076,7 +28062,7 @@ impl Data {
             }
             #[cfg(feature = "BiTimeFiveRegular")]
             BiIcon::BiTimeFiveRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28093,7 +28079,7 @@ impl Data {
             }
             #[cfg(feature = "BiTimeFiveSolid")]
             BiIcon::BiTimeFiveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28110,7 +28096,7 @@ impl Data {
             }
             #[cfg(feature = "BiTimeRegular")]
             BiIcon::BiTimeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28127,7 +28113,7 @@ impl Data {
             }
             #[cfg(feature = "BiTimeSolid")]
             BiIcon::BiTimeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28144,7 +28130,7 @@ impl Data {
             }
             #[cfg(feature = "BiTimerRegular")]
             BiIcon::BiTimerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28161,7 +28147,7 @@ impl Data {
             }
             #[cfg(feature = "BiTimerSolid")]
             BiIcon::BiTimerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28178,7 +28164,7 @@ impl Data {
             }
             #[cfg(feature = "BiTiredRegular")]
             BiIcon::BiTiredRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28195,7 +28181,7 @@ impl Data {
             }
             #[cfg(feature = "BiTiredSolid")]
             BiIcon::BiTiredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28212,7 +28198,7 @@ impl Data {
             }
             #[cfg(feature = "BiToTopSolid")]
             BiIcon::BiToTopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28229,7 +28215,7 @@ impl Data {
             }
             #[cfg(feature = "BiToggleLeftRegular")]
             BiIcon::BiToggleLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28246,7 +28232,7 @@ impl Data {
             }
             #[cfg(feature = "BiToggleLeftSolid")]
             BiIcon::BiToggleLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28263,7 +28249,7 @@ impl Data {
             }
             #[cfg(feature = "BiToggleRightRegular")]
             BiIcon::BiToggleRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28280,7 +28266,7 @@ impl Data {
             }
             #[cfg(feature = "BiToggleRightSolid")]
             BiIcon::BiToggleRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28297,7 +28283,7 @@ impl Data {
             }
             #[cfg(feature = "BiToneRegular")]
             BiIcon::BiToneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28314,7 +28300,7 @@ impl Data {
             }
             #[cfg(feature = "BiToneSolid")]
             BiIcon::BiToneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28331,7 +28317,7 @@ impl Data {
             }
             #[cfg(feature = "BiTorchSolid")]
             BiIcon::BiTorchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28348,7 +28334,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrafficBarrierSolid")]
             BiIcon::BiTrafficBarrierSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28365,7 +28351,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrafficConeRegular")]
             BiIcon::BiTrafficConeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28382,7 +28368,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrafficConeSolid")]
             BiIcon::BiTrafficConeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28399,7 +28385,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrafficSolid")]
             BiIcon::BiTrafficSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28416,7 +28402,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrainRegular")]
             BiIcon::BiTrainRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28433,7 +28419,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrainSolid")]
             BiIcon::BiTrainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28450,7 +28436,7 @@ impl Data {
             }
             #[cfg(feature = "BiTransferAltRegular")]
             BiIcon::BiTransferAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28467,7 +28453,7 @@ impl Data {
             }
             #[cfg(feature = "BiTransferRegular")]
             BiIcon::BiTransferRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28484,7 +28470,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrashAltRegular")]
             BiIcon::BiTrashAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28501,7 +28487,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrashAltSolid")]
             BiIcon::BiTrashAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28518,7 +28504,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrashRegular")]
             BiIcon::BiTrashRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28535,7 +28521,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrashSolid")]
             BiIcon::BiTrashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28552,7 +28538,7 @@ impl Data {
             }
             #[cfg(feature = "BiTreeAltSolid")]
             BiIcon::BiTreeAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28569,7 +28555,7 @@ impl Data {
             }
             #[cfg(feature = "BiTreeSolid")]
             BiIcon::BiTreeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28586,7 +28572,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrello")]
             BiIcon::BiTrello => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28603,7 +28589,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrendingDownRegular")]
             BiIcon::BiTrendingDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28620,7 +28606,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrendingUpRegular")]
             BiIcon::BiTrendingUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28637,7 +28623,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrimRegular")]
             BiIcon::BiTrimRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28654,7 +28640,7 @@ impl Data {
             }
             #[cfg(feature = "BiTripAdvisor")]
             BiIcon::BiTripAdvisor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28671,7 +28657,7 @@ impl Data {
             }
             #[cfg(feature = "BiTripRegular")]
             BiIcon::BiTripRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28688,7 +28674,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrophyRegular")]
             BiIcon::BiTrophyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28705,7 +28691,7 @@ impl Data {
             }
             #[cfg(feature = "BiTrophySolid")]
             BiIcon::BiTrophySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28722,7 +28708,7 @@ impl Data {
             }
             #[cfg(feature = "BiTruckSolid")]
             BiIcon::BiTruckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28739,7 +28725,7 @@ impl Data {
             }
             #[cfg(feature = "BiTumblr")]
             BiIcon::BiTumblr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28756,7 +28742,7 @@ impl Data {
             }
             #[cfg(feature = "BiTux")]
             BiIcon::BiTux => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28773,7 +28759,7 @@ impl Data {
             }
             #[cfg(feature = "BiTvRegular")]
             BiIcon::BiTvRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28790,7 +28776,7 @@ impl Data {
             }
             #[cfg(feature = "BiTvSolid")]
             BiIcon::BiTvSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28807,7 +28793,7 @@ impl Data {
             }
             #[cfg(feature = "BiTwitch")]
             BiIcon::BiTwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28824,7 +28810,7 @@ impl Data {
             }
             #[cfg(feature = "BiTwitter")]
             BiIcon::BiTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28841,7 +28827,7 @@ impl Data {
             }
             #[cfg(feature = "BiTypescript")]
             BiIcon::BiTypescript => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28858,7 +28844,7 @@ impl Data {
             }
             #[cfg(feature = "BiUnderlineRegular")]
             BiIcon::BiUnderlineRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28875,7 +28861,7 @@ impl Data {
             }
             #[cfg(feature = "BiUndoRegular")]
             BiIcon::BiUndoRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28892,7 +28878,7 @@ impl Data {
             }
             #[cfg(feature = "BiUniteRegular")]
             BiIcon::BiUniteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28909,7 +28895,7 @@ impl Data {
             }
             #[cfg(feature = "BiUnity")]
             BiIcon::BiUnity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28926,7 +28912,7 @@ impl Data {
             }
             #[cfg(feature = "BiUniversalAccessRegular")]
             BiIcon::BiUniversalAccessRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28943,7 +28929,7 @@ impl Data {
             }
             #[cfg(feature = "BiUniversalAccessSolid")]
             BiIcon::BiUniversalAccessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28960,7 +28946,7 @@ impl Data {
             }
             #[cfg(feature = "BiUnlinkRegular")]
             BiIcon::BiUnlinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28977,7 +28963,7 @@ impl Data {
             }
             #[cfg(feature = "BiUnsplash")]
             BiIcon::BiUnsplash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28994,7 +28980,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowAltRegular")]
             BiIcon::BiUpArrowAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29011,7 +28997,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowAltSolid")]
             BiIcon::BiUpArrowAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29028,7 +29014,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowCircleRegular")]
             BiIcon::BiUpArrowCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29045,7 +29031,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowCircleSolid")]
             BiIcon::BiUpArrowCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29062,7 +29048,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowRegular")]
             BiIcon::BiUpArrowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29079,7 +29065,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowSolid")]
             BiIcon::BiUpArrowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29096,7 +29082,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpArrowSquareSolid")]
             BiIcon::BiUpArrowSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29113,7 +29099,7 @@ impl Data {
             }
             #[cfg(feature = "BiUploadRegular")]
             BiIcon::BiUploadRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29130,7 +29116,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpsideDownRegular")]
             BiIcon::BiUpsideDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29147,7 +29133,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpsideDownSolid")]
             BiIcon::BiUpsideDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29164,7 +29150,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpvoteRegular")]
             BiIcon::BiUpvoteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29181,7 +29167,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpvoteSolid")]
             BiIcon::BiUpvoteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29198,7 +29184,7 @@ impl Data {
             }
             #[cfg(feature = "BiUpwork")]
             BiIcon::BiUpwork => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29215,7 +29201,7 @@ impl Data {
             }
             #[cfg(feature = "BiUsbRegular")]
             BiIcon::BiUsbRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29232,7 +29218,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserAccountSolid")]
             BiIcon::BiUserAccountSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29249,7 +29235,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserBadgeSolid")]
             BiIcon::BiUserBadgeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29266,7 +29252,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserCheckRegular")]
             BiIcon::BiUserCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29283,7 +29269,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserCheckSolid")]
             BiIcon::BiUserCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29300,7 +29286,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserCircleRegular")]
             BiIcon::BiUserCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29317,7 +29303,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserCircleSolid")]
             BiIcon::BiUserCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29334,7 +29320,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserDetailSolid")]
             BiIcon::BiUserDetailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29351,7 +29337,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserMinusRegular")]
             BiIcon::BiUserMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29368,7 +29354,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserMinusSolid")]
             BiIcon::BiUserMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29385,7 +29371,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserPinRegular")]
             BiIcon::BiUserPinRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29402,7 +29388,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserPinSolid")]
             BiIcon::BiUserPinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29419,7 +29405,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserPlusRegular")]
             BiIcon::BiUserPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29436,7 +29422,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserPlusSolid")]
             BiIcon::BiUserPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29453,7 +29439,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserRectangleSolid")]
             BiIcon::BiUserRectangleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29470,7 +29456,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserRegular")]
             BiIcon::BiUserRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29487,7 +29473,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserSolid")]
             BiIcon::BiUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29504,7 +29490,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserVoiceRegular")]
             BiIcon::BiUserVoiceRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29521,7 +29507,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserVoiceSolid")]
             BiIcon::BiUserVoiceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29538,7 +29524,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserXRegular")]
             BiIcon::BiUserXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29555,7 +29541,7 @@ impl Data {
             }
             #[cfg(feature = "BiUserXSolid")]
             BiIcon::BiUserXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29572,7 +29558,7 @@ impl Data {
             }
             #[cfg(feature = "BiVectorRegular")]
             BiIcon::BiVectorRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29589,7 +29575,7 @@ impl Data {
             }
             #[cfg(feature = "BiVectorSolid")]
             BiIcon::BiVectorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29606,7 +29592,7 @@ impl Data {
             }
             #[cfg(feature = "BiVenmo")]
             BiIcon::BiVenmo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29623,7 +29609,7 @@ impl Data {
             }
             #[cfg(feature = "BiVerticalBottomRegular")]
             BiIcon::BiVerticalBottomRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29640,7 +29626,7 @@ impl Data {
             }
             #[cfg(feature = "BiVerticalCenterRegular")]
             BiIcon::BiVerticalCenterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29657,7 +29643,7 @@ impl Data {
             }
             #[cfg(feature = "BiVerticalTopRegular")]
             BiIcon::BiVerticalTopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29674,7 +29660,7 @@ impl Data {
             }
             #[cfg(feature = "BiVialRegular")]
             BiIcon::BiVialRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29691,7 +29677,7 @@ impl Data {
             }
             #[cfg(feature = "BiVialSolid")]
             BiIcon::BiVialSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29708,7 +29694,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoOffRegular")]
             BiIcon::BiVideoOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29725,7 +29711,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoOffSolid")]
             BiIcon::BiVideoOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29742,7 +29728,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoPlusRegular")]
             BiIcon::BiVideoPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29759,7 +29745,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoPlusSolid")]
             BiIcon::BiVideoPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29776,7 +29762,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoRecordingRegular")]
             BiIcon::BiVideoRecordingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29793,7 +29779,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoRecordingSolid")]
             BiIcon::BiVideoRecordingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29810,7 +29796,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoRegular")]
             BiIcon::BiVideoRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29827,7 +29813,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideoSolid")]
             BiIcon::BiVideoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29844,7 +29830,7 @@ impl Data {
             }
             #[cfg(feature = "BiVideosSolid")]
             BiIcon::BiVideosSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29861,7 +29847,7 @@ impl Data {
             }
             #[cfg(feature = "BiVimeo")]
             BiIcon::BiVimeo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29878,7 +29864,7 @@ impl Data {
             }
             #[cfg(feature = "BiVirusBlockSolid")]
             BiIcon::BiVirusBlockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29895,7 +29881,7 @@ impl Data {
             }
             #[cfg(feature = "BiVirusSolid")]
             BiIcon::BiVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29912,7 +29898,7 @@ impl Data {
             }
             #[cfg(feature = "BiVisa")]
             BiIcon::BiVisa => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29929,7 +29915,7 @@ impl Data {
             }
             #[cfg(feature = "BiVisualStudio")]
             BiIcon::BiVisualStudio => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29946,7 +29932,7 @@ impl Data {
             }
             #[cfg(feature = "BiVk")]
             BiIcon::BiVk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29963,7 +29949,7 @@ impl Data {
             }
             #[cfg(feature = "BiVoicemailRegular")]
             BiIcon::BiVoicemailRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29980,7 +29966,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeFullRegular")]
             BiIcon::BiVolumeFullRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29997,7 +29983,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeFullSolid")]
             BiIcon::BiVolumeFullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30014,7 +30000,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeLowRegular")]
             BiIcon::BiVolumeLowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30031,7 +30017,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeLowSolid")]
             BiIcon::BiVolumeLowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30048,7 +30034,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeMuteRegular")]
             BiIcon::BiVolumeMuteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30065,7 +30051,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeMuteSolid")]
             BiIcon::BiVolumeMuteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30082,7 +30068,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeRegular")]
             BiIcon::BiVolumeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30099,7 +30085,7 @@ impl Data {
             }
             #[cfg(feature = "BiVolumeSolid")]
             BiIcon::BiVolumeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30116,7 +30102,7 @@ impl Data {
             }
             #[cfg(feature = "BiVuejs")]
             BiIcon::BiVuejs => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30133,7 +30119,7 @@ impl Data {
             }
             #[cfg(feature = "BiWalkRegular")]
             BiIcon::BiWalkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30150,7 +30136,7 @@ impl Data {
             }
             #[cfg(feature = "BiWalletAltRegular")]
             BiIcon::BiWalletAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30167,7 +30153,7 @@ impl Data {
             }
             #[cfg(feature = "BiWalletAltSolid")]
             BiIcon::BiWalletAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30184,7 +30170,7 @@ impl Data {
             }
             #[cfg(feature = "BiWalletRegular")]
             BiIcon::BiWalletRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30201,7 +30187,7 @@ impl Data {
             }
             #[cfg(feature = "BiWalletSolid")]
             BiIcon::BiWalletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30218,7 +30204,7 @@ impl Data {
             }
             #[cfg(feature = "BiWasherSolid")]
             BiIcon::BiWasherSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30235,7 +30221,7 @@ impl Data {
             }
             #[cfg(feature = "BiWatchAltSolid")]
             BiIcon::BiWatchAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30252,7 +30238,7 @@ impl Data {
             }
             #[cfg(feature = "BiWatchSolid")]
             BiIcon::BiWatchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30269,7 +30255,7 @@ impl Data {
             }
             #[cfg(feature = "BiWaterRegular")]
             BiIcon::BiWaterRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30286,7 +30272,7 @@ impl Data {
             }
             #[cfg(feature = "BiWebcamRegular")]
             BiIcon::BiWebcamRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30303,7 +30289,7 @@ impl Data {
             }
             #[cfg(feature = "BiWebcamSolid")]
             BiIcon::BiWebcamSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30320,7 +30306,7 @@ impl Data {
             }
             #[cfg(feature = "BiWhatsapp")]
             BiIcon::BiWhatsapp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30337,7 +30323,7 @@ impl Data {
             }
             #[cfg(feature = "BiWhatsappSquare")]
             BiIcon::BiWhatsappSquare => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30354,7 +30340,7 @@ impl Data {
             }
             #[cfg(feature = "BiWidgetSolid")]
             BiIcon::BiWidgetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30371,7 +30357,7 @@ impl Data {
             }
             #[cfg(feature = "BiWifi0Regular")]
             BiIcon::BiWifi0Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30388,7 +30374,7 @@ impl Data {
             }
             #[cfg(feature = "BiWifi1Regular")]
             BiIcon::BiWifi1Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30405,7 +30391,7 @@ impl Data {
             }
             #[cfg(feature = "BiWifi2Regular")]
             BiIcon::BiWifi2Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30422,7 +30408,7 @@ impl Data {
             }
             #[cfg(feature = "BiWifiOffRegular")]
             BiIcon::BiWifiOffRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30439,7 +30425,7 @@ impl Data {
             }
             #[cfg(feature = "BiWifiRegular")]
             BiIcon::BiWifiRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30456,7 +30442,7 @@ impl Data {
             }
             #[cfg(feature = "BiWikipedia")]
             BiIcon::BiWikipedia => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30473,7 +30459,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindRegular")]
             BiIcon::BiWindRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30490,7 +30476,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindowAltRegular")]
             BiIcon::BiWindowAltRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30507,7 +30493,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindowAltSolid")]
             BiIcon::BiWindowAltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30524,7 +30510,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindowCloseRegular")]
             BiIcon::BiWindowCloseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30541,7 +30527,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindowOpenRegular")]
             BiIcon::BiWindowOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30558,7 +30544,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindowRegular")]
             BiIcon::BiWindowRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30575,7 +30561,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindows")]
             BiIcon::BiWindows => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30592,7 +30578,7 @@ impl Data {
             }
             #[cfg(feature = "BiWindowsRegular")]
             BiIcon::BiWindowsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30609,7 +30595,7 @@ impl Data {
             }
             #[cfg(feature = "BiWineRegular")]
             BiIcon::BiWineRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30626,7 +30612,7 @@ impl Data {
             }
             #[cfg(feature = "BiWineSolid")]
             BiIcon::BiWineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30643,7 +30629,7 @@ impl Data {
             }
             #[cfg(feature = "BiWinkSmileRegular")]
             BiIcon::BiWinkSmileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30660,7 +30646,7 @@ impl Data {
             }
             #[cfg(feature = "BiWinkSmileSolid")]
             BiIcon::BiWinkSmileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30677,7 +30663,7 @@ impl Data {
             }
             #[cfg(feature = "BiWinkTongueRegular")]
             BiIcon::BiWinkTongueRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30694,7 +30680,7 @@ impl Data {
             }
             #[cfg(feature = "BiWinkTongueSolid")]
             BiIcon::BiWinkTongueSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30711,7 +30697,7 @@ impl Data {
             }
             #[cfg(feature = "BiWix")]
             BiIcon::BiWix => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30728,7 +30714,7 @@ impl Data {
             }
             #[cfg(feature = "BiWonRegular")]
             BiIcon::BiWonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30745,7 +30731,7 @@ impl Data {
             }
             #[cfg(feature = "BiWordpress")]
             BiIcon::BiWordpress => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30762,7 +30748,7 @@ impl Data {
             }
             #[cfg(feature = "BiWorldRegular")]
             BiIcon::BiWorldRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30779,7 +30765,7 @@ impl Data {
             }
             #[cfg(feature = "BiWrenchRegular")]
             BiIcon::BiWrenchRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30796,7 +30782,7 @@ impl Data {
             }
             #[cfg(feature = "BiWrenchSolid")]
             BiIcon::BiWrenchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30813,7 +30799,7 @@ impl Data {
             }
             #[cfg(feature = "BiXCircleRegular")]
             BiIcon::BiXCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30830,7 +30816,7 @@ impl Data {
             }
             #[cfg(feature = "BiXCircleSolid")]
             BiIcon::BiXCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30847,7 +30833,7 @@ impl Data {
             }
             #[cfg(feature = "BiXRegular")]
             BiIcon::BiXRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30864,7 +30850,7 @@ impl Data {
             }
             #[cfg(feature = "BiXSquareSolid")]
             BiIcon::BiXSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30881,7 +30867,7 @@ impl Data {
             }
             #[cfg(feature = "BiXing")]
             BiIcon::BiXing => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30898,7 +30884,7 @@ impl Data {
             }
             #[cfg(feature = "BiYahoo")]
             BiIcon::BiYahoo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30915,7 +30901,7 @@ impl Data {
             }
             #[cfg(feature = "BiYelp")]
             BiIcon::BiYelp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30932,7 +30918,7 @@ impl Data {
             }
             #[cfg(feature = "BiYenRegular")]
             BiIcon::BiYenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30949,7 +30935,7 @@ impl Data {
             }
             #[cfg(feature = "BiYinYangSolid")]
             BiIcon::BiYinYangSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30966,7 +30952,7 @@ impl Data {
             }
             #[cfg(feature = "BiYoutube")]
             BiIcon::BiYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30983,7 +30969,7 @@ impl Data {
             }
             #[cfg(feature = "BiZapSolid")]
             BiIcon::BiZapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31000,7 +30986,7 @@ impl Data {
             }
             #[cfg(feature = "BiZoom")]
             BiIcon::BiZoom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31017,7 +31003,7 @@ impl Data {
             }
             #[cfg(feature = "BiZoomInRegular")]
             BiIcon::BiZoomInRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31034,7 +31020,7 @@ impl Data {
             }
             #[cfg(feature = "BiZoomInSolid")]
             BiIcon::BiZoomInSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31051,7 +31037,7 @@ impl Data {
             }
             #[cfg(feature = "BiZoomOutRegular")]
             BiIcon::BiZoomOutRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31068,7 +31054,7 @@ impl Data {
             }
             #[cfg(feature = "BiZoomOutSolid")]
             BiIcon::BiZoomOutSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31085,62 +31071,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosBiIcon(
-    cx: leptos::Scope,
-    icon: BiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

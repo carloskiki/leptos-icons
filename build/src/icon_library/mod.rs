@@ -86,8 +86,7 @@ impl IconLibrary {
         let enum_code = LibRs::build_enum(&self.enum_name(), &self.icons)?;
         self.src_dir.lib_rs.write_enum(enum_code).await?;
 
-        let component_code =
-            LibRs::build_icon_component(&self.component_name(), &self.enum_name(), &self.icons)?;
+        let component_code = LibRs::build_icon_component(&self.enum_name(), &self.icons)?;
         self.src_dir.lib_rs.write_component(component_code).await?;
 
         self.cargo_toml.append_features(&self.icons).await?;
@@ -104,13 +103,6 @@ impl IconLibrary {
 
         info!("Library generated.");
         Ok(())
-    }
-
-    pub fn component_name(&self) -> String {
-        format!(
-            "Leptos{}Icon",
-            self.package.meta.short_name.to_upper_camel_case()
-        )
     }
 
     pub fn enum_name(&self) -> String {

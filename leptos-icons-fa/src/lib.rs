@@ -4060,26 +4060,12 @@ pub enum FaIcon {
     FaZhihuBrands,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: FaIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for FaIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "Fa0Solid")]
             FaIcon::Fa0Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4096,7 +4082,7 @@ impl Data {
             }
             #[cfg(feature = "Fa1Solid")]
             FaIcon::Fa1Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4113,7 +4099,7 @@ impl Data {
             }
             #[cfg(feature = "Fa2Solid")]
             FaIcon::Fa2Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4130,7 +4116,7 @@ impl Data {
             }
             #[cfg(feature = "Fa3Solid")]
             FaIcon::Fa3Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4147,7 +4133,7 @@ impl Data {
             }
             #[cfg(feature = "Fa42GroupBrands")]
             FaIcon::Fa42GroupBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4164,7 +4150,7 @@ impl Data {
             }
             #[cfg(feature = "Fa4Solid")]
             FaIcon::Fa4Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4181,7 +4167,7 @@ impl Data {
             }
             #[cfg(feature = "Fa500pxBrands")]
             FaIcon::Fa500pxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4198,7 +4184,7 @@ impl Data {
             }
             #[cfg(feature = "Fa5Solid")]
             FaIcon::Fa5Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4215,7 +4201,7 @@ impl Data {
             }
             #[cfg(feature = "Fa6Solid")]
             FaIcon::Fa6Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4232,7 +4218,7 @@ impl Data {
             }
             #[cfg(feature = "Fa7Solid")]
             FaIcon::Fa7Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4249,7 +4235,7 @@ impl Data {
             }
             #[cfg(feature = "Fa8Solid")]
             FaIcon::Fa8Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4266,7 +4252,7 @@ impl Data {
             }
             #[cfg(feature = "Fa9Solid")]
             FaIcon::Fa9Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4283,7 +4269,7 @@ impl Data {
             }
             #[cfg(feature = "FaASolid")]
             FaIcon::FaASolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4300,7 +4286,7 @@ impl Data {
             }
             #[cfg(feature = "FaAccessibleIconBrands")]
             FaIcon::FaAccessibleIconBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4317,7 +4303,7 @@ impl Data {
             }
             #[cfg(feature = "FaAccusoftBrands")]
             FaIcon::FaAccusoftBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4334,7 +4320,7 @@ impl Data {
             }
             #[cfg(feature = "FaAddressBookRegular")]
             FaIcon::FaAddressBookRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4351,7 +4337,7 @@ impl Data {
             }
             #[cfg(feature = "FaAddressBookSolid")]
             FaIcon::FaAddressBookSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4368,7 +4354,7 @@ impl Data {
             }
             #[cfg(feature = "FaAddressCardRegular")]
             FaIcon::FaAddressCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4385,7 +4371,7 @@ impl Data {
             }
             #[cfg(feature = "FaAddressCardSolid")]
             FaIcon::FaAddressCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4402,7 +4388,7 @@ impl Data {
             }
             #[cfg(feature = "FaAdnBrands")]
             FaIcon::FaAdnBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4419,7 +4405,7 @@ impl Data {
             }
             #[cfg(feature = "FaAdversalBrands")]
             FaIcon::FaAdversalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4436,7 +4422,7 @@ impl Data {
             }
             #[cfg(feature = "FaAffiliatethemeBrands")]
             FaIcon::FaAffiliatethemeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4453,7 +4439,7 @@ impl Data {
             }
             #[cfg(feature = "FaAirbnbBrands")]
             FaIcon::FaAirbnbBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4470,7 +4456,7 @@ impl Data {
             }
             #[cfg(feature = "FaAlgoliaBrands")]
             FaIcon::FaAlgoliaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4487,7 +4473,7 @@ impl Data {
             }
             #[cfg(feature = "FaAlignCenterSolid")]
             FaIcon::FaAlignCenterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4504,7 +4490,7 @@ impl Data {
             }
             #[cfg(feature = "FaAlignJustifySolid")]
             FaIcon::FaAlignJustifySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4521,7 +4507,7 @@ impl Data {
             }
             #[cfg(feature = "FaAlignLeftSolid")]
             FaIcon::FaAlignLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4538,7 +4524,7 @@ impl Data {
             }
             #[cfg(feature = "FaAlignRightSolid")]
             FaIcon::FaAlignRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4555,7 +4541,7 @@ impl Data {
             }
             #[cfg(feature = "FaAlipayBrands")]
             FaIcon::FaAlipayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4572,7 +4558,7 @@ impl Data {
             }
             #[cfg(feature = "FaAmazonBrands")]
             FaIcon::FaAmazonBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4589,7 +4575,7 @@ impl Data {
             }
             #[cfg(feature = "FaAmazonPayBrands")]
             FaIcon::FaAmazonPayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4606,7 +4592,7 @@ impl Data {
             }
             #[cfg(feature = "FaAmiliaBrands")]
             FaIcon::FaAmiliaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4623,7 +4609,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnchorCircleCheckSolid")]
             FaIcon::FaAnchorCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4640,7 +4626,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnchorCircleExclamationSolid")]
             FaIcon::FaAnchorCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4657,7 +4643,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnchorCircleXmarkSolid")]
             FaIcon::FaAnchorCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4674,7 +4660,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnchorLockSolid")]
             FaIcon::FaAnchorLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4691,7 +4677,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnchorSolid")]
             FaIcon::FaAnchorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4708,7 +4694,7 @@ impl Data {
             }
             #[cfg(feature = "FaAndroidBrands")]
             FaIcon::FaAndroidBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4725,7 +4711,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngellistBrands")]
             FaIcon::FaAngellistBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4742,7 +4728,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngleDownSolid")]
             FaIcon::FaAngleDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4759,7 +4745,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngleLeftSolid")]
             FaIcon::FaAngleLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4776,7 +4762,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngleRightSolid")]
             FaIcon::FaAngleRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4793,7 +4779,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngleUpSolid")]
             FaIcon::FaAngleUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4810,7 +4796,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnglesDownSolid")]
             FaIcon::FaAnglesDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4827,7 +4813,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnglesLeftSolid")]
             FaIcon::FaAnglesLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4844,7 +4830,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnglesRightSolid")]
             FaIcon::FaAnglesRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4861,7 +4847,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnglesUpSolid")]
             FaIcon::FaAnglesUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4878,7 +4864,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngrycreativeBrands")]
             FaIcon::FaAngrycreativeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4895,7 +4881,7 @@ impl Data {
             }
             #[cfg(feature = "FaAngularBrands")]
             FaIcon::FaAngularBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4912,7 +4898,7 @@ impl Data {
             }
             #[cfg(feature = "FaAnkhSolid")]
             FaIcon::FaAnkhSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4929,7 +4915,7 @@ impl Data {
             }
             #[cfg(feature = "FaAppStoreBrands")]
             FaIcon::FaAppStoreBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4946,7 +4932,7 @@ impl Data {
             }
             #[cfg(feature = "FaAppStoreIosBrands")]
             FaIcon::FaAppStoreIosBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4963,7 +4949,7 @@ impl Data {
             }
             #[cfg(feature = "FaApperBrands")]
             FaIcon::FaApperBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4980,7 +4966,7 @@ impl Data {
             }
             #[cfg(feature = "FaAppleBrands")]
             FaIcon::FaAppleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4997,7 +4983,7 @@ impl Data {
             }
             #[cfg(feature = "FaApplePayBrands")]
             FaIcon::FaApplePayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5014,7 +5000,7 @@ impl Data {
             }
             #[cfg(feature = "FaAppleWholeSolid")]
             FaIcon::FaAppleWholeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5031,7 +5017,7 @@ impl Data {
             }
             #[cfg(feature = "FaArchwaySolid")]
             FaIcon::FaArchwaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5048,7 +5034,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDown19Solid")]
             FaIcon::FaArrowDown19Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5065,7 +5051,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDown91Solid")]
             FaIcon::FaArrowDown91Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5082,7 +5068,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownAZSolid")]
             FaIcon::FaArrowDownAZSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5099,7 +5085,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownLongSolid")]
             FaIcon::FaArrowDownLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5116,7 +5102,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownShortWideSolid")]
             FaIcon::FaArrowDownShortWideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5133,7 +5119,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownSolid")]
             FaIcon::FaArrowDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5150,7 +5136,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownUpAcrossLineSolid")]
             FaIcon::FaArrowDownUpAcrossLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5167,7 +5153,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownUpLockSolid")]
             FaIcon::FaArrowDownUpLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5184,7 +5170,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownWideShortSolid")]
             FaIcon::FaArrowDownWideShortSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5201,7 +5187,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowDownZASolid")]
             FaIcon::FaArrowDownZASolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5218,7 +5204,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowLeftLongSolid")]
             FaIcon::FaArrowLeftLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5235,7 +5221,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowLeftSolid")]
             FaIcon::FaArrowLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5252,7 +5238,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowPointerSolid")]
             FaIcon::FaArrowPointerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5269,7 +5255,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRightArrowLeftSolid")]
             FaIcon::FaArrowRightArrowLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5286,7 +5272,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRightFromBracketSolid")]
             FaIcon::FaArrowRightFromBracketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5303,7 +5289,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRightLongSolid")]
             FaIcon::FaArrowRightLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5320,7 +5306,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRightSolid")]
             FaIcon::FaArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5337,7 +5323,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRightToBracketSolid")]
             FaIcon::FaArrowRightToBracketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5354,7 +5340,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRightToCitySolid")]
             FaIcon::FaArrowRightToCitySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5371,7 +5357,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRotateLeftSolid")]
             FaIcon::FaArrowRotateLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5388,7 +5374,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowRotateRightSolid")]
             FaIcon::FaArrowRotateRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5405,7 +5391,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowTrendDownSolid")]
             FaIcon::FaArrowTrendDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5422,7 +5408,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowTrendUpSolid")]
             FaIcon::FaArrowTrendUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5439,7 +5425,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowTurnDownSolid")]
             FaIcon::FaArrowTurnDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5456,7 +5442,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowTurnUpSolid")]
             FaIcon::FaArrowTurnUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5473,7 +5459,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUp19Solid")]
             FaIcon::FaArrowUp19Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5490,7 +5476,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUp91Solid")]
             FaIcon::FaArrowUp91Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5507,7 +5493,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpAZSolid")]
             FaIcon::FaArrowUpAZSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5524,7 +5510,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpFromBracketSolid")]
             FaIcon::FaArrowUpFromBracketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5541,7 +5527,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpFromGroundWaterSolid")]
             FaIcon::FaArrowUpFromGroundWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5558,7 +5544,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpFromWaterPumpSolid")]
             FaIcon::FaArrowUpFromWaterPumpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5575,7 +5561,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpLongSolid")]
             FaIcon::FaArrowUpLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5592,7 +5578,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpRightDotsSolid")]
             FaIcon::FaArrowUpRightDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5609,7 +5595,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpRightFromSquareSolid")]
             FaIcon::FaArrowUpRightFromSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5626,7 +5612,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpShortWideSolid")]
             FaIcon::FaArrowUpShortWideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5643,7 +5629,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpSolid")]
             FaIcon::FaArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5660,7 +5646,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpWideShortSolid")]
             FaIcon::FaArrowUpWideShortSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5677,7 +5663,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowUpZASolid")]
             FaIcon::FaArrowUpZASolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5694,7 +5680,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsDownToLineSolid")]
             FaIcon::FaArrowsDownToLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5711,7 +5697,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsDownToPeopleSolid")]
             FaIcon::FaArrowsDownToPeopleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5728,7 +5714,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsLeftRightSolid")]
             FaIcon::FaArrowsLeftRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5745,7 +5731,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsLeftRightToLineSolid")]
             FaIcon::FaArrowsLeftRightToLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5762,7 +5748,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsRotateSolid")]
             FaIcon::FaArrowsRotateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5779,7 +5765,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsSpinSolid")]
             FaIcon::FaArrowsSpinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5796,7 +5782,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsSplitUpAndLeftSolid")]
             FaIcon::FaArrowsSplitUpAndLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5813,7 +5799,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsToCircleSolid")]
             FaIcon::FaArrowsToCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5830,7 +5816,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsToDotSolid")]
             FaIcon::FaArrowsToDotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5847,7 +5833,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsToEyeSolid")]
             FaIcon::FaArrowsToEyeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5864,7 +5850,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsTurnRightSolid")]
             FaIcon::FaArrowsTurnRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5881,7 +5867,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsTurnToDotsSolid")]
             FaIcon::FaArrowsTurnToDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5898,7 +5884,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsUpDownLeftRightSolid")]
             FaIcon::FaArrowsUpDownLeftRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5915,7 +5901,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsUpDownSolid")]
             FaIcon::FaArrowsUpDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5932,7 +5918,7 @@ impl Data {
             }
             #[cfg(feature = "FaArrowsUpToLineSolid")]
             FaIcon::FaArrowsUpToLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5949,7 +5935,7 @@ impl Data {
             }
             #[cfg(feature = "FaArtstationBrands")]
             FaIcon::FaArtstationBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5966,7 +5952,7 @@ impl Data {
             }
             #[cfg(feature = "FaAsteriskSolid")]
             FaIcon::FaAsteriskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5983,7 +5969,7 @@ impl Data {
             }
             #[cfg(feature = "FaAsymmetrikBrands")]
             FaIcon::FaAsymmetrikBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6000,7 +5986,7 @@ impl Data {
             }
             #[cfg(feature = "FaAtSolid")]
             FaIcon::FaAtSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6017,7 +6003,7 @@ impl Data {
             }
             #[cfg(feature = "FaAtlassianBrands")]
             FaIcon::FaAtlassianBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6034,7 +6020,7 @@ impl Data {
             }
             #[cfg(feature = "FaAtomSolid")]
             FaIcon::FaAtomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6051,7 +6037,7 @@ impl Data {
             }
             #[cfg(feature = "FaAudibleBrands")]
             FaIcon::FaAudibleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6068,7 +6054,7 @@ impl Data {
             }
             #[cfg(feature = "FaAudioDescriptionSolid")]
             FaIcon::FaAudioDescriptionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6085,7 +6071,7 @@ impl Data {
             }
             #[cfg(feature = "FaAustralSignSolid")]
             FaIcon::FaAustralSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6102,7 +6088,7 @@ impl Data {
             }
             #[cfg(feature = "FaAutoprefixerBrands")]
             FaIcon::FaAutoprefixerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6119,7 +6105,7 @@ impl Data {
             }
             #[cfg(feature = "FaAvianexBrands")]
             FaIcon::FaAvianexBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6136,7 +6122,7 @@ impl Data {
             }
             #[cfg(feature = "FaAviatoBrands")]
             FaIcon::FaAviatoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6153,7 +6139,7 @@ impl Data {
             }
             #[cfg(feature = "FaAwardSolid")]
             FaIcon::FaAwardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6170,7 +6156,7 @@ impl Data {
             }
             #[cfg(feature = "FaAwsBrands")]
             FaIcon::FaAwsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6187,7 +6173,7 @@ impl Data {
             }
             #[cfg(feature = "FaBSolid")]
             FaIcon::FaBSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6204,7 +6190,7 @@ impl Data {
             }
             #[cfg(feature = "FaBabyCarriageSolid")]
             FaIcon::FaBabyCarriageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6221,7 +6207,7 @@ impl Data {
             }
             #[cfg(feature = "FaBabySolid")]
             FaIcon::FaBabySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6238,7 +6224,7 @@ impl Data {
             }
             #[cfg(feature = "FaBackwardFastSolid")]
             FaIcon::FaBackwardFastSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6255,7 +6241,7 @@ impl Data {
             }
             #[cfg(feature = "FaBackwardSolid")]
             FaIcon::FaBackwardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6272,7 +6258,7 @@ impl Data {
             }
             #[cfg(feature = "FaBackwardStepSolid")]
             FaIcon::FaBackwardStepSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6289,7 +6275,7 @@ impl Data {
             }
             #[cfg(feature = "FaBaconSolid")]
             FaIcon::FaBaconSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6306,7 +6292,7 @@ impl Data {
             }
             #[cfg(feature = "FaBacteriaSolid")]
             FaIcon::FaBacteriaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6323,7 +6309,7 @@ impl Data {
             }
             #[cfg(feature = "FaBacteriumSolid")]
             FaIcon::FaBacteriumSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6340,7 +6326,7 @@ impl Data {
             }
             #[cfg(feature = "FaBagShoppingSolid")]
             FaIcon::FaBagShoppingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6357,7 +6343,7 @@ impl Data {
             }
             #[cfg(feature = "FaBahaiSolid")]
             FaIcon::FaBahaiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6374,7 +6360,7 @@ impl Data {
             }
             #[cfg(feature = "FaBahtSignSolid")]
             FaIcon::FaBahtSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6391,7 +6377,7 @@ impl Data {
             }
             #[cfg(feature = "FaBanSmokingSolid")]
             FaIcon::FaBanSmokingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6408,7 +6394,7 @@ impl Data {
             }
             #[cfg(feature = "FaBanSolid")]
             FaIcon::FaBanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6425,7 +6411,7 @@ impl Data {
             }
             #[cfg(feature = "FaBandageSolid")]
             FaIcon::FaBandageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6442,7 +6428,7 @@ impl Data {
             }
             #[cfg(feature = "FaBandcampBrands")]
             FaIcon::FaBandcampBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6459,7 +6445,7 @@ impl Data {
             }
             #[cfg(feature = "FaBangladeshiTakaSignSolid")]
             FaIcon::FaBangladeshiTakaSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6476,7 +6462,7 @@ impl Data {
             }
             #[cfg(feature = "FaBarcodeSolid")]
             FaIcon::FaBarcodeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6493,7 +6479,7 @@ impl Data {
             }
             #[cfg(feature = "FaBarsProgressSolid")]
             FaIcon::FaBarsProgressSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6510,7 +6496,7 @@ impl Data {
             }
             #[cfg(feature = "FaBarsSolid")]
             FaIcon::FaBarsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6527,7 +6513,7 @@ impl Data {
             }
             #[cfg(feature = "FaBarsStaggeredSolid")]
             FaIcon::FaBarsStaggeredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6544,7 +6530,7 @@ impl Data {
             }
             #[cfg(feature = "FaBaseballBatBallSolid")]
             FaIcon::FaBaseballBatBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6561,7 +6547,7 @@ impl Data {
             }
             #[cfg(feature = "FaBaseballSolid")]
             FaIcon::FaBaseballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6578,7 +6564,7 @@ impl Data {
             }
             #[cfg(feature = "FaBasketShoppingSolid")]
             FaIcon::FaBasketShoppingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6595,7 +6581,7 @@ impl Data {
             }
             #[cfg(feature = "FaBasketballSolid")]
             FaIcon::FaBasketballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6612,7 +6598,7 @@ impl Data {
             }
             #[cfg(feature = "FaBathSolid")]
             FaIcon::FaBathSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6629,7 +6615,7 @@ impl Data {
             }
             #[cfg(feature = "FaBatteryEmptySolid")]
             FaIcon::FaBatteryEmptySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6646,7 +6632,7 @@ impl Data {
             }
             #[cfg(feature = "FaBatteryFullSolid")]
             FaIcon::FaBatteryFullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6663,7 +6649,7 @@ impl Data {
             }
             #[cfg(feature = "FaBatteryHalfSolid")]
             FaIcon::FaBatteryHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6680,7 +6666,7 @@ impl Data {
             }
             #[cfg(feature = "FaBatteryQuarterSolid")]
             FaIcon::FaBatteryQuarterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6697,7 +6683,7 @@ impl Data {
             }
             #[cfg(feature = "FaBatteryThreeQuartersSolid")]
             FaIcon::FaBatteryThreeQuartersSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6714,7 +6700,7 @@ impl Data {
             }
             #[cfg(feature = "FaBattleNetBrands")]
             FaIcon::FaBattleNetBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6731,7 +6717,7 @@ impl Data {
             }
             #[cfg(feature = "FaBedPulseSolid")]
             FaIcon::FaBedPulseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6748,7 +6734,7 @@ impl Data {
             }
             #[cfg(feature = "FaBedSolid")]
             FaIcon::FaBedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6765,7 +6751,7 @@ impl Data {
             }
             #[cfg(feature = "FaBeerMugEmptySolid")]
             FaIcon::FaBeerMugEmptySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6782,7 +6768,7 @@ impl Data {
             }
             #[cfg(feature = "FaBehanceBrands")]
             FaIcon::FaBehanceBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6799,7 +6785,7 @@ impl Data {
             }
             #[cfg(feature = "FaBellConciergeSolid")]
             FaIcon::FaBellConciergeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6816,7 +6802,7 @@ impl Data {
             }
             #[cfg(feature = "FaBellRegular")]
             FaIcon::FaBellRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6833,7 +6819,7 @@ impl Data {
             }
             #[cfg(feature = "FaBellSlashRegular")]
             FaIcon::FaBellSlashRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6850,7 +6836,7 @@ impl Data {
             }
             #[cfg(feature = "FaBellSlashSolid")]
             FaIcon::FaBellSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6867,7 +6853,7 @@ impl Data {
             }
             #[cfg(feature = "FaBellSolid")]
             FaIcon::FaBellSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6884,7 +6870,7 @@ impl Data {
             }
             #[cfg(feature = "FaBezierCurveSolid")]
             FaIcon::FaBezierCurveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6901,7 +6887,7 @@ impl Data {
             }
             #[cfg(feature = "FaBicycleSolid")]
             FaIcon::FaBicycleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6918,7 +6904,7 @@ impl Data {
             }
             #[cfg(feature = "FaBilibiliBrands")]
             FaIcon::FaBilibiliBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6935,7 +6921,7 @@ impl Data {
             }
             #[cfg(feature = "FaBimobjectBrands")]
             FaIcon::FaBimobjectBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6952,7 +6938,7 @@ impl Data {
             }
             #[cfg(feature = "FaBinocularsSolid")]
             FaIcon::FaBinocularsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6969,7 +6955,7 @@ impl Data {
             }
             #[cfg(feature = "FaBiohazardSolid")]
             FaIcon::FaBiohazardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6986,7 +6972,7 @@ impl Data {
             }
             #[cfg(feature = "FaBitbucketBrands")]
             FaIcon::FaBitbucketBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7003,7 +6989,7 @@ impl Data {
             }
             #[cfg(feature = "FaBitcoinBrands")]
             FaIcon::FaBitcoinBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7020,7 +7006,7 @@ impl Data {
             }
             #[cfg(feature = "FaBitcoinSignSolid")]
             FaIcon::FaBitcoinSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7037,7 +7023,7 @@ impl Data {
             }
             #[cfg(feature = "FaBityBrands")]
             FaIcon::FaBityBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7054,7 +7040,7 @@ impl Data {
             }
             #[cfg(feature = "FaBlackTieBrands")]
             FaIcon::FaBlackTieBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7071,7 +7057,7 @@ impl Data {
             }
             #[cfg(feature = "FaBlackberryBrands")]
             FaIcon::FaBlackberryBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7088,7 +7074,7 @@ impl Data {
             }
             #[cfg(feature = "FaBlenderPhoneSolid")]
             FaIcon::FaBlenderPhoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7105,7 +7091,7 @@ impl Data {
             }
             #[cfg(feature = "FaBlenderSolid")]
             FaIcon::FaBlenderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7122,7 +7108,7 @@ impl Data {
             }
             #[cfg(feature = "FaBlogSolid")]
             FaIcon::FaBlogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7139,7 +7125,7 @@ impl Data {
             }
             #[cfg(feature = "FaBloggerBBrands")]
             FaIcon::FaBloggerBBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7156,7 +7142,7 @@ impl Data {
             }
             #[cfg(feature = "FaBloggerBrands")]
             FaIcon::FaBloggerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7173,7 +7159,7 @@ impl Data {
             }
             #[cfg(feature = "FaBluetoothBBrands")]
             FaIcon::FaBluetoothBBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7190,7 +7176,7 @@ impl Data {
             }
             #[cfg(feature = "FaBluetoothBrands")]
             FaIcon::FaBluetoothBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7207,7 +7193,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoldSolid")]
             FaIcon::FaBoldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7224,7 +7210,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoltLightningSolid")]
             FaIcon::FaBoltLightningSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7241,7 +7227,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoltSolid")]
             FaIcon::FaBoltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7258,7 +7244,7 @@ impl Data {
             }
             #[cfg(feature = "FaBombSolid")]
             FaIcon::FaBombSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7275,7 +7261,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoneSolid")]
             FaIcon::FaBoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7292,7 +7278,7 @@ impl Data {
             }
             #[cfg(feature = "FaBongSolid")]
             FaIcon::FaBongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7309,7 +7295,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookAtlasSolid")]
             FaIcon::FaBookAtlasSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7326,7 +7312,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookBibleSolid")]
             FaIcon::FaBookBibleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7343,7 +7329,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookBookmarkSolid")]
             FaIcon::FaBookBookmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7360,7 +7346,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookJournalWhillsSolid")]
             FaIcon::FaBookJournalWhillsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7377,7 +7363,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookMedicalSolid")]
             FaIcon::FaBookMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7394,7 +7380,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookOpenReaderSolid")]
             FaIcon::FaBookOpenReaderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7411,7 +7397,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookOpenSolid")]
             FaIcon::FaBookOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7428,7 +7414,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookQuranSolid")]
             FaIcon::FaBookQuranSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7445,7 +7431,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookSkullSolid")]
             FaIcon::FaBookSkullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7462,7 +7448,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookSolid")]
             FaIcon::FaBookSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7479,7 +7465,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookTanakhSolid")]
             FaIcon::FaBookTanakhSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7496,7 +7482,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookmarkRegular")]
             FaIcon::FaBookmarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7513,7 +7499,7 @@ impl Data {
             }
             #[cfg(feature = "FaBookmarkSolid")]
             FaIcon::FaBookmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7530,7 +7516,7 @@ impl Data {
             }
             #[cfg(feature = "FaBootstrapBrands")]
             FaIcon::FaBootstrapBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7547,7 +7533,7 @@ impl Data {
             }
             #[cfg(feature = "FaBorderAllSolid")]
             FaIcon::FaBorderAllSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7564,7 +7550,7 @@ impl Data {
             }
             #[cfg(feature = "FaBorderNoneSolid")]
             FaIcon::FaBorderNoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7581,7 +7567,7 @@ impl Data {
             }
             #[cfg(feature = "FaBorderTopLeftSolid")]
             FaIcon::FaBorderTopLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7598,7 +7584,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoreHoleSolid")]
             FaIcon::FaBoreHoleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7615,7 +7601,7 @@ impl Data {
             }
             #[cfg(feature = "FaBotsBrands")]
             FaIcon::FaBotsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7632,7 +7618,7 @@ impl Data {
             }
             #[cfg(feature = "FaBottleDropletSolid")]
             FaIcon::FaBottleDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7649,7 +7635,7 @@ impl Data {
             }
             #[cfg(feature = "FaBottleWaterSolid")]
             FaIcon::FaBottleWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7666,7 +7652,7 @@ impl Data {
             }
             #[cfg(feature = "FaBowlFoodSolid")]
             FaIcon::FaBowlFoodSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7683,7 +7669,7 @@ impl Data {
             }
             #[cfg(feature = "FaBowlRiceSolid")]
             FaIcon::FaBowlRiceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7700,7 +7686,7 @@ impl Data {
             }
             #[cfg(feature = "FaBowlingBallSolid")]
             FaIcon::FaBowlingBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7717,7 +7703,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoxArchiveSolid")]
             FaIcon::FaBoxArchiveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7734,7 +7720,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoxOpenSolid")]
             FaIcon::FaBoxOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7751,7 +7737,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoxSolid")]
             FaIcon::FaBoxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7768,7 +7754,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoxTissueSolid")]
             FaIcon::FaBoxTissueSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7785,7 +7771,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoxesPackingSolid")]
             FaIcon::FaBoxesPackingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7802,7 +7788,7 @@ impl Data {
             }
             #[cfg(feature = "FaBoxesStackedSolid")]
             FaIcon::FaBoxesStackedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7819,7 +7805,7 @@ impl Data {
             }
             #[cfg(feature = "FaBrailleSolid")]
             FaIcon::FaBrailleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7836,7 +7822,7 @@ impl Data {
             }
             #[cfg(feature = "FaBrainSolid")]
             FaIcon::FaBrainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7853,7 +7839,7 @@ impl Data {
             }
             #[cfg(feature = "FaBrazilianRealSignSolid")]
             FaIcon::FaBrazilianRealSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7870,7 +7856,7 @@ impl Data {
             }
             #[cfg(feature = "FaBreadSliceSolid")]
             FaIcon::FaBreadSliceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7887,7 +7873,7 @@ impl Data {
             }
             #[cfg(feature = "FaBridgeCircleCheckSolid")]
             FaIcon::FaBridgeCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7904,7 +7890,7 @@ impl Data {
             }
             #[cfg(feature = "FaBridgeCircleExclamationSolid")]
             FaIcon::FaBridgeCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7921,7 +7907,7 @@ impl Data {
             }
             #[cfg(feature = "FaBridgeCircleXmarkSolid")]
             FaIcon::FaBridgeCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7938,7 +7924,7 @@ impl Data {
             }
             #[cfg(feature = "FaBridgeLockSolid")]
             FaIcon::FaBridgeLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7955,7 +7941,7 @@ impl Data {
             }
             #[cfg(feature = "FaBridgeSolid")]
             FaIcon::FaBridgeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7972,7 +7958,7 @@ impl Data {
             }
             #[cfg(feature = "FaBridgeWaterSolid")]
             FaIcon::FaBridgeWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -7989,7 +7975,7 @@ impl Data {
             }
             #[cfg(feature = "FaBriefcaseMedicalSolid")]
             FaIcon::FaBriefcaseMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8006,7 +7992,7 @@ impl Data {
             }
             #[cfg(feature = "FaBriefcaseSolid")]
             FaIcon::FaBriefcaseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8023,7 +8009,7 @@ impl Data {
             }
             #[cfg(feature = "FaBroomBallSolid")]
             FaIcon::FaBroomBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8040,7 +8026,7 @@ impl Data {
             }
             #[cfg(feature = "FaBroomSolid")]
             FaIcon::FaBroomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8057,7 +8043,7 @@ impl Data {
             }
             #[cfg(feature = "FaBrushSolid")]
             FaIcon::FaBrushSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8074,7 +8060,7 @@ impl Data {
             }
             #[cfg(feature = "FaBtcBrands")]
             FaIcon::FaBtcBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8091,7 +8077,7 @@ impl Data {
             }
             #[cfg(feature = "FaBucketSolid")]
             FaIcon::FaBucketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8108,7 +8094,7 @@ impl Data {
             }
             #[cfg(feature = "FaBufferBrands")]
             FaIcon::FaBufferBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8125,7 +8111,7 @@ impl Data {
             }
             #[cfg(feature = "FaBugSlashSolid")]
             FaIcon::FaBugSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8142,7 +8128,7 @@ impl Data {
             }
             #[cfg(feature = "FaBugSolid")]
             FaIcon::FaBugSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8159,7 +8145,7 @@ impl Data {
             }
             #[cfg(feature = "FaBugsSolid")]
             FaIcon::FaBugsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8176,7 +8162,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingCircleArrowRightSolid")]
             FaIcon::FaBuildingCircleArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8193,7 +8179,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingCircleCheckSolid")]
             FaIcon::FaBuildingCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8210,7 +8196,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingCircleExclamationSolid")]
             FaIcon::FaBuildingCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8227,7 +8213,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingCircleXmarkSolid")]
             FaIcon::FaBuildingCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8244,7 +8230,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingColumnsSolid")]
             FaIcon::FaBuildingColumnsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8261,7 +8247,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingFlagSolid")]
             FaIcon::FaBuildingFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8278,7 +8264,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingLockSolid")]
             FaIcon::FaBuildingLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8295,7 +8281,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingNgoSolid")]
             FaIcon::FaBuildingNgoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8312,7 +8298,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingRegular")]
             FaIcon::FaBuildingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8329,7 +8315,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingShieldSolid")]
             FaIcon::FaBuildingShieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8346,7 +8332,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingSolid")]
             FaIcon::FaBuildingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8363,7 +8349,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingUnSolid")]
             FaIcon::FaBuildingUnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8380,7 +8366,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingUserSolid")]
             FaIcon::FaBuildingUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8397,7 +8383,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuildingWheatSolid")]
             FaIcon::FaBuildingWheatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8414,7 +8400,7 @@ impl Data {
             }
             #[cfg(feature = "FaBullhornSolid")]
             FaIcon::FaBullhornSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8431,7 +8417,7 @@ impl Data {
             }
             #[cfg(feature = "FaBullseyeSolid")]
             FaIcon::FaBullseyeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8448,7 +8434,7 @@ impl Data {
             }
             #[cfg(feature = "FaBurgerSolid")]
             FaIcon::FaBurgerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8465,7 +8451,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuromobelexperteBrands")]
             FaIcon::FaBuromobelexperteBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8482,7 +8468,7 @@ impl Data {
             }
             #[cfg(feature = "FaBurstSolid")]
             FaIcon::FaBurstSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8499,7 +8485,7 @@ impl Data {
             }
             #[cfg(feature = "FaBusSimpleSolid")]
             FaIcon::FaBusSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8516,7 +8502,7 @@ impl Data {
             }
             #[cfg(feature = "FaBusSolid")]
             FaIcon::FaBusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8533,7 +8519,7 @@ impl Data {
             }
             #[cfg(feature = "FaBusinessTimeSolid")]
             FaIcon::FaBusinessTimeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8550,7 +8536,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuyNLargeBrands")]
             FaIcon::FaBuyNLargeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8567,7 +8553,7 @@ impl Data {
             }
             #[cfg(feature = "FaBuyselladsBrands")]
             FaIcon::FaBuyselladsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8584,7 +8570,7 @@ impl Data {
             }
             #[cfg(feature = "FaCSolid")]
             FaIcon::FaCSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8601,7 +8587,7 @@ impl Data {
             }
             #[cfg(feature = "FaCableCarSolid")]
             FaIcon::FaCableCarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8618,7 +8604,7 @@ impl Data {
             }
             #[cfg(feature = "FaCakeCandlesSolid")]
             FaIcon::FaCakeCandlesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8635,7 +8621,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalculatorSolid")]
             FaIcon::FaCalculatorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8652,7 +8638,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarCheckRegular")]
             FaIcon::FaCalendarCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8669,7 +8655,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarCheckSolid")]
             FaIcon::FaCalendarCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8686,7 +8672,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarDaySolid")]
             FaIcon::FaCalendarDaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8703,7 +8689,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarDaysRegular")]
             FaIcon::FaCalendarDaysRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8720,7 +8706,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarDaysSolid")]
             FaIcon::FaCalendarDaysSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8737,7 +8723,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarMinusRegular")]
             FaIcon::FaCalendarMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8754,7 +8740,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarMinusSolid")]
             FaIcon::FaCalendarMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8771,7 +8757,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarPlusRegular")]
             FaIcon::FaCalendarPlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8788,7 +8774,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarPlusSolid")]
             FaIcon::FaCalendarPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8805,7 +8791,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarRegular")]
             FaIcon::FaCalendarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8822,7 +8808,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarSolid")]
             FaIcon::FaCalendarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8839,7 +8825,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarWeekSolid")]
             FaIcon::FaCalendarWeekSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8856,7 +8842,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarXmarkRegular")]
             FaIcon::FaCalendarXmarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8873,7 +8859,7 @@ impl Data {
             }
             #[cfg(feature = "FaCalendarXmarkSolid")]
             FaIcon::FaCalendarXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8890,7 +8876,7 @@ impl Data {
             }
             #[cfg(feature = "FaCameraRetroSolid")]
             FaIcon::FaCameraRetroSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8907,7 +8893,7 @@ impl Data {
             }
             #[cfg(feature = "FaCameraRotateSolid")]
             FaIcon::FaCameraRotateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8924,7 +8910,7 @@ impl Data {
             }
             #[cfg(feature = "FaCameraSolid")]
             FaIcon::FaCameraSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8941,7 +8927,7 @@ impl Data {
             }
             #[cfg(feature = "FaCampgroundSolid")]
             FaIcon::FaCampgroundSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8958,7 +8944,7 @@ impl Data {
             }
             #[cfg(feature = "FaCanadianMapleLeafBrands")]
             FaIcon::FaCanadianMapleLeafBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8975,7 +8961,7 @@ impl Data {
             }
             #[cfg(feature = "FaCandyCaneSolid")]
             FaIcon::FaCandyCaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -8992,7 +8978,7 @@ impl Data {
             }
             #[cfg(feature = "FaCannabisSolid")]
             FaIcon::FaCannabisSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9009,7 +8995,7 @@ impl Data {
             }
             #[cfg(feature = "FaCapsulesSolid")]
             FaIcon::FaCapsulesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9026,7 +9012,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarBatterySolid")]
             FaIcon::FaCarBatterySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9043,7 +9029,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarBurstSolid")]
             FaIcon::FaCarBurstSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9060,7 +9046,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarOnSolid")]
             FaIcon::FaCarOnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9077,7 +9063,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarRearSolid")]
             FaIcon::FaCarRearSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9094,7 +9080,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarSideSolid")]
             FaIcon::FaCarSideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9111,7 +9097,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarSolid")]
             FaIcon::FaCarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9128,7 +9114,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarTunnelSolid")]
             FaIcon::FaCarTunnelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9145,7 +9131,7 @@ impl Data {
             }
             #[cfg(feature = "FaCaravanSolid")]
             FaIcon::FaCaravanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9162,7 +9148,7 @@ impl Data {
             }
             #[cfg(feature = "FaCaretDownSolid")]
             FaIcon::FaCaretDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9179,7 +9165,7 @@ impl Data {
             }
             #[cfg(feature = "FaCaretLeftSolid")]
             FaIcon::FaCaretLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9196,7 +9182,7 @@ impl Data {
             }
             #[cfg(feature = "FaCaretRightSolid")]
             FaIcon::FaCaretRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9213,7 +9199,7 @@ impl Data {
             }
             #[cfg(feature = "FaCaretUpSolid")]
             FaIcon::FaCaretUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9230,7 +9216,7 @@ impl Data {
             }
             #[cfg(feature = "FaCarrotSolid")]
             FaIcon::FaCarrotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9247,7 +9233,7 @@ impl Data {
             }
             #[cfg(feature = "FaCartArrowDownSolid")]
             FaIcon::FaCartArrowDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9264,7 +9250,7 @@ impl Data {
             }
             #[cfg(feature = "FaCartFlatbedSolid")]
             FaIcon::FaCartFlatbedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9281,7 +9267,7 @@ impl Data {
             }
             #[cfg(feature = "FaCartFlatbedSuitcaseSolid")]
             FaIcon::FaCartFlatbedSuitcaseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9298,7 +9284,7 @@ impl Data {
             }
             #[cfg(feature = "FaCartPlusSolid")]
             FaIcon::FaCartPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9315,7 +9301,7 @@ impl Data {
             }
             #[cfg(feature = "FaCartShoppingSolid")]
             FaIcon::FaCartShoppingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9332,7 +9318,7 @@ impl Data {
             }
             #[cfg(feature = "FaCashRegisterSolid")]
             FaIcon::FaCashRegisterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9349,7 +9335,7 @@ impl Data {
             }
             #[cfg(feature = "FaCatSolid")]
             FaIcon::FaCatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9366,7 +9352,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcAmazonPayBrands")]
             FaIcon::FaCcAmazonPayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9383,7 +9369,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcAmexBrands")]
             FaIcon::FaCcAmexBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9400,7 +9386,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcApplePayBrands")]
             FaIcon::FaCcApplePayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9417,7 +9403,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcDinersClubBrands")]
             FaIcon::FaCcDinersClubBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9434,7 +9420,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcDiscoverBrands")]
             FaIcon::FaCcDiscoverBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9451,7 +9437,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcJcbBrands")]
             FaIcon::FaCcJcbBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9468,7 +9454,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcMastercardBrands")]
             FaIcon::FaCcMastercardBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9485,7 +9471,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcPaypalBrands")]
             FaIcon::FaCcPaypalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9502,7 +9488,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcStripeBrands")]
             FaIcon::FaCcStripeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9519,7 +9505,7 @@ impl Data {
             }
             #[cfg(feature = "FaCcVisaBrands")]
             FaIcon::FaCcVisaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9536,7 +9522,7 @@ impl Data {
             }
             #[cfg(feature = "FaCediSignSolid")]
             FaIcon::FaCediSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9553,7 +9539,7 @@ impl Data {
             }
             #[cfg(feature = "FaCentSignSolid")]
             FaIcon::FaCentSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9570,7 +9556,7 @@ impl Data {
             }
             #[cfg(feature = "FaCentercodeBrands")]
             FaIcon::FaCentercodeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9587,7 +9573,7 @@ impl Data {
             }
             #[cfg(feature = "FaCentosBrands")]
             FaIcon::FaCentosBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9604,7 +9590,7 @@ impl Data {
             }
             #[cfg(feature = "FaCertificateSolid")]
             FaIcon::FaCertificateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9621,7 +9607,7 @@ impl Data {
             }
             #[cfg(feature = "FaChairSolid")]
             FaIcon::FaChairSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9638,7 +9624,7 @@ impl Data {
             }
             #[cfg(feature = "FaChalkboardSolid")]
             FaIcon::FaChalkboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9655,7 +9641,7 @@ impl Data {
             }
             #[cfg(feature = "FaChalkboardUserSolid")]
             FaIcon::FaChalkboardUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9672,7 +9658,7 @@ impl Data {
             }
             #[cfg(feature = "FaChampagneGlassesSolid")]
             FaIcon::FaChampagneGlassesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9689,7 +9675,7 @@ impl Data {
             }
             #[cfg(feature = "FaChargingStationSolid")]
             FaIcon::FaChargingStationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9706,7 +9692,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartAreaSolid")]
             FaIcon::FaChartAreaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9723,7 +9709,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartBarRegular")]
             FaIcon::FaChartBarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9740,7 +9726,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartBarSolid")]
             FaIcon::FaChartBarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9757,7 +9743,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartColumnSolid")]
             FaIcon::FaChartColumnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9774,7 +9760,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartGanttSolid")]
             FaIcon::FaChartGanttSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9791,7 +9777,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartLineSolid")]
             FaIcon::FaChartLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9808,7 +9794,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartPieSolid")]
             FaIcon::FaChartPieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9825,7 +9811,7 @@ impl Data {
             }
             #[cfg(feature = "FaChartSimpleSolid")]
             FaIcon::FaChartSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9842,7 +9828,7 @@ impl Data {
             }
             #[cfg(feature = "FaCheckDoubleSolid")]
             FaIcon::FaCheckDoubleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9859,7 +9845,7 @@ impl Data {
             }
             #[cfg(feature = "FaCheckSolid")]
             FaIcon::FaCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9876,7 +9862,7 @@ impl Data {
             }
             #[cfg(feature = "FaCheckToSlotSolid")]
             FaIcon::FaCheckToSlotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9893,7 +9879,7 @@ impl Data {
             }
             #[cfg(feature = "FaCheeseSolid")]
             FaIcon::FaCheeseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9910,7 +9896,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessBishopRegular")]
             FaIcon::FaChessBishopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9927,7 +9913,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessBishopSolid")]
             FaIcon::FaChessBishopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9944,7 +9930,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessBoardSolid")]
             FaIcon::FaChessBoardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9961,7 +9947,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessKingRegular")]
             FaIcon::FaChessKingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9978,7 +9964,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessKingSolid")]
             FaIcon::FaChessKingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -9995,7 +9981,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessKnightRegular")]
             FaIcon::FaChessKnightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10012,7 +9998,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessKnightSolid")]
             FaIcon::FaChessKnightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10029,7 +10015,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessPawnRegular")]
             FaIcon::FaChessPawnRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10046,7 +10032,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessPawnSolid")]
             FaIcon::FaChessPawnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10063,7 +10049,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessQueenRegular")]
             FaIcon::FaChessQueenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10080,7 +10066,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessQueenSolid")]
             FaIcon::FaChessQueenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10097,7 +10083,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessRookRegular")]
             FaIcon::FaChessRookRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10114,7 +10100,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessRookSolid")]
             FaIcon::FaChessRookSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10131,7 +10117,7 @@ impl Data {
             }
             #[cfg(feature = "FaChessSolid")]
             FaIcon::FaChessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10148,7 +10134,7 @@ impl Data {
             }
             #[cfg(feature = "FaChevronDownSolid")]
             FaIcon::FaChevronDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10165,7 +10151,7 @@ impl Data {
             }
             #[cfg(feature = "FaChevronLeftSolid")]
             FaIcon::FaChevronLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10182,7 +10168,7 @@ impl Data {
             }
             #[cfg(feature = "FaChevronRightSolid")]
             FaIcon::FaChevronRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10199,7 +10185,7 @@ impl Data {
             }
             #[cfg(feature = "FaChevronUpSolid")]
             FaIcon::FaChevronUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10216,7 +10202,7 @@ impl Data {
             }
             #[cfg(feature = "FaChildCombatantSolid")]
             FaIcon::FaChildCombatantSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10233,7 +10219,7 @@ impl Data {
             }
             #[cfg(feature = "FaChildDressSolid")]
             FaIcon::FaChildDressSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10250,7 +10236,7 @@ impl Data {
             }
             #[cfg(feature = "FaChildReachingSolid")]
             FaIcon::FaChildReachingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10267,7 +10253,7 @@ impl Data {
             }
             #[cfg(feature = "FaChildSolid")]
             FaIcon::FaChildSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10284,7 +10270,7 @@ impl Data {
             }
             #[cfg(feature = "FaChildrenSolid")]
             FaIcon::FaChildrenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10301,7 +10287,7 @@ impl Data {
             }
             #[cfg(feature = "FaChromeBrands")]
             FaIcon::FaChromeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10318,7 +10304,7 @@ impl Data {
             }
             #[cfg(feature = "FaChromecastBrands")]
             FaIcon::FaChromecastBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10335,7 +10321,7 @@ impl Data {
             }
             #[cfg(feature = "FaChurchSolid")]
             FaIcon::FaChurchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10352,7 +10338,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleArrowDownSolid")]
             FaIcon::FaCircleArrowDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10369,7 +10355,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleArrowLeftSolid")]
             FaIcon::FaCircleArrowLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10386,7 +10372,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleArrowRightSolid")]
             FaIcon::FaCircleArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10403,7 +10389,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleArrowUpSolid")]
             FaIcon::FaCircleArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10420,7 +10406,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleCheckRegular")]
             FaIcon::FaCircleCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10437,7 +10423,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleCheckSolid")]
             FaIcon::FaCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10454,7 +10440,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleChevronDownSolid")]
             FaIcon::FaCircleChevronDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10471,7 +10457,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleChevronLeftSolid")]
             FaIcon::FaCircleChevronLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10488,7 +10474,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleChevronRightSolid")]
             FaIcon::FaCircleChevronRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10505,7 +10491,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleChevronUpSolid")]
             FaIcon::FaCircleChevronUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10522,7 +10508,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleDollarToSlotSolid")]
             FaIcon::FaCircleDollarToSlotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10539,7 +10525,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleDotRegular")]
             FaIcon::FaCircleDotRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10556,7 +10542,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleDotSolid")]
             FaIcon::FaCircleDotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10573,7 +10559,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleDownRegular")]
             FaIcon::FaCircleDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10590,7 +10576,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleDownSolid")]
             FaIcon::FaCircleDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10607,7 +10593,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleExclamationSolid")]
             FaIcon::FaCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10624,7 +10610,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleHSolid")]
             FaIcon::FaCircleHSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10641,7 +10627,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleHalfStrokeSolid")]
             FaIcon::FaCircleHalfStrokeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10658,7 +10644,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleInfoSolid")]
             FaIcon::FaCircleInfoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10675,7 +10661,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleLeftRegular")]
             FaIcon::FaCircleLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10692,7 +10678,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleLeftSolid")]
             FaIcon::FaCircleLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10709,7 +10695,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleMinusSolid")]
             FaIcon::FaCircleMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10726,7 +10712,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleNodesSolid")]
             FaIcon::FaCircleNodesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10743,7 +10729,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleNotchSolid")]
             FaIcon::FaCircleNotchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10760,7 +10746,7 @@ impl Data {
             }
             #[cfg(feature = "FaCirclePauseRegular")]
             FaIcon::FaCirclePauseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10777,7 +10763,7 @@ impl Data {
             }
             #[cfg(feature = "FaCirclePauseSolid")]
             FaIcon::FaCirclePauseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10794,7 +10780,7 @@ impl Data {
             }
             #[cfg(feature = "FaCirclePlayRegular")]
             FaIcon::FaCirclePlayRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10811,7 +10797,7 @@ impl Data {
             }
             #[cfg(feature = "FaCirclePlaySolid")]
             FaIcon::FaCirclePlaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10828,7 +10814,7 @@ impl Data {
             }
             #[cfg(feature = "FaCirclePlusSolid")]
             FaIcon::FaCirclePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10845,7 +10831,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleQuestionRegular")]
             FaIcon::FaCircleQuestionRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10862,7 +10848,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleQuestionSolid")]
             FaIcon::FaCircleQuestionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10879,7 +10865,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleRadiationSolid")]
             FaIcon::FaCircleRadiationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10896,7 +10882,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleRegular")]
             FaIcon::FaCircleRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10913,7 +10899,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleRightRegular")]
             FaIcon::FaCircleRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10930,7 +10916,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleRightSolid")]
             FaIcon::FaCircleRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10947,7 +10933,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleSolid")]
             FaIcon::FaCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10964,7 +10950,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleStopRegular")]
             FaIcon::FaCircleStopRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10981,7 +10967,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleStopSolid")]
             FaIcon::FaCircleStopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -10998,7 +10984,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleUpRegular")]
             FaIcon::FaCircleUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11015,7 +11001,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleUpSolid")]
             FaIcon::FaCircleUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11032,7 +11018,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleUserRegular")]
             FaIcon::FaCircleUserRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11049,7 +11035,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleUserSolid")]
             FaIcon::FaCircleUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11066,7 +11052,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleXmarkRegular")]
             FaIcon::FaCircleXmarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11083,7 +11069,7 @@ impl Data {
             }
             #[cfg(feature = "FaCircleXmarkSolid")]
             FaIcon::FaCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11100,7 +11086,7 @@ impl Data {
             }
             #[cfg(feature = "FaCitySolid")]
             FaIcon::FaCitySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11117,7 +11103,7 @@ impl Data {
             }
             #[cfg(feature = "FaClapperboardSolid")]
             FaIcon::FaClapperboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11134,7 +11120,7 @@ impl Data {
             }
             #[cfg(feature = "FaClipboardCheckSolid")]
             FaIcon::FaClipboardCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11151,7 +11137,7 @@ impl Data {
             }
             #[cfg(feature = "FaClipboardListSolid")]
             FaIcon::FaClipboardListSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11168,7 +11154,7 @@ impl Data {
             }
             #[cfg(feature = "FaClipboardQuestionSolid")]
             FaIcon::FaClipboardQuestionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11185,7 +11171,7 @@ impl Data {
             }
             #[cfg(feature = "FaClipboardRegular")]
             FaIcon::FaClipboardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11202,7 +11188,7 @@ impl Data {
             }
             #[cfg(feature = "FaClipboardSolid")]
             FaIcon::FaClipboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11219,7 +11205,7 @@ impl Data {
             }
             #[cfg(feature = "FaClipboardUserSolid")]
             FaIcon::FaClipboardUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11236,7 +11222,7 @@ impl Data {
             }
             #[cfg(feature = "FaClockRegular")]
             FaIcon::FaClockRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11253,7 +11239,7 @@ impl Data {
             }
             #[cfg(feature = "FaClockRotateLeftSolid")]
             FaIcon::FaClockRotateLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11270,7 +11256,7 @@ impl Data {
             }
             #[cfg(feature = "FaClockSolid")]
             FaIcon::FaClockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11287,7 +11273,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloneRegular")]
             FaIcon::FaCloneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11304,7 +11290,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloneSolid")]
             FaIcon::FaCloneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11321,7 +11307,7 @@ impl Data {
             }
             #[cfg(feature = "FaClosedCaptioningRegular")]
             FaIcon::FaClosedCaptioningRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11338,7 +11324,7 @@ impl Data {
             }
             #[cfg(feature = "FaClosedCaptioningSolid")]
             FaIcon::FaClosedCaptioningSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11355,7 +11341,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudArrowDownSolid")]
             FaIcon::FaCloudArrowDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11372,7 +11358,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudArrowUpSolid")]
             FaIcon::FaCloudArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11389,7 +11375,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudBoltSolid")]
             FaIcon::FaCloudBoltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11406,7 +11392,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudMeatballSolid")]
             FaIcon::FaCloudMeatballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11423,7 +11409,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudMoonRainSolid")]
             FaIcon::FaCloudMoonRainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11440,7 +11426,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudMoonSolid")]
             FaIcon::FaCloudMoonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11457,7 +11443,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudRainSolid")]
             FaIcon::FaCloudRainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11474,7 +11460,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudShowersHeavySolid")]
             FaIcon::FaCloudShowersHeavySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11491,7 +11477,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudShowersWaterSolid")]
             FaIcon::FaCloudShowersWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11508,7 +11494,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudSolid")]
             FaIcon::FaCloudSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11525,7 +11511,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudSunRainSolid")]
             FaIcon::FaCloudSunRainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11542,7 +11528,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudSunSolid")]
             FaIcon::FaCloudSunSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11559,7 +11545,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudflareBrands")]
             FaIcon::FaCloudflareBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11576,7 +11562,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudscaleBrands")]
             FaIcon::FaCloudscaleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11593,7 +11579,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudsmithBrands")]
             FaIcon::FaCloudsmithBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11610,7 +11596,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloudversifyBrands")]
             FaIcon::FaCloudversifyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11627,7 +11613,7 @@ impl Data {
             }
             #[cfg(feature = "FaCloverSolid")]
             FaIcon::FaCloverSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11644,7 +11630,7 @@ impl Data {
             }
             #[cfg(feature = "FaCmplidBrands")]
             FaIcon::FaCmplidBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11661,7 +11647,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodeBranchSolid")]
             FaIcon::FaCodeBranchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11678,7 +11664,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodeCommitSolid")]
             FaIcon::FaCodeCommitSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11695,7 +11681,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodeCompareSolid")]
             FaIcon::FaCodeCompareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11712,7 +11698,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodeForkSolid")]
             FaIcon::FaCodeForkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11729,7 +11715,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodeMergeSolid")]
             FaIcon::FaCodeMergeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11746,7 +11732,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodePullRequestSolid")]
             FaIcon::FaCodePullRequestSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11763,7 +11749,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodeSolid")]
             FaIcon::FaCodeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11780,7 +11766,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodepenBrands")]
             FaIcon::FaCodepenBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11797,7 +11783,7 @@ impl Data {
             }
             #[cfg(feature = "FaCodiepieBrands")]
             FaIcon::FaCodiepieBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11814,7 +11800,7 @@ impl Data {
             }
             #[cfg(feature = "FaCoinsSolid")]
             FaIcon::FaCoinsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11831,7 +11817,7 @@ impl Data {
             }
             #[cfg(feature = "FaColonSignSolid")]
             FaIcon::FaColonSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11848,7 +11834,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentDollarSolid")]
             FaIcon::FaCommentDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11865,7 +11851,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentDotsRegular")]
             FaIcon::FaCommentDotsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11882,7 +11868,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentDotsSolid")]
             FaIcon::FaCommentDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11899,7 +11885,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentMedicalSolid")]
             FaIcon::FaCommentMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11916,7 +11902,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentRegular")]
             FaIcon::FaCommentRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11933,7 +11919,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentSlashSolid")]
             FaIcon::FaCommentSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11950,7 +11936,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentSmsSolid")]
             FaIcon::FaCommentSmsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11967,7 +11953,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentSolid")]
             FaIcon::FaCommentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -11984,7 +11970,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentsDollarSolid")]
             FaIcon::FaCommentsDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12001,7 +11987,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentsRegular")]
             FaIcon::FaCommentsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12018,7 +12004,7 @@ impl Data {
             }
             #[cfg(feature = "FaCommentsSolid")]
             FaIcon::FaCommentsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12035,7 +12021,7 @@ impl Data {
             }
             #[cfg(feature = "FaCompactDiscSolid")]
             FaIcon::FaCompactDiscSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12052,7 +12038,7 @@ impl Data {
             }
             #[cfg(feature = "FaCompassDraftingSolid")]
             FaIcon::FaCompassDraftingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12069,7 +12055,7 @@ impl Data {
             }
             #[cfg(feature = "FaCompassRegular")]
             FaIcon::FaCompassRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12086,7 +12072,7 @@ impl Data {
             }
             #[cfg(feature = "FaCompassSolid")]
             FaIcon::FaCompassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12103,7 +12089,7 @@ impl Data {
             }
             #[cfg(feature = "FaCompressSolid")]
             FaIcon::FaCompressSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12120,7 +12106,7 @@ impl Data {
             }
             #[cfg(feature = "FaComputerMouseSolid")]
             FaIcon::FaComputerMouseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12137,7 +12123,7 @@ impl Data {
             }
             #[cfg(feature = "FaComputerSolid")]
             FaIcon::FaComputerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12154,7 +12140,7 @@ impl Data {
             }
             #[cfg(feature = "FaConfluenceBrands")]
             FaIcon::FaConfluenceBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12171,7 +12157,7 @@ impl Data {
             }
             #[cfg(feature = "FaConnectdevelopBrands")]
             FaIcon::FaConnectdevelopBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12188,7 +12174,7 @@ impl Data {
             }
             #[cfg(feature = "FaContaoBrands")]
             FaIcon::FaContaoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12205,7 +12191,7 @@ impl Data {
             }
             #[cfg(feature = "FaCookieBiteSolid")]
             FaIcon::FaCookieBiteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12222,7 +12208,7 @@ impl Data {
             }
             #[cfg(feature = "FaCookieSolid")]
             FaIcon::FaCookieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12239,7 +12225,7 @@ impl Data {
             }
             #[cfg(feature = "FaCopyRegular")]
             FaIcon::FaCopyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12256,7 +12242,7 @@ impl Data {
             }
             #[cfg(feature = "FaCopySolid")]
             FaIcon::FaCopySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12273,7 +12259,7 @@ impl Data {
             }
             #[cfg(feature = "FaCopyrightRegular")]
             FaIcon::FaCopyrightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12290,7 +12276,7 @@ impl Data {
             }
             #[cfg(feature = "FaCopyrightSolid")]
             FaIcon::FaCopyrightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12307,7 +12293,7 @@ impl Data {
             }
             #[cfg(feature = "FaCottonBureauBrands")]
             FaIcon::FaCottonBureauBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12324,7 +12310,7 @@ impl Data {
             }
             #[cfg(feature = "FaCouchSolid")]
             FaIcon::FaCouchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12341,7 +12327,7 @@ impl Data {
             }
             #[cfg(feature = "FaCowSolid")]
             FaIcon::FaCowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12358,7 +12344,7 @@ impl Data {
             }
             #[cfg(feature = "FaCpanelBrands")]
             FaIcon::FaCpanelBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12375,7 +12361,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsBrands")]
             FaIcon::FaCreativeCommonsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12392,7 +12378,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsByBrands")]
             FaIcon::FaCreativeCommonsByBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12409,7 +12395,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsNcBrands")]
             FaIcon::FaCreativeCommonsNcBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12426,7 +12412,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsNcEuBrands")]
             FaIcon::FaCreativeCommonsNcEuBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12443,7 +12429,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsNcJpBrands")]
             FaIcon::FaCreativeCommonsNcJpBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12460,7 +12446,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsNdBrands")]
             FaIcon::FaCreativeCommonsNdBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12477,7 +12463,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsPdAltBrands")]
             FaIcon::FaCreativeCommonsPdAltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12494,7 +12480,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsPdBrands")]
             FaIcon::FaCreativeCommonsPdBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12511,7 +12497,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsRemixBrands")]
             FaIcon::FaCreativeCommonsRemixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12528,7 +12514,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsSaBrands")]
             FaIcon::FaCreativeCommonsSaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12545,7 +12531,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsSamplingBrands")]
             FaIcon::FaCreativeCommonsSamplingBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12562,7 +12548,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsSamplingPlusBrands")]
             FaIcon::FaCreativeCommonsSamplingPlusBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12579,7 +12565,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsShareBrands")]
             FaIcon::FaCreativeCommonsShareBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12596,7 +12582,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreativeCommonsZeroBrands")]
             FaIcon::FaCreativeCommonsZeroBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12613,7 +12599,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreditCardRegular")]
             FaIcon::FaCreditCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12630,7 +12616,7 @@ impl Data {
             }
             #[cfg(feature = "FaCreditCardSolid")]
             FaIcon::FaCreditCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12647,7 +12633,7 @@ impl Data {
             }
             #[cfg(feature = "FaCriticalRoleBrands")]
             FaIcon::FaCriticalRoleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12664,7 +12650,7 @@ impl Data {
             }
             #[cfg(feature = "FaCropSimpleSolid")]
             FaIcon::FaCropSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12681,7 +12667,7 @@ impl Data {
             }
             #[cfg(feature = "FaCropSolid")]
             FaIcon::FaCropSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12698,7 +12684,7 @@ impl Data {
             }
             #[cfg(feature = "FaCrossSolid")]
             FaIcon::FaCrossSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12715,7 +12701,7 @@ impl Data {
             }
             #[cfg(feature = "FaCrosshairsSolid")]
             FaIcon::FaCrosshairsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12732,7 +12718,7 @@ impl Data {
             }
             #[cfg(feature = "FaCrowSolid")]
             FaIcon::FaCrowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12749,7 +12735,7 @@ impl Data {
             }
             #[cfg(feature = "FaCrownSolid")]
             FaIcon::FaCrownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12766,7 +12752,7 @@ impl Data {
             }
             #[cfg(feature = "FaCrutchSolid")]
             FaIcon::FaCrutchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12783,7 +12769,7 @@ impl Data {
             }
             #[cfg(feature = "FaCruzeiroSignSolid")]
             FaIcon::FaCruzeiroSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12800,7 +12786,7 @@ impl Data {
             }
             #[cfg(feature = "FaCss3AltBrands")]
             FaIcon::FaCss3AltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12817,7 +12803,7 @@ impl Data {
             }
             #[cfg(feature = "FaCss3Brands")]
             FaIcon::FaCss3Brands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12834,7 +12820,7 @@ impl Data {
             }
             #[cfg(feature = "FaCubeSolid")]
             FaIcon::FaCubeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12851,7 +12837,7 @@ impl Data {
             }
             #[cfg(feature = "FaCubesSolid")]
             FaIcon::FaCubesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12868,7 +12854,7 @@ impl Data {
             }
             #[cfg(feature = "FaCubesStackedSolid")]
             FaIcon::FaCubesStackedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12885,7 +12871,7 @@ impl Data {
             }
             #[cfg(feature = "FaCuttlefishBrands")]
             FaIcon::FaCuttlefishBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12902,7 +12888,7 @@ impl Data {
             }
             #[cfg(feature = "FaDAndDBeyondBrands")]
             FaIcon::FaDAndDBeyondBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12919,7 +12905,7 @@ impl Data {
             }
             #[cfg(feature = "FaDAndDBrands")]
             FaIcon::FaDAndDBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12936,7 +12922,7 @@ impl Data {
             }
             #[cfg(feature = "FaDSolid")]
             FaIcon::FaDSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12953,7 +12939,7 @@ impl Data {
             }
             #[cfg(feature = "FaDailymotionBrands")]
             FaIcon::FaDailymotionBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12970,7 +12956,7 @@ impl Data {
             }
             #[cfg(feature = "FaDashcubeBrands")]
             FaIcon::FaDashcubeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -12987,7 +12973,7 @@ impl Data {
             }
             #[cfg(feature = "FaDatabaseSolid")]
             FaIcon::FaDatabaseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13004,7 +12990,7 @@ impl Data {
             }
             #[cfg(feature = "FaDeezerBrands")]
             FaIcon::FaDeezerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13021,7 +13007,7 @@ impl Data {
             }
             #[cfg(feature = "FaDeleteLeftSolid")]
             FaIcon::FaDeleteLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13038,7 +13024,7 @@ impl Data {
             }
             #[cfg(feature = "FaDeliciousBrands")]
             FaIcon::FaDeliciousBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13055,7 +13041,7 @@ impl Data {
             }
             #[cfg(feature = "FaDemocratSolid")]
             FaIcon::FaDemocratSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13072,7 +13058,7 @@ impl Data {
             }
             #[cfg(feature = "FaDeploydogBrands")]
             FaIcon::FaDeploydogBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13089,7 +13075,7 @@ impl Data {
             }
             #[cfg(feature = "FaDeskproBrands")]
             FaIcon::FaDeskproBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13106,7 +13092,7 @@ impl Data {
             }
             #[cfg(feature = "FaDesktopSolid")]
             FaIcon::FaDesktopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13123,7 +13109,7 @@ impl Data {
             }
             #[cfg(feature = "FaDevBrands")]
             FaIcon::FaDevBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13140,7 +13126,7 @@ impl Data {
             }
             #[cfg(feature = "FaDeviantartBrands")]
             FaIcon::FaDeviantartBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13157,7 +13143,7 @@ impl Data {
             }
             #[cfg(feature = "FaDharmachakraSolid")]
             FaIcon::FaDharmachakraSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13174,7 +13160,7 @@ impl Data {
             }
             #[cfg(feature = "FaDhlBrands")]
             FaIcon::FaDhlBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13191,7 +13177,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiagramNextSolid")]
             FaIcon::FaDiagramNextSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13208,7 +13194,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiagramPredecessorSolid")]
             FaIcon::FaDiagramPredecessorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13225,7 +13211,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiagramProjectSolid")]
             FaIcon::FaDiagramProjectSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13242,7 +13228,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiagramSuccessorSolid")]
             FaIcon::FaDiagramSuccessorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13259,7 +13245,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiamondSolid")]
             FaIcon::FaDiamondSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13276,7 +13262,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiamondTurnRightSolid")]
             FaIcon::FaDiamondTurnRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13293,7 +13279,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiasporaBrands")]
             FaIcon::FaDiasporaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13310,7 +13296,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceD20Solid")]
             FaIcon::FaDiceD20Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13327,7 +13313,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceD6Solid")]
             FaIcon::FaDiceD6Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13344,7 +13330,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceFiveSolid")]
             FaIcon::FaDiceFiveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13361,7 +13347,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceFourSolid")]
             FaIcon::FaDiceFourSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13378,7 +13364,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceOneSolid")]
             FaIcon::FaDiceOneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13395,7 +13381,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceSixSolid")]
             FaIcon::FaDiceSixSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13412,7 +13398,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceSolid")]
             FaIcon::FaDiceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13429,7 +13415,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceThreeSolid")]
             FaIcon::FaDiceThreeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13446,7 +13432,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiceTwoSolid")]
             FaIcon::FaDiceTwoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13463,7 +13449,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiggBrands")]
             FaIcon::FaDiggBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13480,7 +13466,7 @@ impl Data {
             }
             #[cfg(feature = "FaDigitalOceanBrands")]
             FaIcon::FaDigitalOceanBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13497,7 +13483,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiscordBrands")]
             FaIcon::FaDiscordBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13514,7 +13500,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiscourseBrands")]
             FaIcon::FaDiscourseBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13531,7 +13517,7 @@ impl Data {
             }
             #[cfg(feature = "FaDiseaseSolid")]
             FaIcon::FaDiseaseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13548,7 +13534,7 @@ impl Data {
             }
             #[cfg(feature = "FaDisplaySolid")]
             FaIcon::FaDisplaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13565,7 +13551,7 @@ impl Data {
             }
             #[cfg(feature = "FaDivideSolid")]
             FaIcon::FaDivideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13582,7 +13568,7 @@ impl Data {
             }
             #[cfg(feature = "FaDnaSolid")]
             FaIcon::FaDnaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13599,7 +13585,7 @@ impl Data {
             }
             #[cfg(feature = "FaDochubBrands")]
             FaIcon::FaDochubBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13616,7 +13602,7 @@ impl Data {
             }
             #[cfg(feature = "FaDockerBrands")]
             FaIcon::FaDockerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13633,7 +13619,7 @@ impl Data {
             }
             #[cfg(feature = "FaDogSolid")]
             FaIcon::FaDogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13650,7 +13636,7 @@ impl Data {
             }
             #[cfg(feature = "FaDollarSignSolid")]
             FaIcon::FaDollarSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13667,7 +13653,7 @@ impl Data {
             }
             #[cfg(feature = "FaDollySolid")]
             FaIcon::FaDollySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13684,7 +13670,7 @@ impl Data {
             }
             #[cfg(feature = "FaDongSignSolid")]
             FaIcon::FaDongSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13701,7 +13687,7 @@ impl Data {
             }
             #[cfg(feature = "FaDoorClosedSolid")]
             FaIcon::FaDoorClosedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13718,7 +13704,7 @@ impl Data {
             }
             #[cfg(feature = "FaDoorOpenSolid")]
             FaIcon::FaDoorOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13735,7 +13721,7 @@ impl Data {
             }
             #[cfg(feature = "FaDoveSolid")]
             FaIcon::FaDoveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13752,7 +13738,7 @@ impl Data {
             }
             #[cfg(feature = "FaDownLeftAndUpRightToCenterSolid")]
             FaIcon::FaDownLeftAndUpRightToCenterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13769,7 +13755,7 @@ impl Data {
             }
             #[cfg(feature = "FaDownLongSolid")]
             FaIcon::FaDownLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13786,7 +13772,7 @@ impl Data {
             }
             #[cfg(feature = "FaDownloadSolid")]
             FaIcon::FaDownloadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13803,7 +13789,7 @@ impl Data {
             }
             #[cfg(feature = "FaDraft2digitalBrands")]
             FaIcon::FaDraft2digitalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13820,7 +13806,7 @@ impl Data {
             }
             #[cfg(feature = "FaDragonSolid")]
             FaIcon::FaDragonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13837,7 +13823,7 @@ impl Data {
             }
             #[cfg(feature = "FaDrawPolygonSolid")]
             FaIcon::FaDrawPolygonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13854,7 +13840,7 @@ impl Data {
             }
             #[cfg(feature = "FaDribbbleBrands")]
             FaIcon::FaDribbbleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13871,7 +13857,7 @@ impl Data {
             }
             #[cfg(feature = "FaDropboxBrands")]
             FaIcon::FaDropboxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13888,7 +13874,7 @@ impl Data {
             }
             #[cfg(feature = "FaDropletSlashSolid")]
             FaIcon::FaDropletSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13905,7 +13891,7 @@ impl Data {
             }
             #[cfg(feature = "FaDropletSolid")]
             FaIcon::FaDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13922,7 +13908,7 @@ impl Data {
             }
             #[cfg(feature = "FaDrumSolid")]
             FaIcon::FaDrumSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13939,7 +13925,7 @@ impl Data {
             }
             #[cfg(feature = "FaDrumSteelpanSolid")]
             FaIcon::FaDrumSteelpanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13956,7 +13942,7 @@ impl Data {
             }
             #[cfg(feature = "FaDrumstickBiteSolid")]
             FaIcon::FaDrumstickBiteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13973,7 +13959,7 @@ impl Data {
             }
             #[cfg(feature = "FaDrupalBrands")]
             FaIcon::FaDrupalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -13990,7 +13976,7 @@ impl Data {
             }
             #[cfg(feature = "FaDumbbellSolid")]
             FaIcon::FaDumbbellSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14007,7 +13993,7 @@ impl Data {
             }
             #[cfg(feature = "FaDumpsterFireSolid")]
             FaIcon::FaDumpsterFireSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14024,7 +14010,7 @@ impl Data {
             }
             #[cfg(feature = "FaDumpsterSolid")]
             FaIcon::FaDumpsterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14041,7 +14027,7 @@ impl Data {
             }
             #[cfg(feature = "FaDungeonSolid")]
             FaIcon::FaDungeonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14058,7 +14044,7 @@ impl Data {
             }
             #[cfg(feature = "FaDyalogBrands")]
             FaIcon::FaDyalogBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14075,7 +14061,7 @@ impl Data {
             }
             #[cfg(feature = "FaESolid")]
             FaIcon::FaESolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14092,7 +14078,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarDeafSolid")]
             FaIcon::FaEarDeafSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14109,7 +14095,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarListenSolid")]
             FaIcon::FaEarListenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14126,7 +14112,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarlybirdsBrands")]
             FaIcon::FaEarlybirdsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14143,7 +14129,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarthAfricaSolid")]
             FaIcon::FaEarthAfricaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14160,7 +14146,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarthAmericasSolid")]
             FaIcon::FaEarthAmericasSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14177,7 +14163,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarthAsiaSolid")]
             FaIcon::FaEarthAsiaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14194,7 +14180,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarthEuropeSolid")]
             FaIcon::FaEarthEuropeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14211,7 +14197,7 @@ impl Data {
             }
             #[cfg(feature = "FaEarthOceaniaSolid")]
             FaIcon::FaEarthOceaniaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14228,7 +14214,7 @@ impl Data {
             }
             #[cfg(feature = "FaEbayBrands")]
             FaIcon::FaEbayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14245,7 +14231,7 @@ impl Data {
             }
             #[cfg(feature = "FaEdgeBrands")]
             FaIcon::FaEdgeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14262,7 +14248,7 @@ impl Data {
             }
             #[cfg(feature = "FaEdgeLegacyBrands")]
             FaIcon::FaEdgeLegacyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14279,7 +14265,7 @@ impl Data {
             }
             #[cfg(feature = "FaEggSolid")]
             FaIcon::FaEggSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14296,7 +14282,7 @@ impl Data {
             }
             #[cfg(feature = "FaEjectSolid")]
             FaIcon::FaEjectSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14313,7 +14299,7 @@ impl Data {
             }
             #[cfg(feature = "FaElementorBrands")]
             FaIcon::FaElementorBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14330,7 +14316,7 @@ impl Data {
             }
             #[cfg(feature = "FaElevatorSolid")]
             FaIcon::FaElevatorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14347,7 +14333,7 @@ impl Data {
             }
             #[cfg(feature = "FaEllipsisSolid")]
             FaIcon::FaEllipsisSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14364,7 +14350,7 @@ impl Data {
             }
             #[cfg(feature = "FaEllipsisVerticalSolid")]
             FaIcon::FaEllipsisVerticalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14381,7 +14367,7 @@ impl Data {
             }
             #[cfg(feature = "FaElloBrands")]
             FaIcon::FaElloBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14398,7 +14384,7 @@ impl Data {
             }
             #[cfg(feature = "FaEmberBrands")]
             FaIcon::FaEmberBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14415,7 +14401,7 @@ impl Data {
             }
             #[cfg(feature = "FaEmpireBrands")]
             FaIcon::FaEmpireBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14432,7 +14418,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopeCircleCheckSolid")]
             FaIcon::FaEnvelopeCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14449,7 +14435,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopeOpenRegular")]
             FaIcon::FaEnvelopeOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14466,7 +14452,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopeOpenSolid")]
             FaIcon::FaEnvelopeOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14483,7 +14469,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopeOpenTextSolid")]
             FaIcon::FaEnvelopeOpenTextSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14500,7 +14486,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopeRegular")]
             FaIcon::FaEnvelopeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14517,7 +14503,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopeSolid")]
             FaIcon::FaEnvelopeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14534,7 +14520,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnvelopesBulkSolid")]
             FaIcon::FaEnvelopesBulkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14551,7 +14537,7 @@ impl Data {
             }
             #[cfg(feature = "FaEnviraBrands")]
             FaIcon::FaEnviraBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14568,7 +14554,7 @@ impl Data {
             }
             #[cfg(feature = "FaEqualsSolid")]
             FaIcon::FaEqualsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14585,7 +14571,7 @@ impl Data {
             }
             #[cfg(feature = "FaEraserSolid")]
             FaIcon::FaEraserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14602,7 +14588,7 @@ impl Data {
             }
             #[cfg(feature = "FaErlangBrands")]
             FaIcon::FaErlangBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14619,7 +14605,7 @@ impl Data {
             }
             #[cfg(feature = "FaEthereumBrands")]
             FaIcon::FaEthereumBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14636,7 +14622,7 @@ impl Data {
             }
             #[cfg(feature = "FaEthernetSolid")]
             FaIcon::FaEthernetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14653,7 +14639,7 @@ impl Data {
             }
             #[cfg(feature = "FaEtsyBrands")]
             FaIcon::FaEtsyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14670,7 +14656,7 @@ impl Data {
             }
             #[cfg(feature = "FaEuroSignSolid")]
             FaIcon::FaEuroSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14687,7 +14673,7 @@ impl Data {
             }
             #[cfg(feature = "FaEvernoteBrands")]
             FaIcon::FaEvernoteBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14704,7 +14690,7 @@ impl Data {
             }
             #[cfg(feature = "FaExclamationSolid")]
             FaIcon::FaExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14721,7 +14707,7 @@ impl Data {
             }
             #[cfg(feature = "FaExpandSolid")]
             FaIcon::FaExpandSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14738,7 +14724,7 @@ impl Data {
             }
             #[cfg(feature = "FaExpeditedsslBrands")]
             FaIcon::FaExpeditedsslBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14755,7 +14741,7 @@ impl Data {
             }
             #[cfg(feature = "FaExplosionSolid")]
             FaIcon::FaExplosionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14772,7 +14758,7 @@ impl Data {
             }
             #[cfg(feature = "FaEyeDropperSolid")]
             FaIcon::FaEyeDropperSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14789,7 +14775,7 @@ impl Data {
             }
             #[cfg(feature = "FaEyeLowVisionSolid")]
             FaIcon::FaEyeLowVisionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14806,7 +14792,7 @@ impl Data {
             }
             #[cfg(feature = "FaEyeRegular")]
             FaIcon::FaEyeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14823,7 +14809,7 @@ impl Data {
             }
             #[cfg(feature = "FaEyeSlashRegular")]
             FaIcon::FaEyeSlashRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14840,7 +14826,7 @@ impl Data {
             }
             #[cfg(feature = "FaEyeSlashSolid")]
             FaIcon::FaEyeSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14857,7 +14843,7 @@ impl Data {
             }
             #[cfg(feature = "FaEyeSolid")]
             FaIcon::FaEyeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14874,7 +14860,7 @@ impl Data {
             }
             #[cfg(feature = "FaFSolid")]
             FaIcon::FaFSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14891,7 +14877,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceAngryRegular")]
             FaIcon::FaFaceAngryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14908,7 +14894,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceAngrySolid")]
             FaIcon::FaFaceAngrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14925,7 +14911,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceDizzyRegular")]
             FaIcon::FaFaceDizzyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14942,7 +14928,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceDizzySolid")]
             FaIcon::FaFaceDizzySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14959,7 +14945,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceFlushedRegular")]
             FaIcon::FaFaceFlushedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14976,7 +14962,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceFlushedSolid")]
             FaIcon::FaFaceFlushedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -14993,7 +14979,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceFrownOpenRegular")]
             FaIcon::FaFaceFrownOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15010,7 +14996,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceFrownOpenSolid")]
             FaIcon::FaFaceFrownOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15027,7 +15013,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceFrownRegular")]
             FaIcon::FaFaceFrownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15044,7 +15030,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceFrownSolid")]
             FaIcon::FaFaceFrownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15061,7 +15047,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrimaceRegular")]
             FaIcon::FaFaceGrimaceRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15078,7 +15064,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrimaceSolid")]
             FaIcon::FaFaceGrimaceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15095,7 +15081,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinBeamRegular")]
             FaIcon::FaFaceGrinBeamRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15112,7 +15098,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinBeamSolid")]
             FaIcon::FaFaceGrinBeamSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15129,7 +15115,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinBeamSweatRegular")]
             FaIcon::FaFaceGrinBeamSweatRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15146,7 +15132,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinBeamSweatSolid")]
             FaIcon::FaFaceGrinBeamSweatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15163,7 +15149,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinHeartsRegular")]
             FaIcon::FaFaceGrinHeartsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15180,7 +15166,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinHeartsSolid")]
             FaIcon::FaFaceGrinHeartsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15197,7 +15183,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinRegular")]
             FaIcon::FaFaceGrinRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15214,7 +15200,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinSolid")]
             FaIcon::FaFaceGrinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15231,7 +15217,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinSquintRegular")]
             FaIcon::FaFaceGrinSquintRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15248,7 +15234,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinSquintSolid")]
             FaIcon::FaFaceGrinSquintSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15265,7 +15251,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinSquintTearsRegular")]
             FaIcon::FaFaceGrinSquintTearsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15282,7 +15268,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinSquintTearsSolid")]
             FaIcon::FaFaceGrinSquintTearsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15299,7 +15285,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinStarsRegular")]
             FaIcon::FaFaceGrinStarsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15316,7 +15302,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinStarsSolid")]
             FaIcon::FaFaceGrinStarsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15333,7 +15319,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTearsRegular")]
             FaIcon::FaFaceGrinTearsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15350,7 +15336,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTearsSolid")]
             FaIcon::FaFaceGrinTearsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15367,7 +15353,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTongueRegular")]
             FaIcon::FaFaceGrinTongueRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15384,7 +15370,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTongueSolid")]
             FaIcon::FaFaceGrinTongueSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15401,7 +15387,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTongueSquintRegular")]
             FaIcon::FaFaceGrinTongueSquintRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15418,7 +15404,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTongueSquintSolid")]
             FaIcon::FaFaceGrinTongueSquintSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15435,7 +15421,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTongueWinkRegular")]
             FaIcon::FaFaceGrinTongueWinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15452,7 +15438,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinTongueWinkSolid")]
             FaIcon::FaFaceGrinTongueWinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15469,7 +15455,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinWideRegular")]
             FaIcon::FaFaceGrinWideRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15486,7 +15472,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinWideSolid")]
             FaIcon::FaFaceGrinWideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15503,7 +15489,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinWinkRegular")]
             FaIcon::FaFaceGrinWinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15520,7 +15506,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceGrinWinkSolid")]
             FaIcon::FaFaceGrinWinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15537,7 +15523,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceKissBeamRegular")]
             FaIcon::FaFaceKissBeamRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15554,7 +15540,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceKissBeamSolid")]
             FaIcon::FaFaceKissBeamSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15571,7 +15557,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceKissRegular")]
             FaIcon::FaFaceKissRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15588,7 +15574,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceKissSolid")]
             FaIcon::FaFaceKissSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15605,7 +15591,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceKissWinkHeartRegular")]
             FaIcon::FaFaceKissWinkHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15622,7 +15608,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceKissWinkHeartSolid")]
             FaIcon::FaFaceKissWinkHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15639,7 +15625,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughBeamRegular")]
             FaIcon::FaFaceLaughBeamRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15656,7 +15642,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughBeamSolid")]
             FaIcon::FaFaceLaughBeamSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15673,7 +15659,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughRegular")]
             FaIcon::FaFaceLaughRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15690,7 +15676,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughSolid")]
             FaIcon::FaFaceLaughSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15707,7 +15693,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughSquintRegular")]
             FaIcon::FaFaceLaughSquintRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15724,7 +15710,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughSquintSolid")]
             FaIcon::FaFaceLaughSquintSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15741,7 +15727,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughWinkRegular")]
             FaIcon::FaFaceLaughWinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15758,7 +15744,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceLaughWinkSolid")]
             FaIcon::FaFaceLaughWinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15775,7 +15761,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceMehBlankRegular")]
             FaIcon::FaFaceMehBlankRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15792,7 +15778,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceMehBlankSolid")]
             FaIcon::FaFaceMehBlankSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15809,7 +15795,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceMehRegular")]
             FaIcon::FaFaceMehRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15826,7 +15812,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceMehSolid")]
             FaIcon::FaFaceMehSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15843,7 +15829,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceRollingEyesRegular")]
             FaIcon::FaFaceRollingEyesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15860,7 +15846,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceRollingEyesSolid")]
             FaIcon::FaFaceRollingEyesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15877,7 +15863,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSadCryRegular")]
             FaIcon::FaFaceSadCryRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15894,7 +15880,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSadCrySolid")]
             FaIcon::FaFaceSadCrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15911,7 +15897,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSadTearRegular")]
             FaIcon::FaFaceSadTearRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15928,7 +15914,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSadTearSolid")]
             FaIcon::FaFaceSadTearSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15945,7 +15931,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSmileBeamRegular")]
             FaIcon::FaFaceSmileBeamRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15962,7 +15948,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSmileBeamSolid")]
             FaIcon::FaFaceSmileBeamSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15979,7 +15965,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSmileRegular")]
             FaIcon::FaFaceSmileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -15996,7 +15982,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSmileSolid")]
             FaIcon::FaFaceSmileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16013,7 +15999,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSmileWinkRegular")]
             FaIcon::FaFaceSmileWinkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16030,7 +16016,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSmileWinkSolid")]
             FaIcon::FaFaceSmileWinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16047,7 +16033,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSurpriseRegular")]
             FaIcon::FaFaceSurpriseRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16064,7 +16050,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceSurpriseSolid")]
             FaIcon::FaFaceSurpriseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16081,7 +16067,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceTiredRegular")]
             FaIcon::FaFaceTiredRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16098,7 +16084,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaceTiredSolid")]
             FaIcon::FaFaceTiredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16115,7 +16101,7 @@ impl Data {
             }
             #[cfg(feature = "FaFacebookBrands")]
             FaIcon::FaFacebookBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16132,7 +16118,7 @@ impl Data {
             }
             #[cfg(feature = "FaFacebookFBrands")]
             FaIcon::FaFacebookFBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16149,7 +16135,7 @@ impl Data {
             }
             #[cfg(feature = "FaFacebookMessengerBrands")]
             FaIcon::FaFacebookMessengerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16166,7 +16152,7 @@ impl Data {
             }
             #[cfg(feature = "FaFanSolid")]
             FaIcon::FaFanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16183,7 +16169,7 @@ impl Data {
             }
             #[cfg(feature = "FaFantasyFlightGamesBrands")]
             FaIcon::FaFantasyFlightGamesBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16200,7 +16186,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaucetDripSolid")]
             FaIcon::FaFaucetDripSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16217,7 +16203,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaucetSolid")]
             FaIcon::FaFaucetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16234,7 +16220,7 @@ impl Data {
             }
             #[cfg(feature = "FaFaxSolid")]
             FaIcon::FaFaxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16251,7 +16237,7 @@ impl Data {
             }
             #[cfg(feature = "FaFeatherPointedSolid")]
             FaIcon::FaFeatherPointedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16268,7 +16254,7 @@ impl Data {
             }
             #[cfg(feature = "FaFeatherSolid")]
             FaIcon::FaFeatherSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16285,7 +16271,7 @@ impl Data {
             }
             #[cfg(feature = "FaFedexBrands")]
             FaIcon::FaFedexBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16302,7 +16288,7 @@ impl Data {
             }
             #[cfg(feature = "FaFedoraBrands")]
             FaIcon::FaFedoraBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16319,7 +16305,7 @@ impl Data {
             }
             #[cfg(feature = "FaFerrySolid")]
             FaIcon::FaFerrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16336,7 +16322,7 @@ impl Data {
             }
             #[cfg(feature = "FaFigmaBrands")]
             FaIcon::FaFigmaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16353,7 +16339,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileArrowDownSolid")]
             FaIcon::FaFileArrowDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16370,7 +16356,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileArrowUpSolid")]
             FaIcon::FaFileArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16387,7 +16373,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileAudioRegular")]
             FaIcon::FaFileAudioRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16404,7 +16390,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileAudioSolid")]
             FaIcon::FaFileAudioSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16421,7 +16407,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCircleCheckSolid")]
             FaIcon::FaFileCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16438,7 +16424,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCircleExclamationSolid")]
             FaIcon::FaFileCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16455,7 +16441,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCircleMinusSolid")]
             FaIcon::FaFileCircleMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16472,7 +16458,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCirclePlusSolid")]
             FaIcon::FaFileCirclePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16489,7 +16475,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCircleQuestionSolid")]
             FaIcon::FaFileCircleQuestionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16506,7 +16492,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCircleXmarkSolid")]
             FaIcon::FaFileCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16523,7 +16509,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCodeRegular")]
             FaIcon::FaFileCodeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16540,7 +16526,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCodeSolid")]
             FaIcon::FaFileCodeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16557,7 +16543,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileContractSolid")]
             FaIcon::FaFileContractSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16574,7 +16560,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileCsvSolid")]
             FaIcon::FaFileCsvSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16591,7 +16577,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileExcelRegular")]
             FaIcon::FaFileExcelRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16608,7 +16594,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileExcelSolid")]
             FaIcon::FaFileExcelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16625,7 +16611,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileExportSolid")]
             FaIcon::FaFileExportSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16642,7 +16628,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileImageRegular")]
             FaIcon::FaFileImageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16659,7 +16645,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileImageSolid")]
             FaIcon::FaFileImageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16676,7 +16662,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileImportSolid")]
             FaIcon::FaFileImportSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16693,7 +16679,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileInvoiceDollarSolid")]
             FaIcon::FaFileInvoiceDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16710,7 +16696,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileInvoiceSolid")]
             FaIcon::FaFileInvoiceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16727,7 +16713,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileLinesRegular")]
             FaIcon::FaFileLinesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16744,7 +16730,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileLinesSolid")]
             FaIcon::FaFileLinesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16761,7 +16747,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileMedicalSolid")]
             FaIcon::FaFileMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16778,7 +16764,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilePdfRegular")]
             FaIcon::FaFilePdfRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16795,7 +16781,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilePdfSolid")]
             FaIcon::FaFilePdfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16812,7 +16798,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilePenSolid")]
             FaIcon::FaFilePenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16829,7 +16815,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilePowerpointRegular")]
             FaIcon::FaFilePowerpointRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16846,7 +16832,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilePowerpointSolid")]
             FaIcon::FaFilePowerpointSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16863,7 +16849,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilePrescriptionSolid")]
             FaIcon::FaFilePrescriptionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16880,7 +16866,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileRegular")]
             FaIcon::FaFileRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16897,7 +16883,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileShieldSolid")]
             FaIcon::FaFileShieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16914,7 +16900,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileSignatureSolid")]
             FaIcon::FaFileSignatureSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16931,7 +16917,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileSolid")]
             FaIcon::FaFileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16948,7 +16934,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileVideoRegular")]
             FaIcon::FaFileVideoRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16965,7 +16951,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileVideoSolid")]
             FaIcon::FaFileVideoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16982,7 +16968,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileWaveformSolid")]
             FaIcon::FaFileWaveformSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -16999,7 +16985,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileWordRegular")]
             FaIcon::FaFileWordRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17016,7 +17002,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileWordSolid")]
             FaIcon::FaFileWordSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17033,7 +17019,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileZipperRegular")]
             FaIcon::FaFileZipperRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17050,7 +17036,7 @@ impl Data {
             }
             #[cfg(feature = "FaFileZipperSolid")]
             FaIcon::FaFileZipperSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17067,7 +17053,7 @@ impl Data {
             }
             #[cfg(feature = "FaFillDripSolid")]
             FaIcon::FaFillDripSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17084,7 +17070,7 @@ impl Data {
             }
             #[cfg(feature = "FaFillSolid")]
             FaIcon::FaFillSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17101,7 +17087,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilmSolid")]
             FaIcon::FaFilmSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17118,7 +17104,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilterCircleDollarSolid")]
             FaIcon::FaFilterCircleDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17135,7 +17121,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilterCircleXmarkSolid")]
             FaIcon::FaFilterCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17152,7 +17138,7 @@ impl Data {
             }
             #[cfg(feature = "FaFilterSolid")]
             FaIcon::FaFilterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17169,7 +17155,7 @@ impl Data {
             }
             #[cfg(feature = "FaFingerprintSolid")]
             FaIcon::FaFingerprintSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17186,7 +17172,7 @@ impl Data {
             }
             #[cfg(feature = "FaFireBurnerSolid")]
             FaIcon::FaFireBurnerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17203,7 +17189,7 @@ impl Data {
             }
             #[cfg(feature = "FaFireExtinguisherSolid")]
             FaIcon::FaFireExtinguisherSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17220,7 +17206,7 @@ impl Data {
             }
             #[cfg(feature = "FaFireFlameCurvedSolid")]
             FaIcon::FaFireFlameCurvedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17237,7 +17223,7 @@ impl Data {
             }
             #[cfg(feature = "FaFireFlameSimpleSolid")]
             FaIcon::FaFireFlameSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17254,7 +17240,7 @@ impl Data {
             }
             #[cfg(feature = "FaFireSolid")]
             FaIcon::FaFireSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17271,7 +17257,7 @@ impl Data {
             }
             #[cfg(feature = "FaFirefoxBrands")]
             FaIcon::FaFirefoxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17288,7 +17274,7 @@ impl Data {
             }
             #[cfg(feature = "FaFirefoxBrowserBrands")]
             FaIcon::FaFirefoxBrowserBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17305,7 +17291,7 @@ impl Data {
             }
             #[cfg(feature = "FaFirstOrderAltBrands")]
             FaIcon::FaFirstOrderAltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17322,7 +17308,7 @@ impl Data {
             }
             #[cfg(feature = "FaFirstOrderBrands")]
             FaIcon::FaFirstOrderBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17339,7 +17325,7 @@ impl Data {
             }
             #[cfg(feature = "FaFirstdraftBrands")]
             FaIcon::FaFirstdraftBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17356,7 +17342,7 @@ impl Data {
             }
             #[cfg(feature = "FaFishFinsSolid")]
             FaIcon::FaFishFinsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17373,7 +17359,7 @@ impl Data {
             }
             #[cfg(feature = "FaFishSolid")]
             FaIcon::FaFishSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17390,7 +17376,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlagCheckeredSolid")]
             FaIcon::FaFlagCheckeredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17407,7 +17393,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlagRegular")]
             FaIcon::FaFlagRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17424,7 +17410,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlagSolid")]
             FaIcon::FaFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17441,7 +17427,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlagUsaSolid")]
             FaIcon::FaFlagUsaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17458,7 +17444,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlaskSolid")]
             FaIcon::FaFlaskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17475,7 +17461,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlaskVialSolid")]
             FaIcon::FaFlaskVialSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17492,7 +17478,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlickrBrands")]
             FaIcon::FaFlickrBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17509,7 +17495,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlipboardBrands")]
             FaIcon::FaFlipboardBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17526,7 +17512,7 @@ impl Data {
             }
             #[cfg(feature = "FaFloppyDiskRegular")]
             FaIcon::FaFloppyDiskRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17543,7 +17529,7 @@ impl Data {
             }
             #[cfg(feature = "FaFloppyDiskSolid")]
             FaIcon::FaFloppyDiskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17560,7 +17546,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlorinSignSolid")]
             FaIcon::FaFlorinSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17577,7 +17563,7 @@ impl Data {
             }
             #[cfg(feature = "FaFlyBrands")]
             FaIcon::FaFlyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17594,7 +17580,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderClosedRegular")]
             FaIcon::FaFolderClosedRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17611,7 +17597,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderClosedSolid")]
             FaIcon::FaFolderClosedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17628,7 +17614,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderMinusSolid")]
             FaIcon::FaFolderMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17645,7 +17631,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderOpenRegular")]
             FaIcon::FaFolderOpenRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17662,7 +17648,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderOpenSolid")]
             FaIcon::FaFolderOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17679,7 +17665,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderPlusSolid")]
             FaIcon::FaFolderPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17696,7 +17682,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderRegular")]
             FaIcon::FaFolderRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17713,7 +17699,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderSolid")]
             FaIcon::FaFolderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17730,7 +17716,7 @@ impl Data {
             }
             #[cfg(feature = "FaFolderTreeSolid")]
             FaIcon::FaFolderTreeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17747,7 +17733,7 @@ impl Data {
             }
             #[cfg(feature = "FaFontAwesomeBrands")]
             FaIcon::FaFontAwesomeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17764,7 +17750,7 @@ impl Data {
             }
             #[cfg(feature = "FaFontAwesomeRegular")]
             FaIcon::FaFontAwesomeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17781,7 +17767,7 @@ impl Data {
             }
             #[cfg(feature = "FaFontAwesomeSolid")]
             FaIcon::FaFontAwesomeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17798,7 +17784,7 @@ impl Data {
             }
             #[cfg(feature = "FaFontSolid")]
             FaIcon::FaFontSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17815,7 +17801,7 @@ impl Data {
             }
             #[cfg(feature = "FaFonticonsBrands")]
             FaIcon::FaFonticonsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17832,7 +17818,7 @@ impl Data {
             }
             #[cfg(feature = "FaFonticonsFiBrands")]
             FaIcon::FaFonticonsFiBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17849,7 +17835,7 @@ impl Data {
             }
             #[cfg(feature = "FaFootballSolid")]
             FaIcon::FaFootballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17866,7 +17852,7 @@ impl Data {
             }
             #[cfg(feature = "FaFortAwesomeAltBrands")]
             FaIcon::FaFortAwesomeAltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17883,7 +17869,7 @@ impl Data {
             }
             #[cfg(feature = "FaFortAwesomeBrands")]
             FaIcon::FaFortAwesomeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17900,7 +17886,7 @@ impl Data {
             }
             #[cfg(feature = "FaForumbeeBrands")]
             FaIcon::FaForumbeeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17917,7 +17903,7 @@ impl Data {
             }
             #[cfg(feature = "FaForwardFastSolid")]
             FaIcon::FaForwardFastSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17934,7 +17920,7 @@ impl Data {
             }
             #[cfg(feature = "FaForwardSolid")]
             FaIcon::FaForwardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17951,7 +17937,7 @@ impl Data {
             }
             #[cfg(feature = "FaForwardStepSolid")]
             FaIcon::FaForwardStepSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17968,7 +17954,7 @@ impl Data {
             }
             #[cfg(feature = "FaFoursquareBrands")]
             FaIcon::FaFoursquareBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -17985,7 +17971,7 @@ impl Data {
             }
             #[cfg(feature = "FaFrancSignSolid")]
             FaIcon::FaFrancSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18002,7 +17988,7 @@ impl Data {
             }
             #[cfg(feature = "FaFreeCodeCampBrands")]
             FaIcon::FaFreeCodeCampBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18019,7 +18005,7 @@ impl Data {
             }
             #[cfg(feature = "FaFreebsdBrands")]
             FaIcon::FaFreebsdBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18036,7 +18022,7 @@ impl Data {
             }
             #[cfg(feature = "FaFrogSolid")]
             FaIcon::FaFrogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18053,7 +18039,7 @@ impl Data {
             }
             #[cfg(feature = "FaFulcrumBrands")]
             FaIcon::FaFulcrumBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18070,7 +18056,7 @@ impl Data {
             }
             #[cfg(feature = "FaFutbolRegular")]
             FaIcon::FaFutbolRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18087,7 +18073,7 @@ impl Data {
             }
             #[cfg(feature = "FaFutbolSolid")]
             FaIcon::FaFutbolSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18104,7 +18090,7 @@ impl Data {
             }
             #[cfg(feature = "FaGSolid")]
             FaIcon::FaGSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18121,7 +18107,7 @@ impl Data {
             }
             #[cfg(feature = "FaGalacticRepublicBrands")]
             FaIcon::FaGalacticRepublicBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18138,7 +18124,7 @@ impl Data {
             }
             #[cfg(feature = "FaGalacticSenateBrands")]
             FaIcon::FaGalacticSenateBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18155,7 +18141,7 @@ impl Data {
             }
             #[cfg(feature = "FaGamepadSolid")]
             FaIcon::FaGamepadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18172,7 +18158,7 @@ impl Data {
             }
             #[cfg(feature = "FaGasPumpSolid")]
             FaIcon::FaGasPumpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18189,7 +18175,7 @@ impl Data {
             }
             #[cfg(feature = "FaGaugeHighSolid")]
             FaIcon::FaGaugeHighSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18206,7 +18192,7 @@ impl Data {
             }
             #[cfg(feature = "FaGaugeSimpleHighSolid")]
             FaIcon::FaGaugeSimpleHighSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18223,7 +18209,7 @@ impl Data {
             }
             #[cfg(feature = "FaGaugeSimpleSolid")]
             FaIcon::FaGaugeSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18240,7 +18226,7 @@ impl Data {
             }
             #[cfg(feature = "FaGaugeSolid")]
             FaIcon::FaGaugeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18257,7 +18243,7 @@ impl Data {
             }
             #[cfg(feature = "FaGavelSolid")]
             FaIcon::FaGavelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18274,7 +18260,7 @@ impl Data {
             }
             #[cfg(feature = "FaGearSolid")]
             FaIcon::FaGearSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18291,7 +18277,7 @@ impl Data {
             }
             #[cfg(feature = "FaGearsSolid")]
             FaIcon::FaGearsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18308,7 +18294,7 @@ impl Data {
             }
             #[cfg(feature = "FaGemRegular")]
             FaIcon::FaGemRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18325,7 +18311,7 @@ impl Data {
             }
             #[cfg(feature = "FaGemSolid")]
             FaIcon::FaGemSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18342,7 +18328,7 @@ impl Data {
             }
             #[cfg(feature = "FaGenderlessSolid")]
             FaIcon::FaGenderlessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18359,7 +18345,7 @@ impl Data {
             }
             #[cfg(feature = "FaGetPocketBrands")]
             FaIcon::FaGetPocketBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18376,7 +18362,7 @@ impl Data {
             }
             #[cfg(feature = "FaGgBrands")]
             FaIcon::FaGgBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18393,7 +18379,7 @@ impl Data {
             }
             #[cfg(feature = "FaGgCircleBrands")]
             FaIcon::FaGgCircleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18410,7 +18396,7 @@ impl Data {
             }
             #[cfg(feature = "FaGhostSolid")]
             FaIcon::FaGhostSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18427,7 +18413,7 @@ impl Data {
             }
             #[cfg(feature = "FaGiftSolid")]
             FaIcon::FaGiftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18444,7 +18430,7 @@ impl Data {
             }
             #[cfg(feature = "FaGiftsSolid")]
             FaIcon::FaGiftsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18461,7 +18447,7 @@ impl Data {
             }
             #[cfg(feature = "FaGitAltBrands")]
             FaIcon::FaGitAltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18478,7 +18464,7 @@ impl Data {
             }
             #[cfg(feature = "FaGitBrands")]
             FaIcon::FaGitBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18495,7 +18481,7 @@ impl Data {
             }
             #[cfg(feature = "FaGithubAltBrands")]
             FaIcon::FaGithubAltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18512,7 +18498,7 @@ impl Data {
             }
             #[cfg(feature = "FaGithubBrands")]
             FaIcon::FaGithubBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18529,7 +18515,7 @@ impl Data {
             }
             #[cfg(feature = "FaGitkrakenBrands")]
             FaIcon::FaGitkrakenBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18546,7 +18532,7 @@ impl Data {
             }
             #[cfg(feature = "FaGitlabBrands")]
             FaIcon::FaGitlabBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18563,7 +18549,7 @@ impl Data {
             }
             #[cfg(feature = "FaGitterBrands")]
             FaIcon::FaGitterBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18580,7 +18566,7 @@ impl Data {
             }
             #[cfg(feature = "FaGlassWaterDropletSolid")]
             FaIcon::FaGlassWaterDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18597,7 +18583,7 @@ impl Data {
             }
             #[cfg(feature = "FaGlassWaterSolid")]
             FaIcon::FaGlassWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18614,7 +18600,7 @@ impl Data {
             }
             #[cfg(feature = "FaGlassesSolid")]
             FaIcon::FaGlassesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18631,7 +18617,7 @@ impl Data {
             }
             #[cfg(feature = "FaGlideBrands")]
             FaIcon::FaGlideBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18648,7 +18634,7 @@ impl Data {
             }
             #[cfg(feature = "FaGlideGBrands")]
             FaIcon::FaGlideGBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18665,7 +18651,7 @@ impl Data {
             }
             #[cfg(feature = "FaGlobeSolid")]
             FaIcon::FaGlobeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18682,7 +18668,7 @@ impl Data {
             }
             #[cfg(feature = "FaGoforeBrands")]
             FaIcon::FaGoforeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18699,7 +18685,7 @@ impl Data {
             }
             #[cfg(feature = "FaGolangBrands")]
             FaIcon::FaGolangBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18716,7 +18702,7 @@ impl Data {
             }
             #[cfg(feature = "FaGolfBallTeeSolid")]
             FaIcon::FaGolfBallTeeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18733,7 +18719,7 @@ impl Data {
             }
             #[cfg(feature = "FaGoodreadsBrands")]
             FaIcon::FaGoodreadsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18750,7 +18736,7 @@ impl Data {
             }
             #[cfg(feature = "FaGoodreadsGBrands")]
             FaIcon::FaGoodreadsGBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18767,7 +18753,7 @@ impl Data {
             }
             #[cfg(feature = "FaGoogleBrands")]
             FaIcon::FaGoogleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18784,7 +18770,7 @@ impl Data {
             }
             #[cfg(feature = "FaGoogleDriveBrands")]
             FaIcon::FaGoogleDriveBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18801,7 +18787,7 @@ impl Data {
             }
             #[cfg(feature = "FaGooglePayBrands")]
             FaIcon::FaGooglePayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18818,7 +18804,7 @@ impl Data {
             }
             #[cfg(feature = "FaGooglePlayBrands")]
             FaIcon::FaGooglePlayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18835,7 +18821,7 @@ impl Data {
             }
             #[cfg(feature = "FaGooglePlusBrands")]
             FaIcon::FaGooglePlusBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18852,7 +18838,7 @@ impl Data {
             }
             #[cfg(feature = "FaGooglePlusGBrands")]
             FaIcon::FaGooglePlusGBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18869,7 +18855,7 @@ impl Data {
             }
             #[cfg(feature = "FaGoogleWalletBrands")]
             FaIcon::FaGoogleWalletBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18886,7 +18872,7 @@ impl Data {
             }
             #[cfg(feature = "FaGopuramSolid")]
             FaIcon::FaGopuramSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18903,7 +18889,7 @@ impl Data {
             }
             #[cfg(feature = "FaGraduationCapSolid")]
             FaIcon::FaGraduationCapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18920,7 +18906,7 @@ impl Data {
             }
             #[cfg(feature = "FaGratipayBrands")]
             FaIcon::FaGratipayBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18937,7 +18923,7 @@ impl Data {
             }
             #[cfg(feature = "FaGravBrands")]
             FaIcon::FaGravBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18954,7 +18940,7 @@ impl Data {
             }
             #[cfg(feature = "FaGreaterThanEqualSolid")]
             FaIcon::FaGreaterThanEqualSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18971,7 +18957,7 @@ impl Data {
             }
             #[cfg(feature = "FaGreaterThanSolid")]
             FaIcon::FaGreaterThanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -18988,7 +18974,7 @@ impl Data {
             }
             #[cfg(feature = "FaGripLinesSolid")]
             FaIcon::FaGripLinesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19005,7 +18991,7 @@ impl Data {
             }
             #[cfg(feature = "FaGripLinesVerticalSolid")]
             FaIcon::FaGripLinesVerticalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19022,7 +19008,7 @@ impl Data {
             }
             #[cfg(feature = "FaGripSolid")]
             FaIcon::FaGripSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19039,7 +19025,7 @@ impl Data {
             }
             #[cfg(feature = "FaGripVerticalSolid")]
             FaIcon::FaGripVerticalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19056,7 +19042,7 @@ impl Data {
             }
             #[cfg(feature = "FaGripfireBrands")]
             FaIcon::FaGripfireBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19073,7 +19059,7 @@ impl Data {
             }
             #[cfg(feature = "FaGroupArrowsRotateSolid")]
             FaIcon::FaGroupArrowsRotateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19090,7 +19076,7 @@ impl Data {
             }
             #[cfg(feature = "FaGruntBrands")]
             FaIcon::FaGruntBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19107,7 +19093,7 @@ impl Data {
             }
             #[cfg(feature = "FaGuaraniSignSolid")]
             FaIcon::FaGuaraniSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19124,7 +19110,7 @@ impl Data {
             }
             #[cfg(feature = "FaGuildedBrands")]
             FaIcon::FaGuildedBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19141,7 +19127,7 @@ impl Data {
             }
             #[cfg(feature = "FaGuitarSolid")]
             FaIcon::FaGuitarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19158,7 +19144,7 @@ impl Data {
             }
             #[cfg(feature = "FaGulpBrands")]
             FaIcon::FaGulpBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19175,7 +19161,7 @@ impl Data {
             }
             #[cfg(feature = "FaGunSolid")]
             FaIcon::FaGunSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19192,7 +19178,7 @@ impl Data {
             }
             #[cfg(feature = "FaHSolid")]
             FaIcon::FaHSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19209,7 +19195,7 @@ impl Data {
             }
             #[cfg(feature = "FaHackerNewsBrands")]
             FaIcon::FaHackerNewsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19226,7 +19212,7 @@ impl Data {
             }
             #[cfg(feature = "FaHackerrankBrands")]
             FaIcon::FaHackerrankBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19243,7 +19229,7 @@ impl Data {
             }
             #[cfg(feature = "FaHammerSolid")]
             FaIcon::FaHammerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19260,7 +19246,7 @@ impl Data {
             }
             #[cfg(feature = "FaHamsaSolid")]
             FaIcon::FaHamsaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19277,7 +19263,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandBackFistRegular")]
             FaIcon::FaHandBackFistRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19294,7 +19280,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandBackFistSolid")]
             FaIcon::FaHandBackFistSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19311,7 +19297,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandDotsSolid")]
             FaIcon::FaHandDotsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19328,7 +19314,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandFistSolid")]
             FaIcon::FaHandFistSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19345,7 +19331,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandHoldingDollarSolid")]
             FaIcon::FaHandHoldingDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19362,7 +19348,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandHoldingDropletSolid")]
             FaIcon::FaHandHoldingDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19379,7 +19365,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandHoldingHandSolid")]
             FaIcon::FaHandHoldingHandSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19396,7 +19382,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandHoldingHeartSolid")]
             FaIcon::FaHandHoldingHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19413,7 +19399,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandHoldingMedicalSolid")]
             FaIcon::FaHandHoldingMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19430,7 +19416,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandHoldingSolid")]
             FaIcon::FaHandHoldingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19447,7 +19433,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandLizardRegular")]
             FaIcon::FaHandLizardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19464,7 +19450,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandLizardSolid")]
             FaIcon::FaHandLizardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19481,7 +19467,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandMiddleFingerSolid")]
             FaIcon::FaHandMiddleFingerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19498,7 +19484,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPeaceRegular")]
             FaIcon::FaHandPeaceRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19515,7 +19501,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPeaceSolid")]
             FaIcon::FaHandPeaceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19532,7 +19518,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointDownRegular")]
             FaIcon::FaHandPointDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19549,7 +19535,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointDownSolid")]
             FaIcon::FaHandPointDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19566,7 +19552,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointLeftRegular")]
             FaIcon::FaHandPointLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19583,7 +19569,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointLeftSolid")]
             FaIcon::FaHandPointLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19600,7 +19586,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointRightRegular")]
             FaIcon::FaHandPointRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19617,7 +19603,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointRightSolid")]
             FaIcon::FaHandPointRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19634,7 +19620,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointUpRegular")]
             FaIcon::FaHandPointUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19651,7 +19637,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointUpSolid")]
             FaIcon::FaHandPointUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19668,7 +19654,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointerRegular")]
             FaIcon::FaHandPointerRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19685,7 +19671,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandPointerSolid")]
             FaIcon::FaHandPointerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19702,7 +19688,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandRegular")]
             FaIcon::FaHandRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19719,7 +19705,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandScissorsRegular")]
             FaIcon::FaHandScissorsRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19736,7 +19722,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandScissorsSolid")]
             FaIcon::FaHandScissorsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19753,7 +19739,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandSolid")]
             FaIcon::FaHandSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19770,7 +19756,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandSparklesSolid")]
             FaIcon::FaHandSparklesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19787,7 +19773,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandSpockRegular")]
             FaIcon::FaHandSpockRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19804,7 +19790,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandSpockSolid")]
             FaIcon::FaHandSpockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19821,7 +19807,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandcuffsSolid")]
             FaIcon::FaHandcuffsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19838,7 +19824,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsAslInterpretingSolid")]
             FaIcon::FaHandsAslInterpretingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19855,7 +19841,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsBoundSolid")]
             FaIcon::FaHandsBoundSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19872,7 +19858,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsBubblesSolid")]
             FaIcon::FaHandsBubblesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19889,7 +19875,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsClappingSolid")]
             FaIcon::FaHandsClappingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19906,7 +19892,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsHoldingChildSolid")]
             FaIcon::FaHandsHoldingChildSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19923,7 +19909,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsHoldingCircleSolid")]
             FaIcon::FaHandsHoldingCircleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19940,7 +19926,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsHoldingSolid")]
             FaIcon::FaHandsHoldingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19957,7 +19943,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsPrayingSolid")]
             FaIcon::FaHandsPrayingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19974,7 +19960,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandsSolid")]
             FaIcon::FaHandsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -19991,7 +19977,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandshakeAngleSolid")]
             FaIcon::FaHandshakeAngleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20008,7 +19994,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandshakeRegular")]
             FaIcon::FaHandshakeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20025,7 +20011,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandshakeSimpleSlashSolid")]
             FaIcon::FaHandshakeSimpleSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20042,7 +20028,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandshakeSimpleSolid")]
             FaIcon::FaHandshakeSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20059,7 +20045,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandshakeSlashSolid")]
             FaIcon::FaHandshakeSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20076,7 +20062,7 @@ impl Data {
             }
             #[cfg(feature = "FaHandshakeSolid")]
             FaIcon::FaHandshakeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20093,7 +20079,7 @@ impl Data {
             }
             #[cfg(feature = "FaHanukiahSolid")]
             FaIcon::FaHanukiahSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20110,7 +20096,7 @@ impl Data {
             }
             #[cfg(feature = "FaHardDriveRegular")]
             FaIcon::FaHardDriveRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20127,7 +20113,7 @@ impl Data {
             }
             #[cfg(feature = "FaHardDriveSolid")]
             FaIcon::FaHardDriveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20144,7 +20130,7 @@ impl Data {
             }
             #[cfg(feature = "FaHashnodeBrands")]
             FaIcon::FaHashnodeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20161,7 +20147,7 @@ impl Data {
             }
             #[cfg(feature = "FaHashtagSolid")]
             FaIcon::FaHashtagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20178,7 +20164,7 @@ impl Data {
             }
             #[cfg(feature = "FaHatCowboySideSolid")]
             FaIcon::FaHatCowboySideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20195,7 +20181,7 @@ impl Data {
             }
             #[cfg(feature = "FaHatCowboySolid")]
             FaIcon::FaHatCowboySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20212,7 +20198,7 @@ impl Data {
             }
             #[cfg(feature = "FaHatWizardSolid")]
             FaIcon::FaHatWizardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20229,7 +20215,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadSideCoughSlashSolid")]
             FaIcon::FaHeadSideCoughSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20246,7 +20232,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadSideCoughSolid")]
             FaIcon::FaHeadSideCoughSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20263,7 +20249,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadSideMaskSolid")]
             FaIcon::FaHeadSideMaskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20280,7 +20266,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadSideVirusSolid")]
             FaIcon::FaHeadSideVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20297,7 +20283,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadingSolid")]
             FaIcon::FaHeadingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20314,7 +20300,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadphonesSimpleSolid")]
             FaIcon::FaHeadphonesSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20331,7 +20317,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadphonesSolid")]
             FaIcon::FaHeadphonesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20348,7 +20334,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeadsetSolid")]
             FaIcon::FaHeadsetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20365,7 +20351,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCircleBoltSolid")]
             FaIcon::FaHeartCircleBoltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20382,7 +20368,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCircleCheckSolid")]
             FaIcon::FaHeartCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20399,7 +20385,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCircleExclamationSolid")]
             FaIcon::FaHeartCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20416,7 +20402,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCircleMinusSolid")]
             FaIcon::FaHeartCircleMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20433,7 +20419,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCirclePlusSolid")]
             FaIcon::FaHeartCirclePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20450,7 +20436,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCircleXmarkSolid")]
             FaIcon::FaHeartCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20467,7 +20453,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartCrackSolid")]
             FaIcon::FaHeartCrackSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20484,7 +20470,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartPulseSolid")]
             FaIcon::FaHeartPulseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20501,7 +20487,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartRegular")]
             FaIcon::FaHeartRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20518,7 +20504,7 @@ impl Data {
             }
             #[cfg(feature = "FaHeartSolid")]
             FaIcon::FaHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20535,7 +20521,7 @@ impl Data {
             }
             #[cfg(feature = "FaHelicopterSolid")]
             FaIcon::FaHelicopterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20552,7 +20538,7 @@ impl Data {
             }
             #[cfg(feature = "FaHelicopterSymbolSolid")]
             FaIcon::FaHelicopterSymbolSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20569,7 +20555,7 @@ impl Data {
             }
             #[cfg(feature = "FaHelmetSafetySolid")]
             FaIcon::FaHelmetSafetySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20586,7 +20572,7 @@ impl Data {
             }
             #[cfg(feature = "FaHelmetUnSolid")]
             FaIcon::FaHelmetUnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20603,7 +20589,7 @@ impl Data {
             }
             #[cfg(feature = "FaHighlighterSolid")]
             FaIcon::FaHighlighterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20620,7 +20606,7 @@ impl Data {
             }
             #[cfg(feature = "FaHillAvalancheSolid")]
             FaIcon::FaHillAvalancheSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20637,7 +20623,7 @@ impl Data {
             }
             #[cfg(feature = "FaHillRockslideSolid")]
             FaIcon::FaHillRockslideSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20654,7 +20640,7 @@ impl Data {
             }
             #[cfg(feature = "FaHippoSolid")]
             FaIcon::FaHippoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20671,7 +20657,7 @@ impl Data {
             }
             #[cfg(feature = "FaHipsBrands")]
             FaIcon::FaHipsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20688,7 +20674,7 @@ impl Data {
             }
             #[cfg(feature = "FaHireAHelperBrands")]
             FaIcon::FaHireAHelperBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20705,7 +20691,7 @@ impl Data {
             }
             #[cfg(feature = "FaHiveBrands")]
             FaIcon::FaHiveBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20722,7 +20708,7 @@ impl Data {
             }
             #[cfg(feature = "FaHockeyPuckSolid")]
             FaIcon::FaHockeyPuckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20739,7 +20725,7 @@ impl Data {
             }
             #[cfg(feature = "FaHollyBerrySolid")]
             FaIcon::FaHollyBerrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20756,7 +20742,7 @@ impl Data {
             }
             #[cfg(feature = "FaHooliBrands")]
             FaIcon::FaHooliBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20773,7 +20759,7 @@ impl Data {
             }
             #[cfg(feature = "FaHornbillBrands")]
             FaIcon::FaHornbillBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20790,7 +20776,7 @@ impl Data {
             }
             #[cfg(feature = "FaHorseHeadSolid")]
             FaIcon::FaHorseHeadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20807,7 +20793,7 @@ impl Data {
             }
             #[cfg(feature = "FaHorseSolid")]
             FaIcon::FaHorseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20824,7 +20810,7 @@ impl Data {
             }
             #[cfg(feature = "FaHospitalRegular")]
             FaIcon::FaHospitalRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20841,7 +20827,7 @@ impl Data {
             }
             #[cfg(feature = "FaHospitalSolid")]
             FaIcon::FaHospitalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20858,7 +20844,7 @@ impl Data {
             }
             #[cfg(feature = "FaHospitalUserSolid")]
             FaIcon::FaHospitalUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20875,7 +20861,7 @@ impl Data {
             }
             #[cfg(feature = "FaHotTubPersonSolid")]
             FaIcon::FaHotTubPersonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20892,7 +20878,7 @@ impl Data {
             }
             #[cfg(feature = "FaHotdogSolid")]
             FaIcon::FaHotdogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20909,7 +20895,7 @@ impl Data {
             }
             #[cfg(feature = "FaHotelSolid")]
             FaIcon::FaHotelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20926,7 +20912,7 @@ impl Data {
             }
             #[cfg(feature = "FaHotjarBrands")]
             FaIcon::FaHotjarBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20943,7 +20929,7 @@ impl Data {
             }
             #[cfg(feature = "FaHourglassEndSolid")]
             FaIcon::FaHourglassEndSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20960,7 +20946,7 @@ impl Data {
             }
             #[cfg(feature = "FaHourglassHalfRegular")]
             FaIcon::FaHourglassHalfRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20977,7 +20963,7 @@ impl Data {
             }
             #[cfg(feature = "FaHourglassHalfSolid")]
             FaIcon::FaHourglassHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -20994,7 +20980,7 @@ impl Data {
             }
             #[cfg(feature = "FaHourglassRegular")]
             FaIcon::FaHourglassRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21011,7 +20997,7 @@ impl Data {
             }
             #[cfg(feature = "FaHourglassSolid")]
             FaIcon::FaHourglassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21028,7 +21014,7 @@ impl Data {
             }
             #[cfg(feature = "FaHourglassStartSolid")]
             FaIcon::FaHourglassStartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21045,7 +21031,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseChimneyCrackSolid")]
             FaIcon::FaHouseChimneyCrackSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21062,7 +21048,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseChimneyMedicalSolid")]
             FaIcon::FaHouseChimneyMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21079,7 +21065,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseChimneySolid")]
             FaIcon::FaHouseChimneySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21096,7 +21082,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseChimneyUserSolid")]
             FaIcon::FaHouseChimneyUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21113,7 +21099,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseChimneyWindowSolid")]
             FaIcon::FaHouseChimneyWindowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21130,7 +21116,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseCircleCheckSolid")]
             FaIcon::FaHouseCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21147,7 +21133,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseCircleExclamationSolid")]
             FaIcon::FaHouseCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21164,7 +21150,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseCircleXmarkSolid")]
             FaIcon::FaHouseCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21181,7 +21167,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseCrackSolid")]
             FaIcon::FaHouseCrackSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21198,7 +21184,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseFireSolid")]
             FaIcon::FaHouseFireSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21215,7 +21201,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseFlagSolid")]
             FaIcon::FaHouseFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21232,7 +21218,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseFloodWaterCircleArrowRightSolid")]
             FaIcon::FaHouseFloodWaterCircleArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21249,7 +21235,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseFloodWaterSolid")]
             FaIcon::FaHouseFloodWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21266,7 +21252,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseLaptopSolid")]
             FaIcon::FaHouseLaptopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21283,7 +21269,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseLockSolid")]
             FaIcon::FaHouseLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21300,7 +21286,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseMedicalCircleCheckSolid")]
             FaIcon::FaHouseMedicalCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21317,7 +21303,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseMedicalCircleExclamationSolid")]
             FaIcon::FaHouseMedicalCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21334,7 +21320,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseMedicalCircleXmarkSolid")]
             FaIcon::FaHouseMedicalCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21351,7 +21337,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseMedicalFlagSolid")]
             FaIcon::FaHouseMedicalFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21368,7 +21354,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseMedicalSolid")]
             FaIcon::FaHouseMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21385,7 +21371,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseSignalSolid")]
             FaIcon::FaHouseSignalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21402,7 +21388,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseSolid")]
             FaIcon::FaHouseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21419,7 +21405,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseTsunamiSolid")]
             FaIcon::FaHouseTsunamiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21436,7 +21422,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouseUserSolid")]
             FaIcon::FaHouseUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21453,7 +21439,7 @@ impl Data {
             }
             #[cfg(feature = "FaHouzzBrands")]
             FaIcon::FaHouzzBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21470,7 +21456,7 @@ impl Data {
             }
             #[cfg(feature = "FaHryvniaSignSolid")]
             FaIcon::FaHryvniaSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21487,7 +21473,7 @@ impl Data {
             }
             #[cfg(feature = "FaHtml5Brands")]
             FaIcon::FaHtml5Brands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21504,7 +21490,7 @@ impl Data {
             }
             #[cfg(feature = "FaHubspotBrands")]
             FaIcon::FaHubspotBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21521,7 +21507,7 @@ impl Data {
             }
             #[cfg(feature = "FaHurricaneSolid")]
             FaIcon::FaHurricaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21538,7 +21524,7 @@ impl Data {
             }
             #[cfg(feature = "FaICursorSolid")]
             FaIcon::FaICursorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21555,7 +21541,7 @@ impl Data {
             }
             #[cfg(feature = "FaISolid")]
             FaIcon::FaISolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21572,7 +21558,7 @@ impl Data {
             }
             #[cfg(feature = "FaIceCreamSolid")]
             FaIcon::FaIceCreamSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21589,7 +21575,7 @@ impl Data {
             }
             #[cfg(feature = "FaIciclesSolid")]
             FaIcon::FaIciclesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21606,7 +21592,7 @@ impl Data {
             }
             #[cfg(feature = "FaIconsSolid")]
             FaIcon::FaIconsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21623,7 +21609,7 @@ impl Data {
             }
             #[cfg(feature = "FaIdBadgeRegular")]
             FaIcon::FaIdBadgeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21640,7 +21626,7 @@ impl Data {
             }
             #[cfg(feature = "FaIdBadgeSolid")]
             FaIcon::FaIdBadgeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21657,7 +21643,7 @@ impl Data {
             }
             #[cfg(feature = "FaIdCardClipSolid")]
             FaIcon::FaIdCardClipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21674,7 +21660,7 @@ impl Data {
             }
             #[cfg(feature = "FaIdCardRegular")]
             FaIcon::FaIdCardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21691,7 +21677,7 @@ impl Data {
             }
             #[cfg(feature = "FaIdCardSolid")]
             FaIcon::FaIdCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21708,7 +21694,7 @@ impl Data {
             }
             #[cfg(feature = "FaIdealBrands")]
             FaIcon::FaIdealBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21725,7 +21711,7 @@ impl Data {
             }
             #[cfg(feature = "FaIglooSolid")]
             FaIcon::FaIglooSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21742,7 +21728,7 @@ impl Data {
             }
             #[cfg(feature = "FaImagePortraitSolid")]
             FaIcon::FaImagePortraitSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21759,7 +21745,7 @@ impl Data {
             }
             #[cfg(feature = "FaImageRegular")]
             FaIcon::FaImageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21776,7 +21762,7 @@ impl Data {
             }
             #[cfg(feature = "FaImageSolid")]
             FaIcon::FaImageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21793,7 +21779,7 @@ impl Data {
             }
             #[cfg(feature = "FaImagesRegular")]
             FaIcon::FaImagesRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21810,7 +21796,7 @@ impl Data {
             }
             #[cfg(feature = "FaImagesSolid")]
             FaIcon::FaImagesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21827,7 +21813,7 @@ impl Data {
             }
             #[cfg(feature = "FaImdbBrands")]
             FaIcon::FaImdbBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21844,7 +21830,7 @@ impl Data {
             }
             #[cfg(feature = "FaInboxSolid")]
             FaIcon::FaInboxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21861,7 +21847,7 @@ impl Data {
             }
             #[cfg(feature = "FaIndentSolid")]
             FaIcon::FaIndentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21878,7 +21864,7 @@ impl Data {
             }
             #[cfg(feature = "FaIndianRupeeSignSolid")]
             FaIcon::FaIndianRupeeSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21895,7 +21881,7 @@ impl Data {
             }
             #[cfg(feature = "FaIndustrySolid")]
             FaIcon::FaIndustrySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21912,7 +21898,7 @@ impl Data {
             }
             #[cfg(feature = "FaInfinitySolid")]
             FaIcon::FaInfinitySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21929,7 +21915,7 @@ impl Data {
             }
             #[cfg(feature = "FaInfoSolid")]
             FaIcon::FaInfoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21946,7 +21932,7 @@ impl Data {
             }
             #[cfg(feature = "FaInstagramBrands")]
             FaIcon::FaInstagramBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21963,7 +21949,7 @@ impl Data {
             }
             #[cfg(feature = "FaInstalodBrands")]
             FaIcon::FaInstalodBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21980,7 +21966,7 @@ impl Data {
             }
             #[cfg(feature = "FaIntercomBrands")]
             FaIcon::FaIntercomBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -21997,7 +21983,7 @@ impl Data {
             }
             #[cfg(feature = "FaInternetExplorerBrands")]
             FaIcon::FaInternetExplorerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22014,7 +22000,7 @@ impl Data {
             }
             #[cfg(feature = "FaInvisionBrands")]
             FaIcon::FaInvisionBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22031,7 +22017,7 @@ impl Data {
             }
             #[cfg(feature = "FaIoxhostBrands")]
             FaIcon::FaIoxhostBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22048,7 +22034,7 @@ impl Data {
             }
             #[cfg(feature = "FaItalicSolid")]
             FaIcon::FaItalicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22065,7 +22051,7 @@ impl Data {
             }
             #[cfg(feature = "FaItchIoBrands")]
             FaIcon::FaItchIoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22082,7 +22068,7 @@ impl Data {
             }
             #[cfg(feature = "FaItunesBrands")]
             FaIcon::FaItunesBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22099,7 +22085,7 @@ impl Data {
             }
             #[cfg(feature = "FaItunesNoteBrands")]
             FaIcon::FaItunesNoteBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22116,7 +22102,7 @@ impl Data {
             }
             #[cfg(feature = "FaJSolid")]
             FaIcon::FaJSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22133,7 +22119,7 @@ impl Data {
             }
             #[cfg(feature = "FaJarSolid")]
             FaIcon::FaJarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22150,7 +22136,7 @@ impl Data {
             }
             #[cfg(feature = "FaJarWheatSolid")]
             FaIcon::FaJarWheatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22167,7 +22153,7 @@ impl Data {
             }
             #[cfg(feature = "FaJavaBrands")]
             FaIcon::FaJavaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22184,7 +22170,7 @@ impl Data {
             }
             #[cfg(feature = "FaJediOrderBrands")]
             FaIcon::FaJediOrderBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22201,7 +22187,7 @@ impl Data {
             }
             #[cfg(feature = "FaJediSolid")]
             FaIcon::FaJediSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22218,7 +22204,7 @@ impl Data {
             }
             #[cfg(feature = "FaJenkinsBrands")]
             FaIcon::FaJenkinsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22235,7 +22221,7 @@ impl Data {
             }
             #[cfg(feature = "FaJetFighterSolid")]
             FaIcon::FaJetFighterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22252,7 +22238,7 @@ impl Data {
             }
             #[cfg(feature = "FaJetFighterUpSolid")]
             FaIcon::FaJetFighterUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22269,7 +22255,7 @@ impl Data {
             }
             #[cfg(feature = "FaJiraBrands")]
             FaIcon::FaJiraBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22286,7 +22272,7 @@ impl Data {
             }
             #[cfg(feature = "FaJogetBrands")]
             FaIcon::FaJogetBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22303,7 +22289,7 @@ impl Data {
             }
             #[cfg(feature = "FaJointSolid")]
             FaIcon::FaJointSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22320,7 +22306,7 @@ impl Data {
             }
             #[cfg(feature = "FaJoomlaBrands")]
             FaIcon::FaJoomlaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22337,7 +22323,7 @@ impl Data {
             }
             #[cfg(feature = "FaJsBrands")]
             FaIcon::FaJsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22354,7 +22340,7 @@ impl Data {
             }
             #[cfg(feature = "FaJsfiddleBrands")]
             FaIcon::FaJsfiddleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22371,7 +22357,7 @@ impl Data {
             }
             #[cfg(feature = "FaJugDetergentSolid")]
             FaIcon::FaJugDetergentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22388,7 +22374,7 @@ impl Data {
             }
             #[cfg(feature = "FaKSolid")]
             FaIcon::FaKSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22405,7 +22391,7 @@ impl Data {
             }
             #[cfg(feature = "FaKaabaSolid")]
             FaIcon::FaKaabaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22422,7 +22408,7 @@ impl Data {
             }
             #[cfg(feature = "FaKaggleBrands")]
             FaIcon::FaKaggleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22439,7 +22425,7 @@ impl Data {
             }
             #[cfg(feature = "FaKeySolid")]
             FaIcon::FaKeySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22456,7 +22442,7 @@ impl Data {
             }
             #[cfg(feature = "FaKeybaseBrands")]
             FaIcon::FaKeybaseBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22473,7 +22459,7 @@ impl Data {
             }
             #[cfg(feature = "FaKeyboardRegular")]
             FaIcon::FaKeyboardRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22490,7 +22476,7 @@ impl Data {
             }
             #[cfg(feature = "FaKeyboardSolid")]
             FaIcon::FaKeyboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22507,7 +22493,7 @@ impl Data {
             }
             #[cfg(feature = "FaKeycdnBrands")]
             FaIcon::FaKeycdnBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22524,7 +22510,7 @@ impl Data {
             }
             #[cfg(feature = "FaKhandaSolid")]
             FaIcon::FaKhandaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22541,7 +22527,7 @@ impl Data {
             }
             #[cfg(feature = "FaKickstarterBrands")]
             FaIcon::FaKickstarterBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22558,7 +22544,7 @@ impl Data {
             }
             #[cfg(feature = "FaKickstarterKBrands")]
             FaIcon::FaKickstarterKBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22575,7 +22561,7 @@ impl Data {
             }
             #[cfg(feature = "FaKipSignSolid")]
             FaIcon::FaKipSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22592,7 +22578,7 @@ impl Data {
             }
             #[cfg(feature = "FaKitMedicalSolid")]
             FaIcon::FaKitMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22609,7 +22595,7 @@ impl Data {
             }
             #[cfg(feature = "FaKitchenSetSolid")]
             FaIcon::FaKitchenSetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22626,7 +22612,7 @@ impl Data {
             }
             #[cfg(feature = "FaKiwiBirdSolid")]
             FaIcon::FaKiwiBirdSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22643,7 +22629,7 @@ impl Data {
             }
             #[cfg(feature = "FaKorvueBrands")]
             FaIcon::FaKorvueBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22660,7 +22646,7 @@ impl Data {
             }
             #[cfg(feature = "FaLSolid")]
             FaIcon::FaLSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22677,7 +22663,7 @@ impl Data {
             }
             #[cfg(feature = "FaLandMineOnSolid")]
             FaIcon::FaLandMineOnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22694,7 +22680,7 @@ impl Data {
             }
             #[cfg(feature = "FaLandmarkDomeSolid")]
             FaIcon::FaLandmarkDomeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22711,7 +22697,7 @@ impl Data {
             }
             #[cfg(feature = "FaLandmarkFlagSolid")]
             FaIcon::FaLandmarkFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22728,7 +22714,7 @@ impl Data {
             }
             #[cfg(feature = "FaLandmarkSolid")]
             FaIcon::FaLandmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22745,7 +22731,7 @@ impl Data {
             }
             #[cfg(feature = "FaLanguageSolid")]
             FaIcon::FaLanguageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22762,7 +22748,7 @@ impl Data {
             }
             #[cfg(feature = "FaLaptopCodeSolid")]
             FaIcon::FaLaptopCodeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22779,7 +22765,7 @@ impl Data {
             }
             #[cfg(feature = "FaLaptopFileSolid")]
             FaIcon::FaLaptopFileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22796,7 +22782,7 @@ impl Data {
             }
             #[cfg(feature = "FaLaptopMedicalSolid")]
             FaIcon::FaLaptopMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22813,7 +22799,7 @@ impl Data {
             }
             #[cfg(feature = "FaLaptopSolid")]
             FaIcon::FaLaptopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22830,7 +22816,7 @@ impl Data {
             }
             #[cfg(feature = "FaLaravelBrands")]
             FaIcon::FaLaravelBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22847,7 +22833,7 @@ impl Data {
             }
             #[cfg(feature = "FaLariSignSolid")]
             FaIcon::FaLariSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22864,7 +22850,7 @@ impl Data {
             }
             #[cfg(feature = "FaLastfmBrands")]
             FaIcon::FaLastfmBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22881,7 +22867,7 @@ impl Data {
             }
             #[cfg(feature = "FaLayerGroupSolid")]
             FaIcon::FaLayerGroupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22898,7 +22884,7 @@ impl Data {
             }
             #[cfg(feature = "FaLeafSolid")]
             FaIcon::FaLeafSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22915,7 +22901,7 @@ impl Data {
             }
             #[cfg(feature = "FaLeanpubBrands")]
             FaIcon::FaLeanpubBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22932,7 +22918,7 @@ impl Data {
             }
             #[cfg(feature = "FaLeftLongSolid")]
             FaIcon::FaLeftLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22949,7 +22935,7 @@ impl Data {
             }
             #[cfg(feature = "FaLeftRightSolid")]
             FaIcon::FaLeftRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22966,7 +22952,7 @@ impl Data {
             }
             #[cfg(feature = "FaLemonRegular")]
             FaIcon::FaLemonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -22983,7 +22969,7 @@ impl Data {
             }
             #[cfg(feature = "FaLemonSolid")]
             FaIcon::FaLemonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23000,7 +22986,7 @@ impl Data {
             }
             #[cfg(feature = "FaLessBrands")]
             FaIcon::FaLessBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23017,7 +23003,7 @@ impl Data {
             }
             #[cfg(feature = "FaLessThanEqualSolid")]
             FaIcon::FaLessThanEqualSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23034,7 +23020,7 @@ impl Data {
             }
             #[cfg(feature = "FaLessThanSolid")]
             FaIcon::FaLessThanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23051,7 +23037,7 @@ impl Data {
             }
             #[cfg(feature = "FaLifeRingRegular")]
             FaIcon::FaLifeRingRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23068,7 +23054,7 @@ impl Data {
             }
             #[cfg(feature = "FaLifeRingSolid")]
             FaIcon::FaLifeRingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23085,7 +23071,7 @@ impl Data {
             }
             #[cfg(feature = "FaLightbulbRegular")]
             FaIcon::FaLightbulbRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23102,7 +23088,7 @@ impl Data {
             }
             #[cfg(feature = "FaLightbulbSolid")]
             FaIcon::FaLightbulbSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23119,7 +23105,7 @@ impl Data {
             }
             #[cfg(feature = "FaLineBrands")]
             FaIcon::FaLineBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23136,7 +23122,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinesLeaningSolid")]
             FaIcon::FaLinesLeaningSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23153,7 +23139,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinkSlashSolid")]
             FaIcon::FaLinkSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23170,7 +23156,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinkSolid")]
             FaIcon::FaLinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23187,7 +23173,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinkedinBrands")]
             FaIcon::FaLinkedinBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23204,7 +23190,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinkedinInBrands")]
             FaIcon::FaLinkedinInBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23221,7 +23207,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinodeBrands")]
             FaIcon::FaLinodeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23238,7 +23224,7 @@ impl Data {
             }
             #[cfg(feature = "FaLinuxBrands")]
             FaIcon::FaLinuxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23255,7 +23241,7 @@ impl Data {
             }
             #[cfg(feature = "FaLiraSignSolid")]
             FaIcon::FaLiraSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23272,7 +23258,7 @@ impl Data {
             }
             #[cfg(feature = "FaListCheckSolid")]
             FaIcon::FaListCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23289,7 +23275,7 @@ impl Data {
             }
             #[cfg(feature = "FaListOlSolid")]
             FaIcon::FaListOlSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23306,7 +23292,7 @@ impl Data {
             }
             #[cfg(feature = "FaListSolid")]
             FaIcon::FaListSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23323,7 +23309,7 @@ impl Data {
             }
             #[cfg(feature = "FaListUlSolid")]
             FaIcon::FaListUlSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23340,7 +23326,7 @@ impl Data {
             }
             #[cfg(feature = "FaLitecoinSignSolid")]
             FaIcon::FaLitecoinSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23357,7 +23343,7 @@ impl Data {
             }
             #[cfg(feature = "FaLocationArrowSolid")]
             FaIcon::FaLocationArrowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23374,7 +23360,7 @@ impl Data {
             }
             #[cfg(feature = "FaLocationCrosshairsSolid")]
             FaIcon::FaLocationCrosshairsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23391,7 +23377,7 @@ impl Data {
             }
             #[cfg(feature = "FaLocationDotSolid")]
             FaIcon::FaLocationDotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23408,7 +23394,7 @@ impl Data {
             }
             #[cfg(feature = "FaLocationPinLockSolid")]
             FaIcon::FaLocationPinLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23425,7 +23411,7 @@ impl Data {
             }
             #[cfg(feature = "FaLocationPinSolid")]
             FaIcon::FaLocationPinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23442,7 +23428,7 @@ impl Data {
             }
             #[cfg(feature = "FaLockOpenSolid")]
             FaIcon::FaLockOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23459,7 +23445,7 @@ impl Data {
             }
             #[cfg(feature = "FaLockSolid")]
             FaIcon::FaLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23476,7 +23462,7 @@ impl Data {
             }
             #[cfg(feature = "FaLocustSolid")]
             FaIcon::FaLocustSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23493,7 +23479,7 @@ impl Data {
             }
             #[cfg(feature = "FaLungsSolid")]
             FaIcon::FaLungsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23510,7 +23496,7 @@ impl Data {
             }
             #[cfg(feature = "FaLungsVirusSolid")]
             FaIcon::FaLungsVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23527,7 +23513,7 @@ impl Data {
             }
             #[cfg(feature = "FaLyftBrands")]
             FaIcon::FaLyftBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23544,7 +23530,7 @@ impl Data {
             }
             #[cfg(feature = "FaMSolid")]
             FaIcon::FaMSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23561,7 +23547,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagentoBrands")]
             FaIcon::FaMagentoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23578,7 +23564,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnetSolid")]
             FaIcon::FaMagnetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23595,7 +23581,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassArrowRightSolid")]
             FaIcon::FaMagnifyingGlassArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23612,7 +23598,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassChartSolid")]
             FaIcon::FaMagnifyingGlassChartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23629,7 +23615,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassDollarSolid")]
             FaIcon::FaMagnifyingGlassDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23646,7 +23632,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassLocationSolid")]
             FaIcon::FaMagnifyingGlassLocationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23663,7 +23649,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassMinusSolid")]
             FaIcon::FaMagnifyingGlassMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23680,7 +23666,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassPlusSolid")]
             FaIcon::FaMagnifyingGlassPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23697,7 +23683,7 @@ impl Data {
             }
             #[cfg(feature = "FaMagnifyingGlassSolid")]
             FaIcon::FaMagnifyingGlassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23714,7 +23700,7 @@ impl Data {
             }
             #[cfg(feature = "FaMailchimpBrands")]
             FaIcon::FaMailchimpBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23731,7 +23717,7 @@ impl Data {
             }
             #[cfg(feature = "FaManatSignSolid")]
             FaIcon::FaManatSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23748,7 +23734,7 @@ impl Data {
             }
             #[cfg(feature = "FaMandalorianBrands")]
             FaIcon::FaMandalorianBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23765,7 +23751,7 @@ impl Data {
             }
             #[cfg(feature = "FaMapLocationDotSolid")]
             FaIcon::FaMapLocationDotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23782,7 +23768,7 @@ impl Data {
             }
             #[cfg(feature = "FaMapLocationSolid")]
             FaIcon::FaMapLocationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23799,7 +23785,7 @@ impl Data {
             }
             #[cfg(feature = "FaMapPinSolid")]
             FaIcon::FaMapPinSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23816,7 +23802,7 @@ impl Data {
             }
             #[cfg(feature = "FaMapRegular")]
             FaIcon::FaMapRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23833,7 +23819,7 @@ impl Data {
             }
             #[cfg(feature = "FaMapSolid")]
             FaIcon::FaMapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23850,7 +23836,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarkdownBrands")]
             FaIcon::FaMarkdownBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23867,7 +23853,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarkerSolid")]
             FaIcon::FaMarkerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23884,7 +23870,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsAndVenusBurstSolid")]
             FaIcon::FaMarsAndVenusBurstSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23901,7 +23887,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsAndVenusSolid")]
             FaIcon::FaMarsAndVenusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23918,7 +23904,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsDoubleSolid")]
             FaIcon::FaMarsDoubleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23935,7 +23921,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsSolid")]
             FaIcon::FaMarsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23952,7 +23938,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsStrokeRightSolid")]
             FaIcon::FaMarsStrokeRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23969,7 +23955,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsStrokeSolid")]
             FaIcon::FaMarsStrokeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -23986,7 +23972,7 @@ impl Data {
             }
             #[cfg(feature = "FaMarsStrokeUpSolid")]
             FaIcon::FaMarsStrokeUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24003,7 +23989,7 @@ impl Data {
             }
             #[cfg(feature = "FaMartiniGlassCitrusSolid")]
             FaIcon::FaMartiniGlassCitrusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24020,7 +24006,7 @@ impl Data {
             }
             #[cfg(feature = "FaMartiniGlassEmptySolid")]
             FaIcon::FaMartiniGlassEmptySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24037,7 +24023,7 @@ impl Data {
             }
             #[cfg(feature = "FaMartiniGlassSolid")]
             FaIcon::FaMartiniGlassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24054,7 +24040,7 @@ impl Data {
             }
             #[cfg(feature = "FaMaskFaceSolid")]
             FaIcon::FaMaskFaceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24071,7 +24057,7 @@ impl Data {
             }
             #[cfg(feature = "FaMaskSolid")]
             FaIcon::FaMaskSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24088,7 +24074,7 @@ impl Data {
             }
             #[cfg(feature = "FaMaskVentilatorSolid")]
             FaIcon::FaMaskVentilatorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24105,7 +24091,7 @@ impl Data {
             }
             #[cfg(feature = "FaMasksTheaterSolid")]
             FaIcon::FaMasksTheaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24122,7 +24108,7 @@ impl Data {
             }
             #[cfg(feature = "FaMastodonBrands")]
             FaIcon::FaMastodonBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24139,7 +24125,7 @@ impl Data {
             }
             #[cfg(feature = "FaMattressPillowSolid")]
             FaIcon::FaMattressPillowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24156,7 +24142,7 @@ impl Data {
             }
             #[cfg(feature = "FaMaxcdnBrands")]
             FaIcon::FaMaxcdnBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24173,7 +24159,7 @@ impl Data {
             }
             #[cfg(feature = "FaMaximizeSolid")]
             FaIcon::FaMaximizeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24190,7 +24176,7 @@ impl Data {
             }
             #[cfg(feature = "FaMdbBrands")]
             FaIcon::FaMdbBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24207,7 +24193,7 @@ impl Data {
             }
             #[cfg(feature = "FaMedalSolid")]
             FaIcon::FaMedalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24224,7 +24210,7 @@ impl Data {
             }
             #[cfg(feature = "FaMedappsBrands")]
             FaIcon::FaMedappsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24241,7 +24227,7 @@ impl Data {
             }
             #[cfg(feature = "FaMediumBrands")]
             FaIcon::FaMediumBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24258,7 +24244,7 @@ impl Data {
             }
             #[cfg(feature = "FaMedrtBrands")]
             FaIcon::FaMedrtBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24275,7 +24261,7 @@ impl Data {
             }
             #[cfg(feature = "FaMeetupBrands")]
             FaIcon::FaMeetupBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24292,7 +24278,7 @@ impl Data {
             }
             #[cfg(feature = "FaMegaportBrands")]
             FaIcon::FaMegaportBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24309,7 +24295,7 @@ impl Data {
             }
             #[cfg(feature = "FaMemorySolid")]
             FaIcon::FaMemorySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24326,7 +24312,7 @@ impl Data {
             }
             #[cfg(feature = "FaMendeleyBrands")]
             FaIcon::FaMendeleyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24343,7 +24329,7 @@ impl Data {
             }
             #[cfg(feature = "FaMenorahSolid")]
             FaIcon::FaMenorahSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24360,7 +24346,7 @@ impl Data {
             }
             #[cfg(feature = "FaMercurySolid")]
             FaIcon::FaMercurySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24377,7 +24363,7 @@ impl Data {
             }
             #[cfg(feature = "FaMessageRegular")]
             FaIcon::FaMessageRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24394,7 +24380,7 @@ impl Data {
             }
             #[cfg(feature = "FaMessageSolid")]
             FaIcon::FaMessageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24411,7 +24397,7 @@ impl Data {
             }
             #[cfg(feature = "FaMetaBrands")]
             FaIcon::FaMetaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24428,7 +24414,7 @@ impl Data {
             }
             #[cfg(feature = "FaMeteorSolid")]
             FaIcon::FaMeteorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24445,7 +24431,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicroblogBrands")]
             FaIcon::FaMicroblogBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24462,7 +24448,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicrochipSolid")]
             FaIcon::FaMicrochipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24479,7 +24465,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicrophoneLinesSlashSolid")]
             FaIcon::FaMicrophoneLinesSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24496,7 +24482,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicrophoneLinesSolid")]
             FaIcon::FaMicrophoneLinesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24513,7 +24499,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicrophoneSlashSolid")]
             FaIcon::FaMicrophoneSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24530,7 +24516,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicrophoneSolid")]
             FaIcon::FaMicrophoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24547,7 +24533,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicroscopeSolid")]
             FaIcon::FaMicroscopeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24564,7 +24550,7 @@ impl Data {
             }
             #[cfg(feature = "FaMicrosoftBrands")]
             FaIcon::FaMicrosoftBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24581,7 +24567,7 @@ impl Data {
             }
             #[cfg(feature = "FaMillSignSolid")]
             FaIcon::FaMillSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24598,7 +24584,7 @@ impl Data {
             }
             #[cfg(feature = "FaMinimizeSolid")]
             FaIcon::FaMinimizeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24615,7 +24601,7 @@ impl Data {
             }
             #[cfg(feature = "FaMinusSolid")]
             FaIcon::FaMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24632,7 +24618,7 @@ impl Data {
             }
             #[cfg(feature = "FaMittenSolid")]
             FaIcon::FaMittenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24649,7 +24635,7 @@ impl Data {
             }
             #[cfg(feature = "FaMixBrands")]
             FaIcon::FaMixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24666,7 +24652,7 @@ impl Data {
             }
             #[cfg(feature = "FaMixcloudBrands")]
             FaIcon::FaMixcloudBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24683,7 +24669,7 @@ impl Data {
             }
             #[cfg(feature = "FaMixerBrands")]
             FaIcon::FaMixerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24700,7 +24686,7 @@ impl Data {
             }
             #[cfg(feature = "FaMizuniBrands")]
             FaIcon::FaMizuniBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24717,7 +24703,7 @@ impl Data {
             }
             #[cfg(feature = "FaMobileButtonSolid")]
             FaIcon::FaMobileButtonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24734,7 +24720,7 @@ impl Data {
             }
             #[cfg(feature = "FaMobileRetroSolid")]
             FaIcon::FaMobileRetroSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24751,7 +24737,7 @@ impl Data {
             }
             #[cfg(feature = "FaMobileScreenButtonSolid")]
             FaIcon::FaMobileScreenButtonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24768,7 +24754,7 @@ impl Data {
             }
             #[cfg(feature = "FaMobileScreenSolid")]
             FaIcon::FaMobileScreenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24785,7 +24771,7 @@ impl Data {
             }
             #[cfg(feature = "FaMobileSolid")]
             FaIcon::FaMobileSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24802,7 +24788,7 @@ impl Data {
             }
             #[cfg(feature = "FaModxBrands")]
             FaIcon::FaModxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24819,7 +24805,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneroBrands")]
             FaIcon::FaMoneroBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24836,7 +24822,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBill1Regular")]
             FaIcon::FaMoneyBill1Regular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24853,7 +24839,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBill1Solid")]
             FaIcon::FaMoneyBill1Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24870,7 +24856,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBill1WaveSolid")]
             FaIcon::FaMoneyBill1WaveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24887,7 +24873,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBillSolid")]
             FaIcon::FaMoneyBillSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24904,7 +24890,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBillTransferSolid")]
             FaIcon::FaMoneyBillTransferSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24921,7 +24907,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBillTrendUpSolid")]
             FaIcon::FaMoneyBillTrendUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24938,7 +24924,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBillWaveSolid")]
             FaIcon::FaMoneyBillWaveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24955,7 +24941,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBillWheatSolid")]
             FaIcon::FaMoneyBillWheatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24972,7 +24958,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyBillsSolid")]
             FaIcon::FaMoneyBillsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -24989,7 +24975,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyCheckDollarSolid")]
             FaIcon::FaMoneyCheckDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25006,7 +24992,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoneyCheckSolid")]
             FaIcon::FaMoneyCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25023,7 +25009,7 @@ impl Data {
             }
             #[cfg(feature = "FaMonumentSolid")]
             FaIcon::FaMonumentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25040,7 +25026,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoonRegular")]
             FaIcon::FaMoonRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25057,7 +25043,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoonSolid")]
             FaIcon::FaMoonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25074,7 +25060,7 @@ impl Data {
             }
             #[cfg(feature = "FaMortarPestleSolid")]
             FaIcon::FaMortarPestleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25091,7 +25077,7 @@ impl Data {
             }
             #[cfg(feature = "FaMosqueSolid")]
             FaIcon::FaMosqueSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25108,7 +25094,7 @@ impl Data {
             }
             #[cfg(feature = "FaMosquitoNetSolid")]
             FaIcon::FaMosquitoNetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25125,7 +25111,7 @@ impl Data {
             }
             #[cfg(feature = "FaMosquitoSolid")]
             FaIcon::FaMosquitoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25142,7 +25128,7 @@ impl Data {
             }
             #[cfg(feature = "FaMotorcycleSolid")]
             FaIcon::FaMotorcycleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25159,7 +25145,7 @@ impl Data {
             }
             #[cfg(feature = "FaMoundSolid")]
             FaIcon::FaMoundSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25176,7 +25162,7 @@ impl Data {
             }
             #[cfg(feature = "FaMountainCitySolid")]
             FaIcon::FaMountainCitySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25193,7 +25179,7 @@ impl Data {
             }
             #[cfg(feature = "FaMountainSolid")]
             FaIcon::FaMountainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25210,7 +25196,7 @@ impl Data {
             }
             #[cfg(feature = "FaMountainSunSolid")]
             FaIcon::FaMountainSunSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25227,7 +25213,7 @@ impl Data {
             }
             #[cfg(feature = "FaMugHotSolid")]
             FaIcon::FaMugHotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25244,7 +25230,7 @@ impl Data {
             }
             #[cfg(feature = "FaMugSaucerSolid")]
             FaIcon::FaMugSaucerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25261,7 +25247,7 @@ impl Data {
             }
             #[cfg(feature = "FaMusicSolid")]
             FaIcon::FaMusicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25278,7 +25264,7 @@ impl Data {
             }
             #[cfg(feature = "FaNSolid")]
             FaIcon::FaNSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25295,7 +25281,7 @@ impl Data {
             }
             #[cfg(feature = "FaNairaSignSolid")]
             FaIcon::FaNairaSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25312,7 +25298,7 @@ impl Data {
             }
             #[cfg(feature = "FaNapsterBrands")]
             FaIcon::FaNapsterBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25329,7 +25315,7 @@ impl Data {
             }
             #[cfg(feature = "FaNeosBrands")]
             FaIcon::FaNeosBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25346,7 +25332,7 @@ impl Data {
             }
             #[cfg(feature = "FaNetworkWiredSolid")]
             FaIcon::FaNetworkWiredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25363,7 +25349,7 @@ impl Data {
             }
             #[cfg(feature = "FaNeuterSolid")]
             FaIcon::FaNeuterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25380,7 +25366,7 @@ impl Data {
             }
             #[cfg(feature = "FaNewspaperRegular")]
             FaIcon::FaNewspaperRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25397,7 +25383,7 @@ impl Data {
             }
             #[cfg(feature = "FaNewspaperSolid")]
             FaIcon::FaNewspaperSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25414,7 +25400,7 @@ impl Data {
             }
             #[cfg(feature = "FaNfcDirectionalBrands")]
             FaIcon::FaNfcDirectionalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25431,7 +25417,7 @@ impl Data {
             }
             #[cfg(feature = "FaNfcSymbolBrands")]
             FaIcon::FaNfcSymbolBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25448,7 +25434,7 @@ impl Data {
             }
             #[cfg(feature = "FaNimblrBrands")]
             FaIcon::FaNimblrBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25465,7 +25451,7 @@ impl Data {
             }
             #[cfg(feature = "FaNodeBrands")]
             FaIcon::FaNodeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25482,7 +25468,7 @@ impl Data {
             }
             #[cfg(feature = "FaNodeJsBrands")]
             FaIcon::FaNodeJsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25499,7 +25485,7 @@ impl Data {
             }
             #[cfg(feature = "FaNotEqualSolid")]
             FaIcon::FaNotEqualSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25516,7 +25502,7 @@ impl Data {
             }
             #[cfg(feature = "FaNotdefSolid")]
             FaIcon::FaNotdefSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25533,7 +25519,7 @@ impl Data {
             }
             #[cfg(feature = "FaNoteStickyRegular")]
             FaIcon::FaNoteStickyRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25550,7 +25536,7 @@ impl Data {
             }
             #[cfg(feature = "FaNoteStickySolid")]
             FaIcon::FaNoteStickySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25567,7 +25553,7 @@ impl Data {
             }
             #[cfg(feature = "FaNotesMedicalSolid")]
             FaIcon::FaNotesMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25584,7 +25570,7 @@ impl Data {
             }
             #[cfg(feature = "FaNpmBrands")]
             FaIcon::FaNpmBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25601,7 +25587,7 @@ impl Data {
             }
             #[cfg(feature = "FaNs8Brands")]
             FaIcon::FaNs8Brands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25618,7 +25604,7 @@ impl Data {
             }
             #[cfg(feature = "FaNutritionixBrands")]
             FaIcon::FaNutritionixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25635,7 +25621,7 @@ impl Data {
             }
             #[cfg(feature = "FaOSolid")]
             FaIcon::FaOSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25652,7 +25638,7 @@ impl Data {
             }
             #[cfg(feature = "FaObjectGroupRegular")]
             FaIcon::FaObjectGroupRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25669,7 +25655,7 @@ impl Data {
             }
             #[cfg(feature = "FaObjectGroupSolid")]
             FaIcon::FaObjectGroupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25686,7 +25672,7 @@ impl Data {
             }
             #[cfg(feature = "FaObjectUngroupRegular")]
             FaIcon::FaObjectUngroupRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25703,7 +25689,7 @@ impl Data {
             }
             #[cfg(feature = "FaObjectUngroupSolid")]
             FaIcon::FaObjectUngroupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25720,7 +25706,7 @@ impl Data {
             }
             #[cfg(feature = "FaOctopusDeployBrands")]
             FaIcon::FaOctopusDeployBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25737,7 +25723,7 @@ impl Data {
             }
             #[cfg(feature = "FaOdnoklassnikiBrands")]
             FaIcon::FaOdnoklassnikiBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25754,7 +25740,7 @@ impl Data {
             }
             #[cfg(feature = "FaOdyseeBrands")]
             FaIcon::FaOdyseeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25771,7 +25757,7 @@ impl Data {
             }
             #[cfg(feature = "FaOilCanSolid")]
             FaIcon::FaOilCanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25788,7 +25774,7 @@ impl Data {
             }
             #[cfg(feature = "FaOilWellSolid")]
             FaIcon::FaOilWellSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25805,7 +25791,7 @@ impl Data {
             }
             #[cfg(feature = "FaOldRepublicBrands")]
             FaIcon::FaOldRepublicBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25822,7 +25808,7 @@ impl Data {
             }
             #[cfg(feature = "FaOmSolid")]
             FaIcon::FaOmSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25839,7 +25825,7 @@ impl Data {
             }
             #[cfg(feature = "FaOpencartBrands")]
             FaIcon::FaOpencartBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25856,7 +25842,7 @@ impl Data {
             }
             #[cfg(feature = "FaOpenidBrands")]
             FaIcon::FaOpenidBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25873,7 +25859,7 @@ impl Data {
             }
             #[cfg(feature = "FaOperaBrands")]
             FaIcon::FaOperaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25890,7 +25876,7 @@ impl Data {
             }
             #[cfg(feature = "FaOptinMonsterBrands")]
             FaIcon::FaOptinMonsterBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25907,7 +25893,7 @@ impl Data {
             }
             #[cfg(feature = "FaOrcidBrands")]
             FaIcon::FaOrcidBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25924,7 +25910,7 @@ impl Data {
             }
             #[cfg(feature = "FaOsiBrands")]
             FaIcon::FaOsiBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25941,7 +25927,7 @@ impl Data {
             }
             #[cfg(feature = "FaOtterSolid")]
             FaIcon::FaOtterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25958,7 +25944,7 @@ impl Data {
             }
             #[cfg(feature = "FaOutdentSolid")]
             FaIcon::FaOutdentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25975,7 +25961,7 @@ impl Data {
             }
             #[cfg(feature = "FaPSolid")]
             FaIcon::FaPSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -25992,7 +25978,7 @@ impl Data {
             }
             #[cfg(feature = "FaPadletBrands")]
             FaIcon::FaPadletBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26009,7 +25995,7 @@ impl Data {
             }
             #[cfg(feature = "FaPage4Brands")]
             FaIcon::FaPage4Brands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26026,7 +26012,7 @@ impl Data {
             }
             #[cfg(feature = "FaPagelinesBrands")]
             FaIcon::FaPagelinesBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26043,7 +26029,7 @@ impl Data {
             }
             #[cfg(feature = "FaPagerSolid")]
             FaIcon::FaPagerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26060,7 +26046,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaintRollerSolid")]
             FaIcon::FaPaintRollerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26077,7 +26063,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaintbrushSolid")]
             FaIcon::FaPaintbrushSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26094,7 +26080,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaletteSolid")]
             FaIcon::FaPaletteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26111,7 +26097,7 @@ impl Data {
             }
             #[cfg(feature = "FaPalfedBrands")]
             FaIcon::FaPalfedBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26128,7 +26114,7 @@ impl Data {
             }
             #[cfg(feature = "FaPalletSolid")]
             FaIcon::FaPalletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26145,7 +26131,7 @@ impl Data {
             }
             #[cfg(feature = "FaPanoramaSolid")]
             FaIcon::FaPanoramaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26162,7 +26148,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaperPlaneRegular")]
             FaIcon::FaPaperPlaneRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26179,7 +26165,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaperPlaneSolid")]
             FaIcon::FaPaperPlaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26196,7 +26182,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaperclipSolid")]
             FaIcon::FaPaperclipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26213,7 +26199,7 @@ impl Data {
             }
             #[cfg(feature = "FaParachuteBoxSolid")]
             FaIcon::FaParachuteBoxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26230,7 +26216,7 @@ impl Data {
             }
             #[cfg(feature = "FaParagraphSolid")]
             FaIcon::FaParagraphSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26247,7 +26233,7 @@ impl Data {
             }
             #[cfg(feature = "FaPassportSolid")]
             FaIcon::FaPassportSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26264,7 +26250,7 @@ impl Data {
             }
             #[cfg(feature = "FaPasteRegular")]
             FaIcon::FaPasteRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26281,7 +26267,7 @@ impl Data {
             }
             #[cfg(feature = "FaPasteSolid")]
             FaIcon::FaPasteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26298,7 +26284,7 @@ impl Data {
             }
             #[cfg(feature = "FaPatreonBrands")]
             FaIcon::FaPatreonBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26315,7 +26301,7 @@ impl Data {
             }
             #[cfg(feature = "FaPauseSolid")]
             FaIcon::FaPauseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26332,7 +26318,7 @@ impl Data {
             }
             #[cfg(feature = "FaPawSolid")]
             FaIcon::FaPawSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26349,7 +26335,7 @@ impl Data {
             }
             #[cfg(feature = "FaPaypalBrands")]
             FaIcon::FaPaypalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26366,7 +26352,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeaceSolid")]
             FaIcon::FaPeaceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26383,7 +26369,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenClipSolid")]
             FaIcon::FaPenClipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26400,7 +26386,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenFancySolid")]
             FaIcon::FaPenFancySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26417,7 +26403,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenNibSolid")]
             FaIcon::FaPenNibSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26434,7 +26420,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenRulerSolid")]
             FaIcon::FaPenRulerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26451,7 +26437,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenSolid")]
             FaIcon::FaPenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26468,7 +26454,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenToSquareRegular")]
             FaIcon::FaPenToSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26485,7 +26471,7 @@ impl Data {
             }
             #[cfg(feature = "FaPenToSquareSolid")]
             FaIcon::FaPenToSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26502,7 +26488,7 @@ impl Data {
             }
             #[cfg(feature = "FaPencilSolid")]
             FaIcon::FaPencilSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26519,7 +26505,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeopleArrowsSolid")]
             FaIcon::FaPeopleArrowsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26536,7 +26522,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeopleCarryBoxSolid")]
             FaIcon::FaPeopleCarryBoxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26553,7 +26539,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeopleGroupSolid")]
             FaIcon::FaPeopleGroupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26570,7 +26556,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeopleLineSolid")]
             FaIcon::FaPeopleLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26587,7 +26573,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeoplePullingSolid")]
             FaIcon::FaPeoplePullingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26604,7 +26590,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeopleRobberySolid")]
             FaIcon::FaPeopleRobberySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26621,7 +26607,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeopleRoofSolid")]
             FaIcon::FaPeopleRoofSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26638,7 +26624,7 @@ impl Data {
             }
             #[cfg(feature = "FaPepperHotSolid")]
             FaIcon::FaPepperHotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26655,7 +26641,7 @@ impl Data {
             }
             #[cfg(feature = "FaPerbyteBrands")]
             FaIcon::FaPerbyteBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26672,7 +26658,7 @@ impl Data {
             }
             #[cfg(feature = "FaPercentSolid")]
             FaIcon::FaPercentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26689,7 +26675,7 @@ impl Data {
             }
             #[cfg(feature = "FaPeriscopeBrands")]
             FaIcon::FaPeriscopeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26706,7 +26692,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonArrowDownToLineSolid")]
             FaIcon::FaPersonArrowDownToLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26723,7 +26709,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonArrowUpFromLineSolid")]
             FaIcon::FaPersonArrowUpFromLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26740,7 +26726,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonBikingSolid")]
             FaIcon::FaPersonBikingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26757,7 +26743,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonBoothSolid")]
             FaIcon::FaPersonBoothSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26774,7 +26760,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonBreastfeedingSolid")]
             FaIcon::FaPersonBreastfeedingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26791,7 +26777,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonBurstSolid")]
             FaIcon::FaPersonBurstSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26808,7 +26794,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCaneSolid")]
             FaIcon::FaPersonCaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26825,7 +26811,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonChalkboardSolid")]
             FaIcon::FaPersonChalkboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26842,7 +26828,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCircleCheckSolid")]
             FaIcon::FaPersonCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26859,7 +26845,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCircleExclamationSolid")]
             FaIcon::FaPersonCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26876,7 +26862,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCircleMinusSolid")]
             FaIcon::FaPersonCircleMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26893,7 +26879,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCirclePlusSolid")]
             FaIcon::FaPersonCirclePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26910,7 +26896,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCircleQuestionSolid")]
             FaIcon::FaPersonCircleQuestionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26927,7 +26913,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonCircleXmarkSolid")]
             FaIcon::FaPersonCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26944,7 +26930,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonDiggingSolid")]
             FaIcon::FaPersonDiggingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26961,7 +26947,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonDotsFromLineSolid")]
             FaIcon::FaPersonDotsFromLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26978,7 +26964,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonDressBurstSolid")]
             FaIcon::FaPersonDressBurstSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -26995,7 +26981,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonDressSolid")]
             FaIcon::FaPersonDressSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27012,7 +26998,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonDrowningSolid")]
             FaIcon::FaPersonDrowningSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27029,7 +27015,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonFallingBurstSolid")]
             FaIcon::FaPersonFallingBurstSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27046,7 +27032,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonFallingSolid")]
             FaIcon::FaPersonFallingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27063,7 +27049,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonHalfDressSolid")]
             FaIcon::FaPersonHalfDressSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27080,7 +27066,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonHarassingSolid")]
             FaIcon::FaPersonHarassingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27097,7 +27083,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonHikingSolid")]
             FaIcon::FaPersonHikingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27114,7 +27100,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonMilitaryPointingSolid")]
             FaIcon::FaPersonMilitaryPointingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27131,7 +27117,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonMilitaryRifleSolid")]
             FaIcon::FaPersonMilitaryRifleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27148,7 +27134,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonMilitaryToPersonSolid")]
             FaIcon::FaPersonMilitaryToPersonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27165,7 +27151,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonPrayingSolid")]
             FaIcon::FaPersonPrayingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27182,7 +27168,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonPregnantSolid")]
             FaIcon::FaPersonPregnantSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27199,7 +27185,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonRaysSolid")]
             FaIcon::FaPersonRaysSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27216,7 +27202,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonRifleSolid")]
             FaIcon::FaPersonRifleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27233,7 +27219,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonRunningSolid")]
             FaIcon::FaPersonRunningSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27250,7 +27236,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonShelterSolid")]
             FaIcon::FaPersonShelterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27267,7 +27253,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonSkatingSolid")]
             FaIcon::FaPersonSkatingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27284,7 +27270,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonSkiingNordicSolid")]
             FaIcon::FaPersonSkiingNordicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27301,7 +27287,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonSkiingSolid")]
             FaIcon::FaPersonSkiingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27318,7 +27304,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonSnowboardingSolid")]
             FaIcon::FaPersonSnowboardingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27335,7 +27321,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonSolid")]
             FaIcon::FaPersonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27352,7 +27338,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonSwimmingSolid")]
             FaIcon::FaPersonSwimmingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27369,7 +27355,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonThroughWindowSolid")]
             FaIcon::FaPersonThroughWindowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27386,7 +27372,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonWalkingArrowLoopLeftSolid")]
             FaIcon::FaPersonWalkingArrowLoopLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27403,7 +27389,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonWalkingArrowRightSolid")]
             FaIcon::FaPersonWalkingArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27420,7 +27406,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonWalkingDashedLineArrowRightSolid")]
             FaIcon::FaPersonWalkingDashedLineArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27437,7 +27423,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonWalkingLuggageSolid")]
             FaIcon::FaPersonWalkingLuggageSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27454,7 +27440,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonWalkingSolid")]
             FaIcon::FaPersonWalkingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27471,7 +27457,7 @@ impl Data {
             }
             #[cfg(feature = "FaPersonWalkingWithCaneSolid")]
             FaIcon::FaPersonWalkingWithCaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27488,7 +27474,7 @@ impl Data {
             }
             #[cfg(feature = "FaPesetaSignSolid")]
             FaIcon::FaPesetaSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27505,7 +27491,7 @@ impl Data {
             }
             #[cfg(feature = "FaPesoSignSolid")]
             FaIcon::FaPesoSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27522,7 +27508,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhabricatorBrands")]
             FaIcon::FaPhabricatorBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27539,7 +27525,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhoenixFrameworkBrands")]
             FaIcon::FaPhoenixFrameworkBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27556,7 +27542,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhoenixSquadronBrands")]
             FaIcon::FaPhoenixSquadronBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27573,7 +27559,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhoneFlipSolid")]
             FaIcon::FaPhoneFlipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27590,7 +27576,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhoneSlashSolid")]
             FaIcon::FaPhoneSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27607,7 +27593,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhoneSolid")]
             FaIcon::FaPhoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27624,7 +27610,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhoneVolumeSolid")]
             FaIcon::FaPhoneVolumeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27641,7 +27627,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhotoFilmSolid")]
             FaIcon::FaPhotoFilmSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27658,7 +27644,7 @@ impl Data {
             }
             #[cfg(feature = "FaPhpBrands")]
             FaIcon::FaPhpBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27675,7 +27661,7 @@ impl Data {
             }
             #[cfg(feature = "FaPiedPiperAltBrands")]
             FaIcon::FaPiedPiperAltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27692,7 +27678,7 @@ impl Data {
             }
             #[cfg(feature = "FaPiedPiperBrands")]
             FaIcon::FaPiedPiperBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27709,7 +27695,7 @@ impl Data {
             }
             #[cfg(feature = "FaPiedPiperHatBrands")]
             FaIcon::FaPiedPiperHatBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27726,7 +27712,7 @@ impl Data {
             }
             #[cfg(feature = "FaPiedPiperPpBrands")]
             FaIcon::FaPiedPiperPpBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27743,7 +27729,7 @@ impl Data {
             }
             #[cfg(feature = "FaPiggyBankSolid")]
             FaIcon::FaPiggyBankSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27760,7 +27746,7 @@ impl Data {
             }
             #[cfg(feature = "FaPillsSolid")]
             FaIcon::FaPillsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27777,7 +27763,7 @@ impl Data {
             }
             #[cfg(feature = "FaPinterestBrands")]
             FaIcon::FaPinterestBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27794,7 +27780,7 @@ impl Data {
             }
             #[cfg(feature = "FaPinterestPBrands")]
             FaIcon::FaPinterestPBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27811,7 +27797,7 @@ impl Data {
             }
             #[cfg(feature = "FaPixBrands")]
             FaIcon::FaPixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27828,7 +27814,7 @@ impl Data {
             }
             #[cfg(feature = "FaPizzaSliceSolid")]
             FaIcon::FaPizzaSliceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27845,7 +27831,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaceOfWorshipSolid")]
             FaIcon::FaPlaceOfWorshipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27862,7 +27848,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneArrivalSolid")]
             FaIcon::FaPlaneArrivalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27879,7 +27865,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneCircleCheckSolid")]
             FaIcon::FaPlaneCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27896,7 +27882,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneCircleExclamationSolid")]
             FaIcon::FaPlaneCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27913,7 +27899,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneCircleXmarkSolid")]
             FaIcon::FaPlaneCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27930,7 +27916,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneDepartureSolid")]
             FaIcon::FaPlaneDepartureSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27947,7 +27933,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneLockSolid")]
             FaIcon::FaPlaneLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27964,7 +27950,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneSlashSolid")]
             FaIcon::FaPlaneSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27981,7 +27967,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneSolid")]
             FaIcon::FaPlaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -27998,7 +27984,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaneUpSolid")]
             FaIcon::FaPlaneUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28015,7 +28001,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlantWiltSolid")]
             FaIcon::FaPlantWiltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28032,7 +28018,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlateWheatSolid")]
             FaIcon::FaPlateWheatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28049,7 +28035,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaySolid")]
             FaIcon::FaPlaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28066,7 +28052,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlaystationBrands")]
             FaIcon::FaPlaystationBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28083,7 +28069,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugCircleBoltSolid")]
             FaIcon::FaPlugCircleBoltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28100,7 +28086,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugCircleCheckSolid")]
             FaIcon::FaPlugCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28117,7 +28103,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugCircleExclamationSolid")]
             FaIcon::FaPlugCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28134,7 +28120,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugCircleMinusSolid")]
             FaIcon::FaPlugCircleMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28151,7 +28137,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugCirclePlusSolid")]
             FaIcon::FaPlugCirclePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28168,7 +28154,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugCircleXmarkSolid")]
             FaIcon::FaPlugCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28185,7 +28171,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlugSolid")]
             FaIcon::FaPlugSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28202,7 +28188,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlusMinusSolid")]
             FaIcon::FaPlusMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28219,7 +28205,7 @@ impl Data {
             }
             #[cfg(feature = "FaPlusSolid")]
             FaIcon::FaPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28236,7 +28222,7 @@ impl Data {
             }
             #[cfg(feature = "FaPodcastSolid")]
             FaIcon::FaPodcastSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28253,7 +28239,7 @@ impl Data {
             }
             #[cfg(feature = "FaPooSolid")]
             FaIcon::FaPooSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28270,7 +28256,7 @@ impl Data {
             }
             #[cfg(feature = "FaPooStormSolid")]
             FaIcon::FaPooStormSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28287,7 +28273,7 @@ impl Data {
             }
             #[cfg(feature = "FaPoopSolid")]
             FaIcon::FaPoopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28304,7 +28290,7 @@ impl Data {
             }
             #[cfg(feature = "FaPowerOffSolid")]
             FaIcon::FaPowerOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28321,7 +28307,7 @@ impl Data {
             }
             #[cfg(feature = "FaPrescriptionBottleMedicalSolid")]
             FaIcon::FaPrescriptionBottleMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28338,7 +28324,7 @@ impl Data {
             }
             #[cfg(feature = "FaPrescriptionBottleSolid")]
             FaIcon::FaPrescriptionBottleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28355,7 +28341,7 @@ impl Data {
             }
             #[cfg(feature = "FaPrescriptionSolid")]
             FaIcon::FaPrescriptionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28372,7 +28358,7 @@ impl Data {
             }
             #[cfg(feature = "FaPrintSolid")]
             FaIcon::FaPrintSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28389,7 +28375,7 @@ impl Data {
             }
             #[cfg(feature = "FaProductHuntBrands")]
             FaIcon::FaProductHuntBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28406,7 +28392,7 @@ impl Data {
             }
             #[cfg(feature = "FaPumpMedicalSolid")]
             FaIcon::FaPumpMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28423,7 +28409,7 @@ impl Data {
             }
             #[cfg(feature = "FaPumpSoapSolid")]
             FaIcon::FaPumpSoapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28440,7 +28426,7 @@ impl Data {
             }
             #[cfg(feature = "FaPushedBrands")]
             FaIcon::FaPushedBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28457,7 +28443,7 @@ impl Data {
             }
             #[cfg(feature = "FaPuzzlePieceSolid")]
             FaIcon::FaPuzzlePieceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28474,7 +28460,7 @@ impl Data {
             }
             #[cfg(feature = "FaPythonBrands")]
             FaIcon::FaPythonBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28491,7 +28477,7 @@ impl Data {
             }
             #[cfg(feature = "FaQSolid")]
             FaIcon::FaQSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28508,7 +28494,7 @@ impl Data {
             }
             #[cfg(feature = "FaQqBrands")]
             FaIcon::FaQqBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28525,7 +28511,7 @@ impl Data {
             }
             #[cfg(feature = "FaQrcodeSolid")]
             FaIcon::FaQrcodeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28542,7 +28528,7 @@ impl Data {
             }
             #[cfg(feature = "FaQuestionSolid")]
             FaIcon::FaQuestionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28559,7 +28545,7 @@ impl Data {
             }
             #[cfg(feature = "FaQuinscapeBrands")]
             FaIcon::FaQuinscapeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28576,7 +28562,7 @@ impl Data {
             }
             #[cfg(feature = "FaQuoraBrands")]
             FaIcon::FaQuoraBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28593,7 +28579,7 @@ impl Data {
             }
             #[cfg(feature = "FaQuoteLeftSolid")]
             FaIcon::FaQuoteLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28610,7 +28596,7 @@ impl Data {
             }
             #[cfg(feature = "FaQuoteRightSolid")]
             FaIcon::FaQuoteRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28627,7 +28613,7 @@ impl Data {
             }
             #[cfg(feature = "FaRProjectBrands")]
             FaIcon::FaRProjectBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28644,7 +28630,7 @@ impl Data {
             }
             #[cfg(feature = "FaRSolid")]
             FaIcon::FaRSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28661,7 +28647,7 @@ impl Data {
             }
             #[cfg(feature = "FaRadiationSolid")]
             FaIcon::FaRadiationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28678,7 +28664,7 @@ impl Data {
             }
             #[cfg(feature = "FaRadioSolid")]
             FaIcon::FaRadioSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28695,7 +28681,7 @@ impl Data {
             }
             #[cfg(feature = "FaRainbowSolid")]
             FaIcon::FaRainbowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28712,7 +28698,7 @@ impl Data {
             }
             #[cfg(feature = "FaRankingStarSolid")]
             FaIcon::FaRankingStarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28729,7 +28715,7 @@ impl Data {
             }
             #[cfg(feature = "FaRaspberryPiBrands")]
             FaIcon::FaRaspberryPiBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28746,7 +28732,7 @@ impl Data {
             }
             #[cfg(feature = "FaRavelryBrands")]
             FaIcon::FaRavelryBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28763,7 +28749,7 @@ impl Data {
             }
             #[cfg(feature = "FaReactBrands")]
             FaIcon::FaReactBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28780,7 +28766,7 @@ impl Data {
             }
             #[cfg(feature = "FaReacteuropeBrands")]
             FaIcon::FaReacteuropeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28797,7 +28783,7 @@ impl Data {
             }
             #[cfg(feature = "FaReadmeBrands")]
             FaIcon::FaReadmeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28814,7 +28800,7 @@ impl Data {
             }
             #[cfg(feature = "FaRebelBrands")]
             FaIcon::FaRebelBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28831,7 +28817,7 @@ impl Data {
             }
             #[cfg(feature = "FaReceiptSolid")]
             FaIcon::FaReceiptSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28848,7 +28834,7 @@ impl Data {
             }
             #[cfg(feature = "FaRecordVinylSolid")]
             FaIcon::FaRecordVinylSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28865,7 +28851,7 @@ impl Data {
             }
             #[cfg(feature = "FaRectangleAdSolid")]
             FaIcon::FaRectangleAdSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28882,7 +28868,7 @@ impl Data {
             }
             #[cfg(feature = "FaRectangleListRegular")]
             FaIcon::FaRectangleListRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28899,7 +28885,7 @@ impl Data {
             }
             #[cfg(feature = "FaRectangleListSolid")]
             FaIcon::FaRectangleListSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28916,7 +28902,7 @@ impl Data {
             }
             #[cfg(feature = "FaRectangleXmarkRegular")]
             FaIcon::FaRectangleXmarkRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28933,7 +28919,7 @@ impl Data {
             }
             #[cfg(feature = "FaRectangleXmarkSolid")]
             FaIcon::FaRectangleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28950,7 +28936,7 @@ impl Data {
             }
             #[cfg(feature = "FaRecycleSolid")]
             FaIcon::FaRecycleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28967,7 +28953,7 @@ impl Data {
             }
             #[cfg(feature = "FaRedRiverBrands")]
             FaIcon::FaRedRiverBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -28984,7 +28970,7 @@ impl Data {
             }
             #[cfg(feature = "FaRedditAlienBrands")]
             FaIcon::FaRedditAlienBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29001,7 +28987,7 @@ impl Data {
             }
             #[cfg(feature = "FaRedditBrands")]
             FaIcon::FaRedditBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29018,7 +29004,7 @@ impl Data {
             }
             #[cfg(feature = "FaRedhatBrands")]
             FaIcon::FaRedhatBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29035,7 +29021,7 @@ impl Data {
             }
             #[cfg(feature = "FaRegisteredRegular")]
             FaIcon::FaRegisteredRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29052,7 +29038,7 @@ impl Data {
             }
             #[cfg(feature = "FaRegisteredSolid")]
             FaIcon::FaRegisteredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29069,7 +29055,7 @@ impl Data {
             }
             #[cfg(feature = "FaRenrenBrands")]
             FaIcon::FaRenrenBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29086,7 +29072,7 @@ impl Data {
             }
             #[cfg(feature = "FaRepeatSolid")]
             FaIcon::FaRepeatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29103,7 +29089,7 @@ impl Data {
             }
             #[cfg(feature = "FaReplyAllSolid")]
             FaIcon::FaReplyAllSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29120,7 +29106,7 @@ impl Data {
             }
             #[cfg(feature = "FaReplySolid")]
             FaIcon::FaReplySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29137,7 +29123,7 @@ impl Data {
             }
             #[cfg(feature = "FaReplydBrands")]
             FaIcon::FaReplydBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29154,7 +29140,7 @@ impl Data {
             }
             #[cfg(feature = "FaRepublicanSolid")]
             FaIcon::FaRepublicanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29171,7 +29157,7 @@ impl Data {
             }
             #[cfg(feature = "FaResearchgateBrands")]
             FaIcon::FaResearchgateBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29188,7 +29174,7 @@ impl Data {
             }
             #[cfg(feature = "FaResolvingBrands")]
             FaIcon::FaResolvingBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29205,7 +29191,7 @@ impl Data {
             }
             #[cfg(feature = "FaRestroomSolid")]
             FaIcon::FaRestroomSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29222,7 +29208,7 @@ impl Data {
             }
             #[cfg(feature = "FaRetweetSolid")]
             FaIcon::FaRetweetSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29239,7 +29225,7 @@ impl Data {
             }
             #[cfg(feature = "FaRevBrands")]
             FaIcon::FaRevBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29256,7 +29242,7 @@ impl Data {
             }
             #[cfg(feature = "FaRibbonSolid")]
             FaIcon::FaRibbonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29273,7 +29259,7 @@ impl Data {
             }
             #[cfg(feature = "FaRightFromBracketSolid")]
             FaIcon::FaRightFromBracketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29290,7 +29276,7 @@ impl Data {
             }
             #[cfg(feature = "FaRightLeftSolid")]
             FaIcon::FaRightLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29307,7 +29293,7 @@ impl Data {
             }
             #[cfg(feature = "FaRightLongSolid")]
             FaIcon::FaRightLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29324,7 +29310,7 @@ impl Data {
             }
             #[cfg(feature = "FaRightToBracketSolid")]
             FaIcon::FaRightToBracketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29341,7 +29327,7 @@ impl Data {
             }
             #[cfg(feature = "FaRingSolid")]
             FaIcon::FaRingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29358,7 +29344,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadBarrierSolid")]
             FaIcon::FaRoadBarrierSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29375,7 +29361,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadBridgeSolid")]
             FaIcon::FaRoadBridgeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29392,7 +29378,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadCircleCheckSolid")]
             FaIcon::FaRoadCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29409,7 +29395,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadCircleExclamationSolid")]
             FaIcon::FaRoadCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29426,7 +29412,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadCircleXmarkSolid")]
             FaIcon::FaRoadCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29443,7 +29429,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadLockSolid")]
             FaIcon::FaRoadLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29460,7 +29446,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadSolid")]
             FaIcon::FaRoadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29477,7 +29463,7 @@ impl Data {
             }
             #[cfg(feature = "FaRoadSpikesSolid")]
             FaIcon::FaRoadSpikesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29494,7 +29480,7 @@ impl Data {
             }
             #[cfg(feature = "FaRobotSolid")]
             FaIcon::FaRobotSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29511,7 +29497,7 @@ impl Data {
             }
             #[cfg(feature = "FaRocketSolid")]
             FaIcon::FaRocketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29528,7 +29514,7 @@ impl Data {
             }
             #[cfg(feature = "FaRocketchatBrands")]
             FaIcon::FaRocketchatBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29545,7 +29531,7 @@ impl Data {
             }
             #[cfg(feature = "FaRockrmsBrands")]
             FaIcon::FaRockrmsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29562,7 +29548,7 @@ impl Data {
             }
             #[cfg(feature = "FaRotateLeftSolid")]
             FaIcon::FaRotateLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29579,7 +29565,7 @@ impl Data {
             }
             #[cfg(feature = "FaRotateRightSolid")]
             FaIcon::FaRotateRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29596,7 +29582,7 @@ impl Data {
             }
             #[cfg(feature = "FaRotateSolid")]
             FaIcon::FaRotateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29613,7 +29599,7 @@ impl Data {
             }
             #[cfg(feature = "FaRouteSolid")]
             FaIcon::FaRouteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29630,7 +29616,7 @@ impl Data {
             }
             #[cfg(feature = "FaRssSolid")]
             FaIcon::FaRssSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29647,7 +29633,7 @@ impl Data {
             }
             #[cfg(feature = "FaRubleSignSolid")]
             FaIcon::FaRubleSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29664,7 +29650,7 @@ impl Data {
             }
             #[cfg(feature = "FaRugSolid")]
             FaIcon::FaRugSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29681,7 +29667,7 @@ impl Data {
             }
             #[cfg(feature = "FaRulerCombinedSolid")]
             FaIcon::FaRulerCombinedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29698,7 +29684,7 @@ impl Data {
             }
             #[cfg(feature = "FaRulerHorizontalSolid")]
             FaIcon::FaRulerHorizontalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29715,7 +29701,7 @@ impl Data {
             }
             #[cfg(feature = "FaRulerSolid")]
             FaIcon::FaRulerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29732,7 +29718,7 @@ impl Data {
             }
             #[cfg(feature = "FaRulerVerticalSolid")]
             FaIcon::FaRulerVerticalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29749,7 +29735,7 @@ impl Data {
             }
             #[cfg(feature = "FaRupeeSignSolid")]
             FaIcon::FaRupeeSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29766,7 +29752,7 @@ impl Data {
             }
             #[cfg(feature = "FaRupiahSignSolid")]
             FaIcon::FaRupiahSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29783,7 +29769,7 @@ impl Data {
             }
             #[cfg(feature = "FaRustBrands")]
             FaIcon::FaRustBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29800,7 +29786,7 @@ impl Data {
             }
             #[cfg(feature = "FaSSolid")]
             FaIcon::FaSSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29817,7 +29803,7 @@ impl Data {
             }
             #[cfg(feature = "FaSackDollarSolid")]
             FaIcon::FaSackDollarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29834,7 +29820,7 @@ impl Data {
             }
             #[cfg(feature = "FaSackXmarkSolid")]
             FaIcon::FaSackXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29851,7 +29837,7 @@ impl Data {
             }
             #[cfg(feature = "FaSafariBrands")]
             FaIcon::FaSafariBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29868,7 +29854,7 @@ impl Data {
             }
             #[cfg(feature = "FaSailboatSolid")]
             FaIcon::FaSailboatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29885,7 +29871,7 @@ impl Data {
             }
             #[cfg(feature = "FaSalesforceBrands")]
             FaIcon::FaSalesforceBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29902,7 +29888,7 @@ impl Data {
             }
             #[cfg(feature = "FaSassBrands")]
             FaIcon::FaSassBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29919,7 +29905,7 @@ impl Data {
             }
             #[cfg(feature = "FaSatelliteDishSolid")]
             FaIcon::FaSatelliteDishSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29936,7 +29922,7 @@ impl Data {
             }
             #[cfg(feature = "FaSatelliteSolid")]
             FaIcon::FaSatelliteSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29953,7 +29939,7 @@ impl Data {
             }
             #[cfg(feature = "FaScaleBalancedSolid")]
             FaIcon::FaScaleBalancedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29970,7 +29956,7 @@ impl Data {
             }
             #[cfg(feature = "FaScaleUnbalancedFlipSolid")]
             FaIcon::FaScaleUnbalancedFlipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -29987,7 +29973,7 @@ impl Data {
             }
             #[cfg(feature = "FaScaleUnbalancedSolid")]
             FaIcon::FaScaleUnbalancedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30004,7 +29990,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchlixBrands")]
             FaIcon::FaSchlixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30021,7 +30007,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchoolCircleCheckSolid")]
             FaIcon::FaSchoolCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30038,7 +30024,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchoolCircleExclamationSolid")]
             FaIcon::FaSchoolCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30055,7 +30041,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchoolCircleXmarkSolid")]
             FaIcon::FaSchoolCircleXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30072,7 +30058,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchoolFlagSolid")]
             FaIcon::FaSchoolFlagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30089,7 +30075,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchoolLockSolid")]
             FaIcon::FaSchoolLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30106,7 +30092,7 @@ impl Data {
             }
             #[cfg(feature = "FaSchoolSolid")]
             FaIcon::FaSchoolSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30123,7 +30109,7 @@ impl Data {
             }
             #[cfg(feature = "FaScissorsSolid")]
             FaIcon::FaScissorsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30140,7 +30126,7 @@ impl Data {
             }
             #[cfg(feature = "FaScreenpalBrands")]
             FaIcon::FaScreenpalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30157,7 +30143,7 @@ impl Data {
             }
             #[cfg(feature = "FaScrewdriverSolid")]
             FaIcon::FaScrewdriverSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30174,7 +30160,7 @@ impl Data {
             }
             #[cfg(feature = "FaScrewdriverWrenchSolid")]
             FaIcon::FaScrewdriverWrenchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30191,7 +30177,7 @@ impl Data {
             }
             #[cfg(feature = "FaScribdBrands")]
             FaIcon::FaScribdBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30208,7 +30194,7 @@ impl Data {
             }
             #[cfg(feature = "FaScrollSolid")]
             FaIcon::FaScrollSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30225,7 +30211,7 @@ impl Data {
             }
             #[cfg(feature = "FaScrollTorahSolid")]
             FaIcon::FaScrollTorahSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30242,7 +30228,7 @@ impl Data {
             }
             #[cfg(feature = "FaSdCardSolid")]
             FaIcon::FaSdCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30259,7 +30245,7 @@ impl Data {
             }
             #[cfg(feature = "FaSearchenginBrands")]
             FaIcon::FaSearchenginBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30276,7 +30262,7 @@ impl Data {
             }
             #[cfg(feature = "FaSectionSolid")]
             FaIcon::FaSectionSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30293,7 +30279,7 @@ impl Data {
             }
             #[cfg(feature = "FaSeedlingSolid")]
             FaIcon::FaSeedlingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30310,7 +30296,7 @@ impl Data {
             }
             #[cfg(feature = "FaSellcastBrands")]
             FaIcon::FaSellcastBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30327,7 +30313,7 @@ impl Data {
             }
             #[cfg(feature = "FaSellsyBrands")]
             FaIcon::FaSellsyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30344,7 +30330,7 @@ impl Data {
             }
             #[cfg(feature = "FaServerSolid")]
             FaIcon::FaServerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30361,7 +30347,7 @@ impl Data {
             }
             #[cfg(feature = "FaServicestackBrands")]
             FaIcon::FaServicestackBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30378,7 +30364,7 @@ impl Data {
             }
             #[cfg(feature = "FaShapesSolid")]
             FaIcon::FaShapesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30395,7 +30381,7 @@ impl Data {
             }
             #[cfg(feature = "FaShareFromSquareRegular")]
             FaIcon::FaShareFromSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30412,7 +30398,7 @@ impl Data {
             }
             #[cfg(feature = "FaShareFromSquareSolid")]
             FaIcon::FaShareFromSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30429,7 +30415,7 @@ impl Data {
             }
             #[cfg(feature = "FaShareNodesSolid")]
             FaIcon::FaShareNodesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30446,7 +30432,7 @@ impl Data {
             }
             #[cfg(feature = "FaShareSolid")]
             FaIcon::FaShareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30463,7 +30449,7 @@ impl Data {
             }
             #[cfg(feature = "FaSheetPlasticSolid")]
             FaIcon::FaSheetPlasticSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30480,7 +30466,7 @@ impl Data {
             }
             #[cfg(feature = "FaShekelSignSolid")]
             FaIcon::FaShekelSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30497,7 +30483,7 @@ impl Data {
             }
             #[cfg(feature = "FaShieldCatSolid")]
             FaIcon::FaShieldCatSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30514,7 +30500,7 @@ impl Data {
             }
             #[cfg(feature = "FaShieldDogSolid")]
             FaIcon::FaShieldDogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30531,7 +30517,7 @@ impl Data {
             }
             #[cfg(feature = "FaShieldHalvedSolid")]
             FaIcon::FaShieldHalvedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30548,7 +30534,7 @@ impl Data {
             }
             #[cfg(feature = "FaShieldHeartSolid")]
             FaIcon::FaShieldHeartSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30565,7 +30551,7 @@ impl Data {
             }
             #[cfg(feature = "FaShieldSolid")]
             FaIcon::FaShieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30582,7 +30568,7 @@ impl Data {
             }
             #[cfg(feature = "FaShieldVirusSolid")]
             FaIcon::FaShieldVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30599,7 +30585,7 @@ impl Data {
             }
             #[cfg(feature = "FaShipSolid")]
             FaIcon::FaShipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30616,7 +30602,7 @@ impl Data {
             }
             #[cfg(feature = "FaShirtSolid")]
             FaIcon::FaShirtSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30633,7 +30619,7 @@ impl Data {
             }
             #[cfg(feature = "FaShirtsinbulkBrands")]
             FaIcon::FaShirtsinbulkBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30650,7 +30636,7 @@ impl Data {
             }
             #[cfg(feature = "FaShoePrintsSolid")]
             FaIcon::FaShoePrintsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30667,7 +30653,7 @@ impl Data {
             }
             #[cfg(feature = "FaShopLockSolid")]
             FaIcon::FaShopLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30684,7 +30670,7 @@ impl Data {
             }
             #[cfg(feature = "FaShopSlashSolid")]
             FaIcon::FaShopSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30701,7 +30687,7 @@ impl Data {
             }
             #[cfg(feature = "FaShopSolid")]
             FaIcon::FaShopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30718,7 +30704,7 @@ impl Data {
             }
             #[cfg(feature = "FaShopifyBrands")]
             FaIcon::FaShopifyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30735,7 +30721,7 @@ impl Data {
             }
             #[cfg(feature = "FaShopwareBrands")]
             FaIcon::FaShopwareBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30752,7 +30738,7 @@ impl Data {
             }
             #[cfg(feature = "FaShowerSolid")]
             FaIcon::FaShowerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30769,7 +30755,7 @@ impl Data {
             }
             #[cfg(feature = "FaShrimpSolid")]
             FaIcon::FaShrimpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30786,7 +30772,7 @@ impl Data {
             }
             #[cfg(feature = "FaShuffleSolid")]
             FaIcon::FaShuffleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30803,7 +30789,7 @@ impl Data {
             }
             #[cfg(feature = "FaShuttleSpaceSolid")]
             FaIcon::FaShuttleSpaceSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30820,7 +30806,7 @@ impl Data {
             }
             #[cfg(feature = "FaSignHangingSolid")]
             FaIcon::FaSignHangingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30837,7 +30823,7 @@ impl Data {
             }
             #[cfg(feature = "FaSignalSolid")]
             FaIcon::FaSignalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30854,7 +30840,7 @@ impl Data {
             }
             #[cfg(feature = "FaSignatureSolid")]
             FaIcon::FaSignatureSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30871,7 +30857,7 @@ impl Data {
             }
             #[cfg(feature = "FaSignsPostSolid")]
             FaIcon::FaSignsPostSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30888,7 +30874,7 @@ impl Data {
             }
             #[cfg(feature = "FaSimCardSolid")]
             FaIcon::FaSimCardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30905,7 +30891,7 @@ impl Data {
             }
             #[cfg(feature = "FaSimplybuiltBrands")]
             FaIcon::FaSimplybuiltBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30922,7 +30908,7 @@ impl Data {
             }
             #[cfg(feature = "FaSinkSolid")]
             FaIcon::FaSinkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30939,7 +30925,7 @@ impl Data {
             }
             #[cfg(feature = "FaSistrixBrands")]
             FaIcon::FaSistrixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30956,7 +30942,7 @@ impl Data {
             }
             #[cfg(feature = "FaSitemapSolid")]
             FaIcon::FaSitemapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30973,7 +30959,7 @@ impl Data {
             }
             #[cfg(feature = "FaSithBrands")]
             FaIcon::FaSithBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -30990,7 +30976,7 @@ impl Data {
             }
             #[cfg(feature = "FaSitroxBrands")]
             FaIcon::FaSitroxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31007,7 +30993,7 @@ impl Data {
             }
             #[cfg(feature = "FaSketchBrands")]
             FaIcon::FaSketchBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31024,7 +31010,7 @@ impl Data {
             }
             #[cfg(feature = "FaSkullCrossbonesSolid")]
             FaIcon::FaSkullCrossbonesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31041,7 +31027,7 @@ impl Data {
             }
             #[cfg(feature = "FaSkullSolid")]
             FaIcon::FaSkullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31058,7 +31044,7 @@ impl Data {
             }
             #[cfg(feature = "FaSkyatlasBrands")]
             FaIcon::FaSkyatlasBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31075,7 +31061,7 @@ impl Data {
             }
             #[cfg(feature = "FaSkypeBrands")]
             FaIcon::FaSkypeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31092,7 +31078,7 @@ impl Data {
             }
             #[cfg(feature = "FaSlackBrands")]
             FaIcon::FaSlackBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31109,7 +31095,7 @@ impl Data {
             }
             #[cfg(feature = "FaSlashSolid")]
             FaIcon::FaSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31126,7 +31112,7 @@ impl Data {
             }
             #[cfg(feature = "FaSleighSolid")]
             FaIcon::FaSleighSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31143,7 +31129,7 @@ impl Data {
             }
             #[cfg(feature = "FaSlidersSolid")]
             FaIcon::FaSlidersSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31160,7 +31146,7 @@ impl Data {
             }
             #[cfg(feature = "FaSlideshareBrands")]
             FaIcon::FaSlideshareBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31177,7 +31163,7 @@ impl Data {
             }
             #[cfg(feature = "FaSmogSolid")]
             FaIcon::FaSmogSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31194,7 +31180,7 @@ impl Data {
             }
             #[cfg(feature = "FaSmokingSolid")]
             FaIcon::FaSmokingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31211,7 +31197,7 @@ impl Data {
             }
             #[cfg(feature = "FaSnapchatBrands")]
             FaIcon::FaSnapchatBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31228,7 +31214,7 @@ impl Data {
             }
             #[cfg(feature = "FaSnowflakeRegular")]
             FaIcon::FaSnowflakeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31245,7 +31231,7 @@ impl Data {
             }
             #[cfg(feature = "FaSnowflakeSolid")]
             FaIcon::FaSnowflakeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31262,7 +31248,7 @@ impl Data {
             }
             #[cfg(feature = "FaSnowmanSolid")]
             FaIcon::FaSnowmanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31279,7 +31265,7 @@ impl Data {
             }
             #[cfg(feature = "FaSnowplowSolid")]
             FaIcon::FaSnowplowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31296,7 +31282,7 @@ impl Data {
             }
             #[cfg(feature = "FaSoapSolid")]
             FaIcon::FaSoapSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31313,7 +31299,7 @@ impl Data {
             }
             #[cfg(feature = "FaSocksSolid")]
             FaIcon::FaSocksSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31330,7 +31316,7 @@ impl Data {
             }
             #[cfg(feature = "FaSolarPanelSolid")]
             FaIcon::FaSolarPanelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31347,7 +31333,7 @@ impl Data {
             }
             #[cfg(feature = "FaSortDownSolid")]
             FaIcon::FaSortDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31364,7 +31350,7 @@ impl Data {
             }
             #[cfg(feature = "FaSortSolid")]
             FaIcon::FaSortSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31381,7 +31367,7 @@ impl Data {
             }
             #[cfg(feature = "FaSortUpSolid")]
             FaIcon::FaSortUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31398,7 +31384,7 @@ impl Data {
             }
             #[cfg(feature = "FaSoundcloudBrands")]
             FaIcon::FaSoundcloudBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31415,7 +31401,7 @@ impl Data {
             }
             #[cfg(feature = "FaSourcetreeBrands")]
             FaIcon::FaSourcetreeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31432,7 +31418,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpaSolid")]
             FaIcon::FaSpaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31449,7 +31435,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpaceAwesomeBrands")]
             FaIcon::FaSpaceAwesomeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31466,7 +31452,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpaghettiMonsterFlyingSolid")]
             FaIcon::FaSpaghettiMonsterFlyingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31483,7 +31469,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpeakapBrands")]
             FaIcon::FaSpeakapBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31500,7 +31486,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpeakerDeckBrands")]
             FaIcon::FaSpeakerDeckBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31517,7 +31503,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpellCheckSolid")]
             FaIcon::FaSpellCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31534,7 +31520,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpiderSolid")]
             FaIcon::FaSpiderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31551,7 +31537,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpinnerSolid")]
             FaIcon::FaSpinnerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31568,7 +31554,7 @@ impl Data {
             }
             #[cfg(feature = "FaSplotchSolid")]
             FaIcon::FaSplotchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31585,7 +31571,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpoonSolid")]
             FaIcon::FaSpoonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31602,7 +31588,7 @@ impl Data {
             }
             #[cfg(feature = "FaSpotifyBrands")]
             FaIcon::FaSpotifyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31619,7 +31605,7 @@ impl Data {
             }
             #[cfg(feature = "FaSprayCanSolid")]
             FaIcon::FaSprayCanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31636,7 +31622,7 @@ impl Data {
             }
             #[cfg(feature = "FaSprayCanSparklesSolid")]
             FaIcon::FaSprayCanSparklesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31653,7 +31639,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareArrowUpRightSolid")]
             FaIcon::FaSquareArrowUpRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31670,7 +31656,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareBehanceBrands")]
             FaIcon::FaSquareBehanceBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31687,7 +31673,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretDownRegular")]
             FaIcon::FaSquareCaretDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31704,7 +31690,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretDownSolid")]
             FaIcon::FaSquareCaretDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31721,7 +31707,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretLeftRegular")]
             FaIcon::FaSquareCaretLeftRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31738,7 +31724,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretLeftSolid")]
             FaIcon::FaSquareCaretLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31755,7 +31741,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretRightRegular")]
             FaIcon::FaSquareCaretRightRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31772,7 +31758,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretRightSolid")]
             FaIcon::FaSquareCaretRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31789,7 +31775,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretUpRegular")]
             FaIcon::FaSquareCaretUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31806,7 +31792,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCaretUpSolid")]
             FaIcon::FaSquareCaretUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31823,7 +31809,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCheckRegular")]
             FaIcon::FaSquareCheckRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31840,7 +31826,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareCheckSolid")]
             FaIcon::FaSquareCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31857,7 +31843,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareDribbbleBrands")]
             FaIcon::FaSquareDribbbleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31874,7 +31860,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareEnvelopeSolid")]
             FaIcon::FaSquareEnvelopeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31891,7 +31877,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareFacebookBrands")]
             FaIcon::FaSquareFacebookBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31908,7 +31894,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareFontAwesomeBrands")]
             FaIcon::FaSquareFontAwesomeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31925,7 +31911,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareFontAwesomeStrokeBrands")]
             FaIcon::FaSquareFontAwesomeStrokeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31942,7 +31928,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareFullRegular")]
             FaIcon::FaSquareFullRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31959,7 +31945,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareFullSolid")]
             FaIcon::FaSquareFullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31976,7 +31962,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareGitBrands")]
             FaIcon::FaSquareGitBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -31993,7 +31979,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareGithubBrands")]
             FaIcon::FaSquareGithubBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32010,7 +31996,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareGitlabBrands")]
             FaIcon::FaSquareGitlabBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32027,7 +32013,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareGooglePlusBrands")]
             FaIcon::FaSquareGooglePlusBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32044,7 +32030,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareHSolid")]
             FaIcon::FaSquareHSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32061,7 +32047,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareHackerNewsBrands")]
             FaIcon::FaSquareHackerNewsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32078,7 +32064,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareInstagramBrands")]
             FaIcon::FaSquareInstagramBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32095,7 +32081,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareJsBrands")]
             FaIcon::FaSquareJsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32112,7 +32098,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareLastfmBrands")]
             FaIcon::FaSquareLastfmBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32129,7 +32115,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareMinusRegular")]
             FaIcon::FaSquareMinusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32146,7 +32132,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareMinusSolid")]
             FaIcon::FaSquareMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32163,7 +32149,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareNfiSolid")]
             FaIcon::FaSquareNfiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32180,7 +32166,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareOdnoklassnikiBrands")]
             FaIcon::FaSquareOdnoklassnikiBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32197,7 +32183,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareParkingSolid")]
             FaIcon::FaSquareParkingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32214,7 +32200,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePenSolid")]
             FaIcon::FaSquarePenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32231,7 +32217,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePersonConfinedSolid")]
             FaIcon::FaSquarePersonConfinedSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32248,7 +32234,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePhoneFlipSolid")]
             FaIcon::FaSquarePhoneFlipSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32265,7 +32251,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePhoneSolid")]
             FaIcon::FaSquarePhoneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32282,7 +32268,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePiedPiperBrands")]
             FaIcon::FaSquarePiedPiperBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32299,7 +32285,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePinterestBrands")]
             FaIcon::FaSquarePinterestBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32316,7 +32302,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePlusRegular")]
             FaIcon::FaSquarePlusRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32333,7 +32319,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePlusSolid")]
             FaIcon::FaSquarePlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32350,7 +32336,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePollHorizontalSolid")]
             FaIcon::FaSquarePollHorizontalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32367,7 +32353,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarePollVerticalSolid")]
             FaIcon::FaSquarePollVerticalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32384,7 +32370,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareRedditBrands")]
             FaIcon::FaSquareRedditBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32401,7 +32387,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareRegular")]
             FaIcon::FaSquareRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32418,7 +32404,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareRootVariableSolid")]
             FaIcon::FaSquareRootVariableSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32435,7 +32421,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareRssSolid")]
             FaIcon::FaSquareRssSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32452,7 +32438,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareShareNodesSolid")]
             FaIcon::FaSquareShareNodesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32469,7 +32455,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareSnapchatBrands")]
             FaIcon::FaSquareSnapchatBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32486,7 +32472,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareSolid")]
             FaIcon::FaSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32503,7 +32489,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareSteamBrands")]
             FaIcon::FaSquareSteamBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32520,7 +32506,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareTumblrBrands")]
             FaIcon::FaSquareTumblrBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32537,7 +32523,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareTwitterBrands")]
             FaIcon::FaSquareTwitterBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32554,7 +32540,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareUpRightSolid")]
             FaIcon::FaSquareUpRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32571,7 +32557,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareViadeoBrands")]
             FaIcon::FaSquareViadeoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32588,7 +32574,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareVimeoBrands")]
             FaIcon::FaSquareVimeoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32605,7 +32591,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareVirusSolid")]
             FaIcon::FaSquareVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32622,7 +32608,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareWhatsappBrands")]
             FaIcon::FaSquareWhatsappBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32639,7 +32625,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareXingBrands")]
             FaIcon::FaSquareXingBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32656,7 +32642,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareXmarkSolid")]
             FaIcon::FaSquareXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32673,7 +32659,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquareYoutubeBrands")]
             FaIcon::FaSquareYoutubeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32690,7 +32676,7 @@ impl Data {
             }
             #[cfg(feature = "FaSquarespaceBrands")]
             FaIcon::FaSquarespaceBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32707,7 +32693,7 @@ impl Data {
             }
             #[cfg(feature = "FaStackExchangeBrands")]
             FaIcon::FaStackExchangeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32724,7 +32710,7 @@ impl Data {
             }
             #[cfg(feature = "FaStackOverflowBrands")]
             FaIcon::FaStackOverflowBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32741,7 +32727,7 @@ impl Data {
             }
             #[cfg(feature = "FaStackpathBrands")]
             FaIcon::FaStackpathBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32758,7 +32744,7 @@ impl Data {
             }
             #[cfg(feature = "FaStaffSnakeSolid")]
             FaIcon::FaStaffSnakeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32775,7 +32761,7 @@ impl Data {
             }
             #[cfg(feature = "FaStairsSolid")]
             FaIcon::FaStairsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32792,7 +32778,7 @@ impl Data {
             }
             #[cfg(feature = "FaStampSolid")]
             FaIcon::FaStampSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32809,7 +32795,7 @@ impl Data {
             }
             #[cfg(feature = "FaStaplerSolid")]
             FaIcon::FaStaplerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32826,7 +32812,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarAndCrescentSolid")]
             FaIcon::FaStarAndCrescentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32843,7 +32829,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarHalfRegular")]
             FaIcon::FaStarHalfRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32860,7 +32846,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarHalfSolid")]
             FaIcon::FaStarHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32877,7 +32863,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarHalfStrokeRegular")]
             FaIcon::FaStarHalfStrokeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32894,7 +32880,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarHalfStrokeSolid")]
             FaIcon::FaStarHalfStrokeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32911,7 +32897,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarOfDavidSolid")]
             FaIcon::FaStarOfDavidSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32928,7 +32914,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarOfLifeSolid")]
             FaIcon::FaStarOfLifeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32945,7 +32931,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarRegular")]
             FaIcon::FaStarRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32962,7 +32948,7 @@ impl Data {
             }
             #[cfg(feature = "FaStarSolid")]
             FaIcon::FaStarSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32979,7 +32965,7 @@ impl Data {
             }
             #[cfg(feature = "FaStaylinkedBrands")]
             FaIcon::FaStaylinkedBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -32996,7 +32982,7 @@ impl Data {
             }
             #[cfg(feature = "FaSteamBrands")]
             FaIcon::FaSteamBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33013,7 +32999,7 @@ impl Data {
             }
             #[cfg(feature = "FaSteamSymbolBrands")]
             FaIcon::FaSteamSymbolBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33030,7 +33016,7 @@ impl Data {
             }
             #[cfg(feature = "FaSterlingSignSolid")]
             FaIcon::FaSterlingSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33047,7 +33033,7 @@ impl Data {
             }
             #[cfg(feature = "FaStethoscopeSolid")]
             FaIcon::FaStethoscopeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33064,7 +33050,7 @@ impl Data {
             }
             #[cfg(feature = "FaStickerMuleBrands")]
             FaIcon::FaStickerMuleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33081,7 +33067,7 @@ impl Data {
             }
             #[cfg(feature = "FaStopSolid")]
             FaIcon::FaStopSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33098,7 +33084,7 @@ impl Data {
             }
             #[cfg(feature = "FaStopwatch20Solid")]
             FaIcon::FaStopwatch20Solid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33115,7 +33101,7 @@ impl Data {
             }
             #[cfg(feature = "FaStopwatchSolid")]
             FaIcon::FaStopwatchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33132,7 +33118,7 @@ impl Data {
             }
             #[cfg(feature = "FaStoreSlashSolid")]
             FaIcon::FaStoreSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33149,7 +33135,7 @@ impl Data {
             }
             #[cfg(feature = "FaStoreSolid")]
             FaIcon::FaStoreSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33166,7 +33152,7 @@ impl Data {
             }
             #[cfg(feature = "FaStravaBrands")]
             FaIcon::FaStravaBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33183,7 +33169,7 @@ impl Data {
             }
             #[cfg(feature = "FaStreetViewSolid")]
             FaIcon::FaStreetViewSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33200,7 +33186,7 @@ impl Data {
             }
             #[cfg(feature = "FaStrikethroughSolid")]
             FaIcon::FaStrikethroughSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33217,7 +33203,7 @@ impl Data {
             }
             #[cfg(feature = "FaStripeBrands")]
             FaIcon::FaStripeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33234,7 +33220,7 @@ impl Data {
             }
             #[cfg(feature = "FaStripeSBrands")]
             FaIcon::FaStripeSBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33251,7 +33237,7 @@ impl Data {
             }
             #[cfg(feature = "FaStroopwafelSolid")]
             FaIcon::FaStroopwafelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33268,7 +33254,7 @@ impl Data {
             }
             #[cfg(feature = "FaStubberBrands")]
             FaIcon::FaStubberBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33285,7 +33271,7 @@ impl Data {
             }
             #[cfg(feature = "FaStudiovinariBrands")]
             FaIcon::FaStudiovinariBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33302,7 +33288,7 @@ impl Data {
             }
             #[cfg(feature = "FaStumbleuponBrands")]
             FaIcon::FaStumbleuponBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33319,7 +33305,7 @@ impl Data {
             }
             #[cfg(feature = "FaStumbleuponCircleBrands")]
             FaIcon::FaStumbleuponCircleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33336,7 +33322,7 @@ impl Data {
             }
             #[cfg(feature = "FaSubscriptSolid")]
             FaIcon::FaSubscriptSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33353,7 +33339,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuitcaseMedicalSolid")]
             FaIcon::FaSuitcaseMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33370,7 +33356,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuitcaseRollingSolid")]
             FaIcon::FaSuitcaseRollingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33387,7 +33373,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuitcaseSolid")]
             FaIcon::FaSuitcaseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33404,7 +33390,7 @@ impl Data {
             }
             #[cfg(feature = "FaSunPlantWiltSolid")]
             FaIcon::FaSunPlantWiltSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33421,7 +33407,7 @@ impl Data {
             }
             #[cfg(feature = "FaSunRegular")]
             FaIcon::FaSunRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33438,7 +33424,7 @@ impl Data {
             }
             #[cfg(feature = "FaSunSolid")]
             FaIcon::FaSunSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33455,7 +33441,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuperpowersBrands")]
             FaIcon::FaSuperpowersBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33472,7 +33458,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuperscriptSolid")]
             FaIcon::FaSuperscriptSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33489,7 +33475,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuppleBrands")]
             FaIcon::FaSuppleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33506,7 +33492,7 @@ impl Data {
             }
             #[cfg(feature = "FaSuseBrands")]
             FaIcon::FaSuseBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33523,7 +33509,7 @@ impl Data {
             }
             #[cfg(feature = "FaSwatchbookSolid")]
             FaIcon::FaSwatchbookSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33540,7 +33526,7 @@ impl Data {
             }
             #[cfg(feature = "FaSwiftBrands")]
             FaIcon::FaSwiftBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33557,7 +33543,7 @@ impl Data {
             }
             #[cfg(feature = "FaSymfonyBrands")]
             FaIcon::FaSymfonyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33574,7 +33560,7 @@ impl Data {
             }
             #[cfg(feature = "FaSynagogueSolid")]
             FaIcon::FaSynagogueSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33591,7 +33577,7 @@ impl Data {
             }
             #[cfg(feature = "FaSyringeSolid")]
             FaIcon::FaSyringeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33608,7 +33594,7 @@ impl Data {
             }
             #[cfg(feature = "FaTSolid")]
             FaIcon::FaTSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33625,7 +33611,7 @@ impl Data {
             }
             #[cfg(feature = "FaTableCellsLargeSolid")]
             FaIcon::FaTableCellsLargeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33642,7 +33628,7 @@ impl Data {
             }
             #[cfg(feature = "FaTableCellsSolid")]
             FaIcon::FaTableCellsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33659,7 +33645,7 @@ impl Data {
             }
             #[cfg(feature = "FaTableColumnsSolid")]
             FaIcon::FaTableColumnsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33676,7 +33662,7 @@ impl Data {
             }
             #[cfg(feature = "FaTableListSolid")]
             FaIcon::FaTableListSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33693,7 +33679,7 @@ impl Data {
             }
             #[cfg(feature = "FaTableSolid")]
             FaIcon::FaTableSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33710,7 +33696,7 @@ impl Data {
             }
             #[cfg(feature = "FaTableTennisPaddleBallSolid")]
             FaIcon::FaTableTennisPaddleBallSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33727,7 +33713,7 @@ impl Data {
             }
             #[cfg(feature = "FaTabletButtonSolid")]
             FaIcon::FaTabletButtonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33744,7 +33730,7 @@ impl Data {
             }
             #[cfg(feature = "FaTabletScreenButtonSolid")]
             FaIcon::FaTabletScreenButtonSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33761,7 +33747,7 @@ impl Data {
             }
             #[cfg(feature = "FaTabletSolid")]
             FaIcon::FaTabletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33778,7 +33764,7 @@ impl Data {
             }
             #[cfg(feature = "FaTabletsSolid")]
             FaIcon::FaTabletsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33795,7 +33781,7 @@ impl Data {
             }
             #[cfg(feature = "FaTachographDigitalSolid")]
             FaIcon::FaTachographDigitalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33812,7 +33798,7 @@ impl Data {
             }
             #[cfg(feature = "FaTagSolid")]
             FaIcon::FaTagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33829,7 +33815,7 @@ impl Data {
             }
             #[cfg(feature = "FaTagsSolid")]
             FaIcon::FaTagsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33846,7 +33832,7 @@ impl Data {
             }
             #[cfg(feature = "FaTapeSolid")]
             FaIcon::FaTapeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33863,7 +33849,7 @@ impl Data {
             }
             #[cfg(feature = "FaTarpDropletSolid")]
             FaIcon::FaTarpDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33880,7 +33866,7 @@ impl Data {
             }
             #[cfg(feature = "FaTarpSolid")]
             FaIcon::FaTarpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33897,7 +33883,7 @@ impl Data {
             }
             #[cfg(feature = "FaTaxiSolid")]
             FaIcon::FaTaxiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33914,7 +33900,7 @@ impl Data {
             }
             #[cfg(feature = "FaTeamspeakBrands")]
             FaIcon::FaTeamspeakBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33931,7 +33917,7 @@ impl Data {
             }
             #[cfg(feature = "FaTeethOpenSolid")]
             FaIcon::FaTeethOpenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33948,7 +33934,7 @@ impl Data {
             }
             #[cfg(feature = "FaTeethSolid")]
             FaIcon::FaTeethSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33965,7 +33951,7 @@ impl Data {
             }
             #[cfg(feature = "FaTelegramBrands")]
             FaIcon::FaTelegramBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33982,7 +33968,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureArrowDownSolid")]
             FaIcon::FaTemperatureArrowDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -33999,7 +33985,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureArrowUpSolid")]
             FaIcon::FaTemperatureArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34016,7 +34002,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureEmptySolid")]
             FaIcon::FaTemperatureEmptySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34033,7 +34019,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureFullSolid")]
             FaIcon::FaTemperatureFullSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34050,7 +34036,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureHalfSolid")]
             FaIcon::FaTemperatureHalfSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34067,7 +34053,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureHighSolid")]
             FaIcon::FaTemperatureHighSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34084,7 +34070,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureLowSolid")]
             FaIcon::FaTemperatureLowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34101,7 +34087,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureQuarterSolid")]
             FaIcon::FaTemperatureQuarterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34118,7 +34104,7 @@ impl Data {
             }
             #[cfg(feature = "FaTemperatureThreeQuartersSolid")]
             FaIcon::FaTemperatureThreeQuartersSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34135,7 +34121,7 @@ impl Data {
             }
             #[cfg(feature = "FaTencentWeiboBrands")]
             FaIcon::FaTencentWeiboBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34152,7 +34138,7 @@ impl Data {
             }
             #[cfg(feature = "FaTengeSignSolid")]
             FaIcon::FaTengeSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34169,7 +34155,7 @@ impl Data {
             }
             #[cfg(feature = "FaTentArrowDownToLineSolid")]
             FaIcon::FaTentArrowDownToLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34186,7 +34172,7 @@ impl Data {
             }
             #[cfg(feature = "FaTentArrowLeftRightSolid")]
             FaIcon::FaTentArrowLeftRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34203,7 +34189,7 @@ impl Data {
             }
             #[cfg(feature = "FaTentArrowTurnLeftSolid")]
             FaIcon::FaTentArrowTurnLeftSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34220,7 +34206,7 @@ impl Data {
             }
             #[cfg(feature = "FaTentArrowsDownSolid")]
             FaIcon::FaTentArrowsDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34237,7 +34223,7 @@ impl Data {
             }
             #[cfg(feature = "FaTentSolid")]
             FaIcon::FaTentSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34254,7 +34240,7 @@ impl Data {
             }
             #[cfg(feature = "FaTentsSolid")]
             FaIcon::FaTentsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34271,7 +34257,7 @@ impl Data {
             }
             #[cfg(feature = "FaTerminalSolid")]
             FaIcon::FaTerminalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34288,7 +34274,7 @@ impl Data {
             }
             #[cfg(feature = "FaTextHeightSolid")]
             FaIcon::FaTextHeightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34305,7 +34291,7 @@ impl Data {
             }
             #[cfg(feature = "FaTextSlashSolid")]
             FaIcon::FaTextSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34322,7 +34308,7 @@ impl Data {
             }
             #[cfg(feature = "FaTextWidthSolid")]
             FaIcon::FaTextWidthSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34339,7 +34325,7 @@ impl Data {
             }
             #[cfg(feature = "FaTheRedYetiBrands")]
             FaIcon::FaTheRedYetiBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34356,7 +34342,7 @@ impl Data {
             }
             #[cfg(feature = "FaThemecoBrands")]
             FaIcon::FaThemecoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34373,7 +34359,7 @@ impl Data {
             }
             #[cfg(feature = "FaThemeisleBrands")]
             FaIcon::FaThemeisleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34390,7 +34376,7 @@ impl Data {
             }
             #[cfg(feature = "FaThermometerSolid")]
             FaIcon::FaThermometerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34407,7 +34393,7 @@ impl Data {
             }
             #[cfg(feature = "FaThinkPeaksBrands")]
             FaIcon::FaThinkPeaksBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34424,7 +34410,7 @@ impl Data {
             }
             #[cfg(feature = "FaThumbsDownRegular")]
             FaIcon::FaThumbsDownRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34441,7 +34427,7 @@ impl Data {
             }
             #[cfg(feature = "FaThumbsDownSolid")]
             FaIcon::FaThumbsDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34458,7 +34444,7 @@ impl Data {
             }
             #[cfg(feature = "FaThumbsUpRegular")]
             FaIcon::FaThumbsUpRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34475,7 +34461,7 @@ impl Data {
             }
             #[cfg(feature = "FaThumbsUpSolid")]
             FaIcon::FaThumbsUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34492,7 +34478,7 @@ impl Data {
             }
             #[cfg(feature = "FaThumbtackSolid")]
             FaIcon::FaThumbtackSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34509,7 +34495,7 @@ impl Data {
             }
             #[cfg(feature = "FaTicketSimpleSolid")]
             FaIcon::FaTicketSimpleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34526,7 +34512,7 @@ impl Data {
             }
             #[cfg(feature = "FaTicketSolid")]
             FaIcon::FaTicketSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34543,7 +34529,7 @@ impl Data {
             }
             #[cfg(feature = "FaTiktokBrands")]
             FaIcon::FaTiktokBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34560,7 +34546,7 @@ impl Data {
             }
             #[cfg(feature = "FaTimelineSolid")]
             FaIcon::FaTimelineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34577,7 +34563,7 @@ impl Data {
             }
             #[cfg(feature = "FaToggleOffSolid")]
             FaIcon::FaToggleOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34594,7 +34580,7 @@ impl Data {
             }
             #[cfg(feature = "FaToggleOnSolid")]
             FaIcon::FaToggleOnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34611,7 +34597,7 @@ impl Data {
             }
             #[cfg(feature = "FaToiletPaperSlashSolid")]
             FaIcon::FaToiletPaperSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34628,7 +34614,7 @@ impl Data {
             }
             #[cfg(feature = "FaToiletPaperSolid")]
             FaIcon::FaToiletPaperSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34645,7 +34631,7 @@ impl Data {
             }
             #[cfg(feature = "FaToiletPortableSolid")]
             FaIcon::FaToiletPortableSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34662,7 +34648,7 @@ impl Data {
             }
             #[cfg(feature = "FaToiletSolid")]
             FaIcon::FaToiletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34679,7 +34665,7 @@ impl Data {
             }
             #[cfg(feature = "FaToiletsPortableSolid")]
             FaIcon::FaToiletsPortableSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34696,7 +34682,7 @@ impl Data {
             }
             #[cfg(feature = "FaToolboxSolid")]
             FaIcon::FaToolboxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34713,7 +34699,7 @@ impl Data {
             }
             #[cfg(feature = "FaToothSolid")]
             FaIcon::FaToothSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34730,7 +34716,7 @@ impl Data {
             }
             #[cfg(feature = "FaToriiGateSolid")]
             FaIcon::FaToriiGateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34747,7 +34733,7 @@ impl Data {
             }
             #[cfg(feature = "FaTornadoSolid")]
             FaIcon::FaTornadoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34764,7 +34750,7 @@ impl Data {
             }
             #[cfg(feature = "FaTowerBroadcastSolid")]
             FaIcon::FaTowerBroadcastSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34781,7 +34767,7 @@ impl Data {
             }
             #[cfg(feature = "FaTowerCellSolid")]
             FaIcon::FaTowerCellSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34798,7 +34784,7 @@ impl Data {
             }
             #[cfg(feature = "FaTowerObservationSolid")]
             FaIcon::FaTowerObservationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34815,7 +34801,7 @@ impl Data {
             }
             #[cfg(feature = "FaTractorSolid")]
             FaIcon::FaTractorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34832,7 +34818,7 @@ impl Data {
             }
             #[cfg(feature = "FaTradeFederationBrands")]
             FaIcon::FaTradeFederationBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34849,7 +34835,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrademarkSolid")]
             FaIcon::FaTrademarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34866,7 +34852,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrafficLightSolid")]
             FaIcon::FaTrafficLightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34883,7 +34869,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrailerSolid")]
             FaIcon::FaTrailerSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34900,7 +34886,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrainSolid")]
             FaIcon::FaTrainSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34917,7 +34903,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrainSubwaySolid")]
             FaIcon::FaTrainSubwaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34934,7 +34920,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrainTramSolid")]
             FaIcon::FaTrainTramSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34951,7 +34937,7 @@ impl Data {
             }
             #[cfg(feature = "FaTransgenderSolid")]
             FaIcon::FaTransgenderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34968,7 +34954,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrashArrowUpSolid")]
             FaIcon::FaTrashArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -34985,7 +34971,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrashCanArrowUpSolid")]
             FaIcon::FaTrashCanArrowUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35002,7 +34988,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrashCanRegular")]
             FaIcon::FaTrashCanRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35019,7 +35005,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrashCanSolid")]
             FaIcon::FaTrashCanSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35036,7 +35022,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrashSolid")]
             FaIcon::FaTrashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35053,7 +35039,7 @@ impl Data {
             }
             #[cfg(feature = "FaTreeCitySolid")]
             FaIcon::FaTreeCitySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35070,7 +35056,7 @@ impl Data {
             }
             #[cfg(feature = "FaTreeSolid")]
             FaIcon::FaTreeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35087,7 +35073,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrelloBrands")]
             FaIcon::FaTrelloBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35104,7 +35090,7 @@ impl Data {
             }
             #[cfg(feature = "FaTriangleExclamationSolid")]
             FaIcon::FaTriangleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35121,7 +35107,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrophySolid")]
             FaIcon::FaTrophySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35138,7 +35124,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrowelBricksSolid")]
             FaIcon::FaTrowelBricksSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35155,7 +35141,7 @@ impl Data {
             }
             #[cfg(feature = "FaTrowelSolid")]
             FaIcon::FaTrowelSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35172,7 +35158,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckArrowRightSolid")]
             FaIcon::FaTruckArrowRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35189,7 +35175,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckDropletSolid")]
             FaIcon::FaTruckDropletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35206,7 +35192,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckFastSolid")]
             FaIcon::FaTruckFastSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35223,7 +35209,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckFieldSolid")]
             FaIcon::FaTruckFieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35240,7 +35226,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckFieldUnSolid")]
             FaIcon::FaTruckFieldUnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35257,7 +35243,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckFrontSolid")]
             FaIcon::FaTruckFrontSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35274,7 +35260,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckMedicalSolid")]
             FaIcon::FaTruckMedicalSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35291,7 +35277,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckMonsterSolid")]
             FaIcon::FaTruckMonsterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35308,7 +35294,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckMovingSolid")]
             FaIcon::FaTruckMovingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35325,7 +35311,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckPickupSolid")]
             FaIcon::FaTruckPickupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35342,7 +35328,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckPlaneSolid")]
             FaIcon::FaTruckPlaneSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35359,7 +35345,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckRampBoxSolid")]
             FaIcon::FaTruckRampBoxSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35376,7 +35362,7 @@ impl Data {
             }
             #[cfg(feature = "FaTruckSolid")]
             FaIcon::FaTruckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35393,7 +35379,7 @@ impl Data {
             }
             #[cfg(feature = "FaTtySolid")]
             FaIcon::FaTtySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35410,7 +35396,7 @@ impl Data {
             }
             #[cfg(feature = "FaTumblrBrands")]
             FaIcon::FaTumblrBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35427,7 +35413,7 @@ impl Data {
             }
             #[cfg(feature = "FaTurkishLiraSignSolid")]
             FaIcon::FaTurkishLiraSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35444,7 +35430,7 @@ impl Data {
             }
             #[cfg(feature = "FaTurnDownSolid")]
             FaIcon::FaTurnDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35461,7 +35447,7 @@ impl Data {
             }
             #[cfg(feature = "FaTurnUpSolid")]
             FaIcon::FaTurnUpSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35478,7 +35464,7 @@ impl Data {
             }
             #[cfg(feature = "FaTvSolid")]
             FaIcon::FaTvSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35495,7 +35481,7 @@ impl Data {
             }
             #[cfg(feature = "FaTwitchBrands")]
             FaIcon::FaTwitchBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35512,7 +35498,7 @@ impl Data {
             }
             #[cfg(feature = "FaTwitterBrands")]
             FaIcon::FaTwitterBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35529,7 +35515,7 @@ impl Data {
             }
             #[cfg(feature = "FaTypo3Brands")]
             FaIcon::FaTypo3Brands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35546,7 +35532,7 @@ impl Data {
             }
             #[cfg(feature = "FaUSolid")]
             FaIcon::FaUSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35563,7 +35549,7 @@ impl Data {
             }
             #[cfg(feature = "FaUberBrands")]
             FaIcon::FaUberBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35580,7 +35566,7 @@ impl Data {
             }
             #[cfg(feature = "FaUbuntuBrands")]
             FaIcon::FaUbuntuBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35597,7 +35583,7 @@ impl Data {
             }
             #[cfg(feature = "FaUikitBrands")]
             FaIcon::FaUikitBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35614,7 +35600,7 @@ impl Data {
             }
             #[cfg(feature = "FaUmbracoBrands")]
             FaIcon::FaUmbracoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35631,7 +35617,7 @@ impl Data {
             }
             #[cfg(feature = "FaUmbrellaBeachSolid")]
             FaIcon::FaUmbrellaBeachSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35648,7 +35634,7 @@ impl Data {
             }
             #[cfg(feature = "FaUmbrellaSolid")]
             FaIcon::FaUmbrellaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35665,7 +35651,7 @@ impl Data {
             }
             #[cfg(feature = "FaUnchartedBrands")]
             FaIcon::FaUnchartedBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35682,7 +35668,7 @@ impl Data {
             }
             #[cfg(feature = "FaUnderlineSolid")]
             FaIcon::FaUnderlineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35699,7 +35685,7 @@ impl Data {
             }
             #[cfg(feature = "FaUniregistryBrands")]
             FaIcon::FaUniregistryBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35716,7 +35702,7 @@ impl Data {
             }
             #[cfg(feature = "FaUnityBrands")]
             FaIcon::FaUnityBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35733,7 +35719,7 @@ impl Data {
             }
             #[cfg(feature = "FaUniversalAccessSolid")]
             FaIcon::FaUniversalAccessSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35750,7 +35736,7 @@ impl Data {
             }
             #[cfg(feature = "FaUnlockKeyholeSolid")]
             FaIcon::FaUnlockKeyholeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35767,7 +35753,7 @@ impl Data {
             }
             #[cfg(feature = "FaUnlockSolid")]
             FaIcon::FaUnlockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35784,7 +35770,7 @@ impl Data {
             }
             #[cfg(feature = "FaUnsplashBrands")]
             FaIcon::FaUnsplashBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35801,7 +35787,7 @@ impl Data {
             }
             #[cfg(feature = "FaUntappdBrands")]
             FaIcon::FaUntappdBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35818,7 +35804,7 @@ impl Data {
             }
             #[cfg(feature = "FaUpDownLeftRightSolid")]
             FaIcon::FaUpDownLeftRightSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35835,7 +35821,7 @@ impl Data {
             }
             #[cfg(feature = "FaUpDownSolid")]
             FaIcon::FaUpDownSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35852,7 +35838,7 @@ impl Data {
             }
             #[cfg(feature = "FaUpLongSolid")]
             FaIcon::FaUpLongSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35869,7 +35855,7 @@ impl Data {
             }
             #[cfg(feature = "FaUpRightAndDownLeftFromCenterSolid")]
             FaIcon::FaUpRightAndDownLeftFromCenterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35886,7 +35872,7 @@ impl Data {
             }
             #[cfg(feature = "FaUpRightFromSquareSolid")]
             FaIcon::FaUpRightFromSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35903,7 +35889,7 @@ impl Data {
             }
             #[cfg(feature = "FaUploadSolid")]
             FaIcon::FaUploadSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35920,7 +35906,7 @@ impl Data {
             }
             #[cfg(feature = "FaUpsBrands")]
             FaIcon::FaUpsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35937,7 +35923,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsbBrands")]
             FaIcon::FaUsbBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35954,7 +35940,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserAstronautSolid")]
             FaIcon::FaUserAstronautSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35971,7 +35957,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserCheckSolid")]
             FaIcon::FaUserCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -35988,7 +35974,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserClockSolid")]
             FaIcon::FaUserClockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36005,7 +35991,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserDoctorSolid")]
             FaIcon::FaUserDoctorSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36022,7 +36008,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserGearSolid")]
             FaIcon::FaUserGearSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36039,7 +36025,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserGraduateSolid")]
             FaIcon::FaUserGraduateSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36056,7 +36042,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserGroupSolid")]
             FaIcon::FaUserGroupSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36073,7 +36059,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserInjuredSolid")]
             FaIcon::FaUserInjuredSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36090,7 +36076,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserLargeSlashSolid")]
             FaIcon::FaUserLargeSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36107,7 +36093,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserLargeSolid")]
             FaIcon::FaUserLargeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36124,7 +36110,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserLockSolid")]
             FaIcon::FaUserLockSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36141,7 +36127,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserMinusSolid")]
             FaIcon::FaUserMinusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36158,7 +36144,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserNinjaSolid")]
             FaIcon::FaUserNinjaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36175,7 +36161,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserNurseSolid")]
             FaIcon::FaUserNurseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36192,7 +36178,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserPenSolid")]
             FaIcon::FaUserPenSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36209,7 +36195,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserPlusSolid")]
             FaIcon::FaUserPlusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36226,7 +36212,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserRegular")]
             FaIcon::FaUserRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36243,7 +36229,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserSecretSolid")]
             FaIcon::FaUserSecretSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36260,7 +36246,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserShieldSolid")]
             FaIcon::FaUserShieldSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36277,7 +36263,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserSlashSolid")]
             FaIcon::FaUserSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36294,7 +36280,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserSolid")]
             FaIcon::FaUserSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36311,7 +36297,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserTagSolid")]
             FaIcon::FaUserTagSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36328,7 +36314,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserTieSolid")]
             FaIcon::FaUserTieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36345,7 +36331,7 @@ impl Data {
             }
             #[cfg(feature = "FaUserXmarkSolid")]
             FaIcon::FaUserXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36362,7 +36348,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersBetweenLinesSolid")]
             FaIcon::FaUsersBetweenLinesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36379,7 +36365,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersGearSolid")]
             FaIcon::FaUsersGearSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36396,7 +36382,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersLineSolid")]
             FaIcon::FaUsersLineSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36413,7 +36399,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersRaysSolid")]
             FaIcon::FaUsersRaysSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36430,7 +36416,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersRectangleSolid")]
             FaIcon::FaUsersRectangleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36447,7 +36433,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersSlashSolid")]
             FaIcon::FaUsersSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36464,7 +36450,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersSolid")]
             FaIcon::FaUsersSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36481,7 +36467,7 @@ impl Data {
             }
             #[cfg(feature = "FaUsersViewfinderSolid")]
             FaIcon::FaUsersViewfinderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36498,7 +36484,7 @@ impl Data {
             }
             #[cfg(feature = "FaUspsBrands")]
             FaIcon::FaUspsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36515,7 +36501,7 @@ impl Data {
             }
             #[cfg(feature = "FaUssunnahBrands")]
             FaIcon::FaUssunnahBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36532,7 +36518,7 @@ impl Data {
             }
             #[cfg(feature = "FaUtensilsSolid")]
             FaIcon::FaUtensilsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36549,7 +36535,7 @@ impl Data {
             }
             #[cfg(feature = "FaVSolid")]
             FaIcon::FaVSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36566,7 +36552,7 @@ impl Data {
             }
             #[cfg(feature = "FaVaadinBrands")]
             FaIcon::FaVaadinBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36583,7 +36569,7 @@ impl Data {
             }
             #[cfg(feature = "FaVanShuttleSolid")]
             FaIcon::FaVanShuttleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36600,7 +36586,7 @@ impl Data {
             }
             #[cfg(feature = "FaVaultSolid")]
             FaIcon::FaVaultSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36617,7 +36603,7 @@ impl Data {
             }
             #[cfg(feature = "FaVectorSquareSolid")]
             FaIcon::FaVectorSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36634,7 +36620,7 @@ impl Data {
             }
             #[cfg(feature = "FaVenusDoubleSolid")]
             FaIcon::FaVenusDoubleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36651,7 +36637,7 @@ impl Data {
             }
             #[cfg(feature = "FaVenusMarsSolid")]
             FaIcon::FaVenusMarsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36668,7 +36654,7 @@ impl Data {
             }
             #[cfg(feature = "FaVenusSolid")]
             FaIcon::FaVenusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36685,7 +36671,7 @@ impl Data {
             }
             #[cfg(feature = "FaVestPatchesSolid")]
             FaIcon::FaVestPatchesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36702,7 +36688,7 @@ impl Data {
             }
             #[cfg(feature = "FaVestSolid")]
             FaIcon::FaVestSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36719,7 +36705,7 @@ impl Data {
             }
             #[cfg(feature = "FaViacoinBrands")]
             FaIcon::FaViacoinBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36736,7 +36722,7 @@ impl Data {
             }
             #[cfg(feature = "FaViadeoBrands")]
             FaIcon::FaViadeoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36753,7 +36739,7 @@ impl Data {
             }
             #[cfg(feature = "FaVialCircleCheckSolid")]
             FaIcon::FaVialCircleCheckSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36770,7 +36756,7 @@ impl Data {
             }
             #[cfg(feature = "FaVialSolid")]
             FaIcon::FaVialSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36787,7 +36773,7 @@ impl Data {
             }
             #[cfg(feature = "FaVialVirusSolid")]
             FaIcon::FaVialVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36804,7 +36790,7 @@ impl Data {
             }
             #[cfg(feature = "FaVialsSolid")]
             FaIcon::FaVialsSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36821,7 +36807,7 @@ impl Data {
             }
             #[cfg(feature = "FaViberBrands")]
             FaIcon::FaViberBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36838,7 +36824,7 @@ impl Data {
             }
             #[cfg(feature = "FaVideoSlashSolid")]
             FaIcon::FaVideoSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36855,7 +36841,7 @@ impl Data {
             }
             #[cfg(feature = "FaVideoSolid")]
             FaIcon::FaVideoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36872,7 +36858,7 @@ impl Data {
             }
             #[cfg(feature = "FaViharaSolid")]
             FaIcon::FaViharaSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36889,7 +36875,7 @@ impl Data {
             }
             #[cfg(feature = "FaVimeoBrands")]
             FaIcon::FaVimeoBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36906,7 +36892,7 @@ impl Data {
             }
             #[cfg(feature = "FaVimeoVBrands")]
             FaIcon::FaVimeoVBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36923,7 +36909,7 @@ impl Data {
             }
             #[cfg(feature = "FaVineBrands")]
             FaIcon::FaVineBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36940,7 +36926,7 @@ impl Data {
             }
             #[cfg(feature = "FaVirusCovidSlashSolid")]
             FaIcon::FaVirusCovidSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36957,7 +36943,7 @@ impl Data {
             }
             #[cfg(feature = "FaVirusCovidSolid")]
             FaIcon::FaVirusCovidSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36974,7 +36960,7 @@ impl Data {
             }
             #[cfg(feature = "FaVirusSlashSolid")]
             FaIcon::FaVirusSlashSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -36991,7 +36977,7 @@ impl Data {
             }
             #[cfg(feature = "FaVirusSolid")]
             FaIcon::FaVirusSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37008,7 +36994,7 @@ impl Data {
             }
             #[cfg(feature = "FaVirusesSolid")]
             FaIcon::FaVirusesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37025,7 +37011,7 @@ impl Data {
             }
             #[cfg(feature = "FaVkBrands")]
             FaIcon::FaVkBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37042,7 +37028,7 @@ impl Data {
             }
             #[cfg(feature = "FaVnvBrands")]
             FaIcon::FaVnvBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37059,7 +37045,7 @@ impl Data {
             }
             #[cfg(feature = "FaVoicemailSolid")]
             FaIcon::FaVoicemailSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37076,7 +37062,7 @@ impl Data {
             }
             #[cfg(feature = "FaVolcanoSolid")]
             FaIcon::FaVolcanoSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37093,7 +37079,7 @@ impl Data {
             }
             #[cfg(feature = "FaVolleyballSolid")]
             FaIcon::FaVolleyballSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37110,7 +37096,7 @@ impl Data {
             }
             #[cfg(feature = "FaVolumeHighSolid")]
             FaIcon::FaVolumeHighSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37127,7 +37113,7 @@ impl Data {
             }
             #[cfg(feature = "FaVolumeLowSolid")]
             FaIcon::FaVolumeLowSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37144,7 +37130,7 @@ impl Data {
             }
             #[cfg(feature = "FaVolumeOffSolid")]
             FaIcon::FaVolumeOffSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37161,7 +37147,7 @@ impl Data {
             }
             #[cfg(feature = "FaVolumeXmarkSolid")]
             FaIcon::FaVolumeXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37178,7 +37164,7 @@ impl Data {
             }
             #[cfg(feature = "FaVrCardboardSolid")]
             FaIcon::FaVrCardboardSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37195,7 +37181,7 @@ impl Data {
             }
             #[cfg(feature = "FaVuejsBrands")]
             FaIcon::FaVuejsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37212,7 +37198,7 @@ impl Data {
             }
             #[cfg(feature = "FaWSolid")]
             FaIcon::FaWSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37229,7 +37215,7 @@ impl Data {
             }
             #[cfg(feature = "FaWalkieTalkieSolid")]
             FaIcon::FaWalkieTalkieSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37246,7 +37232,7 @@ impl Data {
             }
             #[cfg(feature = "FaWalletSolid")]
             FaIcon::FaWalletSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37263,7 +37249,7 @@ impl Data {
             }
             #[cfg(feature = "FaWandMagicSolid")]
             FaIcon::FaWandMagicSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37280,7 +37266,7 @@ impl Data {
             }
             #[cfg(feature = "FaWandMagicSparklesSolid")]
             FaIcon::FaWandMagicSparklesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37297,7 +37283,7 @@ impl Data {
             }
             #[cfg(feature = "FaWandSparklesSolid")]
             FaIcon::FaWandSparklesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37314,7 +37300,7 @@ impl Data {
             }
             #[cfg(feature = "FaWarehouseSolid")]
             FaIcon::FaWarehouseSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37331,7 +37317,7 @@ impl Data {
             }
             #[cfg(feature = "FaWatchmanMonitoringBrands")]
             FaIcon::FaWatchmanMonitoringBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37348,7 +37334,7 @@ impl Data {
             }
             #[cfg(feature = "FaWaterLadderSolid")]
             FaIcon::FaWaterLadderSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37365,7 +37351,7 @@ impl Data {
             }
             #[cfg(feature = "FaWaterSolid")]
             FaIcon::FaWaterSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37382,7 +37368,7 @@ impl Data {
             }
             #[cfg(feature = "FaWaveSquareSolid")]
             FaIcon::FaWaveSquareSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37399,7 +37385,7 @@ impl Data {
             }
             #[cfg(feature = "FaWazeBrands")]
             FaIcon::FaWazeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37416,7 +37402,7 @@ impl Data {
             }
             #[cfg(feature = "FaWeeblyBrands")]
             FaIcon::FaWeeblyBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37433,7 +37419,7 @@ impl Data {
             }
             #[cfg(feature = "FaWeiboBrands")]
             FaIcon::FaWeiboBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37450,7 +37436,7 @@ impl Data {
             }
             #[cfg(feature = "FaWeightHangingSolid")]
             FaIcon::FaWeightHangingSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37467,7 +37453,7 @@ impl Data {
             }
             #[cfg(feature = "FaWeightScaleSolid")]
             FaIcon::FaWeightScaleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37484,7 +37470,7 @@ impl Data {
             }
             #[cfg(feature = "FaWeixinBrands")]
             FaIcon::FaWeixinBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37501,7 +37487,7 @@ impl Data {
             }
             #[cfg(feature = "FaWhatsappBrands")]
             FaIcon::FaWhatsappBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37518,7 +37504,7 @@ impl Data {
             }
             #[cfg(feature = "FaWheatAwnCircleExclamationSolid")]
             FaIcon::FaWheatAwnCircleExclamationSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37535,7 +37521,7 @@ impl Data {
             }
             #[cfg(feature = "FaWheatAwnSolid")]
             FaIcon::FaWheatAwnSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37552,7 +37538,7 @@ impl Data {
             }
             #[cfg(feature = "FaWheelchairMoveSolid")]
             FaIcon::FaWheelchairMoveSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37569,7 +37555,7 @@ impl Data {
             }
             #[cfg(feature = "FaWheelchairSolid")]
             FaIcon::FaWheelchairSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37586,7 +37572,7 @@ impl Data {
             }
             #[cfg(feature = "FaWhiskeyGlassSolid")]
             FaIcon::FaWhiskeyGlassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37603,7 +37589,7 @@ impl Data {
             }
             #[cfg(feature = "FaWhmcsBrands")]
             FaIcon::FaWhmcsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37620,7 +37606,7 @@ impl Data {
             }
             #[cfg(feature = "FaWifiSolid")]
             FaIcon::FaWifiSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37637,7 +37623,7 @@ impl Data {
             }
             #[cfg(feature = "FaWikipediaWBrands")]
             FaIcon::FaWikipediaWBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37654,7 +37640,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindSolid")]
             FaIcon::FaWindSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37671,7 +37657,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowMaximizeRegular")]
             FaIcon::FaWindowMaximizeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37688,7 +37674,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowMaximizeSolid")]
             FaIcon::FaWindowMaximizeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37705,7 +37691,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowMinimizeRegular")]
             FaIcon::FaWindowMinimizeRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37722,7 +37708,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowMinimizeSolid")]
             FaIcon::FaWindowMinimizeSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37739,7 +37725,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowRestoreRegular")]
             FaIcon::FaWindowRestoreRegular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37756,7 +37742,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowRestoreSolid")]
             FaIcon::FaWindowRestoreSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37773,7 +37759,7 @@ impl Data {
             }
             #[cfg(feature = "FaWindowsBrands")]
             FaIcon::FaWindowsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37790,7 +37776,7 @@ impl Data {
             }
             #[cfg(feature = "FaWineBottleSolid")]
             FaIcon::FaWineBottleSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37807,7 +37793,7 @@ impl Data {
             }
             #[cfg(feature = "FaWineGlassEmptySolid")]
             FaIcon::FaWineGlassEmptySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37824,7 +37810,7 @@ impl Data {
             }
             #[cfg(feature = "FaWineGlassSolid")]
             FaIcon::FaWineGlassSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37841,7 +37827,7 @@ impl Data {
             }
             #[cfg(feature = "FaWirsindhandwerkBrands")]
             FaIcon::FaWirsindhandwerkBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37858,7 +37844,7 @@ impl Data {
             }
             #[cfg(feature = "FaWixBrands")]
             FaIcon::FaWixBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37875,7 +37861,7 @@ impl Data {
             }
             #[cfg(feature = "FaWizardsOfTheCoastBrands")]
             FaIcon::FaWizardsOfTheCoastBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37892,7 +37878,7 @@ impl Data {
             }
             #[cfg(feature = "FaWoduBrands")]
             FaIcon::FaWoduBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37909,7 +37895,7 @@ impl Data {
             }
             #[cfg(feature = "FaWolfPackBattalionBrands")]
             FaIcon::FaWolfPackBattalionBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37926,7 +37912,7 @@ impl Data {
             }
             #[cfg(feature = "FaWonSignSolid")]
             FaIcon::FaWonSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37943,7 +37929,7 @@ impl Data {
             }
             #[cfg(feature = "FaWordpressBrands")]
             FaIcon::FaWordpressBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37960,7 +37946,7 @@ impl Data {
             }
             #[cfg(feature = "FaWordpressSimpleBrands")]
             FaIcon::FaWordpressSimpleBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37977,7 +37963,7 @@ impl Data {
             }
             #[cfg(feature = "FaWormSolid")]
             FaIcon::FaWormSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -37994,7 +37980,7 @@ impl Data {
             }
             #[cfg(feature = "FaWpbeginnerBrands")]
             FaIcon::FaWpbeginnerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38011,7 +37997,7 @@ impl Data {
             }
             #[cfg(feature = "FaWpexplorerBrands")]
             FaIcon::FaWpexplorerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38028,7 +38014,7 @@ impl Data {
             }
             #[cfg(feature = "FaWpformsBrands")]
             FaIcon::FaWpformsBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38045,7 +38031,7 @@ impl Data {
             }
             #[cfg(feature = "FaWpressrBrands")]
             FaIcon::FaWpressrBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38062,7 +38048,7 @@ impl Data {
             }
             #[cfg(feature = "FaWrenchSolid")]
             FaIcon::FaWrenchSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38079,7 +38065,7 @@ impl Data {
             }
             #[cfg(feature = "FaXRaySolid")]
             FaIcon::FaXRaySolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38096,7 +38082,7 @@ impl Data {
             }
             #[cfg(feature = "FaXSolid")]
             FaIcon::FaXSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38113,7 +38099,7 @@ impl Data {
             }
             #[cfg(feature = "FaXboxBrands")]
             FaIcon::FaXboxBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38130,7 +38116,7 @@ impl Data {
             }
             #[cfg(feature = "FaXingBrands")]
             FaIcon::FaXingBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38147,7 +38133,7 @@ impl Data {
             }
             #[cfg(feature = "FaXmarkSolid")]
             FaIcon::FaXmarkSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38164,7 +38150,7 @@ impl Data {
             }
             #[cfg(feature = "FaXmarksLinesSolid")]
             FaIcon::FaXmarksLinesSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38181,7 +38167,7 @@ impl Data {
             }
             #[cfg(feature = "FaYCombinatorBrands")]
             FaIcon::FaYCombinatorBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38198,7 +38184,7 @@ impl Data {
             }
             #[cfg(feature = "FaYSolid")]
             FaIcon::FaYSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38215,7 +38201,7 @@ impl Data {
             }
             #[cfg(feature = "FaYahooBrands")]
             FaIcon::FaYahooBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38232,7 +38218,7 @@ impl Data {
             }
             #[cfg(feature = "FaYammerBrands")]
             FaIcon::FaYammerBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38249,7 +38235,7 @@ impl Data {
             }
             #[cfg(feature = "FaYandexBrands")]
             FaIcon::FaYandexBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38266,7 +38252,7 @@ impl Data {
             }
             #[cfg(feature = "FaYandexInternationalBrands")]
             FaIcon::FaYandexInternationalBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38283,7 +38269,7 @@ impl Data {
             }
             #[cfg(feature = "FaYarnBrands")]
             FaIcon::FaYarnBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38300,7 +38286,7 @@ impl Data {
             }
             #[cfg(feature = "FaYelpBrands")]
             FaIcon::FaYelpBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38317,7 +38303,7 @@ impl Data {
             }
             #[cfg(feature = "FaYenSignSolid")]
             FaIcon::FaYenSignSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38334,7 +38320,7 @@ impl Data {
             }
             #[cfg(feature = "FaYinYangSolid")]
             FaIcon::FaYinYangSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38351,7 +38337,7 @@ impl Data {
             }
             #[cfg(feature = "FaYoastBrands")]
             FaIcon::FaYoastBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38368,7 +38354,7 @@ impl Data {
             }
             #[cfg(feature = "FaYoutubeBrands")]
             FaIcon::FaYoutubeBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38385,7 +38371,7 @@ impl Data {
             }
             #[cfg(feature = "FaZSolid")]
             FaIcon::FaZSolid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38402,7 +38388,7 @@ impl Data {
             }
             #[cfg(feature = "FaZhihuBrands")]
             FaIcon::FaZhihuBrands => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -38419,62 +38405,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosFaIcon(
-    cx: leptos::Scope,
-    icon: FaIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

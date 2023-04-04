@@ -692,26 +692,12 @@ pub enum TiIcon {
     TiZoomOutline,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: TiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for TiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "TiAdjustBrightness")]
             TiIcon::TiAdjustBrightness => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -728,7 +714,7 @@ impl Data {
             }
             #[cfg(feature = "TiAdjustContrast")]
             TiIcon::TiAdjustContrast => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -745,7 +731,7 @@ impl Data {
             }
             #[cfg(feature = "TiAnchor")]
             TiIcon::TiAnchor => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -762,7 +748,7 @@ impl Data {
             }
             #[cfg(feature = "TiAnchorOutline")]
             TiIcon::TiAnchorOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -779,7 +765,7 @@ impl Data {
             }
             #[cfg(feature = "TiArchive")]
             TiIcon::TiArchive => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -796,7 +782,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowBack")]
             TiIcon::TiArrowBack => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -813,7 +799,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowBackOutline")]
             TiIcon::TiArrowBackOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -830,7 +816,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowDown")]
             TiIcon::TiArrowDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -847,7 +833,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowDownOutline")]
             TiIcon::TiArrowDownOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -864,7 +850,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowDownThick")]
             TiIcon::TiArrowDownThick => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -881,7 +867,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowForward")]
             TiIcon::TiArrowForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -898,7 +884,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowForwardOutline")]
             TiIcon::TiArrowForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -915,7 +901,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowLeft")]
             TiIcon::TiArrowLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -932,7 +918,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowLeftOutline")]
             TiIcon::TiArrowLeftOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -949,7 +935,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowLeftThick")]
             TiIcon::TiArrowLeftThick => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -966,7 +952,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowLoop")]
             TiIcon::TiArrowLoop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -983,7 +969,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowLoopOutline")]
             TiIcon::TiArrowLoopOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1000,7 +986,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowMaximise")]
             TiIcon::TiArrowMaximise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1017,7 +1003,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowMaximiseOutline")]
             TiIcon::TiArrowMaximiseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1034,7 +1020,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowMinimise")]
             TiIcon::TiArrowMinimise => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1051,7 +1037,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowMinimiseOutline")]
             TiIcon::TiArrowMinimiseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1068,7 +1054,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowMove")]
             TiIcon::TiArrowMove => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1085,7 +1071,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowMoveOutline")]
             TiIcon::TiArrowMoveOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1102,7 +1088,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowRepeat")]
             TiIcon::TiArrowRepeat => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1119,7 +1105,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowRepeatOutline")]
             TiIcon::TiArrowRepeatOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1136,7 +1122,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowRight")]
             TiIcon::TiArrowRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1153,7 +1139,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowRightOutline")]
             TiIcon::TiArrowRightOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1170,7 +1156,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowRightThick")]
             TiIcon::TiArrowRightThick => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1187,7 +1173,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowShuffle")]
             TiIcon::TiArrowShuffle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1204,7 +1190,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowSortedDown")]
             TiIcon::TiArrowSortedDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1221,7 +1207,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowSortedUp")]
             TiIcon::TiArrowSortedUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1238,7 +1224,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowSync")]
             TiIcon::TiArrowSync => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1255,7 +1241,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowSyncOutline")]
             TiIcon::TiArrowSyncOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1272,7 +1258,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowUnsorted")]
             TiIcon::TiArrowUnsorted => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1289,7 +1275,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowUp")]
             TiIcon::TiArrowUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1306,7 +1292,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowUpOutline")]
             TiIcon::TiArrowUpOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1323,7 +1309,7 @@ impl Data {
             }
             #[cfg(feature = "TiArrowUpThick")]
             TiIcon::TiArrowUpThick => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1340,7 +1326,7 @@ impl Data {
             }
             #[cfg(feature = "TiAt")]
             TiIcon::TiAt => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1357,7 +1343,7 @@ impl Data {
             }
             #[cfg(feature = "TiAttachment")]
             TiIcon::TiAttachment => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1374,7 +1360,7 @@ impl Data {
             }
             #[cfg(feature = "TiAttachmentOutline")]
             TiIcon::TiAttachmentOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1391,7 +1377,7 @@ impl Data {
             }
             #[cfg(feature = "TiBackspace")]
             TiIcon::TiBackspace => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1408,7 +1394,7 @@ impl Data {
             }
             #[cfg(feature = "TiBackspaceOutline")]
             TiIcon::TiBackspaceOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1425,7 +1411,7 @@ impl Data {
             }
             #[cfg(feature = "TiBatteryCharge")]
             TiIcon::TiBatteryCharge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1442,7 +1428,7 @@ impl Data {
             }
             #[cfg(feature = "TiBatteryFull")]
             TiIcon::TiBatteryFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1459,7 +1445,7 @@ impl Data {
             }
             #[cfg(feature = "TiBatteryHigh")]
             TiIcon::TiBatteryHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1476,7 +1462,7 @@ impl Data {
             }
             #[cfg(feature = "TiBatteryLow")]
             TiIcon::TiBatteryLow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1493,7 +1479,7 @@ impl Data {
             }
             #[cfg(feature = "TiBatteryMid")]
             TiIcon::TiBatteryMid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1510,7 +1496,7 @@ impl Data {
             }
             #[cfg(feature = "TiBeaker")]
             TiIcon::TiBeaker => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1527,7 +1513,7 @@ impl Data {
             }
             #[cfg(feature = "TiBeer")]
             TiIcon::TiBeer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1544,7 +1530,7 @@ impl Data {
             }
             #[cfg(feature = "TiBell")]
             TiIcon::TiBell => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1561,7 +1547,7 @@ impl Data {
             }
             #[cfg(feature = "TiBook")]
             TiIcon::TiBook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1578,7 +1564,7 @@ impl Data {
             }
             #[cfg(feature = "TiBookmark")]
             TiIcon::TiBookmark => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1595,7 +1581,7 @@ impl Data {
             }
             #[cfg(feature = "TiBriefcase")]
             TiIcon::TiBriefcase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1612,7 +1598,7 @@ impl Data {
             }
             #[cfg(feature = "TiBrush")]
             TiIcon::TiBrush => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1629,7 +1615,7 @@ impl Data {
             }
             #[cfg(feature = "TiBusinessCard")]
             TiIcon::TiBusinessCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1646,7 +1632,7 @@ impl Data {
             }
             #[cfg(feature = "TiCalculator")]
             TiIcon::TiCalculator => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1663,7 +1649,7 @@ impl Data {
             }
             #[cfg(feature = "TiCalendar")]
             TiIcon::TiCalendar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1680,7 +1666,7 @@ impl Data {
             }
             #[cfg(feature = "TiCalendarOutline")]
             TiIcon::TiCalendarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1697,7 +1683,7 @@ impl Data {
             }
             #[cfg(feature = "TiCamera")]
             TiIcon::TiCamera => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1714,7 +1700,7 @@ impl Data {
             }
             #[cfg(feature = "TiCameraOutline")]
             TiIcon::TiCameraOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1731,7 +1717,7 @@ impl Data {
             }
             #[cfg(feature = "TiCancel")]
             TiIcon::TiCancel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1748,7 +1734,7 @@ impl Data {
             }
             #[cfg(feature = "TiCancelOutline")]
             TiIcon::TiCancelOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1765,7 +1751,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartArea")]
             TiIcon::TiChartArea => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1782,7 +1768,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartAreaOutline")]
             TiIcon::TiChartAreaOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1799,7 +1785,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartBar")]
             TiIcon::TiChartBar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1816,7 +1802,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartBarOutline")]
             TiIcon::TiChartBarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1833,7 +1819,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartLine")]
             TiIcon::TiChartLine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1850,7 +1836,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartLineOutline")]
             TiIcon::TiChartLineOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1867,7 +1853,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartPie")]
             TiIcon::TiChartPie => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1884,7 +1870,7 @@ impl Data {
             }
             #[cfg(feature = "TiChartPieOutline")]
             TiIcon::TiChartPieOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1901,7 +1887,7 @@ impl Data {
             }
             #[cfg(feature = "TiChevronLeft")]
             TiIcon::TiChevronLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1918,7 +1904,7 @@ impl Data {
             }
             #[cfg(feature = "TiChevronLeftOutline")]
             TiIcon::TiChevronLeftOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1935,7 +1921,7 @@ impl Data {
             }
             #[cfg(feature = "TiChevronRight")]
             TiIcon::TiChevronRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1952,7 +1938,7 @@ impl Data {
             }
             #[cfg(feature = "TiChevronRightOutline")]
             TiIcon::TiChevronRightOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1969,7 +1955,7 @@ impl Data {
             }
             #[cfg(feature = "TiClipboard")]
             TiIcon::TiClipboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -1986,7 +1972,7 @@ impl Data {
             }
             #[cfg(feature = "TiCloudStorage")]
             TiIcon::TiCloudStorage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2003,7 +1989,7 @@ impl Data {
             }
             #[cfg(feature = "TiCloudStorageOutline")]
             TiIcon::TiCloudStorageOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2020,7 +2006,7 @@ impl Data {
             }
             #[cfg(feature = "TiCode")]
             TiIcon::TiCode => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2037,7 +2023,7 @@ impl Data {
             }
             #[cfg(feature = "TiCodeOutline")]
             TiIcon::TiCodeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2054,7 +2040,7 @@ impl Data {
             }
             #[cfg(feature = "TiCoffee")]
             TiIcon::TiCoffee => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2071,7 +2057,7 @@ impl Data {
             }
             #[cfg(feature = "TiCog")]
             TiIcon::TiCog => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2088,7 +2074,7 @@ impl Data {
             }
             #[cfg(feature = "TiCogOutline")]
             TiIcon::TiCogOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2105,7 +2091,7 @@ impl Data {
             }
             #[cfg(feature = "TiCompass")]
             TiIcon::TiCompass => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2122,7 +2108,7 @@ impl Data {
             }
             #[cfg(feature = "TiContacts")]
             TiIcon::TiContacts => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2139,7 +2125,7 @@ impl Data {
             }
             #[cfg(feature = "TiCreditCard")]
             TiIcon::TiCreditCard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2156,7 +2142,7 @@ impl Data {
             }
             #[cfg(feature = "TiCss3")]
             TiIcon::TiCss3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2173,7 +2159,7 @@ impl Data {
             }
             #[cfg(feature = "TiDatabase")]
             TiIcon::TiDatabase => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2190,7 +2176,7 @@ impl Data {
             }
             #[cfg(feature = "TiDelete")]
             TiIcon::TiDelete => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2207,7 +2193,7 @@ impl Data {
             }
             #[cfg(feature = "TiDeleteOutline")]
             TiIcon::TiDeleteOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2224,7 +2210,7 @@ impl Data {
             }
             #[cfg(feature = "TiDeviceDesktop")]
             TiIcon::TiDeviceDesktop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2241,7 +2227,7 @@ impl Data {
             }
             #[cfg(feature = "TiDeviceLaptop")]
             TiIcon::TiDeviceLaptop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2258,7 +2244,7 @@ impl Data {
             }
             #[cfg(feature = "TiDevicePhone")]
             TiIcon::TiDevicePhone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2275,7 +2261,7 @@ impl Data {
             }
             #[cfg(feature = "TiDeviceTablet")]
             TiIcon::TiDeviceTablet => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2292,7 +2278,7 @@ impl Data {
             }
             #[cfg(feature = "TiDirections")]
             TiIcon::TiDirections => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2309,7 +2295,7 @@ impl Data {
             }
             #[cfg(feature = "TiDivide")]
             TiIcon::TiDivide => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2326,7 +2312,7 @@ impl Data {
             }
             #[cfg(feature = "TiDivideOutline")]
             TiIcon::TiDivideOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2343,7 +2329,7 @@ impl Data {
             }
             #[cfg(feature = "TiDocument")]
             TiIcon::TiDocument => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2360,7 +2346,7 @@ impl Data {
             }
             #[cfg(feature = "TiDocumentAdd")]
             TiIcon::TiDocumentAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2377,7 +2363,7 @@ impl Data {
             }
             #[cfg(feature = "TiDocumentDelete")]
             TiIcon::TiDocumentDelete => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2394,7 +2380,7 @@ impl Data {
             }
             #[cfg(feature = "TiDocumentText")]
             TiIcon::TiDocumentText => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2411,7 +2397,7 @@ impl Data {
             }
             #[cfg(feature = "TiDownload")]
             TiIcon::TiDownload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2428,7 +2414,7 @@ impl Data {
             }
             #[cfg(feature = "TiDownloadOutline")]
             TiIcon::TiDownloadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2445,7 +2431,7 @@ impl Data {
             }
             #[cfg(feature = "TiDropbox")]
             TiIcon::TiDropbox => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2462,7 +2448,7 @@ impl Data {
             }
             #[cfg(feature = "TiEdit")]
             TiIcon::TiEdit => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2479,7 +2465,7 @@ impl Data {
             }
             #[cfg(feature = "TiEject")]
             TiIcon::TiEject => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2496,7 +2482,7 @@ impl Data {
             }
             #[cfg(feature = "TiEjectOutline")]
             TiIcon::TiEjectOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2513,7 +2499,7 @@ impl Data {
             }
             #[cfg(feature = "TiEquals")]
             TiIcon::TiEquals => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2530,7 +2516,7 @@ impl Data {
             }
             #[cfg(feature = "TiEqualsOutline")]
             TiIcon::TiEqualsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2547,7 +2533,7 @@ impl Data {
             }
             #[cfg(feature = "TiExport")]
             TiIcon::TiExport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2564,7 +2550,7 @@ impl Data {
             }
             #[cfg(feature = "TiExportOutline")]
             TiIcon::TiExportOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2581,7 +2567,7 @@ impl Data {
             }
             #[cfg(feature = "TiEye")]
             TiIcon::TiEye => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2598,7 +2584,7 @@ impl Data {
             }
             #[cfg(feature = "TiEyeOutline")]
             TiIcon::TiEyeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2615,7 +2601,7 @@ impl Data {
             }
             #[cfg(feature = "TiFeather")]
             TiIcon::TiFeather => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2632,7 +2618,7 @@ impl Data {
             }
             #[cfg(feature = "TiFilm")]
             TiIcon::TiFilm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2649,7 +2635,7 @@ impl Data {
             }
             #[cfg(feature = "TiFilter")]
             TiIcon::TiFilter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2666,7 +2652,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlag")]
             TiIcon::TiFlag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2683,7 +2669,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlagOutline")]
             TiIcon::TiFlagOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2700,7 +2686,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlash")]
             TiIcon::TiFlash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2717,7 +2703,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlashOutline")]
             TiIcon::TiFlashOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2734,7 +2720,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlowChildren")]
             TiIcon::TiFlowChildren => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2751,7 +2737,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlowMerge")]
             TiIcon::TiFlowMerge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2768,7 +2754,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlowParallel")]
             TiIcon::TiFlowParallel => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2785,7 +2771,7 @@ impl Data {
             }
             #[cfg(feature = "TiFlowSwitch")]
             TiIcon::TiFlowSwitch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2802,7 +2788,7 @@ impl Data {
             }
             #[cfg(feature = "TiFolder")]
             TiIcon::TiFolder => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2819,7 +2805,7 @@ impl Data {
             }
             #[cfg(feature = "TiFolderAdd")]
             TiIcon::TiFolderAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2836,7 +2822,7 @@ impl Data {
             }
             #[cfg(feature = "TiFolderDelete")]
             TiIcon::TiFolderDelete => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2853,7 +2839,7 @@ impl Data {
             }
             #[cfg(feature = "TiFolderOpen")]
             TiIcon::TiFolderOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2870,7 +2856,7 @@ impl Data {
             }
             #[cfg(feature = "TiGift")]
             TiIcon::TiGift => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2887,7 +2873,7 @@ impl Data {
             }
             #[cfg(feature = "TiGlobe")]
             TiIcon::TiGlobe => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2904,7 +2890,7 @@ impl Data {
             }
             #[cfg(feature = "TiGlobeOutline")]
             TiIcon::TiGlobeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2921,7 +2907,7 @@ impl Data {
             }
             #[cfg(feature = "TiGroup")]
             TiIcon::TiGroup => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2938,7 +2924,7 @@ impl Data {
             }
             #[cfg(feature = "TiGroupOutline")]
             TiIcon::TiGroupOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2955,7 +2941,7 @@ impl Data {
             }
             #[cfg(feature = "TiHeadphones")]
             TiIcon::TiHeadphones => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2972,7 +2958,7 @@ impl Data {
             }
             #[cfg(feature = "TiHeart")]
             TiIcon::TiHeart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -2989,7 +2975,7 @@ impl Data {
             }
             #[cfg(feature = "TiHeartFullOutline")]
             TiIcon::TiHeartFullOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3006,7 +2992,7 @@ impl Data {
             }
             #[cfg(feature = "TiHeartHalfOutline")]
             TiIcon::TiHeartHalfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3023,7 +3009,7 @@ impl Data {
             }
             #[cfg(feature = "TiHeartOutline")]
             TiIcon::TiHeartOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3040,7 +3026,7 @@ impl Data {
             }
             #[cfg(feature = "TiHome")]
             TiIcon::TiHome => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3057,7 +3043,7 @@ impl Data {
             }
             #[cfg(feature = "TiHomeOutline")]
             TiIcon::TiHomeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3074,7 +3060,7 @@ impl Data {
             }
             #[cfg(feature = "TiHtml5")]
             TiIcon::TiHtml5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3091,7 +3077,7 @@ impl Data {
             }
             #[cfg(feature = "TiImage")]
             TiIcon::TiImage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3108,7 +3094,7 @@ impl Data {
             }
             #[cfg(feature = "TiImageOutline")]
             TiIcon::TiImageOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3125,7 +3111,7 @@ impl Data {
             }
             #[cfg(feature = "TiInfinity")]
             TiIcon::TiInfinity => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3142,7 +3128,7 @@ impl Data {
             }
             #[cfg(feature = "TiInfinityOutline")]
             TiIcon::TiInfinityOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3159,7 +3145,7 @@ impl Data {
             }
             #[cfg(feature = "TiInfo")]
             TiIcon::TiInfo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3176,7 +3162,7 @@ impl Data {
             }
             #[cfg(feature = "TiInfoLarge")]
             TiIcon::TiInfoLarge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3193,7 +3179,7 @@ impl Data {
             }
             #[cfg(feature = "TiInfoLargeOutline")]
             TiIcon::TiInfoLargeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3210,7 +3196,7 @@ impl Data {
             }
             #[cfg(feature = "TiInfoOutline")]
             TiIcon::TiInfoOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3227,7 +3213,7 @@ impl Data {
             }
             #[cfg(feature = "TiInputChecked")]
             TiIcon::TiInputChecked => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3244,7 +3230,7 @@ impl Data {
             }
             #[cfg(feature = "TiInputCheckedOutline")]
             TiIcon::TiInputCheckedOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3261,7 +3247,7 @@ impl Data {
             }
             #[cfg(feature = "TiKey")]
             TiIcon::TiKey => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3278,7 +3264,7 @@ impl Data {
             }
             #[cfg(feature = "TiKeyOutline")]
             TiIcon::TiKeyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3295,7 +3281,7 @@ impl Data {
             }
             #[cfg(feature = "TiKeyboard")]
             TiIcon::TiKeyboard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3312,7 +3298,7 @@ impl Data {
             }
             #[cfg(feature = "TiLeaf")]
             TiIcon::TiLeaf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3329,7 +3315,7 @@ impl Data {
             }
             #[cfg(feature = "TiLightbulb")]
             TiIcon::TiLightbulb => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3346,7 +3332,7 @@ impl Data {
             }
             #[cfg(feature = "TiLink")]
             TiIcon::TiLink => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3363,7 +3349,7 @@ impl Data {
             }
             #[cfg(feature = "TiLinkOutline")]
             TiIcon::TiLinkOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3380,7 +3366,7 @@ impl Data {
             }
             #[cfg(feature = "TiLocation")]
             TiIcon::TiLocation => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3397,7 +3383,7 @@ impl Data {
             }
             #[cfg(feature = "TiLocationArrow")]
             TiIcon::TiLocationArrow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3414,7 +3400,7 @@ impl Data {
             }
             #[cfg(feature = "TiLocationArrowOutline")]
             TiIcon::TiLocationArrowOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3431,7 +3417,7 @@ impl Data {
             }
             #[cfg(feature = "TiLocationOutline")]
             TiIcon::TiLocationOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3448,7 +3434,7 @@ impl Data {
             }
             #[cfg(feature = "TiLockClosed")]
             TiIcon::TiLockClosed => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3465,7 +3451,7 @@ impl Data {
             }
             #[cfg(feature = "TiLockClosedOutline")]
             TiIcon::TiLockClosedOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3482,7 +3468,7 @@ impl Data {
             }
             #[cfg(feature = "TiLockOpen")]
             TiIcon::TiLockOpen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3499,7 +3485,7 @@ impl Data {
             }
             #[cfg(feature = "TiLockOpenOutline")]
             TiIcon::TiLockOpenOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3516,7 +3502,7 @@ impl Data {
             }
             #[cfg(feature = "TiMail")]
             TiIcon::TiMail => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3533,7 +3519,7 @@ impl Data {
             }
             #[cfg(feature = "TiMap")]
             TiIcon::TiMap => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3550,7 +3536,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaEject")]
             TiIcon::TiMediaEject => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3567,7 +3553,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaEjectOutline")]
             TiIcon::TiMediaEjectOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3584,7 +3570,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaFastForward")]
             TiIcon::TiMediaFastForward => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3601,7 +3587,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaFastForwardOutline")]
             TiIcon::TiMediaFastForwardOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3618,7 +3604,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaPause")]
             TiIcon::TiMediaPause => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3635,7 +3621,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaPauseOutline")]
             TiIcon::TiMediaPauseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3652,7 +3638,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaPlay")]
             TiIcon::TiMediaPlay => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3669,7 +3655,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaPlayOutline")]
             TiIcon::TiMediaPlayOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3686,7 +3672,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaPlayReverse")]
             TiIcon::TiMediaPlayReverse => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3703,7 +3689,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaPlayReverseOutline")]
             TiIcon::TiMediaPlayReverseOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3720,7 +3706,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaRecord")]
             TiIcon::TiMediaRecord => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3737,7 +3723,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaRecordOutline")]
             TiIcon::TiMediaRecordOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3754,7 +3740,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaRewind")]
             TiIcon::TiMediaRewind => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3771,7 +3757,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaRewindOutline")]
             TiIcon::TiMediaRewindOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3788,7 +3774,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaStop")]
             TiIcon::TiMediaStop => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3805,7 +3791,7 @@ impl Data {
             }
             #[cfg(feature = "TiMediaStopOutline")]
             TiIcon::TiMediaStopOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3822,7 +3808,7 @@ impl Data {
             }
             #[cfg(feature = "TiMessage")]
             TiIcon::TiMessage => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3839,7 +3825,7 @@ impl Data {
             }
             #[cfg(feature = "TiMessageTyping")]
             TiIcon::TiMessageTyping => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3856,7 +3842,7 @@ impl Data {
             }
             #[cfg(feature = "TiMessages")]
             TiIcon::TiMessages => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3873,7 +3859,7 @@ impl Data {
             }
             #[cfg(feature = "TiMicrophone")]
             TiIcon::TiMicrophone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3890,7 +3876,7 @@ impl Data {
             }
             #[cfg(feature = "TiMicrophoneOutline")]
             TiIcon::TiMicrophoneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3907,7 +3893,7 @@ impl Data {
             }
             #[cfg(feature = "TiMinus")]
             TiIcon::TiMinus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3924,7 +3910,7 @@ impl Data {
             }
             #[cfg(feature = "TiMinusOutline")]
             TiIcon::TiMinusOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3941,7 +3927,7 @@ impl Data {
             }
             #[cfg(feature = "TiMortarBoard")]
             TiIcon::TiMortarBoard => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3958,7 +3944,7 @@ impl Data {
             }
             #[cfg(feature = "TiNews")]
             TiIcon::TiNews => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3975,7 +3961,7 @@ impl Data {
             }
             #[cfg(feature = "TiNotes")]
             TiIcon::TiNotes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -3992,7 +3978,7 @@ impl Data {
             }
             #[cfg(feature = "TiNotesOutline")]
             TiIcon::TiNotesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4009,7 +3995,7 @@ impl Data {
             }
             #[cfg(feature = "TiPen")]
             TiIcon::TiPen => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4026,7 +4012,7 @@ impl Data {
             }
             #[cfg(feature = "TiPencil")]
             TiIcon::TiPencil => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4043,7 +4029,7 @@ impl Data {
             }
             #[cfg(feature = "TiPhone")]
             TiIcon::TiPhone => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4060,7 +4046,7 @@ impl Data {
             }
             #[cfg(feature = "TiPhoneOutline")]
             TiIcon::TiPhoneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4077,7 +4063,7 @@ impl Data {
             }
             #[cfg(feature = "TiPi")]
             TiIcon::TiPi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4094,7 +4080,7 @@ impl Data {
             }
             #[cfg(feature = "TiPiOutline")]
             TiIcon::TiPiOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4111,7 +4097,7 @@ impl Data {
             }
             #[cfg(feature = "TiPin")]
             TiIcon::TiPin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4128,7 +4114,7 @@ impl Data {
             }
             #[cfg(feature = "TiPinOutline")]
             TiIcon::TiPinOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4145,7 +4131,7 @@ impl Data {
             }
             #[cfg(feature = "TiPipette")]
             TiIcon::TiPipette => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4162,7 +4148,7 @@ impl Data {
             }
             #[cfg(feature = "TiPlane")]
             TiIcon::TiPlane => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4179,7 +4165,7 @@ impl Data {
             }
             #[cfg(feature = "TiPlaneOutline")]
             TiIcon::TiPlaneOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4196,7 +4182,7 @@ impl Data {
             }
             #[cfg(feature = "TiPlug")]
             TiIcon::TiPlug => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4213,7 +4199,7 @@ impl Data {
             }
             #[cfg(feature = "TiPlus")]
             TiIcon::TiPlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4230,7 +4216,7 @@ impl Data {
             }
             #[cfg(feature = "TiPlusOutline")]
             TiIcon::TiPlusOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4247,7 +4233,7 @@ impl Data {
             }
             #[cfg(feature = "TiPointOfInterest")]
             TiIcon::TiPointOfInterest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4264,7 +4250,7 @@ impl Data {
             }
             #[cfg(feature = "TiPointOfInterestOutline")]
             TiIcon::TiPointOfInterestOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4281,7 +4267,7 @@ impl Data {
             }
             #[cfg(feature = "TiPower")]
             TiIcon::TiPower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4298,7 +4284,7 @@ impl Data {
             }
             #[cfg(feature = "TiPowerOutline")]
             TiIcon::TiPowerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4315,7 +4301,7 @@ impl Data {
             }
             #[cfg(feature = "TiPrinter")]
             TiIcon::TiPrinter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4332,7 +4318,7 @@ impl Data {
             }
             #[cfg(feature = "TiPuzzle")]
             TiIcon::TiPuzzle => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4349,7 +4335,7 @@ impl Data {
             }
             #[cfg(feature = "TiPuzzleOutline")]
             TiIcon::TiPuzzleOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4366,7 +4352,7 @@ impl Data {
             }
             #[cfg(feature = "TiRadar")]
             TiIcon::TiRadar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4383,7 +4369,7 @@ impl Data {
             }
             #[cfg(feature = "TiRadarOutline")]
             TiIcon::TiRadarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4400,7 +4386,7 @@ impl Data {
             }
             #[cfg(feature = "TiRefresh")]
             TiIcon::TiRefresh => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4417,7 +4403,7 @@ impl Data {
             }
             #[cfg(feature = "TiRefreshOutline")]
             TiIcon::TiRefreshOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4434,7 +4420,7 @@ impl Data {
             }
             #[cfg(feature = "TiRss")]
             TiIcon::TiRss => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4451,7 +4437,7 @@ impl Data {
             }
             #[cfg(feature = "TiRssOutline")]
             TiIcon::TiRssOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4468,7 +4454,7 @@ impl Data {
             }
             #[cfg(feature = "TiScissors")]
             TiIcon::TiScissors => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4485,7 +4471,7 @@ impl Data {
             }
             #[cfg(feature = "TiScissorsOutline")]
             TiIcon::TiScissorsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4502,7 +4488,7 @@ impl Data {
             }
             #[cfg(feature = "TiShoppingBag")]
             TiIcon::TiShoppingBag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4519,7 +4505,7 @@ impl Data {
             }
             #[cfg(feature = "TiShoppingCart")]
             TiIcon::TiShoppingCart => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4536,7 +4522,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialAtCircular")]
             TiIcon::TiSocialAtCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4553,7 +4539,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialDribbble")]
             TiIcon::TiSocialDribbble => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4570,7 +4556,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialDribbbleCircular")]
             TiIcon::TiSocialDribbbleCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4587,7 +4573,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialFacebook")]
             TiIcon::TiSocialFacebook => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4604,7 +4590,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialFacebookCircular")]
             TiIcon::TiSocialFacebookCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4621,7 +4607,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialFlickr")]
             TiIcon::TiSocialFlickr => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4638,7 +4624,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialFlickrCircular")]
             TiIcon::TiSocialFlickrCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4655,7 +4641,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialGithub")]
             TiIcon::TiSocialGithub => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4672,7 +4658,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialGithubCircular")]
             TiIcon::TiSocialGithubCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4689,7 +4675,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialGooglePlus")]
             TiIcon::TiSocialGooglePlus => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4706,7 +4692,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialGooglePlusCircular")]
             TiIcon::TiSocialGooglePlusCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4723,7 +4709,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialInstagram")]
             TiIcon::TiSocialInstagram => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4740,7 +4726,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialInstagramCircular")]
             TiIcon::TiSocialInstagramCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4757,7 +4743,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialLastFm")]
             TiIcon::TiSocialLastFm => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4774,7 +4760,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialLastFmCircular")]
             TiIcon::TiSocialLastFmCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4791,7 +4777,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialLinkedin")]
             TiIcon::TiSocialLinkedin => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4808,7 +4794,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialLinkedinCircular")]
             TiIcon::TiSocialLinkedinCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4825,7 +4811,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialPinterest")]
             TiIcon::TiSocialPinterest => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4842,7 +4828,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialPinterestCircular")]
             TiIcon::TiSocialPinterestCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4859,7 +4845,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialSkype")]
             TiIcon::TiSocialSkype => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4876,7 +4862,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialSkypeOutline")]
             TiIcon::TiSocialSkypeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4893,7 +4879,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialTumbler")]
             TiIcon::TiSocialTumbler => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4910,7 +4896,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialTumblerCircular")]
             TiIcon::TiSocialTumblerCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4927,7 +4913,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialTwitter")]
             TiIcon::TiSocialTwitter => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4944,7 +4930,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialTwitterCircular")]
             TiIcon::TiSocialTwitterCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4961,7 +4947,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialVimeo")]
             TiIcon::TiSocialVimeo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4978,7 +4964,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialVimeoCircular")]
             TiIcon::TiSocialVimeoCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -4995,7 +4981,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialYoutube")]
             TiIcon::TiSocialYoutube => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5012,7 +4998,7 @@ impl Data {
             }
             #[cfg(feature = "TiSocialYoutubeCircular")]
             TiIcon::TiSocialYoutubeCircular => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5029,7 +5015,7 @@ impl Data {
             }
             #[cfg(feature = "TiSortAlphabetically")]
             TiIcon::TiSortAlphabetically => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5046,7 +5032,7 @@ impl Data {
             }
             #[cfg(feature = "TiSortAlphabeticallyOutline")]
             TiIcon::TiSortAlphabeticallyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5063,7 +5049,7 @@ impl Data {
             }
             #[cfg(feature = "TiSortNumerically")]
             TiIcon::TiSortNumerically => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5080,7 +5066,7 @@ impl Data {
             }
             #[cfg(feature = "TiSortNumericallyOutline")]
             TiIcon::TiSortNumericallyOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5097,7 +5083,7 @@ impl Data {
             }
             #[cfg(feature = "TiSpanner")]
             TiIcon::TiSpanner => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5114,7 +5100,7 @@ impl Data {
             }
             #[cfg(feature = "TiSpannerOutline")]
             TiIcon::TiSpannerOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5131,7 +5117,7 @@ impl Data {
             }
             #[cfg(feature = "TiSpiral")]
             TiIcon::TiSpiral => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5148,7 +5134,7 @@ impl Data {
             }
             #[cfg(feature = "TiStar")]
             TiIcon::TiStar => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5165,7 +5151,7 @@ impl Data {
             }
             #[cfg(feature = "TiStarFullOutline")]
             TiIcon::TiStarFullOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5182,7 +5168,7 @@ impl Data {
             }
             #[cfg(feature = "TiStarHalf")]
             TiIcon::TiStarHalf => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5199,7 +5185,7 @@ impl Data {
             }
             #[cfg(feature = "TiStarHalfOutline")]
             TiIcon::TiStarHalfOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5216,7 +5202,7 @@ impl Data {
             }
             #[cfg(feature = "TiStarOutline")]
             TiIcon::TiStarOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5233,7 +5219,7 @@ impl Data {
             }
             #[cfg(feature = "TiStarburst")]
             TiIcon::TiStarburst => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5250,7 +5236,7 @@ impl Data {
             }
             #[cfg(feature = "TiStarburstOutline")]
             TiIcon::TiStarburstOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5267,7 +5253,7 @@ impl Data {
             }
             #[cfg(feature = "TiStopwatch")]
             TiIcon::TiStopwatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5284,7 +5270,7 @@ impl Data {
             }
             #[cfg(feature = "TiSupport")]
             TiIcon::TiSupport => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5301,7 +5287,7 @@ impl Data {
             }
             #[cfg(feature = "TiTabsOutline")]
             TiIcon::TiTabsOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5318,7 +5304,7 @@ impl Data {
             }
             #[cfg(feature = "TiTag")]
             TiIcon::TiTag => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5335,7 +5321,7 @@ impl Data {
             }
             #[cfg(feature = "TiTags")]
             TiIcon::TiTags => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5352,7 +5338,7 @@ impl Data {
             }
             #[cfg(feature = "TiThLarge")]
             TiIcon::TiThLarge => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5369,7 +5355,7 @@ impl Data {
             }
             #[cfg(feature = "TiThLargeOutline")]
             TiIcon::TiThLargeOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5386,7 +5372,7 @@ impl Data {
             }
             #[cfg(feature = "TiThList")]
             TiIcon::TiThList => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5403,7 +5389,7 @@ impl Data {
             }
             #[cfg(feature = "TiThListOutline")]
             TiIcon::TiThListOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5420,7 +5406,7 @@ impl Data {
             }
             #[cfg(feature = "TiThMenu")]
             TiIcon::TiThMenu => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5437,7 +5423,7 @@ impl Data {
             }
             #[cfg(feature = "TiThMenuOutline")]
             TiIcon::TiThMenuOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5454,7 +5440,7 @@ impl Data {
             }
             #[cfg(feature = "TiThSmall")]
             TiIcon::TiThSmall => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5471,7 +5457,7 @@ impl Data {
             }
             #[cfg(feature = "TiThSmallOutline")]
             TiIcon::TiThSmallOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5488,7 +5474,7 @@ impl Data {
             }
             #[cfg(feature = "TiThermometer")]
             TiIcon::TiThermometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5505,7 +5491,7 @@ impl Data {
             }
             #[cfg(feature = "TiThumbsDown")]
             TiIcon::TiThumbsDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5522,7 +5508,7 @@ impl Data {
             }
             #[cfg(feature = "TiThumbsOk")]
             TiIcon::TiThumbsOk => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5539,7 +5525,7 @@ impl Data {
             }
             #[cfg(feature = "TiThumbsUp")]
             TiIcon::TiThumbsUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5556,7 +5542,7 @@ impl Data {
             }
             #[cfg(feature = "TiTick")]
             TiIcon::TiTick => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5573,7 +5559,7 @@ impl Data {
             }
             #[cfg(feature = "TiTickOutline")]
             TiIcon::TiTickOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5590,7 +5576,7 @@ impl Data {
             }
             #[cfg(feature = "TiTicket")]
             TiIcon::TiTicket => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5607,7 +5593,7 @@ impl Data {
             }
             #[cfg(feature = "TiTime")]
             TiIcon::TiTime => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5624,7 +5610,7 @@ impl Data {
             }
             #[cfg(feature = "TiTimes")]
             TiIcon::TiTimes => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5641,7 +5627,7 @@ impl Data {
             }
             #[cfg(feature = "TiTimesOutline")]
             TiIcon::TiTimesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5658,7 +5644,7 @@ impl Data {
             }
             #[cfg(feature = "TiTrash")]
             TiIcon::TiTrash => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5675,7 +5661,7 @@ impl Data {
             }
             #[cfg(feature = "TiTree")]
             TiIcon::TiTree => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5692,7 +5678,7 @@ impl Data {
             }
             #[cfg(feature = "TiUpload")]
             TiIcon::TiUpload => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5709,7 +5695,7 @@ impl Data {
             }
             #[cfg(feature = "TiUploadOutline")]
             TiIcon::TiUploadOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5726,7 +5712,7 @@ impl Data {
             }
             #[cfg(feature = "TiUser")]
             TiIcon::TiUser => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5743,7 +5729,7 @@ impl Data {
             }
             #[cfg(feature = "TiUserAdd")]
             TiIcon::TiUserAdd => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5760,7 +5746,7 @@ impl Data {
             }
             #[cfg(feature = "TiUserAddOutline")]
             TiIcon::TiUserAddOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5777,7 +5763,7 @@ impl Data {
             }
             #[cfg(feature = "TiUserDelete")]
             TiIcon::TiUserDelete => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5794,7 +5780,7 @@ impl Data {
             }
             #[cfg(feature = "TiUserDeleteOutline")]
             TiIcon::TiUserDeleteOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5811,7 +5797,7 @@ impl Data {
             }
             #[cfg(feature = "TiUserOutline")]
             TiIcon::TiUserOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5828,7 +5814,7 @@ impl Data {
             }
             #[cfg(feature = "TiVendorAndroid")]
             TiIcon::TiVendorAndroid => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5845,7 +5831,7 @@ impl Data {
             }
             #[cfg(feature = "TiVendorApple")]
             TiIcon::TiVendorApple => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5862,7 +5848,7 @@ impl Data {
             }
             #[cfg(feature = "TiVendorMicrosoft")]
             TiIcon::TiVendorMicrosoft => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5879,7 +5865,7 @@ impl Data {
             }
             #[cfg(feature = "TiVideo")]
             TiIcon::TiVideo => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5896,7 +5882,7 @@ impl Data {
             }
             #[cfg(feature = "TiVideoOutline")]
             TiIcon::TiVideoOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5913,7 +5899,7 @@ impl Data {
             }
             #[cfg(feature = "TiVolume")]
             TiIcon::TiVolume => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5930,7 +5916,7 @@ impl Data {
             }
             #[cfg(feature = "TiVolumeDown")]
             TiIcon::TiVolumeDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5947,7 +5933,7 @@ impl Data {
             }
             #[cfg(feature = "TiVolumeMute")]
             TiIcon::TiVolumeMute => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5964,7 +5950,7 @@ impl Data {
             }
             #[cfg(feature = "TiVolumeUp")]
             TiIcon::TiVolumeUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5981,7 +5967,7 @@ impl Data {
             }
             #[cfg(feature = "TiWarning")]
             TiIcon::TiWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -5998,7 +5984,7 @@ impl Data {
             }
             #[cfg(feature = "TiWarningOutline")]
             TiIcon::TiWarningOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6015,7 +6001,7 @@ impl Data {
             }
             #[cfg(feature = "TiWatch")]
             TiIcon::TiWatch => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6032,7 +6018,7 @@ impl Data {
             }
             #[cfg(feature = "TiWaves")]
             TiIcon::TiWaves => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6049,7 +6035,7 @@ impl Data {
             }
             #[cfg(feature = "TiWavesOutline")]
             TiIcon::TiWavesOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6066,7 +6052,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherCloudy")]
             TiIcon::TiWeatherCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6083,7 +6069,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherDownpour")]
             TiIcon::TiWeatherDownpour => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6100,7 +6086,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherNight")]
             TiIcon::TiWeatherNight => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6117,7 +6103,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherPartlySunny")]
             TiIcon::TiWeatherPartlySunny => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6134,7 +6120,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherShower")]
             TiIcon::TiWeatherShower => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6151,7 +6137,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherSnow")]
             TiIcon::TiWeatherSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6168,7 +6154,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherStormy")]
             TiIcon::TiWeatherStormy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6185,7 +6171,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherSunny")]
             TiIcon::TiWeatherSunny => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6202,7 +6188,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherWindy")]
             TiIcon::TiWeatherWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6219,7 +6205,7 @@ impl Data {
             }
             #[cfg(feature = "TiWeatherWindyCloudy")]
             TiIcon::TiWeatherWindyCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6236,7 +6222,7 @@ impl Data {
             }
             #[cfg(feature = "TiWiFi")]
             TiIcon::TiWiFi => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6253,7 +6239,7 @@ impl Data {
             }
             #[cfg(feature = "TiWiFiOutline")]
             TiIcon::TiWiFiOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6270,7 +6256,7 @@ impl Data {
             }
             #[cfg(feature = "TiWine")]
             TiIcon::TiWine => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6287,7 +6273,7 @@ impl Data {
             }
             #[cfg(feature = "TiWorld")]
             TiIcon::TiWorld => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6304,7 +6290,7 @@ impl Data {
             }
             #[cfg(feature = "TiWorldOutline")]
             TiIcon::TiWorldOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6321,7 +6307,7 @@ impl Data {
             }
             #[cfg(feature = "TiZoom")]
             TiIcon::TiZoom => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6338,7 +6324,7 @@ impl Data {
             }
             #[cfg(feature = "TiZoomIn")]
             TiIcon::TiZoomIn => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6355,7 +6341,7 @@ impl Data {
             }
             #[cfg(feature = "TiZoomInOutline")]
             TiIcon::TiZoomInOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6372,7 +6358,7 @@ impl Data {
             }
             #[cfg(feature = "TiZoomOut")]
             TiIcon::TiZoomOut => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6389,7 +6375,7 @@ impl Data {
             }
             #[cfg(feature = "TiZoomOutOutline")]
             TiIcon::TiZoomOutOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6406,7 +6392,7 @@ impl Data {
             }
             #[cfg(feature = "TiZoomOutline")]
             TiIcon::TiZoomOutline => {
-                Data {
+                leptos_icons_core::Data {
                     style: None,
                     x: None,
                     y: None,
@@ -6423,62 +6409,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosTiIcon(
-    cx: leptos::Scope,
-    icon: TiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

@@ -458,26 +458,12 @@ pub enum WiIcon {
     WiWindy,
 }
 
-struct Data {
-    style: Option<&'static str>,
-    x: Option<&'static str>,
-    y: Option<&'static str>,
-    width: Option<&'static str>,
-    height: Option<&'static str>,
-    view_box: Option<&'static str>,
-    stroke_linecap: Option<&'static str>,
-    stroke_linejoin: Option<&'static str>,
-    stroke_width: Option<&'static str>,
-    stroke: Option<&'static str>,
-    fill: Option<&'static str>,
-    data: &'static str,
-}
-impl Data {
-    pub fn of(icon: WiIcon) -> Data {
-        match icon {
+impl leptos_icons_core::IconData for WiIcon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
             #[cfg(feature = "WiAlien")]
             WiIcon::WiAlien => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -494,7 +480,7 @@ impl Data {
             }
             #[cfg(feature = "WiBarometer")]
             WiIcon::WiBarometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -511,7 +497,7 @@ impl Data {
             }
             #[cfg(feature = "WiCelsius")]
             WiIcon::WiCelsius => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -528,7 +514,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloud")]
             WiIcon::WiCloud => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -545,7 +531,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloudDown")]
             WiIcon::WiCloudDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -562,7 +548,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloudRefresh")]
             WiIcon::WiCloudRefresh => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -579,7 +565,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloudUp")]
             WiIcon::WiCloudUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -596,7 +582,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloudy")]
             WiIcon::WiCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -613,7 +599,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloudyGusts")]
             WiIcon::WiCloudyGusts => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -630,7 +616,7 @@ impl Data {
             }
             #[cfg(feature = "WiCloudyWindy")]
             WiIcon::WiCloudyWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -647,7 +633,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayCloudy")]
             WiIcon::WiDayCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -664,7 +650,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayCloudyGusts")]
             WiIcon::WiDayCloudyGusts => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -681,7 +667,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayCloudyHigh")]
             WiIcon::WiDayCloudyHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -698,7 +684,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayCloudyWindy")]
             WiIcon::WiDayCloudyWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -715,7 +701,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayFog")]
             WiIcon::WiDayFog => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -732,7 +718,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayHail")]
             WiIcon::WiDayHail => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -749,7 +735,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayHaze")]
             WiIcon::WiDayHaze => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -766,7 +752,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayLightWind")]
             WiIcon::WiDayLightWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -783,7 +769,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayLightning")]
             WiIcon::WiDayLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -800,7 +786,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayRain")]
             WiIcon::WiDayRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -817,7 +803,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayRainMix")]
             WiIcon::WiDayRainMix => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -834,7 +820,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayRainWind")]
             WiIcon::WiDayRainWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -851,7 +837,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayShowers")]
             WiIcon::WiDayShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -868,7 +854,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySleet")]
             WiIcon::WiDaySleet => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -885,7 +871,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySleetStorm")]
             WiIcon::WiDaySleetStorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -902,7 +888,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySnow")]
             WiIcon::WiDaySnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -919,7 +905,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySnowThunderstorm")]
             WiIcon::WiDaySnowThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -936,7 +922,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySnowWind")]
             WiIcon::WiDaySnowWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -953,7 +939,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySprinkle")]
             WiIcon::WiDaySprinkle => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -970,7 +956,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayStormShowers")]
             WiIcon::WiDayStormShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -987,7 +973,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySunny")]
             WiIcon::WiDaySunny => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1004,7 +990,7 @@ impl Data {
             }
             #[cfg(feature = "WiDaySunnyOvercast")]
             WiIcon::WiDaySunnyOvercast => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1021,7 +1007,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayThunderstorm")]
             WiIcon::WiDayThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1038,7 +1024,7 @@ impl Data {
             }
             #[cfg(feature = "WiDayWindy")]
             WiIcon::WiDayWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1055,7 +1041,7 @@ impl Data {
             }
             #[cfg(feature = "WiDegrees")]
             WiIcon::WiDegrees => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1072,7 +1058,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionDown")]
             WiIcon::WiDirectionDown => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1089,7 +1075,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionDownLeft")]
             WiIcon::WiDirectionDownLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1106,7 +1092,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionDownRight")]
             WiIcon::WiDirectionDownRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1123,7 +1109,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionLeft")]
             WiIcon::WiDirectionLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1140,7 +1126,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionRight")]
             WiIcon::WiDirectionRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1157,7 +1143,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionUp")]
             WiIcon::WiDirectionUp => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1174,7 +1160,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionUpLeft")]
             WiIcon::WiDirectionUpLeft => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1191,7 +1177,7 @@ impl Data {
             }
             #[cfg(feature = "WiDirectionUpRight")]
             WiIcon::WiDirectionUpRight => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1208,7 +1194,7 @@ impl Data {
             }
             #[cfg(feature = "WiDust")]
             WiIcon::WiDust => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1225,7 +1211,7 @@ impl Data {
             }
             #[cfg(feature = "WiEarthquake")]
             WiIcon::WiEarthquake => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1242,7 +1228,7 @@ impl Data {
             }
             #[cfg(feature = "WiFahrenheit")]
             WiIcon::WiFahrenheit => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1259,7 +1245,7 @@ impl Data {
             }
             #[cfg(feature = "WiFire")]
             WiIcon::WiFire => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1276,7 +1262,7 @@ impl Data {
             }
             #[cfg(feature = "WiFlood")]
             WiIcon::WiFlood => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1293,7 +1279,7 @@ impl Data {
             }
             #[cfg(feature = "WiFog")]
             WiIcon::WiFog => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1310,7 +1296,7 @@ impl Data {
             }
             #[cfg(feature = "WiGaleWarning")]
             WiIcon::WiGaleWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1327,7 +1313,7 @@ impl Data {
             }
             #[cfg(feature = "WiHail")]
             WiIcon::WiHail => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1344,7 +1330,7 @@ impl Data {
             }
             #[cfg(feature = "WiHorizon")]
             WiIcon::WiHorizon => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1361,7 +1347,7 @@ impl Data {
             }
             #[cfg(feature = "WiHorizonAlt")]
             WiIcon::WiHorizonAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1378,7 +1364,7 @@ impl Data {
             }
             #[cfg(feature = "WiHot")]
             WiIcon::WiHot => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1395,7 +1381,7 @@ impl Data {
             }
             #[cfg(feature = "WiHumidity")]
             WiIcon::WiHumidity => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1412,7 +1398,7 @@ impl Data {
             }
             #[cfg(feature = "WiHurricane")]
             WiIcon::WiHurricane => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1429,7 +1415,7 @@ impl Data {
             }
             #[cfg(feature = "WiHurricaneWarning")]
             WiIcon::WiHurricaneWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1446,7 +1432,7 @@ impl Data {
             }
             #[cfg(feature = "WiLightning")]
             WiIcon::WiLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1463,7 +1449,7 @@ impl Data {
             }
             #[cfg(feature = "WiLunarEclipse")]
             WiIcon::WiLunarEclipse => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1480,7 +1466,7 @@ impl Data {
             }
             #[cfg(feature = "WiMeteor")]
             WiIcon::WiMeteor => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1497,7 +1483,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltFirstQuarter")]
             WiIcon::WiMoonAltFirstQuarter => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1514,7 +1500,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltFull")]
             WiIcon::WiMoonAltFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1531,7 +1517,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltNew")]
             WiIcon::WiMoonAltNew => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1548,7 +1534,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltThirdQuarter")]
             WiIcon::WiMoonAltThirdQuarter => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1565,7 +1551,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningCrescent1")]
             WiIcon::WiMoonAltWaningCrescent1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1582,7 +1568,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningCrescent2")]
             WiIcon::WiMoonAltWaningCrescent2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1599,7 +1585,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningCrescent3")]
             WiIcon::WiMoonAltWaningCrescent3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1616,7 +1602,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningCrescent4")]
             WiIcon::WiMoonAltWaningCrescent4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1633,7 +1619,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningCrescent5")]
             WiIcon::WiMoonAltWaningCrescent5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1650,7 +1636,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningCrescent6")]
             WiIcon::WiMoonAltWaningCrescent6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1667,7 +1653,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningGibbous1")]
             WiIcon::WiMoonAltWaningGibbous1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1684,7 +1670,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningGibbous2")]
             WiIcon::WiMoonAltWaningGibbous2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1701,7 +1687,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningGibbous3")]
             WiIcon::WiMoonAltWaningGibbous3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1718,7 +1704,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningGibbous4")]
             WiIcon::WiMoonAltWaningGibbous4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1735,7 +1721,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningGibbous5")]
             WiIcon::WiMoonAltWaningGibbous5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1752,7 +1738,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaningGibbous6")]
             WiIcon::WiMoonAltWaningGibbous6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1769,7 +1755,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingCrescent1")]
             WiIcon::WiMoonAltWaxingCrescent1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1786,7 +1772,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingCrescent2")]
             WiIcon::WiMoonAltWaxingCrescent2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1803,7 +1789,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingCrescent3")]
             WiIcon::WiMoonAltWaxingCrescent3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1820,7 +1806,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingCrescent4")]
             WiIcon::WiMoonAltWaxingCrescent4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1837,7 +1823,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingCrescent5")]
             WiIcon::WiMoonAltWaxingCrescent5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1854,7 +1840,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingCrescent6")]
             WiIcon::WiMoonAltWaxingCrescent6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1871,7 +1857,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingGibbous1")]
             WiIcon::WiMoonAltWaxingGibbous1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1888,7 +1874,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingGibbous2")]
             WiIcon::WiMoonAltWaxingGibbous2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1905,7 +1891,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingGibbous3")]
             WiIcon::WiMoonAltWaxingGibbous3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1922,7 +1908,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingGibbous4")]
             WiIcon::WiMoonAltWaxingGibbous4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1939,7 +1925,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingGibbous5")]
             WiIcon::WiMoonAltWaxingGibbous5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1956,7 +1942,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonAltWaxingGibbous6")]
             WiIcon::WiMoonAltWaxingGibbous6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1973,7 +1959,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonFirstQuarter")]
             WiIcon::WiMoonFirstQuarter => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -1990,7 +1976,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonFull")]
             WiIcon::WiMoonFull => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2007,7 +1993,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonNew")]
             WiIcon::WiMoonNew => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2024,7 +2010,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonThirdQuarter")]
             WiIcon::WiMoonThirdQuarter => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2041,7 +2027,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningCrescent1")]
             WiIcon::WiMoonWaningCrescent1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2058,7 +2044,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningCrescent2")]
             WiIcon::WiMoonWaningCrescent2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2075,7 +2061,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningCrescent3")]
             WiIcon::WiMoonWaningCrescent3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2092,7 +2078,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningCrescent4")]
             WiIcon::WiMoonWaningCrescent4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2109,7 +2095,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningCrescent5")]
             WiIcon::WiMoonWaningCrescent5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2126,7 +2112,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningCrescent6")]
             WiIcon::WiMoonWaningCrescent6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2143,7 +2129,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningGibbous1")]
             WiIcon::WiMoonWaningGibbous1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2160,7 +2146,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningGibbous2")]
             WiIcon::WiMoonWaningGibbous2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2177,7 +2163,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningGibbous3")]
             WiIcon::WiMoonWaningGibbous3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2194,7 +2180,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningGibbous4")]
             WiIcon::WiMoonWaningGibbous4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2211,7 +2197,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningGibbous5")]
             WiIcon::WiMoonWaningGibbous5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2228,7 +2214,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaningGibbous6")]
             WiIcon::WiMoonWaningGibbous6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2245,7 +2231,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingCrescent1")]
             WiIcon::WiMoonWaxingCrescent1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2262,7 +2248,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingCrescent2")]
             WiIcon::WiMoonWaxingCrescent2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2279,7 +2265,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingCrescent3")]
             WiIcon::WiMoonWaxingCrescent3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2296,7 +2282,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingCrescent4")]
             WiIcon::WiMoonWaxingCrescent4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2313,7 +2299,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingCrescent5")]
             WiIcon::WiMoonWaxingCrescent5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2330,7 +2316,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingCrescent6")]
             WiIcon::WiMoonWaxingCrescent6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2347,7 +2333,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingGibbous1")]
             WiIcon::WiMoonWaxingGibbous1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2364,7 +2350,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingGibbous2")]
             WiIcon::WiMoonWaxingGibbous2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2381,7 +2367,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingGibbous3")]
             WiIcon::WiMoonWaxingGibbous3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2398,7 +2384,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingGibbous4")]
             WiIcon::WiMoonWaxingGibbous4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2415,7 +2401,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingGibbous5")]
             WiIcon::WiMoonWaxingGibbous5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2432,7 +2418,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonWaxingGibbous6")]
             WiIcon::WiMoonWaxingGibbous6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2449,7 +2435,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonrise")]
             WiIcon::WiMoonrise => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2466,7 +2452,7 @@ impl Data {
             }
             #[cfg(feature = "WiMoonset")]
             WiIcon::WiMoonset => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2483,7 +2469,7 @@ impl Data {
             }
             #[cfg(feature = "WiNa")]
             WiIcon::WiNa => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2500,7 +2486,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltCloudy")]
             WiIcon::WiNightAltCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2517,7 +2503,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltCloudyGusts")]
             WiIcon::WiNightAltCloudyGusts => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2534,7 +2520,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltCloudyHigh")]
             WiIcon::WiNightAltCloudyHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2551,7 +2537,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltCloudyWindy")]
             WiIcon::WiNightAltCloudyWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2568,7 +2554,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltHail")]
             WiIcon::WiNightAltHail => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2585,7 +2571,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltLightning")]
             WiIcon::WiNightAltLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2602,7 +2588,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltPartlyCloudy")]
             WiIcon::WiNightAltPartlyCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2619,7 +2605,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltRain")]
             WiIcon::WiNightAltRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2636,7 +2622,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltRainMix")]
             WiIcon::WiNightAltRainMix => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2653,7 +2639,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltRainWind")]
             WiIcon::WiNightAltRainWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2670,7 +2656,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltShowers")]
             WiIcon::WiNightAltShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2687,7 +2673,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltSleet")]
             WiIcon::WiNightAltSleet => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2704,7 +2690,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltSleetStorm")]
             WiIcon::WiNightAltSleetStorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2721,7 +2707,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltSnow")]
             WiIcon::WiNightAltSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2738,7 +2724,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltSnowThunderstorm")]
             WiIcon::WiNightAltSnowThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2755,7 +2741,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltSnowWind")]
             WiIcon::WiNightAltSnowWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2772,7 +2758,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltSprinkle")]
             WiIcon::WiNightAltSprinkle => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2789,7 +2775,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltStormShowers")]
             WiIcon::WiNightAltStormShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2806,7 +2792,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightAltThunderstorm")]
             WiIcon::WiNightAltThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2823,7 +2809,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightClear")]
             WiIcon::WiNightClear => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2840,7 +2826,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightCloudy")]
             WiIcon::WiNightCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2857,7 +2843,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightCloudyGusts")]
             WiIcon::WiNightCloudyGusts => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2874,7 +2860,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightCloudyHigh")]
             WiIcon::WiNightCloudyHigh => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2891,7 +2877,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightCloudyWindy")]
             WiIcon::WiNightCloudyWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2908,7 +2894,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightFog")]
             WiIcon::WiNightFog => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2925,7 +2911,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightHail")]
             WiIcon::WiNightHail => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2942,7 +2928,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightLightning")]
             WiIcon::WiNightLightning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2959,7 +2945,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightPartlyCloudy")]
             WiIcon::WiNightPartlyCloudy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2976,7 +2962,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightRain")]
             WiIcon::WiNightRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -2993,7 +2979,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightRainMix")]
             WiIcon::WiNightRainMix => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3010,7 +2996,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightRainWind")]
             WiIcon::WiNightRainWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3027,7 +3013,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightShowers")]
             WiIcon::WiNightShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3044,7 +3030,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightSleet")]
             WiIcon::WiNightSleet => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3061,7 +3047,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightSleetStorm")]
             WiIcon::WiNightSleetStorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3078,7 +3064,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightSnow")]
             WiIcon::WiNightSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3095,7 +3081,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightSnowThunderstorm")]
             WiIcon::WiNightSnowThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3112,7 +3098,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightSnowWind")]
             WiIcon::WiNightSnowWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3129,7 +3115,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightSprinkle")]
             WiIcon::WiNightSprinkle => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3146,7 +3132,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightStormShowers")]
             WiIcon::WiNightStormShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3163,7 +3149,7 @@ impl Data {
             }
             #[cfg(feature = "WiNightThunderstorm")]
             WiIcon::WiNightThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3180,7 +3166,7 @@ impl Data {
             }
             #[cfg(feature = "WiRain")]
             WiIcon::WiRain => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3197,7 +3183,7 @@ impl Data {
             }
             #[cfg(feature = "WiRainMix")]
             WiIcon::WiRainMix => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3214,7 +3200,7 @@ impl Data {
             }
             #[cfg(feature = "WiRainWind")]
             WiIcon::WiRainWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3231,7 +3217,7 @@ impl Data {
             }
             #[cfg(feature = "WiRaindrop")]
             WiIcon::WiRaindrop => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3248,7 +3234,7 @@ impl Data {
             }
             #[cfg(feature = "WiRaindrops")]
             WiIcon::WiRaindrops => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3265,7 +3251,7 @@ impl Data {
             }
             #[cfg(feature = "WiRefresh")]
             WiIcon::WiRefresh => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3282,7 +3268,7 @@ impl Data {
             }
             #[cfg(feature = "WiRefreshAlt")]
             WiIcon::WiRefreshAlt => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3299,7 +3285,7 @@ impl Data {
             }
             #[cfg(feature = "WiSandstorm")]
             WiIcon::WiSandstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3316,7 +3302,7 @@ impl Data {
             }
             #[cfg(feature = "WiShowers")]
             WiIcon::WiShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3333,7 +3319,7 @@ impl Data {
             }
             #[cfg(feature = "WiSleet")]
             WiIcon::WiSleet => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3350,7 +3336,7 @@ impl Data {
             }
             #[cfg(feature = "WiSmallCraftAdvisory")]
             WiIcon::WiSmallCraftAdvisory => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3367,7 +3353,7 @@ impl Data {
             }
             #[cfg(feature = "WiSmog")]
             WiIcon::WiSmog => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3384,7 +3370,7 @@ impl Data {
             }
             #[cfg(feature = "WiSmoke")]
             WiIcon::WiSmoke => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3401,7 +3387,7 @@ impl Data {
             }
             #[cfg(feature = "WiSnow")]
             WiIcon::WiSnow => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3418,7 +3404,7 @@ impl Data {
             }
             #[cfg(feature = "WiSnowWind")]
             WiIcon::WiSnowWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3435,7 +3421,7 @@ impl Data {
             }
             #[cfg(feature = "WiSnowflakeCold")]
             WiIcon::WiSnowflakeCold => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3452,7 +3438,7 @@ impl Data {
             }
             #[cfg(feature = "WiSolarEclipse")]
             WiIcon::WiSolarEclipse => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3469,7 +3455,7 @@ impl Data {
             }
             #[cfg(feature = "WiSprinkle")]
             WiIcon::WiSprinkle => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3486,7 +3472,7 @@ impl Data {
             }
             #[cfg(feature = "WiStars")]
             WiIcon::WiStars => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3503,7 +3489,7 @@ impl Data {
             }
             #[cfg(feature = "WiStormShowers")]
             WiIcon::WiStormShowers => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3520,7 +3506,7 @@ impl Data {
             }
             #[cfg(feature = "WiStormWarning")]
             WiIcon::WiStormWarning => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3537,7 +3523,7 @@ impl Data {
             }
             #[cfg(feature = "WiStrongWind")]
             WiIcon::WiStrongWind => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3554,7 +3540,7 @@ impl Data {
             }
             #[cfg(feature = "WiSunrise")]
             WiIcon::WiSunrise => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3571,7 +3557,7 @@ impl Data {
             }
             #[cfg(feature = "WiSunset")]
             WiIcon::WiSunset => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3588,7 +3574,7 @@ impl Data {
             }
             #[cfg(feature = "WiThermometer")]
             WiIcon::WiThermometer => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3605,7 +3591,7 @@ impl Data {
             }
             #[cfg(feature = "WiThermometerExterior")]
             WiIcon::WiThermometerExterior => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3622,7 +3608,7 @@ impl Data {
             }
             #[cfg(feature = "WiThermometerInternal")]
             WiIcon::WiThermometerInternal => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3639,7 +3625,7 @@ impl Data {
             }
             #[cfg(feature = "WiThunderstorm")]
             WiIcon::WiThunderstorm => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3656,7 +3642,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime1")]
             WiIcon::WiTime1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3673,7 +3659,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime10")]
             WiIcon::WiTime10 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3690,7 +3676,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime11")]
             WiIcon::WiTime11 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3707,7 +3693,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime12")]
             WiIcon::WiTime12 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3724,7 +3710,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime2")]
             WiIcon::WiTime2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3741,7 +3727,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime3")]
             WiIcon::WiTime3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3758,7 +3744,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime4")]
             WiIcon::WiTime4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3775,7 +3761,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime5")]
             WiIcon::WiTime5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3792,7 +3778,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime6")]
             WiIcon::WiTime6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3809,7 +3795,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime7")]
             WiIcon::WiTime7 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3826,7 +3812,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime8")]
             WiIcon::WiTime8 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3843,7 +3829,7 @@ impl Data {
             }
             #[cfg(feature = "WiTime9")]
             WiIcon::WiTime9 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3860,7 +3846,7 @@ impl Data {
             }
             #[cfg(feature = "WiTornado")]
             WiIcon::WiTornado => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3877,7 +3863,7 @@ impl Data {
             }
             #[cfg(feature = "WiTrain")]
             WiIcon::WiTrain => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3894,7 +3880,7 @@ impl Data {
             }
             #[cfg(feature = "WiTsunami")]
             WiIcon::WiTsunami => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3911,7 +3897,7 @@ impl Data {
             }
             #[cfg(feature = "WiUmbrella")]
             WiIcon::WiUmbrella => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3928,7 +3914,7 @@ impl Data {
             }
             #[cfg(feature = "WiVolcano")]
             WiIcon::WiVolcano => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3945,7 +3931,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort0")]
             WiIcon::WiWindBeaufort0 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3962,7 +3948,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort1")]
             WiIcon::WiWindBeaufort1 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3979,7 +3965,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort10")]
             WiIcon::WiWindBeaufort10 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -3996,7 +3982,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort11")]
             WiIcon::WiWindBeaufort11 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4013,7 +3999,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort12")]
             WiIcon::WiWindBeaufort12 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4030,7 +4016,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort2")]
             WiIcon::WiWindBeaufort2 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4047,7 +4033,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort3")]
             WiIcon::WiWindBeaufort3 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4064,7 +4050,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort4")]
             WiIcon::WiWindBeaufort4 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4081,7 +4067,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort5")]
             WiIcon::WiWindBeaufort5 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4098,7 +4084,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort6")]
             WiIcon::WiWindBeaufort6 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4115,7 +4101,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort7")]
             WiIcon::WiWindBeaufort7 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4132,7 +4118,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort8")]
             WiIcon::WiWindBeaufort8 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4149,7 +4135,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindBeaufort9")]
             WiIcon::WiWindBeaufort9 => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4166,7 +4152,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindDeg")]
             WiIcon::WiWindDeg => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4183,7 +4169,7 @@ impl Data {
             }
             #[cfg(feature = "WiWindy")]
             WiIcon::WiWindy => {
-                Data {
+                leptos_icons_core::Data {
                     style: Some("enable-background:new 0 0 30 30;"),
                     x: Some("0px"),
                     y: Some("0px"),
@@ -4200,62 +4186,4 @@ impl Data {
             }
         }
     }
-}
-#[allow(non_snake_case)]
-pub fn LeptosWiIcon(
-    cx: leptos::Scope,
-    icon: WiIcon,
-    width: Option<String>,
-    height: Option<String>,
-    class: Option<String>,
-    style: Option<String>,
-) -> leptos::View {
-    let data = Data::of(icon);
-    let mut svg = leptos::svg::svg(cx);
-    if let Some(classes) = class {
-        svg = svg.classes(classes);
-    }
-    svg = match (style, data.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
-        (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
-    };
-    if let Some(x) = data.x {
-        svg = svg.attr("x", x);
-    }
-    if let Some(y) = data.y {
-        svg = svg.attr("x", y);
-    }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
-    if let Some(view_box) = data.view_box {
-        svg = svg.attr("viewBox", view_box);
-    }
-    if let Some(stroke_linecap) = data.stroke_linecap {
-        svg = svg.attr("stroke-linecap", stroke_linecap);
-    }
-    if let Some(stroke_linejoin) = data.stroke_linejoin {
-        svg = svg.attr("stroke-linejoin", stroke_linejoin);
-    }
-    if let Some(stroke_width) = data.stroke_width {
-        svg = svg.attr("stroke-width", stroke_width);
-    }
-    if let Some(stroke) = data.stroke {
-        svg = svg.attr("stroke", stroke);
-    }
-    svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
-    svg = svg.attr("role", "graphics-symbol");
-    svg = svg.inner_html(data.data);
-    leptos::IntoView::into_view(svg, cx)
 }

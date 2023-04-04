@@ -133,12 +133,9 @@ impl LibRs {
         let match_arms = icon_libs.iter().map(|lib| {
             let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
             let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
-            let lib_component_ident = Ident::new(&lib.component_name(), Span::call_site());
-            //let lib_component_props_ident = Ident::new(&format!("{}Props", lib.component_name()), Span::call_site());
             quote! {
                 #[cfg(feature = #lib_short_name)]
-                #[allow(unreachable_code, unreachable_patterns)]
-                #enum_ident::#lib_short_name_ident(icon) => #lib_component_ident(cx, icon, width, height, class, style)
+                #enum_ident::#lib_short_name_ident(icon) => leptos_icons_core::LeptosIconCore(cx, icon.data(), width, height, class, style)
             }
         });
 
@@ -166,6 +163,7 @@ impl LibRs {
                 #[allow(unused)]
                 style: Option<String>,
             ) -> impl leptos::IntoView {
+                use leptos_icons_core::IconData;
                 leptos::IntoView::into_view(
                     match icon {
                         #(#match_arms),*
