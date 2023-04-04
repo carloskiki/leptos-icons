@@ -594,4888 +594,4888 @@ pub enum FiIcon {
     FiZoomOut,
 }
 
-impl leptos_icons_core::IconData for FiIcon {
-    fn data(self) -> leptos_icons_core::Data {
+#[cfg(feature = "FiActivity")]
+const FI_ACTIVITY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"22 12 18 12 15 21 9 3 6 12 2 12\" />",
+};
+#[cfg(feature = "FiAirplay")]
+const FI_AIRPLAY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1\" />\n<polygon points=\"12 15 17 21 7 21 12 15\" />",
+};
+#[cfg(feature = "FiAlertCircle")]
+const FI_ALERT_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\" />",
+};
+#[cfg(feature = "FiAlertOctagon")]
+const FI_ALERT_OCTAGON: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\" />",
+};
+#[cfg(feature = "FiAlertTriangle")]
+const FI_ALERT_TRIANGLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\" />\n<line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"13\" />\n<line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />",
+};
+#[cfg(feature = "FiAlignCenter")]
+const FI_ALIGN_CENTER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"18\" y1=\"10\" x2=\"6\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"18\" y1=\"18\" x2=\"6\" y2=\"18\" />",
+};
+#[cfg(feature = "FiAlignJustify")]
+const FI_ALIGN_JUSTIFY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"21\" y1=\"10\" x2=\"3\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"21\" y1=\"18\" x2=\"3\" y2=\"18\" />",
+};
+#[cfg(feature = "FiAlignLeft")]
+const FI_ALIGN_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"17\" y1=\"10\" x2=\"3\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"17\" y1=\"18\" x2=\"3\" y2=\"18\" />",
+};
+#[cfg(feature = "FiAlignRight")]
+const FI_ALIGN_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"21\" y1=\"10\" x2=\"7\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"21\" y1=\"18\" x2=\"7\" y2=\"18\" />",
+};
+#[cfg(feature = "FiAnchor")]
+const FI_ANCHOR: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"5\" r=\"3\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"8\" />\n<path d=\"M5 12H2a10 10 0 0 0 20 0h-3\" />",
+};
+#[cfg(feature = "FiAperture")]
+const FI_APERTURE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"14.31\" y1=\"8\" x2=\"20.05\" y2=\"17.94\" />\n<line x1=\"9.69\" y1=\"8\" x2=\"21.17\" y2=\"8\" />\n<line x1=\"7.38\" y1=\"12\" x2=\"13.12\" y2=\"2.06\" />\n<line x1=\"9.69\" y1=\"16\" x2=\"3.95\" y2=\"6.06\" />\n<line x1=\"14.31\" y1=\"16\" x2=\"2.83\" y2=\"16\" />\n<line x1=\"16.62\" y1=\"12\" x2=\"10.88\" y2=\"21.94\" />",
+};
+#[cfg(feature = "FiArchive")]
+const FI_ARCHIVE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"21 8 21 21 3 21 3 8\" />\n<rect x=\"1\" y=\"3\" width=\"22\" height=\"5\" />\n<line x1=\"10\" y1=\"12\" x2=\"14\" y2=\"12\" />",
+};
+#[cfg(feature = "FiArrowDown")]
+const FI_ARROW_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\" />\n<polyline points=\"19 12 12 19 5 12\" />",
+};
+#[cfg(feature = "FiArrowDownCircle")]
+const FI_ARROW_DOWN_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"8 12 12 16 16 12\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />",
+};
+#[cfg(feature = "FiArrowDownLeft")]
+const FI_ARROW_DOWN_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<polyline points=\"17 17 7 17 7 7\" />",
+};
+#[cfg(feature = "FiArrowDownRight")]
+const FI_ARROW_DOWN_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<polyline points=\"17 7 17 17 7 17\" />",
+};
+#[cfg(feature = "FiArrowLeft")]
+const FI_ARROW_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\" />\n<polyline points=\"12 19 5 12 12 5\" />",
+};
+#[cfg(feature = "FiArrowLeftCircle")]
+const FI_ARROW_LEFT_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"12 8 8 12 12 16\" />\n<line x1=\"16\" y1=\"12\" x2=\"8\" y2=\"12\" />",
+};
+#[cfg(feature = "FiArrowRight")]
+const FI_ARROW_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />\n<polyline points=\"12 5 19 12 12 19\" />",
+};
+#[cfg(feature = "FiArrowRightCircle")]
+const FI_ARROW_RIGHT_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"12 16 16 12 12 8\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
+};
+#[cfg(feature = "FiArrowUp")]
+const FI_ARROW_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"5\" />\n<polyline points=\"5 12 12 5 19 12\" />",
+};
+#[cfg(feature = "FiArrowUpCircle")]
+const FI_ARROW_UP_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"16 12 12 8 8 12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"8\" />",
+};
+#[cfg(feature = "FiArrowUpLeft")]
+const FI_ARROW_UP_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"17\" y1=\"17\" x2=\"7\" y2=\"7\" />\n<polyline points=\"7 17 7 7 17 7\" />",
+};
+#[cfg(feature = "FiArrowUpRight")]
+const FI_ARROW_UP_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\" />\n<polyline points=\"7 7 17 7 17 17\" />",
+};
+#[cfg(feature = "FiAtSign")]
+const FI_AT_SIGN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<path d=\"M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94\" />",
+};
+#[cfg(feature = "FiAward")]
+const FI_AWARD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"8\" r=\"7\" />\n<polyline points=\"8.21 13.89 7 23 12 20 17 23 15.79 13.88\" />",
+};
+#[cfg(feature = "FiBarChart")]
+const FI_BAR_CHART: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"10\" />\n<line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"4\" />\n<line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"16\" />",
+};
+#[cfg(feature = "FiBarChart2")]
+const FI_BAR_CHART2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\" />\n<line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\" />\n<line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\" />",
+};
+#[cfg(feature = "FiBattery")]
+const FI_BATTERY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"1\" y=\"6\" width=\"18\" height=\"12\" rx=\"2\" ry=\"2\" />\n<line x1=\"23\" y1=\"13\" x2=\"23\" y2=\"11\" />",
+};
+#[cfg(feature = "FiBatteryCharging")]
+const FI_BATTERY_CHARGING: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19\" />\n<line x1=\"23\" y1=\"13\" x2=\"23\" y2=\"11\" />\n<polyline points=\"11 6 7 12 13 12 9 18\" />",
+};
+#[cfg(feature = "FiBell")]
+const FI_BELL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\" />\n<path d=\"M13.73 21a2 2 0 0 1-3.46 0\" />",
+};
+#[cfg(feature = "FiBellOff")]
+const FI_BELL_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M13.73 21a2 2 0 0 1-3.46 0\" />\n<path d=\"M18.63 13A17.89 17.89 0 0 1 18 8\" />\n<path d=\"M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14\" />\n<path d=\"M18 8a6 6 0 0 0-9.33-5\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
+};
+#[cfg(feature = "FiBluetooth")]
+const FI_BLUETOOTH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5\" />",
+};
+#[cfg(feature = "FiBold")]
+const FI_BOLD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z\" />\n<path d=\"M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z\" />",
+};
+#[cfg(feature = "FiBook")]
+const FI_BOOK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M4 19.5A2.5 2.5 0 0 1 6.5 17H20\" />\n<path d=\"M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z\" />",
+};
+#[cfg(feature = "FiBookOpen")]
+const FI_BOOK_OPEN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\" />\n<path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\" />",
+};
+#[cfg(feature = "FiBookmark")]
+const FI_BOOKMARK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\" />",
+};
+#[cfg(feature = "FiBox")]
+const FI_BOX: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n<polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n<line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />",
+};
+#[cfg(feature = "FiBriefcase")]
+const FI_BRIEFCASE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" />\n<path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\" />",
+};
+#[cfg(feature = "FiCalendar")]
+const FI_CALENDAR: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\" />\n<line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\" />\n<line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\" />",
+};
+#[cfg(feature = "FiCamera")]
+const FI_CAMERA: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\" />\n<circle cx=\"12\" cy=\"13\" r=\"4\" />",
+};
+#[cfg(feature = "FiCameraOff")]
+const FI_CAMERA_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />\n<path d=\"M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m3-3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56\" />",
+};
+#[cfg(feature = "FiCast")]
+const FI_CAST: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6\" />\n<line x1=\"2\" y1=\"20\" x2=\"2.01\" y2=\"20\" />",
+};
+#[cfg(feature = "FiCheck")]
+const FI_CHECK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"20 6 9 17 4 12\" />",
+};
+#[cfg(feature = "FiCheckCircle")]
+const FI_CHECK_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\" />\n<polyline points=\"22 4 12 14.01 9 11.01\" />",
+};
+#[cfg(feature = "FiCheckSquare")]
+const FI_CHECK_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"9 11 12 14 22 4\" />\n<path d=\"M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11\" />",
+};
+#[cfg(feature = "FiChevronDown")]
+const FI_CHEVRON_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"6 9 12 15 18 9\" />",
+};
+#[cfg(feature = "FiChevronLeft")]
+const FI_CHEVRON_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"15 18 9 12 15 6\" />",
+};
+#[cfg(feature = "FiChevronRight")]
+const FI_CHEVRON_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"9 18 15 12 9 6\" />",
+};
+#[cfg(feature = "FiChevronUp")]
+const FI_CHEVRON_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"18 15 12 9 6 15\" />",
+};
+#[cfg(feature = "FiChevronsDown")]
+const FI_CHEVRONS_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"7 13 12 18 17 13\" />\n<polyline points=\"7 6 12 11 17 6\" />",
+};
+#[cfg(feature = "FiChevronsLeft")]
+const FI_CHEVRONS_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"11 17 6 12 11 7\" />\n<polyline points=\"18 17 13 12 18 7\" />",
+};
+#[cfg(feature = "FiChevronsRight")]
+const FI_CHEVRONS_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"13 17 18 12 13 7\" />\n<polyline points=\"6 17 11 12 6 7\" />",
+};
+#[cfg(feature = "FiChevronsUp")]
+const FI_CHEVRONS_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"17 11 12 6 7 11\" />\n<polyline points=\"17 18 12 13 7 18\" />",
+};
+#[cfg(feature = "FiChrome")]
+const FI_CHROME: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<line x1=\"21.17\" y1=\"8\" x2=\"12\" y2=\"8\" />\n<line x1=\"3.95\" y1=\"6.06\" x2=\"8.54\" y2=\"14\" />\n<line x1=\"10.88\" y1=\"21.94\" x2=\"15.46\" y2=\"14\" />",
+};
+#[cfg(feature = "FiCircle")]
+const FI_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />",
+};
+#[cfg(feature = "FiClipboard")]
+const FI_CLIPBOARD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\" />\n<rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\" />",
+};
+#[cfg(feature = "FiClock")]
+const FI_CLOCK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"12 6 12 12 16 14\" />",
+};
+#[cfg(feature = "FiCloud")]
+const FI_CLOUD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z\" />",
+};
+#[cfg(feature = "FiCloudDrizzle")]
+const FI_CLOUD_DRIZZLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"8\" y1=\"19\" x2=\"8\" y2=\"21\" />\n<line x1=\"8\" y1=\"13\" x2=\"8\" y2=\"15\" />\n<line x1=\"16\" y1=\"19\" x2=\"16\" y2=\"21\" />\n<line x1=\"16\" y1=\"13\" x2=\"16\" y2=\"15\" />\n<line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" />\n<line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"17\" />\n<path d=\"M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25\" />",
+};
+#[cfg(feature = "FiCloudLightning")]
+const FI_CLOUD_LIGHTNING: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9\" />\n<polyline points=\"13 11 9 17 15 17 11 23\" />",
+};
+#[cfg(feature = "FiCloudOff")]
+const FI_CLOUD_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
+};
+#[cfg(feature = "FiCloudRain")]
+const FI_CLOUD_RAIN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"16\" y1=\"13\" x2=\"16\" y2=\"21\" />\n<line x1=\"8\" y1=\"13\" x2=\"8\" y2=\"21\" />\n<line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"23\" />\n<path d=\"M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25\" />",
+};
+#[cfg(feature = "FiCloudSnow")]
+const FI_CLOUD_SNOW: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25\" />\n<line x1=\"8\" y1=\"16\" x2=\"8.01\" y2=\"16\" />\n<line x1=\"8\" y1=\"20\" x2=\"8.01\" y2=\"20\" />\n<line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />\n<line x1=\"12\" y1=\"22\" x2=\"12.01\" y2=\"22\" />\n<line x1=\"16\" y1=\"16\" x2=\"16.01\" y2=\"16\" />\n<line x1=\"16\" y1=\"20\" x2=\"16.01\" y2=\"20\" />",
+};
+#[cfg(feature = "FiCode")]
+const FI_CODE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"16 18 22 12 16 6\" />\n<polyline points=\"8 6 2 12 8 18\" />",
+};
+#[cfg(feature = "FiCodepen")]
+const FI_CODEPEN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"15.5\" />\n<polyline points=\"22 8.5 12 15.5 2 8.5\" />\n<polyline points=\"2 15.5 12 8.5 22 15.5\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"8.5\" />",
+};
+#[cfg(feature = "FiCodesandbox")]
+const FI_CODESANDBOX: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n<polyline points=\"7.5 4.21 12 6.81 16.5 4.21\" />\n<polyline points=\"7.5 19.79 7.5 14.6 3 12\" />\n<polyline points=\"21 12 16.5 14.6 16.5 19.79\" />\n<polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n<line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />",
+};
+#[cfg(feature = "FiCoffee")]
+const FI_COFFEE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18 8h1a4 4 0 0 1 0 8h-1\" />\n<path d=\"M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z\" />\n<line x1=\"6\" y1=\"1\" x2=\"6\" y2=\"4\" />\n<line x1=\"10\" y1=\"1\" x2=\"10\" y2=\"4\" />\n<line x1=\"14\" y1=\"1\" x2=\"14\" y2=\"4\" />",
+};
+#[cfg(feature = "FiColumns")]
+const FI_COLUMNS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18\" />",
+};
+#[cfg(feature = "FiCommand")]
+const FI_COMMAND: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z\" />",
+};
+#[cfg(feature = "FiCompass")]
+const FI_COMPASS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polygon points=\"16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76\" />",
+};
+#[cfg(feature = "FiCopy")]
+const FI_COPY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\" />\n<path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\" />",
+};
+#[cfg(feature = "FiCornerDownLeft")]
+const FI_CORNER_DOWN_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"9 10 4 15 9 20\" />\n<path d=\"M20 4v7a4 4 0 0 1-4 4H4\" />",
+};
+#[cfg(feature = "FiCornerDownRight")]
+const FI_CORNER_DOWN_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"15 10 20 15 15 20\" />\n<path d=\"M4 4v7a4 4 0 0 0 4 4h12\" />",
+};
+#[cfg(feature = "FiCornerLeftDown")]
+const FI_CORNER_LEFT_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"14 15 9 20 4 15\" />\n<path d=\"M20 4h-7a4 4 0 0 0-4 4v12\" />",
+};
+#[cfg(feature = "FiCornerLeftUp")]
+const FI_CORNER_LEFT_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"14 9 9 4 4 9\" />\n<path d=\"M20 20h-7a4 4 0 0 1-4-4V4\" />",
+};
+#[cfg(feature = "FiCornerRightDown")]
+const FI_CORNER_RIGHT_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"10 15 15 20 20 15\" />\n<path d=\"M4 4h7a4 4 0 0 1 4 4v12\" />",
+};
+#[cfg(feature = "FiCornerRightUp")]
+const FI_CORNER_RIGHT_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"10 9 15 4 20 9\" />\n<path d=\"M4 20h7a4 4 0 0 0 4-4V4\" />",
+};
+#[cfg(feature = "FiCornerUpLeft")]
+const FI_CORNER_UP_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"9 14 4 9 9 4\" />\n<path d=\"M20 20v-7a4 4 0 0 0-4-4H4\" />",
+};
+#[cfg(feature = "FiCornerUpRight")]
+const FI_CORNER_UP_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"15 14 20 9 15 4\" />\n<path d=\"M4 20v-7a4 4 0 0 1 4-4h12\" />",
+};
+#[cfg(feature = "FiCpu")]
+const FI_CPU: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" ry=\"2\" />\n<rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" />\n<line x1=\"9\" y1=\"1\" x2=\"9\" y2=\"4\" />\n<line x1=\"15\" y1=\"1\" x2=\"15\" y2=\"4\" />\n<line x1=\"9\" y1=\"20\" x2=\"9\" y2=\"23\" />\n<line x1=\"15\" y1=\"20\" x2=\"15\" y2=\"23\" />\n<line x1=\"20\" y1=\"9\" x2=\"23\" y2=\"9\" />\n<line x1=\"20\" y1=\"14\" x2=\"23\" y2=\"14\" />\n<line x1=\"1\" y1=\"9\" x2=\"4\" y2=\"9\" />\n<line x1=\"1\" y1=\"14\" x2=\"4\" y2=\"14\" />",
+};
+#[cfg(feature = "FiCreditCard")]
+const FI_CREDIT_CARD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\" />\n<line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\" />",
+};
+#[cfg(feature = "FiCrop")]
+const FI_CROP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M6.13 1L6 16a2 2 0 0 0 2 2h15\" />\n<path d=\"M1 6.13L16 6a2 2 0 0 1 2 2v15\" />",
+};
+#[cfg(feature = "FiCrosshair")]
+const FI_CROSSHAIR: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"22\" y1=\"12\" x2=\"18\" y2=\"12\" />\n<line x1=\"6\" y1=\"12\" x2=\"2\" y2=\"12\" />\n<line x1=\"12\" y1=\"6\" x2=\"12\" y2=\"2\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"18\" />",
+};
+#[cfg(feature = "FiDatabase")]
+const FI_DATABASE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n<path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\" />\n<path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\" />",
+};
+#[cfg(feature = "FiDelete")]
+const FI_DELETE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z\" />\n<line x1=\"18\" y1=\"9\" x2=\"12\" y2=\"15\" />\n<line x1=\"12\" y1=\"9\" x2=\"18\" y2=\"15\" />",
+};
+#[cfg(feature = "FiDisc")]
+const FI_DISC: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"3\" />",
+};
+#[cfg(feature = "FiDivide")]
+const FI_DIVIDE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"6\" r=\"2\" />\n<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />\n<circle cx=\"12\" cy=\"18\" r=\"2\" />",
+};
+#[cfg(feature = "FiDivideCircle")]
+const FI_DIVIDE_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"16\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\" />\n<circle cx=\"12\" cy=\"12\" r=\"10\" />",
+};
+#[cfg(feature = "FiDivideSquare")]
+const FI_DIVIDE_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"16\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\" />",
+};
+#[cfg(feature = "FiDollarSign")]
+const FI_DOLLAR_SIGN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\" />\n<path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\" />",
+};
+#[cfg(feature = "FiDownload")]
+const FI_DOWNLOAD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n<polyline points=\"7 10 12 15 17 10\" />\n<line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\" />",
+};
+#[cfg(feature = "FiDownloadCloud")]
+const FI_DOWNLOAD_CLOUD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"8 17 12 21 16 17\" />\n<line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\" />\n<path d=\"M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29\" />",
+};
+#[cfg(feature = "FiDribbble")]
+const FI_DRIBBBLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32\" />",
+};
+#[cfg(feature = "FiDroplet")]
+const FI_DROPLET: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z\" />",
+};
+#[cfg(feature = "FiEdit")]
+const FI_EDIT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7\" />\n<path d=\"M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z\" />",
+};
+#[cfg(feature = "FiEdit2")]
+const FI_EDIT2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z\" />",
+};
+#[cfg(feature = "FiEdit3")]
+const FI_EDIT3: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M12 20h9\" />\n<path d=\"M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z\" />",
+};
+#[cfg(feature = "FiExternalLink")]
+const FI_EXTERNAL_LINK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\" />\n<polyline points=\"15 3 21 3 21 9\" />\n<line x1=\"10\" y1=\"14\" x2=\"21\" y2=\"3\" />",
+};
+#[cfg(feature = "FiEye")]
+const FI_EYE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\" />\n<circle cx=\"12\" cy=\"12\" r=\"3\" />",
+};
+#[cfg(feature = "FiEyeOff")]
+const FI_EYE_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
+};
+#[cfg(feature = "FiFacebook")]
+const FI_FACEBOOK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z\" />",
+};
+#[cfg(feature = "FiFastForward")]
+const FI_FAST_FORWARD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"13 19 22 12 13 5 13 19\" />\n<polygon points=\"2 19 11 12 2 5 2 19\" />",
+};
+#[cfg(feature = "FiFeather")]
+const FI_FEATHER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z\" />\n<line x1=\"16\" y1=\"8\" x2=\"2\" y2=\"22\" />\n<line x1=\"17.5\" y1=\"15\" x2=\"9\" y2=\"15\" />",
+};
+#[cfg(feature = "FiFigma")]
+const FI_FIGMA: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z\" />\n<path d=\"M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z\" />\n<path d=\"M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z\" />\n<path d=\"M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z\" />\n<path d=\"M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z\" />",
+};
+#[cfg(feature = "FiFile")]
+const FI_FILE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\" />\n<polyline points=\"13 2 13 9 20 9\" />",
+};
+#[cfg(feature = "FiFileMinus")]
+const FI_FILE_MINUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" />\n<polyline points=\"14 2 14 8 20 8\" />\n<line x1=\"9\" y1=\"15\" x2=\"15\" y2=\"15\" />",
+};
+#[cfg(feature = "FiFilePlus")]
+const FI_FILE_PLUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" />\n<polyline points=\"14 2 14 8 20 8\" />\n<line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"12\" />\n<line x1=\"9\" y1=\"15\" x2=\"15\" y2=\"15\" />",
+};
+#[cfg(feature = "FiFileText")]
+const FI_FILE_TEXT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" />\n<polyline points=\"14 2 14 8 20 8\" />\n<line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\" />\n<line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\" />\n<polyline points=\"10 9 9 9 8 9\" />",
+};
+#[cfg(feature = "FiFilm")]
+const FI_FILM: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2.18\" ry=\"2.18\" />\n<line x1=\"7\" y1=\"2\" x2=\"7\" y2=\"22\" />\n<line x1=\"17\" y1=\"2\" x2=\"17\" y2=\"22\" />\n<line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<line x1=\"2\" y1=\"7\" x2=\"7\" y2=\"7\" />\n<line x1=\"2\" y1=\"17\" x2=\"7\" y2=\"17\" />\n<line x1=\"17\" y1=\"17\" x2=\"22\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"22\" y2=\"7\" />",
+};
+#[cfg(feature = "FiFilter")]
+const FI_FILTER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\" />",
+};
+#[cfg(feature = "FiFlag")]
+const FI_FLAG: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\" />\n<line x1=\"4\" y1=\"22\" x2=\"4\" y2=\"15\" />",
+};
+#[cfg(feature = "FiFolder")]
+const FI_FOLDER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />",
+};
+#[cfg(feature = "FiFolderMinus")]
+const FI_FOLDER_MINUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />\n<line x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\" />",
+};
+#[cfg(feature = "FiFolderPlus")]
+const FI_FOLDER_PLUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />\n<line x1=\"12\" y1=\"11\" x2=\"12\" y2=\"17\" />\n<line x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\" />",
+};
+#[cfg(feature = "FiFramer")]
+const FI_FRAMER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M5 16V9h14V2H5l14 14h-7m-7 0l7 7v-7m-7 0h7\" />",
+};
+#[cfg(feature = "FiFrown")]
+const FI_FROWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M16 16s-1.5-2-4-2-4 2-4 2\" />\n<line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" />\n<line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />",
+};
+#[cfg(feature = "FiGift")]
+const FI_GIFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"20 12 20 22 4 22 4 12\" />\n<rect x=\"2\" y=\"7\" width=\"20\" height=\"5\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"7\" />\n<path d=\"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z\" />\n<path d=\"M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z\" />",
+};
+#[cfg(feature = "FiGitBranch")]
+const FI_GIT_BRANCH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"6\" y1=\"3\" x2=\"6\" y2=\"15\" />\n<circle cx=\"18\" cy=\"6\" r=\"3\" />\n<circle cx=\"6\" cy=\"18\" r=\"3\" />\n<path d=\"M18 9a9 9 0 0 1-9 9\" />",
+};
+#[cfg(feature = "FiGitCommit")]
+const FI_GIT_COMMIT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<line x1=\"1.05\" y1=\"12\" x2=\"7\" y2=\"12\" />\n<line x1=\"17.01\" y1=\"12\" x2=\"22.96\" y2=\"12\" />",
+};
+#[cfg(feature = "FiGitMerge")]
+const FI_GIT_MERGE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"18\" cy=\"18\" r=\"3\" />\n<circle cx=\"6\" cy=\"6\" r=\"3\" />\n<path d=\"M6 21V9a9 9 0 0 0 9 9\" />",
+};
+#[cfg(feature = "FiGitPullRequest")]
+const FI_GIT_PULL_REQUEST: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"18\" cy=\"18\" r=\"3\" />\n<circle cx=\"6\" cy=\"6\" r=\"3\" />\n<path d=\"M13 6h3a2 2 0 0 1 2 2v7\" />\n<line x1=\"6\" y1=\"9\" x2=\"6\" y2=\"21\" />",
+};
+#[cfg(feature = "FiGithub")]
+const FI_GITHUB: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\" />",
+};
+#[cfg(feature = "FiGitlab")]
+const FI_GITLAB: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z\" />",
+};
+#[cfg(feature = "FiGlobe")]
+const FI_GLOBE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\" />",
+};
+#[cfg(feature = "FiGrid")]
+const FI_GRID: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" />\n<rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" />\n<rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" />\n<rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" />",
+};
+#[cfg(feature = "FiHardDrive")]
+const FI_HARD_DRIVE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"22\" y1=\"12\" x2=\"2\" y2=\"12\" />\n<path d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />\n<line x1=\"6\" y1=\"16\" x2=\"6.01\" y2=\"16\" />\n<line x1=\"10\" y1=\"16\" x2=\"10.01\" y2=\"16\" />",
+};
+#[cfg(feature = "FiHash")]
+const FI_HASH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\" />\n<line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\" />\n<line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\" />\n<line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\" />",
+};
+#[cfg(feature = "FiHeadphones")]
+const FI_HEADPHONES: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M3 18v-6a9 9 0 0 1 18 0v6\" />\n<path d=\"M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z\" />",
+};
+#[cfg(feature = "FiHeart")]
+const FI_HEART: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\" />",
+};
+#[cfg(feature = "FiHelpCircle")]
+const FI_HELP_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\" />\n<line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />",
+};
+#[cfg(feature = "FiHexagon")]
+const FI_HEXAGON: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />",
+};
+#[cfg(feature = "FiHome")]
+const FI_HOME: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\" />\n<polyline points=\"9 22 9 12 15 12 15 22\" />",
+};
+#[cfg(feature = "FiImage")]
+const FI_IMAGE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\" />\n<polyline points=\"21 15 16 10 5 21\" />",
+};
+#[cfg(feature = "FiInbox")]
+const FI_INBOX: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"22 12 16 12 14 15 10 15 8 12 2 12\" />\n<path d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />",
+};
+#[cfg(feature = "FiInfo")]
+const FI_INFO: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"8\" x2=\"12.01\" y2=\"8\" />",
+};
+#[cfg(feature = "FiInstagram")]
+const FI_INSTAGRAM: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\" />\n<path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\" />\n<line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\" />",
+};
+#[cfg(feature = "FiItalic")]
+const FI_ITALIC: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"19\" y1=\"4\" x2=\"10\" y2=\"4\" />\n<line x1=\"14\" y1=\"20\" x2=\"5\" y2=\"20\" />\n<line x1=\"15\" y1=\"4\" x2=\"9\" y2=\"20\" />",
+};
+#[cfg(feature = "FiKey")]
+const FI_KEY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4\" />",
+};
+#[cfg(feature = "FiLayers")]
+const FI_LAYERS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"12 2 2 7 12 12 22 7 12 2\" />\n<polyline points=\"2 17 12 22 22 17\" />\n<polyline points=\"2 12 12 17 22 12\" />",
+};
+#[cfg(feature = "FiLayout")]
+const FI_LAYOUT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" />\n<line x1=\"9\" y1=\"21\" x2=\"9\" y2=\"9\" />",
+};
+#[cfg(feature = "FiLifeBuoy")]
+const FI_LIFE_BUOY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<line x1=\"4.93\" y1=\"4.93\" x2=\"9.17\" y2=\"9.17\" />\n<line x1=\"14.83\" y1=\"14.83\" x2=\"19.07\" y2=\"19.07\" />\n<line x1=\"14.83\" y1=\"9.17\" x2=\"19.07\" y2=\"4.93\" />\n<line x1=\"14.83\" y1=\"9.17\" x2=\"18.36\" y2=\"5.64\" />\n<line x1=\"4.93\" y1=\"19.07\" x2=\"9.17\" y2=\"14.83\" />",
+};
+#[cfg(feature = "FiLink")]
+const FI_LINK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" />\n<path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" />",
+};
+#[cfg(feature = "FiLink2")]
+const FI_LINK2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
+};
+#[cfg(feature = "FiLinkedin")]
+const FI_LINKEDIN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\" />\n<rect x=\"2\" y=\"9\" width=\"4\" height=\"12\" />\n<circle cx=\"4\" cy=\"4\" r=\"2\" />",
+};
+#[cfg(feature = "FiList")]
+const FI_LIST: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"8\" y1=\"6\" x2=\"21\" y2=\"6\" />\n<line x1=\"8\" y1=\"12\" x2=\"21\" y2=\"12\" />\n<line x1=\"8\" y1=\"18\" x2=\"21\" y2=\"18\" />\n<line x1=\"3\" y1=\"6\" x2=\"3.01\" y2=\"6\" />\n<line x1=\"3\" y1=\"12\" x2=\"3.01\" y2=\"12\" />\n<line x1=\"3\" y1=\"18\" x2=\"3.01\" y2=\"18\" />",
+};
+#[cfg(feature = "FiLoader")]
+const FI_LOADER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"6\" />\n<line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"22\" />\n<line x1=\"4.93\" y1=\"4.93\" x2=\"7.76\" y2=\"7.76\" />\n<line x1=\"16.24\" y1=\"16.24\" x2=\"19.07\" y2=\"19.07\" />\n<line x1=\"2\" y1=\"12\" x2=\"6\" y2=\"12\" />\n<line x1=\"18\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<line x1=\"4.93\" y1=\"19.07\" x2=\"7.76\" y2=\"16.24\" />\n<line x1=\"16.24\" y1=\"7.76\" x2=\"19.07\" y2=\"4.93\" />",
+};
+#[cfg(feature = "FiLock")]
+const FI_LOCK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" />\n<path d=\"M7 11V7a5 5 0 0 1 10 0v4\" />",
+};
+#[cfg(feature = "FiLogIn")]
+const FI_LOG_IN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4\" />\n<polyline points=\"10 17 15 12 10 7\" />\n<line x1=\"15\" y1=\"12\" x2=\"3\" y2=\"12\" />",
+};
+#[cfg(feature = "FiLogOut")]
+const FI_LOG_OUT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\" />\n<polyline points=\"16 17 21 12 16 7\" />\n<line x1=\"21\" y1=\"12\" x2=\"9\" y2=\"12\" />",
+};
+#[cfg(feature = "FiMail")]
+const FI_MAIL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\" />\n<polyline points=\"22,6 12,13 2,6\" />",
+};
+#[cfg(feature = "FiMap")]
+const FI_MAP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6\" />\n<line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"18\" />\n<line x1=\"16\" y1=\"6\" x2=\"16\" y2=\"22\" />",
+};
+#[cfg(feature = "FiMapPin")]
+const FI_MAP_PIN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\" />\n<circle cx=\"12\" cy=\"10\" r=\"3\" />",
+};
+#[cfg(feature = "FiMaximize")]
+const FI_MAXIMIZE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3\" />",
+};
+#[cfg(feature = "FiMaximize2")]
+const FI_MAXIMIZE2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"15 3 21 3 21 9\" />\n<polyline points=\"9 21 3 21 3 15\" />\n<line x1=\"21\" y1=\"3\" x2=\"14\" y2=\"10\" />\n<line x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\" />",
+};
+#[cfg(feature = "FiMeh")]
+const FI_MEH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"8\" y1=\"15\" x2=\"16\" y2=\"15\" />\n<line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" />\n<line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />",
+};
+#[cfg(feature = "FiMenu")]
+const FI_MENU: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" />\n<line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" />\n<line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\" />",
+};
+#[cfg(feature = "FiMessageCircle")]
+const FI_MESSAGE_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\" />",
+};
+#[cfg(feature = "FiMessageSquare")]
+const FI_MESSAGE_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\" />",
+};
+#[cfg(feature = "FiMic")]
+const FI_MIC: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z\" />\n<path d=\"M19 10v2a7 7 0 0 1-14 0v-2\" />\n<line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" />\n<line x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />",
+};
+#[cfg(feature = "FiMicOff")]
+const FI_MIC_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />\n<path d=\"M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6\" />\n<path d=\"M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23\" />\n<line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" />\n<line x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />",
+};
+#[cfg(feature = "FiMinimize")]
+const FI_MINIMIZE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3\" />",
+};
+#[cfg(feature = "FiMinimize2")]
+const FI_MINIMIZE2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"4 14 10 14 10 20\" />\n<polyline points=\"20 10 14 10 14 4\" />\n<line x1=\"14\" y1=\"10\" x2=\"21\" y2=\"3\" />\n<line x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\" />",
+};
+#[cfg(feature = "FiMinus")]
+const FI_MINUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />",
+};
+#[cfg(feature = "FiMinusCircle")]
+const FI_MINUS_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
+};
+#[cfg(feature = "FiMinusSquare")]
+const FI_MINUS_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
+};
+#[cfg(feature = "FiMonitor")]
+const FI_MONITOR: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" />\n<line x1=\"8\" y1=\"21\" x2=\"16\" y2=\"21\" />\n<line x1=\"12\" y1=\"17\" x2=\"12\" y2=\"21\" />",
+};
+#[cfg(feature = "FiMoon")]
+const FI_MOON: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\" />",
+};
+#[cfg(feature = "FiMoreHorizontal")]
+const FI_MORE_HORIZONTAL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"1\" />\n<circle cx=\"19\" cy=\"12\" r=\"1\" />\n<circle cx=\"5\" cy=\"12\" r=\"1\" />",
+};
+#[cfg(feature = "FiMoreVertical")]
+const FI_MORE_VERTICAL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"1\" />\n<circle cx=\"12\" cy=\"5\" r=\"1\" />\n<circle cx=\"12\" cy=\"19\" r=\"1\" />",
+};
+#[cfg(feature = "FiMousePointer")]
+const FI_MOUSE_POINTER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z\" />\n<path d=\"M13 13l6 6\" />",
+};
+#[cfg(feature = "FiMove")]
+const FI_MOVE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"5 9 2 12 5 15\" />\n<polyline points=\"9 5 12 2 15 5\" />\n<polyline points=\"15 19 12 22 9 19\" />\n<polyline points=\"19 9 22 12 19 15\" />\n<line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"22\" />",
+};
+#[cfg(feature = "FiMusic")]
+const FI_MUSIC: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M9 18V5l12-2v13\" />\n<circle cx=\"6\" cy=\"18\" r=\"3\" />\n<circle cx=\"18\" cy=\"16\" r=\"3\" />",
+};
+#[cfg(feature = "FiNavigation")]
+const FI_NAVIGATION: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"3 11 22 2 13 21 11 13 3 11\" />",
+};
+#[cfg(feature = "FiNavigation2")]
+const FI_NAVIGATION2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"12 2 19 21 12 17 5 21 12 2\" />",
+};
+#[cfg(feature = "FiOctagon")]
+const FI_OCTAGON: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />",
+};
+#[cfg(feature = "FiPackage")]
+const FI_PACKAGE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"16.5\" y1=\"9.4\" x2=\"7.5\" y2=\"4.21\" />\n<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n<polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n<line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />",
+};
+#[cfg(feature = "FiPaperclip")]
+const FI_PAPERCLIP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\" />",
+};
+#[cfg(feature = "FiPause")]
+const FI_PAUSE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"6\" y=\"4\" width=\"4\" height=\"16\" />\n<rect x=\"14\" y=\"4\" width=\"4\" height=\"16\" />",
+};
+#[cfg(feature = "FiPauseCircle")]
+const FI_PAUSE_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"10\" y1=\"15\" x2=\"10\" y2=\"9\" />\n<line x1=\"14\" y1=\"15\" x2=\"14\" y2=\"9\" />",
+};
+#[cfg(feature = "FiPenTool")]
+const FI_PEN_TOOL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M12 19l7-7 3 3-7 7-3-3z\" />\n<path d=\"M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\" />\n<path d=\"M2 2l7.586 7.586\" />\n<circle cx=\"11\" cy=\"11\" r=\"2\" />",
+};
+#[cfg(feature = "FiPercent")]
+const FI_PERCENT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\" />\n<circle cx=\"6.5\" cy=\"6.5\" r=\"2.5\" />\n<circle cx=\"17.5\" cy=\"17.5\" r=\"2.5\" />",
+};
+#[cfg(feature = "FiPhone")]
+const FI_PHONE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
+};
+#[cfg(feature = "FiPhoneCall")]
+const FI_PHONE_CALL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
+};
+#[cfg(feature = "FiPhoneForwarded")]
+const FI_PHONE_FORWARDED: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"19 1 23 5 19 9\" />\n<line x1=\"15\" y1=\"5\" x2=\"23\" y2=\"5\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
+};
+#[cfg(feature = "FiPhoneIncoming")]
+const FI_PHONE_INCOMING: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"16 2 16 8 22 8\" />\n<line x1=\"23\" y1=\"1\" x2=\"16\" y2=\"8\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
+};
+#[cfg(feature = "FiPhoneMissed")]
+const FI_PHONE_MISSED: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"23\" y1=\"1\" x2=\"17\" y2=\"7\" />\n<line x1=\"17\" y1=\"1\" x2=\"23\" y2=\"7\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
+};
+#[cfg(feature = "FiPhoneOff")]
+const FI_PHONE_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91\" />\n<line x1=\"23\" y1=\"1\" x2=\"1\" y2=\"23\" />",
+};
+#[cfg(feature = "FiPhoneOutgoing")]
+const FI_PHONE_OUTGOING: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"23 7 23 1 17 1\" />\n<line x1=\"16\" y1=\"8\" x2=\"23\" y2=\"1\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
+};
+#[cfg(feature = "FiPieChart")]
+const FI_PIE_CHART: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\" />\n<path d=\"M22 12A10 10 0 0 0 12 2v10z\" />",
+};
+#[cfg(feature = "FiPlay")]
+const FI_PLAY: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"5 3 19 12 5 21 5 3\" />",
+};
+#[cfg(feature = "FiPlayCircle")]
+const FI_PLAY_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polygon points=\"10 8 16 12 10 16 10 8\" />",
+};
+#[cfg(feature = "FiPlus")]
+const FI_PLUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\" />\n<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />",
+};
+#[cfg(feature = "FiPlusCircle")]
+const FI_PLUS_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
+};
+#[cfg(feature = "FiPlusSquare")]
+const FI_PLUS_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
+};
+#[cfg(feature = "FiPocket")]
+const FI_POCKET: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z\" />\n<polyline points=\"8 10 12 14 16 10\" />",
+};
+#[cfg(feature = "FiPower")]
+const FI_POWER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M18.36 6.64a9 9 0 1 1-12.73 0\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"12\" />",
+};
+#[cfg(feature = "FiPrinter")]
+const FI_PRINTER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"6 9 6 2 18 2 18 9\" />\n<path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\" />\n<rect x=\"6\" y=\"14\" width=\"12\" height=\"8\" />",
+};
+#[cfg(feature = "FiRadio")]
+const FI_RADIO: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"2\" />\n<path d=\"M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14\" />",
+};
+#[cfg(feature = "FiRefreshCcw")]
+const FI_REFRESH_CCW: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"1 4 1 10 7 10\" />\n<polyline points=\"23 20 23 14 17 14\" />\n<path d=\"M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15\" />",
+};
+#[cfg(feature = "FiRefreshCw")]
+const FI_REFRESH_CW: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"23 4 23 10 17 10\" />\n<polyline points=\"1 20 1 14 7 14\" />\n<path d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\" />",
+};
+#[cfg(feature = "FiRepeat")]
+const FI_REPEAT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"17 1 21 5 17 9\" />\n<path d=\"M3 11V9a4 4 0 0 1 4-4h14\" />\n<polyline points=\"7 23 3 19 7 15\" />\n<path d=\"M21 13v2a4 4 0 0 1-4 4H3\" />",
+};
+#[cfg(feature = "FiRewind")]
+const FI_REWIND: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"11 19 2 12 11 5 11 19\" />\n<polygon points=\"22 19 13 12 22 5 22 19\" />",
+};
+#[cfg(feature = "FiRotateCcw")]
+const FI_ROTATE_CCW: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"1 4 1 10 7 10\" />\n<path d=\"M3.51 15a9 9 0 1 0 2.13-9.36L1 10\" />",
+};
+#[cfg(feature = "FiRotateCw")]
+const FI_ROTATE_CW: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"23 4 23 10 17 10\" />\n<path d=\"M20.49 15a9 9 0 1 1-2.12-9.36L23 10\" />",
+};
+#[cfg(feature = "FiRss")]
+const FI_RSS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M4 11a9 9 0 0 1 9 9\" />\n<path d=\"M4 4a16 16 0 0 1 16 16\" />\n<circle cx=\"5\" cy=\"19\" r=\"1\" />",
+};
+#[cfg(feature = "FiSave")]
+const FI_SAVE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\" />\n<polyline points=\"17 21 17 13 7 13 7 21\" />\n<polyline points=\"7 3 7 8 15 8\" />",
+};
+#[cfg(feature = "FiScissors")]
+const FI_SCISSORS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"6\" cy=\"6\" r=\"3\" />\n<circle cx=\"6\" cy=\"18\" r=\"3\" />\n<line x1=\"20\" y1=\"4\" x2=\"8.12\" y2=\"15.88\" />\n<line x1=\"14.47\" y1=\"14.48\" x2=\"20\" y2=\"20\" />\n<line x1=\"8.12\" y1=\"8.12\" x2=\"12\" y2=\"12\" />",
+};
+#[cfg(feature = "FiSearch")]
+const FI_SEARCH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"11\" cy=\"11\" r=\"8\" />\n<line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />",
+};
+#[cfg(feature = "FiSend")]
+const FI_SEND: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\" />\n<polygon points=\"22 2 15 22 11 13 2 9 22 2\" />",
+};
+#[cfg(feature = "FiServer")]
+const FI_SERVER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"2\" y=\"2\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" />\n<rect x=\"2\" y=\"14\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" />\n<line x1=\"6\" y1=\"6\" x2=\"6.01\" y2=\"6\" />\n<line x1=\"6\" y1=\"18\" x2=\"6.01\" y2=\"18\" />",
+};
+#[cfg(feature = "FiSettings")]
+const FI_SETTINGS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"3\" />\n<path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z\" />",
+};
+#[cfg(feature = "FiShare")]
+const FI_SHARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\" />\n<polyline points=\"16 6 12 2 8 6\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"15\" />",
+};
+#[cfg(feature = "FiShare2")]
+const FI_SHARE2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"18\" cy=\"5\" r=\"3\" />\n<circle cx=\"6\" cy=\"12\" r=\"3\" />\n<circle cx=\"18\" cy=\"19\" r=\"3\" />\n<line x1=\"8.59\" y1=\"13.51\" x2=\"15.42\" y2=\"17.49\" />\n<line x1=\"15.41\" y1=\"6.51\" x2=\"8.59\" y2=\"10.49\" />",
+};
+#[cfg(feature = "FiShield")]
+const FI_SHIELD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" />",
+};
+#[cfg(feature = "FiShieldOff")]
+const FI_SHIELD_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18\" />\n<path d=\"M4.73 4.73L4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
+};
+#[cfg(feature = "FiShoppingBag")]
+const FI_SHOPPING_BAG: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\" />\n<line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" />\n<path d=\"M16 10a4 4 0 0 1-8 0\" />",
+};
+#[cfg(feature = "FiShoppingCart")]
+const FI_SHOPPING_CART: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"9\" cy=\"21\" r=\"1\" />\n<circle cx=\"20\" cy=\"21\" r=\"1\" />\n<path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\" />",
+};
+#[cfg(feature = "FiShuffle")]
+const FI_SHUFFLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"16 3 21 3 21 8\" />\n<line x1=\"4\" y1=\"20\" x2=\"21\" y2=\"3\" />\n<polyline points=\"21 16 21 21 16 21\" />\n<line x1=\"15\" y1=\"15\" x2=\"21\" y2=\"21\" />\n<line x1=\"4\" y1=\"4\" x2=\"9\" y2=\"9\" />",
+};
+#[cfg(feature = "FiSidebar")]
+const FI_SIDEBAR: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" />",
+};
+#[cfg(feature = "FiSkipBack")]
+const FI_SKIP_BACK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"19 20 9 12 19 4 19 20\" />\n<line x1=\"5\" y1=\"19\" x2=\"5\" y2=\"5\" />",
+};
+#[cfg(feature = "FiSkipForward")]
+const FI_SKIP_FORWARD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"5 4 15 12 5 20 5 4\" />\n<line x1=\"19\" y1=\"5\" x2=\"19\" y2=\"19\" />",
+};
+#[cfg(feature = "FiSlack")]
+const FI_SLACK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z\" />\n<path d=\"M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z\" />\n<path d=\"M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z\" />\n<path d=\"M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z\" />\n<path d=\"M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z\" />\n<path d=\"M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z\" />\n<path d=\"M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z\" />\n<path d=\"M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z\" />",
+};
+#[cfg(feature = "FiSlash")]
+const FI_SLASH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"4.93\" y1=\"4.93\" x2=\"19.07\" y2=\"19.07\" />",
+};
+#[cfg(feature = "FiSliders")]
+const FI_SLIDERS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"4\" y1=\"21\" x2=\"4\" y2=\"14\" />\n<line x1=\"4\" y1=\"10\" x2=\"4\" y2=\"3\" />\n<line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"3\" />\n<line x1=\"20\" y1=\"21\" x2=\"20\" y2=\"16\" />\n<line x1=\"20\" y1=\"12\" x2=\"20\" y2=\"3\" />\n<line x1=\"1\" y1=\"14\" x2=\"7\" y2=\"14\" />\n<line x1=\"9\" y1=\"8\" x2=\"15\" y2=\"8\" />\n<line x1=\"17\" y1=\"16\" x2=\"23\" y2=\"16\" />",
+};
+#[cfg(feature = "FiSmartphone")]
+const FI_SMARTPHONE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"2\" ry=\"2\" />\n<line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />",
+};
+#[cfg(feature = "FiSmile")]
+const FI_SMILE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M8 14s1.5 2 4 2 4-2 4-2\" />\n<line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" />\n<line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />",
+};
+#[cfg(feature = "FiSpeaker")]
+const FI_SPEAKER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" ry=\"2\" />\n<circle cx=\"12\" cy=\"14\" r=\"4\" />\n<line x1=\"12\" y1=\"6\" x2=\"12.01\" y2=\"6\" />",
+};
+#[cfg(feature = "FiSquare")]
+const FI_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />",
+};
+#[cfg(feature = "FiStar")]
+const FI_STAR: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\" />",
+};
+#[cfg(feature = "FiStopCircle")]
+const FI_STOP_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" />",
+};
+#[cfg(feature = "FiSun")]
+const FI_SUN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"5\" />\n<line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\" />\n<line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" />\n<line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\" />\n<line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\" />\n<line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\" />\n<line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\" />\n<line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\" />\n<line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\" />",
+};
+#[cfg(feature = "FiSunrise")]
+const FI_SUNRISE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M17 18a5 5 0 0 0-10 0\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"9\" />\n<line x1=\"4.22\" y1=\"10.22\" x2=\"5.64\" y2=\"11.64\" />\n<line x1=\"1\" y1=\"18\" x2=\"3\" y2=\"18\" />\n<line x1=\"21\" y1=\"18\" x2=\"23\" y2=\"18\" />\n<line x1=\"18.36\" y1=\"11.64\" x2=\"19.78\" y2=\"10.22\" />\n<line x1=\"23\" y1=\"22\" x2=\"1\" y2=\"22\" />\n<polyline points=\"8 6 12 2 16 6\" />",
+};
+#[cfg(feature = "FiSunset")]
+const FI_SUNSET: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M17 18a5 5 0 0 0-10 0\" />\n<line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"2\" />\n<line x1=\"4.22\" y1=\"10.22\" x2=\"5.64\" y2=\"11.64\" />\n<line x1=\"1\" y1=\"18\" x2=\"3\" y2=\"18\" />\n<line x1=\"21\" y1=\"18\" x2=\"23\" y2=\"18\" />\n<line x1=\"18.36\" y1=\"11.64\" x2=\"19.78\" y2=\"10.22\" />\n<line x1=\"23\" y1=\"22\" x2=\"1\" y2=\"22\" />\n<polyline points=\"16 5 12 9 8 5\" />",
+};
+#[cfg(feature = "FiTable")]
+const FI_TABLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18\" />",
+};
+#[cfg(feature = "FiTablet")]
+const FI_TABLET: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" ry=\"2\" />\n<line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />",
+};
+#[cfg(feature = "FiTag")]
+const FI_TAG: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z\" />\n<line x1=\"7\" y1=\"7\" x2=\"7.01\" y2=\"7\" />",
+};
+#[cfg(feature = "FiTarget")]
+const FI_TARGET: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"6\" />\n<circle cx=\"12\" cy=\"12\" r=\"2\" />",
+};
+#[cfg(feature = "FiTerminal")]
+const FI_TERMINAL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"4 17 10 11 4 5\" />\n<line x1=\"12\" y1=\"19\" x2=\"20\" y2=\"19\" />",
+};
+#[cfg(feature = "FiThermometer")]
+const FI_THERMOMETER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z\" />",
+};
+#[cfg(feature = "FiThumbsDown")]
+const FI_THUMBS_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17\" />",
+};
+#[cfg(feature = "FiThumbsUp")]
+const FI_THUMBS_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3\" />",
+};
+#[cfg(feature = "FiToggleLeft")]
+const FI_TOGGLE_LEFT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"1\" y=\"5\" width=\"22\" height=\"14\" rx=\"7\" ry=\"7\" />\n<circle cx=\"8\" cy=\"12\" r=\"3\" />",
+};
+#[cfg(feature = "FiToggleRight")]
+const FI_TOGGLE_RIGHT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"1\" y=\"5\" width=\"22\" height=\"14\" rx=\"7\" ry=\"7\" />\n<circle cx=\"16\" cy=\"12\" r=\"3\" />",
+};
+#[cfg(feature = "FiTool")]
+const FI_TOOL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\" />",
+};
+#[cfg(feature = "FiTrash")]
+const FI_TRASH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"3 6 5 6 21 6\" />\n<path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" />",
+};
+#[cfg(feature = "FiTrash2")]
+const FI_TRASH2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"3 6 5 6 21 6\" />\n<path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" />\n<line x1=\"10\" y1=\"11\" x2=\"10\" y2=\"17\" />\n<line x1=\"14\" y1=\"11\" x2=\"14\" y2=\"17\" />",
+};
+#[cfg(feature = "FiTrello")]
+const FI_TRELLO: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<rect x=\"7\" y=\"7\" width=\"3\" height=\"9\" />\n<rect x=\"14\" y=\"7\" width=\"3\" height=\"5\" />",
+};
+#[cfg(feature = "FiTrendingDown")]
+const FI_TRENDING_DOWN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"23 18 13.5 8.5 8.5 13.5 1 6\" />\n<polyline points=\"17 18 23 18 23 12\" />",
+};
+#[cfg(feature = "FiTrendingUp")]
+const FI_TRENDING_UP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\" />\n<polyline points=\"17 6 23 6 23 12\" />",
+};
+#[cfg(feature = "FiTriangle")]
+const FI_TRIANGLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\" />",
+};
+#[cfg(feature = "FiTruck")]
+const FI_TRUCK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"1\" y=\"3\" width=\"15\" height=\"13\" />\n<polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\" />\n<circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\" />\n<circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\" />",
+};
+#[cfg(feature = "FiTv")]
+const FI_TV: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"2\" y=\"7\" width=\"20\" height=\"15\" rx=\"2\" ry=\"2\" />\n<polyline points=\"17 2 12 7 7 2\" />",
+};
+#[cfg(feature = "FiTwitch")]
+const FI_TWITCH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 2H3v16h5v4l4-4h5l4-4V2zM11 11V7M16 11V7\" />",
+};
+#[cfg(feature = "FiTwitter")]
+const FI_TWITTER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z\" />",
+};
+#[cfg(feature = "FiType")]
+const FI_TYPE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"4 7 4 4 20 4 20 7\" />\n<line x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\" />\n<line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\" />",
+};
+#[cfg(feature = "FiUmbrella")]
+const FI_UMBRELLA: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7\" />",
+};
+#[cfg(feature = "FiUnderline")]
+const FI_UNDERLINE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3\" />\n<line x1=\"4\" y1=\"21\" x2=\"20\" y2=\"21\" />",
+};
+#[cfg(feature = "FiUnlock")]
+const FI_UNLOCK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" />\n<path d=\"M7 11V7a5 5 0 0 1 9.9-1\" />",
+};
+#[cfg(feature = "FiUpload")]
+const FI_UPLOAD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n<polyline points=\"17 8 12 3 7 8\" />\n<line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"15\" />",
+};
+#[cfg(feature = "FiUploadCloud")]
+const FI_UPLOAD_CLOUD: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"16 16 12 12 8 16\" />\n<line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\" />\n<path d=\"M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3\" />\n<polyline points=\"16 16 12 12 8 16\" />",
+};
+#[cfg(feature = "FiUser")]
+const FI_USER: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\" />\n<circle cx=\"12\" cy=\"7\" r=\"4\" />",
+};
+#[cfg(feature = "FiUserCheck")]
+const FI_USER_CHECK: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<polyline points=\"17 11 19 13 23 9\" />",
+};
+#[cfg(feature = "FiUserMinus")]
+const FI_USER_MINUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<line x1=\"23\" y1=\"11\" x2=\"17\" y2=\"11\" />",
+};
+#[cfg(feature = "FiUserPlus")]
+const FI_USER_PLUS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"14\" />\n<line x1=\"23\" y1=\"11\" x2=\"17\" y2=\"11\" />",
+};
+#[cfg(feature = "FiUserX")]
+const FI_USER_X: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<line x1=\"18\" y1=\"8\" x2=\"23\" y2=\"13\" />\n<line x1=\"23\" y1=\"8\" x2=\"18\" y2=\"13\" />",
+};
+#[cfg(feature = "FiUsers")]
+const FI_USERS: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"9\" cy=\"7\" r=\"4\" />\n<path d=\"M23 21v-2a4 4 0 0 0-3-3.87\" />\n<path d=\"M16 3.13a4 4 0 0 1 0 7.75\" />",
+};
+#[cfg(feature = "FiVideo")]
+const FI_VIDEO: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"23 7 16 12 23 17 23 7\" />\n<rect x=\"1\" y=\"5\" width=\"15\" height=\"14\" rx=\"2\" ry=\"2\" />",
+};
+#[cfg(feature = "FiVideoOff")]
+const FI_VIDEO_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
+};
+#[cfg(feature = "FiVoicemail")]
+const FI_VOICEMAIL: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"5.5\" cy=\"11.5\" r=\"4.5\" />\n<circle cx=\"18.5\" cy=\"11.5\" r=\"4.5\" />\n<line x1=\"5.5\" y1=\"16\" x2=\"18.5\" y2=\"16\" />",
+};
+#[cfg(feature = "FiVolume")]
+const FI_VOLUME: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />",
+};
+#[cfg(feature = "FiVolume1")]
+const FI_VOLUME1: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n<path d=\"M15.54 8.46a5 5 0 0 1 0 7.07\" />",
+};
+#[cfg(feature = "FiVolume2")]
+const FI_VOLUME2: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n<path d=\"M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07\" />",
+};
+#[cfg(feature = "FiVolumeX")]
+const FI_VOLUME_X: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n<line x1=\"23\" y1=\"9\" x2=\"17\" y2=\"15\" />\n<line x1=\"17\" y1=\"9\" x2=\"23\" y2=\"15\" />",
+};
+#[cfg(feature = "FiWatch")]
+const FI_WATCH: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"7\" />\n<polyline points=\"12 9 12 12 13.5 13.5\" />\n<path d=\"M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83\" />",
+};
+#[cfg(feature = "FiWifi")]
+const FI_WIFI: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M5 12.55a11 11 0 0 1 14.08 0\" />\n<path d=\"M1.42 9a16 16 0 0 1 21.16 0\" />\n<path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" />\n<line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />",
+};
+#[cfg(feature = "FiWifiOff")]
+const FI_WIFI_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />\n<path d=\"M16.72 11.06A10.94 10.94 0 0 1 19 12.55\" />\n<path d=\"M5 12.55a10.94 10.94 0 0 1 5.17-2.39\" />\n<path d=\"M10.71 5.05A16 16 0 0 1 22.58 9\" />\n<path d=\"M1.42 9a15.91 15.91 0 0 1 4.7-2.88\" />\n<path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" />\n<line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />",
+};
+#[cfg(feature = "FiWind")]
+const FI_WIND: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2\" />",
+};
+#[cfg(feature = "FiX")]
+const FI_X: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\" />\n<line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\" />",
+};
+#[cfg(feature = "FiXCircle")]
+const FI_X_CIRCLE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />\n<line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />",
+};
+#[cfg(feature = "FiXOctagon")]
+const FI_X_OCTAGON: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />\n<line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />\n<line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />",
+};
+#[cfg(feature = "FiXSquare")]
+const FI_X_SQUARE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />\n<line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />",
+};
+#[cfg(feature = "FiYoutube")]
+const FI_YOUTUBE: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<path d=\"M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z\" />\n<polygon points=\"9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02\" />",
+};
+#[cfg(feature = "FiZap")]
+const FI_ZAP: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\" />",
+};
+#[cfg(feature = "FiZapOff")]
+const FI_ZAP_OFF: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<polyline points=\"12.41 6.75 13 2 10.57 4.92\" />\n<polyline points=\"18.57 12.91 21 10 15.66 10\" />\n<polyline points=\"8 8 3 14 12 14 11 22 16 16\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
+};
+#[cfg(feature = "FiZoomIn")]
+const FI_ZOOM_IN: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"11\" cy=\"11\" r=\"8\" />\n<line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />\n<line x1=\"11\" y1=\"8\" x2=\"11\" y2=\"14\" />\n<line x1=\"8\" y1=\"11\" x2=\"14\" y2=\"11\" />",
+};
+#[cfg(feature = "FiZoomOut")]
+const FI_ZOOM_OUT: leptos_icons_core::Data = leptos_icons_core::Data {
+    style: None,
+    x: None,
+    y: None,
+    width: Some("24"),
+    height: Some("24"),
+    view_box: Some("0 0 24 24"),
+    stroke_linecap: Some("round"),
+    stroke_linejoin: Some("round"),
+    stroke_width: Some("2"),
+    stroke: Some("currentColor"),
+    fill: Some("none"),
+    data: "<circle cx=\"11\" cy=\"11\" r=\"8\" />\n<line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />\n<line x1=\"8\" y1=\"11\" x2=\"14\" y2=\"11\" />",
+};
+impl<'a> leptos_icons_core::IconData<'a> for FiIcon {
+    fn data(self) -> &'a leptos_icons_core::Data {
         match self {
             #[cfg(feature = "FiActivity")]
-            FiIcon::FiActivity => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"22 12 18 12 15 21 9 3 6 12 2 12\" />",
-                }
-            }
+            FiIcon::FiActivity => &FI_ACTIVITY,
             #[cfg(feature = "FiAirplay")]
-            FiIcon::FiAirplay => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1\" />\n<polygon points=\"12 15 17 21 7 21 12 15\" />",
-                }
-            }
+            FiIcon::FiAirplay => &FI_AIRPLAY,
             #[cfg(feature = "FiAlertCircle")]
-            FiIcon::FiAlertCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiAlertCircle => &FI_ALERT_CIRCLE,
             #[cfg(feature = "FiAlertOctagon")]
-            FiIcon::FiAlertOctagon => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiAlertOctagon => &FI_ALERT_OCTAGON,
             #[cfg(feature = "FiAlertTriangle")]
-            FiIcon::FiAlertTriangle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\" />\n<line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"13\" />\n<line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />",
-                }
-            }
+            FiIcon::FiAlertTriangle => &FI_ALERT_TRIANGLE,
             #[cfg(feature = "FiAlignCenter")]
-            FiIcon::FiAlignCenter => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"18\" y1=\"10\" x2=\"6\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"18\" y1=\"18\" x2=\"6\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiAlignCenter => &FI_ALIGN_CENTER,
             #[cfg(feature = "FiAlignJustify")]
-            FiIcon::FiAlignJustify => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"21\" y1=\"10\" x2=\"3\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"21\" y1=\"18\" x2=\"3\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiAlignJustify => &FI_ALIGN_JUSTIFY,
             #[cfg(feature = "FiAlignLeft")]
-            FiIcon::FiAlignLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"17\" y1=\"10\" x2=\"3\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"17\" y1=\"18\" x2=\"3\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiAlignLeft => &FI_ALIGN_LEFT,
             #[cfg(feature = "FiAlignRight")]
-            FiIcon::FiAlignRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"21\" y1=\"10\" x2=\"7\" y2=\"10\" />\n<line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" />\n<line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" />\n<line x1=\"21\" y1=\"18\" x2=\"7\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiAlignRight => &FI_ALIGN_RIGHT,
             #[cfg(feature = "FiAnchor")]
-            FiIcon::FiAnchor => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"5\" r=\"3\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"8\" />\n<path d=\"M5 12H2a10 10 0 0 0 20 0h-3\" />",
-                }
-            }
+            FiIcon::FiAnchor => &FI_ANCHOR,
             #[cfg(feature = "FiAperture")]
-            FiIcon::FiAperture => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"14.31\" y1=\"8\" x2=\"20.05\" y2=\"17.94\" />\n<line x1=\"9.69\" y1=\"8\" x2=\"21.17\" y2=\"8\" />\n<line x1=\"7.38\" y1=\"12\" x2=\"13.12\" y2=\"2.06\" />\n<line x1=\"9.69\" y1=\"16\" x2=\"3.95\" y2=\"6.06\" />\n<line x1=\"14.31\" y1=\"16\" x2=\"2.83\" y2=\"16\" />\n<line x1=\"16.62\" y1=\"12\" x2=\"10.88\" y2=\"21.94\" />",
-                }
-            }
+            FiIcon::FiAperture => &FI_APERTURE,
             #[cfg(feature = "FiArchive")]
-            FiIcon::FiArchive => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"21 8 21 21 3 21 3 8\" />\n<rect x=\"1\" y=\"3\" width=\"22\" height=\"5\" />\n<line x1=\"10\" y1=\"12\" x2=\"14\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiArchive => &FI_ARCHIVE,
             #[cfg(feature = "FiArrowDown")]
-            FiIcon::FiArrowDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\" />\n<polyline points=\"19 12 12 19 5 12\" />",
-                }
-            }
+            FiIcon::FiArrowDown => &FI_ARROW_DOWN,
             #[cfg(feature = "FiArrowDownCircle")]
-            FiIcon::FiArrowDownCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"8 12 12 16 16 12\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiArrowDownCircle => &FI_ARROW_DOWN_CIRCLE,
             #[cfg(feature = "FiArrowDownLeft")]
-            FiIcon::FiArrowDownLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<polyline points=\"17 17 7 17 7 7\" />",
-                }
-            }
+            FiIcon::FiArrowDownLeft => &FI_ARROW_DOWN_LEFT,
             #[cfg(feature = "FiArrowDownRight")]
-            FiIcon::FiArrowDownRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<polyline points=\"17 7 17 17 7 17\" />",
-                }
-            }
+            FiIcon::FiArrowDownRight => &FI_ARROW_DOWN_RIGHT,
             #[cfg(feature = "FiArrowLeft")]
-            FiIcon::FiArrowLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\" />\n<polyline points=\"12 19 5 12 12 5\" />",
-                }
-            }
+            FiIcon::FiArrowLeft => &FI_ARROW_LEFT,
             #[cfg(feature = "FiArrowLeftCircle")]
-            FiIcon::FiArrowLeftCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"12 8 8 12 12 16\" />\n<line x1=\"16\" y1=\"12\" x2=\"8\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiArrowLeftCircle => &FI_ARROW_LEFT_CIRCLE,
             #[cfg(feature = "FiArrowRight")]
-            FiIcon::FiArrowRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />\n<polyline points=\"12 5 19 12 12 19\" />",
-                }
-            }
+            FiIcon::FiArrowRight => &FI_ARROW_RIGHT,
             #[cfg(feature = "FiArrowRightCircle")]
-            FiIcon::FiArrowRightCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"12 16 16 12 12 8\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiArrowRightCircle => &FI_ARROW_RIGHT_CIRCLE,
             #[cfg(feature = "FiArrowUp")]
-            FiIcon::FiArrowUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"5\" />\n<polyline points=\"5 12 12 5 19 12\" />",
-                }
-            }
+            FiIcon::FiArrowUp => &FI_ARROW_UP,
             #[cfg(feature = "FiArrowUpCircle")]
-            FiIcon::FiArrowUpCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"16 12 12 8 8 12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"8\" />",
-                }
-            }
+            FiIcon::FiArrowUpCircle => &FI_ARROW_UP_CIRCLE,
             #[cfg(feature = "FiArrowUpLeft")]
-            FiIcon::FiArrowUpLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"17\" y1=\"17\" x2=\"7\" y2=\"7\" />\n<polyline points=\"7 17 7 7 17 7\" />",
-                }
-            }
+            FiIcon::FiArrowUpLeft => &FI_ARROW_UP_LEFT,
             #[cfg(feature = "FiArrowUpRight")]
-            FiIcon::FiArrowUpRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\" />\n<polyline points=\"7 7 17 7 17 17\" />",
-                }
-            }
+            FiIcon::FiArrowUpRight => &FI_ARROW_UP_RIGHT,
             #[cfg(feature = "FiAtSign")]
-            FiIcon::FiAtSign => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<path d=\"M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94\" />",
-                }
-            }
+            FiIcon::FiAtSign => &FI_AT_SIGN,
             #[cfg(feature = "FiAward")]
-            FiIcon::FiAward => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"8\" r=\"7\" />\n<polyline points=\"8.21 13.89 7 23 12 20 17 23 15.79 13.88\" />",
-                }
-            }
+            FiIcon::FiAward => &FI_AWARD,
             #[cfg(feature = "FiBarChart")]
-            FiIcon::FiBarChart => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"10\" />\n<line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"4\" />\n<line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiBarChart => &FI_BAR_CHART,
             #[cfg(feature = "FiBarChart2")]
-            FiIcon::FiBarChart2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\" />\n<line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\" />\n<line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiBarChart2 => &FI_BAR_CHART2,
             #[cfg(feature = "FiBattery")]
-            FiIcon::FiBattery => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"1\" y=\"6\" width=\"18\" height=\"12\" rx=\"2\" ry=\"2\" />\n<line x1=\"23\" y1=\"13\" x2=\"23\" y2=\"11\" />",
-                }
-            }
+            FiIcon::FiBattery => &FI_BATTERY,
             #[cfg(feature = "FiBatteryCharging")]
-            FiIcon::FiBatteryCharging => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19\" />\n<line x1=\"23\" y1=\"13\" x2=\"23\" y2=\"11\" />\n<polyline points=\"11 6 7 12 13 12 9 18\" />",
-                }
-            }
+            FiIcon::FiBatteryCharging => &FI_BATTERY_CHARGING,
             #[cfg(feature = "FiBell")]
-            FiIcon::FiBell => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\" />\n<path d=\"M13.73 21a2 2 0 0 1-3.46 0\" />",
-                }
-            }
+            FiIcon::FiBell => &FI_BELL,
             #[cfg(feature = "FiBellOff")]
-            FiIcon::FiBellOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M13.73 21a2 2 0 0 1-3.46 0\" />\n<path d=\"M18.63 13A17.89 17.89 0 0 1 18 8\" />\n<path d=\"M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14\" />\n<path d=\"M18 8a6 6 0 0 0-9.33-5\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiBellOff => &FI_BELL_OFF,
             #[cfg(feature = "FiBluetooth")]
-            FiIcon::FiBluetooth => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5\" />",
-                }
-            }
+            FiIcon::FiBluetooth => &FI_BLUETOOTH,
             #[cfg(feature = "FiBold")]
-            FiIcon::FiBold => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z\" />\n<path d=\"M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z\" />",
-                }
-            }
+            FiIcon::FiBold => &FI_BOLD,
             #[cfg(feature = "FiBook")]
-            FiIcon::FiBook => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M4 19.5A2.5 2.5 0 0 1 6.5 17H20\" />\n<path d=\"M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z\" />",
-                }
-            }
+            FiIcon::FiBook => &FI_BOOK,
             #[cfg(feature = "FiBookOpen")]
-            FiIcon::FiBookOpen => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\" />\n<path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\" />",
-                }
-            }
+            FiIcon::FiBookOpen => &FI_BOOK_OPEN,
             #[cfg(feature = "FiBookmark")]
-            FiIcon::FiBookmark => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\" />",
-                }
-            }
+            FiIcon::FiBookmark => &FI_BOOKMARK,
             #[cfg(feature = "FiBox")]
-            FiIcon::FiBox => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n<polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n<line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiBox => &FI_BOX,
             #[cfg(feature = "FiBriefcase")]
-            FiIcon::FiBriefcase => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" />\n<path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\" />",
-                }
-            }
+            FiIcon::FiBriefcase => &FI_BRIEFCASE,
             #[cfg(feature = "FiCalendar")]
-            FiIcon::FiCalendar => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\" />\n<line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\" />\n<line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\" />",
-                }
-            }
+            FiIcon::FiCalendar => &FI_CALENDAR,
             #[cfg(feature = "FiCamera")]
-            FiIcon::FiCamera => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\" />\n<circle cx=\"12\" cy=\"13\" r=\"4\" />",
-                }
-            }
+            FiIcon::FiCamera => &FI_CAMERA,
             #[cfg(feature = "FiCameraOff")]
-            FiIcon::FiCameraOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />\n<path d=\"M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m3-3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56\" />",
-                }
-            }
+            FiIcon::FiCameraOff => &FI_CAMERA_OFF,
             #[cfg(feature = "FiCast")]
-            FiIcon::FiCast => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6\" />\n<line x1=\"2\" y1=\"20\" x2=\"2.01\" y2=\"20\" />",
-                }
-            }
+            FiIcon::FiCast => &FI_CAST,
             #[cfg(feature = "FiCheck")]
-            FiIcon::FiCheck => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"20 6 9 17 4 12\" />",
-                }
-            }
+            FiIcon::FiCheck => &FI_CHECK,
             #[cfg(feature = "FiCheckCircle")]
-            FiIcon::FiCheckCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\" />\n<polyline points=\"22 4 12 14.01 9 11.01\" />",
-                }
-            }
+            FiIcon::FiCheckCircle => &FI_CHECK_CIRCLE,
             #[cfg(feature = "FiCheckSquare")]
-            FiIcon::FiCheckSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"9 11 12 14 22 4\" />\n<path d=\"M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11\" />",
-                }
-            }
+            FiIcon::FiCheckSquare => &FI_CHECK_SQUARE,
             #[cfg(feature = "FiChevronDown")]
-            FiIcon::FiChevronDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"6 9 12 15 18 9\" />",
-                }
-            }
+            FiIcon::FiChevronDown => &FI_CHEVRON_DOWN,
             #[cfg(feature = "FiChevronLeft")]
-            FiIcon::FiChevronLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"15 18 9 12 15 6\" />",
-                }
-            }
+            FiIcon::FiChevronLeft => &FI_CHEVRON_LEFT,
             #[cfg(feature = "FiChevronRight")]
-            FiIcon::FiChevronRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"9 18 15 12 9 6\" />",
-                }
-            }
+            FiIcon::FiChevronRight => &FI_CHEVRON_RIGHT,
             #[cfg(feature = "FiChevronUp")]
-            FiIcon::FiChevronUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"18 15 12 9 6 15\" />",
-                }
-            }
+            FiIcon::FiChevronUp => &FI_CHEVRON_UP,
             #[cfg(feature = "FiChevronsDown")]
-            FiIcon::FiChevronsDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"7 13 12 18 17 13\" />\n<polyline points=\"7 6 12 11 17 6\" />",
-                }
-            }
+            FiIcon::FiChevronsDown => &FI_CHEVRONS_DOWN,
             #[cfg(feature = "FiChevronsLeft")]
-            FiIcon::FiChevronsLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"11 17 6 12 11 7\" />\n<polyline points=\"18 17 13 12 18 7\" />",
-                }
-            }
+            FiIcon::FiChevronsLeft => &FI_CHEVRONS_LEFT,
             #[cfg(feature = "FiChevronsRight")]
-            FiIcon::FiChevronsRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"13 17 18 12 13 7\" />\n<polyline points=\"6 17 11 12 6 7\" />",
-                }
-            }
+            FiIcon::FiChevronsRight => &FI_CHEVRONS_RIGHT,
             #[cfg(feature = "FiChevronsUp")]
-            FiIcon::FiChevronsUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"17 11 12 6 7 11\" />\n<polyline points=\"17 18 12 13 7 18\" />",
-                }
-            }
+            FiIcon::FiChevronsUp => &FI_CHEVRONS_UP,
             #[cfg(feature = "FiChrome")]
-            FiIcon::FiChrome => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<line x1=\"21.17\" y1=\"8\" x2=\"12\" y2=\"8\" />\n<line x1=\"3.95\" y1=\"6.06\" x2=\"8.54\" y2=\"14\" />\n<line x1=\"10.88\" y1=\"21.94\" x2=\"15.46\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiChrome => &FI_CHROME,
             #[cfg(feature = "FiCircle")]
-            FiIcon::FiCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />",
-                }
-            }
+            FiIcon::FiCircle => &FI_CIRCLE,
             #[cfg(feature = "FiClipboard")]
-            FiIcon::FiClipboard => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\" />\n<rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\" />",
-                }
-            }
+            FiIcon::FiClipboard => &FI_CLIPBOARD,
             #[cfg(feature = "FiClock")]
-            FiIcon::FiClock => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polyline points=\"12 6 12 12 16 14\" />",
-                }
-            }
+            FiIcon::FiClock => &FI_CLOCK,
             #[cfg(feature = "FiCloud")]
-            FiIcon::FiCloud => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z\" />",
-                }
-            }
+            FiIcon::FiCloud => &FI_CLOUD,
             #[cfg(feature = "FiCloudDrizzle")]
-            FiIcon::FiCloudDrizzle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"8\" y1=\"19\" x2=\"8\" y2=\"21\" />\n<line x1=\"8\" y1=\"13\" x2=\"8\" y2=\"15\" />\n<line x1=\"16\" y1=\"19\" x2=\"16\" y2=\"21\" />\n<line x1=\"16\" y1=\"13\" x2=\"16\" y2=\"15\" />\n<line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" />\n<line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"17\" />\n<path d=\"M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25\" />",
-                }
-            }
+            FiIcon::FiCloudDrizzle => &FI_CLOUD_DRIZZLE,
             #[cfg(feature = "FiCloudLightning")]
-            FiIcon::FiCloudLightning => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9\" />\n<polyline points=\"13 11 9 17 15 17 11 23\" />",
-                }
-            }
+            FiIcon::FiCloudLightning => &FI_CLOUD_LIGHTNING,
             #[cfg(feature = "FiCloudOff")]
-            FiIcon::FiCloudOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiCloudOff => &FI_CLOUD_OFF,
             #[cfg(feature = "FiCloudRain")]
-            FiIcon::FiCloudRain => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"16\" y1=\"13\" x2=\"16\" y2=\"21\" />\n<line x1=\"8\" y1=\"13\" x2=\"8\" y2=\"21\" />\n<line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"23\" />\n<path d=\"M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25\" />",
-                }
-            }
+            FiIcon::FiCloudRain => &FI_CLOUD_RAIN,
             #[cfg(feature = "FiCloudSnow")]
-            FiIcon::FiCloudSnow => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25\" />\n<line x1=\"8\" y1=\"16\" x2=\"8.01\" y2=\"16\" />\n<line x1=\"8\" y1=\"20\" x2=\"8.01\" y2=\"20\" />\n<line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />\n<line x1=\"12\" y1=\"22\" x2=\"12.01\" y2=\"22\" />\n<line x1=\"16\" y1=\"16\" x2=\"16.01\" y2=\"16\" />\n<line x1=\"16\" y1=\"20\" x2=\"16.01\" y2=\"20\" />",
-                }
-            }
+            FiIcon::FiCloudSnow => &FI_CLOUD_SNOW,
             #[cfg(feature = "FiCode")]
-            FiIcon::FiCode => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"16 18 22 12 16 6\" />\n<polyline points=\"8 6 2 12 8 18\" />",
-                }
-            }
+            FiIcon::FiCode => &FI_CODE,
             #[cfg(feature = "FiCodepen")]
-            FiIcon::FiCodepen => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"15.5\" />\n<polyline points=\"22 8.5 12 15.5 2 8.5\" />\n<polyline points=\"2 15.5 12 8.5 22 15.5\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"8.5\" />",
-                }
-            }
+            FiIcon::FiCodepen => &FI_CODEPEN,
             #[cfg(feature = "FiCodesandbox")]
-            FiIcon::FiCodesandbox => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n<polyline points=\"7.5 4.21 12 6.81 16.5 4.21\" />\n<polyline points=\"7.5 19.79 7.5 14.6 3 12\" />\n<polyline points=\"21 12 16.5 14.6 16.5 19.79\" />\n<polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n<line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiCodesandbox => &FI_CODESANDBOX,
             #[cfg(feature = "FiCoffee")]
-            FiIcon::FiCoffee => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18 8h1a4 4 0 0 1 0 8h-1\" />\n<path d=\"M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z\" />\n<line x1=\"6\" y1=\"1\" x2=\"6\" y2=\"4\" />\n<line x1=\"10\" y1=\"1\" x2=\"10\" y2=\"4\" />\n<line x1=\"14\" y1=\"1\" x2=\"14\" y2=\"4\" />",
-                }
-            }
+            FiIcon::FiCoffee => &FI_COFFEE,
             #[cfg(feature = "FiColumns")]
-            FiIcon::FiColumns => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18\" />",
-                }
-            }
+            FiIcon::FiColumns => &FI_COLUMNS,
             #[cfg(feature = "FiCommand")]
-            FiIcon::FiCommand => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z\" />",
-                }
-            }
+            FiIcon::FiCommand => &FI_COMMAND,
             #[cfg(feature = "FiCompass")]
-            FiIcon::FiCompass => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polygon points=\"16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76\" />",
-                }
-            }
+            FiIcon::FiCompass => &FI_COMPASS,
             #[cfg(feature = "FiCopy")]
-            FiIcon::FiCopy => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\" />\n<path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\" />",
-                }
-            }
+            FiIcon::FiCopy => &FI_COPY,
             #[cfg(feature = "FiCornerDownLeft")]
-            FiIcon::FiCornerDownLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"9 10 4 15 9 20\" />\n<path d=\"M20 4v7a4 4 0 0 1-4 4H4\" />",
-                }
-            }
+            FiIcon::FiCornerDownLeft => &FI_CORNER_DOWN_LEFT,
             #[cfg(feature = "FiCornerDownRight")]
-            FiIcon::FiCornerDownRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"15 10 20 15 15 20\" />\n<path d=\"M4 4v7a4 4 0 0 0 4 4h12\" />",
-                }
-            }
+            FiIcon::FiCornerDownRight => &FI_CORNER_DOWN_RIGHT,
             #[cfg(feature = "FiCornerLeftDown")]
-            FiIcon::FiCornerLeftDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"14 15 9 20 4 15\" />\n<path d=\"M20 4h-7a4 4 0 0 0-4 4v12\" />",
-                }
-            }
+            FiIcon::FiCornerLeftDown => &FI_CORNER_LEFT_DOWN,
             #[cfg(feature = "FiCornerLeftUp")]
-            FiIcon::FiCornerLeftUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"14 9 9 4 4 9\" />\n<path d=\"M20 20h-7a4 4 0 0 1-4-4V4\" />",
-                }
-            }
+            FiIcon::FiCornerLeftUp => &FI_CORNER_LEFT_UP,
             #[cfg(feature = "FiCornerRightDown")]
-            FiIcon::FiCornerRightDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"10 15 15 20 20 15\" />\n<path d=\"M4 4h7a4 4 0 0 1 4 4v12\" />",
-                }
-            }
+            FiIcon::FiCornerRightDown => &FI_CORNER_RIGHT_DOWN,
             #[cfg(feature = "FiCornerRightUp")]
-            FiIcon::FiCornerRightUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"10 9 15 4 20 9\" />\n<path d=\"M4 20h7a4 4 0 0 0 4-4V4\" />",
-                }
-            }
+            FiIcon::FiCornerRightUp => &FI_CORNER_RIGHT_UP,
             #[cfg(feature = "FiCornerUpLeft")]
-            FiIcon::FiCornerUpLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"9 14 4 9 9 4\" />\n<path d=\"M20 20v-7a4 4 0 0 0-4-4H4\" />",
-                }
-            }
+            FiIcon::FiCornerUpLeft => &FI_CORNER_UP_LEFT,
             #[cfg(feature = "FiCornerUpRight")]
-            FiIcon::FiCornerUpRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"15 14 20 9 15 4\" />\n<path d=\"M4 20v-7a4 4 0 0 1 4-4h12\" />",
-                }
-            }
+            FiIcon::FiCornerUpRight => &FI_CORNER_UP_RIGHT,
             #[cfg(feature = "FiCpu")]
-            FiIcon::FiCpu => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" ry=\"2\" />\n<rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" />\n<line x1=\"9\" y1=\"1\" x2=\"9\" y2=\"4\" />\n<line x1=\"15\" y1=\"1\" x2=\"15\" y2=\"4\" />\n<line x1=\"9\" y1=\"20\" x2=\"9\" y2=\"23\" />\n<line x1=\"15\" y1=\"20\" x2=\"15\" y2=\"23\" />\n<line x1=\"20\" y1=\"9\" x2=\"23\" y2=\"9\" />\n<line x1=\"20\" y1=\"14\" x2=\"23\" y2=\"14\" />\n<line x1=\"1\" y1=\"9\" x2=\"4\" y2=\"9\" />\n<line x1=\"1\" y1=\"14\" x2=\"4\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiCpu => &FI_CPU,
             #[cfg(feature = "FiCreditCard")]
-            FiIcon::FiCreditCard => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\" />\n<line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\" />",
-                }
-            }
+            FiIcon::FiCreditCard => &FI_CREDIT_CARD,
             #[cfg(feature = "FiCrop")]
-            FiIcon::FiCrop => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M6.13 1L6 16a2 2 0 0 0 2 2h15\" />\n<path d=\"M1 6.13L16 6a2 2 0 0 1 2 2v15\" />",
-                }
-            }
+            FiIcon::FiCrop => &FI_CROP,
             #[cfg(feature = "FiCrosshair")]
-            FiIcon::FiCrosshair => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"22\" y1=\"12\" x2=\"18\" y2=\"12\" />\n<line x1=\"6\" y1=\"12\" x2=\"2\" y2=\"12\" />\n<line x1=\"12\" y1=\"6\" x2=\"12\" y2=\"2\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiCrosshair => &FI_CROSSHAIR,
             #[cfg(feature = "FiDatabase")]
-            FiIcon::FiDatabase => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" />\n<path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\" />\n<path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\" />",
-                }
-            }
+            FiIcon::FiDatabase => &FI_DATABASE,
             #[cfg(feature = "FiDelete")]
-            FiIcon::FiDelete => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z\" />\n<line x1=\"18\" y1=\"9\" x2=\"12\" y2=\"15\" />\n<line x1=\"12\" y1=\"9\" x2=\"18\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiDelete => &FI_DELETE,
             #[cfg(feature = "FiDisc")]
-            FiIcon::FiDisc => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"3\" />",
-                }
-            }
+            FiIcon::FiDisc => &FI_DISC,
             #[cfg(feature = "FiDivide")]
-            FiIcon::FiDivide => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"6\" r=\"2\" />\n<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />\n<circle cx=\"12\" cy=\"18\" r=\"2\" />",
-                }
-            }
+            FiIcon::FiDivide => &FI_DIVIDE,
             #[cfg(feature = "FiDivideCircle")]
-            FiIcon::FiDivideCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"16\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\" />\n<circle cx=\"12\" cy=\"12\" r=\"10\" />",
-                }
-            }
+            FiIcon::FiDivideCircle => &FI_DIVIDE_CIRCLE,
             #[cfg(feature = "FiDivideSquare")]
-            FiIcon::FiDivideSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"16\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\" />",
-                }
-            }
+            FiIcon::FiDivideSquare => &FI_DIVIDE_SQUARE,
             #[cfg(feature = "FiDollarSign")]
-            FiIcon::FiDollarSign => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\" />\n<path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\" />",
-                }
-            }
+            FiIcon::FiDollarSign => &FI_DOLLAR_SIGN,
             #[cfg(feature = "FiDownload")]
-            FiIcon::FiDownload => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n<polyline points=\"7 10 12 15 17 10\" />\n<line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\" />",
-                }
-            }
+            FiIcon::FiDownload => &FI_DOWNLOAD,
             #[cfg(feature = "FiDownloadCloud")]
-            FiIcon::FiDownloadCloud => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"8 17 12 21 16 17\" />\n<line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\" />\n<path d=\"M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29\" />",
-                }
-            }
+            FiIcon::FiDownloadCloud => &FI_DOWNLOAD_CLOUD,
             #[cfg(feature = "FiDribbble")]
-            FiIcon::FiDribbble => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32\" />",
-                }
-            }
+            FiIcon::FiDribbble => &FI_DRIBBBLE,
             #[cfg(feature = "FiDroplet")]
-            FiIcon::FiDroplet => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z\" />",
-                }
-            }
+            FiIcon::FiDroplet => &FI_DROPLET,
             #[cfg(feature = "FiEdit")]
-            FiIcon::FiEdit => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7\" />\n<path d=\"M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z\" />",
-                }
-            }
+            FiIcon::FiEdit => &FI_EDIT,
             #[cfg(feature = "FiEdit2")]
-            FiIcon::FiEdit2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z\" />",
-                }
-            }
+            FiIcon::FiEdit2 => &FI_EDIT2,
             #[cfg(feature = "FiEdit3")]
-            FiIcon::FiEdit3 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M12 20h9\" />\n<path d=\"M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z\" />",
-                }
-            }
+            FiIcon::FiEdit3 => &FI_EDIT3,
             #[cfg(feature = "FiExternalLink")]
-            FiIcon::FiExternalLink => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\" />\n<polyline points=\"15 3 21 3 21 9\" />\n<line x1=\"10\" y1=\"14\" x2=\"21\" y2=\"3\" />",
-                }
-            }
+            FiIcon::FiExternalLink => &FI_EXTERNAL_LINK,
             #[cfg(feature = "FiEye")]
-            FiIcon::FiEye => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\" />\n<circle cx=\"12\" cy=\"12\" r=\"3\" />",
-                }
-            }
+            FiIcon::FiEye => &FI_EYE,
             #[cfg(feature = "FiEyeOff")]
-            FiIcon::FiEyeOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiEyeOff => &FI_EYE_OFF,
             #[cfg(feature = "FiFacebook")]
-            FiIcon::FiFacebook => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z\" />",
-                }
-            }
+            FiIcon::FiFacebook => &FI_FACEBOOK,
             #[cfg(feature = "FiFastForward")]
-            FiIcon::FiFastForward => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"13 19 22 12 13 5 13 19\" />\n<polygon points=\"2 19 11 12 2 5 2 19\" />",
-                }
-            }
+            FiIcon::FiFastForward => &FI_FAST_FORWARD,
             #[cfg(feature = "FiFeather")]
-            FiIcon::FiFeather => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z\" />\n<line x1=\"16\" y1=\"8\" x2=\"2\" y2=\"22\" />\n<line x1=\"17.5\" y1=\"15\" x2=\"9\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiFeather => &FI_FEATHER,
             #[cfg(feature = "FiFigma")]
-            FiIcon::FiFigma => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z\" />\n<path d=\"M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z\" />\n<path d=\"M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z\" />\n<path d=\"M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z\" />\n<path d=\"M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z\" />",
-                }
-            }
+            FiIcon::FiFigma => &FI_FIGMA,
             #[cfg(feature = "FiFile")]
-            FiIcon::FiFile => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\" />\n<polyline points=\"13 2 13 9 20 9\" />",
-                }
-            }
+            FiIcon::FiFile => &FI_FILE,
             #[cfg(feature = "FiFileMinus")]
-            FiIcon::FiFileMinus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" />\n<polyline points=\"14 2 14 8 20 8\" />\n<line x1=\"9\" y1=\"15\" x2=\"15\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiFileMinus => &FI_FILE_MINUS,
             #[cfg(feature = "FiFilePlus")]
-            FiIcon::FiFilePlus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" />\n<polyline points=\"14 2 14 8 20 8\" />\n<line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"12\" />\n<line x1=\"9\" y1=\"15\" x2=\"15\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiFilePlus => &FI_FILE_PLUS,
             #[cfg(feature = "FiFileText")]
-            FiIcon::FiFileText => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" />\n<polyline points=\"14 2 14 8 20 8\" />\n<line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\" />\n<line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\" />\n<polyline points=\"10 9 9 9 8 9\" />",
-                }
-            }
+            FiIcon::FiFileText => &FI_FILE_TEXT,
             #[cfg(feature = "FiFilm")]
-            FiIcon::FiFilm => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2.18\" ry=\"2.18\" />\n<line x1=\"7\" y1=\"2\" x2=\"7\" y2=\"22\" />\n<line x1=\"17\" y1=\"2\" x2=\"17\" y2=\"22\" />\n<line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<line x1=\"2\" y1=\"7\" x2=\"7\" y2=\"7\" />\n<line x1=\"2\" y1=\"17\" x2=\"7\" y2=\"17\" />\n<line x1=\"17\" y1=\"17\" x2=\"22\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"22\" y2=\"7\" />",
-                }
-            }
+            FiIcon::FiFilm => &FI_FILM,
             #[cfg(feature = "FiFilter")]
-            FiIcon::FiFilter => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\" />",
-                }
-            }
+            FiIcon::FiFilter => &FI_FILTER,
             #[cfg(feature = "FiFlag")]
-            FiIcon::FiFlag => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\" />\n<line x1=\"4\" y1=\"22\" x2=\"4\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiFlag => &FI_FLAG,
             #[cfg(feature = "FiFolder")]
-            FiIcon::FiFolder => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />",
-                }
-            }
+            FiIcon::FiFolder => &FI_FOLDER,
             #[cfg(feature = "FiFolderMinus")]
-            FiIcon::FiFolderMinus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />\n<line x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiFolderMinus => &FI_FOLDER_MINUS,
             #[cfg(feature = "FiFolderPlus")]
-            FiIcon::FiFolderPlus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />\n<line x1=\"12\" y1=\"11\" x2=\"12\" y2=\"17\" />\n<line x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiFolderPlus => &FI_FOLDER_PLUS,
             #[cfg(feature = "FiFramer")]
-            FiIcon::FiFramer => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M5 16V9h14V2H5l14 14h-7m-7 0l7 7v-7m-7 0h7\" />",
-                }
-            }
+            FiIcon::FiFramer => &FI_FRAMER,
             #[cfg(feature = "FiFrown")]
-            FiIcon::FiFrown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M16 16s-1.5-2-4-2-4 2-4 2\" />\n<line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" />\n<line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />",
-                }
-            }
+            FiIcon::FiFrown => &FI_FROWN,
             #[cfg(feature = "FiGift")]
-            FiIcon::FiGift => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"20 12 20 22 4 22 4 12\" />\n<rect x=\"2\" y=\"7\" width=\"20\" height=\"5\" />\n<line x1=\"12\" y1=\"22\" x2=\"12\" y2=\"7\" />\n<path d=\"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z\" />\n<path d=\"M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z\" />",
-                }
-            }
+            FiIcon::FiGift => &FI_GIFT,
             #[cfg(feature = "FiGitBranch")]
-            FiIcon::FiGitBranch => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"6\" y1=\"3\" x2=\"6\" y2=\"15\" />\n<circle cx=\"18\" cy=\"6\" r=\"3\" />\n<circle cx=\"6\" cy=\"18\" r=\"3\" />\n<path d=\"M18 9a9 9 0 0 1-9 9\" />",
-                }
-            }
+            FiIcon::FiGitBranch => &FI_GIT_BRANCH,
             #[cfg(feature = "FiGitCommit")]
-            FiIcon::FiGitCommit => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<line x1=\"1.05\" y1=\"12\" x2=\"7\" y2=\"12\" />\n<line x1=\"17.01\" y1=\"12\" x2=\"22.96\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiGitCommit => &FI_GIT_COMMIT,
             #[cfg(feature = "FiGitMerge")]
-            FiIcon::FiGitMerge => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"18\" cy=\"18\" r=\"3\" />\n<circle cx=\"6\" cy=\"6\" r=\"3\" />\n<path d=\"M6 21V9a9 9 0 0 0 9 9\" />",
-                }
-            }
+            FiIcon::FiGitMerge => &FI_GIT_MERGE,
             #[cfg(feature = "FiGitPullRequest")]
-            FiIcon::FiGitPullRequest => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"18\" cy=\"18\" r=\"3\" />\n<circle cx=\"6\" cy=\"6\" r=\"3\" />\n<path d=\"M13 6h3a2 2 0 0 1 2 2v7\" />\n<line x1=\"6\" y1=\"9\" x2=\"6\" y2=\"21\" />",
-                }
-            }
+            FiIcon::FiGitPullRequest => &FI_GIT_PULL_REQUEST,
             #[cfg(feature = "FiGithub")]
-            FiIcon::FiGithub => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\" />",
-                }
-            }
+            FiIcon::FiGithub => &FI_GITHUB,
             #[cfg(feature = "FiGitlab")]
-            FiIcon::FiGitlab => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z\" />",
-                }
-            }
+            FiIcon::FiGitlab => &FI_GITLAB,
             #[cfg(feature = "FiGlobe")]
-            FiIcon::FiGlobe => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\" />",
-                }
-            }
+            FiIcon::FiGlobe => &FI_GLOBE,
             #[cfg(feature = "FiGrid")]
-            FiIcon::FiGrid => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" />\n<rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" />\n<rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" />\n<rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" />",
-                }
-            }
+            FiIcon::FiGrid => &FI_GRID,
             #[cfg(feature = "FiHardDrive")]
-            FiIcon::FiHardDrive => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"22\" y1=\"12\" x2=\"2\" y2=\"12\" />\n<path d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />\n<line x1=\"6\" y1=\"16\" x2=\"6.01\" y2=\"16\" />\n<line x1=\"10\" y1=\"16\" x2=\"10.01\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiHardDrive => &FI_HARD_DRIVE,
             #[cfg(feature = "FiHash")]
-            FiIcon::FiHash => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\" />\n<line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\" />\n<line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\" />\n<line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\" />",
-                }
-            }
+            FiIcon::FiHash => &FI_HASH,
             #[cfg(feature = "FiHeadphones")]
-            FiIcon::FiHeadphones => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M3 18v-6a9 9 0 0 1 18 0v6\" />\n<path d=\"M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z\" />",
-                }
-            }
+            FiIcon::FiHeadphones => &FI_HEADPHONES,
             #[cfg(feature = "FiHeart")]
-            FiIcon::FiHeart => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\" />",
-                }
-            }
+            FiIcon::FiHeart => &FI_HEART,
             #[cfg(feature = "FiHelpCircle")]
-            FiIcon::FiHelpCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\" />\n<line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />",
-                }
-            }
+            FiIcon::FiHelpCircle => &FI_HELP_CIRCLE,
             #[cfg(feature = "FiHexagon")]
-            FiIcon::FiHexagon => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />",
-                }
-            }
+            FiIcon::FiHexagon => &FI_HEXAGON,
             #[cfg(feature = "FiHome")]
-            FiIcon::FiHome => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\" />\n<polyline points=\"9 22 9 12 15 12 15 22\" />",
-                }
-            }
+            FiIcon::FiHome => &FI_HOME,
             #[cfg(feature = "FiImage")]
-            FiIcon::FiImage => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\" />\n<polyline points=\"21 15 16 10 5 21\" />",
-                }
-            }
+            FiIcon::FiImage => &FI_IMAGE,
             #[cfg(feature = "FiInbox")]
-            FiIcon::FiInbox => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"22 12 16 12 14 15 10 15 8 12 2 12\" />\n<path d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />",
-                }
-            }
+            FiIcon::FiInbox => &FI_INBOX,
             #[cfg(feature = "FiInfo")]
-            FiIcon::FiInfo => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"8\" x2=\"12.01\" y2=\"8\" />",
-                }
-            }
+            FiIcon::FiInfo => &FI_INFO,
             #[cfg(feature = "FiInstagram")]
-            FiIcon::FiInstagram => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\" />\n<path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\" />\n<line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\" />",
-                }
-            }
+            FiIcon::FiInstagram => &FI_INSTAGRAM,
             #[cfg(feature = "FiItalic")]
-            FiIcon::FiItalic => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"19\" y1=\"4\" x2=\"10\" y2=\"4\" />\n<line x1=\"14\" y1=\"20\" x2=\"5\" y2=\"20\" />\n<line x1=\"15\" y1=\"4\" x2=\"9\" y2=\"20\" />",
-                }
-            }
+            FiIcon::FiItalic => &FI_ITALIC,
             #[cfg(feature = "FiKey")]
-            FiIcon::FiKey => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4\" />",
-                }
-            }
+            FiIcon::FiKey => &FI_KEY,
             #[cfg(feature = "FiLayers")]
-            FiIcon::FiLayers => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"12 2 2 7 12 12 22 7 12 2\" />\n<polyline points=\"2 17 12 22 22 17\" />\n<polyline points=\"2 12 12 17 22 12\" />",
-                }
-            }
+            FiIcon::FiLayers => &FI_LAYERS,
             #[cfg(feature = "FiLayout")]
-            FiIcon::FiLayout => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" />\n<line x1=\"9\" y1=\"21\" x2=\"9\" y2=\"9\" />",
-                }
-            }
+            FiIcon::FiLayout => &FI_LAYOUT,
             #[cfg(feature = "FiLifeBuoy")]
-            FiIcon::FiLifeBuoy => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"4\" />\n<line x1=\"4.93\" y1=\"4.93\" x2=\"9.17\" y2=\"9.17\" />\n<line x1=\"14.83\" y1=\"14.83\" x2=\"19.07\" y2=\"19.07\" />\n<line x1=\"14.83\" y1=\"9.17\" x2=\"19.07\" y2=\"4.93\" />\n<line x1=\"14.83\" y1=\"9.17\" x2=\"18.36\" y2=\"5.64\" />\n<line x1=\"4.93\" y1=\"19.07\" x2=\"9.17\" y2=\"14.83\" />",
-                }
-            }
+            FiIcon::FiLifeBuoy => &FI_LIFE_BUOY,
             #[cfg(feature = "FiLink")]
-            FiIcon::FiLink => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" />\n<path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" />",
-                }
-            }
+            FiIcon::FiLink => &FI_LINK,
             #[cfg(feature = "FiLink2")]
-            FiIcon::FiLink2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiLink2 => &FI_LINK2,
             #[cfg(feature = "FiLinkedin")]
-            FiIcon::FiLinkedin => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\" />\n<rect x=\"2\" y=\"9\" width=\"4\" height=\"12\" />\n<circle cx=\"4\" cy=\"4\" r=\"2\" />",
-                }
-            }
+            FiIcon::FiLinkedin => &FI_LINKEDIN,
             #[cfg(feature = "FiList")]
-            FiIcon::FiList => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"8\" y1=\"6\" x2=\"21\" y2=\"6\" />\n<line x1=\"8\" y1=\"12\" x2=\"21\" y2=\"12\" />\n<line x1=\"8\" y1=\"18\" x2=\"21\" y2=\"18\" />\n<line x1=\"3\" y1=\"6\" x2=\"3.01\" y2=\"6\" />\n<line x1=\"3\" y1=\"12\" x2=\"3.01\" y2=\"12\" />\n<line x1=\"3\" y1=\"18\" x2=\"3.01\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiList => &FI_LIST,
             #[cfg(feature = "FiLoader")]
-            FiIcon::FiLoader => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"6\" />\n<line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"22\" />\n<line x1=\"4.93\" y1=\"4.93\" x2=\"7.76\" y2=\"7.76\" />\n<line x1=\"16.24\" y1=\"16.24\" x2=\"19.07\" y2=\"19.07\" />\n<line x1=\"2\" y1=\"12\" x2=\"6\" y2=\"12\" />\n<line x1=\"18\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<line x1=\"4.93\" y1=\"19.07\" x2=\"7.76\" y2=\"16.24\" />\n<line x1=\"16.24\" y1=\"7.76\" x2=\"19.07\" y2=\"4.93\" />",
-                }
-            }
+            FiIcon::FiLoader => &FI_LOADER,
             #[cfg(feature = "FiLock")]
-            FiIcon::FiLock => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" />\n<path d=\"M7 11V7a5 5 0 0 1 10 0v4\" />",
-                }
-            }
+            FiIcon::FiLock => &FI_LOCK,
             #[cfg(feature = "FiLogIn")]
-            FiIcon::FiLogIn => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4\" />\n<polyline points=\"10 17 15 12 10 7\" />\n<line x1=\"15\" y1=\"12\" x2=\"3\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiLogIn => &FI_LOG_IN,
             #[cfg(feature = "FiLogOut")]
-            FiIcon::FiLogOut => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\" />\n<polyline points=\"16 17 21 12 16 7\" />\n<line x1=\"21\" y1=\"12\" x2=\"9\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiLogOut => &FI_LOG_OUT,
             #[cfg(feature = "FiMail")]
-            FiIcon::FiMail => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\" />\n<polyline points=\"22,6 12,13 2,6\" />",
-                }
-            }
+            FiIcon::FiMail => &FI_MAIL,
             #[cfg(feature = "FiMap")]
-            FiIcon::FiMap => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6\" />\n<line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"18\" />\n<line x1=\"16\" y1=\"6\" x2=\"16\" y2=\"22\" />",
-                }
-            }
+            FiIcon::FiMap => &FI_MAP,
             #[cfg(feature = "FiMapPin")]
-            FiIcon::FiMapPin => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\" />\n<circle cx=\"12\" cy=\"10\" r=\"3\" />",
-                }
-            }
+            FiIcon::FiMapPin => &FI_MAP_PIN,
             #[cfg(feature = "FiMaximize")]
-            FiIcon::FiMaximize => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3\" />",
-                }
-            }
+            FiIcon::FiMaximize => &FI_MAXIMIZE,
             #[cfg(feature = "FiMaximize2")]
-            FiIcon::FiMaximize2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"15 3 21 3 21 9\" />\n<polyline points=\"9 21 3 21 3 15\" />\n<line x1=\"21\" y1=\"3\" x2=\"14\" y2=\"10\" />\n<line x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiMaximize2 => &FI_MAXIMIZE2,
             #[cfg(feature = "FiMeh")]
-            FiIcon::FiMeh => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"8\" y1=\"15\" x2=\"16\" y2=\"15\" />\n<line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" />\n<line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />",
-                }
-            }
+            FiIcon::FiMeh => &FI_MEH,
             #[cfg(feature = "FiMenu")]
-            FiIcon::FiMenu => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" />\n<line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" />\n<line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiMenu => &FI_MENU,
             #[cfg(feature = "FiMessageCircle")]
-            FiIcon::FiMessageCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\" />",
-                }
-            }
+            FiIcon::FiMessageCircle => &FI_MESSAGE_CIRCLE,
             #[cfg(feature = "FiMessageSquare")]
-            FiIcon::FiMessageSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\" />",
-                }
-            }
+            FiIcon::FiMessageSquare => &FI_MESSAGE_SQUARE,
             #[cfg(feature = "FiMic")]
-            FiIcon::FiMic => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z\" />\n<path d=\"M19 10v2a7 7 0 0 1-14 0v-2\" />\n<line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" />\n<line x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiMic => &FI_MIC,
             #[cfg(feature = "FiMicOff")]
-            FiIcon::FiMicOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />\n<path d=\"M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6\" />\n<path d=\"M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23\" />\n<line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" />\n<line x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiMicOff => &FI_MIC_OFF,
             #[cfg(feature = "FiMinimize")]
-            FiIcon::FiMinimize => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3\" />",
-                }
-            }
+            FiIcon::FiMinimize => &FI_MINIMIZE,
             #[cfg(feature = "FiMinimize2")]
-            FiIcon::FiMinimize2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"4 14 10 14 10 20\" />\n<polyline points=\"20 10 14 10 14 4\" />\n<line x1=\"14\" y1=\"10\" x2=\"21\" y2=\"3\" />\n<line x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\" />",
-                }
-            }
+            FiIcon::FiMinimize2 => &FI_MINIMIZE2,
             #[cfg(feature = "FiMinus")]
-            FiIcon::FiMinus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiMinus => &FI_MINUS,
             #[cfg(feature = "FiMinusCircle")]
-            FiIcon::FiMinusCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiMinusCircle => &FI_MINUS_CIRCLE,
             #[cfg(feature = "FiMinusSquare")]
-            FiIcon::FiMinusSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiMinusSquare => &FI_MINUS_SQUARE,
             #[cfg(feature = "FiMonitor")]
-            FiIcon::FiMonitor => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" />\n<line x1=\"8\" y1=\"21\" x2=\"16\" y2=\"21\" />\n<line x1=\"12\" y1=\"17\" x2=\"12\" y2=\"21\" />",
-                }
-            }
+            FiIcon::FiMonitor => &FI_MONITOR,
             #[cfg(feature = "FiMoon")]
-            FiIcon::FiMoon => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\" />",
-                }
-            }
+            FiIcon::FiMoon => &FI_MOON,
             #[cfg(feature = "FiMoreHorizontal")]
-            FiIcon::FiMoreHorizontal => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"1\" />\n<circle cx=\"19\" cy=\"12\" r=\"1\" />\n<circle cx=\"5\" cy=\"12\" r=\"1\" />",
-                }
-            }
+            FiIcon::FiMoreHorizontal => &FI_MORE_HORIZONTAL,
             #[cfg(feature = "FiMoreVertical")]
-            FiIcon::FiMoreVertical => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"1\" />\n<circle cx=\"12\" cy=\"5\" r=\"1\" />\n<circle cx=\"12\" cy=\"19\" r=\"1\" />",
-                }
-            }
+            FiIcon::FiMoreVertical => &FI_MORE_VERTICAL,
             #[cfg(feature = "FiMousePointer")]
-            FiIcon::FiMousePointer => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z\" />\n<path d=\"M13 13l6 6\" />",
-                }
-            }
+            FiIcon::FiMousePointer => &FI_MOUSE_POINTER,
             #[cfg(feature = "FiMove")]
-            FiIcon::FiMove => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"5 9 2 12 5 15\" />\n<polyline points=\"9 5 12 2 15 5\" />\n<polyline points=\"15 19 12 22 9 19\" />\n<polyline points=\"19 9 22 12 19 15\" />\n<line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"22\" />",
-                }
-            }
+            FiIcon::FiMove => &FI_MOVE,
             #[cfg(feature = "FiMusic")]
-            FiIcon::FiMusic => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M9 18V5l12-2v13\" />\n<circle cx=\"6\" cy=\"18\" r=\"3\" />\n<circle cx=\"18\" cy=\"16\" r=\"3\" />",
-                }
-            }
+            FiIcon::FiMusic => &FI_MUSIC,
             #[cfg(feature = "FiNavigation")]
-            FiIcon::FiNavigation => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"3 11 22 2 13 21 11 13 3 11\" />",
-                }
-            }
+            FiIcon::FiNavigation => &FI_NAVIGATION,
             #[cfg(feature = "FiNavigation2")]
-            FiIcon::FiNavigation2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"12 2 19 21 12 17 5 21 12 2\" />",
-                }
-            }
+            FiIcon::FiNavigation2 => &FI_NAVIGATION2,
             #[cfg(feature = "FiOctagon")]
-            FiIcon::FiOctagon => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />",
-                }
-            }
+            FiIcon::FiOctagon => &FI_OCTAGON,
             #[cfg(feature = "FiPackage")]
-            FiIcon::FiPackage => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"16.5\" y1=\"9.4\" x2=\"7.5\" y2=\"4.21\" />\n<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />\n<polyline points=\"3.27 6.96 12 12.01 20.73 6.96\" />\n<line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiPackage => &FI_PACKAGE,
             #[cfg(feature = "FiPaperclip")]
-            FiIcon::FiPaperclip => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\" />",
-                }
-            }
+            FiIcon::FiPaperclip => &FI_PAPERCLIP,
             #[cfg(feature = "FiPause")]
-            FiIcon::FiPause => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"6\" y=\"4\" width=\"4\" height=\"16\" />\n<rect x=\"14\" y=\"4\" width=\"4\" height=\"16\" />",
-                }
-            }
+            FiIcon::FiPause => &FI_PAUSE,
             #[cfg(feature = "FiPauseCircle")]
-            FiIcon::FiPauseCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"10\" y1=\"15\" x2=\"10\" y2=\"9\" />\n<line x1=\"14\" y1=\"15\" x2=\"14\" y2=\"9\" />",
-                }
-            }
+            FiIcon::FiPauseCircle => &FI_PAUSE_CIRCLE,
             #[cfg(feature = "FiPenTool")]
-            FiIcon::FiPenTool => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M12 19l7-7 3 3-7 7-3-3z\" />\n<path d=\"M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\" />\n<path d=\"M2 2l7.586 7.586\" />\n<circle cx=\"11\" cy=\"11\" r=\"2\" />",
-                }
-            }
+            FiIcon::FiPenTool => &FI_PEN_TOOL,
             #[cfg(feature = "FiPercent")]
-            FiIcon::FiPercent => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\" />\n<circle cx=\"6.5\" cy=\"6.5\" r=\"2.5\" />\n<circle cx=\"17.5\" cy=\"17.5\" r=\"2.5\" />",
-                }
-            }
+            FiIcon::FiPercent => &FI_PERCENT,
             #[cfg(feature = "FiPhone")]
-            FiIcon::FiPhone => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
-                }
-            }
+            FiIcon::FiPhone => &FI_PHONE,
             #[cfg(feature = "FiPhoneCall")]
-            FiIcon::FiPhoneCall => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
-                }
-            }
+            FiIcon::FiPhoneCall => &FI_PHONE_CALL,
             #[cfg(feature = "FiPhoneForwarded")]
-            FiIcon::FiPhoneForwarded => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"19 1 23 5 19 9\" />\n<line x1=\"15\" y1=\"5\" x2=\"23\" y2=\"5\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
-                }
-            }
+            FiIcon::FiPhoneForwarded => &FI_PHONE_FORWARDED,
             #[cfg(feature = "FiPhoneIncoming")]
-            FiIcon::FiPhoneIncoming => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"16 2 16 8 22 8\" />\n<line x1=\"23\" y1=\"1\" x2=\"16\" y2=\"8\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
-                }
-            }
+            FiIcon::FiPhoneIncoming => &FI_PHONE_INCOMING,
             #[cfg(feature = "FiPhoneMissed")]
-            FiIcon::FiPhoneMissed => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"23\" y1=\"1\" x2=\"17\" y2=\"7\" />\n<line x1=\"17\" y1=\"1\" x2=\"23\" y2=\"7\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
-                }
-            }
+            FiIcon::FiPhoneMissed => &FI_PHONE_MISSED,
             #[cfg(feature = "FiPhoneOff")]
-            FiIcon::FiPhoneOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91\" />\n<line x1=\"23\" y1=\"1\" x2=\"1\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiPhoneOff => &FI_PHONE_OFF,
             #[cfg(feature = "FiPhoneOutgoing")]
-            FiIcon::FiPhoneOutgoing => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"23 7 23 1 17 1\" />\n<line x1=\"16\" y1=\"8\" x2=\"23\" y2=\"1\" />\n<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />",
-                }
-            }
+            FiIcon::FiPhoneOutgoing => &FI_PHONE_OUTGOING,
             #[cfg(feature = "FiPieChart")]
-            FiIcon::FiPieChart => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\" />\n<path d=\"M22 12A10 10 0 0 0 12 2v10z\" />",
-                }
-            }
+            FiIcon::FiPieChart => &FI_PIE_CHART,
             #[cfg(feature = "FiPlay")]
-            FiIcon::FiPlay => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"5 3 19 12 5 21 5 3\" />",
-                }
-            }
+            FiIcon::FiPlay => &FI_PLAY,
             #[cfg(feature = "FiPlayCircle")]
-            FiIcon::FiPlayCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<polygon points=\"10 8 16 12 10 16 10 8\" />",
-                }
-            }
+            FiIcon::FiPlayCircle => &FI_PLAY_CIRCLE,
             #[cfg(feature = "FiPlus")]
-            FiIcon::FiPlus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\" />\n<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiPlus => &FI_PLUS,
             #[cfg(feature = "FiPlusCircle")]
-            FiIcon::FiPlusCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiPlusCircle => &FI_PLUS_CIRCLE,
             #[cfg(feature = "FiPlusSquare")]
-            FiIcon::FiPlusSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />\n<line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiPlusSquare => &FI_PLUS_SQUARE,
             #[cfg(feature = "FiPocket")]
-            FiIcon::FiPocket => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z\" />\n<polyline points=\"8 10 12 14 16 10\" />",
-                }
-            }
+            FiIcon::FiPocket => &FI_POCKET,
             #[cfg(feature = "FiPower")]
-            FiIcon::FiPower => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M18.36 6.64a9 9 0 1 1-12.73 0\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiPower => &FI_POWER,
             #[cfg(feature = "FiPrinter")]
-            FiIcon::FiPrinter => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"6 9 6 2 18 2 18 9\" />\n<path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\" />\n<rect x=\"6\" y=\"14\" width=\"12\" height=\"8\" />",
-                }
-            }
+            FiIcon::FiPrinter => &FI_PRINTER,
             #[cfg(feature = "FiRadio")]
-            FiIcon::FiRadio => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"2\" />\n<path d=\"M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14\" />",
-                }
-            }
+            FiIcon::FiRadio => &FI_RADIO,
             #[cfg(feature = "FiRefreshCcw")]
-            FiIcon::FiRefreshCcw => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"1 4 1 10 7 10\" />\n<polyline points=\"23 20 23 14 17 14\" />\n<path d=\"M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15\" />",
-                }
-            }
+            FiIcon::FiRefreshCcw => &FI_REFRESH_CCW,
             #[cfg(feature = "FiRefreshCw")]
-            FiIcon::FiRefreshCw => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"23 4 23 10 17 10\" />\n<polyline points=\"1 20 1 14 7 14\" />\n<path d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\" />",
-                }
-            }
+            FiIcon::FiRefreshCw => &FI_REFRESH_CW,
             #[cfg(feature = "FiRepeat")]
-            FiIcon::FiRepeat => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"17 1 21 5 17 9\" />\n<path d=\"M3 11V9a4 4 0 0 1 4-4h14\" />\n<polyline points=\"7 23 3 19 7 15\" />\n<path d=\"M21 13v2a4 4 0 0 1-4 4H3\" />",
-                }
-            }
+            FiIcon::FiRepeat => &FI_REPEAT,
             #[cfg(feature = "FiRewind")]
-            FiIcon::FiRewind => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"11 19 2 12 11 5 11 19\" />\n<polygon points=\"22 19 13 12 22 5 22 19\" />",
-                }
-            }
+            FiIcon::FiRewind => &FI_REWIND,
             #[cfg(feature = "FiRotateCcw")]
-            FiIcon::FiRotateCcw => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"1 4 1 10 7 10\" />\n<path d=\"M3.51 15a9 9 0 1 0 2.13-9.36L1 10\" />",
-                }
-            }
+            FiIcon::FiRotateCcw => &FI_ROTATE_CCW,
             #[cfg(feature = "FiRotateCw")]
-            FiIcon::FiRotateCw => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"23 4 23 10 17 10\" />\n<path d=\"M20.49 15a9 9 0 1 1-2.12-9.36L23 10\" />",
-                }
-            }
+            FiIcon::FiRotateCw => &FI_ROTATE_CW,
             #[cfg(feature = "FiRss")]
-            FiIcon::FiRss => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M4 11a9 9 0 0 1 9 9\" />\n<path d=\"M4 4a16 16 0 0 1 16 16\" />\n<circle cx=\"5\" cy=\"19\" r=\"1\" />",
-                }
-            }
+            FiIcon::FiRss => &FI_RSS,
             #[cfg(feature = "FiSave")]
-            FiIcon::FiSave => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\" />\n<polyline points=\"17 21 17 13 7 13 7 21\" />\n<polyline points=\"7 3 7 8 15 8\" />",
-                }
-            }
+            FiIcon::FiSave => &FI_SAVE,
             #[cfg(feature = "FiScissors")]
-            FiIcon::FiScissors => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"6\" cy=\"6\" r=\"3\" />\n<circle cx=\"6\" cy=\"18\" r=\"3\" />\n<line x1=\"20\" y1=\"4\" x2=\"8.12\" y2=\"15.88\" />\n<line x1=\"14.47\" y1=\"14.48\" x2=\"20\" y2=\"20\" />\n<line x1=\"8.12\" y1=\"8.12\" x2=\"12\" y2=\"12\" />",
-                }
-            }
+            FiIcon::FiScissors => &FI_SCISSORS,
             #[cfg(feature = "FiSearch")]
-            FiIcon::FiSearch => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"11\" cy=\"11\" r=\"8\" />\n<line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />",
-                }
-            }
+            FiIcon::FiSearch => &FI_SEARCH,
             #[cfg(feature = "FiSend")]
-            FiIcon::FiSend => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\" />\n<polygon points=\"22 2 15 22 11 13 2 9 22 2\" />",
-                }
-            }
+            FiIcon::FiSend => &FI_SEND,
             #[cfg(feature = "FiServer")]
-            FiIcon::FiServer => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"2\" y=\"2\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" />\n<rect x=\"2\" y=\"14\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" />\n<line x1=\"6\" y1=\"6\" x2=\"6.01\" y2=\"6\" />\n<line x1=\"6\" y1=\"18\" x2=\"6.01\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiServer => &FI_SERVER,
             #[cfg(feature = "FiSettings")]
-            FiIcon::FiSettings => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"3\" />\n<path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z\" />",
-                }
-            }
+            FiIcon::FiSettings => &FI_SETTINGS,
             #[cfg(feature = "FiShare")]
-            FiIcon::FiShare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\" />\n<polyline points=\"16 6 12 2 8 6\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiShare => &FI_SHARE,
             #[cfg(feature = "FiShare2")]
-            FiIcon::FiShare2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"18\" cy=\"5\" r=\"3\" />\n<circle cx=\"6\" cy=\"12\" r=\"3\" />\n<circle cx=\"18\" cy=\"19\" r=\"3\" />\n<line x1=\"8.59\" y1=\"13.51\" x2=\"15.42\" y2=\"17.49\" />\n<line x1=\"15.41\" y1=\"6.51\" x2=\"8.59\" y2=\"10.49\" />",
-                }
-            }
+            FiIcon::FiShare2 => &FI_SHARE2,
             #[cfg(feature = "FiShield")]
-            FiIcon::FiShield => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" />",
-                }
-            }
+            FiIcon::FiShield => &FI_SHIELD,
             #[cfg(feature = "FiShieldOff")]
-            FiIcon::FiShieldOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18\" />\n<path d=\"M4.73 4.73L4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiShieldOff => &FI_SHIELD_OFF,
             #[cfg(feature = "FiShoppingBag")]
-            FiIcon::FiShoppingBag => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\" />\n<line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" />\n<path d=\"M16 10a4 4 0 0 1-8 0\" />",
-                }
-            }
+            FiIcon::FiShoppingBag => &FI_SHOPPING_BAG,
             #[cfg(feature = "FiShoppingCart")]
-            FiIcon::FiShoppingCart => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"9\" cy=\"21\" r=\"1\" />\n<circle cx=\"20\" cy=\"21\" r=\"1\" />\n<path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\" />",
-                }
-            }
+            FiIcon::FiShoppingCart => &FI_SHOPPING_CART,
             #[cfg(feature = "FiShuffle")]
-            FiIcon::FiShuffle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"16 3 21 3 21 8\" />\n<line x1=\"4\" y1=\"20\" x2=\"21\" y2=\"3\" />\n<polyline points=\"21 16 21 21 16 21\" />\n<line x1=\"15\" y1=\"15\" x2=\"21\" y2=\"21\" />\n<line x1=\"4\" y1=\"4\" x2=\"9\" y2=\"9\" />",
-                }
-            }
+            FiIcon::FiShuffle => &FI_SHUFFLE,
             #[cfg(feature = "FiSidebar")]
-            FiIcon::FiSidebar => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" />",
-                }
-            }
+            FiIcon::FiSidebar => &FI_SIDEBAR,
             #[cfg(feature = "FiSkipBack")]
-            FiIcon::FiSkipBack => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"19 20 9 12 19 4 19 20\" />\n<line x1=\"5\" y1=\"19\" x2=\"5\" y2=\"5\" />",
-                }
-            }
+            FiIcon::FiSkipBack => &FI_SKIP_BACK,
             #[cfg(feature = "FiSkipForward")]
-            FiIcon::FiSkipForward => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"5 4 15 12 5 20 5 4\" />\n<line x1=\"19\" y1=\"5\" x2=\"19\" y2=\"19\" />",
-                }
-            }
+            FiIcon::FiSkipForward => &FI_SKIP_FORWARD,
             #[cfg(feature = "FiSlack")]
-            FiIcon::FiSlack => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z\" />\n<path d=\"M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z\" />\n<path d=\"M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z\" />\n<path d=\"M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z\" />\n<path d=\"M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z\" />\n<path d=\"M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z\" />\n<path d=\"M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z\" />\n<path d=\"M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z\" />",
-                }
-            }
+            FiIcon::FiSlack => &FI_SLACK,
             #[cfg(feature = "FiSlash")]
-            FiIcon::FiSlash => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"4.93\" y1=\"4.93\" x2=\"19.07\" y2=\"19.07\" />",
-                }
-            }
+            FiIcon::FiSlash => &FI_SLASH,
             #[cfg(feature = "FiSliders")]
-            FiIcon::FiSliders => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"4\" y1=\"21\" x2=\"4\" y2=\"14\" />\n<line x1=\"4\" y1=\"10\" x2=\"4\" y2=\"3\" />\n<line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"12\" />\n<line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"3\" />\n<line x1=\"20\" y1=\"21\" x2=\"20\" y2=\"16\" />\n<line x1=\"20\" y1=\"12\" x2=\"20\" y2=\"3\" />\n<line x1=\"1\" y1=\"14\" x2=\"7\" y2=\"14\" />\n<line x1=\"9\" y1=\"8\" x2=\"15\" y2=\"8\" />\n<line x1=\"17\" y1=\"16\" x2=\"23\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiSliders => &FI_SLIDERS,
             #[cfg(feature = "FiSmartphone")]
-            FiIcon::FiSmartphone => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"2\" ry=\"2\" />\n<line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiSmartphone => &FI_SMARTPHONE,
             #[cfg(feature = "FiSmile")]
-            FiIcon::FiSmile => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<path d=\"M8 14s1.5 2 4 2 4-2 4-2\" />\n<line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" />\n<line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />",
-                }
-            }
+            FiIcon::FiSmile => &FI_SMILE,
             #[cfg(feature = "FiSpeaker")]
-            FiIcon::FiSpeaker => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" ry=\"2\" />\n<circle cx=\"12\" cy=\"14\" r=\"4\" />\n<line x1=\"12\" y1=\"6\" x2=\"12.01\" y2=\"6\" />",
-                }
-            }
+            FiIcon::FiSpeaker => &FI_SPEAKER,
             #[cfg(feature = "FiSquare")]
-            FiIcon::FiSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />",
-                }
-            }
+            FiIcon::FiSquare => &FI_SQUARE,
             #[cfg(feature = "FiStar")]
-            FiIcon::FiStar => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\" />",
-                }
-            }
+            FiIcon::FiStar => &FI_STAR,
             #[cfg(feature = "FiStopCircle")]
-            FiIcon::FiStopCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<rect x=\"9\" y=\"9\" width=\"6\" height=\"6\" />",
-                }
-            }
+            FiIcon::FiStopCircle => &FI_STOP_CIRCLE,
             #[cfg(feature = "FiSun")]
-            FiIcon::FiSun => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"5\" />\n<line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\" />\n<line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" />\n<line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\" />\n<line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\" />\n<line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\" />\n<line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\" />\n<line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\" />\n<line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\" />",
-                }
-            }
+            FiIcon::FiSun => &FI_SUN,
             #[cfg(feature = "FiSunrise")]
-            FiIcon::FiSunrise => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M17 18a5 5 0 0 0-10 0\" />\n<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"9\" />\n<line x1=\"4.22\" y1=\"10.22\" x2=\"5.64\" y2=\"11.64\" />\n<line x1=\"1\" y1=\"18\" x2=\"3\" y2=\"18\" />\n<line x1=\"21\" y1=\"18\" x2=\"23\" y2=\"18\" />\n<line x1=\"18.36\" y1=\"11.64\" x2=\"19.78\" y2=\"10.22\" />\n<line x1=\"23\" y1=\"22\" x2=\"1\" y2=\"22\" />\n<polyline points=\"8 6 12 2 16 6\" />",
-                }
-            }
+            FiIcon::FiSunrise => &FI_SUNRISE,
             #[cfg(feature = "FiSunset")]
-            FiIcon::FiSunset => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M17 18a5 5 0 0 0-10 0\" />\n<line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"2\" />\n<line x1=\"4.22\" y1=\"10.22\" x2=\"5.64\" y2=\"11.64\" />\n<line x1=\"1\" y1=\"18\" x2=\"3\" y2=\"18\" />\n<line x1=\"21\" y1=\"18\" x2=\"23\" y2=\"18\" />\n<line x1=\"18.36\" y1=\"11.64\" x2=\"19.78\" y2=\"10.22\" />\n<line x1=\"23\" y1=\"22\" x2=\"1\" y2=\"22\" />\n<polyline points=\"16 5 12 9 8 5\" />",
-                }
-            }
+            FiIcon::FiSunset => &FI_SUNSET,
             #[cfg(feature = "FiTable")]
-            FiIcon::FiTable => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18\" />",
-                }
-            }
+            FiIcon::FiTable => &FI_TABLE,
             #[cfg(feature = "FiTablet")]
-            FiIcon::FiTablet => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" ry=\"2\" />\n<line x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiTablet => &FI_TABLET,
             #[cfg(feature = "FiTag")]
-            FiIcon::FiTag => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z\" />\n<line x1=\"7\" y1=\"7\" x2=\"7.01\" y2=\"7\" />",
-                }
-            }
+            FiIcon::FiTag => &FI_TAG,
             #[cfg(feature = "FiTarget")]
-            FiIcon::FiTarget => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<circle cx=\"12\" cy=\"12\" r=\"6\" />\n<circle cx=\"12\" cy=\"12\" r=\"2\" />",
-                }
-            }
+            FiIcon::FiTarget => &FI_TARGET,
             #[cfg(feature = "FiTerminal")]
-            FiIcon::FiTerminal => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"4 17 10 11 4 5\" />\n<line x1=\"12\" y1=\"19\" x2=\"20\" y2=\"19\" />",
-                }
-            }
+            FiIcon::FiTerminal => &FI_TERMINAL,
             #[cfg(feature = "FiThermometer")]
-            FiIcon::FiThermometer => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z\" />",
-                }
-            }
+            FiIcon::FiThermometer => &FI_THERMOMETER,
             #[cfg(feature = "FiThumbsDown")]
-            FiIcon::FiThumbsDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17\" />",
-                }
-            }
+            FiIcon::FiThumbsDown => &FI_THUMBS_DOWN,
             #[cfg(feature = "FiThumbsUp")]
-            FiIcon::FiThumbsUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3\" />",
-                }
-            }
+            FiIcon::FiThumbsUp => &FI_THUMBS_UP,
             #[cfg(feature = "FiToggleLeft")]
-            FiIcon::FiToggleLeft => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"1\" y=\"5\" width=\"22\" height=\"14\" rx=\"7\" ry=\"7\" />\n<circle cx=\"8\" cy=\"12\" r=\"3\" />",
-                }
-            }
+            FiIcon::FiToggleLeft => &FI_TOGGLE_LEFT,
             #[cfg(feature = "FiToggleRight")]
-            FiIcon::FiToggleRight => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"1\" y=\"5\" width=\"22\" height=\"14\" rx=\"7\" ry=\"7\" />\n<circle cx=\"16\" cy=\"12\" r=\"3\" />",
-                }
-            }
+            FiIcon::FiToggleRight => &FI_TOGGLE_RIGHT,
             #[cfg(feature = "FiTool")]
-            FiIcon::FiTool => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\" />",
-                }
-            }
+            FiIcon::FiTool => &FI_TOOL,
             #[cfg(feature = "FiTrash")]
-            FiIcon::FiTrash => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"3 6 5 6 21 6\" />\n<path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" />",
-                }
-            }
+            FiIcon::FiTrash => &FI_TRASH,
             #[cfg(feature = "FiTrash2")]
-            FiIcon::FiTrash2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"3 6 5 6 21 6\" />\n<path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" />\n<line x1=\"10\" y1=\"11\" x2=\"10\" y2=\"17\" />\n<line x1=\"14\" y1=\"11\" x2=\"14\" y2=\"17\" />",
-                }
-            }
+            FiIcon::FiTrash2 => &FI_TRASH2,
             #[cfg(feature = "FiTrello")]
-            FiIcon::FiTrello => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<rect x=\"7\" y=\"7\" width=\"3\" height=\"9\" />\n<rect x=\"14\" y=\"7\" width=\"3\" height=\"5\" />",
-                }
-            }
+            FiIcon::FiTrello => &FI_TRELLO,
             #[cfg(feature = "FiTrendingDown")]
-            FiIcon::FiTrendingDown => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"23 18 13.5 8.5 8.5 13.5 1 6\" />\n<polyline points=\"17 18 23 18 23 12\" />",
-                }
-            }
+            FiIcon::FiTrendingDown => &FI_TRENDING_DOWN,
             #[cfg(feature = "FiTrendingUp")]
-            FiIcon::FiTrendingUp => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\" />\n<polyline points=\"17 6 23 6 23 12\" />",
-                }
-            }
+            FiIcon::FiTrendingUp => &FI_TRENDING_UP,
             #[cfg(feature = "FiTriangle")]
-            FiIcon::FiTriangle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\" />",
-                }
-            }
+            FiIcon::FiTriangle => &FI_TRIANGLE,
             #[cfg(feature = "FiTruck")]
-            FiIcon::FiTruck => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"1\" y=\"3\" width=\"15\" height=\"13\" />\n<polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\" />\n<circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\" />\n<circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\" />",
-                }
-            }
+            FiIcon::FiTruck => &FI_TRUCK,
             #[cfg(feature = "FiTv")]
-            FiIcon::FiTv => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"2\" y=\"7\" width=\"20\" height=\"15\" rx=\"2\" ry=\"2\" />\n<polyline points=\"17 2 12 7 7 2\" />",
-                }
-            }
+            FiIcon::FiTv => &FI_TV,
             #[cfg(feature = "FiTwitch")]
-            FiIcon::FiTwitch => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 2H3v16h5v4l4-4h5l4-4V2zM11 11V7M16 11V7\" />",
-                }
-            }
+            FiIcon::FiTwitch => &FI_TWITCH,
             #[cfg(feature = "FiTwitter")]
-            FiIcon::FiTwitter => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z\" />",
-                }
-            }
+            FiIcon::FiTwitter => &FI_TWITTER,
             #[cfg(feature = "FiType")]
-            FiIcon::FiType => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"4 7 4 4 20 4 20 7\" />\n<line x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\" />\n<line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\" />",
-                }
-            }
+            FiIcon::FiType => &FI_TYPE,
             #[cfg(feature = "FiUmbrella")]
-            FiIcon::FiUmbrella => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7\" />",
-                }
-            }
+            FiIcon::FiUmbrella => &FI_UMBRELLA,
             #[cfg(feature = "FiUnderline")]
-            FiIcon::FiUnderline => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3\" />\n<line x1=\"4\" y1=\"21\" x2=\"20\" y2=\"21\" />",
-                }
-            }
+            FiIcon::FiUnderline => &FI_UNDERLINE,
             #[cfg(feature = "FiUnlock")]
-            FiIcon::FiUnlock => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" />\n<path d=\"M7 11V7a5 5 0 0 1 9.9-1\" />",
-                }
-            }
+            FiIcon::FiUnlock => &FI_UNLOCK,
             #[cfg(feature = "FiUpload")]
-            FiIcon::FiUpload => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n<polyline points=\"17 8 12 3 7 8\" />\n<line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiUpload => &FI_UPLOAD,
             #[cfg(feature = "FiUploadCloud")]
-            FiIcon::FiUploadCloud => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"16 16 12 12 8 16\" />\n<line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\" />\n<path d=\"M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3\" />\n<polyline points=\"16 16 12 12 8 16\" />",
-                }
-            }
+            FiIcon::FiUploadCloud => &FI_UPLOAD_CLOUD,
             #[cfg(feature = "FiUser")]
-            FiIcon::FiUser => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\" />\n<circle cx=\"12\" cy=\"7\" r=\"4\" />",
-                }
-            }
+            FiIcon::FiUser => &FI_USER,
             #[cfg(feature = "FiUserCheck")]
-            FiIcon::FiUserCheck => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<polyline points=\"17 11 19 13 23 9\" />",
-                }
-            }
+            FiIcon::FiUserCheck => &FI_USER_CHECK,
             #[cfg(feature = "FiUserMinus")]
-            FiIcon::FiUserMinus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<line x1=\"23\" y1=\"11\" x2=\"17\" y2=\"11\" />",
-                }
-            }
+            FiIcon::FiUserMinus => &FI_USER_MINUS,
             #[cfg(feature = "FiUserPlus")]
-            FiIcon::FiUserPlus => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<line x1=\"20\" y1=\"8\" x2=\"20\" y2=\"14\" />\n<line x1=\"23\" y1=\"11\" x2=\"17\" y2=\"11\" />",
-                }
-            }
+            FiIcon::FiUserPlus => &FI_USER_PLUS,
             #[cfg(feature = "FiUserX")]
-            FiIcon::FiUserX => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"8.5\" cy=\"7\" r=\"4\" />\n<line x1=\"18\" y1=\"8\" x2=\"23\" y2=\"13\" />\n<line x1=\"23\" y1=\"8\" x2=\"18\" y2=\"13\" />",
-                }
-            }
+            FiIcon::FiUserX => &FI_USER_X,
             #[cfg(feature = "FiUsers")]
-            FiIcon::FiUsers => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" />\n<circle cx=\"9\" cy=\"7\" r=\"4\" />\n<path d=\"M23 21v-2a4 4 0 0 0-3-3.87\" />\n<path d=\"M16 3.13a4 4 0 0 1 0 7.75\" />",
-                }
-            }
+            FiIcon::FiUsers => &FI_USERS,
             #[cfg(feature = "FiVideo")]
-            FiIcon::FiVideo => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"23 7 16 12 23 17 23 7\" />\n<rect x=\"1\" y=\"5\" width=\"15\" height=\"14\" rx=\"2\" ry=\"2\" />",
-                }
-            }
+            FiIcon::FiVideo => &FI_VIDEO,
             #[cfg(feature = "FiVideoOff")]
-            FiIcon::FiVideoOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiVideoOff => &FI_VIDEO_OFF,
             #[cfg(feature = "FiVoicemail")]
-            FiIcon::FiVoicemail => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"5.5\" cy=\"11.5\" r=\"4.5\" />\n<circle cx=\"18.5\" cy=\"11.5\" r=\"4.5\" />\n<line x1=\"5.5\" y1=\"16\" x2=\"18.5\" y2=\"16\" />",
-                }
-            }
+            FiIcon::FiVoicemail => &FI_VOICEMAIL,
             #[cfg(feature = "FiVolume")]
-            FiIcon::FiVolume => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />",
-                }
-            }
+            FiIcon::FiVolume => &FI_VOLUME,
             #[cfg(feature = "FiVolume1")]
-            FiIcon::FiVolume1 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n<path d=\"M15.54 8.46a5 5 0 0 1 0 7.07\" />",
-                }
-            }
+            FiIcon::FiVolume1 => &FI_VOLUME1,
             #[cfg(feature = "FiVolume2")]
-            FiIcon::FiVolume2 => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n<path d=\"M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07\" />",
-                }
-            }
+            FiIcon::FiVolume2 => &FI_VOLUME2,
             #[cfg(feature = "FiVolumeX")]
-            FiIcon::FiVolumeX => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />\n<line x1=\"23\" y1=\"9\" x2=\"17\" y2=\"15\" />\n<line x1=\"17\" y1=\"9\" x2=\"23\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiVolumeX => &FI_VOLUME_X,
             #[cfg(feature = "FiWatch")]
-            FiIcon::FiWatch => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"7\" />\n<polyline points=\"12 9 12 12 13.5 13.5\" />\n<path d=\"M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83\" />",
-                }
-            }
+            FiIcon::FiWatch => &FI_WATCH,
             #[cfg(feature = "FiWifi")]
-            FiIcon::FiWifi => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M5 12.55a11 11 0 0 1 14.08 0\" />\n<path d=\"M1.42 9a16 16 0 0 1 21.16 0\" />\n<path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" />\n<line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />",
-                }
-            }
+            FiIcon::FiWifi => &FI_WIFI,
             #[cfg(feature = "FiWifiOff")]
-            FiIcon::FiWifiOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />\n<path d=\"M16.72 11.06A10.94 10.94 0 0 1 19 12.55\" />\n<path d=\"M5 12.55a10.94 10.94 0 0 1 5.17-2.39\" />\n<path d=\"M10.71 5.05A16 16 0 0 1 22.58 9\" />\n<path d=\"M1.42 9a15.91 15.91 0 0 1 4.7-2.88\" />\n<path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" />\n<line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />",
-                }
-            }
+            FiIcon::FiWifiOff => &FI_WIFI_OFF,
             #[cfg(feature = "FiWind")]
-            FiIcon::FiWind => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2\" />",
-                }
-            }
+            FiIcon::FiWind => &FI_WIND,
             #[cfg(feature = "FiX")]
-            FiIcon::FiX => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\" />\n<line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\" />",
-                }
-            }
+            FiIcon::FiX => &FI_X,
             #[cfg(feature = "FiXCircle")]
-            FiIcon::FiXCircle => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"12\" cy=\"12\" r=\"10\" />\n<line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />\n<line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiXCircle => &FI_X_CIRCLE,
             #[cfg(feature = "FiXOctagon")]
-            FiIcon::FiXOctagon => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />\n<line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />\n<line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiXOctagon => &FI_X_OCTAGON,
             #[cfg(feature = "FiXSquare")]
-            FiIcon::FiXSquare => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />\n<line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />\n<line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />",
-                }
-            }
+            FiIcon::FiXSquare => &FI_X_SQUARE,
             #[cfg(feature = "FiYoutube")]
-            FiIcon::FiYoutube => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<path d=\"M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z\" />\n<polygon points=\"9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02\" />",
-                }
-            }
+            FiIcon::FiYoutube => &FI_YOUTUBE,
             #[cfg(feature = "FiZap")]
-            FiIcon::FiZap => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\" />",
-                }
-            }
+            FiIcon::FiZap => &FI_ZAP,
             #[cfg(feature = "FiZapOff")]
-            FiIcon::FiZapOff => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<polyline points=\"12.41 6.75 13 2 10.57 4.92\" />\n<polyline points=\"18.57 12.91 21 10 15.66 10\" />\n<polyline points=\"8 8 3 14 12 14 11 22 16 16\" />\n<line x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />",
-                }
-            }
+            FiIcon::FiZapOff => &FI_ZAP_OFF,
             #[cfg(feature = "FiZoomIn")]
-            FiIcon::FiZoomIn => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"11\" cy=\"11\" r=\"8\" />\n<line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />\n<line x1=\"11\" y1=\"8\" x2=\"11\" y2=\"14\" />\n<line x1=\"8\" y1=\"11\" x2=\"14\" y2=\"11\" />",
-                }
-            }
+            FiIcon::FiZoomIn => &FI_ZOOM_IN,
             #[cfg(feature = "FiZoomOut")]
-            FiIcon::FiZoomOut => {
-                leptos_icons_core::Data {
-                    style: None,
-                    x: None,
-                    y: None,
-                    width: Some("24"),
-                    height: Some("24"),
-                    view_box: Some("0 0 24 24"),
-                    stroke_linecap: Some("round"),
-                    stroke_linejoin: Some("round"),
-                    stroke_width: Some("2"),
-                    stroke: Some("currentColor"),
-                    fill: Some("none"),
-                    data: "<circle cx=\"11\" cy=\"11\" r=\"8\" />\n<line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />\n<line x1=\"8\" y1=\"11\" x2=\"14\" y2=\"11\" />",
-                }
-            }
+            FiIcon::FiZoomOut => &FI_ZOOM_OUT,
         }
     }
 }

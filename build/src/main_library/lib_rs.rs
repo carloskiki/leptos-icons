@@ -107,8 +107,8 @@ impl LibRs {
         });
 
         let data_impl = quote! {
-            impl leptos_icons_core::IconData for crate::#enum_ident {
-                fn data(self) -> leptos_icons_core::Data {
+            impl<'a> leptos_icons_core::IconData<'a> for crate::#enum_ident {
+                fn data(self) -> &'a leptos_icons_core::Data {
                     match self {
                         #(#data_impl_match_arms),*
                     }

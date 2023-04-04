@@ -1,5 +1,5 @@
-pub trait IconData {
-    fn data(self) -> Data;
+pub trait IconData<'a> {
+    fn data(self) -> &'a Data;
 }
 
 pub struct Data {
@@ -20,7 +20,7 @@ pub struct Data {
 #[allow(non_snake_case)]
 pub fn LeptosIconCore(
     cx: leptos::Scope,
-    data: Data,
+    data: &Data,
     width: Option<String>,
     height: Option<String>,
     class: Option<String>,

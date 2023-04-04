@@ -84,8 +84,8 @@ pub enum Icon {
     #[cfg(feature = "Oc")]
     Oc(leptos_icons_oc::OcIcon),
 }
-impl leptos_icons_core::IconData for crate::Icon {
-    fn data(self) -> leptos_icons_core::Data {
+impl<'a> leptos_icons_core::IconData<'a> for crate::Icon {
+    fn data(self) -> &'a leptos_icons_core::Data {
         match self {
             #[cfg(feature = "Ai")]
             Self::Ai(icon) => leptos_icons_core::IconData::data(icon),

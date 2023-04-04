@@ -6,6 +6,7 @@ use quote::quote;
 use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
+use heck::ToShoutySnakeCase;
 
 use crate::icon::SvgIcon;
 
@@ -126,10 +127,12 @@ impl LibRs {
             feature_name: icon.feature.name.to_owned(),
         }).collect::<Vec<_>>();
 
-        let match_arms = icons.iter().map(|icon| {
+        let const_icon_data = icons.iter().map(|icon| {
             let feature_name = &icon.feature_name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
             let enum_ident = Ident::new(enum_name, Span::call_site());
+            let const_data_name = feature_name.to_shouty_snake_case();
+            let const_data_ident = Ident::new(&const_data_name, Span::call_site());
 
             fn quote_opt(value: &Option<String>) -> TokenStream {
                 match value {
@@ -153,7 +156,7 @@ impl LibRs {
 
             quote! {
                 #[cfg(feature = #feature_name)]
-                #enum_ident::#feature_ident => leptos_icons_core::Data {
+                const #const_data_ident: leptos_icons_core::Data = leptos_icons_core::Data {
                     style: #style,
                     x: #x,
                     y: #y,
@@ -166,15 +169,30 @@ impl LibRs {
                     stroke: #stroke,
                     fill: #fill,
                     data: #data,
-                }
+                };
+            }
+        });
+
+        let match_arms = icons.iter().map(|icon| {
+            let feature_name = &icon.feature_name;
+            let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
+            let enum_ident = Ident::new(enum_name, Span::call_site());
+            let const_data_name = feature_name.to_shouty_snake_case();
+            let const_data_ident = Ident::new(&const_data_name, Span::call_site());
+
+            quote! {
+                #[cfg(feature = #feature_name)]
+                #enum_ident::#feature_ident => &#const_data_ident
             }
         });
 
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
         let enum_impl = quote! {
-            impl leptos_icons_core::IconData for #enum_ident {
-                fn data(self) -> leptos_icons_core::Data {
+            #(#const_icon_data)*
+
+            impl<'a> leptos_icons_core::IconData<'a> for #enum_ident {
+                fn data(self) -> &'a leptos_icons_core::Data {
                     match self {
                         #(#match_arms),*
                     }
