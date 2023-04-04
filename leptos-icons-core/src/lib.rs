@@ -42,18 +42,18 @@ pub fn LeptosIconCore(
     if let Some(y) = data.y {
         svg = svg.attr("x", y);
     }
-    svg = match (width, data.width) {
-        (Some(a), Some(_b)) => svg.attr("width", a),
-        (Some(a), None) => svg.attr("width", a),
-        (None, Some(_b)) => svg.attr("width", "1em"),
-        (None, None) => svg.attr("width", "1em"),
-    };
-    svg = match (height, data.height) {
-        (Some(a), Some(_b)) => svg.attr("height", a),
-        (Some(a), None) => svg.attr("height", a),
-        (None, Some(_b)) => svg.attr("height", "1em"),
-        (None, None) => svg.attr("height", "1em"),
-    };
+    svg = svg.attr("width", leptos::Attribute::String(match (width, data.width) {
+        (Some(a), Some(_b)) => a,
+        (Some(a), None) => a,
+        (None, Some(_b)) => "1em".to_owned(),
+        (None, None) => "1em".to_owned(),
+    }));
+    svg = svg.attr("height", leptos::Attribute::String(match (height, data.height) {
+        (Some(a), Some(_b)) => a,
+        (Some(a), None) => a,
+        (None, Some(_b)) => "1em".to_owned(),
+        (None, None) => "1em".to_owned(),
+    }));
     if let Some(view_box) = data.view_box {
         svg = svg.attr("viewBox", view_box);
     }
