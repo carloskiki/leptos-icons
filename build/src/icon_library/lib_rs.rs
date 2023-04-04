@@ -129,8 +129,6 @@ impl LibRs {
 
         let const_icon_data = icons.iter().map(|icon| {
             let feature_name = &icon.feature_name;
-            let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
-            let enum_ident = Ident::new(enum_name, Span::call_site());
             let const_data_name = feature_name.to_shouty_snake_case();
             let const_data_ident = Ident::new(&const_data_name, Span::call_site());
 
