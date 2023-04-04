@@ -146,34 +146,39 @@ impl LibRs {
     pub fn build_component(
         component_name: &str,
         enum_name: &str,
+        icon_libs: &[IconLibrary]
     ) -> Result<String> {
         let component_ident = Ident::new(component_name, Span::call_site());
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
+        let features = icon_libs.iter().map(|lib| {
+            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
+            quote! {
+                feature = #lib_short_name,
+            }
+        });
+
         let component = quote! {
+            #[cfg(any(
+                #(#features)*
+            ))]
             #[leptos::component]
             pub fn #component_ident(
-                #[allow(unused)]
                 cx: leptos::Scope,
                 /// The icon to show.
                 #[prop(into)]
-                #[allow(unused)]
                 icon: crate::#enum_ident,
                 /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
                 #[prop(into, optional)]
-                #[allow(unused)]
                 width: Option<String>,
                 /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
                 #[prop(into, optional)]
-                #[allow(unused)]
                 height: Option<String>,
                 /// HTML class attribute.
                 #[prop(into, optional)]
-                #[allow(unused)]
                 class: Option<String>,
                 /// HTML style attribute.
                 #[prop(into, optional)]
-                #[allow(unused)]
                 style: Option<String>,
             ) -> impl leptos::IntoView {
                 leptos::IntoView::into_view(

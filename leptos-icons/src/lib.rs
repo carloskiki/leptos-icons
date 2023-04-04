@@ -219,29 +219,43 @@ impl From<OcIcon> for Icon {
     }
 }
 
+#[cfg(
+    any(
+        feature = "Ai",
+        feature = "Fa",
+        feature = "Wi",
+        feature = "Fi",
+        feature = "Vs",
+        feature = "Bs",
+        feature = "Bi",
+        feature = "Im",
+        feature = "Io",
+        feature = "Ri",
+        feature = "Si",
+        feature = "Ti",
+        feature = "Hi",
+        feature = "Cg",
+        feature = "Tb",
+        feature = "Oc",
+    )
+)]
 #[leptos::component]
 pub fn LeptosIcon(
-    #[allow(unused)]
     cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
-    #[allow(unused)]
     icon: crate::Icon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    #[allow(unused)]
     width: Option<String>,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    #[allow(unused)]
     height: Option<String>,
     /// HTML class attribute.
     #[prop(into, optional)]
-    #[allow(unused)]
     class: Option<String>,
     /// HTML style attribute.
     #[prop(into, optional)]
-    #[allow(unused)]
     style: Option<String>,
 ) -> impl leptos::IntoView {
     leptos::IntoView::into_view(

@@ -73,6 +73,7 @@ impl MainLibrary {
             .write(LibRs::build_component(
                 &self.component_name(),
                 &self.enum_name(),
+                &icon_libs,
             )?)
             .await?;
 
