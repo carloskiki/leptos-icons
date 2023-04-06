@@ -3,12 +3,9 @@ name = "leptos-icons-core"
 version = "0.0.1"
 authors = ["Charles Edward Gagnon"]
 edition = "2021"
-description = "Icons library for the leptos web framework"
+description = "Provides a common type for representing svg icon data"
 readme = "./README.md"
 repository = "https://github.com/Carlosted/leptos-icons"
 license = "MIT"
-keywords = ["leptos", "icons"]
+keywords = ["icons"]
 categories = ["web-programming"]
-
-[dependencies]
-leptos = { version = "0.2.5", default-features = false }
