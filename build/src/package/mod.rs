@@ -1,4 +1,5 @@
 use anyhow::Result;
+use snafu::{prelude::*, Backtrace};
 use std::{borrow::Cow, marker::PhantomData, path::PathBuf};
 use strum::{EnumIter, IntoEnumIterator};
 use tracing::{info, instrument};
@@ -9,6 +10,32 @@ mod reader;
 
 /// Name of the directory, relative to the root of this crate, to which all icon packages should be downloaded.
 const DOWNLOAD_DIR: &str = "downloads";
+
+#[derive(Debug, Snafu)]
+pub(crate) enum Error {
+    #[snafu(display("Could not perform 'git checkout' {path:?}"))]
+    GitCheckout {
+        source: git::Error,
+        target: GitTarget,
+        path: PathBuf,
+        backtrace: Backtrace,
+    },
+    #[snafu(display("Could not perform 'git clone' {path:?}"))]
+    GitClone {
+        source: git::Error,
+        url: String,
+        target: GitTarget,
+        path: PathBuf,
+        backtrace: Backtrace,
+    },
+    #[snafu(display("Could not perform 'git clone --no-checkout' {path:?}"))]
+    GitCloneWithoutCheckout {
+        source: git::Error,
+        url: String,
+        path: PathBuf,
+        backtrace: Backtrace,
+    },
+}
 
 #[derive(Debug, Clone)]
 pub(crate) struct Package<S> {
@@ -57,7 +84,7 @@ impl Package<Unknown> {
     }
 
     #[instrument(level = "info")]
-    pub fn download(self) -> Result<Package<Downloaded>> {
+    pub fn download(self) -> Result<Package<Downloaded>, Error> {
         let download_path = self.download_path();
         info!(?download_path, "Downloading...");
 
@@ -65,17 +92,36 @@ impl Package<Unknown> {
             PackageSource::Git { url, target } => {
                 if download_path.exists() {
                     info!(?download_path, "Directory exists. Assuming git repository.");
-                    git::checkout(target, &download_path)?;
+                    git::checkout(target, &download_path).with_context(|_| GitCheckoutSnafu {
+                        target: target.clone(),
+                        path: download_path.clone(),
+                    })?;
                 } else {
                     info!(
                         ?download_path,
                         "Directory does not exist. Cloning the repository."
                     );
-                    git::clone(url, target, &download_path).or_else(|_err| {
-                        info!("Direct clone unsuccessful. Trying clone with checkout...");
-                        git::clone_without_checkout(url, &download_path)?;
-                        git::checkout(target, &download_path)
-                    })?;
+                    git::clone(url, target, &download_path)
+                        .with_context(|_| GitCloneSnafu {
+                            url: url.clone(),
+                            target: target.clone(),
+                            path: download_path.clone(),
+                        })
+                        .or_else(|_err| {
+                            info!("Direct clone unsuccessful. Trying clone with checkout...");
+                            git::clone_without_checkout(url, &download_path).with_context(
+                                |_| GitCloneWithoutCheckoutSnafu {
+                                    url: url.clone(),
+                                    path: download_path.clone(),
+                                },
+                            )?;
+                            git::checkout(target, &download_path).with_context(|_| {
+                                GitCheckoutSnafu {
+                                    target: target.clone(),
+                                    path: download_path.clone(),
+                                }
+                            })
+                        })?;
                 }
             }
         };

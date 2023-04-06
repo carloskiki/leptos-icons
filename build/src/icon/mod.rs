@@ -2,13 +2,9 @@ use std::{fmt::Display, path::Path, str::FromStr};
 
 use anyhow::Result;
 use heck::ToPascalCase;
-use proc_macro2::{Ident, Span, TokenStream};
-use quote::quote;
-use xml::attribute::OwnedAttribute;
 
 use crate::{
     feature::Feature,
-    leptos::LeptosComponent,
     package::{Downloaded, Package, PackageType},
 };
 
@@ -16,7 +12,7 @@ use self::svg::ParsedSvg;
 
 mod svg;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub(crate) struct SvgIcon {
     pub svg: svg::ParsedSvg,
     pub categories: Vec<Category>,
@@ -56,106 +52,6 @@ impl SvgIcon {
             feature,
         })
     }
-
-    /// This creates the Rust code for a leptos component representing a single icon.
-    /// Feature-gated by the given feature name.
-    ///
-    /// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, use `::leptos::...` wherever possible and remove `use leptos::*` in main.rs.
-    pub(crate) fn create_leptos_icon_component(&self) -> Result<LeptosComponent> {
-        let feature_name: &str = &self.feature.name;
-        let component_name: &str = &self.feature.name;
-
-        let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
-        let component_ident = Ident::new(component_name, Span::call_site());
-        let svg_content: TokenStream =
-            self.svg.content.parse().map_err(|err| {
-                anyhow::anyhow!("Error parsing svg content into TokenStream: {err}")
-            })?;
-
-        let x_attribute = attribute_token_stream(&self.svg.svg_attributes.x)?;
-        let y_attribute = attribute_token_stream(&self.svg.svg_attributes.y)?;
-        let view_box_attribute = attribute_token_stream(&self.svg.svg_attributes.view_box)?;
-        let stroke_linecap_attribute =
-            attribute_token_stream(&self.svg.svg_attributes.stroke_linecap)?;
-        let stroke_linejoin_attribute =
-            attribute_token_stream(&self.svg.svg_attributes.stroke_linejoin)?;
-        let stroke_width_attribute = attribute_token_stream(&self.svg.svg_attributes.stroke_width)?;
-        // We are fine is stroke is not set for the svg.
-        let stroke_attribute = attribute_token_stream(&self.svg.svg_attributes.stroke)?;
-        // Fill should most likely always default to use the "currentColor".
-        let fill_attribute = attribute_token_stream_opt(&self.svg.svg_attributes.fill)?
-            .unwrap_or_else(|| quote!(fill = "currentColor"));
-        let style_attribute = self
-            .svg
-            .svg_attributes
-            .style
-            .clone()
-            .map(|it| it.value)
-            .unwrap_or_default();
-        // role="graphics-symbol" should be used for icons.
-        let role_attribute = attribute_token_stream_opt(&self.svg.svg_attributes.role)?
-            .unwrap_or_else(|| quote!(role = "graphics-symbol"));
-
-        let style_format_string = format!("{style_attribute} {{}}");
-
-        let tokens = quote! {
-            #[cfg(feature = #feature_name)]
-            #[doc = #doc_comment]
-            #[component]
-            pub fn #component_ident(
-                cx: Scope,
-                /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
-                #[prop(into, optional, default = String::from("1em"))]
-                width: String,
-                /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
-                #[prop(into, optional, default = String::from("1em"))]
-                height: String,
-                /// HTML class attribute.
-                #[prop(into, optional)]
-                class: String,
-                /// Color of the icon. For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
-                #[prop(into, optional, default = String::from("currentColor"))]
-                color: String,
-                /// HTML style attribute.
-                #[prop(into, optional)]
-                style: String,
-                /// ARIA accessibility title.
-                #[prop(into, optional, default = String::from(#component_name))]
-                title: String,
-            ) -> impl IntoView {
-                view! { cx,
-                    // As of https://stackoverflow.com/questions/18467982/are-svg-parameters-such-as-xmlns-and-version-needed, version and namespace information is not required for an inline-svg.
-                    <svg
-                        class=class
-                        style=format!(#style_format_string, style)
-                        #x_attribute
-                        #y_attribute
-                        width=width
-                        height=height
-                        #view_box_attribute
-                        #stroke_linecap_attribute
-                        #stroke_linejoin_attribute
-                        #stroke_width_attribute
-                        #stroke_attribute
-                        #fill_attribute
-                        #role_attribute
-                    >
-                        // Title should be the first child!
-                        <title>{title}</title>
-                        #svg_content
-                    </svg>
-                }
-            }
-        };
-
-        let tokens_file: syn::File = syn::parse2(tokens)?;
-        Ok(LeptosComponent(prettyplease::unparse(&tokens_file)))
-    }
-}
-
-pub(crate) struct IconMetadata {
-    pub name: String, // Both the component and feature name!
-    pub categories: Vec<Category>,
 }
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
@@ -286,33 +182,4 @@ pub(crate) fn parse_raw_icon_name(
         }
         _ => (file_stem, None, None),
     }
-}
-
-fn attribute_token_stream_opt(attribute: &Option<OwnedAttribute>) -> Result<Option<TokenStream>> {
-    if let Some(attribute) = attribute {
-        let attribute_val = &attribute.value;
-        let attr_ident: TokenStream = attribute
-            .name
-            .local_name
-            .parse()
-            .map_err(|_| anyhow::anyhow!("could not convert attributes to token stream"))?;
-        Ok(Some(quote!(#attr_ident=#attribute_val)))
-    } else {
-        Ok(None)
-    }
-}
-
-fn attribute_token_stream(attribute: &Option<OwnedAttribute>) -> Result<TokenStream> {
-    attribute
-        .iter()
-        .map(|attribute| {
-            let attribute_val = &attribute.value;
-            let attr_ident: TokenStream = attribute
-                .name
-                .local_name
-                .parse()
-                .map_err(|_| anyhow::anyhow!("could not convert attributes to token stream"))?;
-            Ok(quote!(#attr_ident=#attribute_val))
-        })
-        .collect::<Result<TokenStream>>()
 }

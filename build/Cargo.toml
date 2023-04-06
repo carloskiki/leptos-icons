@@ -15,6 +15,7 @@ quote = "1"
 regex = "1"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+snafu = { version = "0.7", default_features = false, features = ["rust_1_61", "std", "backtraces", "backtraces-impl-std"] }
 strum = { version = "0.24", features = ["derive"] }
 syn = { version = "2", features = ["full"] }
 time = "0.3"

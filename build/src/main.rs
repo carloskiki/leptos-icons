@@ -1,19 +1,21 @@
 use anyhow::Result;
 use clap::{command, Parser};
-use tracing::info;
+use tracing::{error, info};
 use tracing_subscriber::filter::Targets;
 use tracing_subscriber::fmt::format::{Format, Pretty};
 use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::{Layer, Registry};
 
-use crate::library::Library;
+use crate::icon_library::IconLibrary;
+use crate::main_library::MainLibrary;
+use crate::package::Package;
 
 mod feature;
-mod icon;
-mod leptos;
 mod git;
-mod library;
+mod icon;
+mod icon_library;
+mod main_library;
 mod package;
 mod path;
 mod sem_ver;
@@ -43,13 +45,62 @@ async fn main() -> Result<()> {
 
     let start = time::OffsetDateTime::now_utc();
 
-    let lib = Library::new(path::leptos_icons_crate(""));
-    lib.generate(args.clean).await?;
+    let handles = Package::all()
+        .into_iter()
+        .map(|package| {
+            tokio::spawn(async move {
+                if args.clean {
+                    package.remove().await?;
+                }
+
+                // Download the package.
+                let package_type = package.ty;
+                let package = package.download().map_err(|err| {
+                    error!(
+                        ?package_type,
+                        ?err,
+                        "Downloading the package failed unexpectedly."
+                    );
+                    err
+                })?;
+
+                // Generate the library for that package.
+                let lib_name = format!("leptos-icons-{}", package.meta.short_name);
+                let lib_path = path::library_crate(&lib_name, "");
+                let mut lib = IconLibrary::new(package, lib_name, lib_path);
+
+                lib.generate().await?;
+
+                Ok::<IconLibrary, anyhow::Error>(lib)
+            })
+        })
+        .collect::<Vec<_>>();
+
+    let libs = {
+        let mut libs = Vec::new();
+        for handle in handles {
+            match handle.await.unwrap() {
+                Ok(lib) => libs.push(lib),
+                Err(err) => {
+                    error!(?err, "Could not process package successfully.");
+                    return Err(err);
+                }
+            }
+        }
+        libs
+    };
+
+    let num_libs = libs.len();
+
+    let lib_name = "leptos-icons".to_owned();
+    let lib_path = path::library_crate(&lib_name, "");
+    let mut main_lib = MainLibrary::new(lib_name, lib_path);
+    main_lib.generate(libs).await?;
 
     let end = time::OffsetDateTime::now_utc();
     info!(
         took = format!("{}s", (end - start).whole_seconds()),
-        "Build successful!"
+        num_libs, "Build successful!"
     );
 
     Ok(())
@@ -81,7 +132,7 @@ fn init_tracing(level: tracing::level_filters::LevelFilter) {
 /// This may prevent unwanted file operations in wrong directories.
 fn assert_paths() {
     let build_crate_root = path::build_crate("");
-    let leptos_icons_crate_root = path::leptos_icons_crate("");
+    let leptos_icons_crate_root = path::library_crate("leptos-icons", "");
     info!(?build_crate_root, "Using");
     info!(?leptos_icons_crate_root, "Using");
 

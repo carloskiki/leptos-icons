@@ -5,15 +5,27 @@ edition = "2021"
 
 [dependencies]
 leptos = { version = "0.2", default-features = false, features = ["csr"] }
+leptos_meta = { version = "0.2", default-features = false, features = ["csr"] }
+leptos_router = { version = "0.2", default-features = false, features = [
+    "csr",
+] }
 console_error_panic_hook = "0.1"
 console_log = "1"
 log = "0.4"
-leptos-icons = { path = "../../", features = [
-    "AiPushpinTwotone",
+
+leptos-icons = { path = "../..", default_features = false, features = [
+    "csr",
     "BiGraphql",
+    "BiFilePlusSolid",
     "Bs1Circle",
+    "BsFolder",
     "FaBarsSolid",
     "ImPagebreak",
     "ImPageBreak",
     "IoColorWand",
 ] }
+
+[profile.release]
+opt-level = "s"
+lto = "thin"
+debug = 0
