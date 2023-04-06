@@ -64,7 +64,7 @@ impl IconLibrary {
 
         trace!("Resetting library directory.");
         self.src_dir.reset().await?;
-        self.cargo_toml.reset(&self.name).await?;
+        self.cargo_toml.reset(&self.name, &self.package.meta.package_name).await?;
         self.readme_md.reset().await?;
         self.icons_md.reset().await?;
 

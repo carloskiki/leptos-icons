@@ -7,7 +7,7 @@ name = "leptos-icons-io"
 version = "0.0.1"
 authors = ["Charles Edward Gagnon"]
 edition = "2021"
-description = "Icons library for the leptos web framework"
+description = "Library providing SVG and corresponding metadata for \"Ionicons\""
 readme = "./README.md"
 repository = "https://github.com/Carlosted/leptos-icons"
 license = "MIT"
@@ -15,7 +15,6 @@ keywords = ["leptos", "icons"]
 categories = ["web-programming"]
 
 [dependencies]
-leptos = { version = "0.2.5", default-features = false }
 leptos-icons-core = { path = "../leptos-icons-core" }
 serde = { version = "1", features = ["derive"], optional = true }
 
