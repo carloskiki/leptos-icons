@@ -18,6 +18,7 @@ categories = ["web-programming"]
 leptos = { version = "0.2.5", default-features = false }
 leptos-icons-core = { path = "../leptos-icons-core" }
 serde = { version = "1", features = ["derive"], optional = true }
+tracing = { version = "0.1", optional = true }
 
 leptos-icons-ai = {  path = "../leptos-icons-ai", optional = true }
 leptos-icons-fa = {  path = "../leptos-icons-fa", optional = true }
@@ -37,6 +38,11 @@ leptos-icons-tb = {  path = "../leptos-icons-tb", optional = true }
 leptos-icons-oc = {  path = "../leptos-icons-oc", optional = true }
 
 [features]
+default = []
+csr = ["leptos/csr", "leptos/tracing", "dep:tracing"]
+hydrate = ["leptos/hydrate", "leptos/tracing", "dep:tracing"]
+ssr = ["leptos/ssr", "leptos/tracing", "dep:tracing"]
+stable = ["leptos/stable", "leptos/tracing", "dep:tracing"]
 serde = ["dep:serde"]
 
 Ai = []

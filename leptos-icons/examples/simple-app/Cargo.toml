@@ -5,12 +5,16 @@ edition = "2021"
 
 [dependencies]
 leptos = { version = "0.2", default-features = false, features = ["csr"] }
+leptos_meta = { version = "0.2", default-features = false, features = ["csr"] }
+leptos_router = { version = "0.2", default-features = false, features = [
+    "csr",
+] }
 console_error_panic_hook = "0.1"
 console_log = "1"
 log = "0.4"
 
 leptos-icons = { path = "../..", default_features = false, features = [
-    #"serde",
+    "csr",
     "BiGraphql",
     "BiFilePlusSolid",
     "Bs1Circle",

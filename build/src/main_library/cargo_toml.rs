@@ -110,6 +110,7 @@ impl CargoToml {
                 leptos = { version = "0.2.5", default-features = false }
                 leptos-icons-core = { path = "../leptos-icons-core" }
                 serde = { version = "1", features = ["derive"], optional = true }
+                tracing = { version = "0.1", optional = true }
 
             "#}
                 .as_bytes(),
@@ -146,6 +147,11 @@ impl CargoToml {
             .write_all(
                 indoc::indoc! {r#"
                 [features]
+                default = []
+                csr = ["leptos/csr", "leptos/tracing", "dep:tracing"]
+                hydrate = ["leptos/hydrate", "leptos/tracing", "dep:tracing"]
+                ssr = ["leptos/ssr", "leptos/tracing", "dep:tracing"]
+                stable = ["leptos/stable", "leptos/tracing", "dep:tracing"]
                 serde = ["dep:serde"]
 
             "#}
