@@ -1,11 +1,13 @@
 # Leptos-Icons
 
-This is the parent for
+This is the parent for the:
 
-| Crate                | Path          | Type | Description                            | README Link                       |
-| ---                  | ---           | ---  | ---                                    | ---                               |
-| leptos-icons-builder | /build        | bin  | Generates the `leptos-icons` library.  | [README](/build/README.md)        |
-| leptos-icons         | /leptos-icons | lib  | Actual library published on crates.io. | [README](/leptos-icons/README.md) |
+| Crate             | Path               | Type | Description                                      |
+| ---               | ---                | ---  | ---                                              |
+| builder           | /build             | bin  | Generates the `leptos-icons` library.            |
+| leptos-icons      | /leptos-icons      | lib  | Actual library published on crates.io.           |
+| leptos-icons-core | /leptos-icons-core | lib  | Helpers and utility functions                    |
+| leptos-icons-\*   | /leptos-icons-\*   | lib  | A library containing all icons from package "\*" |
 
 ## Executing commands
 

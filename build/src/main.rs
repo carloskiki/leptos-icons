@@ -20,12 +20,6 @@ mod package;
 mod path;
 mod sem_ver;
 
-// Missing support for:
-// - Docs
-// - props passing
-// - optimizing svgs
-// - ssr optimizations?
-
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
 struct BuildArgs {

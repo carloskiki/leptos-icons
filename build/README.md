@@ -4,11 +4,11 @@ This crate is the **generator** of the `leptos-icons` library living alongside t
 
 ## Usage
 
-Trigger a build with
+Once inside this directory, trigger a build with
 
     cargo run
 
-This will use the downloaded icon packages from the previous run, updating them when necessary, and generate the `leptos-icons` library crate.
+This will use the downloaded icon packages from the previous run, updating them when necessary, and generate the `leptos-icons` library crate along with individual icon crates (i.e. `leptos-icons-*`).
 
 Note that this is the default as this may greatly reduces the runtime of this crate.
 
@@ -22,11 +22,11 @@ This is the only possible argument right now. You can always check for other arg
 
 ## Notes
 
-The library crate is not generated completely from scratch. The following files and directories are touched.
+Each crate is not generated completely from scratch. The following files and directories are touched within each crate.
 
 | Path       | Changes  |
 | ---        | ---      |
-| src/*      | Replaced |
+| src/\*     | Replaced |
 | Cargo.toml | Replaced |
 | README.md  | Replaced |
 | ICONS.md   | Replaced |
