@@ -2,16 +2,18 @@
 
 Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
-- Please note that this crate is in very early developpement and may include [bugs](#contributing).
-- This crate is **heavily** inspired by the [solidjs-icons](https://github.com/x64Bits/solid-icons) library.
+- This crate is inspired by other frameworks' icon libraries such as [solidjs-icons](https://github.com/x64Bits/solid-icons),
+[yew_icons](https://github.com/finnbear/yew_icons),
+[dioxus-free-icons](https://github.com/nissy-dev/dioxus-free-icons),
+etc.
 
 ## Table of Contents
 
 - [Leptos-Icons](#leptos-icons)
-  - [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
-  - [Icon Packages](#icon-packages)
-  - [Contributing](#contributing)
+- [Table of Contents](#table-of-contents)
+- [Usage](#usage)
+- [Icon Packages](#icon-packages)
+- [Contributing](#contributing)
 
 ## Usage
 

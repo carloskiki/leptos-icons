@@ -3,13 +3,12 @@ use std::path::PathBuf;
 use anyhow::Result;
 use tracing::{info, instrument, trace};
 
-use crate::icon_library::IconLibrary;
+use crate::{icon_library::IconLibrary, readme_md::Readme};
 
-use self::{cargo_toml::CargoToml, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir};
+use self::{cargo_toml::CargoToml, lib_rs::LibRs, src_dir::SrcDir};
 
 mod cargo_toml;
 mod lib_rs;
-mod readme_md;
 mod src_dir;
 
 #[derive(Debug)]
@@ -17,7 +16,7 @@ pub(crate) struct MainLibrary {
     pub name: String,
     pub path: PathBuf,
     pub cargo_toml: CargoToml,
-    pub readme_md: Readme,
+    pub readme_md: Readme<MainLibrary>,
     pub src_dir: SrcDir,
 }
 
@@ -31,6 +30,7 @@ impl MainLibrary {
             },
             readme_md: Readme {
                 path: root.join("README.md"),
+                _phantom: std::marker::PhantomData,
             },
             src_dir: SrcDir {
                 path: root.join("src"),
@@ -78,9 +78,7 @@ impl MainLibrary {
             .await?;
 
         trace!("Writing README.md.");
-        self.readme_md.write_usage().await?;
-        self.readme_md.write_package_table().await?;
-        self.readme_md.write_contribution().await?;
+        self.readme_md.write_readme().await?;
 
         info!("Library generated.");
         Ok(())

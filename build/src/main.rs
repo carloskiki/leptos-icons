@@ -19,6 +19,7 @@ mod main_library;
 mod package;
 mod path;
 mod sem_ver;
+mod readme_md;
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]

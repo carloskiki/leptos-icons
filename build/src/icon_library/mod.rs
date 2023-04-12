@@ -7,15 +7,14 @@ use tracing::{error, info, instrument, trace};
 use crate::{
     icon::SvgIcon,
     icon_library::{
-        cargo_toml::CargoToml, icons_md::Icons, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir,
+        cargo_toml::CargoToml, icons_md::Icons, lib_rs::LibRs, src_dir::SrcDir,
     },
-    package::{Downloaded, Package},
+    package::{Downloaded, Package}, readme_md::Readme,
 };
 
 mod cargo_toml;
 mod icons_md;
 mod lib_rs;
-mod readme_md;
 mod src_dir;
 
 #[derive(Debug)]
@@ -24,7 +23,7 @@ pub(crate) struct IconLibrary {
     pub name: String,
     pub path: PathBuf,
     pub cargo_toml: CargoToml,
-    pub readme_md: Readme,
+    pub readme_md: Readme<IconLibrary>,
     pub icons_md: Icons,
     pub src_dir: SrcDir,
     pub icons: Vec<SvgIcon>,
@@ -41,6 +40,7 @@ impl IconLibrary {
             },
             readme_md: Readme {
                 path: root.join("README.md"),
+                _phantom: std::marker::PhantomData,
             },
             icons_md: Icons {
                 path: root.join("ICONS.md"),
@@ -92,9 +92,7 @@ impl IconLibrary {
         self.cargo_toml.append_features(&self.icons).await?;
 
         trace!("Writing README.md.");
-        self.readme_md.write_usage().await?;
-        self.readme_md.write_package_table().await?;
-        self.readme_md.write_contribution().await?;
+        self.readme_md.write_readme(&self.package.meta).await?;
 
         trace!("Writing ICONS.md.");
         self.icons_md
