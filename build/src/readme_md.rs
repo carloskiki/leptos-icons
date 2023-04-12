@@ -4,7 +4,11 @@ use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, instrument, trace};
 
-use crate::{package::{GitTarget, Package, PackageMetadata, PackageSource}, main_library::MainLibrary, icon_library::IconLibrary};
+use crate::{
+    icon_library::IconLibrary,
+    main_library::MainLibrary,
+    package::{GitTarget, Package, PackageMetadata, PackageSource},
+};
 
 #[derive(Debug)]
 pub(crate) struct Readme<T> {
@@ -278,7 +282,6 @@ impl Readme<MainLibrary> {
 impl Readme<IconLibrary> {
     pub(crate) async fn write_readme(&self, package_meta: &PackageMetadata) -> Result<()> {
         self.write_header(package_meta).await?;
-        self.write_usage(package_meta).await?;
         self.write_contribution().await?;
 
         Ok(())
@@ -291,42 +294,15 @@ impl Readme<IconLibrary> {
             r#"
             # Leptos-Icons-{short_name}
 
-            Add icons from the {} library into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+            Icon data from the {} library. Every icon is packaged as its own cargo feature to reduce build times.
 
-            ## Table of Contents
-
-            - [Leptos-Icons-{short_name}](#leptos-icons-{short_name})
-              - [Table of Contents](#table-of-contents)
-              - [Usage](#usage)
-              - [Contributing](#contributing)
+            This crate cannot be used on its own. It is only a crate containing data for its icon library.
 
             "#,
             package_meta.package_name
         );
 
         self.write_section(&header).await
-    }
-
-    async fn write_usage(&self, package_meta: &PackageMetadata) -> Result<()> {
-        trace!("Writing usage section.");
-        let usage = formatdoc!(
-            r#"
-            ## Usage
-
-            To use this crate, it is currently required to use Git linking, as it is not published to crates.io.
-            Use icons by specifying their feature names. It is recommended to use the main crate `leptos-icons` instead.
-
-            ```toml
-            [dependencies]
-            # ...
-            leptos-icons-{} = {{ git = "https://github.com/Carlosted/leptos-icons.git" features = ["..."] }}
-            ```
-
-        "#,
-            package_meta.short_name
-        );
-
-        self.write_section(&usage).await
     }
 }
 

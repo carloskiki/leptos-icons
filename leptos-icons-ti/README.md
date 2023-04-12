@@ -1,24 +1,8 @@
 # Leptos-Icons-ti
 
-Add icons from the Typicons library into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+Icon data from the Typicons library. Every icon is packaged as its own cargo feature to reduce build times.
 
-## Table of Contents
-
-- [Leptos-Icons-ti](#leptos-icons-ti)
-  - [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-
-## Usage
-
-To use this crate, it is currently required to use Git linking, as it is not published to crates.io.
-Use icons by specifying their feature names. It is recommended to use the main crate `leptos-icons` instead.
-
-```toml
-[dependencies]
-# ...
-leptos-icons-ti = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["..."] }
-```
+This crate cannot be used on its own. It is only a crate containing data for its icon library.
 
 ## Contributing
 
