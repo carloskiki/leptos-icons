@@ -20,6 +20,7 @@ mod package;
 mod path;
 mod sem_ver;
 mod readme_md;
+mod cargo_toml;
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -87,9 +88,8 @@ async fn main() -> Result<()> {
 
     let num_libs = libs.len();
 
-    let lib_name = "leptos-icons".to_owned();
-    let lib_path = path::library_crate(&lib_name, "");
-    let mut main_lib = MainLibrary::new(lib_name, lib_path);
+    let lib_path = path::library_crate("leptos-icons", "");
+    let mut main_lib = MainLibrary::new(lib_path);
     main_lib.generate(libs).await?;
 
     let end = time::OffsetDateTime::now_utc();

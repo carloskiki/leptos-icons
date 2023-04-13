@@ -3,30 +3,28 @@ use std::path::PathBuf;
 use anyhow::Result;
 use tracing::{info, instrument, trace};
 
-use crate::{icon_library::IconLibrary, readme_md::Readme};
+use crate::{icon_library::IconLibrary, readme_md::Readme, cargo_toml::CargoToml};
 
-use self::{cargo_toml::CargoToml, lib_rs::LibRs, src_dir::SrcDir};
+use self::{lib_rs::LibRs, src_dir::SrcDir};
 
-mod cargo_toml;
 mod lib_rs;
 mod src_dir;
 
 #[derive(Debug)]
 pub(crate) struct MainLibrary {
-    pub name: String,
     pub path: PathBuf,
-    pub cargo_toml: CargoToml,
+    pub cargo_toml: CargoToml<MainLibrary>,
     pub readme_md: Readme<MainLibrary>,
     pub src_dir: SrcDir,
 }
 
 impl MainLibrary {
-    pub fn new(name: String, root: PathBuf) -> Self {
+    pub fn new(root: PathBuf) -> Self {
         Self {
-            name,
             path: root.clone(),
             cargo_toml: CargoToml {
                 path: root.join("Cargo.toml"),
+                _phantom: std::marker::PhantomData,
             },
             readme_md: Readme {
                 path: root.join("README.md"),
@@ -51,11 +49,7 @@ impl MainLibrary {
         trace!("Resetting library directory.");
         self.src_dir.reset().await?;
         self.cargo_toml.reset().await?;
-        self.cargo_toml.write_package_section(&self.name).await?;
-        self.cargo_toml
-            .write_dependencies_section(&icon_libs)
-            .await?;
-        self.cargo_toml.write_features_section(&icon_libs).await?;
+        self.cargo_toml.write_cargo_toml(&icon_libs).await?;
         self.readme_md.reset().await?;
 
         self.src_dir

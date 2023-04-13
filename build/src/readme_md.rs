@@ -36,7 +36,7 @@ impl<T: std::fmt::Debug> Readme<T> {
     }
 
     #[instrument(level = "info")]
-    pub async fn reset(&self) -> Result<()> {
+    pub(crate) async fn reset(&self) -> Result<()> {
         if self.path.exists() {
             trace!("Removing file.");
             tokio::fs::remove_file(&self.path).await?;

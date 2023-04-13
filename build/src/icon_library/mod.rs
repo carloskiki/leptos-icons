@@ -6,13 +6,11 @@ use tracing::{error, info, instrument, trace};
 
 use crate::{
     icon::SvgIcon,
-    icon_library::{
-        cargo_toml::CargoToml, icons_md::Icons, lib_rs::LibRs, src_dir::SrcDir,
-    },
-    package::{Downloaded, Package}, readme_md::Readme,
+    icon_library::{icons_md::Icons, lib_rs::LibRs, src_dir::SrcDir},
+    package::{Downloaded, Package},
+    readme_md::Readme, cargo_toml::CargoToml,
 };
 
-mod cargo_toml;
 mod icons_md;
 mod lib_rs;
 mod src_dir;
@@ -22,7 +20,7 @@ pub(crate) struct IconLibrary {
     pub package: Package<Downloaded>,
     pub name: String,
     pub path: PathBuf,
-    pub cargo_toml: CargoToml,
+    pub cargo_toml: CargoToml<IconLibrary>,
     pub readme_md: Readme<IconLibrary>,
     pub icons_md: Icons,
     pub src_dir: SrcDir,
@@ -37,6 +35,7 @@ impl IconLibrary {
             path: root.clone(),
             cargo_toml: CargoToml {
                 path: root.join("Cargo.toml"),
+                _phantom: std::marker::PhantomData,
             },
             readme_md: Readme {
                 path: root.join("README.md"),
@@ -64,7 +63,9 @@ impl IconLibrary {
 
         trace!("Resetting library directory.");
         self.src_dir.reset().await?;
-        self.cargo_toml.reset(&self.name, &self.package.meta.package_name).await?;
+        self.cargo_toml
+            .reset()
+            .await?;
         self.readme_md.reset().await?;
         self.icons_md.reset().await?;
 
@@ -89,7 +90,8 @@ impl IconLibrary {
         let component_code = LibRs::build_icon_component(&self.enum_name(), &self.icons)?;
         self.src_dir.lib_rs.write_component(component_code).await?;
 
-        self.cargo_toml.append_features(&self.icons).await?;
+        trace!("Writing crate manifest.");
+        self.cargo_toml.write_cargo_toml(&self).await?;
 
         trace!("Writing README.md.");
         self.readme_md.write_readme(&self.package.meta).await?;
