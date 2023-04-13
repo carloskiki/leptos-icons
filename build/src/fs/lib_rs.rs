@@ -1,16 +1,14 @@
 use std::{io, path::PathBuf};
 
 use anyhow::Result;
-use heck::{ToUpperCamelCase, ToShoutySnakeCase};
+use heck::{ToShoutySnakeCase, ToUpperCamelCase};
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::{format_ident, quote};
 use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
 
-use crate::{icon::SvgIcon, icon_library::IconLibrary};
-
-use super::MainLibrary;
+use crate::{icon::SvgIcon, icon_library::IconLibrary, main_library::MainLibrary};
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {

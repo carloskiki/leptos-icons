@@ -3,9 +3,9 @@ use std::path::PathBuf;
 use anyhow::Result;
 use tracing::{info, instrument, trace};
 
-use crate::{cargo_toml::CargoToml, icon_library::IconLibrary, lib_rs::LibRs, readme_md::Readme};
+use crate::fs::{cargo_toml::CargoToml, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir};
 
-use crate::src_dir::SrcDir;
+use crate::icon_library::IconLibrary;
 
 #[derive(Debug)]
 pub(crate) struct MainLibrary {
@@ -52,7 +52,8 @@ impl MainLibrary {
 
         self.src_dir
             .lib_rs
-            .write_lib_rs(&self.component_name(), &self.enum_name(), &icon_libs).await?;
+            .write_lib_rs(&self.component_name(), &self.enum_name(), &icon_libs)
+            .await?;
 
         trace!("Writing README.md.");
         self.readme_md.write_readme().await?;

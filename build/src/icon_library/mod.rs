@@ -5,11 +5,10 @@ use heck::ToUpperCamelCase;
 use tracing::{error, info, instrument, trace};
 
 use crate::{
-    cargo_toml::CargoToml,
+    fs::{cargo_toml::CargoToml, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir},
     icon::SvgIcon,
     icon_library::icons_md::Icons,
     package::{Downloaded, Package},
-    readme_md::Readme, lib_rs::LibRs, src_dir::SrcDir,
 };
 
 mod icons_md;
@@ -80,7 +79,10 @@ impl IconLibrary {
         self.icons
             .sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
 
-        self.src_dir.lib_rs.write_lib_rs(&self.enum_name(), &self.icons).await?;
+        self.src_dir
+            .lib_rs
+            .write_lib_rs(&self.enum_name(), &self.icons)
+            .await?;
 
         trace!("Writing crate manifest.");
         self.cargo_toml.write_cargo_toml(&self).await?;

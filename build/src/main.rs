@@ -12,6 +12,7 @@ use crate::main_library::MainLibrary;
 use crate::package::Package;
 
 mod feature;
+mod fs;
 mod git;
 mod icon;
 mod icon_library;
@@ -19,7 +20,6 @@ mod main_library;
 mod package;
 mod path;
 mod sem_ver;
-mod fs;
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -60,7 +60,8 @@ async fn main() -> Result<()> {
                 })?;
 
                 // Generate the library for that package.
-                let lib_path = path::library_crate(format!("leptos-icons-{}", package.meta.short_name), "");
+                let lib_path =
+                    path::library_crate(format!("leptos-icons-{}", package.meta.short_name), "");
                 let mut lib = IconLibrary::new(package, lib_path);
 
                 lib.generate().await?;

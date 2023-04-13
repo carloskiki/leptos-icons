@@ -3,7 +3,7 @@ use std::{io, path::PathBuf};
 use snafu::{prelude::*, Backtrace};
 use tracing::trace;
 
-use crate::lib_rs::LibRs;
+use super::lib_rs::LibRs;
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {
@@ -21,7 +21,7 @@ pub(crate) enum Error {
     },
     #[snafu(display("Unable to initialize lib.rs"))]
     InitLib {
-        source: crate::lib_rs::Error,
+        source: super::lib_rs::Error,
         backtrace: Backtrace,
     },
 }
@@ -34,7 +34,7 @@ pub(crate) struct SrcDir<T> {
 
 impl<T: std::fmt::Debug> SrcDir<T> {
     /// Removes and recreates a fresh src directory containing a fresh lib.rs file.
-    pub async fn reset(&mut self) -> Result<(), Error> {
+    pub async fn reset(&self) -> Result<(), Error> {
         if self.path.exists() {
             trace!(path = ?self.path, "Removing existing src directory");
             tokio::fs::remove_dir_all(&self.path)
