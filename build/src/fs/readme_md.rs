@@ -98,7 +98,7 @@ impl Readme<MainLibrary> {
     async fn write_header(&self) -> Result<()> {
         trace!("Writing header section.");
         let header = indoc! {r#"
-            # Leptos-Icons
+            # Lepticons
 
             Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -109,7 +109,7 @@ impl Readme<MainLibrary> {
 
             ## Table of Contents
 
-            - [Leptos-Icons](#leptos-icons)
+            - [Lepticons](#lepticons)
             - [Table of Contents](#table-of-contents)
             - [Usage](#usage)
             - [Icon Packages](#icon-packages)
@@ -131,7 +131,7 @@ impl Readme<MainLibrary> {
             ```toml
             [dependencies]
             # ...
-            leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["BsFolder"] }
+            lepticons = { git = "https://github.com/Carlosted/lepticons.git" features = ["BsFolder"] }
             ```
 
         "#};
@@ -292,7 +292,7 @@ impl Readme<IconLibrary> {
         let short_name = &package_meta.short_name;
         let header = formatdoc!(
             r#"
-            # Leptos-Icons-{short_name}
+            # Lepticons-{short_name}
 
             Icon data from the {} library. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -319,13 +319,13 @@ impl Readme<BaseRepo> {
     async fn write_header(&self) -> Result<()> {
         trace!("Writing header section.");
         let header = indoc! {r#"
-            # Leptos-Icons
+            # Lepticons
 
-            This repository is the parent for the `leptos-icons` crate.
-            It also contains the build crate, the leptos-icons-core crate, and crates for individual icon packages.
+            This repository is the parent for the `lepticons` crate.
+            It also contains the build crate, the lepticons-core crate, and crates for individual icon packages.
 
             ## Table of Contents
-            - [Leptos-Icons](#leptos-icons)
+            - [Lepticons](#lepticons)
             - [Table of Contents](#table-of-contents)
             - [Repository Content](#repository-content)
             - [Developing](#developing)
@@ -383,12 +383,12 @@ impl Readme<BaseRepo> {
         });
 
         entries.push(TableEntry {
-            lib: "leptos-icons".to_owned(),
+            lib: "lepticons".to_owned(),
             description: "The main icon library; the whole point of this repository.".to_owned(),
         });
         entries.push(TableEntry {
-            lib: "leptos-icons-core".to_owned(),
-            description: "A core library that contains utilities for the leptos-icons crate."
+            lib: "lepticons-core".to_owned(),
+            description: "A core library that contains utilities for the lepticons crate."
                 .to_owned(),
         });
         entries.push(TableEntry {
@@ -397,7 +397,7 @@ impl Readme<BaseRepo> {
         });
         for package in Package::all() {
             entries.push(TableEntry {
-                lib: format!("leptos-icons-{}", package.meta.short_name),
+                lib: format!("lepticons-{}", package.meta.short_name),
                 description: format!("The icon library for {}.", package.meta.package_name),
             })
         }

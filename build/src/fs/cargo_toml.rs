@@ -87,13 +87,13 @@ impl CargoToml<MainLibrary> {
     async fn write_package_section(&self) -> Result<()> {
         let package_section = formatdoc! {r#"
                 [package]
-                name = "leptos-icons"
+                name = "lepticons"
                 version = "0.0.1"
                 authors = ["Charles Edward Gagnon"]
                 edition = "2021"
                 description = "Icons library for the leptos web framework"
                 readme = "./README.md"
-                repository = "https://github.com/Carlosted/leptos-icons"
+                repository = "https://github.com/Carlosted/lepticons"
                 license = "MIT"
                 keywords = ["leptos", "icons"]
                 categories = ["web-programming"]
@@ -116,7 +116,7 @@ impl CargoToml<MainLibrary> {
         let dependencies = indoc! {r#"
             [dependencies]
             leptos = { version = "0.2.5", default-features = false }
-            leptos-icons-core = { path = "../leptos-icons-core" }
+            lepticons-core = { path = "../lepticons-core" }
             serde = { version = "1", features = ["derive"], optional = true }
             tracing = { version = "0.1", optional = true }
 
@@ -125,10 +125,10 @@ impl CargoToml<MainLibrary> {
 
         for lib in Package::all() {
             file
-                // Example: leptos-icons-ai = { path = "../leptos-icons-ai" }
+                // Example: lepticons-ai = { path = "../lepticons-ai" }
                 .write_all(
                     format!(
-                        "leptos-icons-{short_name} = {{  path = \"../leptos-icons-{short_name}\", optional = true }}\n",
+                        "lepticons-{short_name} = {{  path = \"../lepticons-{short_name}\", optional = true }}\n",
                         short_name = &lib.meta.short_name
                     )
                     .as_bytes(),
@@ -181,10 +181,10 @@ impl CargoToml<MainLibrary> {
         for lib in icon_libs.iter() {
             for icon in &lib.icons {
                 writer
-                    // Example: AiPushpinTwotone = ["Ai", "leptos-icons-ai/AiPushpinTwotone"]
+                    // Example: AiPushpinTwotone = ["Ai", "lepticons-ai/AiPushpinTwotone"]
                     .write_all(
                         format!(
-                            "{feature_name} = [\"{camel_short_name}\", \"leptos-icons-{short_name}/{feature_name}\"]\n",
+                            "{feature_name} = [\"{camel_short_name}\", \"lepticons-{short_name}/{feature_name}\"]\n",
                             camel_short_name = &lib.package.meta.short_name.to_upper_camel_case(),
                             short_name = &lib.package.meta.short_name,
                             feature_name = icon.feature.name,
@@ -215,19 +215,19 @@ impl CargoToml<IconLibrary> {
         let base = formatdoc!(
             r#"
             [package]
-            name = "leptos-icons-{short_name}"
+            name = "lepticons-{short_name}"
             version = "0.0.1"
             authors = ["Charles Edward Gagnon"]
             edition = "2021"
             description = "Library providing SVG and corresponding metadata for \"{package_name}\""
             readme = "./README.md"
-            repository = "https://github.com/Carlosted/leptos-icons"
+            repository = "https://github.com/Carlosted/lepticons"
             license = "MIT"
             keywords = ["leptos", "icons"]
             categories = ["web-programming"]
 
             [dependencies]
-            leptos-icons-core = {{ path = "../leptos-icons-core" }}
+            lepticons-core = {{ path = "../lepticons-core" }}
             serde = {{ version = "1", features = ["derive"], optional = true }}
 
             [features]

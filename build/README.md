@@ -1,6 +1,6 @@
 # Build
 
-This crate is the **generator** of the `leptos-icons` library living alongside this crate.
+This crate is the **generator** of the `lepticons` library living alongside this crate.
 
 ## Usage
 
@@ -8,7 +8,7 @@ Once inside this directory, trigger a build with
 
     cargo run
 
-This will use the downloaded icon packages from the previous run, updating them when necessary, and generate the `leptos-icons` library crate along with individual icon crates (i.e. `leptos-icons-*`).
+This will use the downloaded icon packages from the previous run, updating them when necessary, and generate the `lepticons` library crate along with individual icon crates (i.e. `lepticons-*`).
 
 Note that this is the default as this may greatly reduces the runtime of this crate.
 

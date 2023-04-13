@@ -61,7 +61,7 @@ async fn main() -> Result<()> {
 
                 // Generate the library for that package.
                 let lib_path =
-                    path::library_crate(format!("leptos-icons-{}", package.meta.short_name), "");
+                    path::library_crate(format!("lepticons-{}", package.meta.short_name), "");
                 let mut lib = IconLibrary::new(package, lib_path);
 
                 lib.generate().await?;
@@ -87,7 +87,7 @@ async fn main() -> Result<()> {
 
     let num_libs = libs.len();
 
-    let lib_path = path::library_crate("leptos-icons", "");
+    let lib_path = path::library_crate("lepticons", "");
     let mut main_lib = MainLibrary::new(lib_path);
     main_lib.generate(libs).await?;
 
@@ -122,11 +122,11 @@ fn init_tracing(level: tracing::level_filters::LevelFilter) {
     Registry::default().with(fmt_layer_filtered).init();
 }
 
-/// Simply tests that from the assumed repository root, both the "build" and "leptos-icons" directories are visible.
+/// Simply tests that from the assumed repository root, both the "build" and "lepticons" directories are visible.
 /// This may prevent unwanted file operations in wrong directories.
 fn assert_paths() {
     let build_crate_root = path::build_crate("");
-    let leptos_icons_crate_root = path::library_crate("leptos-icons", "");
+    let leptos_icons_crate_root = path::library_crate("lepticons", "");
     info!(?build_crate_root, "Using");
     info!(?leptos_icons_crate_root, "Using");
 
@@ -135,7 +135,7 @@ fn assert_paths() {
         build_crate_root.file_name().and_then(|it| it.to_str())
     );
     assert_eq!(
-        Some("leptos-icons"),
+        Some("lepticons"),
         leptos_icons_crate_root
             .file_name()
             .and_then(|it| it.to_str())
