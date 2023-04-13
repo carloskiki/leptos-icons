@@ -17,7 +17,6 @@ mod icons_md;
 #[derive(Debug)]
 pub(crate) struct IconLibrary {
     pub package: Package<Downloaded>,
-    pub name: String,
     pub path: PathBuf,
     pub cargo_toml: CargoToml<IconLibrary>,
     pub readme_md: Readme<IconLibrary>,
@@ -27,10 +26,9 @@ pub(crate) struct IconLibrary {
 }
 
 impl IconLibrary {
-    pub fn new(package: Package<Downloaded>, name: String, root: PathBuf) -> Self {
+    pub fn new(package: Package<Downloaded>, root: PathBuf) -> Self {
         Self {
             package,
-            name,
             path: root.clone(),
             cargo_toml: CargoToml {
                 path: root.join("Cargo.toml"),

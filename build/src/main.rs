@@ -19,10 +19,7 @@ mod main_library;
 mod package;
 mod path;
 mod sem_ver;
-mod readme_md;
-mod cargo_toml;
-mod lib_rs;
-mod src_dir;
+mod fs;
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -63,9 +60,8 @@ async fn main() -> Result<()> {
                 })?;
 
                 // Generate the library for that package.
-                let lib_name = format!("leptos-icons-{}", package.meta.short_name);
-                let lib_path = path::library_crate(&lib_name, "");
-                let mut lib = IconLibrary::new(package, lib_name, lib_path);
+                let lib_path = path::library_crate(format!("leptos-icons-{}", package.meta.short_name), "");
+                let mut lib = IconLibrary::new(package, lib_path);
 
                 lib.generate().await?;
 

@@ -1,7 +1,7 @@
 use std::{io, path::PathBuf};
 
 use anyhow::Result;
-use heck::{ToSnakeCase, ToUpperCamelCase, ToShoutySnakeCase};
+use heck::{ToUpperCamelCase, ToShoutySnakeCase};
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::{format_ident, quote};
 use snafu::{prelude::*, Backtrace};
