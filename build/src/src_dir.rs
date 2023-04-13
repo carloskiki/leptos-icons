@@ -3,7 +3,7 @@ use std::{io, path::PathBuf};
 use snafu::{prelude::*, Backtrace};
 use tracing::trace;
 
-use super::lib_rs::{self, LibRs};
+use crate::lib_rs::LibRs;
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {
@@ -21,18 +21,18 @@ pub(crate) enum Error {
     },
     #[snafu(display("Unable to initialize lib.rs"))]
     InitLib {
-        source: lib_rs::Error,
+        source: crate::lib_rs::Error,
         backtrace: Backtrace,
     },
 }
 
 #[derive(Debug)]
-pub(crate) struct SrcDir {
+pub(crate) struct SrcDir<T> {
     pub path: PathBuf,
-    pub lib_rs: LibRs,
+    pub lib_rs: LibRs<T>,
 }
 
-impl SrcDir {
+impl<T: std::fmt::Debug> SrcDir<T> {
     /// Removes and recreates a fresh src directory containing a fresh lib.rs file.
     pub async fn reset(&mut self) -> Result<(), Error> {
         if self.path.exists() {

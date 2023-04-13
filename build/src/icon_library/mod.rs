@@ -5,15 +5,14 @@ use heck::ToUpperCamelCase;
 use tracing::{error, info, instrument, trace};
 
 use crate::{
+    cargo_toml::CargoToml,
     icon::SvgIcon,
-    icon_library::{icons_md::Icons, lib_rs::LibRs, src_dir::SrcDir},
+    icon_library::icons_md::Icons,
     package::{Downloaded, Package},
-    readme_md::Readme, cargo_toml::CargoToml,
+    readme_md::Readme, lib_rs::LibRs, src_dir::SrcDir,
 };
 
 mod icons_md;
-mod lib_rs;
-mod src_dir;
 
 #[derive(Debug)]
 pub(crate) struct IconLibrary {
@@ -22,8 +21,8 @@ pub(crate) struct IconLibrary {
     pub path: PathBuf,
     pub cargo_toml: CargoToml<IconLibrary>,
     pub readme_md: Readme<IconLibrary>,
+    pub src_dir: SrcDir<IconLibrary>,
     pub icons_md: Icons,
-    pub src_dir: SrcDir,
     pub icons: Vec<SvgIcon>,
 }
 
@@ -48,6 +47,7 @@ impl IconLibrary {
                 path: root.join("src"),
                 lib_rs: LibRs {
                     path: root.join("src").join("lib.rs"),
+                    _phantom: std::marker::PhantomData,
                 },
             },
             icons: Vec::new(),
@@ -63,9 +63,7 @@ impl IconLibrary {
 
         trace!("Resetting library directory.");
         self.src_dir.reset().await?;
-        self.cargo_toml
-            .reset()
-            .await?;
+        self.cargo_toml.reset().await?;
         self.readme_md.reset().await?;
         self.icons_md.reset().await?;
 
@@ -84,11 +82,7 @@ impl IconLibrary {
         self.icons
             .sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
 
-        let enum_code = LibRs::build_enum(&self.enum_name(), &self.icons)?;
-        self.src_dir.lib_rs.write_enum(enum_code).await?;
-
-        let component_code = LibRs::build_icon_component(&self.enum_name(), &self.icons)?;
-        self.src_dir.lib_rs.write_component(component_code).await?;
+        self.src_dir.lib_rs.write_lib_rs(&self.enum_name(), &self.icons).await?;
 
         trace!("Writing crate manifest.");
         self.cargo_toml.write_cargo_toml(&self).await?;

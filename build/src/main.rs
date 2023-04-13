@@ -21,6 +21,8 @@ mod path;
 mod sem_ver;
 mod readme_md;
 mod cargo_toml;
+mod lib_rs;
+mod src_dir;
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]

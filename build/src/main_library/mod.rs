@@ -3,19 +3,16 @@ use std::path::PathBuf;
 use anyhow::Result;
 use tracing::{info, instrument, trace};
 
-use crate::{icon_library::IconLibrary, readme_md::Readme, cargo_toml::CargoToml};
+use crate::{cargo_toml::CargoToml, icon_library::IconLibrary, lib_rs::LibRs, readme_md::Readme};
 
-use self::{lib_rs::LibRs, src_dir::SrcDir};
-
-mod lib_rs;
-mod src_dir;
+use crate::src_dir::SrcDir;
 
 #[derive(Debug)]
 pub(crate) struct MainLibrary {
     pub path: PathBuf,
     pub cargo_toml: CargoToml<MainLibrary>,
     pub readme_md: Readme<MainLibrary>,
-    pub src_dir: SrcDir,
+    pub src_dir: SrcDir<MainLibrary>,
 }
 
 impl MainLibrary {
@@ -34,6 +31,7 @@ impl MainLibrary {
                 path: root.join("src"),
                 lib_rs: LibRs {
                     path: root.join("src").join("lib.rs"),
+                    _phantom: std::marker::PhantomData,
                 },
             },
         }
@@ -54,22 +52,7 @@ impl MainLibrary {
 
         self.src_dir
             .lib_rs
-            .write(LibRs::build_reexports(&icon_libs)?)
-            .await?;
-
-        self.src_dir
-            .lib_rs
-            .write(LibRs::build_enum(&self.enum_name(), &icon_libs)?)
-            .await?;
-
-        self.src_dir
-            .lib_rs
-            .write(LibRs::build_component(
-                &self.component_name(),
-                &self.enum_name(),
-                &icon_libs,
-            )?)
-            .await?;
+            .write_lib_rs(&self.component_name(), &self.enum_name(), &icon_libs).await?;
 
         trace!("Writing README.md.");
         self.readme_md.write_readme().await?;
