@@ -15,7 +15,6 @@ keywords = ["leptos", "icons"]
 categories = ["web-programming"]
 
 [dependencies]
-leptos = { version = "0.2.5", default-features = false }
 icondata-core = { path = "../icondata-core" }
 serde = { version = "1", features = ["derive"], optional = true }
 tracing = { version = "0.1", optional = true }

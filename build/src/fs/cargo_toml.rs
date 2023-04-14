@@ -21,6 +21,19 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 "#
 );
 
+
+// IF EVER NEEDED
+//     indoc::indoc! {r#"
+//     [features]
+//     default = []
+//     csr = ["leptos/csr", "leptos/tracing", "dep:tracing"]
+//     hydrate = ["leptos/hydrate", "leptos/tracing", "dep:tracing"]
+//     ssr = ["leptos/ssr", "leptos/tracing", "dep:tracing"]
+//     stable = ["leptos/stable", "leptos/tracing", "dep:tracing"]
+//     serde = ["dep:serde"]
+
+// "#}
+
 #[derive(Debug)]
 pub(crate) struct CargoToml<T> {
     /// Path to the library's Cargo.toml file.
@@ -91,7 +104,7 @@ impl CargoToml<MainLibrary> {
                 version = "0.0.1"
                 authors = ["Charles Edward Gagnon"]
                 edition = "2021"
-                description = "Icons library for the leptos web framework"
+                description = "Icon data from free icon libraries.""
                 readme = "./README.md"
                 repository = "https://github.com/Carlosted/icondata"
                 license = "MIT"
@@ -115,8 +128,7 @@ impl CargoToml<MainLibrary> {
         let mut file = self.append().await?;
         let dependencies = indoc! {r#"
             [dependencies]
-            leptos = { version = "0.2.5", default-features = false }
-            icondata-core = { path = "../icondata-core" }
+            icondata_core = { path = "../icondata_core" }
             serde = { version = "1", features = ["derive"], optional = true }
             tracing = { version = "0.1", optional = true }
 
@@ -125,10 +137,10 @@ impl CargoToml<MainLibrary> {
 
         for lib in Package::all() {
             file
-                // Example: icondata-ai = { path = "../icondata-ai" }
+                // Example: icondata_ai = { path = "../icondata_ai" }
                 .write_all(
                     format!(
-                        "icondata-{short_name} = {{  path = \"../icondata-{short_name}\", optional = true }}\n",
+                        "icondata_{short_name} = {{  path = \"../icondata_{short_name}\", optional = true }}\n",
                         short_name = &lib.meta.short_name
                     )
                     .as_bytes(),
@@ -148,22 +160,6 @@ impl CargoToml<MainLibrary> {
     #[instrument(level = "info", skip(icon_libs))]
     async fn write_features_section(&self, icon_libs: &[IconLibrary]) -> Result<()> {
         let mut writer = self.append().await?;
-
-        writer
-            .write_all(
-                indoc::indoc! {r#"
-                [features]
-                default = []
-                csr = ["leptos/csr", "leptos/tracing", "dep:tracing"]
-                hydrate = ["leptos/hydrate", "leptos/tracing", "dep:tracing"]
-                ssr = ["leptos/ssr", "leptos/tracing", "dep:tracing"]
-                stable = ["leptos/stable", "leptos/tracing", "dep:tracing"]
-                serde = ["dep:serde"]
-
-            "#}
-                .as_bytes(),
-            )
-            .await?;
 
         for package in Package::all() {
             writer
@@ -215,11 +211,11 @@ impl CargoToml<IconLibrary> {
         let base = formatdoc!(
             r#"
             [package]
-            name = "icondata-{short_name}"
+            name = "icondata_{short_name}"
             version = "0.0.1"
             authors = ["Charles Edward Gagnon"]
             edition = "2021"
-            description = "Library providing SVG and corresponding metadata for \"{package_name}\""
+            description = "Library providing SVG and corresponding metadata for \"{package_name}\"."
             readme = "./README.md"
             repository = "https://github.com/Carlosted/icondata"
             license = "MIT"

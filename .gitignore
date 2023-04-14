@@ -1,4 +1,4 @@
 /.vscode
-/leptos-icons*/Cargo.lock
-/leptos-icons*/target
+/icondata*/Cargo.lock
+/icondata*/target
 .DS_Store

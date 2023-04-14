@@ -98,7 +98,7 @@ impl Readme<MainLibrary> {
     async fn write_header(&self) -> Result<()> {
         trace!("Writing header section.");
         let header = indoc! {r#"
-            # icondata
+            # Icondata
 
             Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -109,7 +109,7 @@ impl Readme<MainLibrary> {
 
             ## Table of Contents
 
-            - [icondata](#icondata)
+            - [Icondata](#icondata)
             - [Table of Contents](#table-of-contents)
             - [Usage](#usage)
             - [Icon Packages](#icon-packages)
@@ -292,7 +292,7 @@ impl Readme<IconLibrary> {
         let short_name = &package_meta.short_name;
         let header = formatdoc!(
             r#"
-            # icondata_{short_name}
+            # Icondata_{short_name}
 
             Icon data from the {} library. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -319,7 +319,7 @@ impl Readme<BaseRepo> {
     async fn write_header(&self) -> Result<()> {
         trace!("Writing header section.");
         let header = indoc! {r#"
-            # icondata
+            # Icondata
 
             This repository is the parent for the `icondata` crate.
             It also contains the build crate, the icondata_core crate, and crates for individual icon packages.
@@ -363,7 +363,7 @@ impl Readme<BaseRepo> {
         let section_header = indoc! {r#"
             ## Repository Content
 
-            here is what the repository is parent for:
+            here is what this repository is parent for:
 
             "#};
 
