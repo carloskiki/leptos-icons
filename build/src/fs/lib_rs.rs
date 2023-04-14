@@ -60,9 +60,9 @@ impl<T: std::fmt::Debug> LibRs<T> {
         ))
     }
 
-    async fn write(&self, content: String) -> Result<()> {
+    async fn write(&self, content: &[u8]) -> Result<()> {
         let mut writer = self.append().await?;
-        writer.write_all(content.as_bytes()).await?;
+        writer.write_all(content).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
             err
@@ -74,8 +74,10 @@ impl<T: std::fmt::Debug> LibRs<T> {
 impl LibRs<MainLibrary> {
     pub async fn write_lib_rs(
         &self) -> Result<()> {
+        let icon_data = "pub use icondata_core::IconData;\n".as_bytes();
         let reexports = Self::build_reexports()?;
-        self.write(reexports).await?;
+        self.write(reexports.as_bytes()).await?;
+        self.write(icon_data).await?;
 
         Ok(())
     }
@@ -269,8 +271,8 @@ impl LibRs<IconLibrary> {
     pub(crate) async fn write_lib_rs(&self, enum_name: &str, icons: &[SvgIcon]) -> Result<()> {
         let enum_code = Self::build_enum(enum_name, icons)?;
         let icon_data = Self::build_icon_data(enum_name, icons)?;
-        self.write(enum_code).await?;
-        self.write(icon_data).await?;
+        self.write(enum_code.as_bytes()).await?;
+        self.write(icon_data.as_bytes()).await?;
 
         Ok(())
     }

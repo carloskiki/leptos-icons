@@ -30,3 +30,4 @@ pub use icondata_cg::*;
 pub use icondata_tb::*;
 #[cfg(feature = "Oc")]
 pub use icondata_oc::*;
+pub use icondata_core::IconData;
