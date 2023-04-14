@@ -98,7 +98,7 @@ impl Readme<MainLibrary> {
     async fn write_header(&self) -> Result<()> {
         trace!("Writing header section.");
         let header = indoc! {r#"
-            # leptos_glyphs
+            # icondata
 
             Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -109,7 +109,7 @@ impl Readme<MainLibrary> {
 
             ## Table of Contents
 
-            - [leptos_glyphs](#leptos_glyphs)
+            - [icondata](#icondata)
             - [Table of Contents](#table-of-contents)
             - [Usage](#usage)
             - [Icon Packages](#icon-packages)
@@ -131,7 +131,7 @@ impl Readme<MainLibrary> {
             ```toml
             [dependencies]
             # ...
-            leptos_glyphs = { git = "https://github.com/Carlosted/leptos_glyphs.git" features = ["BsFolder"] }
+            icondata = { git = "https://github.com/Carlosted/icondata.git" features = ["BsFolder"] }
             ```
 
         "#};
@@ -292,7 +292,7 @@ impl Readme<IconLibrary> {
         let short_name = &package_meta.short_name;
         let header = formatdoc!(
             r#"
-            # leptos_glyphs_{short_name}
+            # icondata_{short_name}
 
             Icon data from the {} library. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -319,13 +319,13 @@ impl Readme<BaseRepo> {
     async fn write_header(&self) -> Result<()> {
         trace!("Writing header section.");
         let header = indoc! {r#"
-            # leptos_glyphs
+            # icondata
 
-            This repository is the parent for the `leptos_glyphs` crate.
-            It also contains the build crate, the leptos_glyphs-core crate, and crates for individual icon packages.
+            This repository is the parent for the `icondata` crate.
+            It also contains the build crate, the icondata_core crate, and crates for individual icon packages.
 
             ## Table of Contents
-            - [leptos_glyphs](#leptos_glyphs)
+            - [icondata](#icondata)
             - [Table of Contents](#table-of-contents)
             - [Repository Content](#repository-content)
             - [Developing](#developing)
@@ -383,12 +383,12 @@ impl Readme<BaseRepo> {
         });
 
         entries.push(TableEntry {
-            lib: "leptos_glyphs".to_owned(),
+            lib: "icondata".to_owned(),
             description: "The main icon library; the whole point of this repository.".to_owned(),
         });
         entries.push(TableEntry {
-            lib: "leptos_glyphs-core".to_owned(),
-            description: "A core library that contains utilities for the leptos_glyphs crate."
+            lib: "icondata_core".to_owned(),
+            description: "A core library that contains utilities for the icondata crate."
                 .to_owned(),
         });
         entries.push(TableEntry {
@@ -397,7 +397,7 @@ impl Readme<BaseRepo> {
         });
         for package in Package::all() {
             entries.push(TableEntry {
-                lib: format!("leptos_glyphs-{}", package.meta.short_name),
+                lib: format!("icondata_{}", package.meta.short_name),
                 description: format!("The icon library for {}.", package.meta.package_name),
             })
         }
