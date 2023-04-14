@@ -1,4 +1,4 @@
-# icondata
+# Icondata
 
 Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
@@ -9,7 +9,7 @@ etc.
 
 ## Table of Contents
 
-- [icondata](#icondata)
+- [Icondata](#icondata)
 - [Table of Contents](#table-of-contents)
 - [Usage](#usage)
 - [Icon Packages](#icon-packages)

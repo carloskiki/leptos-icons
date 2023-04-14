@@ -52,7 +52,7 @@ impl MainLibrary {
 
         self.src_dir
             .lib_rs
-            .write_lib_rs(&self.enum_name(), &icon_libs)
+            .write_lib_rs()
             .await?;
 
         trace!("Writing README.md.");

@@ -1,4 +1,4 @@
-# icondata_vs
+# Icondata_vs
 
 Icon data from the VS Code Icons library. Every icon is packaged as its own cargo feature to reduce build times.
 

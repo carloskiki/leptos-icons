@@ -1,8 +1,4 @@
-pub trait IconData<'a> {
-    fn data(self) -> &'a Data;
-}
-
-pub struct Data {
+pub struct IconData {
     pub style: Option<&'static str>,
     pub x: Option<&'static str>,
     pub y: Option<&'static str>,

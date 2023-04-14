@@ -21,19 +21,6 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 "#
 );
 
-
-// IF EVER NEEDED
-//     indoc::indoc! {r#"
-//     [features]
-//     default = []
-//     csr = ["leptos/csr", "leptos/tracing", "dep:tracing"]
-//     hydrate = ["leptos/hydrate", "leptos/tracing", "dep:tracing"]
-//     ssr = ["leptos/ssr", "leptos/tracing", "dep:tracing"]
-//     stable = ["leptos/stable", "leptos/tracing", "dep:tracing"]
-//     serde = ["dep:serde"]
-
-// "#}
-
 #[derive(Debug)]
 pub(crate) struct CargoToml<T> {
     /// Path to the library's Cargo.toml file.
@@ -104,7 +91,7 @@ impl CargoToml<MainLibrary> {
                 version = "0.0.1"
                 authors = ["Charles Edward Gagnon"]
                 edition = "2021"
-                description = "Icon data from free icon libraries.""
+                description = "Icon data from free icon libraries."
                 readme = "./README.md"
                 repository = "https://github.com/Carlosted/icondata"
                 license = "MIT"
@@ -130,7 +117,6 @@ impl CargoToml<MainLibrary> {
             [dependencies]
             icondata_core = { path = "../icondata_core" }
             serde = { version = "1", features = ["derive"], optional = true }
-            tracing = { version = "0.1", optional = true }
 
         "#};
         file.write_all(dependencies.as_bytes()).await?;
@@ -161,6 +147,8 @@ impl CargoToml<MainLibrary> {
     async fn write_features_section(&self, icon_libs: &[IconLibrary]) -> Result<()> {
         let mut writer = self.append().await?;
 
+        writer.write_all("[features]\n".as_bytes()).await?;
+
         for package in Package::all() {
             writer
                 // Example: Ai = []
@@ -177,10 +165,10 @@ impl CargoToml<MainLibrary> {
         for lib in icon_libs.iter() {
             for icon in &lib.icons {
                 writer
-                    // Example: AiPushpinTwotone = ["Ai", "icondata-ai/AiPushpinTwotone"]
+                    // Example: AiPushpinTwotone = ["Ai", "icondata_ai/AiPushpinTwotone"]
                     .write_all(
                         format!(
-                            "{feature_name} = [\"{camel_short_name}\", \"icondata-{short_name}/{feature_name}\"]\n",
+                            "{feature_name} = [\"{camel_short_name}\", \"icondata_{short_name}/{feature_name}\"]\n",
                             camel_short_name = &lib.package.meta.short_name.to_upper_camel_case(),
                             short_name = &lib.package.meta.short_name,
                             feature_name = icon.feature.name,
@@ -223,7 +211,7 @@ impl CargoToml<IconLibrary> {
             categories = ["web-programming"]
 
             [dependencies]
-            icondata-core = {{ path = "../icondata-core" }}
+            icondata_core = {{ path = "../icondata_core" }}
             serde = {{ version = "1", features = ["derive"], optional = true }}
 
             [features]

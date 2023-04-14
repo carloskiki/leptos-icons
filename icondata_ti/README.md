@@ -1,4 +1,4 @@
-# icondata_ti
+# Icondata_ti
 
 Icon data from the Typicons library. Every icon is packaged as its own cargo feature to reduce build times.
 

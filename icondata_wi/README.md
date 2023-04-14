@@ -1,4 +1,4 @@
-# icondata_wi
+# Icondata_wi
 
 Icon data from the Weather Icons library. Every icon is packaged as its own cargo feature to reduce build times.
 

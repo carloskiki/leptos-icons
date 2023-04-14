@@ -3,11 +3,11 @@
 # ------------------------------------------------------------------------------------------
 
 [package]
-name = "icondata-cg"
+name = "icondata_cg"
 version = "0.0.1"
 authors = ["Charles Edward Gagnon"]
 edition = "2021"
-description = "Library providing SVG and corresponding metadata for \"css.gg\""
+description = "Library providing SVG and corresponding metadata for \"css.gg\"."
 readme = "./README.md"
 repository = "https://github.com/Carlosted/icondata"
 license = "MIT"
@@ -15,7 +15,7 @@ keywords = ["leptos", "icons"]
 categories = ["web-programming"]
 
 [dependencies]
-icondata-core = { path = "../icondata-core" }
+icondata_core = { path = "../icondata_core" }
 serde = { version = "1", features = ["derive"], optional = true }
 
 [features]

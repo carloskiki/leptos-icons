@@ -8,7 +8,7 @@ use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
 
-use crate::{icon::SvgIcon, icon_library::IconLibrary, main_library::MainLibrary};
+use crate::{icon::SvgIcon, icon_library::IconLibrary, main_library::MainLibrary, package::Package};
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {
@@ -62,7 +62,6 @@ impl<T: std::fmt::Debug> LibRs<T> {
 
     async fn write(&self, content: String) -> Result<()> {
         let mut writer = self.append().await?;
-        writer.write_all("\n".as_bytes()).await?;
         writer.write_all(content.as_bytes()).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
@@ -74,21 +73,17 @@ impl<T: std::fmt::Debug> LibRs<T> {
 
 impl LibRs<MainLibrary> {
     pub async fn write_lib_rs(
-        &self,
-        enum_name: &str,
-        icon_libs: &[IconLibrary],
-    ) -> Result<()> {
-        let reexports = Self::build_reexports(icon_libs)?;
-        let enum_code = Self::build_enum(enum_name, icon_libs)?;
+        &self) -> Result<()> {
+        let reexports = Self::build_reexports()?;
         self.write(reexports).await?;
-        self.write(enum_code).await?;
 
         Ok(())
     }
 
-    fn build_reexports(icon_libs: &[IconLibrary]) -> Result<String> {
-        let statements = icon_libs.iter().map(|lib| {
-            let lib_short_name = &lib.package.meta.short_name;
+    fn build_reexports() -> Result<String> {
+        let packages = Package::all();
+        let statements = packages.iter().map(|pack| {
+            let lib_short_name = &pack.meta.short_name;
             let short_name_upper = lib_short_name.to_upper_camel_case();
             let lib_name_ident = format_ident!("icondata_{}", lib_short_name);
             quote! {
@@ -103,6 +98,7 @@ impl LibRs<MainLibrary> {
         Ok(prettyplease::unparse(&tokens_file))
     }
 
+    #[allow(dead_code)]
     fn build_enum(enum_name: &str, icon_libs: &[IconLibrary]) -> Result<String> {
         let variants = icon_libs.iter().map(|lib| {
             let short_name_upper = &lib.package.meta.short_name.to_upper_camel_case();
@@ -292,6 +288,7 @@ impl LibRs<IconLibrary> {
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
         let icon_enum = quote! {
+            #[non_exhaustive]
             #[cfg_attr(feature = "serde", derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, serde::Serialize, serde::Deserialize))]
             #[cfg_attr(not(feature = "serde"), derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy))]
             pub enum #enum_ident {
@@ -423,7 +420,7 @@ impl LibRs<IconLibrary> {
 
             quote! {
                 #[cfg(feature = #feature_name)]
-                const #const_data_ident: icondata_core::Data = icondata_core::Data {
+                const #const_data_ident: icondata_core::IconData = icondata_core::IconData {
                     style: #style,
                     x: #x,
                     y: #y,
@@ -449,7 +446,7 @@ impl LibRs<IconLibrary> {
 
             quote! {
                 #[cfg(feature = #feature_name)]
-                #enum_ident::#feature_ident => &#const_data_ident
+                #enum_ident::#feature_ident => #const_data_ident
             }
         });
 
@@ -458,9 +455,9 @@ impl LibRs<IconLibrary> {
         let enum_impl = quote! {
             #(#const_icon_data)*
 
-            impl<'a> icondata_core::IconData<'a> for #enum_ident {
-                fn data(self) -> &'a icondata_core::Data {
-                    match self {
+            impl From<#enum_ident> for icondata_core::IconData {
+                fn from(icon: #enum_ident) -> icondata_core::IconData {
+                    match icon {
                         #(#match_arms),*
                     }
                 }
