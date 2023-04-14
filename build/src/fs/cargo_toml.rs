@@ -116,7 +116,6 @@ impl CargoToml<MainLibrary> {
         let dependencies = indoc! {r#"
             [dependencies]
             icondata_core = { path = "../icondata_core" }
-            serde = { version = "1", features = ["derive"], optional = true }
 
         "#};
         file.write_all(dependencies.as_bytes()).await?;
@@ -147,7 +146,19 @@ impl CargoToml<MainLibrary> {
     async fn write_features_section(&self, icon_libs: &[IconLibrary]) -> Result<()> {
         let mut writer = self.append().await?;
 
-        writer.write_all("[features]\n".as_bytes()).await?;
+        let libs_serde_feature = Package::all().iter().map(|pack| {
+            format!("\n\"icondata_{}/serde\",", pack.meta.short_name)
+        }).collect::<String>();
+        
+        let base_features = formatdoc! {r#"
+            [features]
+            default = []
+            serde = [{libs_serde_feature}
+            ]
+
+            "#};
+
+        writer.write_all(base_features.as_bytes()).await?;
 
         for package in Package::all() {
             writer

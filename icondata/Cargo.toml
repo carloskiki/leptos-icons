@@ -16,7 +16,6 @@ categories = ["web-programming"]
 
 [dependencies]
 icondata_core = { path = "../icondata_core" }
-serde = { version = "1", features = ["derive"], optional = true }
 
 icondata_ai = {  path = "../icondata_ai", optional = true }
 icondata_fa = {  path = "../icondata_fa", optional = true }
@@ -36,6 +35,26 @@ icondata_tb = {  path = "../icondata_tb", optional = true }
 icondata_oc = {  path = "../icondata_oc", optional = true }
 
 [features]
+default = []
+serde = [
+"icondata_ai/serde",
+"icondata_fa/serde",
+"icondata_wi/serde",
+"icondata_fi/serde",
+"icondata_vs/serde",
+"icondata_bs/serde",
+"icondata_bi/serde",
+"icondata_im/serde",
+"icondata_io/serde",
+"icondata_ri/serde",
+"icondata_si/serde",
+"icondata_ti/serde",
+"icondata_hi/serde",
+"icondata_cg/serde",
+"icondata_tb/serde",
+"icondata_oc/serde",
+]
+
 Ai = []
 Fa = []
 Wi = []
