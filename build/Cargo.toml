@@ -1,5 +1,5 @@
 [package]
-name = "lepticons-builder"
+name = "icondata-builder"
 version = "0.1.0"
 edition = "2021"
 

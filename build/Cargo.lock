@@ -193,6 +193,33 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fed44880c466736ef9a5c5b5facefb5ed0785676d0c02d612db14e54f0d84286"
 
 [[package]]
+name = "icondata-builder"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "heck",
+ "indoc",
+ "once_cell",
+ "pretty_assertions",
+ "prettyplease",
+ "proc-macro2",
+ "quote",
+ "regex",
+ "serde",
+ "serde_json",
+ "snafu",
+ "strum",
+ "syn 2.0.10",
+ "time",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+ "xml-rs",
+]
+
+[[package]]
 name = "idna"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -242,33 +269,6 @@ name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
-
-[[package]]
-name = "lepticons-builder"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "clap",
- "heck",
- "indoc",
- "once_cell",
- "pretty_assertions",
- "prettyplease",
- "proc-macro2",
- "quote",
- "regex",
- "serde",
- "serde_json",
- "snafu",
- "strum",
- "syn 2.0.10",
- "time",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "url",
- "xml-rs",
-]
 
 [[package]]
 name = "libc"

@@ -75,16 +75,13 @@ impl<T: std::fmt::Debug> LibRs<T> {
 impl LibRs<MainLibrary> {
     pub async fn write_lib_rs(
         &self,
-        component_name: &str,
         enum_name: &str,
         icon_libs: &[IconLibrary],
     ) -> Result<()> {
         let reexports = Self::build_reexports(icon_libs)?;
         let enum_code = Self::build_enum(enum_name, icon_libs)?;
-        let component = Self::build_component(component_name, enum_name, icon_libs)?;
         self.write(reexports).await?;
         self.write(enum_code).await?;
-        self.write(component).await?;
 
         Ok(())
     }
@@ -177,6 +174,7 @@ impl LibRs<MainLibrary> {
         Ok(prettyplease::unparse(&tokens_file))
     }
 
+    #[allow(dead_code)]
     fn build_component(
         component_name: &str,
         enum_name: &str,
