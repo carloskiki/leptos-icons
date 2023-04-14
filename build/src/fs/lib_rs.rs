@@ -93,7 +93,7 @@ impl LibRs<MainLibrary> {
         let statements = icon_libs.iter().map(|lib| {
             let lib_short_name = &lib.package.meta.short_name;
             let short_name_upper = lib_short_name.to_upper_camel_case();
-            let lib_name_ident = format_ident!("leptos_icons_{}", lib_short_name);
+            let lib_name_ident = format_ident!("leptos_glyphs_{}", lib_short_name);
             quote! {
                 #[cfg(feature = #short_name_upper)]
                 pub use #lib_name_ident::*;
@@ -110,7 +110,7 @@ impl LibRs<MainLibrary> {
         let variants = icon_libs.iter().map(|lib| {
             let short_name_upper = &lib.package.meta.short_name.to_upper_camel_case();
             let short_name_upper_ident = Ident::new(&short_name_upper, Span::call_site());
-            let lib_name_ident = format_ident!("leptos_icons_{}", &lib.package.meta.short_name);
+            let lib_name_ident = format_ident!("leptos_glyphs_{}", &lib.package.meta.short_name);
             let lib_enum_ident = Ident::new(&lib.enum_name(), Span::call_site());
             quote! {
                 #[cfg(feature = #short_name_upper)]
@@ -133,13 +133,13 @@ impl LibRs<MainLibrary> {
             let lib_short_name_ident = Ident::new(&short_name_upper, Span::call_site());
             quote! {
                 #[cfg(feature = #short_name_upper)]
-                Self::#lib_short_name_ident(icon) => leptos_icons_core::IconData::data(icon)
+                Self::#lib_short_name_ident(icon) => leptos_glyphs_core::IconData::data(icon)
             }
         });
 
         let data_impl = quote! {
-            impl<'a> leptos_icons_core::IconData<'a> for crate::#enum_ident {
-                fn data(self) -> &'a leptos_icons_core::Data {
+            impl<'a> leptos_glyphs_core::IconData<'a> for crate::#enum_ident {
+                fn data(self) -> &'a leptos_glyphs_core::Data {
                     match self {
                         #(#data_impl_match_arms),*
                     }
@@ -215,7 +215,7 @@ impl LibRs<MainLibrary> {
                 #[prop(into, optional)]
                 style: Option<String>,
             ) -> impl leptos::IntoView {
-                let data = leptos_icons_core::IconData::data(icon);
+                let data = leptos_glyphs_core::IconData::data(icon);
                 let mut svg = leptos::svg::svg(cx);
                 if let Some(classes) = class {
                     svg = svg.classes(classes);
@@ -425,7 +425,7 @@ impl LibRs<IconLibrary> {
 
             quote! {
                 #[cfg(feature = #feature_name)]
-                const #const_data_ident: leptos_icons_core::Data = leptos_icons_core::Data {
+                const #const_data_ident: leptos_glyphs_core::Data = leptos_glyphs_core::Data {
                     style: #style,
                     x: #x,
                     y: #y,
@@ -460,8 +460,8 @@ impl LibRs<IconLibrary> {
         let enum_impl = quote! {
             #(#const_icon_data)*
 
-            impl<'a> leptos_icons_core::IconData<'a> for #enum_ident {
-                fn data(self) -> &'a leptos_icons_core::Data {
+            impl<'a> leptos_glyphs_core::IconData<'a> for #enum_ident {
+                fn data(self) -> &'a leptos_glyphs_core::Data {
                     match self {
                         #(#match_arms),*
                     }
