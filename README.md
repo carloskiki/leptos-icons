@@ -7,4 +7,4 @@
 
 Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
-Please visit [this](https://github.com/Carlosted/icondata) repository to get a list of all icon packages included along with their respective licenses.
+Please visit [this](https://github.com/Carlosted/icondata#icon-packages) repository to get a list of all icon packages included along with their respective licenses.
