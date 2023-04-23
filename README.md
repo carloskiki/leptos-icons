@@ -1,24 +1,10 @@
 # Leptos-Icons
 
-This is the parent for the:
+[![Docs.rs](https://docs.rs/leptos_icons/badge.svg)](https://docs.rs/leptos_icons)
+[![Crates.io](https://img.shields.io/crates/v/leptos_icons)](https://crates.io/crates/leptos_icons)
+[![Crates.io](https://img.shields.io/crates/d/leptos_icons)](https://crates.io/crates/leptos_icons)
+[![Crates.io](https://img.shields.io/crates/l/leptos_icons)](/LICENSE)
 
-| Crate             | Path               | Type | Description                                      |
-| ---               | ---                | ---  | ---                                              |
-| builder           | /build             | bin  | Generates the `leptos-icons` library.            |
-| leptos-icons      | /leptos-icons      | lib  | Actual library published on crates.io.           |
-| leptos-icons-core | /leptos-icons-core | lib  | Helpers and utility functions                    |
-| leptos-icons-\*   | /leptos-icons-\*   | lib  | A library containing all icons from package "\*" |
+Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
-## Executing commands
-
-This repository uses [Just](https://github.com/casey/just)
-
-Simply call
-
-    just
-
-to see a list of available commands.
-
-You may need to install `just` using
-
-    cargo install just
+Please visit [this](https://github.com/Carlosted/icondata) repository to get a list of all icon packages included along with their respective licenses.
