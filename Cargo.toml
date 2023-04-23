@@ -1,7 +1,7 @@
 [package]
 name = "leptos_icons"
-version = "0.0.1"
-authors = ["Charles Edward Gagnon"]
+version = "0.0.2"
+authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 description = "Component library providing a variety of icons for the leptos web framework."
 readme = "./README.md"

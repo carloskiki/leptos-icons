@@ -1,3 +1,29 @@
+//! [![github]](https://github.com/Carlosted/leptos-icons)&ensp;[![crates-io]](https://crates.io/crates/leptos_icons)&ensp;[![docs-rs]](crate)
+//!
+//! [github]: https://img.shields.io/badge/github-8da0cb?style=for-the-badge&labelColor=555555&logo=github
+//! [crates-io]: https://img.shields.io/badge/crates.io-fc8d62?style=for-the-badge&labelColor=555555&logo=rust
+//! [docs-rs]: https://img.shields.io/badge/docs.rs-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs
+//!
+//! <br>
+//!
+//! Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+//!
+//! Every enum variant has a corresponding feature name, that enables it.
+//!
+//! ### Example
+//! In Cargo.toml, include:
+//! ```toml
+//! [dependencies]
+//! # ...
+//! leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["BsFolder"] }
+//! ```
+//! In your leptos project, use:
+//! ```
+//! view! { cx,
+//!     <LeptosIcon icon=BsIcon::BsFolder />
+//! }
+//! ```
+//! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
 #[cfg(feature = "Ai")]
 pub use icondata_ai::AiIcon;
 #[cfg(feature = "Bi")]
@@ -16,6 +42,8 @@ pub use icondata_hi::HiIcon;
 pub use icondata_im::ImIcon;
 #[cfg(feature = "Io")]
 pub use icondata_io::IoIcon;
+#[cfg(feature = "Lu")]
+pub use icondata_lu::LuIcon;
 #[cfg(feature = "Oc")]
 pub use icondata_oc::OcIcon;
 #[cfg(feature = "Ri")]
@@ -30,8 +58,6 @@ pub use icondata_ti::TiIcon;
 pub use icondata_vs::VsIcon;
 #[cfg(feature = "Wi")]
 pub use icondata_wi::WiIcon;
-#[cfg(feature = "Lu")]
-pub use icondata_lu::LuIcon;
 #[leptos::component]
 /// The Icon component.
 pub fn Icon(
