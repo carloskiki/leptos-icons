@@ -15,7 +15,7 @@
 //! ```toml
 //! [dependencies]
 //! # ...
-//! leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["BsFolder"] }
+//! leptos_icons = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["BsFolder"] }
 //! ```
 //! In your leptos project, use:
 //! ```
