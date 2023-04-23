@@ -9,14 +9,14 @@ fn main() {
         provide_meta_context(cx);
         view! { cx,
             <div style="font-size: 8em; color: #8f39d3;">
-                 <LeptosIcon icon=BiIcon::BiGraphql width="2em" height="2em" style="color: green"/>
-                 <LeptosIcon icon=BiIcon::BiGraphql style="color: orange"/>
-                 <LeptosIcon icon=BsIcon::Bs1Circle style="color: red"/>
-                 <LeptosIcon icon=FaIcon::FaBarsSolid />
-                 <LeptosIcon icon=ImIcon::ImPagebreak />
-                 <LeptosIcon icon=ImIcon::ImPageBreak />
-                 <LeptosIcon icon=OcIcon::OcAlertSm />
-                 <LeptosIcon icon=OcIcon::OcAlertLg width="1em" height="2em" />
+                 <Icon icon=BiIcon::BiGraphql width="2em" height="2em" style="color: green"/>
+                 <Icon icon=BiIcon::BiGraphql style="color: orange"/>
+                 <Icon icon=BsIcon::Bs1Circle style="color: red"/>
+                 <Icon icon=FaIcon::FaBarsSolid />
+                 <Icon icon=ImIcon::ImPagebreak />
+                 <Icon icon=ImIcon::ImPageBreak />
+                 <Icon icon=OcIcon::OcAlertSm />
+                 <Icon icon=OcIcon::OcAlertLg width="1em" height="2em" />
             </div>
         }
     })
