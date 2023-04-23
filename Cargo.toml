@@ -1,6 +1,6 @@
 [package]
 name = "leptos_icons"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 description = "Component library providing a variety of icons for the leptos web framework."
