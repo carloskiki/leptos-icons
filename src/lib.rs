@@ -31,9 +31,10 @@ pub use icondata_vs::VsIcon;
 #[cfg(feature = "Wi")]
 pub use icondata_wi::WiIcon;
 #[cfg(feature = "Lu")]
-pub use icondata_lu::WiIcon;
+pub use icondata_lu::LuIcon;
 #[leptos::component]
-pub fn LeptosIcon(
+/// The Icon component.
+pub fn Icon(
     cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
