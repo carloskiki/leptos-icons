@@ -58,6 +58,7 @@ pub use icondata_ti::TiIcon;
 pub use icondata_vs::VsIcon;
 #[cfg(feature = "Wi")]
 pub use icondata_wi::WiIcon;
+pub use icondata_core::IconData;
 #[leptos::component]
 /// The Icon component.
 pub fn Icon(
