@@ -17,23 +17,23 @@ leptos = { version = "0.2.5", default-features = false }
 tracing = "0.1"
 
 icondata_core = "0.0.1"
-icondata_ai = { version = "0.0.2", optional = true }
-icondata_fa = { version = "0.0.2", optional = true }
-icondata_wi = { version = "0.0.2", optional = true }
-icondata_fi = { version = "0.0.2", optional = true }
-icondata_vs = { version = "0.0.2", optional = true }
-icondata_bs = { version = "0.0.2", optional = true }
-icondata_bi = { version = "0.0.2", optional = true }
-icondata_im = { version = "0.0.2", optional = true }
-icondata_io = { version = "0.0.2", optional = true }
-icondata_ri = { version = "0.0.2", optional = true }
-icondata_si = { version = "0.0.2", optional = true }
-icondata_ti = { version = "0.0.2", optional = true }
-icondata_hi = { version = "0.0.2", optional = true }
-icondata_cg = { version = "0.0.2", optional = true }
-icondata_tb = { version = "0.0.2", optional = true }
-icondata_oc = { version = "0.0.2", optional = true }
-icondata_lu = { version = "0.0.2", optional = true }
+icondata_ai = { version = "0.0.3", optional = true }
+icondata_fa = { version = "0.0.3", optional = true }
+icondata_wi = { version = "0.0.3", optional = true }
+icondata_fi = { version = "0.0.3", optional = true }
+icondata_vs = { version = "0.0.3", optional = true }
+icondata_bs = { version = "0.0.3", optional = true }
+icondata_bi = { version = "0.0.3", optional = true }
+icondata_im = { version = "0.0.3", optional = true }
+icondata_io = { version = "0.0.3", optional = true }
+icondata_ri = { version = "0.0.3", optional = true }
+icondata_si = { version = "0.0.3", optional = true }
+icondata_ti = { version = "0.0.3", optional = true }
+icondata_hi = { version = "0.0.3", optional = true }
+icondata_cg = { version = "0.0.3", optional = true }
+icondata_tb = { version = "0.0.3", optional = true }
+icondata_oc = { version = "0.0.3", optional = true }
+icondata_lu = { version = "0.0.3", optional = true }
 
 
 [features]
@@ -61,6 +61,26 @@ serde = [
 "icondata_tb/serde",
 "icondata_oc/serde",
 "icondata_lu/serde",
+]
+
+strum = [
+"icondata_ai/strum",
+"icondata_fa/strum",
+"icondata_wi/strum",
+"icondata_fi/strum",
+"icondata_vs/strum",
+"icondata_bs/strum",
+"icondata_bi/strum",
+"icondata_im/strum",
+"icondata_io/strum",
+"icondata_ri/strum",
+"icondata_si/strum",
+"icondata_ti/strum",
+"icondata_hi/strum",
+"icondata_cg/strum",
+"icondata_tb/strum",
+"icondata_oc/strum",
+"icondata_lu/strum",
 ]
 
 Ai = []
