@@ -13,7 +13,7 @@ categories = ["web-programming"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-leptos = { version = "0.2.5", default-features = false }
+leptos = { version = "0.3.0", default-features = false }
 tracing = "0.1"
 
 icondata_core = "0.0.2"

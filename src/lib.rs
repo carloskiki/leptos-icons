@@ -98,19 +98,19 @@ pub fn Icon(
     svg = svg.attr(
         "width",
         leptos::Attribute::String(match (width, icon.width) {
-            (Some(a), Some(_b)) => a,
-            (Some(a), None) => a,
-            (None, Some(_b)) => "1em".to_owned(),
-            (None, None) => "1em".to_owned(),
+            (Some(a), Some(_b)) => std::borrow::Cow::from(a),
+            (Some(a), None) => std::borrow::Cow::from(a),
+            (None, Some(_b)) => std::borrow::Cow::from("1em"),
+            (None, None) => std::borrow::Cow::from("1em"),
         }),
     );
     svg = svg.attr(
         "height",
         leptos::Attribute::String(match (height, icon.height) {
-            (Some(a), Some(_b)) => a,
-            (Some(a), None) => a,
-            (None, Some(_b)) => "1em".to_owned(),
-            (None, None) => "1em".to_owned(),
+            (Some(a), Some(_b)) => std::borrow::Cow::from(a),
+            (Some(a), None) => std::borrow::Cow::from(a),
+            (None, Some(_b)) => std::borrow::Cow::from("1em"),
+            (None, None) => std::borrow::Cow::from("1em"),
         }),
     );
     if let Some(view_box) = icon.view_box {
