@@ -24,48 +24,15 @@
 //! }
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
-#[cfg(feature = "Ai")]
-pub use icondata_ai::AiIcon;
-#[cfg(feature = "Bi")]
-pub use icondata_bi::BiIcon;
-#[cfg(feature = "Bs")]
-pub use icondata_bs::BsIcon;
-#[cfg(feature = "Cg")]
-pub use icondata_cg::CgIcon;
-#[cfg(feature = "Fa")]
-pub use icondata_fa::FaIcon;
-#[cfg(feature = "Fi")]
-pub use icondata_fi::FiIcon;
-#[cfg(feature = "Hi")]
-pub use icondata_hi::HiIcon;
-#[cfg(feature = "Im")]
-pub use icondata_im::ImIcon;
-#[cfg(feature = "Io")]
-pub use icondata_io::IoIcon;
-#[cfg(feature = "Lu")]
-pub use icondata_lu::LuIcon;
-#[cfg(feature = "Oc")]
-pub use icondata_oc::OcIcon;
-#[cfg(feature = "Ri")]
-pub use icondata_ri::RiIcon;
-#[cfg(feature = "Si")]
-pub use icondata_si::SiIcon;
-#[cfg(feature = "Tb")]
-pub use icondata_tb::TbIcon;
-#[cfg(feature = "Ti")]
-pub use icondata_ti::TiIcon;
-#[cfg(feature = "Vs")]
-pub use icondata_vs::VsIcon;
-#[cfg(feature = "Wi")]
-pub use icondata_wi::WiIcon;
-pub use icondata_core::IconData;
-#[leptos::component]
+pub use icondata::*;
+
 /// The Icon component.
+#[leptos::component]
 pub fn Icon(
     cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
-    icon: icondata_core::IconData,
+    icon: Icon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     width: Option<String>,
@@ -79,6 +46,8 @@ pub fn Icon(
     #[prop(into, optional)]
     style: Option<String>,
 ) -> impl leptos::IntoView {
+    let icon = IconData::from(icon);
+
     let mut svg = leptos::svg::svg(cx);
     if let Some(classes) = class {
         svg = svg.classes(classes);
