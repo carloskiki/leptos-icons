@@ -29,11 +29,11 @@ use leptos::SignalGet;
 
 /// The Icon component.
 #[leptos::component]
-pub fn Icon<I>(
+pub fn Icon(
     cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
-    icon: leptos::MaybeSignal<I>,
+    icon: leptos::MaybeSignal<Icon>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     width: Option<leptos::MaybeSignal<String>>,
@@ -47,8 +47,6 @@ pub fn Icon<I>(
     #[prop(into, optional)]
     style: Option<leptos::MaybeSignal<String>>,
 ) -> impl leptos::IntoView
-where
-    I: Into<IconData> + Clone + 'static,
 {
     let icon: IconData = icon.get().into();
 

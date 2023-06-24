@@ -7,15 +7,15 @@ fn main() {
     mount_to_body(|cx| {
         view! { cx,
             <div style="font-size: 8em; color: #8f39d3;">
-                <Icon icon=AiIcon::AiCarryOutTwotone style="color: green" />
-                <Icon icon=BiIcon::BiGraphql width="2em" height="2em" style="color: green"/>
-                <Icon icon=BiIcon::BiGraphql style="color: orange"/>
-                <Icon icon=BsIcon::Bs1Circle style="color: red"/>
-                <Icon icon=FaIcon::FaBarsSolid />
-                <Icon icon=ImIcon::ImPagebreak />
-                <Icon icon=ImIcon::ImPageBreak />
-                <Icon icon=OcIcon::OcAlertSm />
-                <Icon icon=OcIcon::OcAlertLg width="1em" height="2em" />
+                <Icon icon=Icon::from(AiIcon::AiCarryOutTwotone) style="color: green" />
+                <Icon icon=Icon::from(BiIcon::BiGraphql) width="2em" height="2em" style="color: green"/>
+                <Icon icon=Icon::from(BiIcon::BiGraphql) style="color: orange"/>
+                <Icon icon=Icon::from(BsIcon::Bs1Circle) style="color: red"/>
+                <Icon icon=Icon::from(FaIcon::FaBarsSolid) />
+                <Icon icon=Icon::from(ImIcon::ImPagebreak) />
+                <Icon icon=Icon::from(ImIcon::ImPageBreak) />
+                <Icon icon=Icon::from(OcIcon::OcAlertSm) />
+                <Icon icon=Icon::from(OcIcon::OcAlertLg) width="1em" height="2em" />
             </div>
         }
     })
