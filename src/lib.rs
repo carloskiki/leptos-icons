@@ -25,6 +25,7 @@
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
 pub use icondata::*;
+use leptos::SignalGet;
 
 /// The Icon component.
 #[leptos::component]
@@ -32,29 +33,31 @@ pub fn Icon(
     cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
-    icon: Icon,
+    icon: leptos::MaybeSignal<Icon>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    width: Option<String>,
+    width: Option<leptos::MaybeSignal<String>>,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    height: Option<String>,
+    height: Option<leptos::MaybeSignal<String>>,
     /// HTML class attribute.
     #[prop(into, optional)]
-    class: Option<String>,
+    class: Option<leptos::MaybeSignal<String>>,
     /// HTML style attribute.
     #[prop(into, optional)]
-    style: Option<String>,
-) -> impl leptos::IntoView {
-    let icon = IconData::from(icon);
+    style: Option<leptos::MaybeSignal<String>>,
+) -> impl leptos::IntoView
+{
+    let icon: IconData = icon.get().into();
 
     let mut svg = leptos::svg::svg(cx);
     if let Some(classes) = class {
-        svg = svg.classes(classes);
+        svg = svg.classes(classes.get());
     }
+    // The style set by the user overrides the style set by the icon.
     svg = match (style, icon.style) {
-        (Some(a), Some(b)) => svg.attr("style", format!("{a} {b}")),
-        (Some(a), None) => svg.attr("style", a),
+        (Some(a), Some(b)) => svg.attr("style", format!("{b} {}", a.get())),
+        (Some(a), None) => svg.attr("style", a.get()),
         (None, Some(b)) => svg.attr("style", b),
         (None, None) => svg,
     };
@@ -64,11 +67,12 @@ pub fn Icon(
     if let Some(y) = icon.y {
         svg = svg.attr("x", y);
     }
+    // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
     svg = svg.attr(
         "width",
         leptos::Attribute::String(match (width, icon.width) {
-            (Some(a), Some(_b)) => std::borrow::Cow::from(a),
-            (Some(a), None) => std::borrow::Cow::from(a),
+            (Some(a), Some(_b)) => std::borrow::Cow::from(a.get()),
+            (Some(a), None) => std::borrow::Cow::from(a.get()),
             (None, Some(_b)) => std::borrow::Cow::from("1em"),
             (None, None) => std::borrow::Cow::from("1em"),
         }),
@@ -76,8 +80,8 @@ pub fn Icon(
     svg = svg.attr(
         "height",
         leptos::Attribute::String(match (height, icon.height) {
-            (Some(a), Some(_b)) => std::borrow::Cow::from(a),
-            (Some(a), None) => std::borrow::Cow::from(a),
+            (Some(a), Some(_b)) => std::borrow::Cow::from(a.get()),
+            (Some(a), None) => std::borrow::Cow::from(a.get()),
             (None, Some(_b)) => std::borrow::Cow::from("1em"),
             (None, None) => std::borrow::Cow::from("1em"),
         }),

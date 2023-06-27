@@ -1,6 +1,6 @@
 [package]
 name = "leptos_icons"
-version = "0.0.11"
+version = "0.0.14"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 description = "Component library providing a variety of icons for the leptos web framework."
@@ -15,37 +15,14 @@ categories = ["web-programming"]
 [dependencies]
 leptos = { version = "0.3.0", default-features = false }
 tracing = "0.1"
-icondata = "0.0.2"
+icondata = "0.0.6"
 
 [features]
 default = []
-csr = ["leptos/csr"]
-hydrate = ["leptos/hydrate"]
-ssr = ["leptos/ssr"]
-tracing = ["leptos/tracing"]
-stable = ["leptos/stable"]
 
-serde = ["icondata/serde"]
+macros = ["icondata/macros"]
+serde = ["icondata/serde", "leptos/serde"]
 strum = ["icondata/strum"]
-
-Ai = ["icondata/Ai"]
-Bi = ["icondata/Bi"]
-Bs = ["icondata/Bs"]
-Cg = ["icondata/Cg"]
-Ch = ["icondata/Ch"]
-Fa = ["icondata/Fa"]
-Fi = ["icondata/Fi"]
-Hi = ["icondata/Hi"]
-Im = ["icondata/Im"]
-Io = ["icondata/Io"]
-Lu = ["icondata/Lu"]
-Oc = ["icondata/Oc"]
-Ri = ["icondata/Ri"]
-Si = ["icondata/Si"]
-Tb = ["icondata/Tb"]
-Ti = ["icondata/Ti"]
-Vs = ["icondata/Vs"]
-Wi = ["icondata/Wi"]
 
 AiAccountBookFilled = ["icondata/AiAccountBookFilled"]
 AiAccountBookOutlined = ["icondata/AiAccountBookOutlined"]
