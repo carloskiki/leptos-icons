@@ -11,6 +11,7 @@ console_log = "1"
 log = "0.4"
 
 leptos_icons = { path = "../..", default_features = false, features = [
+    "macros",
     "AiCarryOutTwotone",
     "BiGraphql",
     "BiFilePlusSolid",
