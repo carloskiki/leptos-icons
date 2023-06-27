@@ -15,7 +15,7 @@ categories = ["web-programming"]
 [dependencies]
 leptos = { version = "0.3.0", default-features = false }
 tracing = "0.1"
-icondata = "0.0.5"
+icondata = "0.0.6"
 
 [features]
 default = []
