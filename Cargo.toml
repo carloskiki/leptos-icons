@@ -1,6 +1,6 @@
 [package]
 name = "leptos_icons"
-version = "0.0.14"
+version = "0.0.15"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 description = "Component library providing a variety of icons for the leptos web framework."
@@ -10,12 +10,10 @@ license = "MIT"
 keywords = ["icons", "leptos"]
 categories = ["web-programming"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-leptos = { version = "0.3.0", default-features = false }
+icondata = "0.0.7"
+leptos = "0.4"
 tracing = "0.1"
-icondata = "0.0.6"
 
 [features]
 default = []
