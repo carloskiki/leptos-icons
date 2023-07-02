@@ -10,3 +10,10 @@ Add icons from popular icon libraries into your leptos projects. Every icon is p
 Please note that until version 0.1.0 is published, any patch update can be a breaking change and is not guaranteed to work.
 
 Currently, you can use this [example](/examples/simple-app) as a guide, but better examples and docs are coming. An [index site](https://carlosted.github.io/icondata/) is also available if you wish to filter through available icons.
+
+## Leptos compatibility
+
+| Crate version | Compatible Leptos version |
+|---------------|---------------------------|
+| <= 0.0.14     | 0.3                       |
+| \>= 0.0.15    | 0.4                       |
