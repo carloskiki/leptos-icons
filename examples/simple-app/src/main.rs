@@ -4,8 +4,8 @@ use leptos_icons::*;
 fn main() {
     _ = console_log::init_with_level(log::Level::Debug);
     console_error_panic_hook::set_once();
-    mount_to_body(|cx| {
-        view! { cx,
+    mount_to_body(|| {
+        view! {
             <div style="font-size: 8em; color: #8f39d3;">
                 <Icon icon=icon!(AiCarryOutTwotone) style="color: green" />
                 <Icon icon=icon!(BiGraphql) width="2em" height="2em" style="color: green"/>

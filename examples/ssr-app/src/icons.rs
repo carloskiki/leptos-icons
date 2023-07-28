@@ -28,8 +28,8 @@ pub async fn get_server_count() -> Result<i32, ServerFnError> {
 }
 
 #[component]
-pub fn Icons(cx: Scope) -> impl IntoView {
-    view! { cx,
+pub fn Icons() -> impl IntoView {
+    view! {
         <Icon icon=AiIcon::AiAppleFilled />
     }
 }

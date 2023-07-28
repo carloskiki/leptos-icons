@@ -30,7 +30,6 @@ use leptos::SignalGet;
 /// The Icon component.
 #[leptos::component]
 pub fn Icon(
-    cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
     icon: leptos::MaybeSignal<Icon>,
@@ -50,7 +49,7 @@ pub fn Icon(
 {
     let icon: IconData = icon.get().into();
 
-    let mut svg = leptos::svg::svg(cx);
+    let mut svg = leptos::svg::svg();
     if let Some(classes) = class {
         svg = svg.classes(classes.get());
     }
@@ -104,5 +103,5 @@ pub fn Icon(
     svg = svg.attr("fill", icon.fill.unwrap_or("currentColor"));
     svg = svg.attr("role", "graphics-symbol");
     svg = svg.inner_html(icon.data);
-    leptos::IntoView::into_view(svg, cx)
+    leptos::IntoView::into_view(svg)
 }

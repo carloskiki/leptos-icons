@@ -38,7 +38,7 @@ cfg_if! {
             let conf = get_configuration(None).await.unwrap();
 
             let addr = conf.leptos_options.site_addr;
-            let routes = generate_route_list(|cx| view! { cx, <Counters/> });
+            let routes = generate_route_list(|| view! { <Counters/> });
 
             HttpServer::new(move || {
                 let leptos_options = &conf.leptos_options;
@@ -47,7 +47,7 @@ cfg_if! {
                 App::new()
                     .service(counter_events)
                     .route("/api/{tail:.*}", leptos_actix::handle_server_fns())
-                    .leptos_routes(leptos_options.to_owned(), routes.to_owned(), |cx| view! { cx, <Counters/> })
+                    .leptos_routes(leptos_options.to_owned(), routes.to_owned(), || view! { <Counters/> })
                     .service(Files::new("/", site_root))
                     //.wrap(middleware::Compress::default())
             })
