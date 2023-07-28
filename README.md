@@ -13,7 +13,12 @@ Currently, you can use this [example](/examples/simple-app) as a guide, but bett
 
 ## Leptos compatibility
 
-| Crate version | Compatible Leptos version |
-|---------------|---------------------------|
-| <= 0.0.14     | 0.3                       |
-| \>= 0.0.15    | 0.4                       |
+| Crate version    | Compatible Leptos version |
+|---------------   |---------------------------|
+| <= 0.0.14        | 0.3                       |
+| \>= 0.0.15       | 0.4                       |
+| \>= 0.0.16-alpha | 0.5.0-alpha               |
+
+## MSRV
+
+The minimum supported rust version is: `1.65.0`
