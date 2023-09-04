@@ -70,19 +70,19 @@ pub fn Icon(
     svg = svg.attr(
         "width",
         leptos::Attribute::String(match (width, icon.width) {
-            (Some(a), Some(_b)) => std::borrow::Cow::from(a.get()),
-            (Some(a), None) => std::borrow::Cow::from(a.get()),
-            (None, Some(_b)) => std::borrow::Cow::from("1em"),
-            (None, None) => std::borrow::Cow::from("1em"),
+            (Some(a), Some(_b)) => leptos::Oco::from(a.get()),
+            (Some(a), None) => leptos::Oco::from(a.get()),
+            (None, Some(_b)) => leptos::Oco::from("1em"),
+            (None, None) => leptos::Oco::from("1em"),
         }),
     );
     svg = svg.attr(
         "height",
         leptos::Attribute::String(match (height, icon.height) {
-            (Some(a), Some(_b)) => std::borrow::Cow::from(a.get()),
-            (Some(a), None) => std::borrow::Cow::from(a.get()),
-            (None, Some(_b)) => std::borrow::Cow::from("1em"),
-            (None, None) => std::borrow::Cow::from("1em"),
+            (Some(a), Some(_b)) => leptos::Oco::from(a.get()),
+            (Some(a), None) => leptos::Oco::from(a.get()),
+            (None, Some(_b)) => leptos::Oco::from("1em"),
+            (None, None) => leptos::Oco::from("1em"),
         }),
     );
     if let Some(view_box) = icon.view_box {
