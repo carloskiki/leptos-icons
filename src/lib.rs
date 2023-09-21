@@ -45,8 +45,7 @@ pub fn Icon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: Option<leptos::MaybeSignal<String>>,
-) -> impl leptos::IntoView
-{
+) -> impl leptos::IntoView {
     let icon: IconData = icon.get().into();
 
     let mut svg = leptos::svg::svg();
@@ -105,3 +104,33 @@ pub fn Icon(
     svg = svg.inner_html(icon.data);
     leptos::IntoView::into_view(svg)
 }
+
+macro_rules! impl_from {
+    ($feature:expr, $:icon_type) => {
+        #[cfg($feature)]
+        impl From<$icon_type> for leptos::MaybeSignal<Icon> {
+            fn from(icon: $icon_type) -> Self {
+                Self::Static(Icon::from(icon))
+            }
+        }
+    };
+}
+
+impl_from!("Ai", AiIcon);
+impl_from!("Bi", BiIcon);
+impl_from!("Bs", BsIcon);
+impl_from!("Cg", CgIcon);
+impl_from!("Ch", ChIcon);
+impl_from!("Fa", FaIcon);
+impl_from!("Fi", FiIcon);
+impl_from!("Hi", HiIcon);
+impl_from!("Im", ImIcon);
+impl_icon!("Io", IoIcon);
+impl_from!("Lu", LuIcon);
+impl_from!("Oc", OcIcon);
+impl_from!("Ri", RiIcon);
+impl_from!("Si", SiIcon);
+impl_from!("Tb", TbIcon);
+impl_from!("Ti", TiIcon);
+impl_from!("Vs", VsIcon);
+impl_from!("Wi", WiIcon);
