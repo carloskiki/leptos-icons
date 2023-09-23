@@ -19,8 +19,8 @@
 //! ```
 //! In your leptos project, use:
 //! ```
-//! view! { cx,
-//!     <LeptosIcon icon=BsIcon::BsFolder />
+//! view! {
+//!     <LeptosIcon icon=icon!(BsFolder) />
 //! }
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
@@ -45,8 +45,7 @@ pub fn Icon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: Option<leptos::MaybeSignal<String>>,
-) -> impl leptos::IntoView
-{
+) -> impl leptos::IntoView {
     let icon: IconData = icon.get().into();
 
     let mut svg = leptos::svg::svg();
@@ -58,7 +57,7 @@ pub fn Icon(
         (Some(a), Some(b)) => svg.attr("style", format!("{b} {}", a.get())),
         (Some(a), None) => svg.attr("style", a.get()),
         (None, Some(b)) => svg.attr("style", b),
-        (None, None) => svg,
+        _ => svg,
     };
     if let Some(x) = icon.x {
         svg = svg.attr("x", x);
@@ -70,19 +69,15 @@ pub fn Icon(
     svg = svg.attr(
         "width",
         leptos::Attribute::String(match (width, icon.width) {
-            (Some(a), Some(_b)) => leptos::Oco::from(a.get()),
-            (Some(a), None) => leptos::Oco::from(a.get()),
-            (None, Some(_b)) => leptos::Oco::from("1em"),
-            (None, None) => leptos::Oco::from("1em"),
+            (Some(a), _b) => leptos::Oco::from(a.get()),
+            _ => leptos::Oco::from("1em"),
         }),
     );
     svg = svg.attr(
         "height",
         leptos::Attribute::String(match (height, icon.height) {
-            (Some(a), Some(_b)) => leptos::Oco::from(a.get()),
-            (Some(a), None) => leptos::Oco::from(a.get()),
-            (None, Some(_b)) => leptos::Oco::from("1em"),
-            (None, None) => leptos::Oco::from("1em"),
+            (Some(a), _b) => leptos::Oco::from(a.get()),
+            _ => leptos::Oco::from("1em"),
         }),
     );
     if let Some(view_box) = icon.view_box {
