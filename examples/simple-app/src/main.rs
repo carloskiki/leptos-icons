@@ -1,4 +1,10 @@
 use leptos::*;
+use leptos_icons::AiIcon::*;
+use leptos_icons::BiIcon::*;
+use leptos_icons::BsIcon::*;
+use leptos_icons::FaIcon::*;
+use leptos_icons::ImIcon::*;
+use leptos_icons::OcIcon::*;
 use leptos_icons::*;
 
 fn main() {
@@ -7,15 +13,15 @@ fn main() {
     mount_to_body(|| {
         view! {
             <div style="font-size: 8em; color: #8f39d3;">
-                <Icon icon=icon!(AiCarryOutTwotone) style="color: green" />
-                <Icon icon=icon!(BiGraphql) width="2em" height="2em" style="color: green"/>
-                <Icon icon=Icon::from(BiIcon::BiGraphql) style="color: orange"/>
-                <Icon icon=Icon::from(BsIcon::Bs1Circle) style="color: red"/>
-                <Icon icon=Icon::from(FaIcon::FaBarsSolid) />
-                <Icon icon=Icon::from(ImIcon::ImPagebreak) />
-                <Icon icon=Icon::from(ImIcon::ImPageBreak) />
-                <Icon icon=Icon::from(OcIcon::OcAlertSm) />
-                <Icon icon=Icon::from(OcIcon::OcAlertLg) width="1em" height="2em" />
+                <Icon icon=Icon::from(AiCarryOutTwotone) style="color: green" />
+                <Icon icon=Icon::from(BiGraphql) width="2em" height="2em" style="color: green"/>
+                <Icon icon=Icon::from(BiGraphql) style="color: orange"/>
+                <Icon icon=Icon::from(Bs1Circle) style="color: red"/>
+                <Icon icon=Icon::from(FaBarsSolid) />
+                <Icon icon=Icon::from(ImPagebreak) />
+                <Icon icon=Icon::from(ImPageBreak) />
+                <Icon icon=Icon::from(OcAlertSm) />
+                <Icon icon=Icon::from(OcAlertLg) width="1em" height="2em" />
             </div>
         }
     })
