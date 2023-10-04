@@ -1,6 +1,6 @@
 [package]
 name = "leptos_icons"
-version = "0.0.16-rc3"
+version = "0.1.0"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 rust-version = "1.65.0"
@@ -12,8 +12,8 @@ keywords = ["icons", "leptos"]
 categories = ["web-programming"]
 
 [dependencies]
-icondata = "0.0.7"
-leptos = "0.5.0-rc3"
+icondata = "0.0.8"
+leptos = "0.5.0"
 tracing = "0.1"
 
 [features]
