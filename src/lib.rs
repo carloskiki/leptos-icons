@@ -19,11 +19,13 @@
 //! ```
 //! In your leptos project, use:
 //! ```
+//! # #[cfg(all(feature = "BsFolder", target_arch = "wasm32"))]
 //! use leptos_icons::{*, BsIcon::*};
-//!
-//! let _ = leptos::view! {
+//! use leptos::*;
+//! # #[cfg(all(feature = "BsFolder", target_arch = "wasm32"))]
+//! let _ = view! {
 //!     <Icon icon=Icon::from(BsFolder) />
-//! }
+//! };
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
 pub use icondata::*;
