@@ -21,7 +21,7 @@
 //! ```
 //! use leptos_icons::{*, BsIcon::*};
 //!
-//! view! {
+//! let _ = leptos::view! {
 //!     <LeptosIcon icon=Icon::from(BsFolder) />
 //! }
 //! ```
