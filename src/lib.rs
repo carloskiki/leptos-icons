@@ -22,7 +22,7 @@
 //! use leptos_icons::{*, BsIcon::*};
 //!
 //! let _ = leptos::view! {
-//!     <LeptosIcon icon=Icon::from(BsFolder) />
+//!     <Icon icon=Icon::from(BsFolder) />
 //! }
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
