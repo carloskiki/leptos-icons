@@ -19,8 +19,10 @@
 //! ```
 //! In your leptos project, use:
 //! ```
+//! use leptos_icons::{*, BsIcon::*};
+//!
 //! view! {
-//!     <LeptosIcon icon=icon!(BsFolder) />
+//!     <LeptosIcon icon=Icon::from(BsFolder) />
 //! }
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
