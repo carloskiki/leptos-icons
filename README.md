@@ -22,4 +22,4 @@ Currently, you can use this [example](/examples/simple-app) as a guide, but bett
 
 ## MSRV
 
-The minimum supported rust version is: `1.65.0`
+The minimum supported rust version is: `1.70.0`
