@@ -50,7 +50,7 @@ pub fn Icon(
     #[prop(into, optional)]
     style: Option<leptos::MaybeSignal<String>>,
 ) -> impl leptos::IntoView {
-    let icon = move || icondata::IconData::from(icon.get());
+    let icon = move || icondata_core::IconData::from(icon.get());
 
     let svg = move || {
         let icon = icon();
