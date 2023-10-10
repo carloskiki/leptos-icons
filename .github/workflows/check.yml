@@ -88,4 +88,4 @@ jobs:
         with:
           targets: wasm32-unknown-unknown
       - name: Check Examples
-        run: find ./examples -type d -d 1 -print0 | xargs -0 -I {} -t sh -c "cd {} && cargo c --target wasm32-unknown-unknown"
+        run: find ./examples -type d -maxdepth 1 -print0 | xargs -0 -I {} -t sh -c "cd {} && cargo c --target wasm32-unknown-unknown"
