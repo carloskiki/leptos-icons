@@ -1,10 +1,4 @@
 use leptos::*;
-use leptos_icons::AiIcon::*;
-use leptos_icons::BiIcon::*;
-use leptos_icons::BsIcon::*;
-use leptos_icons::FaIcon::*;
-use leptos_icons::ImIcon::*;
-use leptos_icons::OcIcon::*;
 use leptos_icons::*;
 
 fn main() {
