@@ -39,26 +39,26 @@ pub fn Icon(
     icon: leptos::MaybeSignal<Icon>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    width: Option<leptos::MaybeSignal<String>>,
+    width: leptos::MaybeProp<leptos::TextProp>,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    height: Option<leptos::MaybeSignal<String>>,
+    height: leptos::MaybeProp<leptos::TextProp>,
     /// HTML class attribute.
     #[prop(into, optional)]
-    class: Option<leptos::MaybeSignal<String>>,
+    class: leptos::MaybeProp<leptos::TextProp>,
     /// HTML style attribute.
     #[prop(into, optional)]
-    style: Option<leptos::MaybeSignal<String>>,
+    style: leptos::MaybeProp<leptos::TextProp>,
 ) -> impl leptos::IntoView {
     let icon = move || icondata_core::IconData::from(icon.get());
 
     let svg = move || {
         let icon = icon();
         let mut svg = leptos::svg::svg();
-        if let Some(classes) = class.clone() {
+        if let Some(classes) = class.get() {
             svg = svg.classes(classes.get());
         }
-        let mut svg = match (style.clone(), icon.style) {
+        let mut svg = match (style.get(), icon.style) {
             (Some(a), Some(b)) => svg.attr("style", format!("{b} {}", a.get())),
             (Some(a), None) => svg.attr("style", a.get()),
             (None, Some(b)) => svg.attr("style", b),
@@ -74,20 +74,16 @@ pub fn Icon(
         // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
         svg = svg.attr(
             "width",
-            leptos::Attribute::String(match (width.clone(), icon.width) {
-                (Some(a), Some(_b)) => leptos::Oco::from(a.get()),
-                (Some(a), None) => leptos::Oco::from(a.get()),
-                (None, Some(_b)) => leptos::Oco::from("1em"),
-                (None, None) => leptos::Oco::from("1em"),
+            leptos::Attribute::String(match (width.get(), icon.width) {
+                (Some(a), _) => leptos::Oco::from(a.get()),
+                _ => leptos::Oco::from("1em"),
             }),
         );
         svg = svg.attr(
             "height",
-            leptos::Attribute::String(match (height.clone(), icon.height) {
-                (Some(a), Some(_b)) => leptos::Oco::from(a.get()),
-                (Some(a), None) => leptos::Oco::from(a.get()),
-                (None, Some(_b)) => leptos::Oco::from("1em"),
-                (None, None) => leptos::Oco::from("1em"),
+            leptos::Attribute::String(match (height.get(), icon.height) {
+                (Some(a), _) => leptos::Oco::from(a.get()),
+                _ => leptos::Oco::from("1em"),
             }),
         );
         if let Some(view_box) = icon.view_box {
