@@ -28,15 +28,14 @@
 //! };
 //! ```
 //! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
-pub use icondata::*;
 use leptos::SignalGet;
 
 /// The Icon component.
 #[leptos::component]
-pub fn Icon(
+pub fn Icon<I>(
     /// The icon to show.
     #[prop(into)]
-    icon: leptos::MaybeSignal<Icon>,
+    icon: leptos::MaybeSignal<I>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     width: leptos::MaybeProp<leptos::TextProp>,
@@ -49,11 +48,14 @@ pub fn Icon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: leptos::MaybeProp<leptos::TextProp>,
-) -> impl leptos::IntoView {
-    let icon = move || icondata_core::IconData::from(icon.get());
+) -> impl leptos::IntoView
+where
+    I: Into<icondata_core::IconData> + Clone + 'static,
+{
+    let icon = move || icon.get().into();
 
     let svg = move || {
-        let icon = icon();
+        let icon: icondata_core::IconData = icon();
         let mut svg = leptos::svg::svg();
         if let Some(classes) = class.get() {
             svg = svg.classes(classes.get());
@@ -70,7 +72,7 @@ pub fn Icon(
         if let Some(y) = icon.y {
             svg = svg.attr("x", y);
         }
-        //// The style set by the user overrides the style set by the icon.
+        // The style set by the user overrides the style set by the icon.
         // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
         svg = svg.attr(
             "width",

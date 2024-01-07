@@ -499,43 +499,72 @@ dependencies = [
 
 [[package]]
 name = "icondata"
-version = "0.1.0"
+version = "0.3.0-alpha.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d8d9ea009dc26e5196175f903b93d3f4782dd71c47b6c505ea6ac8e1a1714ae2"
+checksum = "8ebe1cd21fdee999dd74f82add266fc169b63b1af7a7c26569227503afca9429"
 dependencies = [
  "icondata_ai",
  "icondata_bi",
  "icondata_bs",
+ "icondata_cg",
+ "icondata_ch",
  "icondata_core",
  "icondata_fa",
+ "icondata_fi",
+ "icondata_hi",
  "icondata_im",
  "icondata_io",
+ "icondata_lu",
  "icondata_oc",
+ "icondata_ri",
+ "icondata_si",
+ "icondata_tb",
+ "icondata_ti",
+ "icondata_vs",
+ "icondata_wi",
 ]
 
 [[package]]
 name = "icondata_ai"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c8fe5fa2eed7715d5388e046d97f09d3baddd155b487454eb9cda3168c79d4b"
+checksum = "646c54374d17918a0d02443516e38eddb9400d2a3ed22848fcf79478aecb999a"
 dependencies = [
  "icondata_core",
 ]
 
 [[package]]
 name = "icondata_bi"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c0953768d0b9cdd2da0b85b5ef44a0b43078d59411282b8da8fe6c13b123e01f"
+checksum = "8c00068634fd585866564fb110b2b386f235d8d037cea7c1d8a7b69afb202674"
 dependencies = [
  "icondata_core",
 ]
 
 [[package]]
 name = "icondata_bs"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3a1eeaedae6788b08308e1b050eeddaffa62dd5f2368469ef980c8e0e75837e3"
+checksum = "830758f56665a461e7fea00aa7f94c55f0caa874432bc0dbeec798612f3b93f3"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_cg"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13746240d7c7d18d47f823bf53ee35ac162344d742622ef5fd09781c45599b33"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_ch"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e95c0f341752178f2f41675172ba437345c497db2a5f30b564bb4582699511f"
 dependencies = [
  "icondata_core",
 ]
@@ -548,36 +577,117 @@ checksum = "1640a4c1d5ddd08ab1d9854ffa7a2fa3dc52339492676b6d3031e77ca579f434"
 
 [[package]]
 name = "icondata_fa"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a515ecda53468cf4a383409da1708da2e4c00253561873c46304cd7f412e9414"
+checksum = "acc2e496237f7110e8bad2d9ccbfc62957d94dadbe447e2f1a1ecda1e763ca1c"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_fi"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aecb747edad2a71779b4daea8de1996eea427fcd6936a29d16eebd92f0b0801b"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_hi"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b4251b4dbf4f2827b2eab59caa96d91def3b6f1e120c6e45705cad9b0f8dc53"
 dependencies = [
  "icondata_core",
 ]
 
 [[package]]
 name = "icondata_im"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7819397102c0d80a4ad7514e704e06c9c4a43a87007ea523c21ef62e11e31b2b"
+checksum = "49c16a1efc2cbb8d8874f49f7e0f3b7ed23fc12e7e644cf0d3972060db6001b4"
 dependencies = [
  "icondata_core",
 ]
 
 [[package]]
 name = "icondata_io"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "134d9fb91cdd0e7ac971199e2c8c8eb917a975faeeee54b227a0068c4f70c886"
+checksum = "b893b62474fdd4feee7d5bbf0f653c70d0842e59b7e35494871ff2162cf48ed4"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_lu"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bb2d12c06415442a4b592f833f9c6cffb2543515411258f1b26ef6f1576c7023"
 dependencies = [
  "icondata_core",
 ]
 
 [[package]]
 name = "icondata_oc"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "667cb0b74516ec3d4ce357b9ec94189eab6e1bfe5a4a28b5e36579028a8075b1"
+checksum = "fce6141262e8d93b69721f113ce3affd75b843f5eccc91c85916b7b2e4941a2e"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_ri"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b23c248e510f2b4f3de7800eabc85c5410d2713726fcbb27d921f05cd7d184da"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_si"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b83cf9a411541edd49e62a619b44a228fe0d7f9541850c63fce3f5497995e05b"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_tb"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "912da91edf20232c9773875ce1b1c3a5a48277a094498dececc8525f360c4e3c"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_ti"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "be728fc98977e7afc15f692d87601c243f8834f283daa9baf70c212a1a5e9802"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_vs"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "582f38c3ef3d9143b752bd406aaf255f7b41f57a7e8b9dd9b37e0f6088f261c0"
+dependencies = [
+ "icondata_core",
+]
+
+[[package]]
+name = "icondata_wi"
+version = "0.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ce6fe9f0ae8fa9d15e10e1d072a47c89301d65fd89e3e1ec70161d9d5eb60da5"
 dependencies = [
  "icondata_core",
 ]
@@ -671,9 +781,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "leptos"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2df7b113c4c1f416d306bc4cd52a04dec1c68ed734e4a1de2f70c30b828a6a5d"
+checksum = "9d02b78d6e38acf8199426058a0d8c4030835d84a4ee16147df25be7fed707e0"
 dependencies = [
  "cfg-if",
  "leptos_config",
@@ -691,9 +801,9 @@ dependencies = [
 
 [[package]]
 name = "leptos_config"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "601e61b5acfc2dd65400ea0897593543f4a1faaf9694b194f5e2747deba76b8c"
+checksum = "afcaa5db5b22b794b624e14ffe2aefae215b2d21c60a230ae2d06fe21ae5da64"
 dependencies = [
  "config",
  "regex",
@@ -704,9 +814,9 @@ dependencies = [
 
 [[package]]
 name = "leptos_dom"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7e00a9a3b7b150c9aebb1dfdd1cb7c2ffb33a7a9075dcb891b3e214b645172e"
+checksum = "af459b63567e8e9c921ecbe7863732dc8dcb7874eaad6826b7d3778a53ec0ea6"
 dependencies = [
  "async-recursion",
  "cfg-if",
@@ -734,9 +844,9 @@ dependencies = [
 
 [[package]]
 name = "leptos_hot_reload"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d02f51077512f548cc3274fa422d38155b1cf6c87ab908b5797cfcd5ddd6f3f1"
+checksum = "4ea60376eb80a24b3ab082612d62211e3ea0fc4dee132f7ff34d5fa5a5108cd2"
 dependencies = [
  "anyhow",
  "camino",
@@ -755,7 +865,6 @@ name = "leptos_icons"
 version = "0.1.0"
 dependencies = [
  "encoding_rs",
- "icondata",
  "icondata_core",
  "lazy_static",
  "leptos",
@@ -766,9 +875,9 @@ dependencies = [
 
 [[package]]
 name = "leptos_macro"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f3a15891cd424d9c9f3062a6fd1e4472cd3435359841c678fb6bc6eb87f19cf0"
+checksum = "a7e96f4c450f4b5e2ccb135c2b1328890f911ca4ee89da9ed6d582df929e6cb5"
 dependencies = [
  "attribute-derive",
  "cfg-if",
@@ -789,15 +898,16 @@ dependencies = [
 
 [[package]]
 name = "leptos_reactive"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b669db2e4c2c2435b77d534b41578ec986f012c21e1c2d3ef1042b5ab688f65"
+checksum = "22207568e096ac153ba8da68635e3136c1ec614ea9012736fa861c05bfb2eeff"
 dependencies = [
  "base64",
  "cfg-if",
  "futures",
  "indexmap 2.0.0",
  "js-sys",
+ "paste",
  "pin-project",
  "rustc-hash",
  "self_cell",
@@ -814,9 +924,9 @@ dependencies = [
 
 [[package]]
 name = "leptos_server"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "26c79b6c9c11b93e33d7f9976a45f03f78845c940f902ca4b9477db8a527dc14"
+checksum = "272d018a5adf33d10ee57e6f0f83dccc305c68613cd207e8a653aeebd4cd5b4f"
 dependencies = [
  "inventory",
  "lazy_static",
@@ -1273,9 +1383,9 @@ dependencies = [
 
 [[package]]
 name = "server_fn"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c0fe0ff97b5d8bc4097265a372ed1e38c54355d680c7e2298025fb5d5fc4896"
+checksum = "cfed18dfcc8d9004579c40482c3419c07f60ffb9c5b250542edca99f508b0ce9"
 dependencies = [
  "ciborium",
  "const_format",
@@ -1297,9 +1407,9 @@ dependencies = [
 
 [[package]]
 name = "server_fn_macro"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "49da76920fedc5ed480b35713aac633b2be5e505b91d4ccb75ce8ac6d166b321"
+checksum = "0b70ae8e22546ba85500391b36c08e3fba64871be8a26557a3663a8e08acb56f"
 dependencies = [
  "const_format",
  "proc-macro-error",
@@ -1312,9 +1422,9 @@ dependencies = [
 
 [[package]]
 name = "server_fn_macro_default"
-version = "0.5.1"
+version = "0.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "55d29b811163792be818c26e36c73a6eaae0e41d115f8004b86ab9cf3d8cb2d6"
+checksum = "7256ba61dfadb220598db418376e7bc2a34b96df36c4dc48f24ffe161810fc0b"
 dependencies = [
  "server_fn_macro",
  "syn 2.0.33",
@@ -1326,6 +1436,7 @@ version = "0.1.0"
 dependencies = [
  "console_error_panic_hook",
  "console_log",
+ "icondata",
  "leptos",
  "leptos_icons",
  "log",
@@ -1519,18 +1630,18 @@ checksum = "3528ecfd12c466c6f163363caf2d02a71161dd5e1cc6ae7b34207ea2d42d81ed"
 
 [[package]]
 name = "typed-builder"
-version = "0.16.2"
+version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34085c17941e36627a879208083e25d357243812c30e7d7387c3b954f30ade16"
+checksum = "e47c0496149861b7c95198088cbf36645016b1a0734cf350c50e2a38e070f38a"
 dependencies = [
  "typed-builder-macro",
 ]
 
 [[package]]
 name = "typed-builder-macro"
-version = "0.16.2"
+version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f03ca4cb38206e2bef0700092660bb74d696f808514dae47fa1467cbfe26e96e"
+checksum = "982ee4197351b5c9782847ef5ec1fdcaf50503fb19d68f9771adae314e72b492"
 dependencies = [
  "proc-macro2",
  "quote",

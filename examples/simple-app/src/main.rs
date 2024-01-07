@@ -7,15 +7,15 @@ fn main() {
     mount_to_body(|| {
         view! {
             <div style="font-size: 8em; color: #8f39d3;">
-                <Icon icon=Icon::from(AiCarryOutTwotone) style="color: green" />
-                <Icon icon=Icon::from(BiGraphql) width="2em" height="2em" style="color: green"/>
-                <Icon icon=Icon::from(BiGraphql) style="color: orange"/>
-                <Icon icon=Icon::from(Bs1Circle) style="color: red"/>
-                <Icon icon=Icon::from(FaBarsSolid) />
-                <Icon icon=Icon::from(ImPagebreak) />
-                <Icon icon=Icon::from(ImPageBreak) />
-                <Icon icon=Icon::from(OcAlertSm) />
-                <Icon icon=Icon::from(OcAlertLg) width="1em" height="2em" />
+                <Icon icon=icondata::AiCarryOutTwotone style="color: green" />
+                <Icon icon=icondata::BiGraphql width="2em" height="2em" style="color: green"/>
+                <Icon icon=icondata::BiGraphql style="color: orange"/>
+                <Icon icon=icondata::Bs1Circle style="color: red"/>
+                <Icon icon=icondata::FaBarsSolid />
+                <Icon icon=icondata::ImPagebreak />
+                <Icon icon=icondata::ImPageBreak />
+                <Icon icon=icondata::OcAlertSm />
+                <Icon icon=icondata::OcAlertLg width="1em" height="2em" />
             </div>
         }
     })
