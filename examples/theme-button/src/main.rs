@@ -1,7 +1,6 @@
 use leptos::*;
 use leptos_icons::*;
 use leptos_meta::*;
-use icondata::BsIcon;
 
 const DIV_STYLE: &str = r#"
     display: flex;
@@ -27,20 +26,20 @@ pub fn main() {
     provide_meta_context();
 
     let (dark, set_dark) = create_signal(false);
-    let icon: MaybeSignal<icondata::BsIcon> = MaybeSignal::from(Signal::derive(move || {
+    let icon = Signal::derive(move || {
         if dark.get() {
             icondata::BsMoonStars
         } else {
             icondata::BsSun
         }
-    }));
+    });
     let toggle_theme = move |_| set_dark.update(|dark| *dark = !*dark);
 
     mount_to_body(move || {
         view! {
             <Meta name="color-scheme" content=move || if dark.get() { "light".to_string() } else { "dark".to_string() } />
             <div on:click=toggle_theme style=DIV_STYLE>
-                <Icon<BsIcon> icon=icon style=ICON_STYLE />
+                <Icon icon style=ICON_STYLE />
             </div>
         }
     })

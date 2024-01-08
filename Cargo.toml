@@ -12,9 +12,8 @@ keywords = ["icons", "leptos"]
 categories = ["web-programming"]
 
 [dependencies]
-icondata_core = "0.0.2"
+icondata_core = "0.1.0"
 leptos = "0.5"
-tracing = "0.1"
 
 # For -Zminimal-versions
 [target.'cfg(any())'.dependencies]
