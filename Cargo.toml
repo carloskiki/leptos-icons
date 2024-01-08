@@ -11,8 +11,11 @@ license = "MIT"
 keywords = ["icons", "leptos"]
 categories = ["web-programming"]
 
+[dev-dependencies]
+icondata = "0.3"
+
 [dependencies]
-icondata_core = "0.1.0"
+icondata_core = "0.1"
 leptos = "0.5"
 
 # For -Zminimal-versions
