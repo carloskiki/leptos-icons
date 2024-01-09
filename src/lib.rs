@@ -6,37 +6,42 @@
 //!
 //! <br>
 //!
-//! Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+//! A simple component that reactively renders an icon.
 //!
-//! Every enum variant has a corresponding feature name, that enables it.
+//! To render icons, this crate needs to be coupled with [`icondata`](https://docs.rs/icondata/latest/icondata/),
+//! which is an icon source providing over 20,000 icons.
 //!
-//! ### Example
-//! In Cargo.toml, include:
+//! # Getting Started
+//!
+//! In your Cargo.toml, include both `leptos_icons` and `icondata`:
+//!
 //! ```toml
 //! [dependencies]
-//! # ...
-//! leptos_icons = { version = "{crate_version}", features = ["BsFolder"] }
+//! leptos_icons = { version = "{crate_version}" }
+//! icondata = { version = "{icondata_version}" }
 //! ```
+//!
 //! In your leptos project, use:
 //! ```
-//! # #[cfg(all(feature = "BsFolder", target_arch = "wasm32"))]
-//! use leptos_icons::{*, BsIcon::*};
 //! use leptos::*;
-//! # #[cfg(all(feature = "BsFolder", target_arch = "wasm32"))]
+//! use leptos_icons::*;
+//!
+//! # #[cfg(target_arch = "wasm32")]
 //! let _ = view! {
-//!     <Icon icon=Icon::from(BsFolder) />
+//!     <Icon icon=icondata::BsFolder />
 //! };
 //! ```
-//! To see a complete and working example, take a look at the [examples directory](https://github.com/Carlosted/leptos-icons/tree/main/examples) on github.
-pub use icondata::*;
+//! [__Complete examples__](https://github.com/Carlosted/leptos-icons/tree/main/examples) are available on github.
+
+use leptos::tracing;
 use leptos::SignalGet;
 
 /// The Icon component.
 #[leptos::component]
 pub fn Icon(
-    /// The icon to show.
+    /// The icon to render.
     #[prop(into)]
-    icon: leptos::MaybeSignal<Icon>,
+    icon: leptos::MaybeSignal<icondata_core::Icon>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     width: leptos::MaybeProp<leptos::TextProp>,
@@ -49,11 +54,11 @@ pub fn Icon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: leptos::MaybeProp<leptos::TextProp>,
-) -> impl leptos::IntoView {
-    let icon = move || icondata_core::IconData::from(icon.get());
-
+) -> impl leptos::IntoView
+where
+{
     let svg = move || {
-        let icon = icon();
+        let icon = icon.get();
         let mut svg = leptos::svg::svg();
         if let Some(classes) = class.get() {
             svg = svg.classes(classes.get());
@@ -70,7 +75,7 @@ pub fn Icon(
         if let Some(y) = icon.y {
             svg = svg.attr("x", y);
         }
-        //// The style set by the user overrides the style set by the icon.
+        // The style set by the user overrides the style set by the icon.
         // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
         svg = svg.attr(
             "width",

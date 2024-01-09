@@ -2,7 +2,6 @@ use leptos::*;
 use leptos_icons::*;
 use leptos_meta::*;
 
-
 const DIV_STYLE: &str = r#"
     display: flex;
     align-items: center;
@@ -21,7 +20,6 @@ const ICON_STYLE: &str = r#"
     border-radius: 1rem;
 "#;
 
-
 pub fn main() {
     _ = console_log::init_with_level(log::Level::Debug);
     console_error_panic_hook::set_once();
@@ -30,9 +28,9 @@ pub fn main() {
     let (dark, set_dark) = create_signal(false);
     let icon = Signal::derive(move || {
         if dark.get() {
-            Icon::from(BsMoonStars)
+            icondata::BsMoonStars
         } else {
-            Icon::from(BsSun)
+            icondata::BsSun
         }
     });
     let toggle_theme = move |_| set_dark.update(|dark| *dark = !*dark);

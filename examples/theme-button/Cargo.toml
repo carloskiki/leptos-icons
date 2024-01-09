@@ -7,8 +7,9 @@ edition = "2021"
 
 [dependencies]
 leptos = { version = "0.5.4", features = ["csr"] }
-leptos_meta = { version = "0.5.1", features = ["csr"] }
-leptos_icons = { path = "../../", features = ["BsSun", "BsMoonStars"] }
+leptos_meta = { version = "0.5.4", features = ["csr"] }
+leptos_icons = { path = "../.." }
+icondata = "0.3.0"
 web-sys = { version = "0.3.64", features = ["Window", "Storage"] }
 
 console_error_panic_hook = "0.1.7"

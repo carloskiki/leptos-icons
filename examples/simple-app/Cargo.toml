@@ -7,22 +7,10 @@ edition = "2021"
 console_error_panic_hook = "0.1"
 console_log = "1"
 leptos = { version = "0.5.4", features = ["csr"] }
-leptos_icons = { path = "../..", default_features = false, features = [
-    "AiCarryOutTwotone",
-    "BiGraphql",
-    "BiFilePlusSolid",
-    "Bs1Circle",
-    "BsFolder",
-    "FaBarsSolid",
-    "ImPagebreak",
-    "ImPageBreak",
-    "IoColorWand",
-    "OcAlertSm",
-    "OcAlertLg"
-] }
+leptos_icons = { path = "../.." }
+icondata = "0.3.0"
 log = "0.4"
 
 [profile.release]
 opt-level = "s"
-lto = "thin"
-debug = 0
+lto = true
