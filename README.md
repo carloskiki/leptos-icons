@@ -3,7 +3,7 @@
 [![Docs.rs](https://docs.rs/leptos_icons/badge.svg)](https://docs.rs/leptos_icons)
 [![GitHub](https://img.shields.io/github/license/Carlosted/leptos-icons)](/LICENSE)
 
-Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+Add icons from popular icon libraries into your leptos projects.
 
 Currently, you can use this [example](/examples/simple-app) as a guide, but better examples and docs are coming. An [index site](https://carlosted.github.io/icondata/) is also available if you wish to filter through available icons.
 
