@@ -17,7 +17,7 @@ Currently, you can use this [example](/examples/simple-app) as a guide, but bett
 | 0.0.16-beta   | 0.5.0-beta2               |
 | 0.0.16-rc3    | 0.5.0-rc3                 |
 | 0.1           | 0.5                       |
-| 0.2           | 0.5                       |
+| 0.2.1         | 0.5                       |
 
 ## MSRV
 
