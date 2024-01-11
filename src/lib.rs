@@ -33,33 +33,32 @@
 //! ```
 //! [__Complete examples__](https://github.com/Carlosted/leptos-icons/tree/main/examples) are available on github.
 
-use leptos::tracing;
-use leptos::SignalGet;
+use leptos::*;
 
 /// The Icon component.
-#[leptos::component]
+#[component]
 pub fn Icon(
     /// The icon to render.
     #[prop(into)]
-    icon: leptos::MaybeSignal<icondata_core::Icon>,
+    icon: MaybeSignal<icondata_core::Icon>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    width: leptos::MaybeProp<leptos::TextProp>,
+    width: MaybeProp<TextProp>,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
-    height: leptos::MaybeProp<leptos::TextProp>,
+    height: MaybeProp<TextProp>,
     /// HTML class attribute.
     #[prop(into, optional)]
-    class: leptos::MaybeProp<leptos::TextProp>,
+    class: MaybeProp<TextProp>,
     /// HTML style attribute.
     #[prop(into, optional)]
-    style: leptos::MaybeProp<leptos::TextProp>,
-) -> impl leptos::IntoView
+    style: MaybeProp<TextProp>,
+) -> impl IntoView
 where
 {
     let svg = move || {
         let icon = icon.get();
-        let mut svg = leptos::svg::svg();
+        let mut svg = svg::svg();
         if let Some(classes) = class.get() {
             svg = svg.classes(classes.get());
         }
@@ -79,16 +78,16 @@ where
         // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
         svg = svg.attr(
             "width",
-            leptos::Attribute::String(match (width.get(), icon.width) {
-                (Some(a), _) => leptos::Oco::from(a.get()),
-                _ => leptos::Oco::from("1em"),
+            Attribute::String(match (width.get(), icon.width) {
+                (Some(a), _) => Oco::from(a.get()),
+                _ => Oco::from("1em"),
             }),
         );
         svg = svg.attr(
             "height",
-            leptos::Attribute::String(match (height.get(), icon.height) {
-                (Some(a), _) => leptos::Oco::from(a.get()),
-                _ => leptos::Oco::from("1em"),
+            Attribute::String(match (height.get(), icon.height) {
+                (Some(a), _) => Oco::from(a.get()),
+                _ => Oco::from("1em"),
             }),
         );
         if let Some(view_box) = icon.view_box {
@@ -111,5 +110,5 @@ where
         svg = svg.inner_html(icon.data);
         svg
     };
-    leptos::IntoView::into_view(svg)
+    IntoView::into_view(svg)
 }
