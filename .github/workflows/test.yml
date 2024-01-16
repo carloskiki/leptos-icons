@@ -1,8 +1,6 @@
 permissions:
   contents: read
 on:
-  push:
-    branches: [main]
   pull_request:
 # Spend CI time only on latest ref: https://github.com/jonhoo/rust-ci-conf/pull/5
 concurrency:
