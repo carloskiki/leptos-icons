@@ -72,7 +72,7 @@ where
             svg = svg.attr("x", x);
         }
         if let Some(y) = icon.y {
-            svg = svg.attr("x", y);
+            svg = svg.attr("y", y);
         }
         // The style set by the user overrides the style set by the icon.
         // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
