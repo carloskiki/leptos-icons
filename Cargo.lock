@@ -771,6 +771,7 @@ dependencies = [
 name = "leptos_icons"
 version = "0.2.1"
 dependencies = [
+ "bytes",
  "encoding_rs",
  "icondata",
  "icondata_core",
