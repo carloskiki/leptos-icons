@@ -1,4 +1,4 @@
-//! [![github]](https://github.com/Carlosted/leptos-icons)&ensp;[![crates-io]](https://crates.io/crates/leptos_icons)&ensp;[![docs-rs]](crate)
+//! [![github]](https://github.com/carloskiki/leptos-icons)&ensp;[![crates-io]](https://crates.io/crates/leptos_icons)&ensp;[![docs-rs]](crate)
 //!
 //! [github]: https://img.shields.io/badge/github-8da0cb?style=for-the-badge&labelColor=555555&logo=github
 //! [crates-io]: https://img.shields.io/badge/crates.io-fc8d62?style=for-the-badge&labelColor=555555&logo=rust
@@ -31,7 +31,7 @@
 //!     <Icon icon=icondata::BsFolder />
 //! };
 //! ```
-//! [__Complete examples__](https://github.com/Carlosted/leptos-icons/tree/main/examples) are available on github.
+//! [__Complete examples__](https://github.com/carloskiki/leptos-icons/tree/main/examples) are available on github.
 
 use leptos::*;
 
