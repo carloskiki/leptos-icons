@@ -44,6 +44,10 @@ jobs:
         uses: dtolnay/rust-toolchain@nightly
       - name: rustup default stable
         run: rustup default stable
+      - name: Set dependencies in Cargo.toml
+        run: |
+          echo >> Cargo.toml
+          cat Cargo.minimal-versions.toml >> Cargo.toml
       - name: cargo update -Zminimal-versions
         run: cargo +nightly update -Zminimal-versions
       - name: cargo test
