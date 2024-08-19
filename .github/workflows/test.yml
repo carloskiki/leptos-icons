@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-permissions:
-  contents: read
-on:
-  pull_request:
-# Spend CI time only on latest ref: https://github.com/jonhoo/rust-ci-conf/pull/5
-=======
 # This is the main CI workflow that runs the test suite on all pushes to main and all pull requests.
 # It runs the following jobs:
 # - required: runs the test suite on ubuntu with stable and beta rust toolchains
@@ -19,7 +12,6 @@ on:
   push:
     branches: [main]
   pull_request:
->>>>>>> ci/main
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -30,11 +22,8 @@ jobs:
     name: ubuntu / ${{ matrix.toolchain }}
     strategy:
       matrix:
-<<<<<<< HEAD
-=======
         # run on stable and beta to ensure that tests won't break on the next version of the rust
         # toolchain
->>>>>>> ci/main
         toolchain: [stable, beta]
     steps:
       - uses: actions/checkout@v4
@@ -45,10 +34,7 @@ jobs:
         with:
           toolchain: ${{ matrix.toolchain }}
       - name: cargo generate-lockfile
-<<<<<<< HEAD
-=======
         # enable this ci template to run regardless of whether the lockfile is checked in or not
->>>>>>> ci/main
         if: hashFiles('Cargo.lock') == ''
         run: cargo generate-lockfile
       # https://twitter.com/jonhoo/status/1571290371124260865
@@ -58,8 +44,6 @@ jobs:
       - name: cargo test --doc
         run: cargo test --locked --all-features --doc
   minimal:
-<<<<<<< HEAD
-=======
     # This action chooses the oldest version of the dependencies permitted by Cargo.toml to ensure
     # that this crate is compatible with the minimal version that this crate and its dependencies
     # require. This will pickup issues where this create relies on functionality that was introduced
@@ -82,7 +66,6 @@ jobs:
     # Cargo build order. See also
     # https://github.com/jonhoo/fantoccini/blob/fde336472b712bc7ebf5b4e772023a7ba71b2262/Cargo.toml#L47-L49.
     # This action is run on ubuntu with the stable toolchain, as it is not expected to fail
->>>>>>> ci/main
     runs-on: ubuntu-latest
     name: ubuntu / stable / minimal-versions
     steps:
@@ -100,10 +83,7 @@ jobs:
       - name: cargo test
         run: cargo test --locked --all-features --all-targets
   os-check:
-<<<<<<< HEAD
-=======
     # run cargo test on mac and windows
->>>>>>> ci/main
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.os }} / stable
     strategy:
@@ -111,13 +91,8 @@ jobs:
       matrix:
         os: [macos-latest, windows-latest]
     steps:
-<<<<<<< HEAD
-      # if your project needs OpenSSL, uncommment this to fix Windows builds.
-      # it's commented out by default as tthe install command takes 5-10m.
-=======
       # if your project needs OpenSSL, uncomment this to fix Windows builds.
       # it's commented out by default as the install command takes 5-10m.
->>>>>>> ci/main
       # - run: echo "VCPKG_ROOT=$env:VCPKG_INSTALLATION_ROOT" | Out-File -FilePath $env:GITHUB_ENV -Append
       #   if: runner.os == 'Windows'
       # - run: vcpkg install openssl:x64-windows-static-md
@@ -132,8 +107,6 @@ jobs:
         run: cargo generate-lockfile
       - name: cargo test
         run: cargo test --locked --all-features --all-targets
-<<<<<<< HEAD
-=======
   coverage:
     # use llvm-cov to build and collect coverage and outputs in a format that
     # is compatible with codecov.io
@@ -181,4 +154,3 @@ jobs:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
           env_vars: OS,RUST
->>>>>>> ci/main
