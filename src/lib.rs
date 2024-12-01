@@ -43,45 +43,52 @@ pub fn Icon(
     icon: Signal<icondata_core::Icon>,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(optional, into)]
-    width: Option<Oco<'static, str>>,
+    width: MaybeProp<String>,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(optional, into)]
-    height: Option<Oco<'static, str>>,
+    height: MaybeProp<String>,
     /// HTML class attribute.
     #[prop(optional, into)]
-    class: Option<Oco<'static, str>>,
+    class: MaybeProp<String>,
     /// HTML style attribute.
     #[prop(optional, into)]
-    style: Option<Oco<'static, str>>,
+    style: MaybeProp<String>,
 ) -> impl IntoView {
-    let icon = icon.get();
-    svg::svg()
-        .class(class)
-        .style(match (style, icon.style) {
-            (Some(a), Some(b)) => Some(Oco::from(format!("{b} {a}"))),
-            (Some(a), None) => Some(a),
-            (None, Some(b)) => Some(Oco::from(b)),
-            _ => None,
-        })
-        .attr("x", icon.x)
-        .attr("y", icon.y)
-        // The style set by the user overrides the style set by the icon.
-        // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
-        .attr(
-            "width",
-            width.map_or_else(|| Oco::from("1rem"), |width| width),
-        )
-        .attr(
-            "height",
-            height.map_or_else(|| Oco::from("1rem"), |height| height),
-        )
-        .attr("viewBox", icon.view_box)
-        .attr("stroke-linecap", icon.stroke_linecap)
-        .attr("stroke-linejoin", icon.stroke_linejoin)
-        .attr("stroke-width", icon.stroke_width)
-        .attr("stroke-linecap", icon.stroke_linecap)
-        .attr("stroke", icon.stroke)
-        .attr("fill", icon.fill.unwrap_or("currentColor"))
-        .attr("role", "graphics-symbol")
-        .inner_html(icon.data)
+    move || {
+        let icon = icon.get();
+
+        svg::svg()
+            .class(class.get())
+            .style(match (style.get(), icon.style) {
+                (Some(a), Some(b)) => Some(format!("{b} {a}")),
+                (Some(a), None) => Some(a),
+                (None, Some(b)) => Some(b.to_string()),
+                _ => None,
+            })
+            .attr("x", icon.x)
+            .attr("y", icon.y)
+            // The style set by the user overrides the style set by the icon.
+            // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
+            .attr(
+                "width",
+                width
+                    .get()
+                    .map_or_else(|| "1rem".to_string(), |width| width),
+            )
+            .attr(
+                "height",
+                height
+                    .get()
+                    .map_or_else(|| "1rem".to_string(), |height| height),
+            )
+            .attr("viewBox", icon.view_box)
+            .attr("stroke-linecap", icon.stroke_linecap)
+            .attr("stroke-linejoin", icon.stroke_linejoin)
+            .attr("stroke-width", icon.stroke_width)
+            .attr("stroke-linecap", icon.stroke_linecap)
+            .attr("stroke", icon.stroke)
+            .attr("fill", icon.fill.unwrap_or("currentColor"))
+            .attr("role", "graphics-symbol")
+            .inner_html(icon.data)
+    }
 }
