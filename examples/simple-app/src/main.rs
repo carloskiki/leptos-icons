@@ -1,6 +1,6 @@
-use leptos::*;
-use leptos_icons::*;
 use icondata as i;
+use leptos::prelude::*;
+use leptos_icons::*;
 
 fn main() {
     _ = console_log::init_with_level(log::Level::Debug);

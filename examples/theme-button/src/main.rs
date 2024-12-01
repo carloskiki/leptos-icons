@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::prelude::*;
 use leptos_icons::*;
 use leptos_meta::*;
 
@@ -25,7 +25,7 @@ pub fn main() {
     console_error_panic_hook::set_once();
     provide_meta_context();
 
-    let (dark, set_dark) = create_signal(false);
+    let (dark, set_dark) = signal(false);
     let icon = Signal::derive(move || {
         if dark.get() {
             icondata::BsMoonStars
@@ -39,7 +39,7 @@ pub fn main() {
         view! {
             <Meta name="color-scheme" content=move || if dark.get() { "light".to_string() } else { "dark".to_string() } />
             <div on:click=toggle_theme style=DIV_STYLE>
-                <Icon icon style=ICON_STYLE />
+                <Icon icon style=ICON_STYLE/>
             </div>
         }
     })
