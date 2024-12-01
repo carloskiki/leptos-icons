@@ -56,9 +56,8 @@ pub fn Icon(
 ) -> impl IntoView {
     move || {
         let icon = icon.get();
-
         svg::svg()
-            .class(class.get())
+            .attr("class", class.get())
             .style(match (style.get(), icon.style) {
                 (Some(a), Some(b)) => Some(format!("{b} {a}")),
                 (Some(a), None) => Some(a),
@@ -69,18 +68,8 @@ pub fn Icon(
             .attr("y", icon.y)
             // The style set by the user overrides the style set by the icon.
             // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
-            .attr(
-                "width",
-                width
-                    .get()
-                    .map_or_else(|| "1rem".to_string(), |width| width),
-            )
-            .attr(
-                "height",
-                height
-                    .get()
-                    .map_or_else(|| "1rem".to_string(), |height| height),
-            )
+            .attr("width", width.get().unwrap_or_else(|| "1rem".to_string()))
+            .attr("height", height.get().unwrap_or_else(|| "1rem".to_string()))
             .attr("viewBox", icon.view_box)
             .attr("stroke-linecap", icon.stroke_linecap)
             .attr("stroke-linejoin", icon.stroke_linejoin)
