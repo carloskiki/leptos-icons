@@ -58,7 +58,7 @@ pub fn Icon(
     svg::svg()
         .class(class)
         .style(match (style, icon.style) {
-            (Some(a), Some(b)) => Some(Oco::from(format!("{b} {}", a))),
+            (Some(a), Some(b)) => Some(Oco::from(format!("{b} {a}"))),
             (Some(a), None) => Some(a),
             (None, Some(b)) => Some(Oco::from(b)),
             _ => None,
