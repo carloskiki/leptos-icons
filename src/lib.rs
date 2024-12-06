@@ -24,7 +24,7 @@
 //! In your leptos project, use:
 //! ```
 //! use leptos::prelude::*;
-//! use leptos_icons::*;
+//! use leptos_icons::Icon;
 //!
 //! # #[cfg(target_arch = "wasm32")]
 //! let _ = view! {
@@ -41,35 +41,15 @@ pub fn Icon(
     /// The icon to render.
     #[prop(into)]
     icon: Signal<icondata_core::Icon>,
-    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
-    #[prop(optional, into)]
-    width: MaybeProp<String>,
-    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
-    #[prop(optional, into)]
-    height: MaybeProp<String>,
-    /// HTML class attribute.
-    #[prop(optional, into)]
-    class: MaybeProp<String>,
-    /// HTML style attribute.
-    #[prop(optional, into)]
-    style: MaybeProp<String>,
 ) -> impl IntoView {
     move || {
         let icon = icon.get();
         svg::svg()
-            .attr("class", class.get())
-            .style(match (style.get(), icon.style) {
-                (Some(a), Some(b)) => Some(format!("{b} {a}")),
-                (Some(a), None) => Some(a),
-                (None, Some(b)) => Some(b.to_string()),
-                _ => None,
-            })
+            .style(icon.style)
             .attr("x", icon.x)
             .attr("y", icon.y)
-            // The style set by the user overrides the style set by the icon.
-            // We ignore the width and height attributes of the icon, even if the user hasn't specified any.
-            .attr("width", width.get().unwrap_or_else(|| "1rem".to_string()))
-            .attr("height", height.get().unwrap_or_else(|| "1rem".to_string()))
+            .attr("width", "1rem")
+            .attr("height", "1rem")
             .attr("viewBox", icon.view_box)
             .attr("stroke-linecap", icon.stroke_linecap)
             .attr("stroke-linejoin", icon.stroke_linejoin)
