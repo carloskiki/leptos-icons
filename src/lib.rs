@@ -41,15 +41,23 @@ pub fn Icon(
     /// The icon to render.
     #[prop(into)]
     icon: Signal<icondata_core::Icon>,
+    #[prop(into, optional)] style: MaybeProp<String>,
+    #[prop(into, optional)] width: MaybeProp<String>,
+    #[prop(into, optional)] height: MaybeProp<String>,
 ) -> impl IntoView {
     move || {
         let icon = icon.get();
         svg::svg()
-            .style(icon.style)
+            .style(match (style.get(), icon.style) {
+                (Some(a), Some(b)) => Some(format!("{b} {a}")),
+                (Some(a), None) => Some(a),
+                (None, Some(b)) => Some(b.to_string()),
+                _ => None,
+            })
             .attr("x", icon.x)
             .attr("y", icon.y)
-            .attr("width", "1rem")
-            .attr("height", "1rem")
+            .attr("width", width.get().unwrap_or_else(|| "1rem".to_string()))
+            .attr("height", height.get().unwrap_or_else(|| "1rem".to_string()))
             .attr("viewBox", icon.view_box)
             .attr("stroke-linecap", icon.stroke_linecap)
             .attr("stroke-linejoin", icon.stroke_linejoin)

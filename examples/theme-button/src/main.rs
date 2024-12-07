@@ -22,14 +22,14 @@ pub fn main() {
     };
 
     let icon_style = view! {
-        <{..} style="width: 20rem; height: 20rem; padding: 0.5rem; border: 4px solid; border-radius: 1rem;" />
+        <{..} style="padding: 0.5rem; border: 4px solid; border-radius: 1rem;" />
     };
 
     mount_to_body(move || {
         view! {
             <Meta name="color-scheme" content=move || if dark.get() { "light".to_string() } else { "dark".to_string() } />
             <div {..div_style} on:click=toggle_theme>
-                <Icon icon {..icon_style} />
+                <Icon icon width="20rem" height="20rem" {..icon_style} />
             </div>
         }
     });
