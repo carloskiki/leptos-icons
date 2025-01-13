@@ -19,4 +19,4 @@ Currently, you can use this [example](/examples/simple-app) as a guide, but bett
 | 0.1           | 0.5                       |
 | 0.2.1         | 0.5                       |
 | 0.3.0 / 0.3.1 | 0.6                       |
-| 0.4.0         | 0.7                       |
+| 0.4.0 / 0.5.0 | 0.7                       |
