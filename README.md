@@ -20,7 +20,3 @@ Currently, you can use this [example](/examples/simple-app) as a guide, but bett
 | 0.2.1         | 0.5                       |
 | 0.3.0 / 0.3.1 | 0.6                       |
 | 0.4.0         | 0.7                       |
-
-## MSRV
-
-The minimum supported rust version is: `1.75.0`
