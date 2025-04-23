@@ -41,6 +41,7 @@ pub fn Icon(
     /// The icon to render.
     #[prop(into)]
     icon: Signal<icondata_core::Icon>,
+    #[prop(into, optional)] class: MaybeProp<String>,
     #[prop(into, optional)] style: MaybeProp<String>,
     #[prop(into, optional)] width: MaybeProp<String>,
     #[prop(into, optional)] height: MaybeProp<String>,
@@ -48,6 +49,7 @@ pub fn Icon(
     move || {
         let icon = icon.get();
         svg::svg()
+            .class(class.get().unwrap_or_default())
             .style(match (style.get(), icon.style) {
                 (Some(a), Some(b)) => Some(format!("{b} {a}")),
                 (Some(a), None) => Some(a),
