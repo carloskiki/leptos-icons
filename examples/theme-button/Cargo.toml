@@ -6,8 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-leptos = { version = "0.7.0", features = ["csr"] }
-leptos_meta = { version = "0.7.0" }
+leptos = { version = "0.8.0", features = ["csr"] }
+leptos_meta = { version = "0.8.0" }
 leptos_icons = { path = "../.." }
 icondata = "0.5.0"
 web-sys = { version = "0.3.64", features = ["Window", "Storage"] }
