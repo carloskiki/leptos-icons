@@ -62,7 +62,6 @@ pub fn Icon(
             .attr("stroke-linecap", icon.stroke_linecap)
             .attr("stroke-linejoin", icon.stroke_linejoin)
             .attr("stroke-width", icon.stroke_width)
-            .attr("stroke-linecap", icon.stroke_linecap)
             .attr("stroke", icon.stroke)
             .attr("fill", icon.fill.unwrap_or("currentColor"))
             .attr("role", "graphics-symbol")
