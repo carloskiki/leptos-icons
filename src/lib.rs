@@ -65,6 +65,6 @@ pub fn Icon(
             .attr("stroke", icon.stroke)
             .attr("fill", icon.fill.unwrap_or("currentColor"))
             .attr("role", "graphics-symbol")
-            .inner_html(icon.data)
+            .child(svg::InertElement::new(icon.data))
     }
 }
