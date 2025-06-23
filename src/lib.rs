@@ -68,3 +68,55 @@ pub fn Icon(
             .child(svg::InertElement::new(icon.data))
     }
 }
+
+/// Creates a `<symbol>` with the icon.
+///
+/// # Example
+/// ```rust
+/// use leptos::prelude::*;
+/// use letos_icons::Symbol;
+///
+/// #[component]
+/// fn MyComponent() -> impl IntoView {
+///     view! {
+///         <Symbol icon=icondata::OcAlertSm id="my_icon"/>
+///         <svg viewBox="0 0 1024 1024" width="1em" height="1em">
+///             <use href="#my_icon" />
+///         </svg>
+///     }
+/// }
+/// ```
+#[component]
+pub fn Symbol(
+    /// Id of the symbol for later refernce.
+    /// Used as the `href` property in a `<use>` element.
+    id: &'static str,
+    /// The icon to render.
+    #[prop(into)]
+    icon: Signal<icondata_core::Icon>,
+    #[prop(into, optional)] style: MaybeProp<String>,
+) -> impl IntoView {
+    move || {
+        let icon = icon.get();
+        let sym = svg::symbol()
+            .style(match (style.get(), icon.style) {
+                (Some(a), Some(b)) => Some(format!("{b} {a}")),
+                (Some(a), None) => Some(a),
+                (None, Some(b)) => Some(b.to_string()),
+                _ => None,
+            })
+            .attr("id", id)
+            .attr("x", icon.x)
+            .attr("y", icon.y)
+            .attr("viewBox", icon.view_box)
+            .attr("stroke-linecap", icon.stroke_linecap)
+            .attr("stroke-linejoin", icon.stroke_linejoin)
+            .attr("stroke-width", icon.stroke_width)
+            .attr("stroke", icon.stroke)
+            .attr("fill", icon.fill.unwrap_or("currentColor"))
+            .attr("role", "graphics-symbol")
+            .child(svg::InertElement::new(icon.data));
+
+        svg::svg().style("display: none;").child(sym)
+    }
+}
