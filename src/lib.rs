@@ -90,7 +90,8 @@ pub fn Icon(
 pub fn Symbol(
     /// Id of the symbol for later refernce.
     /// Used as the `href` property in a `<use>` element.
-    id: &'static str,
+    #[prop(into)]
+    id: String,
     /// The icon to render.
     #[prop(into)]
     icon: Signal<icondata_core::Icon>,
@@ -105,7 +106,7 @@ pub fn Symbol(
                 (None, Some(b)) => Some(b.to_string()),
                 _ => None,
             })
-            .attr("id", id)
+            .attr("id", id.clone())
             .attr("x", icon.x)
             .attr("y", icon.y)
             .attr("viewBox", icon.view_box)
