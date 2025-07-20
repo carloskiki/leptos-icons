@@ -1,6 +1,6 @@
 [package]
 name = "leptos_icons"
-version = "0.6.1"
+version = "0.7.0"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 rust-version = "1.82.0"
