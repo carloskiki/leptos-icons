@@ -74,7 +74,7 @@ pub fn Icon(
 /// # Example
 /// ```rust
 /// use leptos::prelude::*;
-/// use letos_icons::Symbol;
+/// use leptos_icons::Symbol;
 ///
 /// #[component]
 /// fn MyComponent() -> impl IntoView {
