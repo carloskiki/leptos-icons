@@ -1,0 +1,16 @@
+[package]
+name = "symbol-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+console_error_panic_hook = "0.1"
+console_log = "1"
+leptos = { version = "0.8.3", features = ["csr"] }
+leptos_icons = { path = "../.." }
+icondata = "0.5.0"
+log = "0.4"
+
+[profile.release]
+opt-level = "s"
+lto = true
