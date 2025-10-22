@@ -12,7 +12,7 @@ keywords = ["icons", "leptos"]
 categories = ["web-programming"]
 
 [dev-dependencies]
-icondata = "0.5"
+icondata = "0.6"
 
 [dependencies]
 icondata_core = "0.1"
