@@ -36,6 +36,16 @@
 use leptos::{prelude::*, svg};
 
 /// Merges the icon's style with an optional user-provided style.
+///
+/// When both styles are present, the icon's style is applied first,
+/// followed by the user's style, allowing the user to override icon defaults.
+///
+/// # Arguments
+/// * `user_style` - Optional style string provided by the user
+/// * `icon_style` - Optional static style string from the icon definition
+///
+/// # Returns
+/// A merged style string if at least one style is provided, otherwise `None`.
 fn merge_styles(user_style: Option<String>, icon_style: Option<&'static str>) -> Option<String> {
     match (user_style, icon_style) {
         (Some(a), Some(b)) => Some(format!("{b} {a}")),
@@ -46,6 +56,20 @@ fn merge_styles(user_style: Option<String>, icon_style: Option<&'static str>) ->
 }
 
 /// Macro to apply common SVG attributes from an icon.
+///
+/// This macro applies the following attributes to an SVG element:
+/// - `x`, `y`: positioning attributes
+/// - `viewBox`: viewport definition
+/// - `stroke-linecap`, `stroke-linejoin`, `stroke-width`, `stroke`: stroke styling
+/// - `fill`: fill color (defaults to "currentColor" if not specified)
+/// - `role`: accessibility role set to "graphics-symbol"
+///
+/// # Arguments
+/// * `$element` - The SVG element to modify (svg::svg() or svg::symbol())
+/// * `$icon` - Reference to the Icon struct containing attribute values
+///
+/// # Returns
+/// The modified element with all attributes applied.
 macro_rules! apply_icon_attrs {
     ($element:expr, $icon:expr) => {
         $element
