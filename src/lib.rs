@@ -35,6 +35,32 @@
 
 use leptos::{prelude::*, svg};
 
+/// Merges the icon's style with an optional user-provided style.
+fn merge_styles(user_style: Option<String>, icon_style: Option<&'static str>) -> Option<String> {
+    match (user_style, icon_style) {
+        (Some(a), Some(b)) => Some(format!("{b} {a}")),
+        (Some(a), None) => Some(a),
+        (None, Some(b)) => Some(b.to_string()),
+        _ => None,
+    }
+}
+
+/// Macro to apply common SVG attributes from an icon.
+macro_rules! apply_icon_attrs {
+    ($element:expr, $icon:expr) => {
+        $element
+            .attr("x", $icon.x)
+            .attr("y", $icon.y)
+            .attr("viewBox", $icon.view_box)
+            .attr("stroke-linecap", $icon.stroke_linecap)
+            .attr("stroke-linejoin", $icon.stroke_linejoin)
+            .attr("stroke-width", $icon.stroke_width)
+            .attr("stroke", $icon.stroke)
+            .attr("fill", $icon.fill.unwrap_or("currentColor"))
+            .attr("role", "graphics-symbol")
+    };
+}
+
 /// The Icon component.
 #[component]
 pub fn Icon(
@@ -47,25 +73,12 @@ pub fn Icon(
 ) -> impl IntoView {
     move || {
         let icon = icon.get();
-        svg::svg()
-            .style(match (style.get(), icon.style) {
-                (Some(a), Some(b)) => Some(format!("{b} {a}")),
-                (Some(a), None) => Some(a),
-                (None, Some(b)) => Some(b.to_string()),
-                _ => None,
-            })
-            .attr("x", icon.x)
-            .attr("y", icon.y)
+        let svg_element = svg::svg()
+            .style(merge_styles(style.get(), icon.style))
             .attr("width", width.get().unwrap_or_else(|| "1em".to_string()))
-            .attr("height", height.get().unwrap_or_else(|| "1em".to_string()))
-            .attr("viewBox", icon.view_box)
-            .attr("stroke-linecap", icon.stroke_linecap)
-            .attr("stroke-linejoin", icon.stroke_linejoin)
-            .attr("stroke-width", icon.stroke_width)
-            .attr("stroke", icon.stroke)
-            .attr("fill", icon.fill.unwrap_or("currentColor"))
-            .attr("role", "graphics-symbol")
-            .child(svg::InertElement::new(icon.data))
+            .attr("height", height.get().unwrap_or_else(|| "1em".to_string()));
+
+        apply_icon_attrs!(svg_element, icon).child(svg::InertElement::new(icon.data))
     }
 }
 
@@ -100,23 +113,10 @@ pub fn Symbol(
     move || {
         let icon = icon.get();
         let sym = svg::symbol()
-            .style(match (style.get(), icon.style) {
-                (Some(a), Some(b)) => Some(format!("{b} {a}")),
-                (Some(a), None) => Some(a),
-                (None, Some(b)) => Some(b.to_string()),
-                _ => None,
-            })
-            .attr("id", id.clone())
-            .attr("x", icon.x)
-            .attr("y", icon.y)
-            .attr("viewBox", icon.view_box)
-            .attr("stroke-linecap", icon.stroke_linecap)
-            .attr("stroke-linejoin", icon.stroke_linejoin)
-            .attr("stroke-width", icon.stroke_width)
-            .attr("stroke", icon.stroke)
-            .attr("fill", icon.fill.unwrap_or("currentColor"))
-            .attr("role", "graphics-symbol")
-            .child(svg::InertElement::new(icon.data));
+            .style(merge_styles(style.get(), icon.style))
+            .attr("id", id.clone());
+
+        let sym = apply_icon_attrs!(sym, icon).child(svg::InertElement::new(icon.data));
 
         svg::svg().style("display: none;").child(sym)
     }
