@@ -47,6 +47,14 @@ pub fn Icon(
 ) -> impl IntoView {
     move || {
         let icon = icon.get();
+
+        // Wrap the icon data in a <g> to ensure InertElement always gets a single top
+        // level element.
+        let mut data = String::with_capacity(icon.data.len() + 7);
+        data.push_str("<g>");
+        data.push_str(icon.data);
+        data.push_str("</g>");
+
         svg::svg()
             .style(match (style.get(), icon.style) {
                 (Some(a), Some(b)) => Some(format!("{b} {a}")),
@@ -65,7 +73,7 @@ pub fn Icon(
             .attr("stroke", icon.stroke)
             .attr("fill", icon.fill.unwrap_or("currentColor"))
             .attr("role", "graphics-symbol")
-            .child(svg::InertElement::new(icon.data))
+            .child(svg::InertElement::new(data))
     }
 }
 
