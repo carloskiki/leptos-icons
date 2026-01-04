@@ -1,3 +1,10 @@
+[workspace]
+members = ["examples/*"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+
 [package]
 name = "leptos_icons"
 version = "0.7.1"
@@ -25,4 +32,3 @@ paste = { version = "1.0.4", optional = true }
 log = { version = "0.4.6", optional = true }
 encoding_rs = { version = "0.8.11", optional = true }
 bytes = { version = "1.2", optional = true }
-

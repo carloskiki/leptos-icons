@@ -10,7 +10,3 @@ leptos = { version = "0.8.3", features = ["csr"] }
 leptos_icons = { path = "../.." }
 icondata = "0.7.0"
 log = "0.4"
-
-[profile.release]
-opt-level = "s"
-lto = true
