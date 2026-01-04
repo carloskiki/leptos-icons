@@ -8,7 +8,7 @@ console_error_panic_hook = "0.1"
 console_log = "1"
 leptos = { version = "0.8.0", features = ["csr"] }
 leptos_icons = { path = "../.." }
-icondata = "0.5.0"
+icondata = "0.7.0"
 log = "0.4"
 
 [profile.release]

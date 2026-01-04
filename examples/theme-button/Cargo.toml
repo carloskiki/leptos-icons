@@ -9,7 +9,7 @@ edition = "2021"
 leptos = { version = "0.8.0", features = ["csr"] }
 leptos_meta = { version = "0.8.0" }
 leptos_icons = { path = "../.." }
-icondata = "0.5.0"
+icondata = "0.7.0"
 web-sys = { version = "0.3.64", features = ["Window", "Storage"] }
 console_error_panic_hook = "0.1.7"
 console_log = "1"
