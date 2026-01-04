@@ -10,13 +10,13 @@ name = "leptos_icons"
 version = "0.7.1"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
-rust-version = "1.82.0"
 description = "Component library providing a variety of icons for the leptos web framework."
 readme = "./README.md"
 repository = "https://github.com/Carlosted/leptos-icons"
 license = "MIT"
 keywords = ["icons", "leptos"]
 categories = ["web-programming"]
+rust-version = "1.88"
 
 [dev-dependencies]
 icondata = "0.7"
