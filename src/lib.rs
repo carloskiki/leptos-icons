@@ -42,8 +42,8 @@ pub fn Icon(
     #[prop(into)]
     icon: Signal<icondata_core::Icon>,
     #[prop(into, optional)] style: MaybeProp<String>,
-    #[prop(into, optional)] width: MaybeProp<String>,
-    #[prop(into, optional)] height: MaybeProp<String>,
+    #[prop(into, optional, default=TextProp::from("1em"))] width: TextProp,
+    #[prop(into, optional, default=TextProp::from("1em"))] height: TextProp,
 ) -> impl IntoView {
     move || {
         let icon = icon.get();
@@ -64,8 +64,8 @@ pub fn Icon(
             })
             .attr("x", icon.x)
             .attr("y", icon.y)
-            .attr("width", width.get().unwrap_or_else(|| "1em".to_string()))
-            .attr("height", height.get().unwrap_or_else(|| "1em".to_string()))
+            .attr("width", width.get())
+            .attr("height", height.get())
             .attr("viewBox", icon.view_box)
             .attr("stroke-linecap", icon.stroke_linecap)
             .attr("stroke-linejoin", icon.stroke_linejoin)
