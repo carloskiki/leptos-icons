@@ -7,7 +7,7 @@ lto = true
 
 [package]
 name = "leptos_icons"
-version = "0.7.1"
+version = "0.8.0"
 authors = ["Charles Edward Gagnon", "Bruno De Simone", "Lukas Potthast"]
 edition = "2021"
 description = "Component library providing a variety of icons for the leptos web framework."
@@ -23,7 +23,7 @@ icondata = "0.7"
 
 [dependencies]
 icondata_core = "0.1"
-leptos = ">=0.8.3"
+leptos = "0.9.0-beta"
 
 # For -Zminimal-versions
 [target.'cfg(any())'.dependencies]

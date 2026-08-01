@@ -27,7 +27,7 @@ fn main() {
                     </div>
                 </div>
                 <div>
-                    "Use the " <code>"template!"</code> " macro 
+                    "Use the " <code>"template!"</code> " macro
                     (from "<code>"leptos"</code>") for even faster rendering."
                     <div style="color: #398fd3;">
                         {(0..10).map(|_| view!{ <IconTemplate /> }).collect::<Vec<_>>()}
